@@ -1,15 +1,35 @@
 We begin by defining convex sets
+%
 
 \begin{definition}
-    A subset $\Omega\subseteq \R^n$ is called CONVEX if we have $\lambda x+(1-\lambda)y\in \Omega$ for all $x,y\in \Omega$ and $\lambda\in (0,1)$. 
-  \end{definition}
+  A subset $\Omega\subseteq \R^n$ is called CONVEX if we have $\lambda x+(1-\lambda)y\in \Omega$ for all $x,y\in \Omega$ and $\lambda\in (0,1)$. 
+\end{definition}
 
-  Clearly, the line segment $[a,b]:=\left\{ \lambda a+(1-\lambda)b\,\mid \, \lambda\in [0,1] \right\}$   is contained in $\Omega$ for all $a,b\in \Omega$ if and only if $\Omega$ is a convex set.
-  
-  Next we define convex functions. 
-  
-  The concept of convex functions is closely related to convex sets.
-  
-  The line segment between two points on the graph of a convex function lies on or above and does not intersect the graph.
+Clearly, the line segment 
+$[a,b]:=\left\{ \lambda a+(1-\lambda)b\,\mid \, \lambda\in [0,1] \right\}$ is contained in $\Omega$ for all $a,b\in \Omega$ if and only if $\Omega$ is a convex set.
+%
 
+Next we define convex functions. 
+%
 
+The concept of convex functions is closely related to convex sets.
+%  
+ 
+The line segment between two points on the graph of a convex function lies on or above and does not intersect the graph.
+%
+
+In other words: The area above the graph of a convex function $f$ is a convex set, i.e. the \textit{epigraph}
+$\text{epi}(f):=\left\{ (x,\alpha)\in \R^n\times\R\,\mid\, f(x)\le \alpha\right\}$ is a convex set in $\R^{n+1}$.
+%
+
+Often an equivalent characterisation of convex functions is more useful.
+%
+
+\begin{theorem}
+  The convexity of a function $f:\R^n\to \overline{\R}$ on $\R^n$ is equivalent to the following statement:
+
+  For all $x,y\in \R^n$ and $\lambda\in(0,1)$ we have 
+    \begin{align}
+      f(\lambda x + (1-\lambda)y)\le \lambda f(x)+(1-\lambda)f(y).
+    \end{align}
+\end{theorem}

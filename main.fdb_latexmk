@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1666187278 "main.tex" "main.pdf" "main" 1666187279
+["pdflatex"] 1666190318 "main.tex" "main.pdf" "main" 1666190318
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -25,6 +25,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1650183167 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1650183167 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1650183167 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1650183167 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1650183167 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1650183167 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1650183167 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
@@ -54,11 +55,11 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656258618 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656258554 2927665 64168ffe30b18142c268c107733f32c0 ""
   "chapters/chapter_01.tex" 1666171111 19 6f7410394d5c3f296395163e76a22223 ""
-  "chapters/convex_analysis.tex" 1666187277 655 327e5d452f4d8e9dbd148d2985e8831a ""
+  "chapters/convex_analysis.tex" 1666190317 1246 7d5a0b10bfcf36899f635e8734179a35 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1666187279 392 2c3e55366d6c88ab601beb79d9e9396a "pdflatex"
+  "main.aux" 1666190318 392 2c3e55366d6c88ab601beb79d9e9396a "pdflatex"
   "main.tex" 1666185674 684 edf972d39dfb9b86ccda147a786ad8ef ""
-  "main.toc" 1666187279 126 d4dfee7b8bc817ae687bef5af620b5af "pdflatex"
+  "main.toc" 1666190318 126 d4dfee7b8bc817ae687bef5af620b5af "pdflatex"
   (generated)
   "main.aux"
   "main.log"
