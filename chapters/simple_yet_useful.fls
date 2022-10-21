@@ -1,0 +1,5 @@
+PWD /home/ioan/Documents/latex/master_thesis/chapters
+INPUT /usr/share/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT simple_yet_useful.tex
+OUTPUT simple_yet_useful.log

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1666199391 "main.tex" "main.pdf" "main" 1666199391
+["pdflatex"] 1666370041 "main.tex" "main.pdf" "main" 1666370041
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -35,6 +35,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1650183167 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1650183167 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1650183167 71627 94eb9990bed73c364d7f53f960cc8c5b ""
+  "/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty" 1650183167 12594 0d51ac3a545aaaa555021326ff22a6cc ""
   "/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1650183167 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty" 1650183167 13829 94730e64147574077f8ecfea9bb69af4 ""
   "/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd" 1650183167 961 6518c6525a34feb5e8250ffa91731cff ""
@@ -60,12 +61,13 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656258618 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656258554 2927665 64168ffe30b18142c268c107733f32c0 ""
   "chapters/chapter_01.tex" 1666171111 19 6f7410394d5c3f296395163e76a22223 ""
-  "chapters/convex_analysis.tex" 1666190317 1246 7d5a0b10bfcf36899f635e8734179a35 ""
+  "chapters/convex_analysis.tex" 1666199476 1246 7d5a0b10bfcf36899f635e8734179a35 ""
   "chapters/random_matrix_inequality.tex" 1666199389 942 daed9ef40d38512361290ef074cf4616 ""
+  "chapters/simple_yet_useful.tex" 1666369935 826 989dcdd829b0711ea8cf23e8076e0c65 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1666199391 580 b268b8bb6eea71cc755ac60a57a688d5 "pdflatex"
-  "main.tex" 1666199343 871 3ea8e23c577f6f12e3f35784fb6709ee ""
-  "main.toc" 1666199391 197 b334059ce4e12fd72ffece7737c6e87a "pdflatex"
+  "main.aux" 1666370041 774 5c3f85d29261b1c1845de84ea2407bc8 "pdflatex"
+  "main.tex" 1666370036 1011 5739bc9e06f813b9f77d1cdc45ad49e4 ""
+  "main.toc" 1666370041 274 0f8c67a2d683ee7e42d5f902d3223f36 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

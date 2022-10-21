@@ -1,0 +1,33 @@
+\begin{proposition}
+  Let 
+  $f : \R^n \to \R$ 
+  be continuous such that 
+  a minimum $x^*$ exists and is unique.
+  Then 
+  for all $y \in \R^n$ and $C>0$ 
+  it follows
+    \begin{gather}
+      \inf_{\norm{\Delta}=C} f(y+\Delta) - f(y) > 0 \qquad
+      \Rightarrow \qquad 
+      \norm{x^* - y} \le C.
+    \end{gather}
+\end{proposition}
+
+
+\begin{proof}
+Since 
+$\mathcal{C}:=\left\{ \norm{\Delta}\le C \right\}$
+is compact and
+\begin{gather*}
+  f(x^*) \le f(y) <  \inf_{\norm{\Delta}=C} f(y+\Delta)
+\end{gather*}
+the continious function $f(y+\,\cdot\,)$ has a minimum in 
+$\overset{\circ}{\mathcal{C}}:=\left\{ \norm{\Delta} < C \right\}$. 
+Since 
+$x^*$ is the unique minimum of $f$
+there exists $\Delta^* \in \overset{\circ}{\mathcal{C}}$ 
+such that 
+$x^* - y = \Delta^*$.
+We conclude that
+$\norm{x^* - y} \le C$.
+\end{proof}
