@@ -39,13 +39,50 @@ $\norm{x^* - y} \le C$.
   $f\in C^2(\R)$. 
   Then
   for all $a,x,\Delta \in \R^n$ 
-  there exist $\xi_1, \xi_2 \in (0,1)$ such that it holds
+  there exist $\xi_1, \xi_2 \in (0,1)$ 
+  such that it holds
   \begin{gather}
+    \label{syu_2.result}
     f(a^T (x + \Delta)) - f(a^T x) = 
-    f^{'}(a^T x)\,a^T x + 
-    f^{''}(a^T (x + \xi_1\xi_2 \Delta))\, \Delta^T A\ \Delta,
+    f^{'}(a^T x)\, \Delta^T a + 
+    \xi_1 f^{''}(a^T (x + \xi_1\xi_2 \Delta))\, \Delta^T A\ \Delta,
   \end{gather}
   where 
   $A:= a a^T \in \R^{n \times n}$ .
 \end{proposition}
+
+\begin{proof}
+  By the chain rule 
+  we have
+  for all $a, x, \Delta \in \R^n$ and $\xi \in (0,1)$
+  \begin{gather}
+    \label{syu_2.0}
+    \nabla_x f(a^T (x + \xi \Delta)) =
+    f^{'}(a^T (x + \xi \Delta))\, a.
+  \end{gather}
+  By 
+  the mean value theorem and \eqref{syu_2.0}
+  there exist $\xi_1, \xi_2 \in (0,1)$
+  such that
+  \begin{align}
+    \label{syu_2.1}
+    \begin{split}
+    f(a^T (x + \Delta)) - f(a^T x)
+    &= 
+    \Delta^T\, \nabla_x f(a^T (x + \xi_1 \Delta)) \\ 
+    &=
+    f^{'}(a^T (x + \xi_1 \Delta))\, \Delta^T a.
+    \end{split}
+  \end{align}
+  and
+  \begin{gather}
+    \label{syu_2.2}
+    f^{'}(a^T (x + \xi_1 \Delta)) - f^{'}(a^T x)
+    =
+    \xi_1 f^{''}(a^T (x + \xi_1 \xi_2 \Delta))\, a^T \Delta.
+  \end{gather}
+  Plugging \eqref{syu_2.2} in \eqref{syu_2.1} 
+  yields
+  \eqref{syu_2.result}.
+\end{proof}
 
