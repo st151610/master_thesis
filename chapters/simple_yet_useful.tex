@@ -31,3 +31,21 @@ $x^* - y = \Delta^*$.
 We conclude that
 $\norm{x^* - y} \le C$.
 \end{proof}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{proposition}
+  Let 
+  $f\in C^2(\R)$. 
+  Then
+  for all $a,x,\Delta \in \R^n$ 
+  there exist $\xi_1, \xi_2 \in (0,1)$ such that it holds
+  \begin{gather}
+    f(a^T (x + \Delta)) - f(a^T x) = 
+    f^{'}(a^T x)\,a^T x + 
+    f^{''}(a^T (x + \xi_1\xi_2 \Delta))\, \Delta^T A\ \Delta,
+  \end{gather}
+  where 
+  $A:= a a^T \in \R^{n \times n}$ .
+\end{proposition}
+

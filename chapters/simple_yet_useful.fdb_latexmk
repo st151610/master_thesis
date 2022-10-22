@@ -1,9 +1,0 @@
-# Fdb version 3
-["pdflatex"] 1666367946 "simple_yet_useful.tex" "simple_yet_useful.pdf" "simple_yet_useful" 1666367946
-  "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656258554 2927665 64168ffe30b18142c268c107733f32c0 ""
-  "simple_yet_useful.aux" 1666367053 32 3985256e7290058c681f74d7a3565a19 ""
-  "simple_yet_useful.tex" 1666367945 361 3c2d6a2fec5f54564f34f5036bec8eac ""
-  (generated)
-  "simple_yet_useful.log"
-  "simple_yet_useful.pdf"
