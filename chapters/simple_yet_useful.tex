@@ -49,7 +49,14 @@ $\norm{x^* - y} \le C$.
     f(x + \Delta) - f(x)
     =
     \sum_{i = 1}^{n} \frac{\partial f(x)}{\partial x_i} \Delta_i    
-    + \sum_{i,j = 1}^{n}  \frac{\partial^2 f(x + \xi \Delta)}{\partial x_i \partial x_j} \Delta_i\Delta_j
+    + 
+    \sum_{
+    \begin{smallmatrix}
+      i,j = 1 \\ 
+      i \neq j
+    \end{smallmatrix}
+    }
+    \frac{\partial^2 f(x + \xi \Delta)}{\partial x_i \partial x_j} \Delta_i\Delta_j
     + \frac{1}{2}\sum_{i = 1}^{n} \frac{\partial^2 f(x + \xi \Delta)}{\partial x_i^2}\Delta_i^2 
   \end{gather}
 \end{theorem}
