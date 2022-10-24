@@ -34,54 +34,74 @@ $\norm{x^* - y} \le C$.
 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{proposition}
+
+\begin{theorem}
+  \emph{(Multivariate Taylor Theorem)}
+  Let 
+  $f \in C^2(\R^n, \R)$.
+  Then 
+  for all $x, \Delta \in \R^n$
+  there exists $\xi \in [0,1]$
+  such that 
+  it holds
+  \begin{gather}
+    \label{syu_taylor}
+    f(x + \Delta) - f(x)
+    =
+    \sum_{i = 1}^{n} \frac{\partial f(x)}{\partial x_i} \Delta_i    
+    + \sum_{i,j = 1}^{n}  \frac{\partial^2 f(x + \xi \Delta)}{\partial x_i \partial x_j} \Delta_i\Delta_j
+    + \frac{1}{2}\sum_{i = 1}^{n} \frac{\partial^2 f(x + \xi \Delta)}{\partial x_i^2}\Delta_i^2 
+  \end{gather}
+\end{theorem}
+
+
+\begin{corollary}
   Let 
   $f\in C^2(\R)$. 
   Then
   for all $a,x,\Delta \in \R^n$ 
-  there exist $\xi_1, \xi_2 \in (0,1)$ 
+  there exist $\xi \in [0,1]$ 
   such that it holds
   \begin{gather}
     \label{syu_2.result}
     f(a^T (x + \Delta)) - f(a^T x) = 
     f^{'}(a^T x)\, \Delta^T a + 
-    \xi_1 f^{''}(a^T (x + \xi_1\xi_2 \Delta))\, \Delta^T A\ \Delta,
+    \frac{1}{2}f^{''}(a^T (x + \xi \Delta))\, \Delta^T A\ \Delta,
   \end{gather}
   where 
   $A:= a a^T \in \R^{n \times n}$ .
-\end{proposition}
+\end{corollary}
 
 \begin{proof}
   By the chain rule 
   we have
-  for all $a, x, \Delta \in \R^n$ and $\xi \in (0,1)$
+  for all $a, x, \Delta \in \R^n$ and $\xi \in [0,1]$
   \begin{gather}
     \label{syu_2.0}
-    \nabla_x f(a^T (x + \xi \Delta)) =
-    f^{'}(a^T (x + \xi \Delta))\, a.
+   \frac{\partial^2  f(a^T (x + \xi \Delta)) }{\partial x_i \partial x_j}=
+    f^{''}(a^T (x + \xi \Delta))\, a_i a_j.
   \end{gather}
-  By 
-  the mean value theorem and \eqref{syu_2.0}
-  there exist $\xi_1, \xi_2 \in (0,1)$
-  such that
-  \begin{align}
-    \label{syu_2.1}
-    \begin{split}
-    f(a^T (x + \Delta)) - f(a^T x)
-    &= 
-    \Delta^T\, \nabla_x f(a^T (x + \xi_1 \Delta)) \\ 
-    &=
-    f^{'}(a^T (x + \xi_1 \Delta))\, \Delta^T a.
-    \end{split}
-  \end{align}
-  and
+  Since 
+  $A:= a a^T$ is symmetric
+  we have
   \begin{gather}
-    \label{syu_2.2}
-    f^{'}(a^T (x + \xi_1 \Delta)) - f^{'}(a^T x)
+    \label{syu_2.1}
+    \Delta^T A\ \Delta 
     =
-    \xi_1 f^{''}(a^T (x + \xi_1 \xi_2 \Delta))\, a^T \Delta.
+    2
+    \sum_{
+    \begin{smallmatrix}
+      i,j = 1 \\ 
+      i \neq j
+    \end{smallmatrix}
+    }
+    ^{n}
+    a_i a_j \Delta_i \Delta_j
+    + 
+    \sum_{i=1}^{n} 
+    a_i^2 \Delta_i^2.
   \end{gather}
-  Plugging \eqref{syu_2.2} in \eqref{syu_2.1} 
+  Plugging \eqref{syu_2.0} and \eqref{syu_2.1} into \eqref{syu_taylor}
   yields
   \eqref{syu_2.result}.
 \end{proof}
