@@ -33,3 +33,61 @@ Often an equivalent characterisation of convex functions is more useful.
       f(\lambda x + (1-\lambda)y)\le \lambda f(x)+(1-\lambda)f(y).
     \end{align}
 \end{theorem}
+
+
+\begin{definition}
+  \emph{proper convex function}
+\end{definition}
+
+\begin{definition}
+  \emph{convex conjugate}
+\end{definition}
+
+Given 
+proper convex functions $f, g : \R^n \to \overline{\R}$ 
+and
+a matrix $A \in \R^{n \times n}$,
+we define 
+the primal minimization problem as follows:
+
+\begin{gather}
+  \label{cvxa_primal_problem}
+  \text{minimize}
+  \quad
+  f(x) + g(Ax) 
+  \quad
+  \text{subject to}
+  \quad
+  x \in \R^n.
+\end{gather}
+
+The Fenchel dual problem is then
+
+\begin{gather}
+  \label{cvxa_dual_problem}
+  \text{maximize}
+  \quad
+  -f^* \left( A^T y \right) - g^*(-y) 
+  \quad
+  \text{subject to}
+  \quad
+  y \in \R^n.
+\end{gather}
+
+\begin{theorem}
+  Let 
+  $f, g : \R^n \to \overline{\R}$ 
+  be proper convex functions
+  and
+  $0 \in \text{ri}(\text{dom}(g) - A (\text{dom}(f)) )$
+  .
+  Then the optimal values of \eqref{cvxa_primal_problem} and \eqref{cvxa_dual_problem} are equal, 
+  i.e.
+  \begin{gather}
+    \inf_{x \in \R^n} 
+    \left\{ f(x) + g(Ax) \right\}
+    =
+    \sup_{y \in \R^n} \left\{   -f^* \left( A^T y \right) - g^*(-y) \right\}
+    .
+  \end{gather}
+\end{theorem}

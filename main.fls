@@ -269,12 +269,12 @@ INPUT chapters/convex_analysis.tex
 INPUT ./chapters/convex_analysis.tex
 INPUT chapters/convex_analysis.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
-INPUT ./chapters/random_matrix_inequality.tex
-INPUT chapters/random_matrix_inequality.tex
-INPUT ./chapters/random_matrix_inequality.tex
-INPUT chapters/random_matrix_inequality.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT ./chapters/random_matrix_inequality.tex
+INPUT chapters/random_matrix_inequality.tex
+INPUT ./chapters/random_matrix_inequality.tex
+INPUT chapters/random_matrix_inequality.tex
 INPUT ./chapters/simple_yet_useful.tex
 INPUT chapters/simple_yet_useful.tex
 INPUT ./chapters/simple_yet_useful.tex
@@ -283,6 +283,7 @@ INPUT main.aux
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
