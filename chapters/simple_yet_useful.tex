@@ -19,13 +19,13 @@ Since
 $\mathcal{C}:=\left\{ \norm{\Delta}\le C \right\}$
 is compact and
 \begin{gather*}
-  f(x^*) \le f(y) <  \inf_{\norm{\Delta}=C} f(y+\Delta)
+  f(x^*) \le f(y) <  \inf_{\norm{\Delta}=C} f(y+\Delta),
 \end{gather*}
 the continious function $f(y+\,\cdot\,)$ has a minimum in 
-$\overset{\circ}{\mathcal{C}}:=\left\{ \norm{\Delta} < C \right\}$. 
+$\text{int}(\mathcal{C}):=\left\{ \norm{\Delta} < C \right\}$. 
 Since 
 $x^*$ is the unique minimum of $f$
-there exists $\Delta^* \in \overset{\circ}{\mathcal{C}}$ 
+there exists $\Delta^* \in \text{int}(\mathcal{C})$ 
 such that 
 $x^* - y = \Delta^*$.
 We conclude that
@@ -82,7 +82,7 @@ $\norm{x^* - y} \le C$.
     \frac{1}{2}f^{''}(a^T (x + \xi \Delta))\, \Delta^T A\ \Delta,
   \end{gather}
   where 
-  $A:= a a^T \in \R^{n \times n}$ .
+  $A:= a a^T \in \R^{n \times n}$.
 \end{corollary}
 
 \begin{proof}
@@ -91,8 +91,10 @@ $\norm{x^* - y} \le C$.
   for all $a, x, \Delta \in \R^n$ and $\xi \in [0,1]$
   \begin{gather}
     \label{syu_2.0}
-   \frac{\partial^2  f(a^T (x + \xi \Delta)) }{\partial x_i \partial x_j}=
-    f^{''}(a^T (x + \xi \Delta))\, a_i a_j.
+    \frac{\partial^2  f(a^T (x + \xi \Delta)) }{\partial x_i \partial x_j}
+    =
+    f^{''}(a^T (x + \xi \Delta))\, a_i a_j
+    .
   \end{gather}
   Since 
   $A:= a a^T$ is symmetric

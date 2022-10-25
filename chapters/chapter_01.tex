@@ -35,11 +35,55 @@
   \\
   \subasu 
   \label{assumption_1_iii}
-  $\lambda_0 \in \text{int}(\Theta)$
-  , where
+  $\lambda_0 \in \text{int}(\Theta)$,
+  where
   $\text{int}(\cdot)$
   stands for the interior of a set.
 \end{asu}
 
 
 the ~\ref{assumption_1_ii}
+
+We study the following problem:
+
+\begin{align}
+  \label{primal_weighting_binary}
+  \begin{split}
+  &\underset{w \in \R^n}{\text{minimize}}
+  \qquad
+  \sum_{i = 1}^{n} T_i f(w_i)
+  \\
+  &\text{subject to}
+  \left| 
+    \sum_{i = 1}^{n} w_i T_i B_k(X_i)
+    - 
+    \frac{1}{n} \sum_{i = 1}^{n} B_k(X_i)
+  \right|
+  \le 
+  \delta_k,\,
+  k = 1, \ldots, K
+  \end{split}
+\end{align}
+
+
+\begin{proposition}
+  The dual of Problem \eqref{primal_weighting_binary} is equivalent to the unconstrained optimization problem
+  \begin{gather}
+    \label{dual_weighting_binary}
+      \underset{\lambda \in \R^K}{\text{minimize}}
+      \quad
+      \frac{1}{n}
+      \sum_{j = 1}^{n} 
+      \left[ 
+        -T n 
+        \rho 
+        \left( 
+          B(X_j)^T \lambda
+        \right)
+      +
+      B(X_j)^T \lambda
+      \right]
+      +
+      |\lambda|^T \delta
+  \end{gather}
+\end{proposition}

@@ -6,8 +6,11 @@
 \usepackage{amssymb}
 \graphicspath{ {images/} }
 
+% Theorem handle
+
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{definition}{Definition}[chapter]
+\theoremstyle{definition}
 \newtheorem{proposition}{Proposition}[chapter]
 \newtheorem{corollary}{Corollary}[theorem]
 
@@ -40,11 +43,17 @@
 \renewcommand{\P}{\mathbb{P}}
 \newcommand{\E}{\mathbb{E}}
 \newcommand\norm[1]{\left\lVert#1\right\rVert}
+
 \title{
-{Robust Weighting and Matching Techniques for Causal Inference in Observational Studies with Continuous Treatment}\\
-{\large Universität Stuttgart}\\
-{\includegraphics{unistuttgart_logo_deutsch.jpg}}
+  {
+    Robust Weighting and Matching Techniques for Causal Inference in Observational Studies with Continuous Treatment
+  }
+  \\
+  {\large Universität Stuttgart}
+  \\
+  {\includegraphics{unistuttgart_logo_deutsch.jpg}}
 }
+
 \author{Ioan Scheffel}
 \date{\today}
 
