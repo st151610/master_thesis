@@ -248,10 +248,6 @@ INPUT chapters/chapter_01.tex
 INPUT ./chapters/chapter_01.tex
 INPUT chapters/chapter_01.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
-INPUT ./chapters/convex_analysis.tex
-INPUT chapters/convex_analysis.tex
-INPUT ./chapters/convex_analysis.tex
-INPUT chapters/convex_analysis.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -271,6 +267,10 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT ./chapters/convex_analysis.tex
+INPUT chapters/convex_analysis.tex
+INPUT ./chapters/convex_analysis.tex
+INPUT chapters/convex_analysis.tex
 INPUT ./chapters/random_matrix_inequality.tex
 INPUT chapters/random_matrix_inequality.tex
 INPUT ./chapters/random_matrix_inequality.tex

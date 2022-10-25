@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1666695501 "main.tex" "main.pdf" "main" 1666695502
+["pdflatex"] 1666697683 "main.tex" "main.pdf" "main" 1666697684
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -62,14 +62,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656258618 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656258554 2927665 64168ffe30b18142c268c107733f32c0 ""
-  "chapters/chapter_01.tex" 1666694996 204 e1551ea323cfacb1c06c322806589d65 ""
+  "chapters/chapter_01.tex" 1666697682 746 3da6eef8e39769ac6a0fdd80f78bbf6a ""
   "chapters/convex_analysis.tex" 1666599296 2346 133e9d7eef3cbbb8db19d951deb149dd ""
   "chapters/random_matrix_inequality.tex" 1666199389 942 daed9ef40d38512361290ef074cf4616 ""
   "chapters/simple_yet_useful.tex" 1666695500 2688 bd3c10672c07f87d7f4d534e79546f69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1666695502 1108 b64f1fbd228c4f7974a9fb742e34dec3 "pdflatex"
+  "main.aux" 1666697684 1160 76991860cd39e6fa901ce00b2b371038 "pdflatex"
   "main.tex" 1666695076 1651 c797882ab74124b732fc5c9e426d359d ""
-  "main.toc" 1666695502 274 4e73964633fe004074c35841d34fd5a6 "pdflatex"
+  "main.toc" 1666697684 274 4e73964633fe004074c35841d34fd5a6 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

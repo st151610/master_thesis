@@ -2,9 +2,43 @@
   \label{assumption_1}
   Assume, the following conditions hold:
   \\
-  \subasu \label{assumption_1_i} hello
+  \subasu 
+  \label{assumption_1_i} 
+  The minimizer 
+  $
+  \lambda_0 
+  =
+  \arg \min_{\lambda \in \Theta}
+  \E
+  \left[ 
+    -T n 
+    \rho 
+    \left( 
+    B(X)^T \lambda
+    \right)
+    +
+    B(X)^T \lambda
+  \right]
+  $
+  is unique,
+  where 
+  $\Theta \subseteq \R^n$ is the parameter space for $\lambda$
+  .
   \\
-  \subasu \label{assumption_1_ii} world
+  \subasu 
+  \label{assumption_1_ii} 
+  The parameter space 
+  $\Theta \subseteq \R^n$
+  is compact compact with diameter
+  $\text{diam}(\Theta) < \infty$
+  .
+  \\
+  \subasu 
+  \label{assumption_1_iii}
+  $\lambda_0 \in \text{int}(\Theta)$
+  , where
+  $\text{int}(\cdot)$
+  stands for the interior of a set.
 \end{asu}
 
 
