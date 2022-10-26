@@ -153,7 +153,8 @@ to get
 
 \begin{align}
   \begin{split}
-  & G(\lambda^*_1 + \Delta) 
+  & 
+  G(\lambda^*_1 + \Delta) 
   -
   G(\lambda^*_1)
   \\
@@ -179,10 +180,12 @@ to get
         \left( 
           B(X_j)^T (\lambda^*_1 + \xi \Delta)
         \right)
+        \Delta^T
         \left( 
-          \Delta^T
           B(X_j)
-        \right)^2
+          B(X_j)^T
+        \right)
+        \Delta
         \\
   &-
       |\Delta|^T \delta
@@ -209,7 +212,56 @@ to get
     \right)
     \\
   &+
+  n
   \norm{\Delta}^2_2
-  n \varphi_{\rho^{''}}
+   \varphi_{\rho^{''}}
+  \underline{\varphi_{aa^T}}
   \end{split}
 \end{align}
+
+Next we employ Bernstein inequality~\ref{rmineq_bernstein} to bound
+\begin{align}
+    \norm{
+      \frac{1}{n}
+      \sum_{j = 1}^{n} 
+      \left[ 
+        -T_j n 
+        \rho^{'} 
+        \left( 
+          B(X_j)^T \lambda^*_1
+        \right)
+      +
+      1
+      \right]
+      B(X_j)
+    }_2
+    \le
+    \CP \Ctau \LearnRate
+\end{align}
+with probability $1 - \tau$.
+Then for 
+$\norm{\Delta}_2$ large enough it holds
+\begin{gather}
+  G(\lambda^*_1 + \Delta) 
+  -
+  G(\lambda^*_1)
+  >
+  0
+\end{gather}
+with probability $1 - \tau$.
+Thus by Proposition~\ref{syu_1_result}
+  \begin{gather}
+    \P
+    \left( 
+      \norm{
+        \lambda^\dagger
+        -
+        \lambda^*_1
+      }_2
+      \le
+      \norm{\Delta}_2
+    \right)
+    \ge 
+    1 - \tau
+    .
+  \end{gather}
