@@ -1,124 +1,125 @@
+%%%%%%%%%%%%%%%%%%%ASSUMPTION 1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{asu}
   \label{assumption_1}
   Assume, the following conditions hold:
-  \\
+\\
   \subasu 
-  \label{assumption_1_i} 
-  The minimizer 
-  $
-  \lambda_0 
-  =
-  \arg \min_{\lambda \in \Theta}
-  \E
-  \left[ 
-    -T n 
-    \rho 
-    \left( 
-    B(X)^T \lambda
-    \right)
-    +
-    B(X)^T \lambda
-  \right]
-  $
-  is unique,
-  where 
-  $\Theta \subseteq \R^n$ is the parameter space for $\lambda$
-  .
-  \\
+    \label{assumption_1_i} 
+    The minimizer 
+    $
+    \lambda_0 
+    =
+    \arg \min_{\lambda \in \Theta}
+    \E
+    \left[ 
+      -T n 
+      \rho 
+      \left( 
+      B(X)^T \lambda
+      \right)
+      +
+      B(X)^T \lambda
+    \right]
+    $
+    is unique,
+    where 
+    $\Theta \subseteq \R^n$ is the parameter space for $\lambda$.
+\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subasu 
-  \label{assumption_1_ii} 
-  The parameter space 
-  $\Theta \subseteq \R^n$
-  is compact compact with diameter
-  $\text{diam}(\Theta) < \infty$
-  .
-  \\
+    \label{assumption_1_ii} 
+    The parameter space 
+    $\Theta \subseteq \R^n$
+    is compact compact with diameter
+    $\text{diam}(\Theta) < \infty$.
+\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subasu 
-  \label{assumption_1_iii}
-  $\lambda_0 \in \text{int}(\Theta)$,
-  where
-  $\text{int}(\cdot)$
-  stands for the interior of a set.
-  \\
-  %%%%%%%%%%%%%%%%%%%%
+    \label{assumption_1_iii}
+    $\lambda_0 \in \text{int}(\Theta)$,
+    where
+    $\text{int}(\cdot)$
+    stands for the interior of a set.
+\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subasu
-  \label{assumption_1_iv}
-  There existi
-  $\lambda^*_1 \in \Theta$
-  such that
-  $
-  \norm{
-    m^*(\cdot)
-    -
-    B(\cdot)^T \lambda^*_1
-  }_\infty
-  \le 
-  \varphi_{m^*}
-  $,
-  where
-  $
-  m^*(\cdot)
-  :=
-  \left( \rho^{'} \right)^{-1}
-  \left( 
-  \frac{1}{n \pi(\cdot)}
-  \right)  
-  .
-  $
-  \\
-  %%%%%%%%%%%%%%%%%%%%%%%%%
+    \label{assumption_1_iv}
+    There exists
+    $\lambda^*_1 \in \Theta$
+    such that
+    $
+      \norm{
+        m^*(\cdot)
+        -
+        B(\cdot)^T \lambda^*_1
+      }_\infty
+      \le 
+      \varphi_{m^*}
+    $,
+    where
+    $
+      m^*(\cdot)
+      :=
+      \left( \rho^{'} \right)^{-1}
+      \left( \frac{1}{n \pi(\cdot)} \right).
+    $
+\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subasu
-  \label{assumption_1_v}
-  There exists a constant 
-  $\varphi_{\rho^{'} \lor \pi} \in \left(0, \frac{1}{2} \right)$
-  such that
-  $
-  n\rho(v) \in (
-  \varphi_{\rho^{'} \lor \pi},
-  1 - \varphi_{\rho^{'} \lor \pi}
-  )
-  $
-  for $v=B(x)^T \lambda$ with $\lambda \in \text{int}(\Theta)$ 
-  \textbf{or}
-  $
-  \pi(x) \in (
-  \varphi_{\rho^{'} \lor \pi},
-  1 - \varphi_{\rho^{'} \lor \pi}
-  )
-  $
-  .
-  \\
-  %%%%%%%%%%%%%%%%%%%%%%%%
+    \label{assumption_1_v}
+    There exists a constant 
+    $
+      \varphi_{\rho^{'} \lor \pi} 
+      \in 
+      \left(0, \frac{1}{2} \right)
+    $
+    such that
+    $
+      n\rho(v) 
+      \in 
+      (
+      \varphi_{\rho^{'} \lor \pi},
+      1 - \varphi_{\rho^{'} \lor \pi}
+      )
+    $
+    for $v=B(x)^T \lambda$ with $\lambda \in \text{int}(\Theta)$ 
+    \textbf{or}
+    $
+      \pi(x)
+      \in 
+      (
+      \varphi_{\rho^{'} \lor \pi},
+      1 - \varphi_{\rho^{'} \lor \pi}
+      )
+    $.
+\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subasu
-  \label{assumption_1_vi}
-  There exists 
-  $\varphi_{\rho^{''}} > 0 $
-  such that
-  $-\rho^{''} \ge \varphi_{\rho^{''}} > 0 $
-  \\ 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \label{assumption_1_vi}
+    There exists 
+    $ \varphi_{\rho^{''}} > 0 $
+    such that
+    $ -\rho^{''} \ge \varphi_{\rho^{''}} > 0 $
+\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subasu
-  \label{assumption_1_vii}
-  There exists 
-  $\varphi_{B(x) B(x)^T} > 0$ 
-  such that
-  $
-   B(x) B(x)^T 
-   \succcurlyeq 
-   \varphi_{B(x) B(x)^T} I 
-  $
-  \\ 
-  %%%%%%%%%%%%%%%%%
+    \label{assumption_1_vii}
+    There exists 
+    $ \varphi_{B(x) B(x)^T} > 0 $ 
+    such that
+    $
+      B(x) B(x)^T 
+      \succcurlyeq 
+      \varphi_{B(x) B(x)^T} I 
+    $
+\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subasu
-  \label{assumption_1_viii}
-  There exists
-  $\varphi_{\norm{B}} > 0$
-  such that
-  $\sup_{x \in \mathcal{X}} \norm{B(x)}_2\le \varphi_{\norm{B}$.
+    \label{assumption_1_viii}
+    There exists
+    $ \varphi_{\norm{B}} > 0 $
+    such that
+    $
+      \sup_{x \in \mathcal{X}} \norm{B(x)}_2
+      \le 
+      \varphi_{\norm{B}}
+    $.
 \end{asu}
 
-
-the ~\ref{assumption_1_ii}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We study the following problem:
 
