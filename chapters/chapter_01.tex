@@ -39,6 +39,31 @@
   where
   $\text{int}(\cdot)$
   stands for the interior of a set.
+  \\
+  \subasu
+  \label{assumption_1_iv}
+  There existi
+  $\lambda^*_1 \in \Theta$
+  such that
+  $
+  \norm{
+    m^*(\cdot)
+    -
+    B(\cdot)^T \lambda^*_1
+  }_\infty
+  \le 
+  \varphi_{m^*}
+  $,
+  where
+  $
+  m^*(\cdot)
+  :=
+  \left( \rho^{'} \right)^{-1}
+  \left( 
+  \frac{1}{n \pi(\cdot)}
+  \right)  
+  .
+  $
 \end{asu}
 
 
@@ -67,6 +92,7 @@ We study the following problem:
 
 
 \begin{proposition}
+  \label{ch_1_dual}
   The dual of Problem \eqref{primal_weighting_binary} is equivalent to the unconstrained optimization problem
   \begin{gather}
     \label{dual_weighting_binary}
@@ -87,3 +113,44 @@ We study the following problem:
       |\lambda|^T \delta
   \end{gather}
 \end{proposition}
+
+
+\begin{proposition}
+  \label{ch_1_near_oracle}
+  There exists a solution $\lambda^\dagger$ 
+  to \eqref{dual_weighting_binary}
+  such that
+  \begin{gather}
+    \P
+    \left( 
+      \norm{
+        \lambda^\dagger
+        -
+        \lambda^*_1
+      }_2
+      \le
+      \CP \Ctau \LearnRate
+    \right)
+    \ge 
+    1 - \tau
+    .
+  \end{gather}
+\end{proposition}
+
+
+\section{Plan of proof}
+We employ 
+Theorem~\ref{cvxa_fenchel_theorem}
+together with the box constraints in Problem~\eqref{primal_weighting_binary}
+to obtain Proposition~\ref{ch_1_dual}.
+
+To prove Proposition~\ref{ch_1_near_oracle}
+we employ
+Proposition~\ref{syu_1_result}
+and 
+Corollary~\ref{syu_taylor_corollary}
+to get
+
+\begin{align}
+  G(\lambda)
+\end{align}
