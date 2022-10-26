@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1666790809 "main.tex" "main.pdf" "main" 1666790810
+["pdflatex"] 1666797844 "main.tex" "main.pdf" "main" 1666797844
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -27,6 +27,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1650183167 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1650183167 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1650183167 35469 70d41d2b9ea31d5d813066df7c99281c ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1650183167 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1650183167 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1650183167 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1650183167 32734 69e00a6b65cedb993666e42eedb3d48f ""
@@ -63,14 +64,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656258618 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656258554 2927665 64168ffe30b18142c268c107733f32c0 ""
-  "chapters/chapter_01.tex" 1666790808 5859 8a9aae60aa1616103f22cfed73a4df50 ""
+  "chapters/chapter_01.tex" 1666797843 8781 b102a36e6abf8417298acf5f515c4056 ""
   "chapters/convex_analysis.tex" 1666766380 2377 5701d93ef36eb8227d2b0a31355686ef ""
   "chapters/random_matrix_inequality.tex" 1666780955 969 90fb97989c38a4c9392c25f593143763 ""
-  "chapters/simple_yet_useful.tex" 1666766899 2743 cb30282df34c793c6ce55018f67baea1 ""
+  "chapters/simple_yet_useful.tex" 1666794077 3033 d6cda9fa97ef2ab5270b7e9103f6557a ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1666790810 1779 99cb1124f4e71d51a5f79e478a2d321c "pdflatex"
+  "main.aux" 1666797748 1870 4c82eb94c63822b7accd8a9a61e1a33d "pdflatex"
   "main.tex" 1666711872 1717 9b4f6f65e95c4fd77a463c451f0e06fa ""
-  "main.toc" 1666790810 336 7a66e5f168021ea3b7ab7d9e072dbc03 "pdflatex"
+  "main.toc" 1666797748 336 56e45c254e4fc5e6b2be1247fd9f3854 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
