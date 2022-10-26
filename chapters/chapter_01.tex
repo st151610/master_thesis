@@ -101,7 +101,7 @@ We study the following problem:
       \frac{1}{n}
       \sum_{j = 1}^{n} 
       \left[ 
-        -T n 
+        -T_j n 
         \rho 
         \left( 
           B(X_j)^T \lambda
@@ -152,5 +152,64 @@ Corollary~\ref{syu_taylor_corollary}
 to get
 
 \begin{align}
-  G(\lambda)
+  \begin{split}
+  & G(\lambda^*_1 + \Delta) 
+  -
+  G(\lambda^*_1)
+  \\
+  &\ge
+      \frac{1}{n}
+      \sum_{j = 1}^{n} 
+      \left[ 
+        -T_j n 
+        \rho^{'} 
+        \left( 
+          B(X_j)^T \lambda^*_1
+        \right)
+      +
+      1
+      \right]
+      \Delta^T B(X_j)
+      \\
+  & +
+      \frac{1}{2}
+      \sum_{j = 1}^{n} 
+        -T_j  
+        \rho^{''} 
+        \left( 
+          B(X_j)^T (\lambda^*_1 + \xi \Delta)
+        \right)
+        \left( 
+          \Delta^T
+          B(X_j)
+        \right)^2
+        \\
+  &-
+      |\Delta|^T \delta
+  \\
+  &\ge
+    - \norm{\Delta}_2
+    \left( 
+    \norm{
+      \frac{1}{n}
+      \sum_{j = 1}^{n} 
+      \left[ 
+        -T_j n 
+        \rho^{'} 
+        \left( 
+          B(X_j)^T \lambda^*_1
+        \right)
+      +
+      1
+      \right]
+      B(X_j)
+    }_2
+    +
+    \norm{\delta}_2
+    \right)
+    \\
+  &+
+  \norm{\Delta}^2_2
+  n \varphi_{\rho^{''}}
+  \end{split}
 \end{align}
