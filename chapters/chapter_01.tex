@@ -662,4 +662,136 @@ and by the Markov-inequality
   \ge 
   1 - \tau
 \end{gather}
+\subsubsection*{Finish}
+If we choose for $\gamma > 0$
+\begin{align}
+  \norm{\Delta}_2
+  &=
+  \frac{
+    \frac{1}{\tau}
+    \E[J_2]
+    +
+    n L_{\rho^{'}}\varphi_{\norm{B(x)}} \varphi_{m^*}
+    +
+    \norm{\delta}_2
+  }
+  {
+   \varphi_{\rho^{''}}
+  \underline{\varphi_{BB^T}}
+  }
+  (1 + \gamma)
+  \\
+  &=:
+  C
+\end{align}
+we have
+\begin{align}
+  \P
+  \left( 
+      \norm{
+        \lambda^\dagger
+        -
+        \lambda^*_1
+      }_2
+      \le
+      C 
+  \right)
+  &=
+  \P
+  \left( 
+    \inf_{\norm{\Delta}_2 = C}
+    G(\lambda^*_1 + \Delta) 
+    -
+    G(\lambda^*_1)
+    >
+    0
+  \right)
+  \\
+  &\ge
+  1 - \tau
+\end{align}
+\subsubsection*{Finish 2}
+\begin{align}
+  \norm{
+    w^*(X)
+    -
+    \frac{1}{n \pi(X)}
+  }_{\P, 2}
+  &\le
+  L_{\rho^{'}}
+  \left[ 
+    \norm{
+      B(X)^T 
+      \left(
+        \lambda^\dagger
+        -
+        \lambda^*_1
+      \right)
+    }_{\P,2}
+    \right.
+    \\
+    &+
+    \left. 
+    \norm{
+      m^*(X)
+      -
+      B(X)^T 
+      \lambda^*_1
+    }_{\P,2}
+  \right]
+  \\
+  &\le
+  L_{\rho^{'}}
+  \left(
+    \varphi_{\norm{B}}
+    \left[
+    C(1 - \tau)
+    +
+    \text{diam}(\Theta)
+    \tau
+    \right]
+    +
+    \varphi_{m^*}
+  \right)
+\end{align}
+\begin{align}
+  \norm{
+    w^*(\cdot)
+    -
+    \frac{1}{n \pi(\cdot)}
+  }_{\infty}
+  &\le
+  L_{\rho^{'}}
+  \left[ 
+    \norm{
+      B(\cdot)^T 
+      \left(
+        \lambda^\dagger
+        -
+        \lambda^*_1
+      \right)
+    }_{\infty}
+    \right.
+    \\
+    &+
+    \left. 
+    \norm{
+      m^*(\cdot)
+      -
+      B(\cdot)^T 
+      \lambda^*_1
+    }_{\infty}
+  \right]
+  \\
+  &\le
+  L_{\rho^{'}}
+  \left(
+    \varphi_{\norm{B}}
+    C
+    +
+    \varphi_{m^*}
+  \right)
+\end{align}
+with probabitity greater than 
+$1 - \tau$.
 \end{proof}
