@@ -521,4 +521,145 @@ we have
 
 \subsubsection*{Analysis of $J_2$}
 We employ Bernstein Inequality for matrices
+To this end we define
+\begin{gather}
+  A_j
+  :=
+      \frac{1}{n}
+      \left[ 
+        \frac{T_j}{\pi(X_j)}
+      -
+      1
+      \right]
+      B(X_j)
+\end{gather}
+
+\subsubsection*{$\E A_j = 0$}
+
+It holds
+
+\begin{gather}
+  \E
+  \left[  
+    \frac{T_j}{\pi(X_j)}
+    B(X_j)
+  \right]
+  =
+  \E
+  \left[  
+    \E
+    \left[  
+      T_j
+      \, | \,
+      X_j
+    \right]
+    \frac{1}{\pi(X_j)}
+    B(X_j)
+  \right]
+  =
+  \E[B(X_j)]. 
+\end{gather}
+Thus 
+$\E[A_j] = 0$.
+\subsubsection*{L}
+Since
+\begin{gather}
+  \left| 
+      \frac{T_j}{\pi(X_j)}
+      -
+      1
+      \right|
+  \le
+  1 + \frac{1 - \varphi_{\pi}}{\varphi_{\pi}}
+  =
+  \frac{1}{\varphi_{\pi}}
+\end{gather}
+by Assumption~\ref{assumption_1_v},
+we can employ Assumption~\ref{assumption_1_viii}
+to get
+\begin{gather}
+  \norm{A_j}_2
+  \le
+  \frac{\varphi_{\norm{B}}}{n \varphi_{\pi}}
+  =:
+  L.
+\end{gather}
+\subsubsection*{v(S)}
+Since
+\begin{gather}
+  \E
+  \left[ 
+    A_j A_j^T
+  \right]
+  \le
+  \left( 
+    \frac{1}{n \varphi_{\pi}}
+  \right)^2
+  \E
+  \left[ 
+    B(X) B(X)^T
+  \right]
+\end{gather}
+and
+\begin{gather}
+  \E
+  \left[ 
+    A_j^T A_j
+  \right]
+  \le
+  \left( 
+    \frac{\varphi_{\norm{B}}}{n \varphi_{\pi}}
+  \right)^2
+\end{gather}
+we have
+\begin{gather}
+  v(S)
+  \le
+  \frac{|\lambda_{\max} | + \varphi_{\norm{B}}^2}{n \varphi_{\pi}^2},
+\end{gather}
+where 
+$\lambda_{\max}$ is the maximal eigenvalue of
+$
+  \E
+  \left[ 
+    B(X) B(X)^T
+  \right]
+$.
+Then by Bernsteins inequality~\ref{rmineq_bernstein}
+we get
+\begin{gather}
+  \E[J_2]
+  \le
+  \sqrt{
+    \frac{
+    2 \log (K + 1)
+    \left( 
+      |\lambda_{\max} | + \varphi_{\norm{B}}^2
+    \right)
+    }
+    {
+      n \varphi_{\pi}^2
+    }
+  }
+  +
+  \frac{
+    \log (K + 1)
+    \varphi_{\norm{B}}
+  }
+  {
+    3 n \varphi_{\pi}
+  }
+\end{gather}
+and by the Markov-inequality
+\begin{gather}
+  \P
+  \left( 
+    J_2 
+    \le
+    \frac{1}{\tau}
+    \E[J_2]
+  \right)
+  \ge 
+  1 - \tau
+\end{gather}
 \end{proof}
