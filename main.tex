@@ -9,23 +9,13 @@
 
 % Theorem handle
 
+\newtheorem{assumption}{Assumption}
+\newtheorem{subassumption}{}[assumption]
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{definition}{Definition}[chapter]
 \newtheorem{proposition}{Proposition}[chapter]
 \newtheorem{corollary}{Corollary}[theorem]
 
-% Assumption handle
-% from https://tex.stackexchange.com/questions/177256/reference-to-assumptions
-
-\newtheorem{asu}{Assumption}
-\newcounter{subassumption}[asu]
-\renewcommand{\thesubassumption}{(\textit{\roman{subassumption}})}
-\makeatletter
-\renewcommand{\p@subassumption}{\theasu}% Counter prefix.
-\makeatother
-\newcommand{\subasu}{% Just like \item in a list, but for an asu
-  \refstepcounter{subassumption}%
-  \thesubassumption~\ignorespaces}
 
 % definition of constants
 

@@ -1,3 +1,16 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Mordukhovich2022}
+Boris~S. Mordukhovich and Nguyen Mau~Nam.
+\newblock {{ENHANCED CALCULUS AND FENCHEL DUALITY}}.
+\newblock In Boris~S. Mordukhovich and Nguyen Mau~Nam, editors, {\em Convex
+  {{Analysis}} and {{Beyond}}: {{Volume I}}: {{Basic Theory}}}, Springer
+  {{Series}} in {{Operations Research}} and {{Financial Engineering}}, pages
+  255--310. {Springer International Publishing}, {Cham}, 2022.
+
+\bibitem{Tropp2015}
+Joel~A. Tropp.
+\newblock An {{Introduction}} to {{Matrix Concentration Inequalities}}, January
+  2015.
 
 \end{thebibliography}

@@ -1,9 +1,9 @@
 %%%%%%%%%%%%%%%%%%%ASSUMPTION 1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{asu}
-  \label{assumption_1}
+
+\begin{assumption}
   Assume, the following conditions hold:
-\\
-  \subasu 
+  %
+  \begin{subassumption}
     \label{assumption_1_i} 
     The minimizer 
     $
@@ -24,22 +24,24 @@
     is unique,
     where 
     $\Theta \subseteq \R^n$ is the parameter space for $\lambda$.
-\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subasu 
+  \end{subassumption}
+  %
+  \begin{subassumption}
     \label{assumption_1_ii} 
     The parameter space 
     $\Theta \subseteq \R^n$
-    is compact compact with diameter
-    $\text{diam}(\Theta) < \infty$.
-\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subasu 
+    is compact.
+  \end{subassumption}
+  %
+  \begin{subassumption}
     \label{assumption_1_iii}
     $\lambda_0 \in \text{int}(\Theta)$,
     where
     $\text{int}(\cdot)$
     stands for the interior of a set.
-\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subasu
+  \end{subassumption}
+  %
+  \begin{subassumption}
     \label{assumption_1_iv}
     There exists
     $\lambda^*_1 \in \Theta$
@@ -60,43 +62,42 @@
       \left( \rho^{'} \right)^{-1}
       \left( \frac{1}{n \pi(\cdot)} \right).
     $
-\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subasu
+  \end{subassumption}
+  %
+  \begin{subassumption}
     \label{assumption_1_v}
     There exists a constant 
     $
-      \varphi_{\rho^{'} \lor \pi} 
+      \varphi_{\pi} 
       \in 
       \left(0, \frac{1}{2} \right)
     $
     such that
     $
-      n\rho(v) 
-      \in 
-      (
-      \varphi_{\rho^{'} \lor \pi},
-      1 - \varphi_{\rho^{'} \lor \pi}
-      )
-    $
-    for $v=B(x)^T \lambda$ with $\lambda \in \text{int}(\Theta)$ 
-    \textbf{or}
-    $
       \pi(x)
       \in 
       (
-      \varphi_{\rho^{'} \lor \pi},
-      1 - \varphi_{\rho^{'} \lor \pi}
+      \varphi_{ \pi },
+      1 - \varphi_{ \pi }
       )
-    $.
-\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subasu
+    $
+    for all
+    $
+      x
+      \in
+      \mathcal{X}
+    $
+  \end{subassumption}
+  %
+  \begin{subassumption}
     \label{assumption_1_vi}
     There exists 
     $ \varphi_{\rho^{''}} > 0 $
     such that
     $ -\rho^{''} \ge \varphi_{\rho^{''}} > 0 $
-\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subasu
+  \end{subassumption}
+  %
+  \begin{subassumption}
     \label{assumption_1_vii}
     There exists 
     $ \varphi_{B(x) B(x)^T} > 0 $ 
@@ -106,8 +107,9 @@
       \succcurlyeq 
       \varphi_{B(x) B(x)^T} I 
     $
-\\ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \subasu
+  \end{subassumption}
+  %
+  \begin{subassumption}
     \label{assumption_1_viii}
     There exists
     $ \varphi_{\norm{B}} > 0 $
@@ -117,9 +119,11 @@
       \le 
       \varphi_{\norm{B}}
     $.
-\end{asu}
+  \end{subassumption}
+  %
+\end{assumption}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 We study the following problem:
 
@@ -148,6 +152,7 @@ Problem \eqref{primal_weighting_binary}
 is asymptotical consistent with the propensity score, i.e.
 
 \begin{theorem}
+  \label{ch_theorem_1}
   Under some (non-optimal) Assumptions,
   there exist constants
   $
@@ -223,11 +228,13 @@ is asymptotical consistent with the propensity score, i.e.
   Problem \eqref{primal_weighting_binary}.
 \end{theorem}
 
-\section{Plan of proof}
+\section*{Plan of Proof}
 
 It is easier to study the dual of 
 Problem \eqref{primal_weighting_binary}.
-Thus we employ results from convex analysis to establish
+Thus we employ results from convex analysis
+\cite{Mordukhovich2022}
+to establish
 \begin{proposition}
   \label{ch_1_dual}
   The dual of Problem \eqref{primal_weighting_binary}
@@ -290,7 +297,8 @@ Thus we employ results from convex analysis to establish
     w^*_j
   $
   satisfies
-  \begin{gather} 
+  \begin{gather}
+    \label{ch_1_w*}
     w^*_j
     =
     \rho^{'}
@@ -312,11 +320,67 @@ Thus we employ results from convex analysis to establish
   is the solution to the dual optimization problem.
 \end{proposition}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The core of the subsequent analysis is based on
+Assumption~\ref{assumption_1_iv}, 
+i.e.
+the existence of an oracle parameter
+$\lambda_1^{*}$
+in a sieve estimate of the true propensity score (or a transformation). 
+It is then natural to enquire about the convergence of the dual solution
+$
+  \lambda^\dagger
+$
+to 
+$
+  \lambda^*_1
+$.
+Making certain assumptions and employing
+matrix concentration inequalitys \cite{Tropp2015}
+we can establish
 \begin{proposition}
   \label{ch_1_near_oracle}
-  There exists a solution $\lambda^\dagger$ 
-  to \eqref{dual_weighting_binary}
+  Under some (non-optimal) Assumptions,
+  there exists a constant
+  $
+    c_{3}
+    >
+    0
+  $
+  and a decreasing sequence
+  $
+    (\varepsilon_n^3)
+    \subset
+    (0,1]
+  $
+  that converges to 0
   such that
+  for all
+  $
+    \tau
+    \in
+    (0,1]
+  $
+  there exists a constant
+  $
+    \tilde{
+    c_{\tau}
+    }
+    \in
+    [0,\infty)
+  $
+  only depending on 
+  $ \tau $
+  such that for all 
+  $ n \ge 1 $
+  and
+  $
+    \tau
+    \in
+    (0,1]
+  $
+  it holds
   \begin{gather}
     \P
     \left( 
@@ -326,165 +390,68 @@ Thus we employ results from convex analysis to establish
         \lambda^*_1
       }_2
       \le
-      \CP \Ctau \LearnRate
+      c^3
+      \tilde{
+        c_{\tau}
+      }
+      (
+        \varepsilon_n^3
+      )
     \right)
     \ge 
     1 - \tau.
   \end{gather}
-\end{proposition}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We employ 
-Theorem~\ref{cvxa_fenchel_theorem}
-together with the box constraints in 
-Problem~\eqref{primal_weighting_binary}
-to obtain Proposition~\ref{ch_1_dual}.
-
-To prove Proposition~\ref{ch_1_near_oracle}
-we employ
-Proposition~\ref{syu_1_result}
-and 
-Corollary~\ref{syu_taylor_corollary}
-to get
-\begin{align}
-  \begin{split}
-    & 
-    G(\lambda^*_1 + \Delta) 
-    -
-    G(\lambda^*_1)
-\\
-    &\ge
-    \frac{1}{n}
-    \sum_{j = 1}^{n} 
-      \left[ 
-        -T_j n 
-        \rho^{'} 
-        \left( 
-          B(X_j)^T \lambda^*_1
-        \right)
-        +
-        1
-      \right]
-      \Delta^T B(X_j)
-\\
-    & +
-    \frac{1}{2}
-    \sum_{j = 1}^{n} 
-      -T_j  
-      \rho^{''} 
-      \left( 
-        B(X_j)^T 
-        (
-          \lambda^*_1 + \xi \Delta
-        )
-      \right)
-      \Delta^T
-      \left( 
-        B(X_j)
-        B(X_j)^T
-      \right)
-      \Delta
-\\
-    &-
-    |\Delta|^T \delta
-\\
-    &\ge
-    - \norm{\Delta}_2
-    \left( 
-      \norm{
-        \frac{1}{n}
-        \sum_{j = 1}^{n} 
-          \left[ 
-            -T_j n 
-            \rho^{'} 
-            \left( 
-              B(X_j)^T \lambda^*_1
-            \right)
-            +
-            1
-          \right]
-        B(X_j)
-      }_2
-      +
-      \norm{\delta}_2
-    \right)
-\\
-    &+
-    n
-    \norm{\Delta}^2_2
-    \varphi_{\rho^{''}}
-    \underline{\varphi_{aa^T}}
-  \end{split}
-\end{align}
-
-Next we employ Bernstein inequality~\ref{rmineq_bernstein} to bound
-\begin{align}
-    \norm{
-      \frac{1}{n}
-      \sum_{j = 1}^{n} 
-      \left[ 
-        -T_j n 
-        \rho^{'} 
-        \left( 
-          B(X_j)^T \lambda^*_1
-        \right)
-      +
-      1
-      \right]
-      B(X_j)
-    }_2
-    \le
-    \CP \Ctau \LearnRate
-\end{align}
-with probability $1 - \tau$.
-Then for 
-$\norm{\Delta}_2$ large enough it holds
-\begin{gather}
-  G(\lambda^*_1 + \Delta) 
-  -
-  G(\lambda^*_1)
-  >
-  0
-\end{gather}
-with probability $1 - \tau$.
-Thus by Proposition~\ref{syu_1_result}
-  \begin{gather}
-    \P
-    \left( 
-      \norm{
-        \lambda^\dagger
-        -
-        \lambda^*_1
-      }_2
-      \le
-      \norm{\Delta}_2
-    \right)
-    \ge 
-    1 - \tau
-    .
-  \end{gather}
-It is then straightforward to prove
-
+\end{proposition}%
+It is then straightforward to prove a more general result
+then
+Theorem~\ref{ch_theorem_1}%
+.
+%
 \begin{theorem}
-  Let 
-  $\lambda^\dagger$
-  be the solution to Problem~\ref{dual_weighting_binary}
-  and 
-  $w^*(x)=\rho^{'}\left( B(x)^T \lambda^\dagger \right)$.
-  Then under the conditions in Assumption~\ref{assumption_1}
+  Under some (non-optimal) Assumptions,
+  there exist constants
+  $
+    c_{1}
+    , 
+    c_{2}
+    >
+    0
+  $
+  and decreasing sequences
+  $
+    (\varepsilon_n^1)
+    ,
+    (\varepsilon_n^2)
+    \subset
+    (0,1]
+  $
+  that converge to 0
+  such that
+  for all
+  $
+    \tau
+    \in
+    (0,1]
+  $
+  there exists a constant
+  $
+    c_{\tau}
+    \in
+    [0,\infty)
+  $
+  only depending on 
+  $ \tau $
+  such that for all 
+  $ n \ge 1 $
+  and
+  $
+    \tau
+    \in
+    (0,1]
+  $
   it holds
-
-  \begin{align}
-  \norm{
-    w^*(\cdot)
-    -
-    \frac{1}{n \pi(\cdot)}
-  }_{\P, 2}
-  \le 
-  \text{stuff}
-  \end{align}
-and 
-  \begin{align}
-    \P
+  \begin{align*}
+   & \P
     \left( 
   \norm{
     w^*(\cdot)
@@ -492,13 +459,31 @@ and
     \frac{1}{n \pi(\cdot)}
   }_\infty
   \le 
-  \text{stuff}
+  c_{1}
+  c_{\tau}
+  \varepsilon_{n}^1 
    \right)
    \ge
   1 - \tau
-  .
-  \end{align}
+  ,
+\\
+   &\quad \
+   \norm{
+    w^*(X)
+    -
+    \frac{1}{n \pi(X)}
+  }_{\P, 2}
+  \le 
+  c_{2}
+  \varepsilon_n^{2},
+  \end{align*}
+  where 
+  $w^*(X)$
+  is as in \eqref{ch_1_w*}
+  without the index.
 \end{theorem}
+
+\section*{Proof of theorem 2.2}
 
 
 \begin{proof}
