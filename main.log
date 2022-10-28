@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.6.26)  28 OCT 2022 11:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.6.26)  28 OCT 2022 13:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -137,20 +137,20 @@ File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count279
@@ -173,13 +173,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 <images//unistuttgart_logo_deutsch.jpg, id=1, 173.9298pt x 37.0986pt>
 File: images//unistuttgart_logo_deutsch.jpg Graphic file (type jpg)
 <use images//unistuttgart_logo_deutsch.jpg>
-Package pdftex.def Info: images//unistuttgart_logo_deutsch.jpg  used on input line 59.
+Package pdftex.def Info: images//unistuttgart_logo_deutsch.jpg  used on input line 58.
 (pdftex.def)             Requested size: 173.92937pt x 37.0985pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -197,54 +197,64 @@ Chapter 1.
 ]
 Chapter 2.
 (./chapters/chapter_01.tex
-Overfull \hbox (2.88776pt too wide) in paragraph at lines 4--120
-\OT1/cmr/m/n/12 (\OT1/cmr/m/it/12 i\OT1/cmr/m/n/12 ) []The min-i-mizer $\OML/cmm/m/it/12 ^^U[] \OT1/cmr/m/n/12 = [] [][] \U/msb/m/n/12 E []$ \OT1/cmr/m/n/12 is unique,
+Overfull \hbox (4.6592pt too wide) in paragraph at lines 4--120
+\OT1/cmr/m/it/12 (i) []The min-i-mizer $\OML/cmm/m/it/12 ^^U[] \OT1/cmr/m/n/12 = [] [][] \U/msb/m/n/12 E []$ \OT1/cmr/m/it/12 is unique,
  []
 
 
-Overfull \hbox (11.21283pt too wide) in paragraph at lines 4--120
-\OT1/cmr/m/n/12 (\OT1/cmr/m/it/12 ii\OT1/cmr/m/n/12 ) []The pa-ram-e-ter space $^^B \OMS/cmsy/m/n/12 ^^R \U/msb/m/n/12 R[]$ \OT1/cmr/m/n/12 is com-pact com-pact with di-am-e-ter $[](^^B) \OML/cmm/m/it/12 <
+Overfull \hbox (6.1654pt too wide) in paragraph at lines 4--120
+\OT1/cmr/m/it/12 (ii) []The pa-ram-e-ter space $\OT1/cmr/m/n/12 ^^B \OMS/cmsy/m/n/12 ^^R \U/msb/m/n/12 R[]$ \OT1/cmr/m/it/12 is com-pact com-pact with di-am-e-ter $[]\OT1/cmr/m/n/12 (^^B) \OML/cmm/m/it/12 <
+ []
+
+
+Overfull \hbox (4.5733pt too wide) in paragraph at lines 4--120
+\OT1/cmr/m/it/12 (iv) []There ex-ists $\OML/cmm/m/it/12 ^^U[] \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 ^^B$ \OT1/cmr/m/it/12 such that $[][] \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 '[]$\OT1/cmr/m/it/12 , where $\OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 ) :=
  []
 
 [3
 
 ]
-Overfull \hbox (10.48518pt too wide) in paragraph at lines 323--330
-\OT1/cmr/bx/n/12 Theorem 2.1. \OT1/cmr/m/it/12 Let $\OML/cmm/m/it/12 ^^U[]$ \OT1/cmr/m/it/12 be the so-lu-tion to Prob-lem 2.2[] and $\OML/cmm/m/it/12 w[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^Z[] []$\OT1/cmr/m/it/12 .
+Overfull \hbox (3.25565pt too wide) in paragraph at lines 336--341
+[]\OT1/cmr/m/n/12 We em-ploy The-o-rem 3.2[] to-gether with the box con-straints in Prob-lem []
  []
 
-[4] [5] [6] [7]) [8]
-Chapter 3.
-(./chapters/convex_analysis.tex [9
+[4]
+Overfull \hbox (10.48518pt too wide) in paragraph at lines 468--475
+\OT1/cmr/bx/n/12 Theorem 2.2. \OT1/cmr/m/it/12 Let $\OML/cmm/m/it/12 ^^U[]$ \OT1/cmr/m/it/12 be the so-lu-tion to Prob-lem 2.2[] and $\OML/cmm/m/it/12 w[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^Z[] []$\OT1/cmr/m/it/12 .
+ []
 
-]) [10]
+[5] [6] [7] [8]) [9]
+Chapter 3.
+(./chapters/convex_analysis.tex [10
+
+]) [11]
 Chapter 4.
-(./chapters/random_matrix_inequality.tex) [11
+(./chapters/random_matrix_inequality.tex) [12
 
 ]
 Chapter 5.
-(./chapters/simple_yet_useful.tex [12
+(./chapters/simple_yet_useful.tex [13
 
-]) (./main.bbl [13]
+]) (./main.bbl [14]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [14
+) [15
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2889 strings out of 478238
- 42562 string characters out of 5850456
- 345364 words of memory out of 5000000
- 21093 multiletter control sequences out of 15000+600000
- 479676 words of font info for 67 fonts, out of 8000000 for 9000
+ 2892 strings out of 478238
+ 42597 string characters out of 5850456
+ 344359 words of memory out of 5000000
+ 21095 multiletter control sequences out of 15000+600000
+ 480035 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,19n,62p,220b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (15 pages, 278605 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (16 pages, 291567 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 142 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

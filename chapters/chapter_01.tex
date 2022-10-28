@@ -142,6 +142,92 @@ We study the following problem:
   \end{split}
 \end{align}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We aim to prove that the solution to 
+Problem \eqref{primal_weighting_binary}
+is asymptotical consistent with the propensity score, i.e.
+
+\begin{theorem}
+  Under some (non-optimal) Assumptions,
+  there exist constants
+  $
+    c_{1}
+    , 
+    c_{2}
+    >
+    0
+  $
+  and decreasing sequences
+  $
+    (\varepsilon_n^1)
+    ,
+    (\varepsilon_n^2)
+    \subset
+    (0,1]
+  $
+  that converge to 0
+  such that
+  for all
+  $
+    \tau
+    \in
+    (0,1]
+  $
+  there exists a constant
+  $
+    c_{\tau}
+    \in
+    [0,\infty)
+  $
+  only depending on 
+  $ \tau $
+  such that for all 
+  $ n \ge 1 $
+  and
+  $
+    \tau
+    \in
+    (0,1]
+  $
+  it holds
+  \begin{align*}
+   & \P
+    \left( 
+  \norm{
+    w^*_i
+    -
+    \frac{1}{n \pi(X_i)}
+  }_\infty
+  \le 
+  c_{1}
+  c_{\tau}
+  \varepsilon_{n}^1 
+   \right)
+   \ge
+  1 - \tau
+  ,
+\\
+   &\quad \
+   \norm{
+    w^*_i
+    -
+    \frac{1}{n \pi(X_i)}
+  }_{\P, 2}
+  \le 
+  c_{2}
+  \varepsilon_n^{2},
+  \end{align*}
+  where 
+  $w^*$
+  is the solution to 
+  Problem \eqref{primal_weighting_binary}.
+\end{theorem}
+
+\section{Plan of proof}
+
+It is easier to study the dual of 
+Problem \eqref{primal_weighting_binary}.
+Thus we employ results from convex analysis to establish
 \begin{proposition}
   \label{ch_1_dual}
   The dual of Problem \eqref{primal_weighting_binary}
@@ -162,8 +248,68 @@ We study the following problem:
         B(X_j)^T \lambda
       \right]
     +
-    |\lambda|^T \delta
+    |\lambda|^T \delta,
   \end{gather}
+  where 
+  $
+    B(X_j)=(B_k(X_j))_{1 \le k \le K}
+  $
+  denotes the $K$ basis functions of the covariates,
+  $
+    \rho(t) 
+    :=
+    \frac{t}{n}
+    -
+    t
+    (h^{'})^{-1}(t)
+    +
+    h((h^{'})^{-1}(t))
+  $
+  with
+  $
+    h(x)
+    :=
+    f%
+    \left( 
+      \frac{1}{n}
+      -
+      x
+    \right)
+  $
+  and
+  $
+    | \lambda | 
+    :=
+    \left(
+    | \lambda_k | 
+    \right)_{1 \le k \le K}
+  $.
+  Moreover,
+  the primal solution
+  $
+    w^*_j
+  $
+  satisfies
+  \begin{gather} 
+    w^*_j
+    =
+    \rho^{'}
+    \left(
+      B(X_j)^T
+      \lambda^\dagger
+    \right)
+  \end{gather}
+  for 
+  $
+    j
+    =
+    1, \ldots , n
+  $,
+  where 
+  $
+    \lambda^\dagger
+  $
+  is the solution to the dual optimization problem.
 \end{proposition}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{proposition}
@@ -187,7 +333,6 @@ We study the following problem:
   \end{gather}
 \end{proposition}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Plan of proof}
 We employ 
 Theorem~\ref{cvxa_fenchel_theorem}
 together with the box constraints in 
