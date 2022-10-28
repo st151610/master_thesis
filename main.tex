@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
+\usepackage{cite}
 \graphicspath{ {images/} }
 
 % Theorem handle
@@ -55,9 +56,12 @@
 
 \begin{document}
 
-\maketitle 
+\maketitle
 
 \tableofcontents 
+
+\chapter{Introduction}
+\input{chapters/introduction.tex}
 
 \chapter{Chapter One Title}
 \input{chapters/chapter_01.tex}
@@ -71,4 +75,8 @@
 \chapter{Simple yet useful Calculations}
 \input{chapters/simple_yet_useful.tex}
 
+
+
+\bibliography{literature}{}
+\bibliographystyle{plain}
 \end{document}
