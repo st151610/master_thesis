@@ -1,5 +1,5 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}{}%
-\contentsline {chapter}{\numberline {2}Chapter One Title}{3}{}%
+\contentsline {chapter}{\numberline {2}Balancing Weights}{3}{}%
 \contentsline {chapter}{\numberline {3}Convex Analysis}{10}{}%
-\contentsline {chapter}{\numberline {4}Random Matrix Inequality}{12}{}%
+\contentsline {chapter}{\numberline {4}Matrix Concentration Inequalities}{12}{}%
 \contentsline {chapter}{\numberline {5}Simple yet useful Calculations}{13}{}%

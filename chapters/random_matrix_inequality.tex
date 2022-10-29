@@ -1,24 +1,31 @@
 \begin{theorem}
+  \emph{(Matrix Bernstein Inequality)}
   \label{rmineq_bernstein}
   Let $(A_k)_{1\le k \le n}\subseteq\R^{d_1\times d_2}$ be a finite sequence of independent, random matrices. Assume that
     \begin{gather}
+      \label{rmineq_bernstein_cond_1}
       \E(A_k)=0\quad\text{and}\quad\norm{A_k}\le L \quad \text{for each}\quad  k\in \{1,\ldots,n\}.
     \end{gather}
     Introduce the random matrix
-      \begin{gather}
+      \begin{gather*}
         S:=\sum_{k=1}^n A_k.
-      \end{gather}
+      \end{gather*}
     Let $v(S)$ be the matrix variance statistic of the sum:
       \begin{align}
+        \label{rmineq_bernstein_cond_2}
+        \begin{split}
         v(S):&=\max\left\{ \norm{\E(SS^T)}, \norm{\E(S^T S)} \right\}\\
              &=\max\left\{ \norm{\sum_{k=1}^n\E(A_kA_k^T)}, \norm{\sum_{k=1}^n\E(A_k^T A_k)} \right\}.
+        \end{split}
       \end{align}
     Then
       \begin{align}
+        \label{rmineq_bernstein_expectation_bound}
         \E\norm{S}\le \sqrt{2v(S)\log(d_1+d_2)} + \frac{1}{3}L\log(d_1+d_2).
       \end{align}
     Furthermore, for all $t\ge 0$,
       \begin{gather}
+        \label{rmineq_bernstein_probability_bound}
         \P(\norm{S}\ge t)\ge(d_1+d_2)\exp\left(\frac{-t^2/2}{v(S)+Lt/3} \right).
       \end{gather}
 \end{theorem}

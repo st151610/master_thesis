@@ -18,19 +18,6 @@
 %% - REAL DATA USECASES
 
 
-Researchers are often left with observational studies to answer questions about causality.
-When Confounders are present the task can become arbitrarily complex.
-Propensity Score methods 
-\cite{Rosenbaum1983},
-e.g. IPW or matching,
-are popular methods to adjust for confounders.
-They rely heavily on estimates of the true propensity score,
-wich are known to suffer from model dependencies and misspecification
-\cite{Kang2007}.
-This issue becomes more pressing when moving from binary treatment to 
-Continuous treatment\cite{Hirano2005}%
-.% 
-Therefore Methods have been proposed to directly target imbalance in the data.
-\cite{Fong2018}\cite{Hainmueller2012}\cite{Zubizarreta2015}.
-We take a closer look at \cite{Wang2019} and extend the analysis to settings with Continuous treatment 
+Researchers are often left with observational studies to answer questions about causality. When confounders are present the task of infering causality can become arbitrarily complex. Propensity score methods \cite{Rosenbaum1983}, e.g. inverse probability weighting or matching, are popular methods to adjust for confounders. Usually these methods rely heavily on estimates of the true propensity score, which are known to suffer from model dependencies and misspecification\cite{Kang2007}. This issue becomes more pressing when moving from binary to continuous treatment\cite{Hirano2005}. Therefore methods have been developed to directly target imbalances in the data\cite{Fong2018}\cite{Hainmueller2012}\cite{Zubizarreta2015}.
+We take a closer look at \cite{Wang2019} and extend the analysis to settings with continuous treatment 
 \cite{Vegetabile2020}\cite{Tubbicke2020}.

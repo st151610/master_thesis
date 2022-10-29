@@ -121,6 +121,14 @@
     $.
   \end{subassumption}
   %
+  \begin{subassumption}
+    \label{assumption_1_ix}
+    The number of basis functions
+    satisfies
+    $
+      K = o(n)
+    $.
+  \end{subassumption}
 \end{assumption}
 
 
@@ -650,12 +658,16 @@ we have
 \end{gather}
 
 \subsubsection*{Analysis of $J_2$}
-We employ Bernstein Inequality for matrices 
-(Theorem~\ref{rmineq_bernstein})
+We want to employ 
+Theorem~\ref{rmineq_bernstein}%
+. %
 To this end we define
-\begin{gather}
+the independent random matrices
+\begin{align}
+  \label{ch_1_j2_1}
+  \begin{split}
   A_j
-  :=
+  &:=
       \frac{1}{n}
       \left[ 
         \frac{T_j}{\pi(X_j)}
@@ -663,13 +675,31 @@ To this end we define
       1
       \right]
       B(X_j)
-\end{gather}
-
-\subsubsection*{$\E A_j = 0$}
-
-It holds
-
+      \,,
+      \quad 
+      j=1,\ldots,n,
+\\
+  S
+  &:=
+  \sum_{j = 1}^{n} 
+  A_j
+  \end{split}
+\end{align}
+and check conditions 
+\eqref{rmineq_bernstein_cond_1} 
+and
+\eqref{rmineq_bernstein_cond_2}.
+Note that 
+$
+  \norm{S}_2
+  =
+  J_2
+$
+.
+By the properties of conditional expectation 
+it holds
 \begin{gather}
+  \label{ch_1_j2_2}
   \E
   \left[  
     \frac{T_j}{\pi(X_j)}
@@ -690,11 +720,20 @@ It holds
   =
   \E[B(X_j)]. 
 \end{gather}
-Thus 
-$\E[A_j] = 0$.
-\subsubsection*{L}
+Taking the expectation in 
+\eqref{ch_1_j2_1} 
+and using
+\eqref{ch_1_j2_2}
+we get
+$\E[A_j] = 0$
+for all 
+$
+  j=1,\ldots,n
+$
+.
 Since
 \begin{gather}
+  \label{ch_1_j2_3}
   \left| 
       \frac{T_j}{\pi(X_j)}
       -
@@ -707,17 +746,32 @@ Since
 \end{gather}
 by Assumption~\ref{assumption_1_v},
 we can employ Assumption~\ref{assumption_1_viii}
+together with 
+\eqref{ch_1_j2_3}
+and
+\eqref{ch_1_j2_1}
 to get
 \begin{gather}
+  \label{ch_1_j2_4}
   \norm{A_j}_2
   \le
   \frac{\varphi_{\norm{B}}}{n \varphi_{\pi}}
   =:
   L.
 \end{gather}
-\subsubsection*{v(S)}
-Since
+Thus,
+condition \eqref{rmineq_bernstein_cond_1}
+is satisfied.
+Next we turn to the matrix variance statistic
+$ v(S) $
+\eqref{rmineq_bernstein_cond_2}.
+By 
+\eqref{ch_1_j2_1}
+and
+\eqref{ch_1_j2_3}
+we have
 \begin{gather}
+  \label{ch_1_j2_5}
   \E
   \left[ 
     A_j A_j^T
@@ -731,41 +785,71 @@ Since
     B(X) B(X)^T
   \right]
 \end{gather}
-and
+and by \eqref{ch_1_j2_4} 
 \begin{gather}
+  \label{ch_1_j2_6}
   \E
   \left[ 
     A_j^T A_j
   \right]
   \le
-  \left( 
-    \frac{\varphi_{\norm{B}}}{n \varphi_{\pi}}
-  \right)^2
+  L^2.
 \end{gather}
-we have
+Since 
+$
+  \max\{a,b\}
+  \le
+  | a | + | b |
+$
+we can use 
+\eqref{ch_1_j2_5}
+and
+\eqref{ch_1_j2_6}
+to get
 \begin{gather}
+  \label{ch_1_j2_7}
   v(S)
   \le
-  \frac{|\lambda_{\max} | + \varphi_{\norm{B}}^2}{n \varphi_{\pi}^2},
+  \frac{1}{n}
+  \frac{\lambda_{\max}}{\varphi_{\pi}^2}
+  +
+  n L^2,
 \end{gather}
 where 
-$\lambda_{\max}$ is the maximal eigenvalue of
+$\lambda_{\max}$ 
+is the maximal eigenvalue of
+the symmatric (non-random) matrix
 $
   \E
   \left[ 
     B(X) B(X)^T
   \right]
 $.
-Then by Bernsteins inequality~\ref{rmineq_bernstein}
+Having dealt with 
+\eqref{rmineq_bernstein_cond_1} 
+and
+\eqref{rmineq_bernstein_cond_2}
+we can establish 
+the
+expectation bound
+\eqref{rmineq_bernstein_expectation_bound}
+of Theorem~\ref{rmineq_bernstein}.
+Together with 
+\eqref{ch_1_j2_4}
+and
+\eqref{ch_1_j2_7}
 we get
-\begin{gather}
-  \E[J_2]
-  \le
+\begin{align}
+  \label{ch_1_j2_8}
+  \begin{split}
+    &\E[J_2]
+\\
+  &\le
   \sqrt{
     \frac{
     2 \log (K + 1)
     \left( 
-      |\lambda_{\max} | + \varphi_{\norm{B}}^2
+      \lambda_{\max}  + \varphi_{\norm{B}}^2
     \right)
     }
     {
@@ -780,20 +864,104 @@ we get
   {
     3 n \varphi_{\pi}
   }
-\end{gather}
-and by the Markov-inequality
-\begin{gather}
-  \P
-  \left( 
-    J_2 
-    \le
-    \frac{1}{\tau}
-    \E[J_2]
-  \right)
-  \ge 
+\\
+  &\le
+  \frac{1}{\varphi_{\pi}}
+  \sqrt{
+    \frac{
+      \log(K + 1)
+    }
+    {
+      n
+    }
+  }
+  \left[
+    \varphi_{\norm{B}}
+    \left(
+      \sqrt{2}
+      +
+      \frac{1}{3}
+      \sqrt{
+        \frac{\log (K + 1)}{n}
+      }
+    \right)
+    +
+    \sqrt{
+      2
+      \lambda_{\max}
+    }
+  \right].
+\end{split}
+\end{align}
+Since
+$
+  K = o(n)
+$
+by Assumption~\ref{assumption_1_ix}
+we can discuss the other influences on the quality of the bound
+\eqref{ch_1_j2_8}.
+On a high-level it is readily clear
+that appropriate bounds on
+$
+\varphi_{\pi},
+\varphi_{\norm{B}}
+$
+and
+$
+  \lambda_{\max}
+$
+will shrink
+$
+  \E[J_2]
+$
+to 0 
+and will assist in establishing learning rates.
+
+We could also have invoked the probabitity bound 
+\eqref{rmineq_bernstein_probability_bound} 
+of Theorem~\ref{rmineq_bernstein}.
+But for the sake of simplicity we prefer the combination 
+of the expectation bound 
+\eqref{ch_1_j2_8}
+and the Markov inequality.
+With the latter we get
+\begin{align}
+  \label{ch_1_j2_result}
+  J_2
+  \le
+  \frac{1}{\tau}
+  \frac{1}{\varphi_{\pi}}
+  \sqrt{
+    \frac{
+      \log(K + 1)
+    }
+    {
+      n
+    }
+  }
+  \left[
+    \varphi_{\norm{B}}
+    \left(
+      \sqrt{2}
+      +
+      \frac{1}{3}
+      \sqrt{
+        \frac{\log (K + 1)}{n}
+      }
+    \right)
+    +
+    \sqrt{
+      2
+      \lambda_{\max}
+    }
+  \right]
+\end{align}
+with probabitity 
+$
+  \ge
   1 - \tau
-\end{gather}
-\subsubsection*{Finish}
+$.
+
 If we choose
 \begin{align*}
   \norm{\Delta}_2
