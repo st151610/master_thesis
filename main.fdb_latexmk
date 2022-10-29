@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1667048483 "main.aux" "main.bbl" "main" 1667048755
+["bibtex main"] 1667051151 "main.aux" "main.bbl" "main" 1667051223
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1650183167 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "literature.bib" 1667032904 32019 d16d9f4e2d464ad9c6fcd7b0ee1bbc4d ""
-  "main.aux" 1667048755 3150 8e0100f1db30661d8fef050ec0dd4c58 "pdflatex"
+  "main.aux" 1667051223 2979 a383e4e46076c08948152b5b582de91c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1667048754 "main.tex" "main.pdf" "main" 1667048755
+["pdflatex"] 1667051222 "main.tex" "main.pdf" "main" 1667051223
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -72,16 +72,15 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1656258618 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1656258554 2927665 64168ffe30b18142c268c107733f32c0 ""
-  "chapters/chapter_01.tex" 1667048753 18198 88adb25a31bb1f5c16287c49bebc1622 ""
-  "chapters/convex_analysis.tex" 1666766380 2377 5701d93ef36eb8227d2b0a31355686ef ""
+  "chapters/chapter_01.tex" 1667051220 18410 63093515b7bded49f08c4f71cceafe9d ""
   "chapters/introduction.tex" 1667036817 1456 6a741fd04a0287aa7d8050ccb283d967 ""
   "chapters/random_matrix_inequality.tex" 1667037379 1232 a25c5ad72c5e36588b2d2bb1527e7379 ""
   "chapters/simple_yet_useful.tex" 1666794077 3033 d6cda9fa97ef2ab5270b7e9103f6557a ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1667048755 3150 8e0100f1db30661d8fef050ec0dd4c58 "pdflatex"
-  "main.bbl" 1667048483 2877 3fc6bc898fcd656c27b4135fb50030c2 "bibtex main"
-  "main.tex" 1667037432 1457 1896366873082c0315439507eaa13cda ""
-  "main.toc" 1667048755 345 062f235a7587fc3cf519a85541a06770 "pdflatex"
+  "main.aux" 1667051223 2979 a383e4e46076c08948152b5b582de91c "pdflatex"
+  "main.bbl" 1667051151 2877 3fc6bc898fcd656c27b4135fb50030c2 "bibtex main"
+  "main.tex" 1667050412 1459 83775e1820809d77dac5e2c664982815 ""
+  "main.toc" 1667051223 282 bcf05509735bd318846233071f99fd7a "pdflatex"
   (generated)
   "main.aux"
   "main.log"
