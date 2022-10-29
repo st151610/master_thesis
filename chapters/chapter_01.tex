@@ -650,7 +650,8 @@ we have
 \end{gather}
 
 \subsubsection*{Analysis of $J_2$}
-We employ Bernstein Inequality for matrices
+We employ Bernstein Inequality for matrices 
+(Theorem~\ref{rmineq_bernstein})
 To this end we define
 \begin{gather}
   A_j
@@ -793,10 +794,11 @@ and by the Markov-inequality
   1 - \tau
 \end{gather}
 \subsubsection*{Finish}
-If we choose for $\gamma > 0$
-\begin{align}
+If we choose
+\begin{align*}
   \norm{\Delta}_2
   &=
+  2
   \frac{
     \frac{1}{\tau}
     \E[J_2]
@@ -809,13 +811,12 @@ If we choose for $\gamma > 0$
    \varphi_{\rho^{''}}
   \underline{\varphi_{BB^T}}
   }
-  (1 + \gamma)
   \\
   &=:
   C
-\end{align}
-we have
-\begin{align}
+\end{align*}
+by Proposition~\ref{syu_1_result} we have
+\begin{align*}
   \P
   \left( 
       \norm{
@@ -839,9 +840,9 @@ we have
   \\
   &\ge
   1 - \tau
-\end{align}
+\end{align*}
 \subsubsection*{Finish 2}
-\begin{align}
+\begin{align*}
   \norm{
     w^*(X)
     -
@@ -883,9 +884,9 @@ we have
     +
     \varphi_{m^*}
   \right)
-\end{align}
+\end{align*}
 %%%%%%%%%%%%%%%%%%%
-\begin{align}
+\begin{align*}
   \norm{
     w^*(\cdot)
     -
@@ -922,7 +923,9 @@ we have
     +
     \varphi_{m^*}
   \right)
-\end{align}
+\end{align*}
 with probabitity greater than 
 $1 - \tau$.
 \end{proof}
+The next step consists of strenghtening the Assumptions to get concrete learning rates.
+This can be done in a series of examples.
