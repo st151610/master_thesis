@@ -525,6 +525,7 @@ Theorem~\ref{ch_theorem_1}%
  Proposition~\ref{syu_triangle}
  to get
  \begin{align}
+   \label{ch_1_proof1_1}
   \begin{split}
   & 
   G(\lambda^*_1 + \Delta) 
@@ -588,7 +589,7 @@ Theorem~\ref{ch_theorem_1}%
   n
   \norm{\Delta}^2_2
    \varphi_{\rho^{''}}
-  \underline{\varphi_{aa^T}}
+  \underline{\varphi_{BB^T}}
   \\
   &:=
   -\norm{\Delta}_2
@@ -604,10 +605,55 @@ the Cauchy-Schwarz-Inequality
 and
 Assumptions~\ref{assumption_1_vi} and \ref{assumption_1_vii}
 .
+We want to establish probabilistic upper bounds of the factor associated with 
+$
+  -\norm{\Delta}_2
+$. 
+This will be done with appropriate assumptions on
+$
+  \norm{\delta}_2
+$
+and a thorough analysis of $I_1$.
+If we then restrict lower bounds of
+$
+  I_2
+$
+to approprietely slow convergence to 0,
+e.g. by assumptions on
+$
+\varphi_{\rho^{''}}
+$
+and
+$
+\underline{
+  \varphi_{BB^T}
+}
+$,
+we can choose
+$
+  \norm{\Delta}_2
+$
+large enough,
+such that 
+\eqref{ch_1_proof1_1}
+yields
+$
+  G(\lambda^*_1 + \Delta) 
+  -
+  G(\lambda^*_1)
+  >
+  0
+$
+with arbitrarily large probabitity for $n$ large enough.
+With Proposition~\ref{syu_1_result} it follows then immediately
+Proposition~\ref{ch_1_near_oracle}
+.
 \subsection*{Analysis of $I_1$}
 We want to use Assumption~\ref{assumption_1_iii}.
 Thus we perform the following split:
 \begin{align}
+  \label{ch_1_i1}
+  \begin{split}
   I_1 
   &\le
     \norm{
@@ -638,6 +684,7 @@ Thus we perform the following split:
     \\
   &=:
   J_1 + J_2
+  \end{split}
 \end{align}
 
 \subsubsection*{Analysis of $J_1$}
@@ -652,6 +699,7 @@ and
 the triangle inequality 
 we have
 \begin{gather}
+  \label{ch_1_j1_result}
   J_1 
   \le
   n L_{\rho^{'}}\varphi_{\norm{B(x)}} \varphi_{m^*}
@@ -962,28 +1010,74 @@ $
   1 - \tau
 $.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 If we choose
-\begin{align*}
-  \norm{\Delta}_2
-  &=
-  2
-  \frac{
+$
+\norm{\Delta}_2
+$
+to be
+\begin{align}
+  \label{ch_1_choice_norm_Delta}
+  \begin{split} 
+    &\left(
+     \sqrt{2}
     \frac{1}{\tau}
-    \E[J_2]
-    +
-    n L_{\rho^{'}}\varphi_{\norm{B(x)}} \varphi_{m^*}
-    +
+    \frac{1}{\varphi_{\pi}}
+    \sqrt{
+      \frac{
+        \log(K + 1)
+      }
+      {
+        n
+      }
+    }
+    \left[
+      \varphi_{\norm{B}}
+      \left(
+        1
+        +
+        \sqrt{
+          \frac{\log (K + 1)}{n}
+        }
+      \right)
+      +
+      \sqrt{
+        \lambda_{\max}
+      }
+  \right]
+  \right.
+\\
+  &
+  \quad
+  +
+     L_{\rho^{'}}
+     \varphi_{\norm{B}}
+     \varphi_{m^*}
+  +
+  \left.
+  \frac{
     \norm{\delta}_2
   }
+  {n}
+  \right)
+  \frac{1}
   {
-   \varphi_{\rho^{''}}
-  \underline{\varphi_{BB^T}}
+    \varphi_{\rho^{''}}
+    \underline{
+      \varphi_{BB^T}
+    }
   }
-  \\
-  &=:
-  C
-\end{align*}
-by Proposition~\ref{syu_1_result} we have
+\end{split}
+\end{align}
+we get by
+\eqref{ch_1_proof1_1},
+\eqref{ch_1_i1},
+\eqref{ch_1_j1_result},
+\eqref{ch_1_j2_result}
+and 
+Proposition~\ref{syu_1_result}
 \begin{align*}
   \P
   \left( 
@@ -1007,8 +1101,16 @@ by Proposition~\ref{syu_1_result} we have
   \right)
   \\
   &\ge
-  1 - \tau
+  1 - \tau,
 \end{align*}
+where 
+$
+  C
+$
+is as in 
+\eqref{ch_1_choice_norm_Delta}.
+With appropriate Assumptions (as discussed before) we can then establish
+Proposition~\ref{ch_1_near_oracle}.
 \subsubsection*{Finish 2}
 \begin{align*}
   \norm{
