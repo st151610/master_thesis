@@ -48,6 +48,41 @@
   file = {/home/ioan/Zotero/storage/ARALBRYZ/Hirano and Imbens - 2005 - The Propensity Score with Continuous Treatments.pdf}
 }
 
+@misc{Huling2021,
+  title = {Independence Weights for Causal Inference with Continuous Exposures},
+  author = {Huling, Jared D. and Greifer, Noah and Chen, Guanhua},
+  year = {2021},
+  month = jul,
+  number = {arXiv:2107.07086},
+  eprint = {2107.07086},
+  eprinttype = {arxiv},
+  primaryclass = {stat},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.2107.07086},
+  abstract = {Studying causal effects of continuous exposures is important for gaining a deeper understanding of many interventions, policies, or medications, yet researchers are often left with observational studies for doing so. In the observational setting, confounding is a barrier to estimation of causal effects. Weighting approaches seek to control for confounding by reweighting samples so that confounders are comparable across different values of the exposure, yet for continuous exposures, weighting methods are highly sensitive to model misspecification. In this paper we elucidate the key property that makes weights effective in estimating causal quantities involving continuous exposures. We show that to eliminate confounding, weights should make exposure and confounders independent on the weighted scale. We develop a measure that characterizes the degree to which a set of weights induces such independence. Further, we propose a new model-free method for weight estimation by optimizing our measure. We study the theoretical properties of our measure and our weights, and prove that our weights can explicitly mitigate exposure-confounder dependence. The empirical effectiveness of our approach is demonstrated in a suite of challenging numerical experiments, where we find that our weights are quite robust and work well under a broad range of settings.},
+  archiveprefix = {arXiv},
+  keywords = {Statistics - Methodology},
+  file = {/home/ioan/Zotero/storage/4JV8R6YP/Huling et al. - 2021 - Independence weights for causal inference with con.pdf;/home/ioan/Zotero/storage/JI9P3D5B/2107.html}
+}
+
+@misc{Kallus2019,
+  title = {Kernel {{Optimal Orthogonality Weighting}}: {{A Balancing Approach}} to {{Estimating Effects}} of {{Continuous Treatments}}},
+  shorttitle = {Kernel {{Optimal Orthogonality Weighting}}},
+  author = {Kallus, Nathan and Santacatterina, Michele},
+  year = {2019},
+  month = oct,
+  number = {arXiv:1910.11972},
+  eprint = {1910.11972},
+  eprinttype = {arxiv},
+  primaryclass = {stat},
+  publisher = {{arXiv}},
+  doi = {10.48550/arXiv.1910.11972},
+  abstract = {Many scientific questions require estimating the effects of continuous treatments. Outcome modeling and weighted regression based on the generalized propensity score are the most commonly used methods to evaluate continuous effects. However, these techniques may be sensitive to model misspecification, extreme weights or both. In this paper, we propose Kernel Optimal Orthogonality Weighting (KOOW), a convex optimization-based method, for estimating the effects of continuous treatments. KOOW finds weights that minimize the worst-case penalized functional covariance between the continuous treatment and the confounders. By minimizing this quantity, KOOW successfully provides weights that orthogonalize confounders and the continuous treatment, thus providing optimal covariate balance, while controlling for extreme weights. We valuate its comparative performance in a simulation study. Using data from the Women's Health Initiative observational study, we apply KOOW to evaluate the effect of red meat consumption on blood pressure.},
+  archiveprefix = {arXiv},
+  keywords = {Statistics - Applications,Statistics - Machine Learning,Statistics - Methodology},
+  file = {/home/ioan/Zotero/storage/4D3WWK47/Kallus and Santacatterina - 2019 - Kernel Optimal Orthogonality Weighting A Balancin.pdf;/home/ioan/Zotero/storage/CSGBLEK6/1910.html}
+}
+
 @article{Kang2007,
   title = {Demystifying {{Double Robustness}}: {{A Comparison}} of {{Alternative Strategies}} for {{Estimating}} a {{Population Mean}} from {{Incomplete Data}}},
   shorttitle = {Demystifying {{Double Robustness}}},
@@ -64,6 +99,18 @@
   abstract = {When outcomes are missing for reasons beyond an investigator's control, there are two different ways to adjust a parameter estimate for covariates that may be related both to the outcome and to missingness. One approach is to model the relationships between the covariates and the outcome and use those relationships to predict the missing values. Another is to model the probabilities of missingness given the covariates and incorporate them into a weighted or stratified estimate. Doubly robust (DR) procedures apply both types of model simultaneously and produce a consistent estimate of the parameter if either of the two models has been correctly specified. In this article, we show that DR estimates can be constructed in many ways. We compare the performance of various DR and non-DR estimates of a population mean in a simulated example where both models are incorrect but neither is grossly misspecified. Methods that use inverse-probabilities as weights, whether they are DR or not, are sensitive to misspecification of the propensity model when some estimated propensities are small. Many DR methods perform better than simple inverse-probability weighting. None of the DR methods we tried, however, improved upon the performance of simple regression-based prediction of the missing values. This study does not represent every missing-data problem that will arise in practice. But it does demonstrate that, in at least some settings, two wrong models are not better than one.},
   keywords = {Causal inference,missing data,model-assisted survey estimation,propensity score,weighted estimating equations},
   file = {/home/ioan/Zotero/storage/E6G6EG89/Kang and Schafer - 2007 - Demystifying Double Robustness A Comparison of Al.pdf;/home/ioan/Zotero/storage/7A9R2XDH/07-STS227.html}
+}
+
+@misc{Martinet2020,
+  title = {A {{Balancing Weight Framework}} for {{Estimating}} the {{Causal Effect}} of {{General Treatments}}},
+  author = {Martinet, Guillaume},
+  year = {2020},
+  month = feb,
+  journal = {arXiv e-prints},
+  abstract = {In observational studies, weighting methods that directly optimize the balance between treatment and covariates have received much attention lately; however these have mainly focused on binary treatments. Inspired by domain adaptation, we show that such methods can be actually reformulated as specific implementations of a discrepancy minimization problem aimed at tackling a shift of distribution from observational to interventional data. More precisely, we introduce a new framework, Covariate Balance via Discrepancy Minimization (CBDM), that provably encompasses most of the existing balancing weight methods and formally extends them to treatments of arbitrary types (e.g., continuous or multivariate). We establish theoretical guarantees for our framework that both offer generalizations of properties known when the treatment is binary, and give a better grasp on what hyperparameters to choose in non-binary settings. Based on such insights, we propose a particular implementation of CBDM for estimating dose-response curves and demonstrate through experiments its competitive performance relative to other existing approaches for continuous treatments.},
+  keywords = {Mathematics - Statistics Theory,Statistics - Methodology},
+  annotation = {ADS Bibcode: 2020arXiv200211276M},
+  file = {/home/ioan/Zotero/storage/MTEWCNS6/Martinet - 2020 - A Balancing Weight Framework for Estimating the Ca.pdf}
 }
 
 @incollection{Mordukhovich2022,
@@ -276,7 +323,7 @@
   doi = {10.1017/CBO9780511802256},
   abstract = {This book is an introduction to the field of asymptotic statistics. The treatment is both practical and mathematically rigorous. In addition to most of the standard topics of an asymptotics course, including likelihood inference, M-estimation, the theory of asymptotic efficiency, U-statistics, and rank procedures, the book also presents recent research topics such as semiparametric models, the bootstrap, and empirical processes and their applications. The topics are organized from the central idea of approximation by limit experiments, which gives the book one of its unifying themes. This entails mainly the local approximation of the classical i.i.d. set up with smooth parameters by location experiments involving a single, normally distributed observation. Thus, even the standard subjects of asymptotic statistics are presented in a novel way. Suitable as a graduate or Master's level statistics text, this book will also give researchers an overview of research in asymptotic statistics.},
   isbn = {978-0-521-78450-4},
-  file = {/home/ioan/Zotero/storage/Z2Q5RWU3/A3C7DAD3F7E66A1FA60E9C8FE132EE1D.html}
+  file = {/home/ioan/Zotero/storage/I2LRWQVH/TapScanner-31.10.pdf;/home/ioan/Zotero/storage/Z2Q5RWU3/A3C7DAD3F7E66A1FA60E9C8FE132EE1D.html}
 }
 
 @misc{Vegetabile2020,
