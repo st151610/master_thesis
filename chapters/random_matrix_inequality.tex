@@ -29,3 +29,96 @@
         \P(\norm{S}\ge t)\ge(d_1+d_2)\exp\left(\frac{-t^2/2}{v(S)+Lt/3} \right).
       \end{gather}
 \end{theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% intrinsic dimension version %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{definition}
+  \emph{Intrinsic Dimension}
+  For a positive-semidefinite matrix $A$,
+  the intrinsic dimension is the quantity
+  \begin{gather*}
+    \text{intdim}
+    (A)
+    :=
+    \frac{\text{tr}A}{\norm{A}_2}
+    ,
+  \end{gather*}
+  where tr is the trace of a matrix.
+\end{definition}
+\begin{theorem}
+  \emph{(Intrinsic Matrix Bernstein)}
+  \label{rmineq_bernstein}
+  Let $(A_k)_{1\le k \le n}$  be a finite sequence of independent, random matrices with the same size. Assume that
+    \begin{gather}
+      \label{rmineq_bernstein_cond_1}
+      \E(A_k)=0\quad\text{and}\quad\norm{A_k}\le L \quad \text{for each}\quad  k\in \{1,\ldots,n\}.
+    \end{gather}
+  Introduce the random matrix
+      \begin{gather*}
+        S:=\sum_{k=1}^n A_k.
+      \end{gather*}
+  Let 
+  $V_1$ 
+  and
+  $V_2$ 
+  be semidefinite upper bounds for the matrix-valued variances
+  $\text{Var}_1(S)$
+  and
+  $\text{Var}_2(S)$:
+  \begin{align*}
+    V_1 
+    &\succcurlyeq 
+    \text{Var}_1(S)
+    :=
+    \E(S)
+    =
+    \sum_{k = 1}^{n}
+    \E(A_k A_k^T),\\
+    V_2 
+    &\succcurlyeq 
+    \text{Var}_2(S)
+    :=
+    \E(S)
+    =
+    \sum_{k = 1}^{n}
+    \E(A_k^T A_k)
+    .
+  \end{align*}
+  Define an intrinsic dimension bound and a variance bound
+  \begin{gather}
+    \label{ rmineq_intrinsic_bernstein_intdim_var_bound }
+    d
+    :=
+    \text{intdim}
+    \begin{bmatrix}
+      V_1 & 0 \\
+      0   & V_2
+    \end{bmatrix}
+    \qquad
+    \text{and}
+    \qquad
+    v
+    :=
+    \max
+    \left\{ \norm{V_1}_2, \norm{V_2}_2 \right\}
+    .
+  \end{gather}
+  Then 
+  it holds
+      \begin{align}
+        \label{rmineq_intrinsic_bernstein_expectation_bound}
+        \E\norm{S}\le \text{Const.}\left( \sqrt{v\log(d+1)} + L\log(d+1) \right).
+      \end{align}
+    Furthermore, for all 
+  $
+    t
+    \ge
+    \sqrt{v}
+    +
+    \frac{L}{3}
+  $,
+      \begin{gather}
+        \label{rmineq_intrinsic_bernstein_probability_bound}
+        \P(\norm{S}\ge t)\ge 4d \exp\left(\frac{-t^2/2}{v+Lt/3} \right).
+      \end{gather}
+\end{theorem}
