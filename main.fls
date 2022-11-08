@@ -289,6 +289,13 @@ INPUT ./chapters/random_matrix_inequality.tex
 INPUT chapters/random_matrix_inequality.tex
 INPUT ./chapters/random_matrix_inequality.tex
 INPUT chapters/random_matrix_inequality.tex
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT ./chapters/simple_yet_useful.tex
 INPUT chapters/simple_yet_useful.tex
 INPUT ./chapters/simple_yet_useful.tex
@@ -312,5 +319,6 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
