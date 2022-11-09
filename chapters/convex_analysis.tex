@@ -1,3 +1,9 @@
+%%%%%%%%%%%%%%%%
+% INTRODUCTION %
+%%%%%%%%%%%%%%%%
+In the following we do not expect the reader to be familiar with convex analysis. However, some very well known results will be stated without proof. The interested reader can study \cite{Mordukhovich2022} for the bedrock analysis.
+
+
 We begin by defining convex sets
 %
 
@@ -40,8 +46,61 @@ Often an equivalent characterisation of convex functions is more useful.
 \end{definition}
 
 \begin{definition}
-  \emph{convex conjugate}
+  \label{ def_convex_conjugate }
+  \emph{(Convex Conjugate)}
+  Given a function
+  $
+    f:
+    \R^n \to ( - \infty, \infty ]
+  $
+  ,
+  the convex conjugate
+  $
+    f^*:
+    \R^n \to ( - \infty, \infty ]
+  $
+  of $f$ is defined as
+  \begin{gather}
+    f^*(x^*)
+    :=
+    \sup_{ x \in \R^n }
+    (x^*)^T x - f(x)
+  \end{gather}
 \end{definition}
+
+Note that $f$ in Definition~\ref{ def_convex_conjugate }
+does not have to be convex. On the other hand, the convex conjugate is always convex:
+
+\begin{proposition}
+  Let  
+  $
+    f:
+    \R^n \to ( - \infty, \infty ]
+  $
+  be a proper function. 
+  Then its convex conjugate
+  $
+    f^*:
+    \R^n \to ( - \infty, \infty ]
+  $
+  is convex.
+\end{proposition}
+
+%%%%%%%%%%%%%%%%%%%%%%
+% CONJUGATE CALCULUS %
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Conjugate Calculus}
+When studying different primal problems such as \eqref{primal_weighting_binary} we often turn to the dual instead.
+Therefore we need some reliable tools.
+Beign able to compute specific convex conjugates is one tool required.
+
+
+
+%%%%%%%%%%%%%%%%%%%
+% FENCHEL DUALITY %
+%%%%%%%%%%%%%%%%%%%
+\section{Fenchel Duality}
+
 
 Given 
 proper convex functions $f, g : \R^n \to \overline{\R}$ 
