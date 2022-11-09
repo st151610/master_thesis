@@ -51,3 +51,53 @@ $
   \right)_{f \in \mathcal{F}}
 $
 the empirical process indexed by $\mathcal{F}$.
+
+\begin{lemma}
+  \emph{(Bernstein Inequality for Empirical Processes)}
+  For any bounded, measurable function $f$
+  it holds for all $t > 0$
+  \begin{gather}
+    \P 
+    \left(
+      \left| 
+        G_n f
+      \right|
+      >
+      t
+    \right)
+    \le
+    2
+    \exp
+    \left( 
+      - \frac{1}{4}
+      \frac{t^2}
+      {
+        \E(f^2)
+        +
+        t
+        \norm{f}_\infty
+        /
+        \sqrt{n}
+      }
+    \right)
+  \end{gather}
+\end{lemma}
+\begin{proof}
+  By the Markov inequality it holds for all $\lambda > 0$
+  \begin{gather}
+    \P
+    \left( 
+      G_n f 
+      > 
+      t
+    \right)
+    \le
+    e^{-\lambda t}
+    \E
+    \exp
+    \left( 
+      \lambda
+      G_n f 
+    \right)
+  \end{gather}
+\end{proof}
