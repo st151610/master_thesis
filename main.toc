@@ -4,4 +4,5 @@
 \contentsline {section}{\numberline {3.1}Conjugate Calculus}{11}{}%
 \contentsline {section}{\numberline {3.2}Fenchel Duality}{11}{}%
 \contentsline {chapter}{\numberline {4}Matrix Concentration Inequalities}{12}{}%
-\contentsline {chapter}{\numberline {5}Simple yet useful Calculations}{14}{}%
+\contentsline {chapter}{\numberline {5}Empirical Processes}{14}{}%
+\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{15}{}%

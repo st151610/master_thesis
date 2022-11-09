@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%
+% INTRODUCTION %
+%%%%%%%%%%%%%%%%
+
+Let 
+$
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+$
+be a probability space.
+Let 
+$X_1, \ldots, X_n$ be independent and identically-distributed (i.i.d.)
+real random variables
+and $\mathcal{F}$ a familiy of measurable functions
+$
+  f:
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+    \to
+  \left( 
+    \R,
+    \mathcal{B}(\R),
+    \lambda
+  \right)
+$.
+Consider the map
+\begin{gather}
+  f
+  \mapsto
+  G_n f
+  :=
+  \sqrt{n}
+  \left( 
+    \frac{1}{n}
+    \sum_{i = 1}^{n}
+      f(X_i)
+    -
+    \E f
+  \right).
+\end{gather}
+We call 
+$
+  \left( 
+    G_n f
+  \right)_{f \in \mathcal{F}}
+$
+the empirical process indexed by $\mathcal{F}$.
