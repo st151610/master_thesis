@@ -10,23 +10,46 @@ $
     \P
   \right)
 $
-be a probability space.
-Let 
-$X_1, \ldots, X_n$ be independent and identically-distributed (i.i.d.)
-real random variables
-and $\mathcal{F}$ a familiy of measurable functions
+be a probability space
+and
 $
-  f:
+  \left( 
+    \mathcal{X},
+    \Sigma
+  \right)
+$
+a measurable space.
+Let 
+$
+  X_j
+  :
   \left( 
     \Omega,
     \mathcal{A},
     \P
   \right)
+  \to
+  \left( 
+    \mathcal{X},
+    \Sigma
+  \right)
+  ,
+  j=1,\ldots, n
+$ be independent and identically-distributed (i.i.d.)
+random variables
+with probability distribution $\P_X$ on
+and
+$\mathcal{F}$ a family of measurable functions
+$
+  f:
+  \left( 
+    \mathcal{X},
+    \Sigma
+  \right)
     \to
   \left( 
     \R,
-    \mathcal{B}(\R),
-    \lambda
+    \mathcal{B}(\R)
   \right)
 $.
 Consider the map
@@ -41,9 +64,15 @@ Consider the map
     \sum_{i = 1}^{n}
       f(X_i)
     -
-    \E f
-  \right).
+    \P_X f
+  \right),
 \end{gather}
+where
+$
+  \P_X f 
+  :=
+  \int_\mathcal{X} f \text{d}\P_X.
+$
 We call 
 $
   \left( 
@@ -72,7 +101,7 @@ the empirical process indexed by $\mathcal{F}$.
       - \frac{1}{4}
       \frac{t^2}
       {
-        \E(f^2)
+        \P_X(f^2)
         +
         t
         \norm{f}_\infty
