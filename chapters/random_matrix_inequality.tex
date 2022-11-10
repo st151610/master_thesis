@@ -212,6 +212,113 @@ Then it holds for all $ t \ge 0 $
   $,
       \begin{gather}
         \label{rmineq_intrinsic_bernstein_probability_bound}
-        \P(\norm{S}\ge t)\ge 4d \exp\left(\frac{-t^2/2}{v+Lt/3} \right).
+        \P(\norm{S}\ge t)\le 4d \exp\left(\frac{-t^2/2}{v+Lt/3} \right).
       \end{gather}
 \end{theorem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INTRINSIC DIMENSION BERNSTEIN FOR RANDOM VECTORS %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+It turns out that for random vectors $ d \le 2 $. This is remarkable, because this property of the intrinsic dimension is invarient under the dimension of the vector. This fact motivates the following result:
+\begin{corollary}
+  Let $(A_k)_{1\le k \le n}\subseteq\R^{K}$ be a finite sequence of independent, random vectors. Assume that
+    \begin{gather}
+      \label{rmineq_bernstein_cond_1}
+      \E(A_k)=0\quad\text{and}\quad\norm{A_k}\le L \quad \text{for each}\quad  k\in \{1,\ldots,n\}.
+    \end{gather}
+    Let $v(S)$ be the matrix variance statistic of the sum 
+    as defined in
+    \eqref{rmineq_bernstein_cond_2}
+    .
+  Then 
+  it holds
+      \begin{align}
+        \label{rmineq_intrinsic_bernstein_expectation_bound}
+        \E\norm{S}\le \text{Const.}\left( \sqrt{v(S)\log(3)} + L\log(3) \right).
+      \end{align}
+    Furthermore, for all 
+  $
+    t
+    \ge
+    \sqrt{v(S)}
+    +
+    \frac{L}{3}
+  $,
+      \begin{gather}
+        \label{rmineq_intrinsic_bernstein_probability_bound}
+        \P(\norm{S}\ge t)\le 8 \exp\left(\frac{-t^2/2}{v(S)+Lt/3} \right).
+      \end{gather}
+\end{corollary}
+\begin{proof}
+  First, let's verify 
+  $
+    d
+    :=
+    \text{intdim}
+    \begin{bmatrix}
+      \text{Var}_1(S) & 0 \\
+      0   & \text{Var}_2(S)
+    \end{bmatrix}
+    \le
+    2
+  $.
+  Since
+ 
+  \begin{gather}
+  \text{tr} 
+  B B^T 
+  =
+  B^T B
+  \quad
+  \text{and}
+  \quad
+  \norm{
+    \begin{bmatrix}
+      B B^T & 0 \\
+      0   & B^T B
+    \end{bmatrix}
+  }_2
+  =
+  \max
+  \left\{ 
+    \norm{B B^T},
+    B^T B
+  \right\}
+  \end{gather}
+  $
+  \text{
+  for all 
+  }
+  B \in \R^K
+  $
+  it follows
+  \begin{align}
+    \text{intdim} 
+    \begin{bmatrix}
+      B B^T & 0 \\
+      0   & B^T B
+    \end{bmatrix}
+    =
+  \frac{
+    \text{tr}B B^T
+    +
+    B^T B
+  }
+  {
+  \max
+  \left\{ 
+    \norm{B B^T},
+    B^T B
+  \right\}
+  }
+  \le
+  2  
+  \end{align}
+
+$
+  \text{
+  for all 
+  }
+  B \in \R^K
+$.
+\end{proof}

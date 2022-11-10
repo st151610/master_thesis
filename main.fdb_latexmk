@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1668078781 "main.aux" "main.bbl" "main" 1668078822
+["bibtex main"] 1668092481 "main.aux" "main.bbl" "main" 1668093393
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1650183167 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "literature.bib" 1667897905 39422 97e81fc66fc46554baf01b467ea94f90 ""
-  "main.aux" 1668078822 4150 8844c1a6b6e92a321674dda760a1dff1 "pdflatex"
+  "main.aux" 1668093393 4333 e10267978d827109cdd8d6ff854b447e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1668078821 "main.tex" "main.pdf" "main" 1668078822
+["pdflatex"] 1668093393 "main.tex" "main.pdf" "main" 1668093393
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -80,13 +80,13 @@
   "chapters/convex_analysis.tex" 1668000100 3734 a65557f8a3884892135feefc41a465a9 ""
   "chapters/empirical_processes.tex" 1668069491 1713 f88394b497e0492877cf51c23ba268a4 ""
   "chapters/introduction.tex" 1667036817 1456 6a741fd04a0287aa7d8050ccb283d967 ""
-  "chapters/random_matrix_inequality.tex" 1668078819 4940 3dc0937a9b69bb95020f46c2c61b8cf9 ""
+  "chapters/random_matrix_inequality.tex" 1668093392 7018 88243db06a2eb57345533ec4ebb8b0b0 ""
   "chapters/simple_yet_useful.tex" 1666794077 3033 d6cda9fa97ef2ab5270b7e9103f6557a ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1668078822 4150 8844c1a6b6e92a321674dda760a1dff1 "pdflatex"
-  "main.bbl" 1668078781 2877 3fc6bc898fcd656c27b4135fb50030c2 "bibtex main"
+  "main.aux" 1668093393 4333 e10267978d827109cdd8d6ff854b447e "pdflatex"
+  "main.bbl" 1668092482 2877 3fc6bc898fcd656c27b4135fb50030c2 "bibtex main"
   "main.tex" 1668008074 1592 8be7337b76495311dc9a918de1547169 ""
-  "main.toc" 1668078822 545 a86511c1eec8c58d2993ef45990a6882 "pdflatex"
+  "main.toc" 1668093393 545 4e0a64eb613c880fb173b2ce43741844 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
