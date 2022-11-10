@@ -53,6 +53,76 @@
         \P(\norm{S}\ge t)\ge(d_1+d_2)\exp\left(\frac{-t^2/2}{v(S)+Lt/3} \right).
       \end{gather}
 \end{theorem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SCALAR MATRIX BERNSTEIN %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{corollary}
+  \emph{(Scalar Bernstein Inequality)}
+  \label{rmineq_bernstein_scalar}
+Let
+$
+  X_1, \ldots , X_n
+$
+be centered, independent real random variables with
+$
+  \norm{X_i}_\infty
+  \le
+  L
+$
+and
+$
+  \E(X_1^2)
+  \le
+  \sigma^2
+$
+for all $i = 1, \ldots, n$.
+Then it holds for all $ t \ge 0 $
+\begin{gather}
+  \label{rmineq_bernstein_scalar_result}
+  \P
+  \left( 
+    \left| 
+      \sum_{i = 1}^{n} 
+        X_i
+    \right|
+    \ge
+    t
+  \right)
+  \le
+  2
+  \exp
+  \left( 
+    -
+    \frac{1}{2}
+    \frac{t^2}
+    {
+      n\sigma^2 
+      +
+      Lt/3
+    }
+  \right)
+\end{gather}
+\end{corollary}
+\begin{proof}
+  We verify the scalar versions of
+  \eqref{rmineq_bernstein_cond_1}
+  and
+  \eqref{rmineq_bernstein_cond_2}.
+  Since the 2- and $\infty$- norm coincide in one dimension and
+  the $X_i$ are centered and independent we get
+  \begin{gather}
+    v(S)
+    =
+    \sum_{i = 1}^{n}
+        \E(X_i^2)
+    \le
+    n\sigma^2
+  \end{gather}
+  We get \eqref{rmineq_bernstein_scalar_result}
+  by applying Theorem~\ref{rmineq_bernstein}.
+\end{proof}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % intrinsic dimension version %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -74,7 +144,6 @@
   \label{rmineq_bernstein}
   Let $(A_k)_{1\le k \le n}$  be a finite sequence of independent, random matrices with the same size. Assume that
     \begin{gather}
-      \label{rmineq_bernstein_cond_1}
       \E(A_k)=0\quad\text{and}\quad\norm{A_k}\le L \quad \text{for each}\quad  k\in \{1,\ldots,n\}.
     \end{gather}
   Introduce the random matrix

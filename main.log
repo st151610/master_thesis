@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.5)  10 NOV 2022 09:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.5)  10 NOV 2022 12:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -139,9 +139,6 @@ File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `rmineq_bernstein' multiply defined.
 
-
-LaTeX Warning: Label `rmineq_bernstein_cond_1' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -223,39 +220,39 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 6.
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [12
 
-]) [13]
+] [13]) [14]
 Chapter 5.
 (./chapters/empirical_processes.tex
 Overfull \hbox (2.59283pt too wide) in paragraph at lines 85--88
 \OT1/cmr/bx/n/12 Lemma 5.1. \OT1/cmr/m/n/12 (Bern-stein In-equal-ity for Em-pir-i-cal Pro-cesses) \OT1/cmr/m/it/12 For any bounded,
  []
 
-) [14
+) [15
 
 ]
 Chapter 6.
-(./chapters/simple_yet_useful.tex [15
+(./chapters/simple_yet_useful.tex [16
 
-]) (./main.bbl [16] [17
+]) (./main.bbl [17] [18
 
-]) [18] (./main.aux)
+]) [19] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2955 strings out of 478238
- 43822 string characters out of 5850456
- 343752 words of memory out of 5000000
- 21151 multiletter control sequences out of 15000+600000
+ 2957 strings out of 478238
+ 43879 string characters out of 5850456
+ 343778 words of memory out of 5000000
+ 21153 multiletter control sequences out of 15000+600000
  480384 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,19n,62p,792b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (19 pages, 307717 bytes).
+Output written on main.pdf (20 pages, 309729 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 155 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
