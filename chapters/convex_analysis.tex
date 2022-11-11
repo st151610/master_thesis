@@ -45,6 +45,16 @@ Often an equivalent characterisation of convex functions is more useful.
   \emph{proper convex function}
 \end{definition}
 
+
+%%%%%%%%%%%%%%%%%%%%%%
+% CONJUGATE CALCULUS %
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Conjugate Calculus}
+When studying different primal problems such as \eqref{primal_weighting_binary} we often turn to the dual instead.
+Therefore we need some reliable tools.
+Beign able to compute specific convex conjugates is one tool required.
+
+
 \begin{definition}
   \label{ def_convex_conjugate }
   \emph{(Convex Conjugate)}
@@ -86,13 +96,107 @@ does not have to be convex. On the other hand, the convex conjugate is always co
   is convex.
 \end{proposition}
 
-%%%%%%%%%%%%%%%%%%%%%%
-% CONJUGATE CALCULUS %
-%%%%%%%%%%%%%%%%%%%%%%
-\section{Conjugate Calculus}
-When studying different primal problems such as \eqref{primal_weighting_binary} we often turn to the dual instead.
-Therefore we need some reliable tools.
-Beign able to compute specific convex conjugates is one tool required.
+% conjugate chain rule %
+ %%%%%%%%%%%%%%%%%%%%%%
+
+\begin{theorem}
+  \emph{(Conjugate Chain Rule)}
+  \label{cvxa_conjugate_chain_rule}
+  Let 
+  $
+    A:
+      \R^m \to \R^n
+  $
+  be a linear map (matrix)
+  and
+  $
+    g:
+      \R^n \to (-\infty, \infty]
+  $
+  a proper convex function. If
+  $
+    \text{Im}(A) \cap \text{ri}(\text{dom}(g))
+    \neq
+    \emptyset
+  $
+  it follows
+  \begin{gather}
+    ( g \circ A )^* ( x^* )
+    =
+    \inf_
+          { y^* \in ( A^* )^{ -1 } ( x^* )}
+                                          g^*( y^* )
+                                          .
+  \end{gather}
+  Furthermore, 
+    for any 
+      $
+        x^* \in \text{dom}( g \circ A)^*
+      $
+        there exists
+          $
+            y^* \in ( A^* )^{ -1 } ( x^* )
+          $
+            such that
+              $
+                ( g \circ A)^* ( x^* )
+                =
+                g^*( y^* )
+              $.
+\end{theorem}
+\begin{example}
+  Consider a proper convex function
+  $
+    f:
+    \R \to ( -\infty, \infty]
+  $
+  We would like to compute the convex conjugate of the function 
+  $h$ defined by 
+  $
+    h(x) = f \left( x - \frac{1}{n} \right)
+  $.
+  For this we notice that
+  \begin{gather*}
+    h = f \circ L
+  \end{gather*}
+  where 
+  \begin{gather*}
+   L := x \mapsto x - \frac{1}{n} 
+  \end{gather*}
+  is a linear map.
+  Since 
+  $
+    \text{Im}(L) = \R
+  $
+  and 
+  $\text{dom}(f) \neq \emptyset$
+  we have
+  $
+    \text{Im}(L) 
+    \cap
+    \text{ri}(\text{dom}(f) )
+    \neq
+    \emptyset
+  $.
+  Furthermore
+  \begin{gather}
+    (L^*)^{-1}(x^*)
+    =
+    \left\{ 
+     \left( x \mapsto x + \frac{1}{n} \right) (x^*)
+    \right\}
+    =
+    \left\{ x^* + \frac{1}{n} \right\}
+  \end{gather}
+  Then Theorem~\ref{cvxa_conjugate_chain_rule}
+  yields
+  \begin{gather}
+    h^* = f^* \circ L^{-1} 
+        =  f^* \circ  
+        \left( x^* \mapsto x^* + \frac{1}{n} \right)
+  \end{gather}
+
+\end{example}
 
 
 
