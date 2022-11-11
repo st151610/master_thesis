@@ -198,6 +198,79 @@ does not have to be convex. On the other hand, the convex conjugate is always co
 
 \end{example}
 
+% conjugate sum rule %
+ %%%%%%%%%%%%%%%%%%%%
+
+\begin{definition}
+  \emph{(Infimal Convolution)}
+  Given functions
+  $
+    f_i:
+    \R^n \to (-\infty, \infty]
+  $
+  for $ i = 1, \ldots, n $
+  the infiamal convolution of these functions as defined as
+  \begin{gather}
+    (f_1 \square \ldots \square f_m)(x)
+    :=
+    \inf_{
+    \begin{smallmatrix}
+      x_i \in \R^n \\
+      \sum_{i = 1}^{m} 
+        x_i
+      =
+      x
+    \end{smallmatrix}
+    }
+    \sum_{i = 1}^{m}
+      f_i(x_i)
+  \end{gather}
+\end{definition}
+
+
+\begin{theorem}
+  Let
+  $
+    f,g:
+    \R^n \to (-\infty, \infty]
+  $
+  be proper convex functions 
+  and
+  $
+  \text{ri}\left( \text{dom}(f) \right)
+  \cap
+  \text{ri}\left( \text{dom}(g) \right)
+  \neq 
+  \emptyset
+  .
+  $
+  Then we have the conjugate sum rule
+  \begin{gather}
+    ( f + g )^*(x^*)
+    =
+    ( f^* \square g^*)(x^*)
+  \end{gather}
+  for all $x^* \in \R^n$.
+  Moreover, the infimum in 
+  $
+    ( f^* \square g^*)(x^*)
+  $
+  is attained, i.e., for any
+  $
+    x^* \in \text{dom}(f+g)^*
+  $
+  there exists vectors $x_1^*, x_2^*$
+  for which
+  \begin{gather}
+    (f+g)^*(x^*)
+    =
+    f^*(x_1^*)
+    +
+    g^*(x_2^*),
+    \quad
+    x^* = x_1^* + x_2^*.
+  \end{gather}
+\end{theorem}
 
 
 %%%%%%%%%%%%%%%%%%%
