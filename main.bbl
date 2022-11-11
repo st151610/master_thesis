@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{Chen2012}
+Richard~Y. Chen, Alex Gittens, and Joel~A. Tropp.
+\newblock The {{Masked Sample Covariance Estimator}}: {{An Analysis}} via
+  {{Matrix Concentration Inequalities}}, June 2012.
+
 \bibitem{Fong2018}
 Christian Fong, Chad Hazlett, and Kosuke Imai.
 \newblock Covariate balancing propensity score for a continuous treatment:
