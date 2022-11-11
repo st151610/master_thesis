@@ -128,6 +128,7 @@ Then it holds for all $ t \ge 0 $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{definition}
   \emph{Intrinsic Dimension}
+  \label{rmineq_intrinsic_bernstein}
   For a positive-semidefinite matrix $A$,
   the intrinsic dimension is the quantity
   \begin{gather*}
@@ -251,7 +252,8 @@ It turns out that for random vectors $ d \le 2 $. This is remarkable, because th
 \end{corollary}
 \begin{proof}
   First, let's verify 
-  $
+  \begin{gather}
+   \label{rmineq_intrinsic_bernstein_cor_1}
     d
     :=
     \text{intdim}
@@ -261,7 +263,8 @@ It turns out that for random vectors $ d \le 2 $. This is remarkable, because th
     \end{bmatrix}
     \le
     2
-  $.
+    .
+  \end{gather}
   Since
  
   \begin{gather}
@@ -321,4 +324,42 @@ $
   }
   B \in \R^K
 $.
+By the linearity of the expectation  
+it holds
+for random vectors 
+$X=(X_1, \ldots, X_K)$
+with
+$\norm{X}_\infty < \infty$
+
+\begin{gather}
+  \E(\text{tr} X X^T) 
+  =
+  \text{tr} \E (X X^T). 
+\end{gather}
+Indeed
+\begin{align*}
+  \E(\text{tr} X X^T) 
+  &=
+  \E \left( 
+    \sum_{i = 1}^{n}
+      X_i^2
+  \right)
+  =
+  \sum_{i = 1}^{n}
+    \E(
+      X_i^2
+    )  
+  =
+  \text{tr}\left( 
+    E(X_i X_j)
+  \right)_{1 \le i,j \le K}
+  \\
+  &=
+  \text{tr}
+    \E(X X^T)
+\end{align*}
+Note that by the linearity of the trace and the scalar product, the above also holds for finite sums of bounded random vectors. 
+We have thus established \eqref{rmineq_intrinsic_bernstein_cor_1}.
+Applying Theorem~\ref{rmineq_intrinsic_bernstein}
+finishes the proof.
 \end{proof}
