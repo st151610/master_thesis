@@ -80,6 +80,17 @@ $
   \right)_{f \in \mathcal{F}}
 $
 the empirical process indexed by $\mathcal{F}$.
+Furthermore
+\begin{gather}
+  \norm{G_n f}_\mathcal{F}
+  :=
+  \sup_
+        { f \in \mathcal{F}}
+        \left|
+          G_n f
+        \right|
+        .
+\end{gather}
 
 \begin{lemma}
   \emph{(Bernstein Inequality for Empirical Processes)}
@@ -130,3 +141,27 @@ the empirical process indexed by $\mathcal{F}$.
     \right)
   \end{gather}
 \end{proof}
+
+
+\begin{lemma}
+  For any finite class $\mathcal{F}$ of bounded, measurable, square-integrable functions, with $\left| \mathcal{F} \right|$ elements, it holds
+  \begin{gather}
+    \E \norm{G_n f}_\mathcal{F}
+    \lesssim
+    \max_
+          {f \in \mathcal{F}}
+          \frac{\norm{f}_\infty}{\sqrt{n}}
+          \log
+          \left( 1 + \left| \mathcal{F} \right| \right)
+          +
+          \max_
+              {f \in \mathcal{F}}
+              \norm{f}_{\P,2}
+              \sqrt{
+                \log \left( 
+                  1 + \left| \mathcal{F} \right|
+                \right)
+              }
+              .
+  \end{gather}
+\end{lemma}
