@@ -289,6 +289,9 @@ INPUT ./chapters/convex_analysis.tex
 INPUT chapters/convex_analysis.tex
 INPUT ./chapters/convex_analysis.tex
 INPUT chapters/convex_analysis.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT ./chapters/random_matrix_inequality.tex
 INPUT chapters/random_matrix_inequality.tex
 INPUT ./chapters/random_matrix_inequality.tex

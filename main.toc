@@ -3,6 +3,6 @@
 \contentsline {chapter}{\numberline {3}Convex Analysis}{10}{}%
 \contentsline {section}{\numberline {3.1}Conjugate Calculus}{11}{}%
 \contentsline {section}{\numberline {3.2}Fenchel Duality}{12}{}%
-\contentsline {chapter}{\numberline {4}Matrix Concentration Inequalities}{13}{}%
-\contentsline {chapter}{\numberline {5}Empirical Processes}{17}{}%
-\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{18}{}%
+\contentsline {chapter}{\numberline {4}Matrix Concentration Inequalities}{14}{}%
+\contentsline {chapter}{\numberline {5}Empirical Processes}{18}{}%
+\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{19}{}%

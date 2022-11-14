@@ -144,59 +144,6 @@ does not have to be convex. On the other hand, the convex conjugate is always co
                 g^*( y^* )
               $.
 \end{theorem}
-\begin{example}
-  Consider a proper convex function
-  $
-    f:
-    \R \to ( -\infty, \infty]
-  $
-  We would like to compute the convex conjugate of the function 
-  $h$ defined by 
-  $
-    h(x) = f \left( x - \frac{1}{n} \right)
-  $.
-  For this we notice that
-  \begin{gather*}
-    h = f \circ L
-  \end{gather*}
-  where 
-  \begin{gather*}
-   L := x \mapsto x - \frac{1}{n} 
-  \end{gather*}
-  is a linear map.
-  Since 
-  $
-    \text{Im}(L) = \R
-  $
-  and 
-  $\text{dom}(f) \neq \emptyset$
-  we have
-  $
-    \text{Im}(L) 
-    \cap
-    \text{ri}(\text{dom}(f) )
-    \neq
-    \emptyset
-  $.
-  Furthermore
-  \begin{gather}
-    (L^*)^{-1}(x^*)
-    =
-    \left\{ 
-     \left( x \mapsto x + \frac{1}{n} \right) (x^*)
-    \right\}
-    =
-    \left\{ x^* + \frac{1}{n} \right\}
-  \end{gather}
-  Then Theorem~\ref{cvxa_conjugate_chain_rule}
-  yields
-  \begin{gather}
-    h^* = f^* \circ L^{-1} 
-        =  f^* \circ  
-        \left( x^* \mapsto x^* + \frac{1}{n} \right)
-  \end{gather}
-
-\end{example}
 
 % conjugate sum rule %
  %%%%%%%%%%%%%%%%%%%%
@@ -328,3 +275,124 @@ The Fenchel dual problem is then
     .
   \end{gather}
 \end{theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{proposition}
+  \label{syu_1_result}
+  Let 
+  $f : \R^n \to (-\infty, \infty]$ 
+  be convex.
+  Then 
+  for all $y \in \R^n$ and $C>0$ 
+    \begin{gather}
+      \label{7060_0}
+      \inf_{\norm{\Delta}=C} f(y+\Delta) - f(y) \ge 0 \qquad
+    \end{gather}
+  implies
+  \begin{gather}
+    \label{7060_1}
+    \exists y^* \in \R^n
+    :
+    y^* \,\text{is global minimum of $f$ and}\,
+      \norm{y^* - y} \le C.
+  \end{gather}
+\end{proposition}
+\begin{proof}
+  Since 
+  $\mathcal{C}:=\left\{ \norm{\Delta}\le C \right\}$
+  is convex
+  $f$ has a local minimum in 
+  $
+  $
+  \begin{gather*}
+    y + \mathcal{C}
+    :=
+    \left\{ 
+      y + \Delta \,
+      \mid \,
+      \norm{\Delta}\le C
+    \right\}
+    .
+  \end{gather*}
+  Suppose towards a contradiction that
+  $
+    y^* \in 
+            y + \mathcal{C}
+  $
+  is a local minimum, but not a global minimum 
+  and
+  \eqref{7060_0} is true.
+  Then there exists 
+  $
+    x 
+    \in 
+    \R^n 
+    \setminus 
+      y + \mathcal{C}
+  $
+  such that
+  \begin{gather}
+    \label{7060_3}
+    f(x) < f(y^*)
+    .
+  \end{gather}
+  Furthermore since $y + \mathcal{C}$ is compact and contains $y^*$,
+  the line segment $\mathcal{L}[y^*,x]$ contains a point on the boundary of 
+  $y + \mathcal{C}$, i.e.
+  there exists
+  $
+    \theta \in (0,1)
+  $
+  and 
+  $
+    \Delta_x
+  $
+  with
+  $\norm{\Delta_x}=C$
+  such that
+  \begin{gather}
+    \label{7060_4}
+    \theta x + (1 - \theta) y^* = y + \Delta_x
+    .
+  \end{gather}
+    It follows
+    \begin{align}
+      \label{7060_5}
+      \begin{split}
+      f(y^*)
+      &\le
+      f(y)
+      \\
+      &\le
+      f(y + \Delta)
+      =
+      f(
+        \theta x + (1 - \theta) y^*
+      )
+      \\
+      &\le
+      \theta f(x)
+      + 
+      (1 - \theta)
+      f(y^*)
+      \\
+      &<
+      f(y^*)
+      ,
+      \end{split}
+    \end{align}
+    where the first inequality is due to
+    $y^*$ being a local minimum in
+    $
+      y + \mathcal{C},
+    $
+    the second inequality is due to the assumption of 
+    \eqref{7060_0} being true,
+    the equality is due to \eqref{7060_4},
+    the third inequality is due to the convexity of $f$
+    and the strict inequality is due to \eqref{7060_3}.
+    But \eqref{7060_5} is clearly a contradiction.
+    Thus every locat minimum in $y + \mathcal{C}$ is also a global minimum.
+    It follows \eqref{7060_1}.
+\end{proof}
+
+

@@ -1,3 +1,56 @@
+\begin{example}
+  Consider a proper convex function
+  $
+    f:
+    \R \to ( -\infty, \infty]
+  $
+  We would like to compute the convex conjugate of the function 
+  $h$ defined by 
+  $
+    h(x) = f \left( x - \frac{1}{n} \right)
+  $.
+  For this we notice that
+  \begin{gather*}
+    h = f \circ L
+  \end{gather*}
+  where 
+  \begin{gather*}
+   L := x \mapsto x - \frac{1}{n} 
+  \end{gather*}
+  is a linear map.
+  Since 
+  $
+    \text{Im}(L) = \R
+  $
+  and 
+  $\text{dom}(f) \neq \emptyset$
+  we have
+  $
+    \text{Im}(L) 
+    \cap
+    \text{ri}(\text{dom}(f) )
+    \neq
+    \emptyset
+  $.
+  Furthermore
+  \begin{gather}
+    (L^*)^{-1}(x^*)
+    =
+    \left\{ 
+     \left( x \mapsto x + \frac{1}{n} \right) (x^*)
+    \right\}
+    =
+    \left\{ x^* + \frac{1}{n} \right\}
+  \end{gather}
+  Then Theorem~\ref{cvxa_conjugate_chain_rule}
+  yields
+  \begin{gather}
+    h^* = f^* \circ L^{-1} 
+        =  f^* \circ  
+        \left( x^* \mapsto x^* + \frac{1}{n} \right)
+  \end{gather}
+
+\end{example}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We employ 
