@@ -25,7 +25,9 @@
 \begin{theorem}
   \emph{(Matrix Bernstein Inequality)}
   \label{rmineq_bernstein}
-  Let $(A_k)_{1\le k \le n}\subseteq\R^{d_1\times d_2}$ be a finite sequence of independent, random matrices. Assume that
+  Let $A_1, \ldots, A_n$ be a independent, random matrices with dimension 
+  $d_1 \times d_2$
+  . Assume that
     \begin{gather}
       \label{rmineq_bernstein_cond_1}
       \E(A_k)=0\quad\text{and}\quad\norm{A_k}\le L \quad \text{for each}\quad  k\in \{1,\ldots,n\}.
@@ -37,20 +39,21 @@
     Let $v(S)$ be the matrix variance statistic of the sum:
       \begin{align}
         \label{rmineq_bernstein_cond_2}
-        \begin{split}
-        v(S):&=\max\left\{ \norm{\E(SS^T)}, \norm{\E(S^T S)} \right\}\\
-             &=\max\left\{ \norm{\sum_{k=1}^n\E(A_kA_k^T)}, \norm{\sum_{k=1}^n\E(A_k^T A_k)} \right\}.
-        \end{split}
+        v(S):= \norm{\E[SS^\intercal ]} \lor \norm{\E[S^T S]} 
+             = \norm{\sum_{k=1}^n\E[A_kA_k^T]} \lor \norm{\sum_{k=1}^n\E[A_k^T A_k]} .
       \end{align}
     Then
       \begin{align}
         \label{rmineq_bernstein_expectation_bound}
-        \E\norm{S}\le \sqrt{2v(S)\log(d_1+d_2)} + \frac{1}{3}L\log(d_1+d_2).
+        \E \left[ \norm{S} \right]\le \sqrt{2v(S)\log(d_1+d_2)} + \frac{1}{3}L\log(d_1+d_2).
       \end{align}
-    Furthermore, for all $t\ge 0$,
+    Furthermore, 
       \begin{gather}
         \label{rmineq_bernstein_probability_bound}
-        \P(\norm{S}\ge t)\ge(d_1+d_2)\exp\left(\frac{-t^2/2}{v(S)+Lt/3} \right).
+        \P[\norm{S}\ge t]\le(d_1+d_2)\exp\left(\frac{-t^2/2}{v(S)+Lt/3} \right)
+        \quad
+        \text{for all $t \ge 0$}
+        .
       \end{gather}
 \end{theorem}
 
@@ -156,9 +159,9 @@ Then it holds for all $ t \ge 0 $
   and
   $V_2$ 
   be semidefinite upper bounds for the matrix-valued variances
-  $\text{Var}_1(S)$
+  $\mathrm{Var}_1(S)$
   and
-  $\text{Var}_2(S)$:
+  $\textbf{Var}_2(S)$:
   \begin{align*}
     V_1 
     &\succcurlyeq 

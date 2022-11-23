@@ -11,16 +11,19 @@
 
 % Theorem handle
 
-\newtheorem{assumption}{Assumption}[chapter]
-\newtheorem{problem}{Problem}[chapter]
-\newtheorem{remark}{Remark}[chapter]
-\newtheorem{example}{Example}[chapter]
-\newtheorem{subassumption}{}[assumption]
+
 \newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
+
+
+\newtheorem{assumption}{Assumption}[chapter]
 \newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{subassumption}{}[assumption]
 
 
 % definition of constants
@@ -31,10 +34,10 @@
 
 %
 
-\newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
-\renewcommand{\P}{\mathbb{P}}
-\newcommand{\E}{\mathbb{E}}
+\newcommand{\E}{\mathbf{E}}
+\renewcommand{\P}{\mathbf{P}}
+\newcommand{\R}{\mathbb{R}}
 \newcommand\norm[1]{\left\lVert#1\right\rVert}
 
 \title{
@@ -60,7 +63,8 @@
 \input{chapters/introduction.tex}
 
 \chapter{Balancing Weights}
-\input{chapters/chapter_01.tex}
+  \input{chapters/chapter_1/introdution_ch_1.tex}
+  \input{chapters/chapter_1/chapter_01.tex}
 
 \chapter{Convex Analysis}
 \input{chapters/convex_analysis.tex}
