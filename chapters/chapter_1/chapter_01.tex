@@ -1,5 +1,126 @@
 
 
+We study the following problem:
+%%%%%%%%%%%%%%%%%%
+% PROBLEM PRIMAL %
+%%%%%%%%%%%%%%%%%%
+\begin{problem}
+  \begin{gather*}
+    \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
+    \qquad
+    \sum_{i = 1}^{n} T_i f(w_i)
+  \end{gather*}
+subject to the constraints
+\begin{gather*}
+    w_i T_i \ge 0,
+    \qquad 
+    i = 1, \ldots, n,
+\end{gather*}
+\begin{gather*}
+  \sum_{ i = 1 }^{n}
+    w_i T_i
+  =
+  1
+\end{gather*}
+\begin{gather*}
+    \left| 
+      \sum_{i = 1}^{n} w_i T_i B_k(X_i)
+      - 
+      \frac{1}{n} \sum_{i = 1}^{n} B_k(X_i)
+    \right|
+    \le 
+    \delta_k,
+    \qquad
+    k = 1, \ldots, K
+\end{gather*}
+\end{problem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We aim to prove that the solution to 
+Problem \eqref{primal_weighting_binary}
+is asymptotical consistent with the propensity score, i.e.
+
+\begin{theorem}
+  \label{ch_theorem_1}
+  Under some (non-optimal) Assumptions,
+  there exist constants
+  $
+    c_{1}
+    , 
+    c_{2}
+    >
+    0
+  $
+  and decreasing sequences
+  $
+    (\varepsilon_n^1)
+    ,
+    (\varepsilon_n^2)
+    \subset
+    (0,1]
+  $
+  that converge to 0
+  such that
+  for all
+  $
+    \tau
+    \in
+    (0,1]
+  $
+  there exists a constant
+  $
+    c_{\tau}
+    \in
+    [0,\infty)
+  $
+  only depending on 
+  $ \tau $
+  such that for all 
+  $ n \ge 1 $
+  and
+  $
+    \tau
+    \in
+    (0,1]
+  $
+  it holds
+  \begin{align}
+    \label{ch_theorem_1_alternative}
+    \begin{split}
+   & \P
+    \left( 
+  \norm{
+    w^*_i
+    -
+    \frac{1}{n \pi(X_i)}
+  }_\infty
+  \le 
+  c_{1}
+  c_{\tau}
+  \varepsilon_{n}^1 
+   \right)
+   \ge
+  1 - \tau
+  ,
+\\
+   &\quad \
+   \norm{
+    w^*_i
+    -
+    \frac{1}{n \pi(X_i)}
+  }_{\P, 2}
+  \le 
+  c_{2}
+  \varepsilon_n^{2},
+      \end{split}
+  \end{align}
+  where 
+  $w^*$
+  is the solution to 
+  Problem \eqref{primal_weighting_binary}.
+\end{theorem}
+
+
 
 %%%%%%%%%%%%%%%%%%%ASSUMPTION 1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -135,127 +256,6 @@
   \end{subassumption}
 \end{assumption}
 
-
-
-We study the following problem:
-%%%%%%%%%%%%%%%%%%
-% PROBLEM PRIMAL %
-%%%%%%%%%%%%%%%%%%
-\begin{problem}
-  \begin{gather*}
-    \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
-    \qquad
-    \sum_{i = 1}^{n} T_i f(w_i)
-  \end{gather*}
-subject to the constraints
-\begin{gather*}
-    w_i \ge 0,
-    \qquad 
-    i = 1, \ldots, n,
-\end{gather*}
-\begin{gather*}
-  \sum_{ i = 1 }^{n}
-    w_i
-  =
-  1
-\end{gather*}
-\begin{gather*}
-    \left| 
-      \sum_{i = 1}^{n} w_i T_i B_k(X_i)
-      - 
-      \frac{1}{n} \sum_{i = 1}^{n} B_k(X_i)
-    \right|
-    \le 
-    \delta_k,
-    \qquad
-    k = 1, \ldots, K
-\end{gather*}
-\end{problem}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-We aim to prove that the solution to 
-Problem \eqref{primal_weighting_binary}
-is asymptotical consistent with the propensity score, i.e.
-
-\begin{theorem}
-  \label{ch_theorem_1}
-  Under some (non-optimal) Assumptions,
-  there exist constants
-  $
-    c_{1}
-    , 
-    c_{2}
-    >
-    0
-  $
-  and decreasing sequences
-  $
-    (\varepsilon_n^1)
-    ,
-    (\varepsilon_n^2)
-    \subset
-    (0,1]
-  $
-  that converge to 0
-  such that
-  for all
-  $
-    \tau
-    \in
-    (0,1]
-  $
-  there exists a constant
-  $
-    c_{\tau}
-    \in
-    [0,\infty)
-  $
-  only depending on 
-  $ \tau $
-  such that for all 
-  $ n \ge 1 $
-  and
-  $
-    \tau
-    \in
-    (0,1]
-  $
-  it holds
-  \begin{align}
-    \label{ch_theorem_1_alternative}
-    \begin{split}
-   & \P
-    \left( 
-  \norm{
-    w^*_i
-    -
-    \frac{1}{n \pi(X_i)}
-  }_\infty
-  \le 
-  c_{1}
-  c_{\tau}
-  \varepsilon_{n}^1 
-   \right)
-   \ge
-  1 - \tau
-  ,
-\\
-   &\quad \
-   \norm{
-    w^*_i
-    -
-    \frac{1}{n \pi(X_i)}
-  }_{\P, 2}
-  \le 
-  c_{2}
-  \varepsilon_n^{2},
-      \end{split}
-  \end{align}
-  where 
-  $w^*$
-  is the solution to 
-  Problem \eqref{primal_weighting_binary}.
-\end{theorem}
 
 \section*{Plan of Proof}
 

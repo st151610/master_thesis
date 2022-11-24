@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  24 NOV 2022 09:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  24 NOV 2022 10:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -514,13 +514,13 @@ chapter 1.
 chapter 2.
 (./chapters/chapter_1/introdution_ch_1.tex) (./chapters/chapter_1/chapter_01.tex
 
-LaTeX Warning: Reference `primal_weighting_binary' on page 4 undefined on input line 177.
+LaTeX Warning: Reference `primal_weighting_binary' on page 4 undefined on input line 40.
 
 [4
 
 ]
 
-LaTeX Warning: Reference `primal_weighting_binary' on page 5 undefined on input line 257.
+LaTeX Warning: Reference `primal_weighting_binary' on page 5 undefined on input line 120.
 
 
 LaTeX Warning: Reference `primal_weighting_binary' on page 5 undefined on input line 263.
@@ -528,48 +528,48 @@ LaTeX Warning: Reference `primal_weighting_binary' on page 5 undefined on input 
 
 LaTeX Warning: Reference `primal_weighting_binary' on page 5 undefined on input line 269.
 
-[5]
+[5] [6]
 Overfull \hbox (13.546pt too wide) in paragraph at lines 634--683
 \OT1/cmr/m/n/12 The sec-ond in-equal-ity is due to the Cauchy-Schwarz-Inequality and As-sump-tions []2.1.6[]
  []
 
-[6] [7] [8]) [9]
+[7] [8] [9]) [10]
 chapter 3.
 (./chapters/convex_analysis.tex
 
-LaTeX Warning: Reference `primal_weighting_binary' on page 10 undefined on input line 53.
+LaTeX Warning: Reference `primal_weighting_binary' on page 11 undefined on input line 53.
 
-[10
+[11
 
 ]
 Overfull \hbox (13.42444pt too wide) in paragraph at lines 179--195
 []\OT1/cmr/bx/n/12 Theorem 3.3. \OT1/cmr/m/it/12 Let $\OML/cmm/m/it/12 f; g \OT1/cmr/m/n/12 : \U/msb/m/n/12 R[] \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@1\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 1\OT1/cmr/m/n/12 ]$ \OT1/cmr/m/it/12 be proper con-vex func-tions and $[] [] \OMS/cmsy/m/n/12 \
  []
 
-[11]) [12]
+[12]) [13]
 chapter 4.
 (./chapters/random_matrix_inequality.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 6.
  (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [13
+) [14
 
 ]
 Overfull \hbox (5.03436pt too wide) in paragraph at lines 156--165
 \OT1/cmr/m/it/12 Let $\OT1/cmr/bx/n/12 V[]$ \OT1/cmr/m/it/12 and $\OT1/cmr/bx/n/12 V[]$ \OT1/cmr/m/it/12 be semidef-i-nite up-per bounds for the matrix-valued vari-ances $[][]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 S\OT1/cmr/m/n/12 )$
  []
 
-[14]) [15]
+[15]) [16]
 chapter 5.
-(./chapters/empirical_processes.tex) [16
+(./chapters/empirical_processes.tex) [17
 
 ]
 chapter 6.
-(./chapters/simple_yet_useful.tex) (./main.bbl [17
+(./chapters/simple_yet_useful.tex) (./main.bbl [18
 
-] [18
+] [19
 
-]) [19] (./main.aux)
+]) [20] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -580,18 +580,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14208 strings out of 478238
- 247063 string characters out of 5850455
+ 14209 strings out of 478238
+ 247070 string characters out of 5850455
  679470 words of memory out of 5000000
  32086 multiletter control sequences out of 15000+600000
  484331 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,19n,120p,10636b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,19n,120p,10636b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (19 pages, 355753 bytes).
+Output written on main.pdf (20 pages, 358489 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 403 compressed objects within 5 object streams
- 146 named destinations out of 1000 (max. 500000)
+ 474 PDF objects out of 1000 (max. 8388607)
+ 406 compressed objects within 5 object streams
+ 147 named destinations out of 1000 (max. 500000)
  70 words of extra memory for PDF output out of 10000 (max. 10000000)
 

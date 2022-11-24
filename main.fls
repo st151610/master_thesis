@@ -779,14 +779,14 @@ INPUT ./chapters/chapter_1/introdution_ch_1.tex
 INPUT chapters/chapter_1/introdution_ch_1.tex
 INPUT ./chapters/chapter_1/introdution_ch_1.tex
 INPUT chapters/chapter_1/introdution_ch_1.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT ./chapters/chapter_1/chapter_01.tex
 INPUT chapters/chapter_1/chapter_01.tex
 INPUT ./chapters/chapter_1/chapter_01.tex
 INPUT chapters/chapter_1/chapter_01.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm

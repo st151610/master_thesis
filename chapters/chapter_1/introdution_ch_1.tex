@@ -1,1 +1,28 @@
-hello
+We work in the Rubin Causal Model.
+
+We assume a sample of $n$ units which is drawn from a population distribution.
+
+In i.i.d. fashion.
+
+We observe $ (\mathbf{X}_i, T_i, Y_i) $,
+where $\mathbf{X}$ are covariates, 
+$T$ is the indicator if treatment has been received
+and $Y$ is the observed outcome.
+
+In the Rubin Causal Model we assume that for each unit the potintial outcome exist, i.e. $(Y_i^0, Y_i^1)$ where $Y^1$ stands for the potential outcome had the unit received treatment and $Y^0$ for the potential outcome had the unit received \textbf{no} treatment.
+
+It is clear that $Y_i = Y_i^{T_i}$ i.e. we can observe only one of the potential outcomes.
+
+This is the dillema of causal inference.
+ 
+On the population level it is possible to estimate both.
+
+Usually the means of the potential outcomes are compared against each other.
+
+In randomized trials this is a valid approach to causal inferece.
+
+In observational studies however the treatment assignment is not known and direct comparison can lead to systematically wrong results.
+
+This phenomenon is called \textbf{confounding}.
+ 
+To address the issue of confounding many methods have been proposed.
