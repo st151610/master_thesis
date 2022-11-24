@@ -143,31 +143,33 @@ We study the following problem:
 %%%%%%%%%%%%%%%%%%
 \begin{problem}
   \begin{gather*}
-    \underset{w \in \R^n}{\text{minimize}}
+    \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
     \qquad
     \sum_{i = 1}^{n} T_i f(w_i)
   \end{gather*}
-subject to
-\begin{align}
-  \label{primal_weighting_binary}
-  \begin{split}
-    w_i &\ge 0
-    \\
-    \sum_{i = 1}^{n} 
-      w_i
-    &=
-    1
-    \\
+subject to the constraints
+\begin{gather*}
+    w_i \ge 0,
+    \qquad 
+    i = 1, \ldots, n,
+\end{gather*}
+\begin{gather*}
+  \sum_{ i = 1 }^{n}
+    w_i
+  =
+  1
+\end{gather*}
+\begin{gather*}
     \left| 
       \sum_{i = 1}^{n} w_i T_i B_k(X_i)
       - 
       \frac{1}{n} \sum_{i = 1}^{n} B_k(X_i)
     \right|
-    &\le 
-    \delta_k,\,
+    \le 
+    \delta_k,
+    \qquad
     k = 1, \ldots, K
-  \end{split}
-\end{align}
+\end{gather*}
 \end{problem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1669228726 "main.aux" "main.bbl" "main" 1669276339
+["bibtex main"] 1669277828 "main.aux" "main.bbl" "main" 1669278141
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1650183167 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "literature.bib" 1669196020 41658 7008058a5de9c83ac7c028a15f88c5ef ""
-  "main.aux" 1669276339 9825 e02be8413c554470e400e4d2c2aa7ba1 "pdflatex"
+  "main.aux" 1669278140 9758 e06af02bd2db635c6833adaf4c16a54c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1669276337 "main.tex" "main.pdf" "main" 1669276339
+["pdflatex"] 1669278139 "main.tex" "main.pdf" "main" 1669278141
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -135,7 +135,7 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1668447558 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1668447517 2927666 1f051fb934722d94e995cdec3e18511c ""
-  "chapters/chapter_1/chapter_01.tex" 1669194478 19033 220998f93db5a983c8072f6068d654d5 ""
+  "chapters/chapter_1/chapter_01.tex" 1669278138 19084 10d4e8c36e321da934bfb35626c8fb07 ""
   "chapters/chapter_1/introdution_ch_1.tex" 1669194141 6 b1946ac92492d2347c6235b4d2611184 ""
   "chapters/convex_analysis.tex" 1669227360 8253 cff6ef3fbf616942b1574cd51a6a4361 ""
   "chapters/empirical_processes.tex" 1668183421 2528 e8befd8d5dbac6d5f48a629765e2b4cd ""
@@ -143,11 +143,11 @@
   "chapters/random_matrix_inequality.tex" 1669276336 8515 0543c84bd5149334ce4902e9a69b3bd0 ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1669276339 9825 e02be8413c554470e400e4d2c2aa7ba1 "pdflatex"
-  "main.bbl" 1669228726 3073 ece6dbc29205016dfc94ffe755b23a00 "bibtex main"
+  "main.aux" 1669278140 9758 e06af02bd2db635c6833adaf4c16a54c "pdflatex"
+  "main.bbl" 1669277828 3073 ece6dbc29205016dfc94ffe755b23a00 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1669229567 1837 c1dc36dfeb49f52e1f2e7c7466a567ef ""
-  "main.toc" 1669276339 686 be1ebc5a774372aa17933cc9a82b3bc0 "pdflatex"
+  "main.toc" 1669278140 686 be1ebc5a774372aa17933cc9a82b3bc0 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
