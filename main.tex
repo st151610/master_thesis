@@ -10,6 +10,9 @@
 \usepackage{cite}
 \graphicspath{ {images/} }
 
+\usepackage{nomencl}
+\makenomenclature
+\renewcommand{\nomname}{Notation Index}
 % Theorem handle
 
 
@@ -57,6 +60,7 @@
 
 \begin{document}
 
+
 \maketitle
 
 \tableofcontents 
@@ -79,10 +83,11 @@
 \chapter{Empirical Processes}
 \input{chapters/empirical_processes.tex}
 
-\chapter{Simple yet useful Calculations}
+\chapter{Simple yet useful Calculations} 
 \input{chapters/simple_yet_useful.tex}
 
-
+\input{chapters/notation_index.tex}
+\printnomenclature
 
 \bibliography{literature}{}
 \bibliographystyle{plain}
