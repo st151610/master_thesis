@@ -4,6 +4,7 @@
 \usepackage[a4paper, margin=2cm]{geometry}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{mdframed}
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{cite}
@@ -13,8 +14,9 @@
 
 
 \newtheorem{theorem}{Theorem}[chapter]
-
-
+\newenvironment{ftheorem}
+  {\begin{mdframed}\begin{theorem}}
+  {\end{theorem}\end{mdframed}}
 \newtheorem{assumption}{Assumption}[chapter]
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{definition}{Definition}[chapter]
