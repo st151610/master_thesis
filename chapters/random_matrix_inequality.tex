@@ -25,32 +25,32 @@
 \begin{theorem}
   \emph{(Matrix Bernstein Inequality)}
   \label{rmineq_bernstein}
-  Let $A_1, \ldots, A_n$ be a independent, random matrices with dimension 
+  Let $\mathbf{A}_1, \ldots, \mathbf{A}_n$ be independent, random matrices with dimension 
   $d_1 \times d_2$
   . Assume that
     \begin{gather}
       \label{rmineq_bernstein_cond_1}
-      \E(A_k)=0\quad\text{and}\quad\norm{A_k}\le L \quad \text{for each}\quad  k\in \{1,\ldots,n\}.
+      \E(\mathbf{A}_k)=0\quad\text{and}\quad\norm{\mathbf{A}_k}\le L \quad \text{for each}\quad  k\in \{1,\ldots,n\}.
     \end{gather}
     Introduce the random matrix
       \begin{gather*}
-        S:=\sum_{k=1}^n A_k.
+        \mathbf{S}:=\sum_{k=1}^n \mathbf{A}_k.
       \end{gather*}
-    Let $v(S)$ be the matrix variance statistic of the sum:
+    Let $v(\mathbf{S})$ be the matrix variance statistic of the sum:
       \begin{align}
         \label{rmineq_bernstein_cond_2}
-        v(S):= \norm{\E[SS^\intercal ]} \lor \norm{\E[S^T S]} 
-             = \norm{\sum_{k=1}^n\E[A_kA_k^T]} \lor \norm{\sum_{k=1}^n\E[A_k^T A_k]} .
+        v(\mathbf{S}):= \norm{\E[\mathbf{S}\mathbf{S}^\top ]} \lor \norm{\E[\mathbf{S}^\top \mathbf{S}]} 
+             = \norm{\sum_{k=1}^n\E[\mathbf{A}_k\mathbf{A}_k^\top]} \lor \norm{\sum_{k=1}^n\E[\mathbf{A}_k^T \mathbf{A}_k]} .
       \end{align}
     Then
       \begin{align}
         \label{rmineq_bernstein_expectation_bound}
-        \E \left[ \norm{S} \right]\le \sqrt{2v(S)\log(d_1+d_2)} + \frac{1}{3}L\log(d_1+d_2).
+        \E \left[ \norm{\mathbf{S}} \right]\le \sqrt{2v(\mathbf{S})\log(d_1+d_2)} + \frac{1}{3}L\log(d_1+d_2).
       \end{align}
     Furthermore, 
       \begin{gather}
         \label{rmineq_bernstein_probability_bound}
-        \P[\norm{S}\ge t]\le(d_1+d_2)\exp\left(\frac{-t^2/2}{v(S)+Lt/3} \right)
+        \P[\norm{\mathbf{S}}\ge t]\le(d_1+d_2)\exp\left(\frac{-t^2/2}{v(\mathbf{S})+Lt/3} \right)
         \quad
         \text{for all $t \ge 0$}
         .
@@ -115,7 +115,7 @@ Then it holds for all $ t \ge 0 $
   Since the 2- and $\infty$- norm coincide in one dimension and
   the $X_i$ are centered and independent we get
   \begin{gather}
-    v(S)
+    v(\mathbf{S})
     =
     \sum_{i = 1}^{n}
         \E(X_i^2)
@@ -132,13 +132,13 @@ Then it holds for all $ t \ge 0 $
 \begin{definition}
   \emph{Intrinsic Dimension}
   \label{rmineq_intrinsic_bernstein}
-  For a positive-semidefinite matrix $A$,
+  For a positive-semidefinite matrix $\mathbf{A}$,
   the intrinsic dimension is the quantity
   \begin{gather*}
-    \text{intdim}
-    (A)
+    \mathrm{intdim}
+    (\mathbf{A})
     :=
-    \frac{\text{tr}A}{\norm{A}_2}
+    \frac{\mathrm{tr}\mathbf{A}}{\norm{\mathbf{A}}_2}
     ,
   \end{gather*}
   where tr is the trace of a matrix.
@@ -146,39 +146,39 @@ Then it holds for all $ t \ge 0 $
 \begin{theorem}
   \emph{(Intrinsic Matrix Bernstein)}
   \label{rmineq_bernstein}
-  Let $(A_k)_{1\le k \le n}$  be a finite sequence of independent, random matrices with the same size. Assume that
+  Let $(\mathbf{A}_k)_{1\le k \le n}$  be a finite sequence of independent, random matrices with the same size. Assume that
     \begin{gather}
-      \E(A_k)=0\quad\text{and}\quad\norm{A_k}\le L \quad \text{for each}\quad  k\in \{1,\ldots,n\}.
+      \E(\mathbf{A}_k)=0\quad\text{and}\quad\norm{\mathbf{A}_k}\le L \quad \text{for each}\quad  k\in \{1,\ldots,n\}.
     \end{gather}
   Introduce the random matrix
       \begin{gather*}
-        S:=\sum_{k=1}^n A_k.
+        \mathbf{S}:=\sum_{k=1}^n \mathbf{A}_k.
       \end{gather*}
   Let 
-  $V_1$ 
+  $\mathbf{V}_1$ 
   and
-  $V_2$ 
+  $\mathbf{V}_2$ 
   be semidefinite upper bounds for the matrix-valued variances
-  $\mathrm{Var}_1(S)$
+  $\mathbf{Var}_1(\mathbf{S})$
   and
-  $\textbf{Var}_2(S)$:
+  $\mathbf{Var}_2(\mathbf{S})$:
   \begin{align*}
-    V_1 
+    \mathbf{V}_1 
     &\succcurlyeq 
-    \text{Var}_1(S)
+    \mathbf{Var}_1(\mathbf{S})
     :=
-    \E(S)
+    \E(\mathbf{S})
     =
     \sum_{k = 1}^{n}
-    \E(A_k A_k^T),\\
-    V_2 
+    \E(\mathbf{A}_k \mathbf{A}_k^\top),\\
+    \mathbf{V}_2 
     &\succcurlyeq 
-    \text{Var}_2(S)
+    \text{Var}_2(\mathbf{S})
     :=
-    \E(S)
+    \E(\mathbf{S})
     =
     \sum_{k = 1}^{n}
-    \E(A_k^T A_k)
+    \E(\mathbf{A}_k^\top \mathbf{A}_k)
     .
   \end{align*}
   Define an intrinsic dimension bound and a variance bound
@@ -186,10 +186,10 @@ Then it holds for all $ t \ge 0 $
     \label{ rmineq_intrinsic_bernstein_intdim_var_bound }
     d
     :=
-    \text{intdim}
+    \mathrm{intdim}
     \begin{bmatrix}
-      V_1 & 0 \\
-      0   & V_2
+      \mathbf{V}_1 & 0 \\
+      0   & \mathbf{V}_2
     \end{bmatrix}
     \qquad
     \text{and}
@@ -197,14 +197,14 @@ Then it holds for all $ t \ge 0 $
     v
     :=
     \max
-    \left\{ \norm{V_1}_2, \norm{V_2}_2 \right\}
+    \left\{ \norm{\mathbf{V}_1}_2, \norm{\mathbf{V}_2}_2 \right\}
     .
   \end{gather}
   Then 
   it holds
       \begin{align}
         \label{rmineq_intrinsic_bernstein_expectation_bound}
-        \E\norm{S}\le \text{Const.}\left( \sqrt{v\log(d+1)} + L\log(d+1) \right).
+        \E\norm{\mathbf{S}}\le \text{Const.}\left( \sqrt{v\log(d+1)} + L\log(d+1) \right).
       \end{align}
     Furthermore, for all 
   $
@@ -216,7 +216,7 @@ Then it holds for all $ t \ge 0 $
   $,
       \begin{gather}
         \label{rmineq_intrinsic_bernstein_probability_bound}
-        \P(\norm{S}\ge t)\le 4d \exp\left(\frac{-t^2/2}{v+Lt/3} \right).
+        \P(\norm{\mathbf{S}}\ge t)\le 4d \exp\left(\frac{-t^2/2}{v+Lt/3} \right).
       \end{gather}
 \end{theorem}
 
@@ -226,12 +226,12 @@ Then it holds for all $ t \ge 0 $
 It turns out that for random vectors $ d \le 2 $. This is remarkable, because this property of the intrinsic dimension is invarient under the dimension of the vector. This fact motivates the following result:
 \begin{corollary}
   \label{rmineq_intrinsic_bernstein_vector_corollary}
-  Let $(A_k)_{1\le k \le n}\subseteq\R^{K}$ be a finite sequence of independent, random vectors. Assume that
+  Let $(\mathbf{A}_k)_{1\le k \le n}\subseteq\R^{K}$ be a finite sequence of independent, random vectors. Assume that
     \begin{gather}
       \label{rmineq_bernstein_cond_1}
-      \E(A_k)=0\quad\text{and}\quad\norm{A_k}\le L \quad \text{for each}\quad  k\in \{1,\ldots,n\}.
+      \E(\mathbf{A}_k)=0\quad\text{and}\quad\norm{\mathbf{A}_k}\le L \quad \text{for each}\quad  k\in \{1,\ldots,n\}.
     \end{gather}
-    Let $v(S)$ be the matrix variance statistic of the sum 
+    Let $v(\mathbf{S})$ be the matrix variance statistic of the sum 
     as defined in
     \eqref{rmineq_bernstein_cond_2}
     .
@@ -239,19 +239,19 @@ It turns out that for random vectors $ d \le 2 $. This is remarkable, because th
   it holds
       \begin{align}
         \label{rmineq_intrinsic_bernstein_expectation_bound}
-        \E\norm{S}\le \text{Const.}\left( \sqrt{v(S)\log(3)} + L\log(3) \right).
+        \E\norm{\mathbf{S}}\le \text{Const.}\left( \sqrt{v(\mathbf{S})\log(3)} + L\log(3) \right).
       \end{align}
     Furthermore, for all 
   $
     t
     \ge
-    \sqrt{v(S)}
+    \sqrt{v(\mathbf{S})}
     +
     \frac{L}{3}
   $,
       \begin{gather}
         \label{rmineq_intrinsic_bernstein_probability_bound}
-        \P(\norm{S}\ge t)\le 8 \exp\left(\frac{-t^2/2}{v(S)+Lt/3} \right).
+        \P(\norm{\mathbf{S}}\ge t)\le 8 \exp\left(\frac{-t^2/2}{v(\mathbf{S})+Lt/3} \right).
       \end{gather}
 \end{corollary}
 \begin{proof}
@@ -260,10 +260,10 @@ It turns out that for random vectors $ d \le 2 $. This is remarkable, because th
    \label{rmineq_intrinsic_bernstein_cor_1}
     d
     :=
-    \text{intdim}
+    \mathrm{intdim}
     \begin{bmatrix}
-      \text{Var}_1(S) & 0 \\
-      0   & \text{Var}_2(S)
+      \text{Var}_1(\mathbf{S}) & 0 \\
+      0   & \text{Var}_2(\mathbf{S})
     \end{bmatrix}
     \le
     2
@@ -273,23 +273,23 @@ It turns out that for random vectors $ d \le 2 $. This is remarkable, because th
  
   \begin{gather}
   \text{tr} 
-  B B^T 
+  B B^\top 
   =
-  B^T B
+  B^\top B
   \quad
   \text{and}
   \quad
   \norm{
     \begin{bmatrix}
-      B B^T & 0 \\
-      0   & B^T B
+      B B^\top & 0 \\
+      0   & B^\top B
     \end{bmatrix}
   }_2
   =
   \max
   \left\{ 
-    \norm{B B^T},
-    B^T B
+    \norm{B B^\top},
+    B^\top B
   \right\}
   \end{gather}
   $
@@ -302,20 +302,20 @@ It turns out that for random vectors $ d \le 2 $. This is remarkable, because th
   \begin{align}
     \text{intdim} 
     \begin{bmatrix}
-      B B^T & 0 \\
-      0   & B^T B
+      B B^\top & 0 \\
+      0   & B^\top B
     \end{bmatrix}
     =
   \frac{
-    \text{tr}B B^T
+    \text{tr}B B^\top
     +
-    B^T B
+    B^\top B
   }
   {
   \max
   \left\{ 
-    \norm{B B^T},
-    B^T B
+    \norm{B B^\top},
+    B^\top B
   \right\}
   }
   \le
@@ -336,13 +336,13 @@ with
 $\norm{X}_\infty < \infty$
 
 \begin{gather}
-  \E(\text{tr} X X^T) 
+  \E(\text{tr} X X^\top) 
   =
-  \text{tr} \E (X X^T). 
+  \text{tr} \E (X X^\top). 
 \end{gather}
 Indeed
 \begin{align*}
-  \E(\text{tr} X X^T) 
+  \E(\text{tr} X X^\top) 
   &=
   \E \left( 
     \sum_{i = 1}^{n}
@@ -360,7 +360,7 @@ Indeed
   \\
   &=
   \text{tr}
-    \E(X X^T)
+    \E(X X^\top)
 \end{align*}
 Note that by the linearity of the trace and the scalar product, the above also holds for finite sums of bounded random vectors. 
 We have thus established \eqref{rmineq_intrinsic_bernstein_cor_1}.

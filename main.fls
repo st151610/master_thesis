@@ -822,9 +822,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT ./chapters/empirical_processes.tex
 INPUT chapters/empirical_processes.tex
 INPUT ./chapters/empirical_processes.tex
@@ -842,7 +839,6 @@ INPUT ./main.out
 INPUT ./main.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
