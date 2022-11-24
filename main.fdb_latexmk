@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1669282092 "main.aux" "main.bbl" "main" 1669282137
+["bibtex main"] 1669289599 "main.aux" "main.bbl" "main" 1669289788
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1650183167 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "literature.bib" 1669280312 43556 e6e26ac3934df972f600d90f58f4c81b ""
-  "main.aux" 1669282137 9758 0f4093ab83f640359f3da03043db343e "pdflatex"
+  "main.aux" 1669289788 10859 c7f90aaa68d73ba3d7776f681e54dfac "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1669282135 "main.tex" "main.pdf" "main" 1669282137
+["pdflatex"] 1669289786 "main.tex" "main.pdf" "main" 1669289788
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -135,19 +135,19 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1668447558 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1668447517 2927666 1f051fb934722d94e995cdec3e18511c ""
-  "chapters/chapter_1/chapter_01.tex" 1669279651 19092 2a42621641c9466b65476bc7897ec1d2 ""
-  "chapters/chapter_1/introdution_ch_1.tex" 1669282133 1157 37827cde7c3ed74c7e8fb00990bddd67 ""
+  "chapters/chapter_1/chapter_01.tex" 1669289784 20344 ce17bbae4a0d97f1260fc7d94ef45bda ""
+  "chapters/chapter_1/introdution_ch_1.tex" 1669285001 1211 6443ef16266b7669379ffaf59cec5109 ""
   "chapters/convex_analysis.tex" 1669227360 8253 cff6ef3fbf616942b1574cd51a6a4361 ""
   "chapters/empirical_processes.tex" 1668183421 2528 e8befd8d5dbac6d5f48a629765e2b4cd ""
   "chapters/introduction.tex" 1667036817 1456 6a741fd04a0287aa7d8050ccb283d967 ""
   "chapters/random_matrix_inequality.tex" 1669276336 8515 0543c84bd5149334ce4902e9a69b3bd0 ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1669282137 9758 0f4093ab83f640359f3da03043db343e "pdflatex"
-  "main.bbl" 1669282092 3073 ece6dbc29205016dfc94ffe755b23a00 "bibtex main"
+  "main.aux" 1669289788 10859 c7f90aaa68d73ba3d7776f681e54dfac "pdflatex"
+  "main.bbl" 1669289599 3073 ece6dbc29205016dfc94ffe755b23a00 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1669229567 1837 c1dc36dfeb49f52e1f2e7c7466a567ef ""
-  "main.toc" 1669282137 686 a83e4bb32fbb41a3b7447a6fb694d751 "pdflatex"
+  "main.tex" 1669289596 1939 587c5e1ecd3c1c97ea4c2d594b68bedd ""
+  "main.toc" 1669289788 870 e8d4781881179fdc91d368d565d1a17c "pdflatex"
   (generated)
   "main.aux"
   "main.log"

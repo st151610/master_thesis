@@ -1,5 +1,77 @@
+We want to estimate the populition mean of the outcome under treatment,
+i.e. $\E \left[ Y^1 \right]$.
 
+Since $Y_i^1$ is only observed for the treated units, i.e. if $T_i = 1$
+we will consider a weighted mean of the observed outcomes as an estimator, i.e. $\hat{Y}_w^1 = \sum_{i = 1}^{n} w_i T_i Y_i $
+where we use convex optimization to compute the weights.
 
+We consider the following decomposition
+
+\begin{gather}
+  \hat{Y}_w^1 - \E [ Y^1 ]
+  =
+  \frac{1}{n}
+  \sum_{ i = 1 }^{n} S_i
+    + R_0
+    + R_1
+    + R_2
+    ,
+\end{gather}
+where
+\begin{gather*}
+  S_i 
+  := 
+  \frac{T_i}{\pi_i}
+ \left( 
+    Y_i - \E [ Y^1_i | X_i ]
+ \right)
+ +
+ \left( 
+    \E [ Y^1_i | X_i ] - \E [ Y^1]
+ \right)
+ \quad
+ \text{for}\ 
+ i \in \left\{ 1, \ldots, n, \right\}
+ ,
+ \\
+  R_0
+  :=
+  \sum_{ i = 1 }^{n}
+  T_i
+    \left(  
+      w_i - \frac{1}{n \pi_i}
+    \right)
+ \left( 
+    Y_i - \E [ Y^1_i | X_i ]
+ \right)
+ ,\\
+  R_1
+  :=
+  \sum_{ i = 1 }^{n}
+    \left(  
+      T_i
+      w_i - \frac{1}{n}
+    \right)
+ \left( 
+    \E [ Y^1_i | X_i ] - B(X_i)^\top \lambda
+ \right)
+ \quad
+ \text{and}
+ \quad
+  R_2
+  :=
+  \sum_{ i = 1 }^{n}
+    \left(  
+      T_i
+      w_i - \frac{1}{n}
+    \right)
+ B(X_i)^\top \lambda
+ \quad 
+ \text{for}
+ \ 
+ \lambda \in \R^K
+ .
+\end{gather*}
 We study the following problem:
 %%%%%%%%%%%%%%%%%%
 % PROBLEM PRIMAL %
