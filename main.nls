@@ -1,7 +1,16 @@
 
 \begin{thenomenclature} 
 \nomgroup{A}
+  \item [{$\# A$}]\begingroup cardinality of the set $A$\nomeqref {6.5}\nompageref{17}
+  \item [{$\E [X \vert Y]$}]\begingroup conditional expectation of the random variable $X$ with respect to $\sigma(Y)$\nomeqref {6.5}\nompageref{17}
+  \item [{$\E[X]$}]\begingroup expectation of the random variable $X$\nomeqref {6.5}\nompageref{17}
+  \item [{$\mathbf{Var}[X]$}]\begingroup variance of the random variable $X$\nomeqref {6.5}\nompageref{17}
+  \item [{$\overline{\R}=\R \cup \left\{ +\infty \right\}$}]\begingroup extension of the real numbers\nomeqref {6.5}\nompageref{17}
   \item [{$\overset{\mathcal{D}}{\longrightarrow}$}]\begingroup convergence of distributions\nomeqref {6.5}\nompageref{17}
   \item [{$\P$}]\begingroup generic probability measure\nomeqref {6.5}\nompageref{17}
+  \item [{$\P_X=\P \circ X^{-1}$}]\begingroup distribution of the random variable $X$\nomeqref {6.5}\nompageref{17}
+  \item [{$\R$}]\begingroup set of real numbers\nomeqref {6.5}\nompageref{17}
+  \item [{$x \lor y, x \land y, x^+, x^-$}]\begingroup maximum, minimum, positive part, negative part of real numbers\nomeqref {6.5}\nompageref{17}
+  \item [{$X\sim \mu$}]\begingroup the random variable has distribution $\mu$\nomeqref {6.5}\nompageref{17}
 
 \end{thenomenclature}
