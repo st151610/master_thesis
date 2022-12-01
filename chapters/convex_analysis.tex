@@ -62,7 +62,7 @@ Often an equivalent characterisation of convex functions is more useful.
 \section{Conjugate Calculus}
 When studying different primal problems such as \eqref{primal_weighting_binary} we often turn to the dual instead.
 Therefore we need some reliable tools.
-Beign able to compute specific convex conjugates is one tool required.
+Begin able to compute specific convex conjugates is one tool required.
 
 
 \begin{definition}
@@ -109,7 +109,9 @@ does not have to be convex. On the other hand, the convex conjugate is always co
 
 % conjugate chain rule %
  %%%%%%%%%%%%%%%%%%%%%%
+\begin{proposition}
 
+\end{proposition}
 \begin{theorem}
   \emph{(Conjugate Chain Rule)}
   \label{cvxa_conjugate_chain_rule}
@@ -243,17 +245,41 @@ and
 a matrix $A \in \R^{n \times n}$,
 we define 
 the primal minimization problem as follows:
-
-\begin{gather}
+\begin{problem}
+  \emph{(Primal)}
+  Given proper convex functions 
+  $
+  f:\R^n \to \overline{\R} 
+  $,
+  $
+  g:\R^m \to \overline{\R} 
+  $
+  and a matrix 
+  $
+    A\in \R^{m \times n}
+  $
+  we define the \textbf{primal optimization problem} to be
   \label{cvxa_primal_problem}
-  \text{minimize}
-  \quad
-  f(x) + g(Ax) 
-  \quad
-  \text{subject to}
-  \quad
-  x \in \R^n.
-\end{gather}
+  \begin{gather*}
+    \underset{x \in \R^n}{\mathrm{minimize}}
+    \qquad
+    f(x) + g(Ax)
+  \end{gather*}
+\end{problem}
+\begin{remark}
+  Problem \autoref{cvxa_primal_problem}
+  appears in the unconstrained form. We can impose constraints by controling for the domains of $f$ and $g$.
+  To incorporate linear constraints $Ax \le 0$
+  or more general constraints $x\in\Omega$, where $\Omega$ is a convex set,
+  we can choose
+  \begin{gather}
+    g(x)=\delta_\Omega(x):=
+  \end{gather}
+  where $x\notin\Omega$
+  leads to 
+  $f(x) + g(x)=\infty$
+  and the optimization problem (if feasible) will exclude $x$ from the solutions.
+\end{remark}
 
 The Fenchel dual problem is then
 

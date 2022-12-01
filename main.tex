@@ -23,11 +23,19 @@
 \newtheorem{assumption}{Assumption}[chapter]
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{definition}{Definition}[chapter]
-\newtheorem{example}{Example}[chapter]
+\newtheorem{example/}{Example}[chapter]
+\newenvironment{example}
+  {\renewcommand{\qedsymbol}{$\diamondsuit$}%
+   \pushQED{\qed}\begin{example/}}
+  {\popQED\end{example/}}
 \newtheorem{lemma}{Lemma}[chapter]
 \newtheorem{problem}{Problem}[chapter]
 \newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{remark}{Remark}[chapter]
+\newtheorem{remark/}{Remark}[chapter]
+\newenvironment{remark}
+  {\renewcommand{\qedsymbol}{$\diamondsuit$}%
+   \pushQED{\qed}\begin{remark/}}
+  {\popQED\end{remark/}}
 \newtheorem{subassumption}{}[assumption]
 
 
