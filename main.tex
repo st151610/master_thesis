@@ -7,6 +7,7 @@
 \usepackage{mdframed}
 \usepackage{amsthm}
 \usepackage{amssymb}
+\usepackage{mathtools}
 \usepackage{cite}
 \graphicspath{ {images/} }
 
@@ -38,7 +39,7 @@
   {\popQED\end{remark/}}
 \newtheorem{subassumption}{}[assumption]
 
-
+\renewcommand{\proofname}{\textbf{Proof}}
 % definition of constants
 
 \newcommand{\CP}{C_\P}
@@ -46,7 +47,7 @@
 \newcommand{\LearnRate}{\varepsilon_n}
 
 %
-
+\DeclarePairedDelimiterX{\inner}[2]{\langle}{\rangle}{#1, #2}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\E}{\mathbf{E}}
 \renewcommand{\P}{\mathbf{P}}

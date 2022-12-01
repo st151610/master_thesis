@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  1 DEC 2022 16:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  1 DEC 2022 18:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -456,7 +456,35 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/share/texmf-dist/tex/latex/cite/cite.sty
+)) (/usr/share/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2022/02/07 v1.28a mathematical typesetting tools
+ (/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count295
+\calc@Bcount=\count296
+\calc@Adimen=\dimen162
+\calc@Bdimen=\dimen163
+\calc@Askip=\skip138
+\calc@Bskip=\skip139
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count297
+\calc@Cskip=\skip140
+) (/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count298
+\l_MT_multwidth_dim=\dimen164
+\origjot=\skip141
+\l_MT_shortvdotswithinadjustabove_dim=\dimen165
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen166
+\l_MT_above_intertext_sep=\dimen167
+\l_MT_below_intertext_sep=\dimen168
+\l_MT_above_shortintertext_sep=\dimen169
+\l_MT_below_shortintertext_sep=\dimen170
+\xmathstrut@box=\box60
+\xmathstrut@dim=\dimen171
+) (/usr/share/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
@@ -468,7 +496,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks31
 \XKV@tempa@toks=\toks32
 )
-\XKV@depth=\count295
+\XKV@depth=\count299
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
@@ -477,24 +505,24 @@ Package tocbasic Info: babel extension for `nlo' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 187.
 Package tocbasic Info: babel extension for `nls' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 188.
-\nomlabelwidth=\dimen162
-\nom@tempdim=\dimen163
-\nomitemsep=\skip138
+\nomlabelwidth=\dimen172
+\nom@tempdim=\dimen173
+\nomitemsep=\skip142
 )
 \@nomenclaturefile=\write3
 \openout3 = `main.nlo'.
 
-Package nomencl Info: Writing nomenclature file main.nlo on input line 14.
-\c@theorem=\count296
-\c@assumption=\count297
-\c@corollary=\count298
-\c@definition=\count299
-\c@example/=\count300
-\c@lemma=\count301
-\c@problem=\count302
-\c@proposition=\count303
-\c@remark/=\count304
-\c@subassumption=\count305
+Package nomencl Info: Writing nomenclature file main.nlo on input line 15.
+\c@theorem=\count300
+\c@assumption=\count301
+\c@corollary=\count302
+\c@definition=\count303
+\c@example/=\count304
+\c@lemma=\count305
+\c@problem=\count306
+\c@proposition=\count307
+\c@remark/=\count308
+\c@subassumption=\count309
  (./main.aux
 
 LaTeX Warning: Label `rmineq_bernstein' multiply defined.
@@ -511,39 +539,39 @@ LaTeX Warning: Label `rmineq_intrinsic_bernstein_probability_bound' multiply def
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-Package scrbase Info: activating english \contentsname on input line 69.
-Package scrbase Info: activating english \listfigurename on input line 69.
-Package scrbase Info: activating english \listtablename on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+Package scrbase Info: activating english \contentsname on input line 70.
+Package scrbase Info: activating english \listfigurename on input line 70.
+Package scrbase Info: activating english \listtablename on input line 70.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
-\scratchdimen=\dimen164
-\scratchbox=\box60
-\nofMPsegments=\count307
-\nofMParguments=\count308
+\scratchcounter=\count310
+\scratchdimen=\dimen174
+\scratchbox=\box61
+\nofMPsegments=\count311
+\nofMParguments=\count312
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count309
-\MPscratchDim=\dimen165
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
+\MPscratchCnt=\count313
+\MPscratchDim=\dimen175
+\MPnumerator=\count314
+\makeMPintoPDFobject=\count315
 \everyMPtoPDFconversion=\toks34
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -585,7 +613,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 69.
+Package hyperref Info: Link coloring OFF on input line 70.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -593,11 +621,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count312
+\c@section@level=\count316
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
+LaTeX Info: Redefining \ref on input line 70.
+LaTeX Info: Redefining \pageref on input line 70.
+LaTeX Info: Redefining \nameref on input line 70.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -609,23 +637,23 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 69.
+(scrreprt)           before \begin{document} on input line 70.
  (/usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (/usr/share/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count313
+\BKM@id=\count317
 ))
 <images//unistuttgart_logo_deutsch.jpg, id=4, 173.9298pt x 37.0986pt>
 File: images//unistuttgart_logo_deutsch.jpg Graphic file (type jpg)
 <use images//unistuttgart_logo_deutsch.jpg>
-Package pdftex.def Info: images//unistuttgart_logo_deutsch.jpg  used on input line 73.
+Package pdftex.def Info: images//unistuttgart_logo_deutsch.jpg  used on input line 74.
 (pdftex.def)             Requested size: 173.92937pt x 37.0985pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -688,7 +716,24 @@ LaTeX Warning: Reference `primal_weighting_binary' on page 10 undefined on input
 
 Package hyperref Warning: No autoref name for `problem' on input line 270.
 
-[11]) [12]
+
+Package hyperref Warning: No autoref name for `problem' on input line 286.
+
+
+Package hyperref Warning: No autoref name for `problem' on input line 288.
+
+
+Package hyperref Warning: No autoref name for `problem' on input line 296.
+
+
+Package hyperref Warning: No autoref name for `problem' on input line 296.
+
+[11]
+Overfull \hbox (1.70209pt too wide) in paragraph at lines 374--398
+[]\OT1/cmr/m/n/12 Since $\OMS/cmsy/m/n/12 C \OT1/cmr/m/n/12 := []$ is con-vex $\OML/cmm/m/it/12 f$ \OT1/cmr/m/n/12 has a lo-cal min-i-mum in $\OML/cmm/m/it/12 y \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 C \OT1/cmr/m/n/12 := [] \OML/cmm/m/it/12 :$
+ []
+
+) [12]
 chapter 4.
 (./chapters/random_matrix_inequality.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 6.
@@ -719,18 +764,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15565 strings out of 478238
- 273064 string characters out of 5850455
- 719207 words of memory out of 5000000
- 33384 multiletter control sequences out of 15000+600000
+ 16184 strings out of 478238
+ 284629 string characters out of 5850455
+ 733219 words of memory out of 5000000
+ 33991 multiletter control sequences out of 15000+600000
  484690 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,19n,120p,10636b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,19n,120p,10636b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (19 pages, 376143 bytes).
+Output written on main.pdf (19 pages, 379277 bytes).
 PDF statistics:
- 495 PDF objects out of 1000 (max. 8388607)
- 426 compressed objects within 5 object streams
- 157 named destinations out of 1000 (max. 500000)
+ 500 PDF objects out of 1000 (max. 8388607)
+ 431 compressed objects within 5 object streams
+ 158 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -280,20 +280,59 @@ the primal minimization problem as follows:
   $f(x) + g(x)=\infty$
   and the optimization problem (if feasible) will exclude $x$ from the solutions.
 \end{remark}
-
-The Fenchel dual problem is then
-
-\begin{gather}
+\begin{problem}
+  \emph{(Dual)}
   \label{cvxa_dual_problem}
-  \text{maximize}
-  \quad
-  -f^* \left( A^T y \right) - g^*(-y) 
-  \quad
-  \text{subject to}
-  \quad
-  y \in \R^n.
-\end{gather}
-
+  Consider the same setting as in Problem~\autoref{cvxa_primal_problem}.
+  Using the convex conjugates of $f,g$ and the transpose of $A$
+  we define the \textbf{dual problem} of Problem~\autoref{cvxa_primal_problem} to be
+  \begin{gather*}
+    \underset{y^* \in \R^m}{\mathrm{maximize}}
+    \qquad
+   - f^*(A^\top y^*) - g^*(y^*).
+  \end{gather*}
+\end{problem}
+\begin{proposition}
+  Consider the optimization problem~\autoref{cvxa_primal_problem} and its dual~\autoref{cvxa_dual_problem}, where the functions $f$ and $g$ are not assumed to be convex. Define the \textbf{optimal values} of these problems by
+  \begin{gather*}
+    \widehat{p}:= \inf_{x\in\R^n}f(x)+g(Ax)
+    \quad
+    \text{and}
+    \quad
+    \widehat{d}:= \sup_{y\in\R^m} - f^*(A^\top y) - g^*(y).
+  \end{gather*}
+  Then we have the relationship
+  $\widehat{d}\le \widehat{p}$.
+\end{proposition}
+\begin{proof}
+  It holds
+  \begin{align*}
+    - f^*(A^\top y^*) - g^*(y^*) 
+    &=
+      -\sup_{x\in \R^n}\inner{A^\top y^*}{x}-f(x)
+      -\sup_{y\in \R^m}\inner{-y^*}{y}-g(y)
+      \\
+    &=
+    \inf_{x\in \R^n}f(x)-\inner{y^*}{Ax}
+      +\inf_{y\in \R^m}g(y)+\inner{y^*}{y}
+      \\
+    &\le
+      \inf_{x\in \R^n}f(x)-\inner{y^*}{Ax}
+      +\inf_{x\in \R^n}g(Ax)+\inner{y^*}{Ax}
+      \\
+    &\le
+      \inf_{x\in \R^n}f(x)-\inner{y^*}{Ax} + g(Ax) + \inner{y^*}{Ax}
+      \\
+    &=  
+      \inf_{x\in \R^n}f(x)+g(Ax)
+    =
+      \widehat{p}
+  \end{align*}
+  The first equality is due to the definition of convex conjugates, the second equality due to $\inner{A^\top y}{x}=\inner{y}{Ax}$ and $\inf \left\{ -B \right\}=-\sup \left\{ B \right\}$ for all $B \subseteq \overline{\R}$ and the first inequality due to $\mathrm{Im}(A)\subseteq \R^m$.
+  Taking the supremum with respect to all 
+  $y^*\in\R^m$
+  yields the result.
+\end{proof}
 \begin{theorem}
   \label{cvxa_fenchel_theorem}
   Let 
