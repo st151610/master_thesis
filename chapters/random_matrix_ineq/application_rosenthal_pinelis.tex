@@ -1,5 +1,6 @@
 \begin{ftheorem}
-  %\label{rmineq_bernstein}
+  \emph{(Matrix Rosenthal-Pinelis)}
+  \label{rmineq_rosenthal_pinelis}
   Let $\mathbf{A}_1, \ldots, \mathbf{A}_n$ be independent, random matrices with dimension 
   $d_1 \times d_2$.
     Introduce the random matrix
@@ -14,7 +15,7 @@
       \end{align}
     Then
       \begin{align}
-        \label{rmineq_bernstein_expectation_bound}
+        \label{rmineq_rp_expectation_bound}
         \left(
           \E \left[ \norm{\mathbf{S}}^2 \right]
         \right)^{\frac{1}{2}}
@@ -29,4 +30,49 @@
         \log(d_1+d_2).
       \end{align}
 \end{ftheorem}
+
+\begin{remark}
+  Since
+  $
+    \E[\norm{S}]
+    \le
+    \E[\norm{S}^2]^\frac{1}{2}
+  $
+  by the Cauchy-Schwarz inequality,
+  Theorem~\ref{rmineq_rosenthal_pinelis}
+  also holds with 
+  $
+    \E[\norm{S}]
+  $
+  on the left-hand side of \eqref{rmineq_rp_expectation_bound}.
+  To obtain a tail bound we can employ the Markov inequality and 
+  Theorem~\ref{rmineq_rosenthal_pinelis}:
+  \begin{align}
+    \label{rmineq_rp_tail_bound}
+    \begin{split}
+    \P[&\norm{S}\ge t]
+    \\
+       &\le
+    \frac{
+    \E[\norm{S}]
+    }{t}
+    \le
+    \frac{1}{t}
+    \left( 
+        \sqrt{
+          2ev(\mathbf{S})\log(d_1+d_2)
+        } 
+        + 
+        4e \left( 
+          \E[\max_{k \le n}\norm{\mathbf{A}_k}^2]
+        \right)^\frac{1}{2}
+        \log(d_1+d_2)
+    \right)
+    \quad
+    \text{for}\ 
+    t>0.
+  \end{split}
+  \end{align}
+  It might be possible to improve the $\log$ term employing an intrinsic dimension argument.
+\end{remark}
   

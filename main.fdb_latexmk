@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1670571408 "main.aux" "main.bbl" "main" 1670571903
+["bibtex main"] 1670573144 "main.aux" "main.bbl" "main" 1670573510
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1650183167 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "literature.bib" 1669968003 49099 fee0b7055cbc5443af150c2c89e19a2e ""
-  "main.aux" 1670571902 9558 9ff00763676e4430351824a4238f0055 "pdflatex"
+  "main.aux" 1670573510 9678 452f142b5f0ae6b74a5d75028512830c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1670571900 "main.tex" "main.pdf" "main" 1670571903
+["pdflatex"] 1670573508 "main.tex" "main.pdf" "main" 1670573510
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -153,15 +153,15 @@
   "chapters/empirical_processes.tex" 1668183421 2528 e8befd8d5dbac6d5f48a629765e2b4cd ""
   "chapters/introduction.tex" 1667036817 1456 6a741fd04a0287aa7d8050ccb283d967 ""
   "chapters/notation_index.tex" 1669465352 876 fc24c8fd633396d30e0eb0da469cf1ba ""
-  "chapters/random_matrix_ineq/application_rosenthal_pinelis.tex" 1670571900 1073 1b06b7378546912604232735eadb868f ""
+  "chapters/random_matrix_ineq/application_rosenthal_pinelis.tex" 1670573507 2049 fef99346640ef15a2f126a3d4c85b33c ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1670571902 9558 9ff00763676e4430351824a4238f0055 "pdflatex"
-  "main.bbl" 1670571408 3073 ece6dbc29205016dfc94ffe755b23a00 "bibtex main"
+  "main.aux" 1670573510 9678 452f142b5f0ae6b74a5d75028512830c "pdflatex"
+  "main.bbl" 1670573144 3073 ece6dbc29205016dfc94ffe755b23a00 "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1670570982 2600 5d2333e4e864e13e5b7d8d9e86efff7c ""
-  "main.toc" 1670571902 870 1808b71d58ff91e0f467f8759b7cfbe3 "pdflatex"
+  "main.toc" 1670573510 870 1808b71d58ff91e0f467f8759b7cfbe3 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
