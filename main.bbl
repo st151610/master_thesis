@@ -1,10 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Chen2012}
-Richard~Y. Chen, Alex Gittens, and Joel~A. Tropp.
-\newblock The {{Masked Sample Covariance Estimator}}: {{An Analysis}} via
-  {{Matrix Concentration Inequalities}}, June 2012.
-
 \bibitem{Fong2018}
 Christian Fong, Chad Hazlett, and Kosuke Imai.
 \newblock Covariate balancing propensity score for a continuous treatment:
@@ -45,11 +40,6 @@ Paul~R. Rosenbaum and Donald~B. Rubin.
 \newblock The {{Central Role}} of the {{Propensity Score}} in {{Observational
   Studies}} for {{Causal Effects}}.
 \newblock {\em Biometrika}, 70(1):41--55, 1983.
-
-\bibitem{Tropp2015}
-Joel~A. Tropp.
-\newblock An {{Introduction}} to {{Matrix Concentration Inequalities}}, January
-  2015.
 
 \bibitem{Tubbicke2020}
 Stefan T{\"u}bbicke.

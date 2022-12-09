@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1670573144 "main.aux" "main.bbl" "main" 1670573510
+["bibtex main"] 1670579076 "main.aux" "main.bbl" "main" 1670579402
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1650183167 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   "literature.bib" 1669968003 49099 fee0b7055cbc5443af150c2c89e19a2e ""
-  "main.aux" 1670573510 9678 452f142b5f0ae6b74a5d75028512830c "pdflatex"
+  "main.aux" 1670579401 8310 b6d5fab96bdccffce7b184db458c47a8 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1670573508 "main.tex" "main.pdf" "main" 1670573510
+["pdflatex"] 1670579398 "main.tex" "main.pdf" "main" 1670579402
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -16,11 +16,9 @@
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1650183167 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1650183167 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1650183167 940 228d6584342e91276bf566bcf9716b83 ""
-  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1650183167 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1650183167 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1650183167 1332 f817c21a1ba54560425663374f1b651a ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1650183167 1344 8a0be4fe4d376203000810ad4dc81558 ""
-  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1650183167 1336 3125ccb448c1a09074e3aa4a9832f130 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1650183167 1332 1fde11373e221473104d6cc5993f046e ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm" 1650183167 1532 9162035f4e7176612125649e348e2195 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1650183167 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -46,7 +44,6 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1650183167 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1650183167 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1650183167 35469 70d41d2b9ea31d5d813066df7c99281c ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1650183167 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1650183167 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1650183167 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1650183167 32734 69e00a6b65cedb993666e42eedb3d48f ""
@@ -147,7 +144,7 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1668447558 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1668447517 2927666 1f051fb934722d94e995cdec3e18511c ""
-  "chapters/chapter_1/chapter_01.tex" 1669295658 20790 4ba04784823c61ff46053315f6d8b816 ""
+  "chapters/chapter_1/application_matrix_concentration_ineq.tex" 1670579398 2051 130ca4193c68fe22b9ae32fab20d1906 ""
   "chapters/chapter_1/introdution_ch_1.tex" 1669623949 1720 66640f2289ea1743d514638524b59992 ""
   "chapters/convex_analysis.tex" 1669914713 10825 f0d8e8e767e362f7bc5823f84605d9e5 ""
   "chapters/empirical_processes.tex" 1668183421 2528 e8befd8d5dbac6d5f48a629765e2b4cd ""
@@ -156,12 +153,12 @@
   "chapters/random_matrix_ineq/application_rosenthal_pinelis.tex" 1670573507 2049 fef99346640ef15a2f126a3d4c85b33c ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1670573510 9678 452f142b5f0ae6b74a5d75028512830c "pdflatex"
-  "main.bbl" 1670573144 3073 ece6dbc29205016dfc94ffe755b23a00 "bibtex main"
+  "main.aux" 1670579401 8310 b6d5fab96bdccffce7b184db458c47a8 "pdflatex"
+  "main.bbl" 1670579077 2753 ce00b43eb0519ffc01990f1fa984a8fd "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1670570982 2600 5d2333e4e864e13e5b7d8d9e86efff7c ""
-  "main.toc" 1670573510 870 1808b71d58ff91e0f467f8759b7cfbe3 "pdflatex"
+  "main.tex" 1670574488 2732 89274fb43271a8b206822d8935daf2ae ""
+  "main.toc" 1670579401 974 29c620c97df5edd6ecaf5df98508773c "pdflatex"
   (generated)
   "main.aux"
   "main.log"

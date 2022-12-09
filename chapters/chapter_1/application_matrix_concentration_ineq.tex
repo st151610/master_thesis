@@ -1,0 +1,102 @@
+\subsubsection*{
+  Analysis of 
+  $
+  \E[\max_{i \le r}\norm{\mathbf{A}_i}^2]
+  $
+}
+We have
+\begin{gather}
+  \mathbf{A}_i
+  :=
+  \frac{1}{r}
+  \left( 
+    \frac{1-\pi_i}{\pi_i}
+  \right)
+  \mathbf{B}(X_i)
+  \qquad
+  \text{for}
+  \ 
+  i\in \{1, \ldots, r\}.
+\end{gather}
+Since we take the maximum over a finite set it is attained for some 
+$i^*\in \left\{ 1, \ldots, r \right\}$:
+\begin{align}
+  \E[\max_{i \le r}\norm{\mathbf{A}_i}^2]
+  =
+  \E[\norm{\mathbf{A}_{i^*}}^2]
+  =
+  \frac{1}{n^2}
+  \E \left[ 
+    \left(
+      \frac{1-\pi_{i^*}}{\pi_{i^*}}
+    \right)^2
+    \norm{\mathbf{B}(X_{i^*})}^2
+  \right]
+  \le
+  \frac{1}{n^2}
+  \E \left[ 
+    \left(
+      \frac{1-\pi_{i^*}}{\pi_{i^*}}
+    \right)^4
+  \right]^\frac{1}{2}
+  \E[
+    \norm{\mathbf{B}(X_{i^*})}^4
+  ]^\frac{1}{2}
+\end{align}
+In the last step we applied the Cauchy-Schwarz inequality.
+\begin{assumption}
+  There exists $C_\pi \ge 1$ such that
+  $
+    \E
+    \left[ 
+    \left(
+      \frac{1-\pi_{i}}{\pi_{i}}
+    \right)^4
+    \right]
+    \le C_\pi
+  $
+  for all $i\in \left\{ 1, \ldots, r \right\}$
+  .
+\end{assumption}
+ 
+\begin{remark}
+  If we assume a logistic regression model for the propensity score
+  it holds for some $\theta \in \R^N$ ($N$ is the number of covariates)
+  \begin{gather}
+    \label{rmineq_rp_1}
+    \frac{1-\pi(X)}{\pi(X)}
+    =
+    \exp(-\theta X)
+    \qquad
+    \text{and}
+    \qquad
+    \E
+    \left[ 
+    \left(
+    \frac{1-\pi(X)}{\pi(X)}
+    \right)^4
+    \right]
+    =
+    \E
+    [
+    \exp(-4\theta X)
+    ]
+    =
+    M_X(-4\theta)
+    ,
+  \end{gather}
+  where $M_X$ is the momement-generating function of $X$.
+   While the first quantity in \eqref{rmineq_rp_1}
+   may be unbounded when $X$ has unbounded support, the latter quantity in \eqref{rmineq_rp_1} is still bounded for reasonable choices of $X$.
+\end{remark}
+\begin{assumption}
+  There exists $C_\mathbf{B} \ge 1$ such that
+  $
+  \E[
+    \mathbf{B}_k(X_i)^4
+  ]
+  \le C_\mathbf{B}
+  $
+  for all $(k,i)\in \left\{ 1, \ldots, K \right\}\times \left\{ 1, \ldots, r \right\}$
+  .
+\end{assumption}
