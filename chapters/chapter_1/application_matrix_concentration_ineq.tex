@@ -27,7 +27,7 @@ $i^*\in \left\{ 1, \ldots, r \right\}$:
   \E[\norm{\mathbf{A}_{i^*}}^2]
   \\
   &=
-  \frac{1}{n^2}
+  \frac{1}{r^2}
   \E \left[ 
     \left(
       \frac{1-\pi_{i^*}}{\pi_{i^*}}
@@ -35,7 +35,7 @@ $i^*\in \left\{ 1, \ldots, r \right\}$:
     \norm{\mathbf{B}(X_{i^*})}^2
   \right]
   \le
-  \frac{1}{n^2}
+  \frac{1}{r^2}
   \E \left[ 
     \left(
       \frac{1-\pi_{i^*}}{\pi_{i^*}}
@@ -46,11 +46,16 @@ $i^*\in \left\{ 1, \ldots, r \right\}$:
   ]^\frac{1}{2}
   \\
   &\le
-  \frac{K}{n^2}\sqrt{C_\pi C_\mathbf{B}}
+  \frac{K}{r^2}\sqrt{C_\pi C_\mathbf{B}}
 \end{split}
 \end{align}
 In the last two steps we applied the Cauchy-Schwarz inequality
-and Assumption
+and Assumption. Note that
+\begin{gather}
+  \sum_{i=1}^{r}
+  \E[\norm{\mathbf{A}_i}^2]\le
+  \frac{K}{r}\sqrt{C_\pi C_\mathbf{B}}
+\end{gather}
 \begin{assumption}
   There exists $C_\pi \ge 1$ such that
   $
@@ -157,3 +162,172 @@ With Assumption we also get a bound on the fourth moment of
   \end{split}
   \end{align}
 \end{remark}
+\subsubsection*{Analysis of $v(\mathbf{S})$}
+We use the fact that 
+$
+  \norm{\mathbf{A}}_2 
+  \le
+  \norm{\mathbf{A}}_F
+  =
+  \sqrt{
+    \sum_{i,j}^{}
+    a_{ij}^2
+  }
+$
+It holds
+\begin{gather}
+  \sum_{i=1}^{r}
+  \E[\mathbf{A}_i\mathbf{A}_i^\top]
+  =
+  \frac{1}{r^2}
+  \sum_{i=1}^{r}
+  \E
+  \left[ 
+    \left( 
+      \frac{1-\pi_i}{\pi_i}
+    \right)^2
+    \mathbf{B}(X_i)\mathbf{B}(X_i)^\top
+  \right]
+  =
+  \frac{1}{r^2}
+  \left( 
+    \sum_{i=1}^{r}
+    \E
+    \left[ 
+    \left( 
+      \frac{1-\pi_i}{\pi_i}
+    \right)^2
+    B_k(X_i)B_l(X_i)
+    \right]
+  \right)
+  _{1\le k,l \le K}
+  .
+\end{gather}
+Thus
+\begin{align}
+  \begin{split}
+  &\norm{
+  \sum_{i=1}^{r}
+  \E[\mathbf{A}_i\mathbf{A}_i^\top]
+  }_2^2
+  \\
+  &\le
+  \norm{
+  \sum_{i=1}^{r}
+  \E[\mathbf{A}_i\mathbf{A}_i^\top]
+  }_F^2
+  =
+  \frac{1}{r^4}
+  \sum_{k,l=1}^{K}
+  \left( 
+    \sum_{i=1}^{r}
+    \E
+    \left[ 
+    \left( 
+      \frac{1-\pi_i}{\pi_i}
+    \right)^2
+    B_k(X_i)B_l(X_i)
+    \right]
+  \right)^2
+  \\
+  &\le
+  \frac{1}{r^4}
+  \sum_{k,l=1}^{K}
+  \left( 
+    \sum_{i=1}^{r}
+    \E
+    \left[ 
+    \left( 
+      \frac{1-\pi_i}{\pi_i}
+    \right)^4
+    \right]
+    ^\frac{1}{2}
+    \E[
+    B_k(X_i)^4
+    ]^\frac{1}{4}
+    \E[
+    B_l(X_i)^4
+    ]^\frac{1}{4}
+  \right)^2
+  \le
+  \left(
+  \frac{K}{r}
+  \right)^2
+  C_\pi C_B
+  \end{split}
+\end{align}
+On the other hand
+\begin{align}
+  \begin{split}
+  \norm{
+  \sum_{i=1}^{r}
+  \E[\mathbf{A}^\top_i\mathbf{A}_i]
+  }_2
+  &=
+  \sum_{i=1}^{r}
+  \E[\mathbf{A}^\top_i\mathbf{A}_i]
+  =
+  \frac{1}{r^2}
+    \sum_{i=1}^{r}
+    \E
+    \left[ 
+    \left( 
+      \frac{1-\pi_i}{\pi_i}
+    \right)^2
+    \norm{\mathbf{B}(X_i)}_2^2
+    \right]
+    \\
+    &\le
+  \frac{1}{r^2}
+    \sum_{i=1}^{r}
+    \E
+    \left[ 
+    \left( 
+      \frac{1-\pi_i}{\pi_i}
+    \right)^4
+    \right]^\frac{1}{2}
+    \E[
+    \norm{\mathbf{B}(X_i)}_2^4
+    ]^\frac{1}{2}
+    \le
+    \frac{K}{r}\sqrt{
+  C_\pi C_B
+    }
+  \end{split}
+\end{align}
+It follows
+\begin{gather}
+  v(\mathbf{S})
+  \le
+    \frac{K}{r}\sqrt{
+  C_\pi C_B
+  }
+\end{gather}
+Thus we can apply Theorem~\ref{rmineq_rosenthal_pinelis}
+to get
+\begin{gather}
+  \E[\norm{\mathbf{S}}_2]
+  \le
+  \sqrt{
+    2e 
+    \frac{K}{r}\sqrt{
+  C_\pi C_B
+  }
+  \log
+  (K+1)
+  }
+  +
+  4e
+  \frac{\sqrt{K}}{r}
+  \sqrt[4]{
+  C_\pi C_B
+  }
+  \log
+  (K+1)
+  \le
+  14
+  C_\pi C_B
+  \sqrt{
+    \frac{K \log(K+1)}{r}
+  }
+\end{gather}
