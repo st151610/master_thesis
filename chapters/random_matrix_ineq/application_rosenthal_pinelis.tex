@@ -1,0 +1,32 @@
+\begin{ftheorem}
+  %\label{rmineq_bernstein}
+  Let $\mathbf{A}_1, \ldots, \mathbf{A}_n$ be independent, random matrices with dimension 
+  $d_1 \times d_2$.
+    Introduce the random matrix
+      \begin{gather*}
+        \mathbf{S}:=\sum_{k=1}^n \mathbf{A}_k.
+      \end{gather*}
+    Let $v(\mathbf{S})$ be the matrix variance statistic of the sum:
+      \begin{align}
+        \label{rmineq_bernstein_cond_2}
+        v(\mathbf{S}):= \norm{\E[\mathbf{S}\mathbf{S}^\top ]} \lor \norm{\E[\mathbf{S}^\top \mathbf{S}]} 
+             = \norm{\sum_{k=1}^n\E[\mathbf{A}_k\mathbf{A}_k^\top]} \lor \norm{\sum_{k=1}^n\E[\mathbf{A}_k^T \mathbf{A}_k]} .
+      \end{align}
+    Then
+      \begin{align}
+        \label{rmineq_bernstein_expectation_bound}
+        \left(
+          \E \left[ \norm{\mathbf{S}}^2 \right]
+        \right)^{\frac{1}{2}}
+        \le
+        \sqrt{
+          2ev(\mathbf{S})\log(d_1+d_2)
+        } 
+        + 
+        4e \left( 
+          \E[\max_{k \le n}\norm{\mathbf{A}_k}^2]
+        \right)^\frac{1}{2}
+        \log(d_1+d_2).
+      \end{align}
+\end{ftheorem}
+  

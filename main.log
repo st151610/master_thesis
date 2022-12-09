@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  1 DEC 2022 18:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  9 DEC 2022 08:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -523,20 +523,7 @@ Package nomencl Info: Writing nomenclature file main.nlo on input line 15.
 \c@proposition=\count307
 \c@remark/=\count308
 \c@subassumption=\count309
- (./main.aux
-
-LaTeX Warning: Label `rmineq_bernstein' multiply defined.
-
-
-LaTeX Warning: Label `rmineq_bernstein_cond_1' multiply defined.
-
-
-LaTeX Warning: Label `rmineq_intrinsic_bernstein_expectation_bound' multiply defined.
-
-
-LaTeX Warning: Label `rmineq_intrinsic_bernstein_probability_bound' multiply defined.
-
-)
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
@@ -704,7 +691,33 @@ LaTeX Warning: Reference `primal_weighting_binary' on page 6 undefined on input 
 
 LaTeX Warning: Reference `primal_weighting_binary' on page 6 undefined on input line 363.
 
-[6] [7] [8]) [9]
+[6] [7]
+
+LaTeX Warning: Reference `rmineq_bernstein' on page 8 undefined on input line 836.
+
+
+LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 8 undefined on input line 863.
+
+
+LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 8 undefined on input line 937.
+
+
+LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 8 undefined on input line 1003.
+
+
+LaTeX Warning: Reference `rmineq_bernstein' on page 8 undefined on input line 1010.
+
+
+LaTeX Warning: Reference `rmineq_bernstein_probability_bound' on page 8 undefined on input line 1095.
+
+
+LaTeX Warning: Reference `rmineq_bernstein' on page 8 undefined on input line 1096.
+
+[8]
+
+LaTeX Warning: Reference `rmineq_intrinsic_bernstein_vector_corollary' on page 9 undefined on input line 1334.
+
+) [9]
 chapter 3.
 (./chapters/convex_analysis.tex
 
@@ -735,47 +748,44 @@ Overfull \hbox (1.70209pt too wide) in paragraph at lines 374--398
 
 ) [12]
 chapter 4.
-(./chapters/random_matrix_inequality.tex
-LaTeX Font Info:    Trying to load font information for U+euf on input line 6.
- (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+(./chapters/random_matrix_ineq/application_rosenthal_pinelis.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1.
 ) [13
 
-] [14]) [15]
+]
 chapter 5.
-(./chapters/empirical_processes.tex) [16
+(./chapters/empirical_processes.tex) [14
 
 ]
 chapter 6.
-(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [17
+(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [15
 
-]) (./main.bbl [18
+]) (./main.bbl [16
 
-]) [19
+]) [17
 
 ] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16184 strings out of 478238
- 284629 string characters out of 5850455
+ 16138 strings out of 478238
+ 283894 string characters out of 5850455
  733219 words of memory out of 5000000
- 33991 multiletter control sequences out of 15000+600000
- 484690 words of font info for 86 fonts, out of 8000000 for 9000
+ 33973 multiletter control sequences out of 15000+600000
+ 483746 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,19n,120p,10636b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (19 pages, 379277 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (17 pages, 365873 bytes).
 PDF statistics:
- 500 PDF objects out of 1000 (max. 8388607)
- 431 compressed objects within 5 object streams
- 158 named destinations out of 1000 (max. 500000)
+ 444 PDF objects out of 1000 (max. 8388607)
+ 380 compressed objects within 4 object streams
+ 135 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

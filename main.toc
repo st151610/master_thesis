@@ -6,6 +6,6 @@
 \contentsline {section}{\numberline {3.1}Conjugate Calculus}{10}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Fenchel Duality}{11}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Matrix Concentration Inequalities}{13}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Empirical Processes}{16}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{17}{chapter.6}%
+\contentsline {chapter}{\numberline {5}Empirical Processes}{14}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{15}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
