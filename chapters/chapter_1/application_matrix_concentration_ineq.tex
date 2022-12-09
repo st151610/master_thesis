@@ -21,10 +21,12 @@ We have
 Since we take the maximum over a finite set it is attained for some 
 $i^*\in \left\{ 1, \ldots, r \right\}$:
 \begin{align}
+  \begin{split}
   \E[\max_{i \le r}\norm{\mathbf{A}_i}^2]
-  =
+  &=
   \E[\norm{\mathbf{A}_{i^*}}^2]
-  =
+  \\
+  &=
   \frac{1}{n^2}
   \E \left[ 
     \left(
@@ -42,8 +44,13 @@ $i^*\in \left\{ 1, \ldots, r \right\}$:
   \E[
     \norm{\mathbf{B}(X_{i^*})}^4
   ]^\frac{1}{2}
+  \\
+  &\le
+  \frac{K}{n^2}\sqrt{C_\pi C_\mathbf{B}}
+\end{split}
 \end{align}
-In the last step we applied the Cauchy-Schwarz inequality.
+In the last two steps we applied the Cauchy-Schwarz inequality
+and Assumption
 \begin{assumption}
   There exists $C_\pi \ge 1$ such that
   $
@@ -100,3 +107,53 @@ In the last step we applied the Cauchy-Schwarz inequality.
   for all $(k,i)\in \left\{ 1, \ldots, K \right\}\times \left\{ 1, \ldots, r \right\}$
   .
 \end{assumption}
+\begin{remark}
+With Assumption we also get a bound on the fourth moment of 
+  $
+  \norm{\mathbf{B}(X_{i})}
+  $. Indeed, by the convexity of 
+  $x\mapsto x^2$, the monotonicity and linearity of the expectation it holds   
+  \begin{align}
+    \begin{split}
+  \E[
+  \norm{\mathbf{B}(X_{i})}^4
+  ] 
+  &=
+  \E
+  \left[ 
+    \left( 
+      \sum_{k=1}^{K}
+      \mathbf{B}_k^2(X_i)
+    \right)^2
+  \right]
+  =
+  K^2
+  \E
+  \left[ 
+    \left( 
+      \sum_{k=1}^{K}
+      \frac{1}{K}
+      \mathbf{B}_k^2(X_i)
+    \right)^2
+  \right]
+  \le
+  K^2
+  \E
+  \left[ 
+      \sum_{k=1}^{K}
+      \frac{1}{K}
+      \mathbf{B}_k^4(X_i)
+  \right]
+  \\
+  &=
+  K
+  \sum_{k=1}^{K}
+  \E
+  \left[ 
+      \mathbf{B}_k^4(X_i)
+  \right]
+  \le
+  K^2 C_\mathbf{B}
+  \end{split}
+  \end{align}
+\end{remark}
