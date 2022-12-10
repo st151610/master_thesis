@@ -1,0 +1,444 @@
+When studying different primal problems such as \eqref{primal_weighting_binary} we often turn to the dual instead.
+Therefore we need some reliable tools.
+Begin able to compute specific convex conjugates is one tool required.
+
+
+\begin{definition}
+  \label{ def_convex_conjugate }
+  \emph{(Convex conjugate)}
+  Given a function
+  $
+    f:
+    \R^n \to \overline{\R}
+  $
+  ,
+  the 
+  \textbf{convex conjugate}
+  $
+    f^*:
+    \R^n \to \overline{\R}
+  $
+  of $f$ is defined as
+  \begin{gather}
+    f^*(x^*)
+    :=
+    \sup_{ x \in \R^n }
+    (x^*)^T x - f(x)
+  \end{gather}
+\end{definition}
+
+Note that $f$ in Definition~\ref{ def_convex_conjugate }
+does not have to be convex. On the other hand, the convex conjugate is always convex:
+
+\begin{proposition}
+  Let  
+  $
+    f:
+    \R^n \to ( - \infty, \infty ]
+  $
+  be a proper function. 
+  Then its convex conjugate
+  $
+    f^*:
+    \R^n \to ( - \infty, \infty ]
+  $
+  is convex.
+\end{proposition}
+
+\begin{definition}
+  Given a nonempty subset 
+  $\Omega \subseteq \R^n$
+  the \textbf{support function} 
+  $
+  \sigma_\Omega : \R^n \to \overline{\R}
+  $
+  of $\Omega$
+  is defined by
+  \begin{gather}
+    \sigma_\Omega
+    (x^*)
+    :=
+    \sup_{x \in \Omega}
+    \ 
+    \inner{x^*}{x}
+    \qquad
+    \text{for}\ 
+    x^* \in \R^n
+    .
+  \end{gather}
+\end{definition}
+
+\begin{lemma}
+  For any proper function
+  $
+    f:\R^n\to\overline{\R}
+  $
+  we have
+  \begin{gather}
+    f^*(x^*) 
+    =
+    \sigma_{\mathrm{epi}(f)}
+    (x^*,-1)
+    \qquad
+    \text{for}
+    \ 
+    x^* \in \R^n.
+  \end{gather}
+\end{lemma}
+\begin{proof}
+  Let $x^*\in\R^n$
+  and
+  $
+    (x,\lambda)\in \mathrm{epi}(f).
+  $
+  Then
+  $
+    x \in \mathrm{dom}(f)
+  $
+  and
+  $
+    f(x)\le \lambda.
+  $
+  Thus
+  \begin{gather}
+    \inner{x^*}{x} - f(x)
+    \ge
+    \inner{x^*}{x} - \lambda
+    \qquad
+    \text{for all}\ 
+    (x,\lambda)\in \mathrm{epi}(f).
+  \end{gather}
+  On the other hand 
+  $
+    (x,f(x))\in \mathrm{epi}(f)
+  $
+  for all
+  $
+    x \in \mathrm{dom}(f).
+  $
+  It follows
+  \begin{gather}
+    \inner{x^*}{x} - f(x)
+    \le
+    \sup_{(x,\lambda)\in\mathrm{epi}(f)}
+    \inner{x^*}{x} - \lambda
+    \qquad
+    \text{for all}\ 
+    x \in \mathrm{dom}(f).
+  \end{gather}
+  Taking the supremum in the last two displays yields
+  \begin{align}
+    f^*(x^*)
+    =
+    \sup_{x\in\mathrm{dom}(f)}
+    \inner{x^*}{x} - f(x)
+    &=
+    \sup_{(x,\lambda)\in\mathrm{epi}(f)}
+    \inner{x^*}{x} - \lambda
+    \\
+    &=
+    \sup_{(x,\lambda)\in\mathrm{epi}(f)}
+    \inner{(x^*,-1)}{(x,\lambda)} 
+    =
+    \sigma_{\mathrm{epi}(f)}
+    (x^*,-1).
+  \end{align}
+\end{proof}
+% conjugate chain rule %
+ %%%%%%%%%%%%%%%%%%%%%%
+\begin{proposition}
+
+\end{proposition}
+\begin{theorem}
+  \emph{(Conjugate Chain Rule)}
+  \label{cvxa_conjugate_chain_rule}
+  Let 
+  $
+    A:
+      \R^m \to \R^n
+  $
+  be a linear map (matrix)
+  and
+  $
+    g:
+      \R^n \to (-\infty, \infty]
+  $
+  a proper convex function. If
+  $
+    \text{Im}(A) \cap \text{ri}(\text{dom}(g))
+    \neq
+    \emptyset
+  $
+  it follows
+  \begin{gather}
+    ( g \circ A )^* ( x^* )
+    =
+    \inf_
+          { y^* \in ( A^* )^{ -1 } ( x^* )}
+                                          g^*( y^* )
+                                          .
+  \end{gather}
+  Furthermore, 
+    for any 
+      $
+        x^* \in \text{dom}( g \circ A)^*
+      $
+        there exists
+          $
+            y^* \in ( A^* )^{ -1 } ( x^* )
+          $
+            such that
+              $
+                ( g \circ A)^* ( x^* )
+                =
+                g^*( y^* )
+              $.
+\end{theorem}
+
+% conjugate sum rule %
+ %%%%%%%%%%%%%%%%%%%%
+
+\begin{definition}
+  \emph{(Infimal convolution)}
+  Given functions
+  $
+    f_i:
+    \R^n \to (-\infty, \infty]
+  $
+  for $ i = 1, \ldots, n $
+  the \textbf{infimal convolution} of these functions as defined as
+  \begin{gather}
+    (f_1 \square \ldots \square f_m)(x)
+    :=
+    \inf_{
+    \begin{smallmatrix}
+      x_i \in \R^n \\
+      \sum_{i = 1}^{m} 
+        x_i
+      =
+      x
+    \end{smallmatrix}
+    }
+    \sum_{i = 1}^{m}
+      f_i(x_i)
+  \end{gather}
+\end{definition}
+
+
+\begin{theorem}
+  Let
+  $
+    f,g:
+    \R^n \to (-\infty, \infty]
+  $
+  be proper convex functions 
+  and
+  $
+  \text{ri}\left( \text{dom}(f) \right)
+  \cap
+  \text{ri}\left( \text{dom}(g) \right)
+  \neq 
+  \emptyset
+  .
+  $
+  Then we have the conjugate sum rule
+  \begin{gather}
+    ( f + g )^*(x^*)
+    =
+    ( f^* \square g^*)(x^*)
+  \end{gather}
+  for all $x^* \in \R^n$.
+  Moreover, the infimum in 
+  $
+    ( f^* \square g^*)(x^*)
+  $
+  is attained, i.e., for any
+  $
+    x^* \in \text{dom}(f+g)^*
+  $
+  there exists vectors $x_1^*, x_2^*$
+  for which
+  \begin{gather}
+    (f+g)^*(x^*)
+    =
+    f^*(x_1^*)
+    +
+    g^*(x_2^*),
+    \quad
+    x^* = x_1^* + x_2^*.
+  \end{gather}
+\end{theorem}
+\begin{proof}
+  Let $x^*\in\R^n$ and fix $x_1^*,x_2^*\in\R^n$ such that
+  $x^*=x^*_1+x^*_2$.
+  We get
+  \begin{align*}
+    f^*(x^*_1)+g^*(x^*_2)
+    &=
+    \sup_{x\in\R^n}
+    \inner{x^*_1}{x}-f(x)
+    +
+    \sup_{x\in\R^n}
+    \inner{x^*_2}{x}-g(x)
+    \\
+    &\ge
+    \sup_{x\in\R^n}
+    \inner{x^*_1}{x}-f(x)
+    +
+    \inner{x^*_2}{x}-g(x)
+    =
+    \sup_{x\in\R^n}
+    \inner{x^*_1+x^*_2}{x}-(f(x)+g(x))
+    \\
+    &=
+    \sup_{x\in\R^n}
+    \inner{x^*}{x}-(f+g)(x)
+    =(f+g)^*(x^*)
+  \end{align*}
+  Taking the infimum over $x_1^*,x_2^*\in\R^n$ in the above display gives 
+  $
+  (f^*\square g^*)(x^*)
+  \ge
+  (f+g)^*(x^*).
+  $
+  Let us prove now $\le$ under the condition
+  $
+  \text{ri}\left( \text{dom}(f) \right)
+  \cap
+  \text{ri}\left( \text{dom}(g) \right)
+  \neq 
+  \emptyset
+  .
+  $
+  The only case we need to consider is
+  $
+    (f+g)^*(x^*)<\infty.
+  $
+  Define two convex sets by
+  \begin{align}
+    \Omega_1
+    &:=
+    \left\{ 
+      (x,\alpha,\beta)\in\R^{n+2}
+      \colon
+      \alpha\ge f(x)
+    \right\}
+    =
+    \mathrm{epi}(f)\times \R,
+    \\
+    \Omega_2
+    &:=
+    \left\{ 
+      (x,\alpha,\beta)\in\R^{n+2}
+      \colon
+      \beta\ge g(x)
+    \right\}.
+  \end{align}
+  Similar to Lemma we get the representation
+  \begin{gather}
+    (f+g)^*(x^*)
+    =
+    \sigma_{\Omega_1\cap\Omega_2}
+    (x^*,-1,-1).
+  \end{gather}
+  Indeed, the only thing we need to verify is
+  $
+    \mathrm{dom}(f)\cap\mathrm{dom}(g)
+    =
+    \mathrm{dom}(f+g).
+  $
+  The inclusion $\subseteq$ is clear.
+  Assume towards a contradiction that
+  $
+    (f+g)(x)<\infty
+  $
+  and
+  $
+    f(x)=\infty.
+  $
+  Since $g(x)>-\infty$ it holds
+  \begin{gather}
+    \infty
+    =
+    \infty+g(x)
+    =f(x)+g(x)
+    =(f+g)(x)
+    <
+    \infty.
+  \end{gather}
+  This is a contradiction. The same holds for $f$ and $g$ reversed. It follows the inclusion $\supseteq$ and equality.
+  By the support function intersection rule there exist triples
+  \begin{gather}
+    (x^*_1,-\alpha_1,-\beta_1),
+    (x^*_2,-\alpha_2,-\beta_2)
+    \in \R^{n+2}
+    \quad
+    \text{such that}
+    \quad
+    (x^*,-1,-1)
+    =
+    (x^*_1+x^*_2,-(\alpha_1+\alpha_2),-(\beta_1+\beta_2))
+  \end{gather}
+  and
+  \begin{gather}
+    (f+g)^*(x^*)
+    =
+    \sigma_{\Omega_1\cap\Omega_2}
+    (x^*,-1,-1)
+    =
+    \sigma_{\Omega_1}
+    (x^*_1,-\alpha_1,-\beta_1)
+    +
+    \sigma_{\Omega_2}
+    (x^*_2,-\alpha_2,-\beta_2).
+  \end{gather}
+  Next we show
+  $\beta_1=\alpha_2=0.$
+  Suppose towards a contradiction that 
+  $\beta_1\neq 0.$ 
+  We fix 
+  $(\overline{x},\overline{\alpha})\in\mathrm{epi}(f).$
+  Then
+  \begin{gather}
+    \sigma_{\Omega_1}
+    (x^*_1,-\alpha_1,-\beta_1)
+    =
+    \sup_{(x,\alpha,\beta)\in \mathrm{epi}(f)\times \R}
+    \inner{x^*}{x}-\alpha \alpha_1 -\beta \beta_1
+    \ge
+    \sup_{\beta\in \R}
+    \inner{x^*}{\overline{x}}-\overline{\alpha} \alpha_1 -\beta \beta_1
+    =\infty.
+  \end{gather}
+  This contradicts
+  $
+    (f+g)^*(x^*)<\infty.
+  $
+  In a similar fashion we can derive a contradiction for $\alpha_2\neq0.$
+  Employing Lemma and taking into account the structures of the sets 
+  $\Omega_1$ and $\Omega_2$ this implies
+  \begin{align}
+    (f+g)^*(x^*)
+    &=
+    \sigma_{\Omega_1\cap\Omega_2}
+    (x^*,-1,-1)
+    =
+    \sigma_{\Omega_1}
+    (x^*_1,-1,0)
+    +
+    \sigma_{\Omega_2}
+    (x^*_2,0,-1)
+    \\
+    &=
+    \sigma_{\mathrm{epi}(f)}(x^*_1,-1)
+    +
+    \sigma_{\mathrm{epi}(g)}(x^*_2,-1)
+    =
+    f^*(x^*_1)
+    +
+    g^*(x^*_2)
+    \ge
+    (f^*\square g^*)(x^*).
+  \end{align}
+  This finishes the proof.
+\end{proof}

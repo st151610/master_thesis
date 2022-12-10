@@ -1,11 +1,11 @@
-\nomenclatureentry{a$\R$@[{$\R$}]\begingroup set of real numbers\nomeqref {6.5}|nompageref}{13}
-\nomenclatureentry{a$\overline{\R}=\R \cup \left\{ +\infty \right\}$@[{$\overline{\R}=\R \cup \left\{ +\infty \right\}$}]\begingroup extension of the real numbers\nomeqref {6.5}|nompageref}{13}
-\nomenclatureentry{a$\P$@[{$\P$}]\begingroup generic probability measure\nomeqref {6.5}|nompageref}{13}
-\nomenclatureentry{a$\P_X=\P \circ X^{-1}$@[{$\P_X=\P \circ X^{-1}$}]\begingroup distribution of the random variable $X$\nomeqref {6.5}|nompageref}{13}
-\nomenclatureentry{a$\overset{\mathcal{D}}{\longrightarrow}$@[{$\overset{\mathcal{D}}{\longrightarrow}$}]\begingroup convergence of distributions\nomeqref {6.5}|nompageref}{13}
-\nomenclatureentry{a$\E[X]$@[{$\E[X]$}]\begingroup expectation of the random variable $X$\nomeqref {6.5}|nompageref}{13}
-\nomenclatureentry{a$\E [X \vert Y]$@[{$\E [X \vert Y]$}]\begingroup conditional expectation of the random variable $X$ with respect to $\sigma(Y)$\nomeqref {6.5}|nompageref}{13}
-\nomenclatureentry{a$\mathbf{Var}[X]$@[{$\mathbf{Var}[X]$}]\begingroup variance of the random variable $X$\nomeqref {6.5}|nompageref}{13}
-\nomenclatureentry{a$x \lor y, x \land y, x^+, x^-$@[{$x \lor y, x \land y, x^+, x^-$}]\begingroup maximum, minimum, positive part, negative part of real numbers\nomeqref {6.5}|nompageref}{13}
-\nomenclatureentry{a$\# A$@[{$\# A$}]\begingroup cardinality of the set $A$\nomeqref {6.5}|nompageref}{13}
-\nomenclatureentry{a$X\sim \mu$@[{$X\sim \mu$}]\begingroup the random variable has distribution $\mu$\nomeqref {6.5}|nompageref}{13}
+\nomenclatureentry{a$\R$@[{$\R$}]\begingroup set of real numbers\nomeqref {6.5}|nompageref}{12}
+\nomenclatureentry{a$\overline{\R}=\R \cup \left\{ +\infty \right\}$@[{$\overline{\R}=\R \cup \left\{ +\infty \right\}$}]\begingroup extension of the real numbers\nomeqref {6.5}|nompageref}{12}
+\nomenclatureentry{a$\P$@[{$\P$}]\begingroup generic probability measure\nomeqref {6.5}|nompageref}{12}
+\nomenclatureentry{a$\P_X=\P \circ X^{-1}$@[{$\P_X=\P \circ X^{-1}$}]\begingroup distribution of the random variable $X$\nomeqref {6.5}|nompageref}{12}
+\nomenclatureentry{a$\overset{\mathcal{D}}{\longrightarrow}$@[{$\overset{\mathcal{D}}{\longrightarrow}$}]\begingroup convergence of distributions\nomeqref {6.5}|nompageref}{12}
+\nomenclatureentry{a$\E[X]$@[{$\E[X]$}]\begingroup expectation of the random variable $X$\nomeqref {6.5}|nompageref}{12}
+\nomenclatureentry{a$\E [X \vert Y]$@[{$\E [X \vert Y]$}]\begingroup conditional expectation of the random variable $X$ with respect to $\sigma(Y)$\nomeqref {6.5}|nompageref}{12}
+\nomenclatureentry{a$\mathbf{Var}[X]$@[{$\mathbf{Var}[X]$}]\begingroup variance of the random variable $X$\nomeqref {6.5}|nompageref}{12}
+\nomenclatureentry{a$x \lor y, x \land y, x^+, x^-$@[{$x \lor y, x \land y, x^+, x^-$}]\begingroup maximum, minimum, positive part, negative part of real numbers\nomeqref {6.5}|nompageref}{12}
+\nomenclatureentry{a$\# A$@[{$\# A$}]\begingroup cardinality of the set $A$\nomeqref {6.5}|nompageref}{12}
+\nomenclatureentry{a$X\sim \mu$@[{$X\sim \mu$}]\begingroup the random variable has distribution $\mu$\nomeqref {6.5}|nompageref}{12}

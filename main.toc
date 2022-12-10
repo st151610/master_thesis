@@ -5,8 +5,7 @@
 \contentsline {section}{\numberline {2.3}Application of Matrix Concentration Inequalities}{4}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Convex Analysis}{7}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Conjugate Calculus}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Fenchel Duality}{9}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Matrix Concentration Inequalities}{11}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Empirical Processes}{12}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{13}{chapter.6}%
+\contentsline {chapter}{\numberline {4}Matrix Concentration Inequalities}{10}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Empirical Processes}{11}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{12}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
