@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  9 DEC 2022 16:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  10 DEC 2022 09:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -676,44 +676,45 @@ LaTeX Warning: Reference `primal_weighting_binary' on page 7 undefined on input 
 
 ]
 
-Package hyperref Warning: No autoref name for `problem' on input line 270.
-
-
-Package hyperref Warning: No autoref name for `problem' on input line 286.
-
-
-Package hyperref Warning: No autoref name for `problem' on input line 288.
-
-
-Package hyperref Warning: No autoref name for `problem' on input line 296.
-
-
-Package hyperref Warning: No autoref name for `problem' on input line 296.
+Package hyperref Warning: No autoref name for `problem' on input line 369.
 
 [8]
-Overfull \hbox (1.70209pt too wide) in paragraph at lines 374--398
+
+Package hyperref Warning: No autoref name for `problem' on input line 385.
+
+
+Package hyperref Warning: No autoref name for `problem' on input line 387.
+
+
+Package hyperref Warning: No autoref name for `problem' on input line 395.
+
+
+Package hyperref Warning: No autoref name for `problem' on input line 395.
+
+
+Overfull \hbox (1.70209pt too wide) in paragraph at lines 473--497
 []\OT1/cmr/m/n/12 Since $\OMS/cmsy/m/n/12 C \OT1/cmr/m/n/12 := []$ is con-vex $\OML/cmm/m/it/12 f$ \OT1/cmr/m/n/12 has a lo-cal min-i-mum in $\OML/cmm/m/it/12 y \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 C \OT1/cmr/m/n/12 := [] \OML/cmm/m/it/12 :$
  []
 
-) [9]
+[9]) [10]
 chapter 4.
 (./chapters/random_matrix_ineq/application_rosenthal_pinelis.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1.
-) [10
+) [11
 
 ]
 chapter 5.
-(./chapters/empirical_processes.tex) [11
+(./chapters/empirical_processes.tex) [12
 
 ]
 chapter 6.
-(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [12
+(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [13
 
-]) (./main.bbl [13
+]) (./main.bbl [14
 
-]) [14
+]) [15
 
 ] (./main.aux)
 
@@ -723,18 +724,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16050 strings out of 478238
- 282376 string characters out of 5850455
+ 16059 strings out of 478238
+ 282496 string characters out of 5850455
  737219 words of memory out of 5000000
  33917 multiletter control sequences out of 15000+600000
  480630 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,19n,120p,10636b,434s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,19n,120p,10636b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (14 pages, 336793 bytes).
+Output written on main.pdf (15 pages, 339946 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 296 compressed objects within 3 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 369 PDF objects out of 1000 (max. 8388607)
+ 309 compressed objects within 4 object streams
+ 114 named destinations out of 1000 (max. 500000)
  94 words of extra memory for PDF output out of 10000 (max. 10000000)
 

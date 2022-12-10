@@ -107,6 +107,105 @@ does not have to be convex. On the other hand, the convex conjugate is always co
   is convex.
 \end{proposition}
 
+\begin{definition}
+  Given a nonempty subset 
+  $\Omega \subseteq \R^n$
+  the \textbf{support function} 
+  $
+  \sigma_\Omega : \R^n \to \overline{\R}
+  $
+  of $\Omega$
+  is defined by
+  \begin{gather}
+    \sigma_\Omega
+    (x^*)
+    :=
+    \sup_{x \in \Omega}
+    \ 
+    \inner{x^*}{x}
+    \qquad
+    \text{for}\ 
+    x^* \in \R^n
+    .
+  \end{gather}
+\end{definition}
+
+\begin{lemma}
+  For any proper function
+  $
+    f:\R^n\to\overline{\R}
+  $
+  we have
+  \begin{gather}
+    f^*(x^*) 
+    =
+    \sigma_{\mathrm{epi}(f)}
+    (x^*,-1)
+    \qquad
+    \text{for}
+    \ 
+    x^* \in \R^n.
+  \end{gather}
+\end{lemma}
+\begin{proof}
+  Let $x^*\in\R^n$
+  and
+  $
+    (x,\lambda)\in \mathrm{epi}(f).
+  $
+  Then
+  $
+    x \in \mathrm{dom}(f)
+  $
+  and
+  $
+    f(x)\le \lambda.
+  $
+  Thus
+  \begin{gather}
+    \inner{x^*}{x} - f(x)
+    \ge
+    \inner{x^*}{x} - \lambda
+    \qquad
+    \text{for all}\ 
+    (x,\lambda)\in \mathrm{epi}(f).
+  \end{gather}
+  On the other hand 
+  $
+    (x,f(x))\in \mathrm{epi}(f)
+  $
+  for all
+  $
+    x \in \mathrm{dom}(f).
+  $
+  It follows
+  \begin{gather}
+    \inner{x^*}{x} - f(x)
+    \le
+    \sup_{(x,\lambda)\in\mathrm{epi}(f)}
+    \inner{x^*}{x} - \lambda
+    \qquad
+    \text{for all}\ 
+    x \in \mathrm{dom}(f).
+  \end{gather}
+  Taking the supremum in the last two displays yields
+  \begin{align}
+    f^*(x^*)
+    =
+    \sup_{x\in\mathrm{dom}(f)}
+    \inner{x^*}{x} - f(x)
+    &=
+    \sup_{(x,\lambda)\in\mathrm{epi}(f)}
+    \inner{x^*}{x} - \lambda
+    \\
+    &=
+    \sup_{(x,\lambda)\in\mathrm{epi}(f)}
+    \inner{(x^*,-1)}{(x,\lambda)} 
+    =
+    \sigma_{\mathrm{epi}(f)}
+    (x^*,-1).
+  \end{align}
+\end{proof}
 % conjugate chain rule %
  %%%%%%%%%%%%%%%%%%%%%%
 \begin{proposition}
