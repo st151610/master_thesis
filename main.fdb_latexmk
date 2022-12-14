@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1670668111 "main.aux" "main.bbl" "main" 1670669104
+["bibtex main"] 1671036323 "main.aux" "main.bbl" "main" 1671036363
   "/usr/share/texmf-dist/bibtex/bst/base/plain.bst" 1650183167 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "literature.bib" 1669968003 49099 fee0b7055cbc5443af150c2c89e19a2e ""
-  "main.aux" 1670669104 7437 e2bc8779d492660767e84bb10fac0c15 "pdflatex"
+  "literature.bib" 1670834670 49099 fee0b7055cbc5443af150c2c89e19a2e ""
+  "main.aux" 1671036362 7767 f0559c8b261739eff2d03bf5ba35a2d3 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1670669101 "main.tex" "main.pdf" "main" 1670669104
+["pdflatex"] 1671036360 "main.tex" "main.pdf" "main" 1671036363
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -143,6 +143,7 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1668447517 2927666 1f051fb934722d94e995cdec3e18511c ""
   "chapters/chapter_1/application_matrix_concentration_ineq.tex" 1670599484 5428 fbfe46f1ae5677a3be693c4be75e087b ""
   "chapters/chapter_1/introdution_ch_1.tex" 1669623949 1720 66640f2289ea1743d514638524b59992 ""
+  "chapters/convex_analysis/basic_notions.tex" 1671036360 861 a67b1bbbc09d7d474f3a41bdcef48a82 ""
   "chapters/convex_analysis/conjugate_calculus.tex" 1670669100 8305 df7544c3fe1e8cd0eb8c3f337ca378d6 ""
   "chapters/empirical_processes.tex" 1668183421 2528 e8befd8d5dbac6d5f48a629765e2b4cd ""
   "chapters/introduction.tex" 1667036817 1456 6a741fd04a0287aa7d8050ccb283d967 ""
@@ -150,12 +151,12 @@
   "chapters/random_matrix_ineq/application_rosenthal_pinelis.tex" 1670573507 2049 fef99346640ef15a2f126a3d4c85b33c ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1670669104 7437 e2bc8779d492660767e84bb10fac0c15 "pdflatex"
-  "main.bbl" 1670668111 2340 0960095ae7e8ce2cd1520a86d1556cb6 "bibtex main"
+  "main.aux" 1671036362 7767 f0559c8b261739eff2d03bf5ba35a2d3 "pdflatex"
+  "main.bbl" 1671036323 2340 0960095ae7e8ce2cd1520a86d1556cb6 "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1670662759 2822 a3e671a1e1950ab5698a48c61d52798e ""
-  "main.toc" 1670669104 900 98a2dab0728e15f003caedeef5d43457 "pdflatex"
+  "main.tex" 1671035313 2901 7956d82068ae76fd0be22d6b3ad14c7c ""
+  "main.toc" 1671036362 973 e0db2584bb7ba170ff886f3a2f72ac7f "pdflatex"
   (generated)
   "main.aux"
   "main.log"

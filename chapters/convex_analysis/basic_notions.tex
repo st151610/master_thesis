@@ -1,0 +1,47 @@
+\begin{definition}
+  \emph{(Affine set and hull)}
+  A set 
+  $A\subseteq \R^n$
+  is called \textbf{affine}, if
+  \begin{gather}
+    \alpha x + (1-\alpha)y \in A
+    \quad
+    \text{for all}
+    \ 
+    x,y \in A
+    \ 
+    \text{and}
+    \ 
+    \alpha \in \R.
+  \end{gather}
+  The \textbf{affine hull} 
+  $\mathrm{aff}(C)$
+  of a set 
+  $C\subseteq \R^n$
+  is the smallest affine set that includes $C.$
+\end{definition}
+
+\begin{definition}
+  \emph{(Relative interior)}
+  Let 
+  $\Omega\subseteq \R^n.$
+  We define the \textbf{relative interior} of $\Omega$ by
+  \begin{gather}
+    \mathrm{ri}(\Omega)
+    :=
+    \left\{ 
+      x \in \Omega 
+      \colon
+      \text{there exists}\ 
+      \gamma > 0\ 
+      \text{such that}\ 
+      \mathrm{B}_\gamma(x)
+      \cap
+      \mathrm{aff}(\Omega)
+      \in
+      \Omega
+    \right\}.
+  \end{gather}
+
+
+\end{definition}
