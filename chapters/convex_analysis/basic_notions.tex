@@ -138,6 +138,42 @@
   This proves $\supseteq$ and equality.
 \end{proof}
   
+\begin{definition}
+  Let 
+  $C_1$ and $C_2$
+  be two non-empty convex sets in $\R^n$. 
+  A hyperplane $H$ is said to \textbf{separate}
+  $C_1$ and $C_2$
+  if $C_1$ is contained in one of the closed half-spaces associated with
+  $H$ and $C_2$ lies in the opposite closed half-space. It is said to separate 
+  $C_1$ and $C_2$
+  \textbf{properly} if 
+  $C_1$ and $C_2$
+  are not \textit{both} actually contained in $H$ itselef.
+\end{definition}
+\begin{theorem}
+  Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$. 
+  There exists a hyperplane separating
+  $C_1$ and $C_2$
+  properly 
+  if and only if
+  there exists a vector $b\in \R^n$ such that
+  \begin{gather}
+    \sup_{x\in C_2} \inner{x}{b}
+    \le
+    \inf_{x\in C_1} \inner{x}{b}
+    \quad 
+    \text{and}
+    \quad 
+    \inf_{x\in C_2} \inner{x}{b}
+    <
+    \sup_{x\in C_1} \inner{x}{b}
+    .
+  \end{gather}
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~11.1]{Rockafellar1970}
+\end{proof}
 \begin{ftheorem}
   \emph{(Convex separation in finite dimension)}
   Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$. 
@@ -148,3 +184,84 @@
   \cite[Theorem~11.3]{Rockafellar1970}
 \end{proof}
 \end{definition}
+\begin{definition}
+  \emph{(Support function intersection rule)}
+  \emph{(Support function)}
+  Given a nonempty subset 
+  $\Omega \subseteq \R^n$
+  the \textbf{support function} 
+  $
+  \sigma_\Omega : \R^n \to \overline{\R}
+  $
+  of $\Omega$
+  is defined by
+  \begin{gather}
+    \sigma_\Omega
+    (x^*)
+    :=
+    \sup_{x \in \Omega}
+    \ 
+    \inner{x^*}{x}
+    \qquad
+    \text{for}\ 
+    x^* \in \R^n
+    .
+  \end{gather}
+\end{definition}
+\begin{ftheorem}
+  Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$ with
+  $\mathrm{ri}(C_1)\cap\mathrm{ri}(C_2)\neq\emptyset.$
+  Then the support function of the intersection 
+  $
+    C_1 \cap C_2
+  $
+  is represented as
+  \begin{gather}
+    (\sigma_{
+    C_1 \cap C_2
+    })
+    (x^*)
+    =
+    (\sigma_{C_1}\square \sigma_{C_2})
+    (x^*)
+    \qquad
+    \text{for all}\ 
+    x^* \in \R^n.
+  \end{gather}
+  Furthermore, for any
+  $
+  x^*\in \mathrm{dom}
+    (\sigma_{
+    C_1 \cap C_2
+    })
+  $
+  there exist dual elements 
+  $
+    x_1^*
+    ,
+    x_2^*
+    \in \R^n
+  $ 
+  such that 
+  $
+    x^*
+    =
+    x_1^*
+    +
+    x_2^*.
+  $
+  and
+  \begin{gather}
+    (\sigma_{
+    C_1 \cap C_2
+    })
+    (x^*)
+    =
+    \sigma_{C_1}(x_1^*)
+    +
+    \sigma_{C_2}(x_2^*).
+  \end{gather}
+\end{ftheorem}
+\begin{proof}
+  \emph{\cite[Theorem~4.23]{Mordukhovich2022}}
+\end{proof}
