@@ -15,10 +15,10 @@
     \alpha \in \R.
   \end{gather}
   The \textbf{affine hull} 
-  $\mathrm{aff}(C)$
+  $\mathrm{aff}(\Omega)$
   of a set 
-  $C\subseteq \R^n$
-  is the smallest affine set that includes $C.$
+  $\Omega\subseteq \R^n$
+  is the smallest affine set that includes $\Omega.$
 \end{definition}
 
 \begin{definition}
@@ -43,5 +43,108 @@
     \right\}.
   \end{gather}
 
-
+\begin{proposition}
+  Let $C$ be a non-empty convex set in $\R^n.$ Then we get the representation
+  \begin{gather}
+    \mathrm{ri}(C)
+    =
+    \left\{ 
+      z \in C
+      \colon
+      \text{for all}\ 
+      x \in C \ 
+      \text{there exists}\ 
+      t > 0 \ 
+      \text{such that}\ 
+      z + t (z-x)
+      \in C
+    \right\}.
+  \end{gather}
+\end{proposition}
+\begin{proof}
+  \cite[Theorem~6.4]{Rockafellar1970}
+\end{proof}
+\begin{proposition}
+  Let $C_1\subseteq \R^{n_1}$ and $C_2\subseteq \R^{n_2}$ be two non-empty convex sets. Then it holds
+  \begin{gather}
+    \mathrm{ri}(C_1\times C_2)
+    = 
+    \mathrm{ri}(C_1)
+    \times
+    \mathrm{ri}(C_2).
+  \end{gather}
+\end{proposition}
+\begin{proof}
+  Let
+  $
+  (z_1, z_2)
+  \in 
+  \mathrm{ri}(C_1\times C_2).
+  $
+  Then for all 
+  $
+  (x_1, x_2)
+  \in 
+  C_1\times C_2
+  $
+  there exists
+  $t>0$
+  such that
+  \begin{gather}
+      z_i + t (z_i-x_i)
+      \in C_i
+      \qquad
+      \text{for}\ 
+      i\in \left\{ 1,2 \right\}.
+  \end{gather}
+  This proves $\subseteq.$
+  Suppose 
+  $
+    z_1 
+    \in
+    \mathrm{ri}(C_1)
+  $
+  and
+  $
+    z_2 
+    \in
+    \mathrm{ri}(C_2).
+  $
+  Let
+  $
+    (x_1,x_2)\in C_1\times C_2
+  $
+  with corresponding $t_1,t_2 >0$.
+  If $t_1=t_2$ everything is clear.
+  W.l.o.g.
+  assume 
+  $t_1<t_2$. Define $\theta:=\frac{t_1}{t_2}\in (0,1).$
+  By the convexity of $C_2$ it follows
+  \begin{gather}
+    z_2 + t_1 (z_2 - x_2)
+    =
+    \theta
+    (
+    z_2 + t_2 (z_2 - x_2)
+    )
+    +
+    (1-\theta)z_2
+    \in C_2.
+  \end{gather}
+  Thus
+  $
+  (z_1,z_2)\in\mathrm{ri}(C_1\times C_2). 
+  $
+  This proves $\supseteq$ and equality.
+\end{proof}
+  
+\begin{ftheorem}
+  \emph{(Convex separation in finite dimension)}
+  Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$. 
+  Then $C_1$ and $C_2$ can be properly separated if and only if 
+  $\mathrm{ri}(C_1)\cap\mathrm{ri}(C_2)=\emptyset.$
+\end{ftheorem}
+\begin{proof}
+  \cite[Theorem~11.3]{Rockafellar1970}
+\end{proof}
 \end{definition}
