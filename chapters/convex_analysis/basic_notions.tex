@@ -1,3 +1,4 @@
+\section{Relative interiors}
 \begin{definition}
   \emph{(Affine set and hull)}
   A set 
@@ -137,7 +138,8 @@
   $
   This proves $\supseteq$ and equality.
 \end{proof}
-  
+ 
+\section{Convex Separation}
 \begin{definition}
   Let 
   $C_1$ and $C_2$
@@ -264,4 +266,212 @@
 \end{ftheorem}
 \begin{proof}
   \emph{\cite[Theorem~4.23]{Mordukhovich2022}}
+  We define
+  \begin{gather}
+    \Theta_1
+    :=
+    C_1 \times [0,\infty)
+    \quad
+    \text{and}
+    \quad
+    \Theta_2
+    :=
+    \left\{ 
+      (x,\lambda)\in \R^n
+      \colon
+      x \in C_2
+      \ 
+      \text{and}
+      \ 
+      \lambda
+      \le
+      \inner{x^*}{x} - \alpha
+    \right\}.
+  \end{gather}
+  Clearly $\Theta_1$ is convex by the convexity of $C_1.$
+  Consider the affine function
+  \begin{gather}
+    \varphi:
+    \R^{n+1} \to \R
+    ,
+    \quad
+    (x,\lambda)
+    \mapsto
+    \alpha - \inner{x^*}{x} - \lambda.
+  \end{gather}
+  It holds 
+  $
+    \Theta_2
+    =
+    \varphi^{-1}((-\infty,0])
+    \cap
+    (
+      C_2\times \R
+    )
+    .
+  $
+  Thus, by the convexity of the sets
+  $
+    \varphi^{-1}((-\infty,0])
+  $
+  and $C_2$
+  it follows that $\Theta_2$ is convex.
+  We want to apply convex separation to 
+  $\Theta_1$ and $\Theta_2$.
+  To this end we show 
+  $\mathrm{ri}(\Theta_1)\cap\mathrm{ri}(\Theta_2)=\emptyset.$
+  First note that
+  \begin{gather}
+    \mathrm{ri}(\Theta_1)
+    =
+    \mathrm{ri}(C_1)
+    \times
+    \mathrm{ri}([0,\infty))
+    \subseteq
+    \mathrm{ri}(C_1)
+    \times
+    (0,\infty).
+  \end{gather}
+  Indeed, if 
+  $
+    0\in
+    \mathrm{ri}([0,\infty))
+  $
+  then there exists $t>0$ such that $-tx\ge 0$ for some $x>0.$ A contradition.
+  Furthermore
+\begin{gather}
+  \mathrm{ri}(\Theta_2)
+  \subseteq
+    \left\{ 
+      (x,\lambda)\in \R^n
+      \colon
+      x \in \mathrm{ri}(C_2) 
+      \ 
+      \text{and}
+      \ 
+      \lambda
+      <
+      \inner{x^*}{x} - \alpha
+    \right\}.
+\end{gather}
+To see this, assume there is 
+$
+(x,\lambda)
+\in \mathrm{ri}(\Theta_2)
+$
+with
+$
+      \lambda
+      =
+      \inner{x^*}{x} - \alpha
+      .
+$
+Then for some 
+$
+  (y,\mu)
+  \in \Theta_2
+$
+with
+$
+      \mu    
+      <
+      \inner{x^*}{y} - \alpha
+$
+there exists $t>0$ such that 
+$
+  (x,\lambda)
+  +
+  t
+  (
+  (x,\lambda)
+  -
+  (y,\mu)
+  )
+  \in \Theta_2.
+$
+It follows
+\begin{align}
+  0
+  \le
+  (1+t)(\inner{x^*}{x}-\alpha -\lambda)
+  +
+  t
+  (
+    \mu 
+    -\inner{x^*}{y}
+    +
+    \alpha
+  )
+  <0
+,
+\end{align}
+a contradiction.
+The first inequality is due to 
+$
+  (x,\lambda)
+  +
+  t
+  (
+  (x,\lambda)
+  -
+  (y,\mu)
+  )
+  \in \Theta_2
+$
+and the second inequality due to
+$
+      \mu    
+      <
+      \inner{x^*}{y} - \alpha
+$
+and
+$
+      \lambda
+      =
+      \inner{x^*}{x} - \alpha
+      .
+$
+But then 
+$
+\mathrm{ri}(\Theta_1)\cap\mathrm{ri}(\Theta_2)=\emptyset
+.
+$
+Indeed, suppose that there exists 
+$
+  (x,\lambda)
+  \in
+  \mathrm{ri}(\Theta_1)\cap\mathrm{ri}(\Theta_2)
+  .
+$
+Then it holds
+$
+  \inner{x^*}{x}
+  -
+  \alpha
+  \le
+  0
+$
+and $\lambda>0$
+since 
+$
+ x
+ \in
+  \mathrm{ri}(C_1)\cap\mathrm{ri}(C_2)
+  \subseteq
+  C_1\cap C_2.
+$
+On the other hand
+\begin{gather}
+  0
+  <
+  \lambda
+  <
+  \inner{x^*}{x}
+  -
+  \alpha
+  \le
+  0
+  ,
+\end{gather}
+a contradiction.
 \end{proof}

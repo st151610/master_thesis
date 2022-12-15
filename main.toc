@@ -5,8 +5,10 @@
 \contentsline {section}{\numberline {2.3}Application of Matrix Concentration Inequalities}{4}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Convex Analysis}{7}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Basic Notions}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Conjugate Calculus}{8}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Matrix Concentration Inequalities}{11}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Empirical Processes}{12}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{13}{chapter.6}%
+\contentsline {section}{\numberline {3.2}Relative interiors}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Convex Separation}{7}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Conjugate Calculus}{9}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Matrix Concentration Inequalities}{12}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Empirical Processes}{13}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{14}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
