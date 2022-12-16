@@ -11,6 +11,7 @@
 \contentsline {section}{\numberline {3.5}Conjugate Calculus}{10}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Random Matrix Inequalities}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Matrix Khintchin Inequality}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Matrix Moment Inequality}{13}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Empirical Processes}{14}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{15}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
