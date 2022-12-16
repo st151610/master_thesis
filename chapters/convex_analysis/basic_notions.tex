@@ -1,3 +1,77 @@
+Excursively, we present some well known definitions and facts from
+convex analysis. For details, see, e.g., \cite{Mordukhovich2022}.
+
+A subset $C\subseteq \R^n$ is called \textbf{convex set}, 
+if for all $x,y\in C$ and all $\lambda\in [0,1]$,
+we have 
+$
+  \lambda x + (1-\lambda)y 
+  \in
+  C
+  .
+$
+The Cartesian product of convex sets is convex. The intersection of a collection of convex sets is also convex.
+Given (not necessary convex) sets 
+$
+  \Omega,
+  \Omega_1,
+  \Omega_2
+  \subseteq 
+  \R^n
+$
+and
+$\lambda\in\R,$
+define the \textbf{set addition} and \textbf{multiplication}
+by a real scalar as 
+$
+  \Omega_1 
+  +
+  \Omega_2 
+  :=
+  \left\{ 
+    x_1 + x_2 
+    \colon
+    x_1 \in \Omega_1
+    ,
+    x_2 \in \Omega_2
+  \right\}
+$
+and
+$
+  \lambda \Omega
+  :=
+  \left\{ 
+    \lambda x
+    \colon
+    x\in\Omega
+  \right\}.
+$
+For convex sets the addition and multiplication by a real scalar are convex.
+
+
+A mapping 
+$
+  A: \R^n \to \R^m
+$
+is called \textbf{affine mapping} if there exist a linear mapping
+$
+  L: \R^n \to \R^m
+$
+and a vector $b\in \R^m$
+such that
+$
+  A(x)
+  =
+  L(x)
+  +
+  b
+  \ 
+  \text{for all}\ 
+  x \in \R^n
+  .
+$
+The image and inverse image/preimage of convex sets under affine mappings are also convex.
+
 \section{Relative interiors}
 
 
