@@ -1,0 +1,102 @@
+  The \textbf{trace} of a square matrix, denoted by $\mathrm{tr},$
+  is the sum of its diagonal entries, i.e. 
+  $
+    \mathrm{tr}(\mathbf{B})
+    =
+    \sum_{j=1}^{d}b_{jj}
+    \quad 
+    \text{for}\ 
+    \mathbf{B} \in \mathbb{M}_d.
+  $
+  The trace is unitarily invariant, i.e.
+  $
+    \mathrm{tr}(\mathbf{B})
+    =
+    \mathrm{tr}(\mathbf{Q}\mathbf{B}\mathbf{Q}^*)
+    \quad 
+    \text{for all}
+    \ 
+    \mathbf{B}\in \mathbb{M}_d
+    \ 
+    \text{for all unitary}\ 
+    \mathbf{Q} \in \mathbb{M}_d.
+  $
+  In particular, the existence of an eigenvalue value decomposition shows 
+  that the trace of a Hermitian matrix equals the sum of its  eigenvalues.
+  Let
+  $
+  f: I\to \R
+  $
+  where 
+  $I\subseteq\R$ 
+  is an interval.
+  Consider a matrix 
+  $\mathbf{A}\in \mathbb{H}_d$
+  whose eigenvalues are contained in $I.$
+  We define the matrix 
+  $
+    f(\mathbf{A})\in \mathbb{H}_d
+  $
+  using an eigenvalue decomposition of $\mathbf{A}:$
+  \begin{gather}
+    f(\mathbf{A})
+    =
+    \mathbf{Q}
+    \begin{bmatrix}
+      f(\lambda_1) &&\\
+                   &\ddots&\\
+                   && f(\lambda_d)
+    \end{bmatrix}
+    \mathbf{Q}^*
+    \qquad
+    \text{where}
+    \qquad
+    \mathbf{A}
+    =
+    \mathbf{Q}
+    \begin{bmatrix}
+      \lambda_1 &&\\
+                   &\ddots&\\
+                   && \lambda_d
+    \end{bmatrix}
+    \mathbf{Q}^*
+    .
+  \end{gather}
+  The definition of $f(\mathbf{A})$ does not depend on which 
+  eigenvalue decomposition we choose.
+  Any matrix function that arises in this fashion is called a \textbf{standard matrix function}.
+
+
+\begin{proposition}
+  Let
+  $
+  f,g: I\to \R
+  $
+  be real-valued functions on an interval $I\subseteq\R,$ 
+  and let
+  $\mathbf{A}\in \mathbb{H}_d$
+  be a Hermitian matrix
+  whose eigenvalues are contained in $I.$
+
+  \begin{enumerate}[label={(\roman*)}]
+    \item
+      If $\lambda$ is an eigenvalue of of $\mathbf{A},$
+      then $f(\lambda)$ is an eigenvalue of $f(\mathbf{A}).$
+    \item
+      $
+        f(a)
+        \le
+        g(a)
+        \quad
+        \text{for all}\ 
+        a\in I
+        \quad
+        \text{implies}
+        \quad
+        f(\mathbf{A})
+        \preccurlyeq
+        g(\mathbf{A})
+        .
+      $
+  \end{enumerate}
+\end{proposition}

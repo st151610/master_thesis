@@ -12,7 +12,7 @@
 \contentsline {chapter}{\numberline {4}Random Matrix Inequalities}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Matrix Analysis}{13}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Matrix Khintchin Inequality}{13}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Matrix Moment Inequality}{13}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Matrix Moment Inequality}{14}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Intrinsic Dimension}{14}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Empirical Processes}{15}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{16}{chapter.6}%

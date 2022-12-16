@@ -53,10 +53,18 @@
   \end{gather}
   Since $\mathbf{S}$ is positive-semidefinite, the eigenvalues of $\mathbf{S}$ 
   fall in the interval $[0,L]$, where $L=\norm{\mathbf{S}}.$
-  By the Transfer Rule we find
   \begin{gather}
     \mathrm{tr}(\varphi(\mathbf{S}))
+    =
+    \sum_{i=1}^{d}
+    \varphi(\lambda_i)
     \le
+    \frac{
+    \sum_{i=1}^{d}
+    \lambda_i
+    }{\norm{\mathbf{S}}}
+    \varphi(\norm{\mathbf{S}})
+    =
     \frac{\mathrm{tr}(\mathbf{S})}{\norm{\mathbf{S}}}
     \varphi(\norm{\mathbf{S}})
     =
