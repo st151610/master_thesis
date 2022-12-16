@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1671182045 "main.aux" "main.bbl" "main" 1671182520
+["bibtex main"] 1671185899 "main.aux" "main.bbl" "main" 1671186908
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1671086310 50509 e39a866b37c0cb0d552a9c4ad1bca708 ""
-  "main.aux" 1671182519 9157 78167d41081733cb861d2198eaed5cb4 "pdflatex"
+  "main.aux" 1671186907 9157 f5755ff87fb3b963010249cc66f15ec2 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1671182517 "main.tex" "main.pdf" "main" 1671182520
+["pdflatex"] 1671186905 "main.tex" "main.pdf" "main" 1671186908
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -150,19 +150,19 @@
   "chapters/chapter_1/introdution_ch_1.tex" 1669623949 1720 66640f2289ea1743d514638524b59992 ""
   "chapters/convex_analysis/basic_notions.tex" 1671175287 9299 3f5cf283151aedb380daf84482959d61 ""
   "chapters/convex_analysis/conjugate_calculus.tex" 1670669100 8305 df7544c3fe1e8cd0eb8c3f337ca378d6 ""
-  "chapters/convex_analysis/relative_interior.tex" 1671182516 1015 d08a7dd76b0e8e06f0294f97730c2622 ""
+  "chapters/convex_analysis/relative_interior.tex" 1671186905 2288 6fa518053117db0ed89eb6cc3d513c01 ""
   "chapters/empirical_processes.tex" 1668183421 2528 e8befd8d5dbac6d5f48a629765e2b4cd ""
   "chapters/introduction.tex" 1667036817 1456 6a741fd04a0287aa7d8050ccb283d967 ""
   "chapters/notation_index.tex" 1669465352 876 fc24c8fd633396d30e0eb0da469cf1ba ""
   "chapters/random_matrix_ineq/application_rosenthal_pinelis.tex" 1670573507 2049 fef99346640ef15a2f126a3d4c85b33c ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1671182519 9157 78167d41081733cb861d2198eaed5cb4 "pdflatex"
-  "main.bbl" 1671182045 3030 438845f78d3feb7e8108060387ed8b46 "bibtex main"
+  "main.aux" 1671186907 9157 f5755ff87fb3b963010249cc66f15ec2 "pdflatex"
+  "main.bbl" 1671185899 3030 438845f78d3feb7e8108060387ed8b46 "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1671182044 3422 9ab4ef2318920bf7d315793d76ea72f2 ""
-  "main.toc" 1671182519 1206 7f524e5bef918f5835ab632f7ea47f8d "pdflatex"
+  "main.toc" 1671186907 1206 7f524e5bef918f5835ab632f7ea47f8d "pdflatex"
   (generated)
   "main.aux"
   "main.log"

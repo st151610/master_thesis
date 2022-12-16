@@ -48,8 +48,89 @@ Next we collect some useful properties of relative interiors.
       \mathrm{cl}(C)
       \ 
       \text{and}\ 
-      \mathrm{ri}(C).
+      \mathrm{ri}(C)
     $
-    are convex sets
+    are convex sets.
+  \item
+    $
+      \mathrm{cl}(\mathrm{ri}(C))
+      =
+      \mathrm{cl}(C)
+      \ 
+      \text{and}
+      \  
+      \mathrm{ri}(\mathrm{cl}(C))
+      =
+      \mathrm{ri}(C)
+      .
+    $
+  \item
+    Suppose
+    $
+      \bigcap_{i\in I} C_i
+      \neq
+      \emptyset
+    $
+    for a finite index set $I.$
+    Then
+    $
+      \mathrm{ri}
+      \left( 
+        \bigcap_{i\in I} C_i
+      \right)
+      =
+      \bigcap_{i\in I}  
+      \mathrm{ri}(C_i)
+      .
+    $
+    \item
+      Let 
+      $
+        L:\R^n \to \R^m
+      $
+      be a linear mapping. Then
+      $
+        \mathrm{ri}(L(C))
+        =
+        L(\mathrm{ri}(C))
+        .
+      $
+      If additionaly it holds
+      $
+        L^{-1}(\mathrm{ri}(C))
+        \neq
+        \emptyset
+      $
+      we have
+      $
+      \mathrm{ri}(L^{-1}(C))
+        =
+        L^{-1}(\mathrm{ri}(C))
+        .
+      $
+      \item
+        $
+          \mathrm{ri}(C_1\times C_2)
+          = 
+          \mathrm{ri}(C_1)
+          \times
+          \mathrm{ri}(C_2).
+        $
+      \item
+        $
+          \mathrm{ri}(C_1)
+          \cap
+          \mathrm{ri}(C_2)
+          =
+          \emptyset
+        $
+        if and only if
+        $
+          0 \notin
+          \mathrm{ri}
+          (C_1 - C_2)
+          .
+        $
 \end{enumerate}
+
 \end{ftheorem}
