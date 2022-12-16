@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  16 DEC 2022 08:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  16 DEC 2022 10:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -313,19 +313,27 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
+) (/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip68
+\enit@outerparindent=\dimen162
+\enit@toks=\toks25
+\enit@inbox=\box54
+\enit@count@id=\count286
+\enitdp@description=\count287
 ) (/usr/share/texmf-dist/tex/latex/mdframed/mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
  (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2022-04-10 L3 programming layer (loader) 
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-04-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count286
-\l__pdf_internal_box=\box54
+\l__color_backend_stack_int=\count288
+\l__pdf_internal_box=\box55
 ))
 Package: xparse 2022-01-12 L3 Experimental document command parser
 ) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count287
+\etb@tempcnta=\count289
 ) (/usr/share/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2022-04-07 v2.34 Module abspage for zref (HO)
  (/usr/share/texmf-dist/tex/latex/zref/zref-base.sty
@@ -334,7 +342,7 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count288
+\c@abspage=\count290
 Package zref Info: New property: abspage on input line 65.
 ) (/usr/share/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
@@ -345,104 +353,104 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 )
-\mdf@templength=\skip68
-\c@mdf@globalstyle@cnt=\count289
-\mdf@skipabove@length=\skip69
-\mdf@skipbelow@length=\skip70
-\mdf@leftmargin@length=\skip71
-\mdf@rightmargin@length=\skip72
-\mdf@innerleftmargin@length=\skip73
-\mdf@innerrightmargin@length=\skip74
-\mdf@innertopmargin@length=\skip75
-\mdf@innerbottommargin@length=\skip76
-\mdf@splittopskip@length=\skip77
-\mdf@splitbottomskip@length=\skip78
-\mdf@outermargin@length=\skip79
-\mdf@innermargin@length=\skip80
-\mdf@linewidth@length=\skip81
-\mdf@innerlinewidth@length=\skip82
-\mdf@middlelinewidth@length=\skip83
-\mdf@outerlinewidth@length=\skip84
-\mdf@roundcorner@length=\skip85
-\mdf@footenotedistance@length=\skip86
-\mdf@userdefinedwidth@length=\skip87
-\mdf@needspace@length=\skip88
-\mdf@frametitleaboveskip@length=\skip89
-\mdf@frametitlebelowskip@length=\skip90
-\mdf@frametitlerulewidth@length=\skip91
-\mdf@frametitleleftmargin@length=\skip92
-\mdf@frametitlerightmargin@length=\skip93
-\mdf@shadowsize@length=\skip94
-\mdf@extratopheight@length=\skip95
-\mdf@subtitleabovelinewidth@length=\skip96
-\mdf@subtitlebelowlinewidth@length=\skip97
-\mdf@subtitleaboveskip@length=\skip98
-\mdf@subtitlebelowskip@length=\skip99
-\mdf@subtitleinneraboveskip@length=\skip100
-\mdf@subtitleinnerbelowskip@length=\skip101
-\mdf@subsubtitleabovelinewidth@length=\skip102
-\mdf@subsubtitlebelowlinewidth@length=\skip103
-\mdf@subsubtitleaboveskip@length=\skip104
-\mdf@subsubtitlebelowskip@length=\skip105
-\mdf@subsubtitleinneraboveskip@length=\skip106
-\mdf@subsubtitleinnerbelowskip@length=\skip107
+\mdf@templength=\skip69
+\c@mdf@globalstyle@cnt=\count291
+\mdf@skipabove@length=\skip70
+\mdf@skipbelow@length=\skip71
+\mdf@leftmargin@length=\skip72
+\mdf@rightmargin@length=\skip73
+\mdf@innerleftmargin@length=\skip74
+\mdf@innerrightmargin@length=\skip75
+\mdf@innertopmargin@length=\skip76
+\mdf@innerbottommargin@length=\skip77
+\mdf@splittopskip@length=\skip78
+\mdf@splitbottomskip@length=\skip79
+\mdf@outermargin@length=\skip80
+\mdf@innermargin@length=\skip81
+\mdf@linewidth@length=\skip82
+\mdf@innerlinewidth@length=\skip83
+\mdf@middlelinewidth@length=\skip84
+\mdf@outerlinewidth@length=\skip85
+\mdf@roundcorner@length=\skip86
+\mdf@footenotedistance@length=\skip87
+\mdf@userdefinedwidth@length=\skip88
+\mdf@needspace@length=\skip89
+\mdf@frametitleaboveskip@length=\skip90
+\mdf@frametitlebelowskip@length=\skip91
+\mdf@frametitlerulewidth@length=\skip92
+\mdf@frametitleleftmargin@length=\skip93
+\mdf@frametitlerightmargin@length=\skip94
+\mdf@shadowsize@length=\skip95
+\mdf@extratopheight@length=\skip96
+\mdf@subtitleabovelinewidth@length=\skip97
+\mdf@subtitlebelowlinewidth@length=\skip98
+\mdf@subtitleaboveskip@length=\skip99
+\mdf@subtitlebelowskip@length=\skip100
+\mdf@subtitleinneraboveskip@length=\skip101
+\mdf@subtitleinnerbelowskip@length=\skip102
+\mdf@subsubtitleabovelinewidth@length=\skip103
+\mdf@subsubtitlebelowlinewidth@length=\skip104
+\mdf@subsubtitleaboveskip@length=\skip105
+\mdf@subsubtitlebelowskip@length=\skip106
+\mdf@subsubtitleinneraboveskip@length=\skip107
+\mdf@subsubtitleinnerbelowskip@length=\skip108
  (/usr/share/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 )
-\mdf@frametitlebox=\box55
-\mdf@footnotebox=\box56
-\mdf@splitbox@one=\box57
-\mdf@splitbox@two=\box58
-\mdf@splitbox@save=\box59
-\mdfsplitboxwidth=\skip108
-\mdfsplitboxtotalwidth=\skip109
-\mdfsplitboxheight=\skip110
-\mdfsplitboxdepth=\skip111
-\mdfsplitboxtotalheight=\skip112
-\mdfframetitleboxwidth=\skip113
-\mdfframetitleboxtotalwidth=\skip114
-\mdfframetitleboxheight=\skip115
-\mdfframetitleboxdepth=\skip116
-\mdfframetitleboxtotalheight=\skip117
-\mdffootnoteboxwidth=\skip118
-\mdffootnoteboxtotalwidth=\skip119
-\mdffootnoteboxheight=\skip120
-\mdffootnoteboxdepth=\skip121
-\mdffootnoteboxtotalheight=\skip122
-\mdftotallinewidth=\skip123
-\mdfboundingboxwidth=\skip124
-\mdfboundingboxtotalwidth=\skip125
-\mdfboundingboxheight=\skip126
-\mdfboundingboxdepth=\skip127
-\mdfboundingboxtotalheight=\skip128
-\mdf@freevspace@length=\skip129
-\mdf@horizontalwidthofbox@length=\skip130
-\mdf@verticalmarginwhole@length=\skip131
-\mdf@horizontalspaceofbox=\skip132
-\mdfsubtitleheight=\skip133
-\mdfsubsubtitleheight=\skip134
-\c@mdfcountframes=\count290
+\mdf@frametitlebox=\box56
+\mdf@footnotebox=\box57
+\mdf@splitbox@one=\box58
+\mdf@splitbox@two=\box59
+\mdf@splitbox@save=\box60
+\mdfsplitboxwidth=\skip109
+\mdfsplitboxtotalwidth=\skip110
+\mdfsplitboxheight=\skip111
+\mdfsplitboxdepth=\skip112
+\mdfsplitboxtotalheight=\skip113
+\mdfframetitleboxwidth=\skip114
+\mdfframetitleboxtotalwidth=\skip115
+\mdfframetitleboxheight=\skip116
+\mdfframetitleboxdepth=\skip117
+\mdfframetitleboxtotalheight=\skip118
+\mdffootnoteboxwidth=\skip119
+\mdffootnoteboxtotalwidth=\skip120
+\mdffootnoteboxheight=\skip121
+\mdffootnoteboxdepth=\skip122
+\mdffootnoteboxtotalheight=\skip123
+\mdftotallinewidth=\skip124
+\mdfboundingboxwidth=\skip125
+\mdfboundingboxtotalwidth=\skip126
+\mdfboundingboxheight=\skip127
+\mdfboundingboxdepth=\skip128
+\mdfboundingboxtotalheight=\skip129
+\mdf@freevspace@length=\skip130
+\mdf@horizontalwidthofbox@length=\skip131
+\mdf@verticalmarginwhole@length=\skip132
+\mdf@horizontalspaceofbox=\skip133
+\mdfsubtitleheight=\skip134
+\mdfsubsubtitleheight=\skip135
+\c@mdfcountframes=\count292
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count291
-\c@mdf@env@i=\count292
-\c@mdf@env@ii=\count293
-\c@mdf@zref@counter=\count294
+\mdf@envdepth=\count293
+\c@mdf@env@i=\count294
+\c@mdf@env@ii=\count295
+\c@mdf@zref@counter=\count296
 Package zref Info: New property: mdf@pagevalue on input line 895.
 ) (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks25
-\thm@bodyfont=\toks26
-\thm@headfont=\toks27
-\thm@notefont=\toks28
-\thm@headpunct=\toks29
-\thm@preskip=\skip135
-\thm@postskip=\skip136
-\thm@headsep=\skip137
-\dth@everypar=\toks30
+\thm@style=\toks26
+\thm@bodyfont=\toks27
+\thm@headfont=\toks28
+\thm@notefont=\toks29
+\thm@headpunct=\toks30
+\thm@preskip=\skip136
+\thm@postskip=\skip137
+\thm@headsep=\skip138
+\dth@everypar=\toks31
 ) (/usr/share/texmf-dist/tex/latex/xpatch/xpatch.sty
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 )
@@ -460,30 +468,30 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: mathtools 2022/02/07 v1.28a mathematical typesetting tools
  (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count295
-\calc@Bcount=\count296
-\calc@Adimen=\dimen162
-\calc@Bdimen=\dimen163
-\calc@Askip=\skip138
-\calc@Bskip=\skip139
+\calc@Acount=\count297
+\calc@Bcount=\count298
+\calc@Adimen=\dimen163
+\calc@Bdimen=\dimen164
+\calc@Askip=\skip139
+\calc@Bskip=\skip140
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count297
-\calc@Cskip=\skip140
+\calc@Ccount=\count299
+\calc@Cskip=\skip141
 ) (/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count298
-\l_MT_multwidth_dim=\dimen164
-\origjot=\skip141
-\l_MT_shortvdotswithinadjustabove_dim=\dimen165
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen166
-\l_MT_above_intertext_sep=\dimen167
-\l_MT_below_intertext_sep=\dimen168
-\l_MT_above_shortintertext_sep=\dimen169
-\l_MT_below_shortintertext_sep=\dimen170
-\xmathstrut@box=\box60
-\xmathstrut@dim=\dimen171
+\g_MT_multlinerow_int=\count300
+\l_MT_multwidth_dim=\dimen165
+\origjot=\skip142
+\l_MT_shortvdotswithinadjustabove_dim=\dimen166
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen167
+\l_MT_above_intertext_sep=\dimen168
+\l_MT_below_intertext_sep=\dimen169
+\l_MT_above_shortintertext_sep=\dimen170
+\l_MT_below_shortintertext_sep=\dimen171
+\xmathstrut@box=\box61
+\xmathstrut@dim=\dimen172
 ) (/usr/share/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
@@ -509,10 +517,10 @@ Package: nomencl 2021/11/10 v5.6 Nomenclature package
  (/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
  (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks31
-\XKV@tempa@toks=\toks32
+\XKV@toks=\toks32
+\XKV@tempa@toks=\toks33
 )
-\XKV@depth=\count299
+\XKV@depth=\count301
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
@@ -521,69 +529,69 @@ Package tocbasic Info: babel extension for `nlo' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 187.
 Package tocbasic Info: babel extension for `nls' omitted
 (tocbasic)             because of missing \bbl@set@language on input line 188.
-\nomlabelwidth=\dimen172
-\nom@tempdim=\dimen173
-\nomitemsep=\skip142
+\nomlabelwidth=\dimen173
+\nom@tempdim=\dimen174
+\nomitemsep=\skip143
 ) (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count300
-\l__lipsum_a_int=\count301
-\l__lipsum_b_int=\count302
+\g__lipsum_par_int=\count302
+\l__lipsum_a_int=\count303
+\l__lipsum_b_int=\count304
  (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
 \@nomenclaturefile=\write3
 \openout3 = `main.nlo'.
 
-Package nomencl Info: Writing nomenclature file main.nlo on input line 17.
-\selvestebox=\box61
-\c@theorem=\count303
-\c@assumption=\count304
-\c@corollary=\count305
-\c@definition=\count306
-\c@example/=\count307
-\c@lemma=\count308
-\c@problem=\count309
-\c@proposition=\count310
-\c@remark/=\count311
-\c@subassumption=\count312
+Package nomencl Info: Writing nomenclature file main.nlo on input line 18.
+\selvestebox=\box62
+\c@theorem=\count305
+\c@assumption=\count306
+\c@corollary=\count307
+\c@definition=\count308
+\c@example/=\count309
+\c@lemma=\count310
+\c@problem=\count311
+\c@proposition=\count312
+\c@remark/=\count313
+\c@subassumption=\count314
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-Package scrbase Info: activating english \contentsname on input line 86.
-Package scrbase Info: activating english \listfigurename on input line 86.
-Package scrbase Info: activating english \listtablename on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+Package scrbase Info: activating english \contentsname on input line 87.
+Package scrbase Info: activating english \listfigurename on input line 87.
+Package scrbase Info: activating english \listtablename on input line 87.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count313
-\scratchdimen=\dimen174
-\scratchbox=\box62
-\nofMPsegments=\count314
-\nofMParguments=\count315
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count316
-\MPscratchDim=\dimen175
-\MPnumerator=\count317
-\makeMPintoPDFobject=\count318
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count315
+\scratchdimen=\dimen175
+\scratchbox=\box63
+\nofMPsegments=\count316
+\nofMParguments=\count317
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count318
+\MPscratchDim=\dimen176
+\MPnumerator=\count319
+\makeMPintoPDFobject=\count320
+\everyMPtoPDFconversion=\toks35
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -624,7 +632,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 86.
+Package hyperref Info: Link coloring OFF on input line 87.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -632,11 +640,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count319
+\c@section@level=\count321
 )
-LaTeX Info: Redefining \ref on input line 86.
-LaTeX Info: Redefining \pageref on input line 86.
-LaTeX Info: Redefining \nameref on input line 86.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -648,23 +656,23 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 86.
+(scrreprt)           before \begin{document} on input line 87.
  (/usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (/usr/share/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count320
+\BKM@id=\count322
 ))
 <images//unistuttgart_logo_deutsch.jpg, id=4, 173.9298pt x 37.0986pt>
 File: images//unistuttgart_logo_deutsch.jpg Graphic file (type jpg)
 <use images//unistuttgart_logo_deutsch.jpg>
-Package pdftex.def Info: images//unistuttgart_logo_deutsch.jpg  used on input line 90.
+Package pdftex.def Info: images//unistuttgart_logo_deutsch.jpg  used on input line 91.
 (pdftex.def)             Requested size: 173.92937pt x 37.0985pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 91.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 91.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -701,7 +709,11 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 290.
- [8]) (./chapters/convex_analysis/conjugate_calculus.tex
+ [8]) (./chapters/convex_analysis/relative_interior.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 27.
+) (./chapters/convex_analysis/conjugate_calculus.tex
 
 LaTeX Warning: Reference `primal_weighting_binary' on page 9 undefined on input line 1.
 
@@ -710,25 +722,25 @@ Overfull \hbox (27.1074pt too wide) detected at line 381
 []
  []
 
-) [11]
+) [11] [12]
 chapter 4.
 (./chapters/random_matrix_ineq/application_rosenthal_pinelis.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1.
-) [12
+) [13
 
 ]
 chapter 5.
-(./chapters/empirical_processes.tex) [13
+(./chapters/empirical_processes.tex) [14
 
 ]
 chapter 6.
-(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [14
+(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [15
 
-]) (./main.bbl [15
+]) (./main.bbl [16
 
-]) [16
+]) [17
 
 ] (./main.aux)
 
@@ -738,18 +750,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16921 strings out of 478238
- 298269 string characters out of 5850455
- 842465 words of memory out of 5000000
- 34739 multiletter control sequences out of 15000+600000
+ 17269 strings out of 478238
+ 304379 string characters out of 5850455
+ 849985 words of memory out of 5000000
+ 35072 multiletter control sequences out of 15000+600000
  479676 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,19n,120p,10636b,613s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,19n,120p,10636b,618s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (16 pages, 350152 bytes).
+Output written on main.pdf (17 pages, 352147 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
- 135 named destinations out of 1000 (max. 500000)
- 110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 414 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
+ 143 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
