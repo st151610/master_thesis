@@ -10,10 +10,26 @@
 \usepackage{mathtools}
 \usepackage{cite}
 \graphicspath{ {images/} }
-
+\usepackage{xcolor}         % Extended colors
+\usepackage{color}         % Color extended names
 \usepackage{nomencl}
+\usepackage{lipsum}
 \makenomenclature
 \renewcommand{\nomname}{Notation Index}
+
+
+
+\newsavebox{\selvestebox}
+\newenvironment{colbox}[1]
+  {\newcommand\colboxcolor{#1}%
+   \begin{lrbox}{\selvestebox}%
+   \begin{minipage}{16cm}
+   }
+  {\end{minipage}\end{lrbox}%
+   \begin{center}
+\setlength\fboxsep{.5cm}
+   \colorbox[HTML]{\colboxcolor}{\usebox{\selvestebox}}
+   \end{center}}
 % Theorem handle
 
 
