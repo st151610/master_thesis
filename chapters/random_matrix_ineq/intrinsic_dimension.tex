@@ -1,0 +1,68 @@
+\begin{definition}
+  \label{rmineq_intrinsic_bernstein}
+  For a positive-semidefinite matrix $\mathbf{S}$,
+  the \textbf{intrinic dimension} is the quantity
+  \begin{gather*}
+    \mathrm{intdim}
+    (\mathbf{A})
+    :=
+    \frac{\mathrm{tr}\mathbf{A}}{\norm{\mathbf{A}}}
+    .
+  \end{gather*}
+\end{definition}
+\begin{lemma}
+  \emph{(Intrinsic dimenision)}
+  Let 
+  $
+    \varphi: [0,\infty) \to \R
+  $
+  be a convex function with
+  $
+    \varphi(0)=0.
+  $
+  For any positive-semidefinite matrix $\mathbf{S}$ it holds that
+  \begin{gather*}
+    \mathrm{tr}(\varphi(\mathbf{S}))
+    \le
+    \mathrm{intdim}(\mathbf{S})
+    \cdot
+    \varphi(\norm{\mathbf{S}})
+    .
+  \end{gather*}
+\end{lemma}
+\begin{proof}
+  \emph{\cite[Lemma~7.5.1]{Tropp2015}}
+  Since $\varphi$ is convex on any interval $[0,L]$ with $L>0$ and $\varphi(0)=0$, it holds
+  \begin{gather}
+    \varphi(a)
+    \le
+    \left( 
+      1 - \frac{a}{L}
+    \right)
+    \varphi(0)
+    +
+    \frac{a}{L}
+    \varphi(L)
+    =
+    \frac{a}{L}
+    \varphi(L)
+    \qquad
+    \text{for all}\ 
+    a \in [0,L]
+    .
+  \end{gather}
+  Since $\mathbf{S}$ is positive-semidefinite, the eigenvalues of $\mathbf{S}$ 
+  fall in the interval $[0,L]$, where $L=\norm{\mathbf{S}}.$
+  By the Transfer Rule we find
+  \begin{gather}
+    \mathrm{tr}(\varphi(\mathbf{S}))
+    \le
+    \frac{\mathrm{tr}(\mathbf{S})}{\norm{\mathbf{S}}}
+    \varphi(\norm{\mathbf{S}})
+    =
+    \mathrm{intdim}(\mathbf{S})
+    \cdot
+    \varphi(\norm{\mathbf{S}})
+    .
+  \end{gather}
+\end{proof}

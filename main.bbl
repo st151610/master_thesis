@@ -54,6 +54,11 @@ Paul~R. Rosenbaum and Donald~B. Rubin.
   Studies}} for {{Causal Effects}}.
 \newblock {\em Biometrika}, 70(1):41--55, 1983.
 
+\bibitem[Tro15]{Tropp2015}
+Joel~A. Tropp.
+\newblock An {{Introduction}} to {{Matrix Concentration Inequalities}}, January
+  2015.
+
 \bibitem[T{\"u}b20]{Tubbicke2020}
 Stefan T{\"u}bbicke.
 \newblock Entropy {{Balancing}} for {{Continuous Treatments}}, May 2020.

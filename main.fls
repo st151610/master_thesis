@@ -1002,6 +1002,10 @@ INPUT ./chapters/convex_analysis/conjugate_calculus.tex
 INPUT chapters/convex_analysis/conjugate_calculus.tex
 INPUT ./chapters/convex_analysis/conjugate_calculus.tex
 INPUT chapters/convex_analysis/conjugate_calculus.tex
+INPUT ./chapters/random_matrix_ineq/matrix_analysis.tex
+INPUT chapters/random_matrix_ineq/matrix_analysis.tex
+INPUT ./chapters/random_matrix_ineq/matrix_analysis.tex
+INPUT chapters/random_matrix_ineq/matrix_analysis.tex
 INPUT ./chapters/random_matrix_ineq/matrix_khintchine.tex
 INPUT chapters/random_matrix_ineq/matrix_khintchine.tex
 INPUT ./chapters/random_matrix_ineq/matrix_khintchine.tex
@@ -1010,6 +1014,10 @@ INPUT ./chapters/random_matrix_ineq/matrix_moment_ineq.tex
 INPUT chapters/random_matrix_ineq/matrix_moment_ineq.tex
 INPUT ./chapters/random_matrix_ineq/matrix_moment_ineq.tex
 INPUT chapters/random_matrix_ineq/matrix_moment_ineq.tex
+INPUT ./chapters/random_matrix_ineq/intrinsic_dimension.tex
+INPUT chapters/random_matrix_ineq/intrinsic_dimension.tex
+INPUT ./chapters/random_matrix_ineq/intrinsic_dimension.tex
+INPUT chapters/random_matrix_ineq/intrinsic_dimension.tex
 INPUT ./chapters/empirical_processes.tex
 INPUT chapters/empirical_processes.tex
 INPUT ./chapters/empirical_processes.tex

@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1671192400 "main.aux" "main.bbl" "main" 1671194227
+["bibtex main"] 1671200595 "main.aux" "main.bbl" "main" 1671200598
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1671086310 50509 e39a866b37c0cb0d552a9c4ad1bca708 ""
-  "main.aux" 1671194226 9824 cacf77b9550d6e9215e819652c3b2b4b "pdflatex"
+  "main.aux" 1671200598 10691 4aa3f5248f4b748b13eab41aca610868 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1671194224 "main.tex" "main.pdf" "main" 1671194227
+["pdflatex"] 1671200595 "main.tex" "main.pdf" "main" 1671200598
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -154,16 +154,18 @@
   "chapters/empirical_processes.tex" 1668183421 2528 e8befd8d5dbac6d5f48a629765e2b4cd ""
   "chapters/introduction.tex" 1667036817 1456 6a741fd04a0287aa7d8050ccb283d967 ""
   "chapters/notation_index.tex" 1669465352 876 fc24c8fd633396d30e0eb0da469cf1ba ""
+  "chapters/random_matrix_ineq/intrinsic_dimension.tex" 1671200504 1512 ef5354ec3cd0a2d559a72a952cbb646e ""
+  "chapters/random_matrix_ineq/matrix_analysis.tex" 0 -1 0 ""
   "chapters/random_matrix_ineq/matrix_khintchine.tex" 1671192830 1566 0637d4de5ed6df8734ca02cb8e7d90cc ""
   "chapters/random_matrix_ineq/matrix_moment_ineq.tex" 1671194222 1744 3241610ae5f9711f6540bd7b9b6f091a ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1671194226 9824 cacf77b9550d6e9215e819652c3b2b4b "pdflatex"
-  "main.bbl" 1671192400 3306 c2b44e35cb84092e4d88f102ebc28f0a "bibtex main"
+  "main.aux" 1671200598 10691 4aa3f5248f4b748b13eab41aca610868 "pdflatex"
+  "main.bbl" 1671200595 3437 706d381412e8709588091283b7565f36 "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1671192397 3614 7367783a95b980229ee2bf6125864b8e ""
-  "main.toc" 1671194226 1372 4db1d4fbcd52b337214d1037785fb469 "pdflatex"
+  "main.tex" 1671200592 3800 0bf5933795e1827a809080147ba37eaa ""
+  "main.toc" 1671200598 1528 a52ea46c30dfbb23d86604bbe5a2a609 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
