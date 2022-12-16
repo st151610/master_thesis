@@ -1,0 +1,100 @@
+\begin{ftheorem}
+  \emph{\cite[Corollary~7.3]{Mackey2014}}
+  Suppose that
+  $
+    p = 1
+    \ 
+    \text{or}\ 
+    p \ge \frac{3}{2}
+    .
+  $
+  Consider a finite sequence
+  $
+    (\mathbf{Y}_k)_{k\ge 1}
+  $
+  of independent, random, Hermitian matrices 
+  and a deterministic sequence
+  $
+    (\mathbf{A}_k)_{k\ge 1}
+  $
+  for which
+  \begin{gather}
+    \E[\mathbf{Y}_k]
+    =
+    0
+    \quad 
+    \text{and}
+    \quad
+    \mathbf{Y}_k^2
+    \preccurlyeq
+    \mathbf{A}_k^2
+    \qquad
+    \text{almost surely for all}\ 
+    k \ge 1.
+  \end{gather}
+  Then
+  \begin{gather}
+      \E
+      \left[
+        \norm{
+          \sum_{k\ge 1}
+            \mathbf{Y}_k
+        }
+        _{2p}
+        ^{2p}
+      \right]
+      ^{1/(2p)}
+      \le
+      \sqrt{
+        p - \frac{1}{2}
+      }
+      \,
+      \norm{
+        \left( 
+          \sum_{k\ge 1}
+          (
+            \mathbf{A}_k^2
+            + 
+            \E[
+              \mathbf{Y}_k^2
+            ]
+          )
+        \right)
+        ^{1/2}
+        }
+      _{2p}
+      .
+  \end{gather}
+  In particular, when 
+  $
+    (\xi_k)_{k\ge 1}
+  $
+  is an independent sequence of Rademacher random variables,
+  \begin{gather}
+      \E
+      \left[
+        \norm{
+          \sum_{k\ge 1}
+            \xi_k
+            \mathbf{A}_k
+        }
+        _{2p}
+        ^{2p}
+      \right]
+      ^{1/(2p)}
+      \le
+      \sqrt{
+        2p - 1
+        }
+      \,
+      \norm{
+        \left( 
+          \sum_{k\ge 1}
+            \mathbf{A}_k^2
+        \right)
+        ^{1/2}
+        }
+      _{2p}
+      .
+  \end{gather}
+\end{ftheorem}

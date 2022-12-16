@@ -1002,10 +1002,10 @@ INPUT ./chapters/convex_analysis/conjugate_calculus.tex
 INPUT chapters/convex_analysis/conjugate_calculus.tex
 INPUT ./chapters/convex_analysis/conjugate_calculus.tex
 INPUT chapters/convex_analysis/conjugate_calculus.tex
-INPUT ./chapters/random_matrix_ineq/application_rosenthal_pinelis.tex
-INPUT chapters/random_matrix_ineq/application_rosenthal_pinelis.tex
-INPUT ./chapters/random_matrix_ineq/application_rosenthal_pinelis.tex
-INPUT chapters/random_matrix_ineq/application_rosenthal_pinelis.tex
+INPUT ./chapters/random_matrix_ineq/matrix_khintchine.tex
+INPUT chapters/random_matrix_ineq/matrix_khintchine.tex
+INPUT ./chapters/random_matrix_ineq/matrix_khintchine.tex
+INPUT chapters/random_matrix_ineq/matrix_khintchine.tex
 INPUT ./chapters/empirical_processes.tex
 INPUT chapters/empirical_processes.tex
 INPUT ./chapters/empirical_processes.tex

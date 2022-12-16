@@ -28,6 +28,13 @@ Joseph D.~Y. Kang and Joseph~L. Schafer.
   Data}}.
 \newblock {\em Statistical Science}, 22(4):523--539, November 2007.
 
+\bibitem[MJC{\etalchar{+}}14]{Mackey2014}
+Lester Mackey, Michael~I. Jordan, Richard~Y. Chen, Brendan Farrell, and Joel~A.
+  Tropp.
+\newblock Matrix concentration inequalities via the method of exchangeable
+  pairs.
+\newblock {\em The Annals of Probability}, 42(3), May 2014.
+
 \bibitem[MMN22]{Mordukhovich2022}
 Boris~S. Mordukhovich and Nguyen Mau~Nam.
 \newblock {{ENHANCED CALCULUS AND FENCHEL DUALITY}}.
