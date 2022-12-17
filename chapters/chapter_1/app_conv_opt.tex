@@ -122,13 +122,14 @@ subject to the constraints
   $
     B(X_i)
     =
-    \left( 
+    \left[ 
       B_1(X_i)
       ,
       \ldots
       ,
       B_K(X_i)
-    \right)
+    \right]
+    ^\top
   $
   denotes the $K$ basis functions of the covariates 
   of unit $i\in \left\{ 1, \ldots, n \right\}$
@@ -136,13 +137,14 @@ subject to the constraints
   $
     \left| \lambda \right|
     =
-    \left( 
+    \left[ 
       \left| \lambda_1 \right|
       ,
       \ldots
       ,
       \left| \lambda_K \right|
-    \right)
+    \right]
+    ^\top
     ,
   $
   where $\left| \,\cdot\, \right|$
@@ -164,7 +166,7 @@ subject to the constraints
   .
 \end{ftheorem}
 \begin{proof}
-  We begin by proving the following Lemma.
+  We prove the following Lemma at the end of the section.
   \begin{lemma}
     The dual of the optimization problem is
   \begin{gather*}
@@ -175,10 +177,10 @@ subject to the constraints
     nT_i 
     f^*
     (
-      \inner{Q_i}{\lambda}
+    \inner{Q_{\bullet i}}{\lambda}
     )
     -
-    \inner{Q_i}{\lambda}
+    \inner{Q_{\bullet i}}{\lambda}
     +
     \inner{d}{\lambda}
   \end{gather*}
@@ -194,12 +196,32 @@ subject to the constraints
   \begin{gather}
     \mathbf{Q}
     :=
-    \left( 
-      \mathbf{B}(\mathbf{X})
-      ,
+    \begin{bmatrix}
+      \mathbf{I}_n\\
+      \mathbf{B}(\mathbf{X})\\
       -\mathbf{B}(\mathbf{X})
-    \right)
+    \end{bmatrix}
+    ,
+    \qquad
+    \mathbf{B}(\mathbf{X})
+    :=
+    \begin{bmatrix}
+      B(X_1), \ldots, B(X_n)
+    \end{bmatrix}
+    ,
+    \qquad
+    \text{and}
+    \qquad
+    d
+    :=
+    \begin{bmatrix}
+      0_n\\
+      \delta \\
+      \delta
+    \end{bmatrix}
+    .
   \end{gather}
 
   \end{lemma}
+
 \end{proof}
