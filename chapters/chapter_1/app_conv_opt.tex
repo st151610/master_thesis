@@ -56,3 +56,111 @@
       $
   \end{enumerate}
 \end{assumption}
+
+We consider the following optimization problem.
+\begin{problem}
+  \begin{gather*}
+    \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
+    \qquad
+    \sum_{i = 1}^{n} T_i f(w_i)
+  \end{gather*}
+subject to the constraints
+\begin{gather*}
+    w_i T_i \ge 0,
+    \qquad 
+    i = 1, \ldots, n,
+\end{gather*}
+\begin{gather*}
+  \sum_{ i = 1 }^{n}
+    w_i T_i
+  =
+  1
+\end{gather*}
+\begin{gather*}
+    \left| 
+      \sum_{i = 1}^{n} w_i T_i B_k(X_i)
+      - 
+      \frac{1}{n} \sum_{i = 1}^{n} B_k(X_i)
+    \right|
+    \le 
+    \delta_k,
+    \qquad
+    k = 1, \ldots, K
+\end{gather*}
+\end{problem}
+\pagebreak
+~\begin{ftheorem}
+  The dual of the above Problem is the unconstrained optimization problem 
+  \begin{gather*}
+    \underset{\lambda \in \R^K}{\mathrm{minimize}}
+    \qquad
+    \frac{1}{n}
+    \sum_{i = 1}^{n} 
+    nT_i 
+    f^*
+    (
+      \inner{B(X_i)}{\lambda}
+    )
+    -
+    \inner{B(X_i)}{\lambda}
+    +
+    \inner{\delta}{\left| \lambda \right|}
+    ,
+  \end{gather*}
+  where
+  $
+  t \mapsto
+    f^*(t)
+    =
+    t\,(f^{'})^{-1}(t)
+    -
+    f
+    \left( 
+      (f^{'})^{-1}(t)
+    \right)
+  $
+  is the Legendre transformation of $f$,
+  $
+    B(X_i)
+    =
+    \left( 
+      B_1(X_i)
+      ,
+      \ldots
+      ,
+      B_K(X_i)
+    \right)
+  $
+  denotes the $K$ basis functions of the covariates 
+  of unit $i\in \left\{ 1, \ldots, n \right\}$
+  and
+  $
+    \left| \lambda \right|
+    =
+    \left( 
+      \left| \lambda_1 \right|
+      ,
+      \ldots
+      ,
+      \left| \lambda_K \right|
+    \right)
+    ,
+  $
+  where $\left| \,\cdot\, \right|$
+  is the absolute value of a real-valued scalar.
+  Moreover, if $\lambda^\dagger$
+  is an optimal solution then
+  \begin{gather}
+    w_i^*
+    =
+    (f^{'})^{-1}
+    (
+      \inner{B(X_i)}{\lambda^\dagger}
+    )
+    ,
+    \quad
+    i\in \left\{ 1,\ldots, n \right\}
+  \end{gather}
+  are the unique optimal solutions to (P)
+  .
+\end{ftheorem}
