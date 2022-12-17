@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1671203629 "main.aux" "main.bbl" "main" 1671204993
+["bibtex main"] 1671268454 "main.aux" "main.bbl" "main" 1671272777
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
-  "literature.bib" 1671086310 50509 e39a866b37c0cb0d552a9c4ad1bca708 ""
-  "main.aux" 1671204993 10691 4e7610b42077c00c7b16dfb11f447201 "pdflatex"
+  "literature.bib" 1671261154 40978 e716cf3fb73133d4a671dca30d5cbb14 ""
+  "main.aux" 1671272776 10724 9b7af5993a929e23d40765adfb89017a "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1671204990 "main.tex" "main.pdf" "main" 1671204993
+["pdflatex"] 1671272774 "main.tex" "main.pdf" "main" 1671272777
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -146,13 +146,11 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1668447558 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1668447517 2927666 1f051fb934722d94e995cdec3e18511c ""
-  "chapters/chapter_1/application_matrix_concentration_ineq.tex" 1670599484 5428 fbfe46f1ae5677a3be693c4be75e087b ""
-  "chapters/chapter_1/introdution_ch_1.tex" 1669623949 1720 66640f2289ea1743d514638524b59992 ""
+  "chapters/chapter_1/app_conv_opt.tex" 1671272772 1055 fe7dad8e88b667b2e9ba7907fce56cee ""
   "chapters/convex_analysis/basic_notions.tex" 1671175287 9299 3f5cf283151aedb380daf84482959d61 ""
   "chapters/convex_analysis/conjugate_calculus.tex" 1670669100 8305 df7544c3fe1e8cd0eb8c3f337ca378d6 ""
   "chapters/convex_analysis/relative_interior.tex" 1671186905 2288 6fa518053117db0ed89eb6cc3d513c01 ""
   "chapters/empirical_processes.tex" 1668183421 2528 e8befd8d5dbac6d5f48a629765e2b4cd ""
-  "chapters/introduction.tex" 1667036817 1456 6a741fd04a0287aa7d8050ccb283d967 ""
   "chapters/notation_index.tex" 1669465352 876 fc24c8fd633396d30e0eb0da469cf1ba ""
   "chapters/random_matrix_ineq/intrinsic_dimension.tex" 1671204990 1635 d379d0a4c17ea76a294d05f477cf72d4 ""
   "chapters/random_matrix_ineq/matrix_analysis.tex" 1671204389 2239 c8c3547de12892b0520db73c9350171d ""
@@ -160,12 +158,12 @@
   "chapters/random_matrix_ineq/matrix_moment_ineq.tex" 1671194222 1744 3241610ae5f9711f6540bd7b9b6f091a ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1671204993 10691 4e7610b42077c00c7b16dfb11f447201 "pdflatex"
-  "main.bbl" 1671203629 3437 706d381412e8709588091283b7565f36 "bibtex main"
+  "main.aux" 1671272776 10724 9b7af5993a929e23d40765adfb89017a "pdflatex"
+  "main.bbl" 1671268454 955 ef760e06c22707454ab275d90ff9e4dc "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1671200592 3800 0bf5933795e1827a809080147ba37eaa ""
-  "main.toc" 1671204993 1528 bc7f8d91bad09e77e9c09926d97dcb7d "pdflatex"
+  "main.tex" 1671268447 3896 ab9d35897f3ad37ba0499c99bea337dd ""
+  "main.toc" 1671272776 1621 a85cfc7c1ce5f42b130ea2777a77a604 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

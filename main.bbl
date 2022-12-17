@@ -1,32 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{VGC{\etalchar{+}}20}
-
-\bibitem[FHI18]{Fong2018}
-Christian Fong, Chad Hazlett, and Kosuke Imai.
-\newblock Covariate balancing propensity score for a continuous treatment:
-  {{Application}} to the efficacy of political advertisements.
-\newblock {\em The Annals of Applied Statistics}, 12(1):156--177, March 2018.
-
-\bibitem[Hai12]{Hainmueller2012}
-Jens Hainmueller.
-\newblock Entropy {{Balancing}} for {{Causal Effects}}: {{A Multivariate
-  Reweighting Method}} to {{Produce Balanced Samples}} in {{Observational
-  Studies}}.
-\newblock {\em Political Analysis}, 20(1):25--46, 2012.
-
-\bibitem[HI05]{Hirano2005}
-Keisuke Hirano and Guido~W. Imbens.
-\newblock The {{Propensity Score}} with {{Continuous Treatments}}.
-\newblock In Andrew Gelman and Xiao-Li Meng, editors, {\em Wiley {{Series}} in
-  {{Probability}} and {{Statistics}}}, pages 73--84. {John Wiley \& Sons, Ltd},
-  {Chichester, UK}, July 2005.
-
-\bibitem[KS07]{Kang2007}
-Joseph D.~Y. Kang and Joseph~L. Schafer.
-\newblock Demystifying {{Double Robustness}}: {{A Comparison}} of {{Alternative
-  Strategies}} for {{Estimating}} a {{Population Mean}} from {{Incomplete
-  Data}}.
-\newblock {\em Statistical Science}, 22(4):523--539, November 2007.
+\begin{thebibliography}{MJC{\etalchar{+}}14}
 
 \bibitem[MJC{\etalchar{+}}14]{Mackey2014}
 Lester Mackey, Michael~I. Jordan, Richard~Y. Chen, Brendan Farrell, and Joel~A.
@@ -37,50 +10,19 @@ Lester Mackey, Michael~I. Jordan, Richard~Y. Chen, Brendan Farrell, and Joel~A.
 
 \bibitem[MMN22]{Mordukhovich2022}
 Boris~S. Mordukhovich and Nguyen Mau~Nam.
-\newblock {{ENHANCED CALCULUS AND FENCHEL DUALITY}}.
-\newblock In Boris~S. Mordukhovich and Nguyen Mau~Nam, editors, {\em Convex
-  {{Analysis}} and {{Beyond}}: {{Volume I}}: {{Basic Theory}}}, Springer
-  {{Series}} in {{Operations Research}} and {{Financial Engineering}}, pages
-  255--310. {Springer International Publishing}, {Cham}, 2022.
+\newblock {\em Convex {{Analysis}} and {{Beyond}}: {{Volume I}}: {{Basic
+  Theory}}}.
+\newblock Springer {{Series}} in {{Operations Research}} and {{Financial
+  Engineering}}. {Springer International Publishing}, {Cham}, 2022.
 
 \bibitem[Roc70]{Rockafellar1970}
 R.~Tyrrell Rockafellar.
 \newblock {\em Convex {{Analysis}}}.
 \newblock {Princeton University Press}, 1970.
 
-\bibitem[RR83]{Rosenbaum1983}
-Paul~R. Rosenbaum and Donald~B. Rubin.
-\newblock The {{Central Role}} of the {{Propensity Score}} in {{Observational
-  Studies}} for {{Causal Effects}}.
-\newblock {\em Biometrika}, 70(1):41--55, 1983.
-
 \bibitem[Tro15]{Tropp2015}
 Joel~A. Tropp.
 \newblock An {{Introduction}} to {{Matrix Concentration Inequalities}}, January
   2015.
-
-\bibitem[T{\"u}b20]{Tubbicke2020}
-Stefan T{\"u}bbicke.
-\newblock Entropy {{Balancing}} for {{Continuous Treatments}}, May 2020.
-
-\bibitem[VGC{\etalchar{+}}20]{Vegetabile2020}
-Brian~G. Vegetabile, Beth~Ann Griffin, Donna~L. Coffman, Matthew Cefalu, and
-  Daniel~F. McCaffrey.
-\newblock Nonparametric {{Estimation}} of {{Population Average Dose-Response
-  Curves}} using {{Entropy Balancing Weights}} for {{Continuous Exposures}},
-  March 2020.
-
-\bibitem[WZ19]{Wang2019}
-Yixin Wang and Jos{\'e}~R. Zubizarreta.
-\newblock Minimal {{Dispersion Approximately Balancing Weights}}: {{Asymptotic
-  Properties}} and {{Practical Considerations}}.
-\newblock {\em Biometrika}, page asz050, October 2019.
-
-\bibitem[Zub15]{Zubizarreta2015}
-Jos{\'e}~R. Zubizarreta.
-\newblock Stable {{Weights}} that {{Balance Covariates}} for {{Estimation With
-  Incomplete Outcome Data}}.
-\newblock {\em Journal of the American Statistical Association},
-  110(511):910--922, July 2015.
 
 \end{thebibliography}

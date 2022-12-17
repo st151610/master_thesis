@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  16 DEC 2022 16:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  17 DEC 2022 11:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -687,24 +687,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 chapter 1.
-(./chapters/introduction.tex) [3
+[3
 
 ]
 chapter 2.
-(./chapters/chapter_1/introdution_ch_1.tex) (./chapters/chapter_1/application_matrix_concentration_ineq.tex [4
+(./chapters/chapter_1/app_conv_opt.tex) [4
 
 ]
-Overfull \hbox (47.4656pt too wide) detected at line 205
-[]
- []
-
-[5]
-
-LaTeX Warning: Reference `rmineq_rosenthal_pinelis' on page 6 undefined on input line 306.
-
-) [6]
 chapter 3.
-(./chapters/convex_analysis/basic_notions.tex [7
+(./chapters/convex_analysis/basic_notions.tex [5
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
@@ -713,23 +704,23 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 290.
- [8]) (./chapters/convex_analysis/relative_interior.tex
+ [6]) (./chapters/convex_analysis/relative_interior.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 27.
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 136.
- [9]) (./chapters/convex_analysis/conjugate_calculus.tex
+ [7]) (./chapters/convex_analysis/conjugate_calculus.tex
 
-LaTeX Warning: Reference `primal_weighting_binary' on page 10 undefined on input line 1.
+LaTeX Warning: Reference `primal_weighting_binary' on page 8 undefined on input line 1.
 
-[10]
+[8]
 Overfull \hbox (27.1074pt too wide) detected at line 381
 []
  []
 
-) [11] [12]
+) [9] [10]
 chapter 4.
 (./chapters/random_matrix_ineq/matrix_analysis.tex) (./chapters/random_matrix_ineq/matrix_khintchine.tex
 Package mdframed Info: mdframed detected package amsthm 
@@ -746,23 +737,23 @@ Package mdframed Warning: You got a bad break
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 100.
-[13
+[11
 
 ]) (./chapters/random_matrix_ineq/matrix_moment_ineq.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1.
-) (./chapters/random_matrix_ineq/intrinsic_dimension.tex) [14]
+) (./chapters/random_matrix_ineq/intrinsic_dimension.tex) [12]
 chapter 5.
-(./chapters/empirical_processes.tex) [15
+(./chapters/empirical_processes.tex) [13
 
 ]
 chapter 6.
-(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [16
+(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [14
 
-]) (./main.bbl [17
+]) (./main.bbl [15
 
-]) [18
+]) [16
 
 ] (./main.aux)
 
@@ -772,18 +763,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17312 strings out of 478238
- 305248 string characters out of 5850455
- 849985 words of memory out of 5000000
- 35082 multiletter control sequences out of 15000+600000
+ 17258 strings out of 478238
+ 303870 string characters out of 5850455
+ 847985 words of memory out of 5000000
+ 35056 multiletter control sequences out of 15000+600000
  479676 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,19n,120p,10636b,618s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (18 pages, 363441 bytes).
+Output written on main.pdf (16 pages, 344885 bytes).
 PDF statistics:
- 460 PDF objects out of 1000 (max. 8388607)
- 397 compressed objects within 4 object streams
- 167 named destinations out of 1000 (max. 500000)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 422 PDF objects out of 1000 (max. 8388607)
+ 361 compressed objects within 4 object streams
+ 145 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 
