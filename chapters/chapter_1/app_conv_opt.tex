@@ -69,14 +69,12 @@ subject to the constraints
     w_i T_i \ge 0,
     \qquad 
     i = 1, \ldots, n,
-\end{gather*}
-\begin{gather*}
+    \\
   \sum_{ i = 1 }^{n}
     w_i T_i
   =
   1
-\end{gather*}
-\begin{gather*}
+  \\
     \left| 
       \sum_{i = 1}^{n} w_i T_i B_k(X_i)
       - 
@@ -90,7 +88,8 @@ subject to the constraints
 \end{problem}
 \pagebreak
 ~\begin{ftheorem}
-  The dual of the above Problem is the unconstrained optimization problem 
+  Under Assumption,
+  the dual of the above Problem is the unconstrained optimization problem 
   \begin{gather*}
     \underset{\lambda \in \R^K}{\mathrm{minimize}}
     \qquad
@@ -164,3 +163,43 @@ subject to the constraints
   are the unique optimal solutions to (P)
   .
 \end{ftheorem}
+\begin{proof}
+  We begin by proving the following Lemma.
+  \begin{lemma}
+    The dual of the optimization problem is
+  \begin{gather*}
+    \underset{\lambda \in \R^{2K}}{\mathrm{minimize}}
+    \qquad
+    \frac{1}{n}
+    \sum_{i = 1}^{n} 
+    nT_i 
+    f^*
+    (
+      \inner{Q_i}{\lambda}
+    )
+    -
+    \inner{Q_i}{\lambda}
+    +
+    \inner{d}{\lambda}
+  \end{gather*}
+  subject to
+  \begin{gather}
+    \lambda_k \ge 0
+    \quad
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, K \right\}
+    ,
+  \end{gather}
+  where
+  \begin{gather}
+    \mathbf{Q}
+    :=
+    \left( 
+      \mathbf{B}(\mathbf{X})
+      ,
+      -\mathbf{B}(\mathbf{X})
+    \right)
+  \end{gather}
+
+  \end{lemma}
+\end{proof}
