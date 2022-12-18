@@ -105,6 +105,8 @@ $f^*$ and $q$ are continuously differentiable.
 
 \begin{theorem}
   \emph{\cite[Theorem~26.3]{Rockafellar1970}}
+  A closed proper convex function is (essentially) strictly convex
+  if and only if its conjugate is essentially smooth.
 \end{theorem}
 
 We will denote the gradient of $q$ at $p$ by $d(p)$
@@ -137,7 +139,93 @@ we obtain the dual cost gradient
 The last equality follows from Danskin's Theorem and \cite[Theorem~23.5]{Rockafellar1970}
 \begin{proposition}
   \emph{(Danskin's Theorem \cite[page 649]{Bertsekas2003})}
-  text
+  Let 
+  $
+    Z \subseteq \R^m
+  $
+  be a non-empty set, 
+  and let 
+  $
+    \phi :
+    \R^n \times Z \to \R
+  $
+  be a continuous function such that
+  $
+    \phi(\cdot,z)
+    :
+    \R^n \to \R,
+  $
+  viewed as a function of its first argument, 
+  is convex for each 
+  $
+    z \in Z.
+  $
+  Then the function 
+  \begin{gather}
+    f:\R^n \to \R
+    ,
+    \qquad
+    x\mapsto
+    \sup_{z\in Z}
+    \phi(x,z)
+  \end{gather}
+  is convex and has directional derivative given by
+  \begin{gather}
+    f^{'}(x;y)
+    =
+    \sup_{z \in Z(x)}
+    \phi^{'}(x,z; y)
+    ,
+  \end{gather}
+  where 
+  $
+    \phi^{'}(x,z; y)
+  $
+  is the directional derivative of the function 
+  $
+    \phi(\cdot,z)
+  $
+  at
+  $x$ in the direction $y,$
+  and
+  \begin{gather}
+    Z(x)
+    :=
+    \left\{ 
+      \overline{z} \in \R^m
+      \colon
+      \phi(x, \overline{z})
+      =
+    \sup_{z\in Z}
+    \phi(x,z)
+  \right\}
+  .
+  \end{gather}
+  In particular, if $Z(x)$ consists of a unique point 
+  $\overline{z}$
+  and
+  $
+    \phi(\cdot, \overline{z})
+  $
+  is differentiable at $x,$
+  and 
+  $
+    \nabla f(x)
+    =
+    \nabla_x
+    \phi(x,\overline{z})
+    ,
+  $
+  where 
+  $
+    \nabla_x
+    \phi(x,\overline{z})
+  $
+  is the vector with coordinates
+  $
+    (\partial \phi / \partial x_i)
+    (x,\overline{z})
+  $
 \end{proposition}
 
 Note that $x$ is the unique vector satisfying 
