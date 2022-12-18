@@ -1,0 +1,68 @@
+We present the relevant parts of the paper \cite{Bertsekas2003}.
+
+Consider the following optimization problem
+
+  \begin{gather*}
+    \underset{x\in \R^m}{\mathrm{minimize}}
+    \qquad
+    f(x)
+  \end{gather*}
+subject to the constraints
+\begin{gather}
+  \mathbf{A}x \ge b
+  ,
+\end{gather}
+Where 
+$
+  f:
+  \R^m
+  \to 
+  \overline{\R}
+  ,
+  \ 
+  \mathbf{A} \ 
+  \text{is a given}\ 
+  n\times m
+  \ 
+  \text{matrix,}
+$
+ and $b$ is a vector in $\R^n.$
+\begin{assumption}
+  \begin{enumerate}[label={(\roman*)}]
+    Assume that the map 
+    $
+      f: \R^m \to \overline{\R}
+    $
+    has the following properties.
+    \item
+      $
+        f 
+        \ 
+        \text{is strictly convex.}
+      $
+    \item
+      $
+        f
+        \ 
+        \text{is lower-semicontinuous and continuous}
+        \ 
+        \mathrm{dom}(f)
+        .
+      $
+    \item
+      $
+        \text{The convex conjugate}
+        \ 
+        f^*
+        \ 
+        \text{of}\ 
+        f
+        \ 
+        \text{is finite}
+        .
+      $
+  \end{enumerate}
+\end{assumption}
+
+
+

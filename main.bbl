@@ -1,24 +1,17 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{MJC{\etalchar{+}}14}
 
+\bibitem[BT03]{Bertsekas2003}
+Dimitri~P. Bertsekas and John~N. Tsitsiklis.
+\newblock Parallel and {{Distributed Computation}}:{{Numerical Methods}}.
+\newblock November 2003.
+
 \bibitem[MJC{\etalchar{+}}14]{Mackey2014}
 Lester Mackey, Michael~I. Jordan, Richard~Y. Chen, Brendan Farrell, and Joel~A.
   Tropp.
 \newblock Matrix concentration inequalities via the method of exchangeable
   pairs.
 \newblock {\em The Annals of Probability}, 42(3), May 2014.
-
-\bibitem[MMN22]{Mordukhovich2022}
-Boris~S. Mordukhovich and Nguyen Mau~Nam.
-\newblock {\em Convex {{Analysis}} and {{Beyond}}: {{Volume I}}: {{Basic
-  Theory}}}.
-\newblock Springer {{Series}} in {{Operations Research}} and {{Financial
-  Engineering}}. {Springer International Publishing}, {Cham}, 2022.
-
-\bibitem[Roc70]{Rockafellar1970}
-R.~Tyrrell Rockafellar.
-\newblock {\em Convex {{Analysis}}}.
-\newblock {Princeton University Press}, 1970.
 
 \bibitem[Tro15]{Tropp2015}
 Joel~A. Tropp.
