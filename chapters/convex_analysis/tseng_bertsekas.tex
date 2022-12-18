@@ -64,11 +64,150 @@ $
   \end{enumerate}
 \end{assumption}
 
+The dual optimization problem associated with $(P)$
+is 
 
+
+  \begin{gather*}
+    \underset{p\in \R^n}{\mathrm{maximize}}
+    \qquad
+    q(p)
+  \end{gather*}
+subject to the constraints
+\begin{gather}
+  p \ge 0
+  ,
+\end{gather}
+where 
+$
+ q: \R^n \to \overline{\R}
+$
+is the concave function given by
+\begin{gather}
+  q(p)
+  :=
+  \min_{x \in \R^m}
+  f(x)
+  +
+  \inner{p}{b - \mathbf{A}x}
+  =
+  \inner{p}{b}
+  -
+  f^*(\mathbf{A}^\top p)
+  .
+\end{gather}
+The dual problem $(D)$ is a concave program with simple nonnegativity constraints. Furthermore, strong duality holds for $(P)$ and $(D)$
+, i.e., the optimal value of $(P)$
+equals the optimal value of $(D).$
+
+Since $f^*$ is real-valued and $f$ is strictly convex, 
+$f^*$ and $q$ are continuously differentiable.
+
+\begin{theorem}
+  \emph{\cite[Theorem~26.3]{Rockafellar1970}}
+\end{theorem}
+
+We will denote the gradient of $q$ at $p$ by $d(p)$
+and its $i$th coordinate by $d_i(p).$
+Since $q$ is continuously differentiable, $d_i(p)$ is continuous, 
+and since $q$ is concave, 
+$d_i(p)$ as nonincreasing in $p_i.$
+
+By differentiating and by using the chain rule, 
+we obtain the dual cost gradient
+\begin{gather}
+  d(p)=b-\mathbf{A}x,
+  \quad
+  \text{where}
+  \quad
+  x:=
+  \nabla
+  f^*
+  (
+    \mathbf{A}^\top
+    p
+  )
+  =
+  \mathrm{argsup}
+  _{\xi \in \R^m}
+  \inner{p}{\mathbf{A}\xi}
+  - f(\xi)
+  .
+\end{gather}
+The last equality follows from Danskin's Theorem and \cite[Theorem~23.5]{Rockafellar1970}
 \begin{proposition}
   \emph{(Danskin's Theorem \cite[page 649]{Bertsekas2003})}
   text
 \end{proposition}
+
+Note that $x$ is the unique vector satisfying 
+\begin{gather}
+  \mathbf{A}p
+  \in 
+  \partial
+  f(x)
+  .
+\end{gather}
+From the optimality conditions for $(D)$ it follows that 
+a dual vector is an optimal solution of $(D)$
+if and only if 
+\begin{gather}
+  p
+  =
+  [p + d(p)]^+
+  ,
+\end{gather}
+where $[\ \cdot \ ]^+$ is the projection onto the positive orthant, i.e.,
+$
+  [y]^+
+  =
+  [
+    0 \lor y_1,
+    \ldots
+    0 \lor y_n,
+  ]
+  ^\top
+  .
+$
+
+Given an optimal dual solution $p$,
+we may obtain an optimal primal solution from the equation 
+$
+  x=
+  \nabla
+  f^*
+  (
+    \mathbf{A}^\top
+    p
+  )
+.
+$
+To see this, 
+note that 
+ \begin{gather}
+   \mathbf{A}x \ge b
+   \quad
+   \text{and}
+   \quad
+   p_i 
+   =
+   0
+   \quad 
+   \text{for all}
+   \ 
+   i
+   \ 
+   \text{such that}
+   \quad 
+   \sum_{j=1}^{m} 
+   a_{ij}
+   x_j
+   >
+   b_i
+   .
+ \end{gather}
+
+ We can show that $p$ and $x$ satisfy the KKT conditions and thus $x$ is an optimal solution to $(P)$.
 
 
 \begin{definition}
