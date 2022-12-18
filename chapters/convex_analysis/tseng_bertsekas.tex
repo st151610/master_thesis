@@ -65,4 +65,159 @@ $
 \end{assumption}
 
 
+\begin{proposition}
+  \emph{(Danskin's Theorem \cite[page 649]{Bertsekas2003})}
+  text
+\end{proposition}
 
+
+\begin{definition}
+  \emph{\cite[§28]{Rockafellar1970}}
+  By an \textbf{ordinary convex program}
+  $(P)$
+  we mean an optimization problem of the following form
+  \begin{gather*}
+    \underset{x\in C}{\mathrm{minimize}}
+    \qquad
+    f_0(x)
+  \end{gather*}
+subject to the constraints
+\begin{gather}
+  f_1(x)\le 0,
+  \ldots,
+  f_r(x)\le 0,
+  \qquad
+  f_{r+1}(x)= 0,
+  \ldots,
+  f_m(x)= 0,
+\end{gather}
+where $C\subseteq \R^n$
+is a non-empty convex set,
+$f_i$ is a finite convex function on $C$ for $i\in \left\{ 1,\ldots,r \right\}$
+ and 
+ $f_i$ is an affine function on $C$ for $i\in \left\{ r+1, \ldots, m \right\}.$
+\end{definition}
+
+\begin{definition}
+  We define 
+  $
+    [\lambda_1, \ldots, \lambda_m]\in \R^m
+  $
+  to be a \textbf{Karush-Kuhn-Tucker (KKT) vector}
+  for $(P)$, if
+  \begin{enumerate}[label={(\roman*)}]
+    \item
+      $
+        \lambda_i \ge 0
+        \ 
+        \text{for all}
+        \ 
+        i\in \left\{ 1,\ldots,r \right\}.
+      $
+    \item
+      The infimum of the proper convex function 
+      $
+        f_0
+        +
+        \sum_{i=1}^{m}
+        \lambda_1 f_i
+      $
+      is finite and equal to the optimal value in $(P).$
+  \end{enumerate}
+\end{definition}
+
+\begin{ftheorem}
+  \emph{(Karush-Kuhn-Tucker conditions)}
+  Let $(P)$
+  be an ordinary convex program,
+  $
+  \overline{\alpha}
+  \in \R^m
+  $,
+   and 
+   $
+   \overline{z}
+   \in \R^n.
+   $
+   Then 
+   $
+  \overline{\alpha}
+   $
+   is a KKT vector for $(P)$
+   and 
+   $
+   \overline{z}
+   $
+   is an optimal solution to $(P)$
+   if and only if 
+   $
+   \overline{z}
+   $
+   and 
+   the components $\alpha_i$ of
+   $
+  \overline{\alpha}
+   $
+   satisfy 
+   the following conditions.
+
+  \begin{enumerate}[label={(\roman*)}]
+    \item
+      $
+        \alpha_i \ge 0,
+        \ 
+        f_i(
+   \overline{z}
+        )
+        \le 0,
+        \ 
+        \text{and}
+        \ 
+        \alpha_i 
+        f_i(
+   \overline{z}
+        )
+        =0
+        \ 
+        \text{for all}
+        \ 
+        i\in \left\{ 1, \ldots, r \right\}
+        .
+      $
+      \item
+        $
+        f_i(
+   \overline{z}
+        )
+        =0
+        \ 
+        \text{for}
+        \ 
+        i\in \left\{ r+1, \ldots, m \right\}
+        .
+        $
+      \item
+        $
+         0
+         _n
+         \in 
+         [
+          \partial
+        f_0(
+   \overline{z}
+        )
+        +
+        \sum_{\alpha_i\neq 0}
+        \alpha_i 
+        \partial
+        f_i(
+   \overline{z}
+        )
+         ]
+.
+        $
+  \end{enumerate}
+\end{ftheorem}
+\begin{proof}
+  \cite[Theorem~28.3]{Rockafellar1970}
+\end{proof}

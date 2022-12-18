@@ -1,13 +1,15 @@
 # Fdb version 3
-["bibtex main"] 1671355332 "main.aux" "main.bbl" "main" 1671355968
+["bibtex main"] 1671364303 "main.aux" "main.bbl" "main" 1671364306
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
-  "literature.bib" 1671261154 40978 e716cf3fb73133d4a671dca30d5cbb14 ""
-  "main.aux" 1671355967 10034 9553c532792e0eeb9493abfb6ec891aa "pdflatex"
+  "literature.bib" 1671360505 40855 38c34c2cbe991a3b6637c869ca6d2520 ""
+  "main.aux" 1671364305 10147 eed6ebef82c6f8c067f0e76c18b9459e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1671355965 "main.tex" "main.pdf" "main" 1671355968
+["pdflatex"] 1671364303 "main.tex" "main.pdf" "main" 1671364306
+  "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1650183167 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1650183167 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -52,6 +54,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1650183167 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1650183167 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1650183167 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
+  "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1650183167 136101 f533469f523533d38317ab5729d00c8a ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1650183167 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1650183167 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1650183167 40635 c40361e206be584d448876bba8a64a3b ""
@@ -146,7 +149,7 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1668447558 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1668447517 2927666 1f051fb934722d94e995cdec3e18511c ""
   "chapters/chapter_1/app_conv_opt.tex" 1671279325 3966 8fc8def30276cca99391876a47417d0d ""
-  "chapters/convex_analysis/tseng_bertsekas.tex" 1671355964 1047 6d45e2ab34f675d4270fc47320e83451 ""
+  "chapters/convex_analysis/tseng_bertsekas.tex" 1671364300 3738 0d0a2a3510fa69761c153d3d5f06b27b ""
   "chapters/empirical_processes.tex" 1668183421 2528 e8befd8d5dbac6d5f48a629765e2b4cd ""
   "chapters/notation_index.tex" 1669465352 876 fc24c8fd633396d30e0eb0da469cf1ba ""
   "chapters/random_matrix_ineq/intrinsic_dimension.tex" 1671204990 1635 d379d0a4c17ea76a294d05f477cf72d4 ""
@@ -155,12 +158,12 @@
   "chapters/random_matrix_ineq/matrix_moment_ineq.tex" 1671194222 1744 3241610ae5f9711f6540bd7b9b6f091a ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1671355967 10034 9553c532792e0eeb9493abfb6ec891aa "pdflatex"
-  "main.bbl" 1671355333 685 7980bb7a8f1dc4358c5c58b10698f5cf "bibtex main"
+  "main.aux" 1671364305 10147 eed6ebef82c6f8c067f0e76c18b9459e "pdflatex"
+  "main.bbl" 1671364303 826 9396d86ce614b69f492ca9a3c6828aaf "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1671355238 3981 b95cd3d8db894e8c166cf0f9db2de7d3 ""
-  "main.toc" 1671355967 1535 fb4797147a0402eabcc60739fa1fe598 "pdflatex"
+  "main.toc" 1671364305 1536 375ef30c5199ba4f291dff6bb506bbaf "pdflatex"
   (generated)
   "main.aux"
   "main.log"
