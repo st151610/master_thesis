@@ -1,6 +1,12 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{MJC{\etalchar{+}}14}
 
+\bibitem[Bha97]{Bhatia1997}
+Rajendra Bhatia.
+\newblock {\em Matrix {{Analysis}}}, volume 169 of {\em Graduate {{Texts}} in
+  {{Mathematics}}}.
+\newblock {Springer}, {New York, NY}, 1997.
+
 \bibitem[BT03]{Bertsekas2003}
 Dimitri~P. Bertsekas and John~N. Tsitsiklis.
 \newblock Parallel and {{Distributed Computation}}:{{Numerical Methods}}.
@@ -12,6 +18,11 @@ Lester Mackey, Michael~I. Jordan, Richard~Y. Chen, Brendan Farrell, and Joel~A.
 \newblock Matrix concentration inequalities via the method of exchangeable
   pairs.
 \newblock {\em The Annals of Probability}, 42(3), May 2014.
+
+\bibitem[Pet94]{Petz1994}
+D{\'e}nes Petz.
+\newblock A survey of certain trace inequalities.
+\newblock {\em Banach Center Publications}, 30(1):287--298, 1994.
 
 \bibitem[Roc70]{Rockafellar1970}
 R.~Tyrrell Rockafellar.
