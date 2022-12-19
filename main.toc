@@ -12,9 +12,9 @@
 \contentsline {chapter}{\numberline {4}Random Matrix Inequalities}{9}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Matrix Analysis}{9}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Matrix Concentration Inequalities via the Method of Exchangeable Pairs}{9}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Matrix Khintchin Inequality}{9}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Matrix Khintchin Inequality}{10}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Matrix Moment Inequality}{10}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Intrinsic Dimension}{10}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Empirical Processes}{11}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{12}{chapter.6}%
+\contentsline {section}{\numberline {4.5}Intrinsic Dimension}{11}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Empirical Processes}{12}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{13}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

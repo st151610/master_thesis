@@ -1,15 +1,16 @@
 # Fdb version 3
-["bibtex main"] 1671432079 "main.aux" "main.bbl" "main" 1671433746
+["bibtex main"] 1671437126 "main.aux" "main.bbl" "main" 1671437180
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1671360505 40855 38c34c2cbe991a3b6637c869ca6d2520 ""
-  "main.aux" 1671433745 11203 6b7963a408cbe658521b47ec646f029a "pdflatex"
+  "main.aux" 1671437180 11226 41424b590d8d525f930470bbec2557bb "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1671433743 "main.tex" "main.pdf" "main" 1671433746
+["pdflatex"] 1671437177 "main.tex" "main.pdf" "main" 1671437180
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1650183167 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
+  "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcti1200.tfm" 1650183167 2048 4bf576aaa733142ac4e68faea01bc92e ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1650183167 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -55,6 +56,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1650183167 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1650183167 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1650183167 136101 f533469f523533d38317ab5729d00c8a ""
+  "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb" 1650183167 198221 ca5aa71411090ef358a6cc78b7458365 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1650183167 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1650183167 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1650183167 40635 c40361e206be584d448876bba8a64a3b ""
@@ -154,17 +156,17 @@
   "chapters/notation_index.tex" 1669465352 876 fc24c8fd633396d30e0eb0da469cf1ba ""
   "chapters/random_matrix_ineq/intrinsic_dimension.tex" 1671204990 1635 d379d0a4c17ea76a294d05f477cf72d4 ""
   "chapters/random_matrix_ineq/matrix_analysis.tex" 1671204389 2239 c8c3547de12892b0520db73c9350171d ""
-  "chapters/random_matrix_ineq/matrix_khintchine.tex" 1671433743 1884 a4a691c5490f40c347d048697baabc34 ""
+  "chapters/random_matrix_ineq/matrix_khintchine.tex" 1671435071 2268 6a8dcc4cf4a6ec93c3a8bab0651207a7 ""
   "chapters/random_matrix_ineq/matrix_moment_ineq.tex" 1671194222 1744 3241610ae5f9711f6540bd7b9b6f091a ""
-  "chapters/random_matrix_ineq/method_of_exchangable_pairs.tex" 0 -1 0 ""
+  "chapters/random_matrix_ineq/method_of_exchangable_pairs.tex" 1671437177 2124 2fcd4349260d545f2e5635aea6404555 ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1671433745 11203 6b7963a408cbe658521b47ec646f029a "pdflatex"
-  "main.bbl" 1671432079 826 9396d86ce614b69f492ca9a3c6828aaf "bibtex main"
+  "main.aux" 1671437180 11226 41424b590d8d525f930470bbec2557bb "pdflatex"
+  "main.bbl" 1671437126 826 9396d86ce614b69f492ca9a3c6828aaf "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1671433000 4124 022cdea2e8eec290675bf30ff857b0ec ""
-  "main.toc" 1671433745 1668 66e9cf2fca26a66f7655298e4b294e94 "pdflatex"
+  "main.toc" 1671437180 1669 4aeba7b72b0f238d309c074a94393861 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
