@@ -991,6 +991,10 @@ INPUT ./chapters/random_matrix_ineq/matrix_analysis.tex
 INPUT chapters/random_matrix_ineq/matrix_analysis.tex
 INPUT ./chapters/random_matrix_ineq/matrix_analysis.tex
 INPUT chapters/random_matrix_ineq/matrix_analysis.tex
+INPUT ./chapters/random_matrix_ineq/method_of_exchangable_pairs.tex
+INPUT chapters/random_matrix_ineq/method_of_exchangable_pairs.tex
+INPUT ./chapters/random_matrix_ineq/method_of_exchangable_pairs.tex
+INPUT chapters/random_matrix_ineq/method_of_exchangable_pairs.tex
 INPUT ./chapters/random_matrix_ineq/matrix_khintchine.tex
 INPUT chapters/random_matrix_ineq/matrix_khintchine.tex
 INPUT ./chapters/random_matrix_ineq/matrix_khintchine.tex

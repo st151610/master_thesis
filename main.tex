@@ -21,15 +21,16 @@
 
 
 \newsavebox{\selvestebox}
-\newenvironment{colbox}[1]
-  {\newcommand\colboxcolor{#1}%
+\newenvironment{takeaways}
+  {
    \begin{lrbox}{\selvestebox}%
    \begin{minipage}{16cm}
+     \textbf{Takeaways}
    }
   {\end{minipage}\end{lrbox}%
    \begin{center}
 \setlength\fboxsep{.5cm}
-   \colorbox[HTML]{\colboxcolor}{\usebox{\selvestebox}}
+   \colorbox[HTML]{F8E0E0}{\usebox{\selvestebox}}
    \end{center}}
 % Theorem handle
 
@@ -117,6 +118,8 @@
 
   \section{Matrix Analysis}
   \input{chapters/random_matrix_ineq/matrix_analysis.tex}
+  \section{Matrix Concentration Inequalities via the Method of Exchangeable Pairs}
+  \input{chapters/random_matrix_ineq/method_of_exchangable_pairs.tex}
  \section{Matrix Khintchin Inequality}
   \input{chapters/random_matrix_ineq/matrix_khintchine.tex}
 %\input{chapters/random_matrix_ineq/application_rosenthal_pinelis.tex}
