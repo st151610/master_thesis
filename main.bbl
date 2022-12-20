@@ -29,6 +29,11 @@ R.~Tyrrell Rockafellar.
 \newblock {\em Convex {{Analysis}}}.
 \newblock {Princeton University Press}, 1970.
 
+\bibitem[Ruh70]{Ruhe1970}
+Axel Ruhe.
+\newblock Perturbation bounds for means of eigenvalues and invariant subspaces.
+\newblock {\em BIT Numerical Mathematics}, 10(3):343--354, September 1970.
+
 \bibitem[Tro15]{Tropp2015}
 Joel~A. Tropp.
 \newblock An {{Introduction}} to {{Matrix Concentration Inequalities}}, January
