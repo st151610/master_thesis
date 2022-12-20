@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1671523221 "main.aux" "main.bbl" "main" 1671523322
+["bibtex main"] 1671530401 "main.aux" "main.bbl" "main" 1671531005
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1671439705 42461 61a8ac2af2ffdee3ad12a708dfa9f136 ""
-  "main.aux" 1671523321 11367 54957b16c4129f22f26cbcd9bac405e2 "pdflatex"
+  "main.aux" 1671531004 11367 f104cd39b57238757d4af88c947ca4e9 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1671523319 "main.tex" "main.pdf" "main" 1671523322
+["pdflatex"] 1671531002 "main.tex" "main.pdf" "main" 1671531005
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1650183167 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -14,10 +14,13 @@
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1650183167 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1650183167 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1650183167 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1650183167 908 2921f8a10601f252058503cc6570e581 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1650183167 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1650183167 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1650183167 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1650183167 1332 f817c21a1ba54560425663374f1b651a ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1650183167 1344 8a0be4fe4d376203000810ad4dc81558 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1650183167 1332 1fde11373e221473104d6cc5993f046e ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm" 1650183167 1532 9162035f4e7176612125649e348e2195 ""
@@ -155,18 +158,18 @@
   "chapters/empirical_processes.tex" 1668183421 2528 e8befd8d5dbac6d5f48a629765e2b4cd ""
   "chapters/notation_index.tex" 1669465352 876 fc24c8fd633396d30e0eb0da469cf1ba ""
   "chapters/random_matrix_ineq/intrinsic_dimension.tex" 1671204990 1635 d379d0a4c17ea76a294d05f477cf72d4 ""
-  "chapters/random_matrix_ineq/matrix_analysis.tex" 1671523319 5126 5c50e45a5e0477c6c9c31029e8b85197 ""
+  "chapters/random_matrix_ineq/matrix_analysis.tex" 1671531002 7078 991af9b76ebfe6824ea35a2d64292b42 ""
   "chapters/random_matrix_ineq/matrix_khintchine.tex" 1671439884 2316 4626b400f21a47563dfc6dfe328734af ""
   "chapters/random_matrix_ineq/matrix_moment_ineq.tex" 1671194222 1744 3241610ae5f9711f6540bd7b9b6f091a ""
   "chapters/random_matrix_ineq/method_of_exchangable_pairs.tex" 1671438386 2714 76c91ac53bd6a5ded3c6313130e5db27 ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1671523321 11367 54957b16c4129f22f26cbcd9bac405e2 "pdflatex"
-  "main.bbl" 1671523221 1173 1e7198f2ddc0f48cb4b12f3e9f90714d "bibtex main"
+  "main.aux" 1671531004 11367 f104cd39b57238757d4af88c947ca4e9 "pdflatex"
+  "main.bbl" 1671530401 1173 1e7198f2ddc0f48cb4b12f3e9f90714d "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1671433000 4124 022cdea2e8eec290675bf30ff857b0ec ""
-  "main.toc" 1671523321 1670 201ee7e3f91b73350def6297d2c92555 "pdflatex"
+  "main.toc" 1671531004 1670 201ee7e3f91b73350def6297d2c92555 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

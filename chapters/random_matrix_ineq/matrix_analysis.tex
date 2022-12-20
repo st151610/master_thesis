@@ -249,6 +249,152 @@
   .
   \end{align}
   The inequality is reversed, if $h^{'}$ is concave.
+  $
+  $
+  To apply the Kleins inequality we expand the terms.
+  The RHS is
+  \begin{align}
+    \begin{split}
+  &(
+    g(a) - g(b)
+  )
+  \cdot
+  (a-b)
+  \cdot  
+  (
+    h^{'}
+    (a)
+    +
+    h^{'}
+    (b)
+  )
+  \\
+  &\quad=
+  [
+g(a)\cdot a \cdot h^{'}(a)
+  ]
+    +
+    [g(a)\cdot a] \cdot h^{'}(b)
+  -
+  b \cdot[h^{'}(a)\cdot g(a)]
+  -
+  [b \cdot h^{'}(b)]\cdot g(a)
+  \\
+  &\qquad
+  +
+    [
+\ \text{the same as above with $a$ and $b$ reversed}\ 
+  ]
+  (a \rightleftarrows b)
+  \\
+  \end{split}
+  \end{align}
+  Taking the trace yields
+  \begin{align}
+    \begin{split}
+&
+\mathrm{tr}
+  [
+    g(\mathbf{A})
+    \cdot
+    \mathbf{A}
+    \cdot
+    (
+    h^{'}(\mathbf{A})
+    +
+    h^{'}(\mathbf{B})
+    )
+  ]
+  -
+  \mathrm{tr}
+  [
+    \mathbf{B}
+    \cdot
+    (
+    h^{'}(\mathbf{A})
+    +
+    h^{'}(\mathbf{B})
+    )
+    \cdot
+    g(\mathbf{A})
+  ]
+  +
+  (\mathbf{A} \rightleftarrows \mathbf{B})
+  \\
+  &\quad=
+\mathrm{tr}
+  [
+    g(\mathbf{A})
+    \cdot
+    \mathbf{A}
+    \cdot
+    (
+    h^{'}(\mathbf{A})
+    +
+    h^{'}(\mathbf{B})
+    )
+  ]
+  -
+  \mathrm{tr}
+  [
+    g(\mathbf{A})
+    \cdot
+    \mathbf{B}
+    \cdot
+    (
+    h^{'}(\mathbf{A})
+    +
+    h^{'}(\mathbf{B})
+    )
+  ]
+  +
+  (\mathbf{A} \rightleftarrows \mathbf{B})
+  \\
+  &\quad=
+  \mathrm{tr}
+  [
+    g(\mathbf{A})
+    \cdot
+    (
+    \mathbf{A}
+    -
+    \mathbf{B}
+    )
+    \cdot
+    (
+    h^{'}(\mathbf{A})
+    +
+    h^{'}(\mathbf{B})
+    )
+  ]
+  +
+  (\mathbf{A} \rightleftarrows \mathbf{B})
+  \\
+  &\quad=
+  \mathrm{tr}
+  [
+  (
+    g(\mathbf{A})
+    -
+    g(\mathbf{B})
+  )
+    \cdot
+    (
+    \mathbf{A}
+    -
+    \mathbf{B}
+    )
+    \cdot
+    (
+    h^{'}(\mathbf{A})
+    +
+    h^{'}(\mathbf{B})
+    )
+  ].
+    \end{split}
+  \end{align}
+  On the LHS we have only products of two factors which commute under the trace operation. Thus we may use the same expression as in the scalar case without further calculations.
+  The result follows immediately from the Klein inequality.
 \end{proof}
 
 \begin{proposition}
