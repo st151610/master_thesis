@@ -15,6 +15,6 @@
 \contentsline {section}{\numberline {4.3}Matrix Khintchin Inequality}{11}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Matrix Moment Inequality}{12}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Intrinsic Dimension}{12}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Empirical Processes}{13}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{14}{chapter.6}%
+\contentsline {chapter}{\numberline {5}Empirical Processes}{14}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{15}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

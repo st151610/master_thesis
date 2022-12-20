@@ -71,6 +71,54 @@
   eigenvalue decomposition we choose.
   Any matrix function that arises in this fashion is called a \textbf{standard matrix function}.
 
+  For each $p\ge 1$
+  the \textbf{Schatten $p$-norm} is defined as 
+  $
+    \norm{\mathbf{B}}_p
+    :=
+    (
+    \mathrm{tr}(\left| \mathbf{B} \right|^p)
+    )
+    ^{1/p}
+    \ 
+    \text{for}
+    \ 
+    \mathbf{B} \in \mathbb{M}_d.
+  $
+  In this setting,
+  $
+  \left| \mathbf{B} \right|
+  :=
+  (
+    \mathbf{B}^*
+    \mathbf{B}
+    )^{1/2}
+    .
+  $
+  The \textbf{spectral norm}
+  of an Hermitian matrix $\mathbf{A}$
+  is defined by the relation
+  $
+    \norm{\mathbf{A}}
+    :=
+    \lambda_{\mathrm{max}}(\mathbf{A})
+    \lor
+    (
+    -\lambda_{\mathrm{min}}(\mathbf{B})
+    )
+    .
+  $
+  For a general matrix $\mathbf{B},$
+  the spectral norm is defined to be the largest singular value:
+  $
+    \norm{\mathbf{B}}
+    :=
+    \sigma_1(\mathbf{B})
+    .
+  $
+  The Schatten $p$-norm dominates the spectral norm for all $p\ge 1.$
+
+
 
 \begin{proposition}
   Let

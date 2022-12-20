@@ -55,6 +55,117 @@
 \end{theorem}
 \begin{proof}
   \emph{\cite[§7.3]{Mackey2014}}
+  Suppose that
+  $
+  (
+    \mathbf{X}
+    ,
+    \mathbf{X}^{'}
+  )
+  $
+  is a matrix Stein pair with scale factor $\alpha.$
+  First, observe that the result for $p=1$ already follows from 
+  $
+    \E[\mathbf{\Delta_X}]
+    =
+    \E[\mathbf{X}^2]
+    .
+  $
+  Therefore we may assume that $p\ge 3/2.$
+  We introduce the notation for the quantity of interest,
+  \begin{gather}
+    E
+    :=
+    \E[
+    \norm{\mathbf{X}}_{2p}^{2p}
+    ]
+    =
+    \E
+    [
+    \mathrm{tr}
+    (
+    \left| \mathbf{X} \right|^{2p}
+    )
+    ].
+  \end{gather}
+  We rewrite the expression for $E$
+  by peeling off a copy of $\left| \mathbf{X} \right|.$
+  This yields
+  \begin{gather}
+    E
+    =
+    \E
+    [
+    \mathrm{tr}
+    (
+    \left| \mathbf{X} \right|
+    \cdot
+    \left| \mathbf{X} \right|^{2p-1}
+    )
+    ]
+    =
+    \E
+    [
+    \mathrm{tr}
+    (
+    \mathbf{X}
+    \cdot
+    \mathrm{sgn}
+    (
+      \mathbf{X}
+    )
+    \cdot
+    \left| \mathbf{X} \right|^{2p-1}
+    )
+    ]
+    .
+  \end{gather}
+  Apply the method of exchangable pairs with 
+  $
+    \mathbf{F}
+    (\mathbf{X})
+    =
+    \mathrm{sgn}
+    (\mathbf{X})
+    \cdot
+    \left| \mathbf{X} \right|^{2p-1}
+  $
+  to reach
+  \begin{gather}
+    E
+    =
+    \frac{1}{2\alpha}
+    \E
+    [
+    \mathrm{tr}
+    (
+    (
+    \mathbf{X}
+    -
+    \mathbf{X}^{'}
+    )
+    \cdot
+    (
+    \mathrm{sgn}
+    (
+      \mathbf{X}
+    )
+    \cdot
+    \left| \mathbf{X} \right|^{2p-1}
+    -
+    \mathrm{sgn}
+    (
+    \mathbf{X}^{'}
+    )
+    \cdot
+    | \mathbf{X}^{'} |^{2p-1}
+    )
+    )
+    ]
+  \end{gather}
+
+
+
   Apply method of exchangeable pairs,
   generalized Klein inequality,
   trace Hölder
