@@ -100,6 +100,157 @@
       $
   \end{enumerate}
 \end{proposition}
+
+
+\begin{lemma}
+  \emph{(Mean value trace inequality)}
+  Let 
+  $I$
+  be an interval of the real line. Suppose that
+  $
+    g:
+    I \to \R
+  $
+  is a weakly increasing function and that 
+  $
+    h:
+    I \to \R
+  $
+  is a function whose derivative $h^{'}$ is convex.
+  Then for all matrices 
+  $
+    \mathbf{A}
+    ,
+    \mathbf{B}
+    \in 
+    \mathbb{H}_d(I)
+  $
+  it holds
+  \begin{gather}
+    \overline{\mathrm{tr}}
+    [
+    (
+      g(\mathbf{A}) - g(\mathbf{B})
+    )
+    \cdot
+    (
+      h(\mathbf{A}) - h(\mathbf{B})
+    )
+    ]
+    \le
+    \frac{1}{2}
+    \,
+    \overline{\mathrm{tr}}
+    [
+    (
+      g(\mathbf{A}) - g(\mathbf{B})
+    )
+    \cdot
+    (
+    \mathbf{A}
+    -
+    \mathbf{B}
+    )
+    \cdot
+    (
+    h^{'}(\mathbf{A}) + h^{'}(\mathbf{B})
+    )
+    ]
+    .
+  \end{gather}
+  When $h^{'}$ is concave, the inequality is reversed. The same result holds for the standard trace.
+\end{lemma}
+\begin{proof}
+  \emph{\cite[Lemma~3.4]{Mackey2014}}
+  Fix 
+  $
+    a,b
+    \in
+    I
+.
+  $
+  Since 
+  $g$
+  is
+  weakly increasing,
+  $
+  (
+    g(a) - g(b)
+  )
+  \cdot
+  (a-b)
+  \ge 0.
+  $
+  The 
+  fundamental theorem of calculus and the convexity of 
+  $h^{'}$
+  yield the estimate
+  \begin{align}
+  (
+    g(a) - g(b)
+  )
+  \cdot
+  (
+    h(a) - h(b)
+  )
+  &=
+  (
+    g(a) - g(b)
+  )
+  \cdot
+  (a-b)
+  \int_0^1
+  h^{'}
+  (
+    \tau a + (1-\tau) b
+  )
+  \mathrm{d}\tau
+  \\
+  &\le
+  (
+    g(a) - g(b)
+  )
+  \cdot
+  (a-b)
+  \int_0^1
+  [
+  \tau
+  h^{'}
+  (
+     a 
+  )
+  +
+  (1-\tau)
+  h^{'}
+  (
+     b 
+  )
+  ]
+  \mathrm{d}\tau
+  \\
+  &=
+  \frac{1}{2}
+  \,
+  [
+  (
+    g(a) - g(b)
+  )
+  \cdot
+  (a-b)
+  \cdot  
+  (
+    h^{'}
+    (a)
+    +
+    h^{'}
+    (b)
+  )
+  ]
+  .
+  \end{align}
+  The inequality is reversed, if $h^{'}$ is concave.
+\end{proof}
+
 \begin{proposition}
   \emph{(Generalized Klein inequality)}
   Let 
@@ -144,6 +295,10 @@
 \begin{proof}
   \emph{\cite[Proposition~3]{Petz1994}}
 \end{proof}
+
+
+
+
 \begin{proposition}
   \emph{(Hölder inequality for trace)}
   Let 
