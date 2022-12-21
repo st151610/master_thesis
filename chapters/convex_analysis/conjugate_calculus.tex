@@ -1,8 +1,6 @@
-When studying different primal problems such as \eqref{primal_weighting_binary} we often turn to the dual instead.
-Therefore we need some reliable tools.
-Begin able to compute specific convex conjugates is one tool required.
-
-
+The goal of this section is to establish the tools to calculate convex conjugates. 
+We prove the conjugate sum and chain rule.
+After some examples we will derive the Fenchel-Rockafellar Theorem.
 \begin{definition}
   \label{ def_convex_conjugate }
   \emph{(Convex conjugate)}
@@ -45,28 +43,6 @@ does not have to be convex. On the other hand, the convex conjugate is always co
   is convex.
 \end{proposition}
 
-\begin{definition}
-  Given a nonempty subset 
-  $\Omega \subseteq \R^n$
-  the \textbf{support function} 
-  $
-  \sigma_\Omega : \R^n \to \overline{\R}
-  $
-  of $\Omega$
-  is defined by
-  \begin{gather}
-    \sigma_\Omega
-    (x^*)
-    :=
-    \sup_{x \in \Omega}
-    \ 
-    \inner{x^*}{x}
-    \qquad
-    \text{for}\ 
-    x^* \in \R^n
-    .
-  \end{gather}
-\end{definition}
 
 \begin{lemma}
   For any proper function
@@ -146,9 +122,6 @@ does not have to be convex. On the other hand, the convex conjugate is always co
 \end{proof}
 % conjugate chain rule %
  %%%%%%%%%%%%%%%%%%%%%%
-\begin{proposition}
-
-\end{proposition}
 \begin{theorem}
   \emph{(Conjugate Chain Rule)}
   \label{cvxa_conjugate_chain_rule}
@@ -198,31 +171,6 @@ does not have to be convex. On the other hand, the convex conjugate is always co
 % conjugate sum rule %
  %%%%%%%%%%%%%%%%%%%%
 
-\begin{definition}
-  \emph{(Infimal convolution)}
-  Given functions
-  $
-    f_i:
-    \R^n \to (-\infty, \infty]
-  $
-  for $ i = 1, \ldots, n $
-  the \textbf{infimal convolution} of these functions as defined as
-  \begin{gather}
-    (f_1 \square \ldots \square f_m)(x)
-    :=
-    \inf_{
-    \begin{smallmatrix}
-      x_i \in \R^n \\
-      \sum_{i = 1}^{m} 
-        x_i
-      =
-      x
-    \end{smallmatrix}
-    }
-    \sum_{i = 1}^{m}
-      f_i(x_i)
-  \end{gather}
-\end{definition}
 
 
 \begin{theorem}
@@ -442,3 +390,234 @@ does not have to be convex. On the other hand, the convex conjugate is always co
   \end{align}
   This finishes the proof.
 \end{proof}
+
+
+
+
+Given 
+proper convex functions $f, g : \R^n \to \overline{\R}$ 
+and
+a matrix $A \in \R^{n \times n}$,
+we define 
+the primal minimization problem as follows:
+\begin{problem}
+  \emph{(Primal)}
+  Given proper convex functions 
+  $
+  f:\R^n \to \overline{\R} 
+  $,
+  $
+  g:\R^m \to \overline{\R} 
+  $
+  and a matrix 
+  $
+    A\in \R^{m \times n}
+  $
+  we define the \textbf{primal optimization problem} to be
+  \label{cvxa_primal_problem}
+  \begin{gather*}
+    \underset{x \in \R^n}{\mathrm{minimize}}
+    \qquad
+    f(x) + g(Ax)
+  \end{gather*}
+\end{problem}
+\begin{remark}
+  Problem \autoref{cvxa_primal_problem}
+  appears in the unconstrained form. We can impose constraints by controling for the domains of $f$ and $g$.
+  To incorporate linear constraints $Ax \le 0$
+  or more general constraints $x\in\Omega$, where $\Omega$ is a convex set,
+  we can choose
+  \begin{gather}
+    g(x)=\delta_\Omega(x):=
+  \end{gather}
+  where $x\notin\Omega$
+  leads to 
+  $f(x) + g(x)=\infty$
+  and the optimization problem (if feasible) will exclude $x$ from the solutions.
+\end{remark}
+\begin{problem}
+  \emph{(Dual)}
+  \label{cvxa_dual_problem}
+  Consider the same setting as in Problem~\autoref{cvxa_primal_problem}.
+  Using the convex conjugates of $f,g$ and the transpose of $A$
+  we define the \textbf{dual problem} of Problem~\autoref{cvxa_primal_problem} to be
+  \begin{gather*}
+    \underset{y^* \in \R^m}{\mathrm{maximize}}
+    \qquad
+   - f^*(A^\top y^*) - g^*(y^*).
+  \end{gather*}
+\end{problem}
+\begin{proposition}
+  Consider the optimization problem~\autoref{cvxa_primal_problem} and its dual~\autoref{cvxa_dual_problem}, where the functions $f$ and $g$ are not assumed to be convex. Define the \textbf{optimal values} of these problems by
+  \begin{gather*}
+    \widehat{p}:= \inf_{x\in\R^n}f(x)+g(Ax)
+    \quad
+    \text{and}
+    \quad
+    \widehat{d}:= \sup_{y\in\R^m} - f^*(A^\top y) - g^*(y).
+  \end{gather*}
+  Then we have the relationship
+  $\widehat{d}\le \widehat{p}$.
+\end{proposition}
+\begin{proof}
+  It holds
+  \begin{align*}
+    - f^*(A^\top y^*) - g^*(y^*) 
+    &=
+      -\sup_{x\in \R^n}\inner{A^\top y^*}{x}-f(x)
+      -\sup_{y\in \R^m}\inner{-y^*}{y}-g(y)
+      \\
+    &=
+    \inf_{x\in \R^n}f(x)-\inner{y^*}{Ax}
+      +\inf_{y\in \R^m}g(y)+\inner{y^*}{y}
+      \\
+    &\le
+      \inf_{x\in \R^n}f(x)-\inner{y^*}{Ax}
+      +\inf_{x\in \R^n}g(Ax)+\inner{y^*}{Ax}
+      \\
+    &\le
+      \inf_{x\in \R^n}f(x)-\inner{y^*}{Ax} + g(Ax) + \inner{y^*}{Ax}
+      \\
+    &=  
+      \inf_{x\in \R^n}f(x)+g(Ax)
+    =
+      \widehat{p}
+  \end{align*}
+  The first equality is due to the definition of convex conjugates, the second equality due to $\inner{A^\top y}{x}=\inner{y}{Ax}$ and $\inf \left\{ -B \right\}=-\sup \left\{ B \right\}$ for all $B \subseteq \overline{\R}$ and the first inequality due to $\mathrm{Im}(A)\subseteq \R^m$.
+  Taking the supremum with respect to all 
+  $y^*\in\R^m$
+  yields the result.
+\end{proof}
+\begin{theorem}
+  \label{cvxa_fenchel_theorem}
+  Let 
+  $f, g : \R^n \to \overline{\R}$ 
+  be proper convex functions
+  and
+  $0 \in \text{ri}(\text{dom}(g) - A (\text{dom}(f)) )$
+  .
+  Then the optimal values of \eqref{cvxa_primal_problem} and \eqref{cvxa_dual_problem} are equal, 
+  i.e.
+  \begin{gather}
+    \inf_{x \in \R^n} 
+    \left\{ f(x) + g(Ax) \right\}
+    =
+    \sup_{y \in \R^n} \left\{   -f^* \left( A^T y \right) - g^*(-y) \right\}
+    .
+  \end{gather}
+\end{theorem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{lemma}
+  \label{syu_1_result}
+  Let 
+  $f : \R^n \to (-\infty, \infty]$ 
+  be convex.
+  Then 
+  for all $y \in \R^n$ and $C>0$ 
+    \begin{gather}
+      \label{7060_0}
+      \inf_{\norm{\Delta}=C} f(y+\Delta) - f(y) \ge 0 \quad
+      \Longrightarrow
+      \quad
+    \exists y^* \in \R^n
+    \colon
+    y^* \,\text{is global minimum of $f$ and}\,
+      \norm{y^* - y} \le C.
+    \end{gather}
+\end{lemma}
+\begin{proof}
+  Since 
+  $\mathcal{C}:=\left\{ \norm{\Delta}\le C \right\}$
+  is convex
+  $f$ has a local minimum in 
+  $
+    y + \mathcal{C}
+    :=
+    \left\{ 
+      y + \Delta \,
+      \mid \,
+      \norm{\Delta}\le C
+    \right\}
+    .
+  $
+  Suppose towards a contradiction that
+  $
+    y^* \in 
+            y + \mathcal{C}
+  $
+  is a local minimum, but not a global minimum 
+  and
+  the left-hand side of 
+  \eqref{7060_0} is true.
+  Then it holds
+  \begin{gather}
+    \label{7060_3}
+    f(x) < f(y^*)
+    \quad
+    \text{for some}\ 
+    x 
+    \in 
+    \R^n 
+    \setminus 
+      y + \mathcal{C}
+    .
+  \end{gather}
+  Furthermore since $y + \mathcal{C}$ is compact and contains $y^*$,
+  the line segment $\mathcal{L}[y^*,x]$ contains a point on the boundary of 
+  $y + \mathcal{C}$, i.e.
+  \begin{gather}
+    \label{7060_4}
+    \theta x + (1 - \theta) y^* = y + \Delta_x
+    \quad
+    \text{for some}\ 
+    \theta \in (0,1)\ 
+    \text{and}\ 
+    \Delta_x \ 
+    \text{with}\ 
+    \norm{\Delta_x}=C
+    .
+  \end{gather}
+    It follows
+    \begin{align}
+      \label{7060_5}
+      \begin{split}
+      f(y^*)
+      \le
+      f(y)
+      \le
+      f(y + \Delta_x)
+      &=
+      f(
+        \theta x + (1 - \theta) y^*
+      )
+      \\
+      &\le
+      \theta f(x)
+      + 
+      (1 - \theta)
+      f(y^*)
+      <
+      f(y^*)
+      ,
+      \end{split}
+    \end{align}
+    which is a contradiction.
+    Thus every local minimum of $f$ in $y + \mathcal{C}$ is also a global minimum.
+    The first inequality is due to
+    $y^*$ being a local minimum of $f$ in
+    $
+      y + \mathcal{C},
+    $
+    the second inequality is due to the left-hand side of 
+    \eqref{7060_0} being true,
+    the equality is due to \eqref{7060_4},
+    the third inequality is due to the convexity of $f$
+    and the strict inequality is due to \eqref{7060_3}.
+    %It follows the right-hand side of \eqref{7060_0}.
+\end{proof}
+
+
+\begin{takeaways}
+  Almost there 
+  \lipsum[1]
+\end{takeaways}

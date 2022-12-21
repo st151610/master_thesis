@@ -72,7 +72,6 @@ $
 $
 The image and inverse image/preimage of convex sets under affine mappings are also convex.
 
-\section{Relative interiors}
 
 
 
@@ -99,8 +98,12 @@ The image and inverse image/preimage of convex sets under affine mappings are al
   is the smallest affine set that includes $\Omega.$
 \end{definition}
 
+
+Because the notion of interior is not precise enough for our purposes
+we define the relative interior which is the interior relative to the affine hull.
+
+
 \begin{definition}
-  \emph{(Relative interior)}
   Let 
   $\Omega\subseteq \R^n.$
   We define the \textbf{relative interior} of $\Omega$ by
@@ -120,10 +123,13 @@ The image and inverse image/preimage of convex sets under affine mappings are al
       \Omega
     \right\}.
   \end{gather}
-
-\begin{proposition}
+\end{definition}
+Next we collect some useful properties of relative interiors.
+\begin{ftheorem}
   Let $C$ be a non-empty convex set in $\R^n.$ Then we get the representation
-  \begin{gather}
+\begin{enumerate}[label={(\roman*)}]
+  \item
+    $
     \mathrm{ri}(C)
     =
     \left\{ 
@@ -137,10 +143,103 @@ The image and inverse image/preimage of convex sets under affine mappings are al
       z + t (z-x)
       \in C
     \right\}.
-  \end{gather}
-\end{proposition}
+    $
+  \item
+    $
+      \mathrm{cl}(C)
+      \ 
+      \text{and}\ 
+      \mathrm{ri}(C)
+    $
+    are convex sets.
+  \item
+    $
+      \mathrm{cl}(\mathrm{ri}(C))
+      =
+      \mathrm{cl}(C)
+      \ 
+      \text{and}
+      \  
+      \mathrm{ri}(\mathrm{cl}(C))
+      =
+      \mathrm{ri}(C)
+      .
+    $
+  \item
+    Suppose
+    $
+      \bigcap_{i\in I} C_i
+      \neq
+      \emptyset
+    $
+    for a finite index set $I.$
+    Then
+    $
+      \mathrm{ri}
+      \left( 
+        \bigcap_{i\in I} C_i
+      \right)
+      =
+      \bigcap_{i\in I}  
+      \mathrm{ri}(C_i)
+      .
+    $
+    \item
+      Let 
+      $
+        L:\R^n \to \R^m
+      $
+      be a linear mapping. Then
+      $
+        \mathrm{ri}(L(C))
+        =
+        L(\mathrm{ri}(C))
+        .
+      $
+      If additionaly it holds
+      $
+        L^{-1}(\mathrm{ri}(C))
+        \neq
+        \emptyset
+      $
+      we have
+      $
+      \mathrm{ri}(L^{-1}(C))
+        =
+        L^{-1}(\mathrm{ri}(C))
+        .
+      $
+      \item
+        $
+          \mathrm{ri}(C_1\times C_2)
+          = 
+          \mathrm{ri}(C_1)
+          \times
+          \mathrm{ri}(C_2).
+        $
+      \item
+        $
+          \mathrm{ri}(C_1)
+          \cap
+          \mathrm{ri}(C_2)
+          =
+          \emptyset
+        $
+        if and only if
+        $
+          0 \notin
+          \mathrm{ri}
+          (C_1 - C_2)
+          .
+        $
+\end{enumerate}
+
+\end{ftheorem}
+
+
 \begin{proof}
   \cite[Theorem~6.4]{Rockafellar1970}
+  th (i)
 \end{proof}
 \begin{proposition}
   Let $C_1\subseteq \R^{n_1}$ and $C_2\subseteq \R^{n_2}$ be two non-empty convex sets. Then it holds
@@ -216,7 +315,8 @@ The image and inverse image/preimage of convex sets under affine mappings are al
   This proves $\supseteq$ and equality.
 \end{proof}
  
-\section{Convex Separation}
+We procede with convex separation results which are vital to the subsequent developments.
+
 \begin{definition}
   Let 
   $C_1$ and $C_2$
@@ -262,10 +362,11 @@ The image and inverse image/preimage of convex sets under affine mappings are al
 \begin{proof}
   \cite[Theorem~11.3]{Rockafellar1970}
 \end{proof}
-\end{definition}
+
+
+
+
 \begin{definition}
-  \emph{(Support function intersection rule)}
-  \emph{(Support function)}
   Given a nonempty subset 
   $\Omega \subseteq \R^n$
   the \textbf{support function} 
@@ -287,6 +388,36 @@ The image and inverse image/preimage of convex sets under affine mappings are al
     .
   \end{gather}
 \end{definition}
+
+
+\begin{definition}
+  Given functions
+  $
+    f_i:
+    \R^n \to (-\infty, \infty]
+  $
+  for $ i = 1, \ldots, n $
+  the \textbf{infimal convolution} of these functions is defined as
+  \begin{gather}
+    (f_1 \square \ldots \square f_m)(x)
+    :=
+    \inf_{
+    \begin{smallmatrix}
+      x_i \in \R^n \\
+      \sum_{i = 1}^{m} 
+        x_i
+      =
+      x
+    \end{smallmatrix}
+    }
+    \sum_{i = 1}^{m}
+      f_i(x_i)
+  \end{gather}
+\end{definition}
+ 
+The next result establishes a connection between the support function of the intersection of two convex sets and the infimal convolution of the support functions of the sets taken by themselfes.
+The proof translates the geometric concept of convex separation to the world of convex functions.
+
 \begin{ftheorem}
   Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$ with
   $\mathrm{ri}(C_1)\cap\mathrm{ri}(C_2)\neq\emptyset.$
@@ -554,4 +685,6 @@ a contradiction.
 \end{proof}
 
 \begin{takeaways}
+  This primer is somewhat confusing.
+  \lipsum[5]
 \end{takeaways}

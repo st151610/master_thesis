@@ -107,12 +107,26 @@
 
 
 \chapter{Convex Analysis}
-  \section{Basic Notions}
-  %\input{chapters/convex_analysis/basic_notions.tex}
-  \section{Relative Interior}
-  %\input{chapters/convex_analysis/relative_interior.tex}
-  \section{Conjugate Calculus}
-  %\input{chapters/convex_analysis/conjugate_calculus.tex}
+In our application we want to analyze a convex optimization problem by its dual problem.
+In particular we want to obtain primal optimal solutions from dual solutions.
+To accomplish the task we need technical tools from convex analysis, 
+mainly conjugate calculus and some KKT related results.
+
+Our starting point is the support function intersection rule, which we will prove in full detail employing a theorem on convex separation is finite dimensions.
+To this end, we will have a closer look in relative interiors and support functions.
+As an application we may prove the conjugate chain and sum rule,
+which are vital to application of duality. As a simple corollary we will obtain the classical Fenche-Rockafellar Duality theorem
+which gives general conditions for dual und primal optimal values to be equal.
+
+The material we present is very well known, so we claim no originality. We orient our exposition closly by
+\cite{Rockafellar1970, Mordukhovich2022}
+.
+
+We finish the chapter with an exposition of \cite{Tseng1991}, where for strictly convex functions we get a dual relationship in terms of the optimal solutions.
+  \section{A Convex Analysis Primer}
+  \input{chapters/convex_analysis/cvxa_primer.tex}
+  \section{Conjugate Calculus and Fenchel-Rockafellar Theorem}
+  \input{chapters/convex_analysis/conjugate_calculus.tex}
 %\input{chapters/convex_analysis.tex}
   \section{Tseng Bertsekas}
   \input{chapters/convex_analysis/tseng_bertsekas.tex}
@@ -133,7 +147,7 @@
   \input{chapters/random_matrix_ineq/matrix_analysis.tex}
   \section{The Method of Exchangeable Pairs}
   \input{chapters/random_matrix_ineq/exchangable_pairs.tex}
- \section{Matrix Khintchin Inequality}
+ \section{Matrix Khintchin Inequality and Applications}
  The goal of this section is to derive the matrix Khintchin inequality and show some important applications.
  For this we need an auxiliary theorem which is an extension of the 
  \textit{Burkholder-Davis-Gundy (BDG) inequality} from classical martingale theory~\cite{Burkholder1973}.

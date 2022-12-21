@@ -24,6 +24,13 @@ Lester Mackey, Michael~I. Jordan, Richard~Y. Chen, Brendan Farrell, and Joel~A.
   pairs.
 \newblock {\em The Annals of Probability}, 42(3), May 2014.
 
+\bibitem[MMN22]{Mordukhovich2022}
+Boris~S. Mordukhovich and Nguyen Mau~Nam.
+\newblock {\em Convex {{Analysis}} and {{Beyond}}: {{Volume I}}: {{Basic
+  Theory}}}.
+\newblock Springer {{Series}} in {{Operations Research}} and {{Financial
+  Engineering}}. {Springer International Publishing}, {Cham}, 2022.
+
 \bibitem[Pet94]{Petz1994}
 D{\'e}nes Petz.
 \newblock A survey of certain trace inequalities.
@@ -46,6 +53,12 @@ Charles Stein.
 \newblock {\em Proceedings of the Sixth Berkeley Symposium on Mathematical
   Statistics and Probability, Volume 2: Probability Theory}, 6.2:583--603,
   January 1972.
+
+\bibitem[TB91]{Tseng1991}
+Paul Tseng and Dimitri~P. Bertsekas.
+\newblock Relaxation {{Methods}} for {{Problems}} with {{Strictly Convex
+  Costs}} and {{Linear Constraints}}.
+\newblock {\em Mathematics of Operations Research}, 16(3):462--481, 1991.
 
 \bibitem[Tro15]{Tropp2015}
 Joel~A. Tropp.
