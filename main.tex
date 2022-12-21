@@ -42,11 +42,13 @@
 \newtheorem{assumption}{Assumption}[chapter]
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{definition}{Definition}[chapter]
+\theoremstyle{remark}
 \newtheorem{example/}{Example}[chapter]
 \newenvironment{example}
   {\renewcommand{\qedsymbol}{$\diamondsuit$}%
    \pushQED{\qed}\begin{example/}}
   {\popQED\end{example/}}
+\theoremstyle{plain}
 \newtheorem{lemma}{Lemma}[chapter]
 \newtheorem{problem}{Problem}[chapter]
 \newtheorem{proposition}{Proposition}[chapter]

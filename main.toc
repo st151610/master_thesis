@@ -19,7 +19,7 @@
 \contentsline {section}{\numberline {4.5}Intrinsic Dimension}{24}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Empirical Processes}{25}{chapter.5}%
 \contentsline {section}{\numberline {5.1}A Primer on Empirical Processes}{25}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Maximal Inequalities}{25}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Functional Delta Method}{26}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{27}{chapter.6}%
+\contentsline {section}{\numberline {5.2}Maximal Inequalities}{26}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Functional Delta Method}{27}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{28}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -17,6 +17,11 @@ D.~L. Burkholder.
 \newblock Distribution {{Function Inequalities}} for {{Martingales}}.
 \newblock {\em The Annals of Probability}, 1(1):19--42, 1973.
 
+\bibitem[Kle20]{Klenke2020}
+Achim Klenke.
+\newblock {\em Probability {{Theory}}: {{A Comprehensive Course}}}.
+\newblock Universitext. {Springer International Publishing}, {Cham}, 2020.
+
 \bibitem[MJC{\etalchar{+}}14]{Mackey2014}
 Lester Mackey, Michael~I. Jordan, Richard~Y. Chen, Brendan Farrell, and Joel~A.
   Tropp.
@@ -70,6 +75,12 @@ A.~W. van~der Vaart.
 \newblock {\em Asymptotic {{Statistics}}}.
 \newblock Cambridge {{Series}} in {{Statistical}} and {{Probabilistic
   Mathematics}}. {Cambridge University Press}, {Cambridge}, 1998.
+
+\bibitem[vdvW13]{vaart2013}
+Aad van~der {vaart} and Jon Wellner.
+\newblock {\em Weak {{Convergence}} and {{Empirical Processes}}: {{With
+  Applications}} to {{Statistics}}}.
+\newblock {Springer Science \& Business Media}, March 2013.
 
 \bibitem[WZ19]{Wang2019}
 Yixin Wang and Jos{\'e}~R. Zubizarreta.
