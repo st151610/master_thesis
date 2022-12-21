@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1671615179 "main.aux" "main.bbl" "main" 1671615183
+["bibtex main"] 1671626147 "main.aux" "main.bbl" "main" 1671626836
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
-  "literature.bib" 1671600436 43852 94907881790d1c5f9df9b0215d11d9bc ""
-  "main.aux" 1671615182 13173 7e532ec5817d6c5601ca8d38a3283c09 "pdflatex"
+  "literature.bib" 1671625657 45262 d34dca9333ee7435634cb3ea8a2a00b5 ""
+  "main.aux" 1671626836 16078 a3a903decaf3c984e3e3be18cfb72033 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1671615179 "main.tex" "main.pdf" "main" 1671615183
+["pdflatex"] 1671626833 "main.tex" "main.pdf" "main" 1671626836
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1650183167 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -14,6 +14,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm" 1650183167 1040 b84415f97d114011685943ade933dc71 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm" 1650183167 1040 a9d2074f3fa062d4d9046b92e2334d8c ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm" 1650183167 1040 82eb6630b094bff824fccca83ff507f9 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1650183167 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1650183167 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -158,11 +159,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1668447558 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1668447517 2927666 1f051fb934722d94e995cdec3e18511c ""
+  "chapters/causal_inference.tex" 1671622574 4587 0be84870686b32a35ef510e187785d60 ""
   "chapters/chapter_1/app_conv_opt.tex" 1671279325 3966 8fc8def30276cca99391876a47417d0d ""
   "chapters/convex_analysis/conjugate_calculus.tex" 1671615175 13235 0f6569a8430e4730530e9f6bb7f0eb4c ""
   "chapters/convex_analysis/cvxa_primer.tex" 1671614744 11634 d3ca71ee0e2ee8f31a083434a297d511 ""
   "chapters/convex_analysis/tseng_bertsekas.tex" 1671433238 7676 e8991e69819ade911b84f71fb06df96c ""
-  "chapters/empirical_processes.tex" 1668183421 2528 e8befd8d5dbac6d5f48a629765e2b4cd ""
+  "chapters/empirical_processes/ep_primer.tex" 1671626025 1095 066ac004ecf741964ca505bf6a6fd2f7 ""
+  "chapters/empirical_processes/functional_delta_method.tex" 1671626831 1893 d4ae809ac9741bcacbe3342754b478dc ""
+  "chapters/empirical_processes/maximal_ineq.tex" 1671624136 3618 ee6cbec9722c8058e45395294b026f5c ""
   "chapters/notation_index.tex" 1669465352 876 fc24c8fd633396d30e0eb0da469cf1ba ""
   "chapters/random_matrix_ineq/application_rosenthal_pinelis.tex" 1670573507 2049 fef99346640ef15a2f126a3d4c85b33c ""
   "chapters/random_matrix_ineq/exchangable_pairs.tex" 1671610494 6095 ad13bfab19aae057e3a270ea4acc4ec3 ""
@@ -172,12 +176,12 @@
   "chapters/random_matrix_ineq/matrix_khintchine.tex" 1671610711 12348 b997ef594541f7b9d4961c06124da560 ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1671615182 13173 7e532ec5817d6c5601ca8d38a3283c09 "pdflatex"
-  "main.bbl" 1671615179 2433 335f5fa65a2b621f13ec26787cd2fa52 "bibtex main"
+  "main.aux" 1671626836 16078 a3a903decaf3c984e3e3be18cfb72033 "pdflatex"
+  "main.bbl" 1671626147 2910 150cfb1720ed4a9e539e84dae856e985 "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1671614032 6621 7127ea2d9a90c089279bd08e14f76934 ""
-  "main.toc" 1671615182 1651 6a11d5397944af99e80502400ef7b3a0 "pdflatex"
+  "main.tex" 1671624510 6954 f1dccaeab8aadf03fff8c7551088ef63 ""
+  "main.toc" 1671626836 2163 a9c5eb38b6d3b0d9c6a60f7e08e95f58 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

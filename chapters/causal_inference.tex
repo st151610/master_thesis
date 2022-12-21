@@ -1,0 +1,27 @@
+In this chapter we want to give a introduction to causal inference.
+We particularly highlight the role of propensity score analysis and explain its importance in observational studies.
+
+
+\section{The Rubin Causal Model}
+from wiki:
+The Rubin causal model (RCM), also known as the Neyman–Rubin causal model,[1] is an approach to the statistical analysis of cause and effect based on the framework of potential outcomes, named after Donald Rubin. The name "Rubin causal model" was first coined by Paul W. Holland.[2] The potential outcomes framework was first proposed by Jerzy Neyman in his 1923 Master's thesis,[3] though he discussed it only in the context of completely randomized experiments.[4] Rubin extended it into a general framework for thinking about causation in both observational and experimental studies.[1]
+\section{Propensity Score Analysis}
+from wiki:
+In the statistical analysis of observational data, propensity score matching (PSM) is a statistical matching technique that attempts to estimate the effect of a treatment, policy, or other intervention by accounting for the covariates that predict receiving the treatment. PSM attempts to reduce the bias due to confounding variables that could be found in an estimate of the treatment effect obtained from simply comparing outcomes among units that received the treatment versus those that did not. Paul R. Rosenbaum and Donald Rubin introduced the technique in 1983.[1]
+
+The possibility of bias arises because a difference in the treatment outcome (such as the average treatment effect) between treated and untreated groups may be caused by a factor that predicts treatment rather than the treatment itself. In randomized experiments, the randomization enables unbiased estimation of treatment effects; for each covariate, randomization implies that treatment-groups will be balanced on average, by the law of large numbers. Unfortunately, for observational studies, the assignment of treatments to research subjects is typically not random. Matching attempts to reduce the treatment assignment bias, and mimic randomization, by creating a sample of units that received the treatment that is comparable on all observed covariates to a sample of units that did not receive the treatment.
+
+For example, one may be interested to know the consequences of smoking. An observational study is required since it is unethical to randomly assign people to the treatment 'smoking.' The treatment effect estimated by simply comparing those who smoked to those who did not smoke would be biased by any factors that predict smoking (e.g.: gender and age). PSM attempts to control for these biases by making the groups receiving treatment and not-treatment comparable with respect to the control variables. 
+
+from a paper:
+Propensity score weighting is one of the techniques used in controlling for selection biases in non-
+experimental studies. Propensity scores can be used as weights to account for selection assignment
+differences between treatment and comparison groups. One of the advantages of this approach is
+that all the individuals in the study can be used for the outcomes evaluation
+
+
+\section{Weighting beyond the PS}
+from \cite{Wang2019}:
+Conventionally, the weights are estimated by modeling the propensities of receiving treatment or exhibiting missingness and then inverting the predicted propensities. However, with this approach it can be difficult to properly adjust for or balance the observed covariates. The reason is that this approach only balances covariates in expectation, by the law of large numbers, but in any particular data set it can be difficult to balance covariates, especially if the data set is small or if the covariates are sparse (Zubizarreta et al., 2011). In addition, this approach can result in very unstable estimates when a few observations have very large weights (e.g., Kang and Schafer 2007). To address these problems, a number of methods have been proposed recently. Instead of explicitly modeling the propensities of treatment or missingness, these methods directly balance the covariates. Some of these methods also minimize a measure of dispersion of the weights.
+
+Most of these weighting methods balance covariates exactly rather than approximately. This is a subtle but important difference because approximate balance can trade bias for variance whereas exact balance cannot. Also, exact balance may not admit a solution whereas approximate balance may do so. For a fixed sample size, approximate balance may balance more functions of the covariates than exact balance.

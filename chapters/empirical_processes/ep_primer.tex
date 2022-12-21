@@ -1,0 +1,91 @@
+Let 
+$
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+$
+be a probability space
+and
+$
+  \left( 
+    \mathcal{X},
+    \Sigma
+  \right)
+$
+a measurable space.
+Let 
+$
+  X_j
+  :
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+  \to
+  \left( 
+    \mathcal{X},
+    \Sigma
+  \right)
+  ,
+  j=1,\ldots, n
+$ be independent and identically-distributed (i.i.d.)
+random variables
+with probability distribution $\P_X$ 
+and
+$\mathcal{F}$ a family of measurable functions
+$
+  f:
+  \left( 
+    \mathcal{X},
+    \Sigma
+  \right)
+    \to
+  \left( 
+    \R,
+    \mathcal{B}(\R)
+  \right)
+$.
+Consider the map
+\begin{gather}
+  f
+  \mapsto
+  G_n f
+  :=
+  \sqrt{n}
+  \left( 
+    \frac{1}{n}
+    \sum_{i = 1}^{n}
+      f(X_i)
+    -
+    \P_X f
+  \right),
+\end{gather}
+where
+$
+  \P_X f 
+  :=
+  \int_\mathcal{X} f \text{d}\P_X.
+$
+We call 
+$
+  \left( 
+    G_n f
+  \right)_{f \in \mathcal{F}}
+$
+the empirical process indexed by $\mathcal{F}$.
+Furthermore
+\begin{gather}
+  \norm{G_n f}_\mathcal{F}
+  :=
+  \sup_
+        { f \in \mathcal{F}}
+        \left|
+          G_n f
+        \right|
+        .
+\end{gather}
+
+

@@ -67,6 +67,7 @@
 %
 \DeclarePairedDelimiterX{\inner}[2]{\langle}{\rangle}{#1, #2}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\G}{\mathbb{G}}
 \newcommand{\E}{\mathbf{E}}
 \renewcommand{\P}{\mathbf{P}}
 \newcommand{\R}{\mathbb{R}}
@@ -92,8 +93,11 @@
 
 \tableofcontents 
 
-\chapter{Introduction}
+%\chapter{Introduction}
 %\input{chapters/introduction.tex}
+
+\chapter{Causal Inference}
+\input{chapters/causal_inference.tex}
 
 \chapter{Balancing Weights}
   \section{Introduction}
@@ -166,7 +170,14 @@ We finish the chapter with an exposition of \cite{Tseng1991}, where for strictly
 
 
 \chapter{Empirical Processes}
-\input{chapters/empirical_processes.tex}
+\section{A Primer on Empirical Processes}
+\input{chapters/empirical_processes/ep_primer.tex}
+
+\section{Maximal Inequalities}
+\input{chapters/empirical_processes/maximal_ineq.tex}
+
+\section{Functional Delta Method}
+\input{chapters/empirical_processes/functional_delta_method.tex}
 
 \chapter{Simple yet useful Calculations} 
 \input{chapters/simple_yet_useful.tex}

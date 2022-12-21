@@ -65,4 +65,16 @@ Joel~A. Tropp.
 \newblock An {{Introduction}} to {{Matrix Concentration Inequalities}}, January
   2015.
 
+\bibitem[vdV98]{Vaart1998}
+A.~W. van~der Vaart.
+\newblock {\em Asymptotic {{Statistics}}}.
+\newblock Cambridge {{Series}} in {{Statistical}} and {{Probabilistic
+  Mathematics}}. {Cambridge University Press}, {Cambridge}, 1998.
+
+\bibitem[WZ19]{Wang2019}
+Yixin Wang and Jos{\'e}~R. Zubizarreta.
+\newblock Minimal {{Dispersion Approximately Balancing Weights}}: {{Asymptotic
+  Properties}} and {{Practical Considerations}}.
+\newblock {\em Biometrika}, page asz050, October 2019.
+
 \end{thebibliography}

@@ -165,3 +165,108 @@ Furthermore
               .
   \end{gather}
 \end{lemma}
+
+\begin{lemma}
+  For any class 
+  $\mathcal{F}$
+  of measurable functions 
+  $
+    f:
+    \mathcal{X}
+    \to \R
+  $
+  such that 
+  $
+    \P f^2
+    <
+    \delta^2
+  $
+  for every $f,$
+  we have,
+  with
+  $
+    a(\delta)
+    =
+    \delta
+    /
+    \sqrt{
+      \mathrm{Log}
+    N
+    _{[]}
+    (
+    \delta
+    ,
+    \mathcal{F}
+    ,
+    L_2(\P)
+    )
+    }
+    ,
+  $
+  and $F$
+  an envelope function,
+
+  \begin{gather}
+    \E^*
+    _\P
+    [
+    \norm{
+      \G
+      _n
+      }
+      _\mathcal{F}
+    ]
+    \lesssim
+    J
+    _{[]}
+    (
+      \delta
+    ,
+    \mathcal{F}
+    ,
+    L_2(\P)
+    )
+    +
+    \sqrt{n}
+    \P^*
+    F
+    \left\{ 
+      F > \sqrt{n}
+      a(\delta)
+    \right\}
+    .
+  \end{gather}
+\end{lemma}
+
+
+\begin{corollary}
+  For any class $\mathcal{F}$ of measurable functions with envelope function $F,$
+  \begin{gather}
+    \E^*
+    _\P
+    [
+    \norm{
+      \G
+      _n
+      }
+      _\mathcal{F}
+    ]
+    \lesssim
+    J
+    _{[]}
+    (
+    \norm{
+      F
+    }
+    _{\P,2}
+    ,
+    \mathcal{F}
+    ,
+    L_2(\P)
+    )
+    .
+  \end{gather}
+\end{corollary}
+
+
+

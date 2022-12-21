@@ -1,0 +1,144 @@
+\begin{definition}
+  A map 
+  $
+  \phi:
+  \mathbb{D}_\phi
+  \to 
+  \mathbb{E}
+  ,
+  $
+  defined on a subset 
+  $
+  \mathbb{D}_\phi
+  $
+  of a normed space
+  $\mathbb{D}$
+  that contains 
+  $\theta,$
+  is called 
+  \textbf{Hadamard diffenertiable}
+  at $\theta$
+  if there exists a continuous,
+  linear map
+  $
+  \phi_\theta^{'}
+    :
+    \mathbb{D}
+    \to 
+    \mathbb{E}
+  $
+  such that
+  \begin{gather}
+    \norm{
+      \frac{
+        \phi(\theta + t h_t)
+        -
+        \phi(\theta)
+      }{
+        t
+      }
+      -
+      \phi^{'}_\theta
+      (h)
+    }_\mathbb{E}
+    \to
+    0
+    \quad
+    \text{as}
+    \ 
+    t\searrow 0
+    \ 
+    \text{for all}
+    \ 
+    h_t \to h
+  \end{gather}
+  $
+    \text{such that $\theta + th_t$ is contained in $\mathbb{D}_\phi$ for all small $t>0.$}
+  $
+\end{definition}
+
+
+\begin{ftheorem}
+  \emph{(Delta Method)}
+  Let 
+  $
+    \mathbb{D}
+    \ \text{and}
+    \ 
+    \mathbb{E}
+  $
+  be normed linear spaces.
+  Let
+  $
+    \phi
+    :
+    \mathbb{D}_\phi
+    \subseteq
+    \mathbb{D}
+    \to
+    \mathbb{E}
+  $
+  be Hadamard differentiable it $\theta$
+  tangentially to 
+  $\mathbb{D}_0.$
+  Let
+  $
+    T_n
+    :
+    \Omega_n
+    \to
+    \mathbb{D}_\phi
+  $
+  be maps such that 
+  $
+    r_n
+    (T_n - \theta)
+    \rightsquigarrow
+    T
+  $
+  for some sequence of numbers $r_n \to \infty$
+  and a random element $T$
+  that takes its values in $\mathbb{D}_0.$
+  Then 
+  $
+    r_n(\phi(T_n)-\phi(\theta))
+    \rightsquigarrow
+    \phi^{'}
+    _\theta
+    (T)
+    .
+  $
+  If 
+  $
+    \phi^{'}
+    _\theta
+  $
+  is defined and continuous on the whole space $\mathbb{D},$
+  then we also have 
+  $
+    r_n
+    (
+      \phi(T_n)
+      -
+      \phi(\theta)
+    )
+    =
+    \phi^{'}
+    _\theta
+    (
+    r_n
+    (
+    T_n
+    -
+    \theta
+    )
+    )
+    +
+    o_\P
+    (1)
+    .
+  $
+\end{ftheorem}
+\begin{proof}
+  \cite[Theorem~20.8]{Vaart1998}
+\end{proof}
