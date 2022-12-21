@@ -361,11 +361,66 @@ $
 can be regarded as a stochastic estimate for the variance 
 of the random matrix $\mathbf{X}.$
 To see this, assume
-Indeed, 
+the second moment of $\mathbf{X}$ exists. Then it follows from Lemma 
+with $\mathbf{F}(\mathbf{X})=\mathbf{X}$
 \begin{gather}
   \E
   [
     \mathbf{\Delta_X}
   ]
   =
+  \E
+  [
+  \mathbf{X}^2
+  ]
+  .
 \end{gather}
+To verify the regularity condition, note that
+\begin{gather}
+  \E
+  [
+  \lVert
+    (
+    \mathbf{X}
+    -
+    \mathbf{X}^{'}
+    )
+    \mathbf{X}
+    \rVert
+  ]
+  \le
+  \E[
+  \norm{
+    \mathbf{X}
+  }
+  ^2
+  ]
+  +
+  \E
+  [
+  \norm{
+    \mathbf{X}
+  }
+  \cdot
+  \lVert
+    \mathbf{X}^{'}
+    \rVert
+  ]
+  \le
+  2
+  \E
+  [
+  \norm{
+    \mathbf{X}
+  }
+  ^2
+  ]
+  <
+  \infty
+  .
+\end{gather}
+\begin{example}
+  \emph{\cite[Example~2.4]{Mackey2014}}
+\end{example}
+nrt\\
+is not necessary, as, for example, the normal distribution does not fulfill it. For

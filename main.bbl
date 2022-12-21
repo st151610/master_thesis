@@ -1,10 +1,21 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{MJC{\etalchar{+}}14}
 
+\bibitem[Bha97]{Bhatia1997}
+Rajendra Bhatia.
+\newblock {\em Matrix {{Analysis}}}, volume 169 of {\em Graduate {{Texts}} in
+  {{Mathematics}}}.
+\newblock {Springer}, {New York, NY}, 1997.
+
 \bibitem[BT03]{Bertsekas2003}
 Dimitri~P. Bertsekas and John~N. Tsitsiklis.
 \newblock Parallel and {{Distributed Computation}}:{{Numerical Methods}}.
 \newblock November 2003.
+
+\bibitem[Bur73]{Burkholder1973}
+D.~L. Burkholder.
+\newblock Distribution {{Function Inequalities}} for {{Martingales}}.
+\newblock {\em The Annals of Probability}, 1(1):19--42, 1973.
 
 \bibitem[MJC{\etalchar{+}}14]{Mackey2014}
 Lester Mackey, Michael~I. Jordan, Richard~Y. Chen, Brendan Farrell, and Joel~A.
@@ -13,10 +24,20 @@ Lester Mackey, Michael~I. Jordan, Richard~Y. Chen, Brendan Farrell, and Joel~A.
   pairs.
 \newblock {\em The Annals of Probability}, 42(3), May 2014.
 
+\bibitem[Pet94]{Petz1994}
+D{\'e}nes Petz.
+\newblock A survey of certain trace inequalities.
+\newblock {\em Banach Center Publications}, 30(1):287--298, 1994.
+
 \bibitem[Roc70]{Rockafellar1970}
 R.~Tyrrell Rockafellar.
 \newblock {\em Convex {{Analysis}}}.
 \newblock {Princeton University Press}, 1970.
+
+\bibitem[Ruh70]{Ruhe1970}
+Axel Ruhe.
+\newblock Perturbation bounds for means of eigenvalues and invariant subspaces.
+\newblock {\em BIT Numerical Mathematics}, 10(3):343--354, September 1970.
 
 \bibitem[Ste72]{Stein1972}
 Charles Stein.

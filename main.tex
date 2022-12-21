@@ -1,7 +1,7 @@
 \documentclass[12pt]{scrreport}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage[a4paper, margin=2.5cm]{geometry}
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{enumitem}
@@ -24,7 +24,7 @@
 \newenvironment{takeaways}
   {
    \begin{lrbox}{\selvestebox}%
-   \begin{minipage}{16cm}
+   \begin{minipage}{15cm}
      \textbf{Takeaways}
    }
   {\end{minipage}\end{lrbox}%
@@ -134,6 +134,10 @@
   \section{Exchangeable Pairs}
   \input{chapters/random_matrix_ineq/exchangable_pairs.tex}
  \section{Matrix Khintchin Inequality}
+ The goal of this section is to derive the matrix Khintchin inequality and show some important applications.
+ For this we need an auxiliary theorem which is an extension of the 
+ \textit{Burkholder-Davis-Gundy (BDG) inequality} from classical martingale theory~\cite{Burkholder1973}.
+  We prepare for the proof of this theorem by assembling some analytic tools.
   \input{chapters/random_matrix_ineq/matrix_khintchine.tex}
 %\input{chapters/random_matrix_ineq/application_rosenthal_pinelis.tex}
   \section{Matrix Moment Inequality}

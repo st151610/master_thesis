@@ -995,6 +995,10 @@ INPUT ./chapters/random_matrix_ineq/matrix_khintchine.tex
 INPUT chapters/random_matrix_ineq/matrix_khintchine.tex
 INPUT ./chapters/random_matrix_ineq/matrix_khintchine.tex
 INPUT chapters/random_matrix_ineq/matrix_khintchine.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcti1200.tfm
 INPUT ./chapters/random_matrix_ineq/matrix_moment_ineq.tex
 INPUT chapters/random_matrix_ineq/matrix_moment_ineq.tex
