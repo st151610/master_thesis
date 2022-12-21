@@ -104,6 +104,8 @@
   \input{chapters/chapter_1/app_conv_opt.tex}
   \section{Application of Matrix Concentration Inequalities}
   %\input{chapters/chapter_1/application_matrix_concentration_ineq.tex}
+
+
 \chapter{Convex Analysis}
   \section{Basic Notions}
   %\input{chapters/convex_analysis/basic_notions.tex}
@@ -114,12 +116,23 @@
 %\input{chapters/convex_analysis.tex}
   \section{Tseng Bertsekas}
   \input{chapters/convex_analysis/tseng_bertsekas.tex}
-\chapter{Random Matrix Inequalities}
 
-  \section{Matrix Analysis}
-  \input{chapters/random_matrix_ineq/matrix_analysis.tex}
-  \section{Matrix Concentration Inequalities via the Method of Exchangeable Pairs}
-  \input{chapters/random_matrix_ineq/method_of_exchangable_pairs.tex}
+
+\chapter{Random Matrix Inequalities}
+  In our application we want to bound moments of vector-valued random variables.
+  For this we choose the theory of random matrix inequalities
+  which lately received a lot of attention.
+  In particular an approach via the method of exchangable pairs \cite{Mackey2014}
+  has been fruitful in simplifying the proofs of long standing results such as the matrix Khintchin inequality.
+  We base our exposition on \cite{Mackey2014}. A lot will be exact copy of this paper, so no originality is claimed. Where it seemed fit, we conducted some calculations in more detail than presented in the paper. 
+
+  We will first introduce the method of exchangable pairs and derive auxiliary theorems to establish the matrix Khintchin inequality.
+  Then we will derive inequalities for moments of matrices, first for psd matrices and then via the Hermitian dilataition for general rectangular matrices. In a last step we will introduce the notion of intrinsic dimension to improve the bounds.
+
+  %\section{Matrix Analysis}
+  %\input{chapters/random_matrix_ineq/matrix_analysis.tex}
+  \section{Exchangeable Pairs}
+  \input{chapters/random_matrix_ineq/exchangable_pairs.tex}
  \section{Matrix Khintchin Inequality}
   \input{chapters/random_matrix_ineq/matrix_khintchine.tex}
 %\input{chapters/random_matrix_ineq/application_rosenthal_pinelis.tex}

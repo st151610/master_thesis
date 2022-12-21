@@ -1,0 +1,370 @@
+\subsection{Matrix Stein pairs}
+We first define an exchangable pair.
+\begin{definition}
+  Let 
+  $Z$ and $Z^{'}$
+  random variables taking values
+  in a Polish space $\mathcal{Z}.$
+  We say that
+  $
+  (
+    Z
+    ,
+    Z^{'}
+  )
+  $
+  is an \textbf{exchangable pair}
+  if it has the same distribution as 
+  $
+  (
+  Z^{'}
+    ,
+    Z
+  )
+  .
+  $
+  In particular, 
+  $Z$ and $Z^{'}$
+  must share the same distribution.
+\end{definition}
+
+The following approach originates in the work of Charles Stein \cite{Stein1972} 
+on normal approximation for a sum of dependent random variable.
+We will explain how some central ideas of this theory extends to matrices.
+
+We can obtain a lot of information about the fluctuation of a random matrix
+$\mathbf{X}$
+if we can construct a good exchangable pair 
+$
+(
+  \mathbf{X}
+  ,
+  \mathbf{X}^{'}
+)
+.
+$
+With this motivation in mind, let us introduce a special class of exchangable pairs.
+\begin{definition}
+  Let
+  $
+  (
+    Z
+    ,
+    Z^{'}
+  )
+  $
+  be an exchangable pair of random variables taking values
+  in a Polish space $\mathcal{Z},$
+  and let 
+  $
+    \mathbf{\Psi}
+    : 
+    \mathcal{Z}
+    \to 
+  \mathbb{H}_d
+  $
+  be a measurable function.
+  Define the random Hermitian matrices
+  \begin{gather}
+    \mathbf{X}
+    :=
+    \mathbf{\Psi}
+    (Z)
+    \quad
+    \text{and}
+    \quad
+    \mathbf{X}^{'}
+    :=
+    \mathbf{\Psi}
+    (Z^{'})
+    .
+  \end{gather}
+  We say that 
+  $
+  (
+    \mathbf{X}
+    ,
+    \mathbf{X}^{'}
+  )
+  $
+  is a \textbf{matrix Stein pair}
+  if there is a constant 
+  $\alpha\in (0,1]$
+  for which
+  \begin{gather}
+    \E[
+    \mathbf{X}
+    -
+    \mathbf{X}^{'}
+    \vert
+    Z
+    ]
+    =
+    \alpha 
+    \mathbf{X}
+    \qquad
+    \text{almost surely.}
+  \end{gather}
+  The constant 
+  $\alpha$
+  is called the \textbf{scale factor} of the pair.
+  We always assume 
+  $
+    \E
+    \left[ 
+      \norm{\mathbf{X}}^2
+    \right]
+    <
+    \infty
+    .
+  $
+\end{definition}
+
+A matrix Stein pair 
+$
+(
+\mathbf{X}
+,
+\mathbf{X}^{'}
+)
+$
+has several useful propreties. First,
+$
+(
+\mathbf{X}
+,
+\mathbf{X}^{'}
+)
+$
+always forms an exchangable pair. Second, it must be the case that
+$\E[\mathbf{X}]=\mathbf{0}.$
+Indeed,
+\begin{gather*}
+  \E[\mathbf{X}]
+  =
+  \frac{1}{\alpha}
+  \E[
+  \E
+  [
+    \mathbf{X}
+    -
+    \mathbf{X}^{'}
+    \vert
+    Z
+  ]
+  ]
+  =
+  \frac{1}{\alpha}
+  \E[
+    \mathbf{X}
+    -
+    \mathbf{X}^{'}
+    \vert
+  ]
+  =
+  \mathbf{0}
+  .
+\end{gather*}
+\subsection{The method of exchangable pairs}
+A well-chosen matrix Stein pair 
+$
+(
+\mathbf{X}
+,
+\mathbf{X}^{'}
+)
+$
+provides a surprisingly powerful tool for studying 
+the random matrix $\mathbf{X}.$
+The technique depends on a fundamental technical lemma.
+\begin{lemma}
+  Suppose that
+  $
+  (
+    \mathbf{X}
+    ,
+    \mathbf{X}^{'}
+  )
+  $
+  is a matrix Stein pair with scale factor $\alpha.$
+  Let 
+  $
+    \mathbf{F}
+    :
+    \mathbb{H}_d
+    \to
+    \mathbb{H}_d
+  $
+  be a measurable function that satisfies the regularity condition
+  $
+  \E
+  \left[
+  \norm{
+    (
+    \mathbf{X}
+    -
+    \mathbf{X}^{'}
+  )
+  \mathbf{F}(\mathbf{X})
+  }
+  \right]
+  <
+  \infty
+  .
+  $
+  Then
+\begin{gather}
+  \E
+  [
+    \mathbf{X}
+    \cdot
+    \mathbf{F}
+    (\mathbf{X})
+  ]
+  =
+  \frac{1}{2\alpha}
+  \E
+  [
+    (
+    \mathbf{X}
+    -
+    \mathbf{X}^{'}
+    )
+    (
+    \mathbf{F}
+    (
+    \mathbf{X}
+    )
+    -
+    \mathbf{F}
+    (
+    \mathbf{X}^{'}
+    )
+  )
+  ]
+  .
+\end{gather}
+\end{lemma}
+In short, the randomness in the Stein pair furnishes an alternative expression for the expected product of $\mathbf{X}$
+and a function $\mathbf{F}.$
+It allows us to estimate the expectation using the smoothness properties of the function $\mathbf{F}$ and the discrepancy between $\mathbf{X}$
+and $\mathbf{X}^{'}.$
+\begin{proof}
+  \emph{\cite[Lemma~2.4]{Mackey2014}}
+  Suppose that
+  $
+  (
+    \mathbf{X}
+    ,
+    \mathbf{X}^{'}
+  )
+  $
+  constructed from an auxiliary exchangable pair 
+  $
+  (
+  Z,
+  Z^{'}
+  )
+  .
+  $
+  The defining property implies
+ \begin{gather}
+   \alpha \cdot 
+   \E[
+   \mathbf{X}
+   \cdot
+   \mathbf{F}
+   (\mathbf{X})
+   ]
+   =
+   \E[
+    \E[
+    \mathbf{X}
+    -
+    \mathbf{X}^{'}
+    \vert
+    Z
+    ]
+    \cdot
+   \mathbf{F}
+   (\mathbf{X})
+   ]
+   =
+    \E[
+    (
+    \mathbf{X}
+    -
+    \mathbf{X}^{'}
+    )
+   \mathbf{F}
+   (\mathbf{X})
+   ]
+ \end{gather} 
+\end{proof}
+\subsection{The conditional variance}
+To each matrix Stein pair 
+  $
+  (
+    \mathbf{X}
+    ,
+    \mathbf{X}^{'}
+  ),
+  $
+  we may associate a random matrix called the conditional variance of $\mathbf{X}.$
+  The purpose of this section is to argue that the spectral norm of $\mathbf{X}$
+  is unlikely to be large, when the conditional variance is small.
+\begin{definition}
+  Suppose that
+  $
+  (
+    \mathbf{X}
+    ,
+    \mathbf{X}^{'}
+  ),
+  $
+  is a matrix Stein pair, constructed from an auxiliary exchangeable pair
+  $
+  (
+  Z
+    ,
+  Z^{'}
+  ).
+  $
+  The \textbf{conditional variance}
+  is the random matrix
+  \begin{gather}
+    \mathbf{\Delta_X}
+    :=
+    \mathbf{\Delta_X}
+    (Z)
+    :=
+    \frac{1}{2\alpha}
+    \E
+    [
+    (
+    \mathbf{X}
+    -
+    \mathbf{X}^{'}
+    )^2
+    \vert
+    Z
+    ]
+    ,
+  \end{gather}
+  where $\alpha$ is the scale factor of the pair. We may take any version of the conditional expectation in this definition.
+\end{definition}
+
+The conditional variance
+$
+    \mathbf{\Delta_X}
+$
+can be regarded as a stochastic estimate for the variance 
+of the random matrix $\mathbf{X}.$
+To see this, assume
+Indeed, 
+\begin{gather}
+  \E
+  [
+    \mathbf{\Delta_X}
+  ]
+\end{gather}
