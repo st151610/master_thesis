@@ -11,6 +11,10 @@ $
   .
 $
 The Cartesian product of convex sets is convex. The intersection of a collection of convex sets is also convex.
+
+
+
+
 Given (not necessary convex) sets 
 $
   \Omega,
@@ -48,7 +52,95 @@ $
 $
 For convex sets the addition and multiplication by a real scalar are convex.
 
+Throughout this section, we shall denote by 
+$
+  B
+  :=
+  \left\{ 
+    x=
+    [x_1, \ldots, x_n]^\top
+    \in\R^n
+    \colon
+    (
+    \sum_{i=1}^{n} 
+    x_i^2
+    )
+    ^{1/2}
+    \le 1
+  \right\}
+$
+the \textbf{Euclidian unit ball} in $\R^n.$
+This is a closed convex set. For any $a\in\R^n,$ 
+the \textbf{ball with radius $\varepsilon >0$ and center $a$}
+is given by
+$
+  \left\{ 
+   a+x 
+    \in\R^n
+    \colon
+    (
+    \sum_{i=1}^{n} 
+    x_i^2
+    )
+    ^{1/2}
+    \le \varepsilon
+  \right\}
+  =
+  a
+  +
+  \varepsilon B
+  .
+$
+For any set $\Omega$ in $\R^n,$ 
+the set of points $x$ whose distance from $\Omega$
+does not exceed $\varepsilon$ is 
+$
+\Omega + \varepsilon B.
+$
+The \textbf{closure} $\mathrm{cl}(\Omega)$
+and \textbf{interior} $\mathrm{int}(\Omega)$
+of $\Omega$
+can therefore be expressed by 
+$
+  \mathrm{cl}(\Omega)
+  =
+  \bigcap_{\varepsilon>0}
+  \Omega + \varepsilon B
+$
+and
+$
+  \mathrm{int}(\Omega)
+  =
+  \left\{ 
+    x\in \Omega
+    \colon
+    \text{there exists $\varepsilon>0$ such that }
+    x+\varepsilon B
+    \subseteq
+    \Omega
+  \right\}
+  .
+$
 
+  A set 
+  $A\subseteq \R^n$
+  is called \textbf{affine set}, if
+  $
+    \alpha x + (1-\alpha)y \in A
+    \quad
+    \text{for all}
+    \ 
+    x,y \in A
+    \ 
+    \text{and}
+    \ 
+    \alpha \in \R.
+  $
+  The \textbf{affine hull} 
+  $\mathrm{aff}(\Omega)$
+  of a set 
+  $\Omega\subseteq \R^n$
+  is the smallest affine set that includes $\Omega.$
 A mapping 
 $
   A: \R^n \to \R^m
@@ -75,34 +167,13 @@ The image and inverse image/preimage of convex sets under affine mappings are al
 
 
 
-\begin{definition}
-  \emph{(Affine set and hull)}
-  A set 
-  $A\subseteq \R^n$
-  is called \textbf{affine}, if
-  \begin{gather}
-    \alpha x + (1-\alpha)y \in A
-    \quad
-    \text{for all}
-    \ 
-    x,y \in A
-    \ 
-    \text{and}
-    \ 
-    \alpha \in \R.
-  \end{gather}
-  The \textbf{affine hull} 
-  $\mathrm{aff}(\Omega)$
-  of a set 
-  $\Omega\subseteq \R^n$
-  is the smallest affine set that includes $\Omega.$
-\end{definition}
-
 
 Because the notion of interior is not precise enough for our purposes
 we define the relative interior which is the interior relative to the affine hull.
-
-
+This concept is motivated by the fact that a line segment embedded in $\R^2$
+does have a natural interior in $\R$ which is not a true interior in $\R^2.$
+The relative interior of $C$ is defined as the interior which results when
+$C$ is regarded as a subset of its affine hull.
 \begin{definition}
   Let 
   $\Omega\subseteq \R^n.$
@@ -114,18 +185,20 @@ we define the relative interior which is the interior relative to the affine hul
       x \in \Omega 
       \colon
       \text{there exists}\ 
-      \gamma > 0\ 
+      \varepsilon > 0\ 
       \text{such that}\ 
-      \mathrm{B}_\gamma(x)
+      (
+        x+\varepsilon B
+      )
       \cap
       \mathrm{aff}(\Omega)
-      \in
+      \subset
       \Omega
     \right\}.
   \end{gather}
 \end{definition}
 Next we collect some useful properties of relative interiors.
-\begin{ftheorem}
+\begin{proposition}
   Let $C$ be a non-empty convex set in $\R^n.$ Then we get the representation
 \begin{enumerate}[label={(\roman*)}]
   \item
@@ -143,6 +216,16 @@ Next we collect some useful properties of relative interiors.
       z + t (z-x)
       \in C
     \right\}.
+    $
+  \item
+    $
+      \mathrm{ri}(C)
+      \neq
+      \emptyset
+      \ 
+      \text{if}\ 
+      C\neq \emptyset
+      .
     $
   \item
     $
@@ -196,7 +279,7 @@ Next we collect some useful properties of relative interiors.
         L(\mathrm{ri}(C))
         .
       $
-      If additionaly it holds
+      If additionally it holds
       $
         L^{-1}(\mathrm{ri}(C))
         \neq
@@ -234,25 +317,25 @@ Next we collect some useful properties of relative interiors.
         $
 \end{enumerate}
 
-\end{ftheorem}
-
-
-\begin{proof}
-  \cite[Theorem~6.4]{Rockafellar1970}
-  th (i)
-\end{proof}
-\begin{proposition}
-  Let $C_1\subseteq \R^{n_1}$ and $C_2\subseteq \R^{n_2}$ be two non-empty convex sets. Then it holds
-  \begin{gather}
-    \mathrm{ri}(C_1\times C_2)
-    = 
-    \mathrm{ri}(C_1)
-    \times
-    \mathrm{ri}(C_2).
-  \end{gather}
 \end{proposition}
+
+
 \begin{proof}
-  Let
+\begin{enumerate}[label={(\roman*)}]
+  \item
+    \cite[Theorem~6.4]{Rockafellar1970}
+  \item
+    \cite[Theorem~6.2]{Rockafellar1970}
+  \item
+    \cite[Theorem~6.2]{Rockafellar1970}
+  \item
+    \cite[Theorem~6.3]{Rockafellar1970}
+  \item
+    \cite[Theorem~6.5]{Rockafellar1970}
+  \item
+    \cite[Theorem~6.6-6.7]{Rockafellar1970}
+  \item
+Let
   $
   (z_1, z_2)
   \in 
@@ -291,7 +374,7 @@ Next we collect some useful properties of relative interiors.
   $
     (x_1,x_2)\in C_1\times C_2
   $
-  with corresponding $t_1,t_2 >0$.
+  with
   If $t_1=t_2$ everything is clear.
   W.l.o.g.
   assume 
@@ -313,6 +396,9 @@ Next we collect some useful properties of relative interiors.
   (z_1,z_2)\in\mathrm{ri}(C_1\times C_2). 
   $
   This proves $\supseteq$ and equality.
+  \item
+    \cite[Theorem~2.92]{Mordukhovich2022}
+\end{enumerate}
 \end{proof}
  
 We procede with convex separation results which are vital to the subsequent developments.
@@ -545,7 +631,7 @@ The proof translates the geometric concept of convex separation to the world of 
     0\in
     \mathrm{ri}([0,\infty))
   $
-  then there exists $t>0$ such that $-tx\ge 0$ for some $x>0.$ A contradition.
+  then there exists $t>0$ such that $-tx\ge 0$ for some $x>0.$ A contradiction.
   Furthermore
 \begin{gather}
   \mathrm{ri}(\Theta_2)
