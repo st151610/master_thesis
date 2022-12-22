@@ -1,0 +1,122 @@
+The following decomposition is flexible in $\Phi.$
+We get different causal estimaands $\E[\Phi(Y(1))],$
+e.g.
+the popolation average of $Y(1)$
+for 
+$
+  \Phi(Y)=Y,
+$
+i.e.
+$
+\E[Y(1)]
+,
+$
+ot the distribution function of $Y(1)$ at $t$
+for 
+$
+  \Phi(Y)=
+  \mathbf{1}_{(-\infty, t]}
+  (Y)
+  ,
+$
+i.e.
+$
+\P[
+Y(1)\le t
+]
+.
+$
+\begin{gather}
+ \sum_{i=1}^{n}  
+ w_i
+ T_i
+ \Phi(Y_i)
+  - \E [ \Phi(Y(1)) ]
+  =
+  \frac{1}{n}
+  \sum_{ i = 1 }^{n} S_i
+    + R_0
+    + R_1
+    + R_2
+    ,
+\end{gather}
+where
+\begin{align*}
+  S_i 
+  &:= 
+  \frac{T_i}{\pi_i}
+ \left( 
+   \Phi(Y_i) - \E [ \Phi(Y_i(1)) | X_i ]
+ \right)
+ +
+ \left( 
+   \E [ \Phi(Y_i(1)) | X_i ] - \E [ \Phi(Y(1))]
+ \right)
+ \quad
+ \text{for}\ 
+ i \in \left\{ 1, \ldots, n, \right\}
+ ,
+ \\
+  R_0
+  &:=
+  \sum_{ i = 1 }^{n}
+  T_i
+    \left(  
+      w_i - \frac{1}{n \pi_i}
+    \right)
+ \left( 
+   \Phi(Y_i) - \E [ \Phi(Y_i(1)) | X_i ]
+ \right)
+ ,\\
+  R_1
+  &:=
+  \sum_{ i = 1 }^{n}
+    \left(  
+      T_i
+      w_i - \frac{1}{n}
+    \right)
+ \left( 
+    \E [ \Phi(Y_i(1)) | X_i ] - B(X_i)^\top \lambda
+ \right)
+ ,
+ \\
+  R_2
+  &:=
+  \sum_{ i = 1 }^{n}
+    \left(  
+      T_i
+      w_i - \frac{1}{n}
+    \right)
+ B(X_i)^\top \lambda
+ \quad 
+ \text{for}
+ \ 
+ \lambda \in \R^K
+ .
+\end{align*}
+
+We can even view
+$
+\frac{1}{\sqrt{n}}
+\sum_{i=1}^{n}S_i 
+$
+as an empirical process 
+$
+\mathbb{G}_n f
+$
+indexed over 
+
+\begin{gather}
+  f_\Phi(T,X,Y)
+  =
+  \frac{T}{\pi(X)}
+ \left( 
+   \Phi(Y) - \E [ \Phi(Y) | X ]
+ \right)
+ +
+   \E [ \Phi(Y) | X ] 
+   .
+\end{gather}
+If $\mathcal{F}=\left\{ f_\Phi \colon \Phi \in \ \text{some set}\right\}$
+is $\P$-Donsker, the empirical process converges to a tight gaussian process.
+Then the functional delta Method is applicable.
