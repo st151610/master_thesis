@@ -54,3 +54,74 @@ What is the best rate we can achieve?
 \begin{proof}
   \cite[Theorem~22.11]{Klenke2020}
 \end{proof}
+
+
+We calculate mean and variance
+
+\begin{align}
+  \E
+  \left[ 
+    (T/\pi(X))
+    Y(T)
+  \right]
+  &=
+  \E
+  \left[ 
+    Y(1)
+    /\pi(X)
+    \vert
+    T=1
+  \right]
+  \P[T=1]
+  \\
+  &=
+  \int_\mathcal{X}
+  \left[ 
+    Y(1)
+    \vert
+    T=1,
+    X=x
+  \right]
+  \cdot
+  \P[T=1]
+  /
+  \pi(x)
+  \P_{X|T}(dx|1)
+  \\
+  &=
+  \int_\mathcal{X}
+  \left[ 
+    Y(1)
+    \vert
+    X=x
+  \right]
+  \P_X(dx)
+  =
+  \E[Y(1)]
+  .
+\end{align}
+The third equality is due to weak unconfoundedness and Bayes rule.
+With the same arguments as above it follows
+$
+  \mathbf{Var}
+  [
+    (T/\pi(X))
+    Y(T)
+  ]
+    =
+    \E[
+    (Y(1))^2
+    /
+    \pi(X)
+    ]
+    -
+    \E[Y(1)]^2
+    =:
+    \mathrm{EB}
+    .
+$
+We readily calculate the learning rate 
+\begin{gather}
+  \frac{\sqrt{\log\log n \mathrm{EB}}}{\sqrt{n}}
+  .
+\end{gather}
