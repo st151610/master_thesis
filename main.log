@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  23 DEC 2022 09:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  23 DEC 2022 12:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -708,12 +708,10 @@ Overfull \hbox (59.68192pt too wide) detected at line 74
 []
  []
 
+[6]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 78.
-Package mdframed Info: Not enough space on this page on input line 89.
-[6]
-Package mdframed Info: Not enough space on this page on input line 89.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 92.
@@ -731,25 +729,25 @@ LaTeX Warning: Reference `primal_weighting_binary' on page 8 undefined on input 
 
 LaTeX Warning: Reference `primal_weighting_binary' on page 8 undefined on input line 363.
 
-[8]
+[8] [9]
 
-LaTeX Warning: Reference `rmineq_bernstein' on page 9 undefined on input line 836.
+LaTeX Warning: Reference `rmineq_bernstein' on page 10 undefined on input line 836.
 
-[9]
 
 LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 10 undefined on input line 863.
 
 
 LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 10 undefined on input line 937.
 
+[10]
 
-LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 10 undefined on input line 1003.
-
-
-LaTeX Warning: Reference `rmineq_bernstein_expectation_bound' on page 10 undefined on input line 1009.
+LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 11 undefined on input line 1003.
 
 
-LaTeX Warning: Reference `rmineq_bernstein' on page 10 undefined on input line 1010.
+LaTeX Warning: Reference `rmineq_bernstein_expectation_bound' on page 11 undefined on input line 1009.
+
+
+LaTeX Warning: Reference `rmineq_bernstein' on page 11 undefined on input line 1010.
 
 
 Overfull \hbox (21.1393pt too wide) in paragraph at lines 991--1016
@@ -757,16 +755,16 @@ Overfull \hbox (21.1393pt too wide) in paragraph at lines 991--1016
  []
 
 
-LaTeX Warning: Reference `rmineq_bernstein_probability_bound' on page 10 undefined on input line 1095.
+LaTeX Warning: Reference `rmineq_bernstein_probability_bound' on page 11 undefined on input line 1095.
 
 
-LaTeX Warning: Reference `rmineq_bernstein' on page 10 undefined on input line 1096.
+LaTeX Warning: Reference `rmineq_bernstein' on page 11 undefined on input line 1096.
 
-[10]
+[11]
 
-LaTeX Warning: Reference `rmineq_intrinsic_bernstein_vector_corollary' on page 11 undefined on input line 1334.
+LaTeX Warning: Reference `rmineq_intrinsic_bernstein_vector_corollary' on page 12 undefined on input line 1334.
 
-) (./chapters/balancing_weights/app_conv_opt.tex [11] [12]
+) (./chapters/balancing_weights/app_conv_opt.tex [12]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 90.
@@ -907,18 +905,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17655 strings out of 478238
- 311440 string characters out of 5850455
+ 17657 strings out of 478238
+ 311466 string characters out of 5850455
  851014 words of memory out of 5000000
  35198 multiletter control sequences out of 15000+600000
  485404 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,19n,120p,10636b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,19n,120p,10636b,533s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (41 pages, 492866 bytes).
+Output written on main.pdf (41 pages, 494226 bytes).
 PDF statistics:
- 908 PDF objects out of 1000 (max. 8388607)
- 809 compressed objects within 9 object streams
- 356 named destinations out of 1000 (max. 500000)
+ 911 PDF objects out of 1000 (max. 8388607)
+ 812 compressed objects within 9 object streams
+ 358 named destinations out of 1000 (max. 500000)
  214 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,1 +1,56 @@
 read the paper \cite{Zhao2017a} for discussion of double robustness for balancing weights and \cite{Hahn1998} for semiparametric efficiency bounds.
+
+
+What is the best rate we can achieve?
+
+\begin{theorem}
+  \emph{(Hartman-Winter)}
+  Let 
+  $
+    X_1,
+    X_2,
+    \ldots
+  $
+  be i.i.d. real random variables with 
+  $
+    \E[X_1]=0
+    \ 
+    \text{and}
+    \ 
+    \mathbf{Var}
+    [X_1]
+    = 1.
+  $
+  Let
+  $
+    S_n
+    :=
+    X_1
+    +
+    \ldots
+    +
+    X_n,
+    \ 
+    n\in \mathbb{N}
+    .
+  $
+  Then
+  \begin{gather}
+    \limsup_{n\to\infty}
+    \frac{S_n}{
+      \sqrt{
+        2n
+        \log
+        \log
+        n
+      }
+    }
+    =
+    1
+    \quad
+    \text{a.s.}
+  \end{gather}
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~22.11]{Klenke2020}
+\end{proof}

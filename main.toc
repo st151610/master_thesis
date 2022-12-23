@@ -5,7 +5,7 @@
 \contentsline {chapter}{\numberline {2}Balancing Weights}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introduction}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Double Robustness}{5}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Error Decompositions}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Error Decompositions}{6}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Estimating the Population Mean of Potential Outcomes}{6}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Application of Convex Optimization}{12}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Application of Matrix Concentration Inequalities}{14}{section.2.6}%
