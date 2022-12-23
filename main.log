@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  23 DEC 2022 07:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  23 DEC 2022 09:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -691,19 +691,82 @@ chapter 1.
 
 ]) [4]
 chapter 2.
-(./chapters/balancing_weights/error_decomp.tex
+(./chapters/balancing_weights/introdution_ch_1.tex) (./chapters/balancing_weights/double_robustness.tex) (./chapters/balancing_weights/error_decomp.tex
 Overfull \hbox (4.6408pt too wide) in paragraph at lines 1--29
 \OT1/cmr/m/n/12 The fol-low-ing de-com-po-si-tion is flex-i-ble in $^^H\OML/cmm/m/it/12 :$ \OT1/cmr/m/n/12 We get dif-fer-ent causal es-ti-maands $\OT1/cmr/bx/n/12 E\OT1/cmr/m/n/12 [^^H(\OML/cmm/m/it/12 Y\OT1/cmr/m/n/12 (1))]\OML/cmm/m/it/12 ;$
  []
 
+[5
 
+]
 Overfull \hbox (1.1207pt too wide) detected at line 96
 []
  []
 
-) (./chapters/balancing_weights/app_conv_opt.tex [5
+) (./chapters/balancing_weights/chapter_01.tex
+Overfull \hbox (59.68192pt too wide) detected at line 74
+[]
+ []
 
-] [6]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 78.
+Package mdframed Info: Not enough space on this page on input line 89.
+[6]
+Package mdframed Info: Not enough space on this page on input line 89.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 92.
+
+
+LaTeX Warning: Reference `primal_weighting_binary' on page 7 undefined on input line 134.
+
+
+LaTeX Warning: Reference `primal_weighting_binary' on page 7 undefined on input line 214.
+
+[7]
+
+LaTeX Warning: Reference `primal_weighting_binary' on page 8 undefined on input line 357.
+
+
+LaTeX Warning: Reference `primal_weighting_binary' on page 8 undefined on input line 363.
+
+[8]
+
+LaTeX Warning: Reference `rmineq_bernstein' on page 9 undefined on input line 836.
+
+[9]
+
+LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 10 undefined on input line 863.
+
+
+LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 10 undefined on input line 937.
+
+
+LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 10 undefined on input line 1003.
+
+
+LaTeX Warning: Reference `rmineq_bernstein_expectation_bound' on page 10 undefined on input line 1009.
+
+
+LaTeX Warning: Reference `rmineq_bernstein' on page 10 undefined on input line 1010.
+
+
+Overfull \hbox (21.1393pt too wide) in paragraph at lines 991--1016
+\OT1/cmr/m/n/12 where $\OML/cmm/m/it/12 ^^U[]$ \OT1/cmr/m/n/12 is the max-i-mal eigen-value of the sym-met-ric (non-random) ma-trix $\OT1/cmr/bx/n/12 E []$\OT1/cmr/m/n/12 .
+ []
+
+
+LaTeX Warning: Reference `rmineq_bernstein_probability_bound' on page 10 undefined on input line 1095.
+
+
+LaTeX Warning: Reference `rmineq_bernstein' on page 10 undefined on input line 1096.
+
+[10]
+
+LaTeX Warning: Reference `rmineq_intrinsic_bernstein_vector_corollary' on page 11 undefined on input line 1334.
+
+) (./chapters/balancing_weights/app_conv_opt.tex [11] [12]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 90.
@@ -712,23 +775,38 @@ Overfull \hbox (56.40872pt too wide) detected at line 290
 []
  []
 
-[7]) [8]
+[13]) (./chapters/balancing_weights/application_matrix_concentration_ineq.tex [14]
+Overfull \hbox (9.26552pt too wide) detected at line 163
+[]
+ []
+
+
+Overfull \hbox (75.91837pt too wide) detected at line 205
+[]
+ []
+
+
+Overfull \hbox (25.28894pt too wide) detected at line 333
+[]
+ []
+
+[15]) [16]
 chapter 3.
 (./chapters/convex_analysis/cvxa_primer.tex
 Overfull \hbox (28.27675pt too wide) in paragraph at lines 55--124
 []\OT1/cmr/m/n/12 Throughout this sec-tion, we shall de-note by $\OML/cmm/m/it/12 B \OT1/cmr/m/n/12 := []$
  []
 
-[9
+[17
 
-] [10]
+] [18]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 442.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 507.
- [11]) (./chapters/convex_analysis/conjugate_calculus.tex [12] [13]
+ [19]) (./chapters/convex_analysis/conjugate_calculus.tex [20] [21]
 Overfull \hbox (55.56017pt too wide) detected at line 329
 []
  []
@@ -742,7 +820,7 @@ Package hyperref Warning: No autoref name for `problem' on input line 441.
 
 Package hyperref Warning: No autoref name for `problem' on input line 443.
 
-[14]
+[22]
 
 Package hyperref Warning: No autoref name for `problem' on input line 451.
 
@@ -759,11 +837,11 @@ Overfull \hbox (30.15485pt too wide) in paragraph at lines 529--553
 []\OT1/cmr/m/n/12 Since $\OMS/cmsy/m/n/12 C \OT1/cmr/m/n/12 := []$ is con-vex $\OML/cmm/m/it/12 f$ \OT1/cmr/m/n/12 has a lo-cal min-i-mum in $\OML/cmm/m/it/12 y \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 C \OT1/cmr/m/n/12 := [] \OML/cmm/m/it/12 :$
  []
 
-[15]) (./chapters/convex_analysis/tseng_bertsekas.tex [16] [17]
+[23]) (./chapters/convex_analysis/tseng_bertsekas.tex [24] [25]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 356.
-) [18]
+) [26]
 chapter 4.
 (./chapters/random_matrix_ineq/matrix_analysis.tex
 Overfull \hbox (4.34802pt too wide) in paragraph at lines 1--41
@@ -775,14 +853,14 @@ Overfull \hbox (10.93617pt too wide) detected at line 69
 []
  []
 
-[19
+[27
 
-]) (./chapters/random_matrix_ineq/exchangable_pairs.tex [20]) (./chapters/random_matrix_ineq/matrix_khintchine.tex [21] [22]
+]) (./chapters/random_matrix_ineq/exchangable_pairs.tex [28]) (./chapters/random_matrix_ineq/matrix_khintchine.tex [29] [30]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 658.
 Package mdframed Info: Not enough space on this page on input line 757.
- [23]
+ [31]
 Package mdframed Info: Not enough space on this page on input line 757.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -791,7 +869,7 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Font Info:    Trying to load font information for U+euf on input line 6.
  (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [24]) (./chapters/random_matrix_ineq/application_rosenthal_pinelis.tex
+) [32]) (./chapters/random_matrix_ineq/application_rosenthal_pinelis.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1.
@@ -800,44 +878,47 @@ Overfull \hbox (12.60248pt too wide) detected at line 75
 []
  []
 
-) (./chapters/random_matrix_ineq/intrinsic_dimension.tex [25]) [26]
+) (./chapters/random_matrix_ineq/intrinsic_dimension.tex [33]) [34]
 chapter 5.
 (./chapters/empirical_processes/ep_primer.tex
 Overfull \hbox (5.44409pt too wide) in paragraph at lines 159--210
 []\OT1/cmr/m/n/12 Let $[]$ be a prob-a-bil-ity space and $[]$ a mea-sur-able space. Let $\OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 : [] \OMS/cmsy/m/n/12 !
  []
 
-[27
+[35
 
-]) (./chapters/empirical_processes/maximal_ineq.tex) (./chapters/empirical_processes/functional_delta_method.tex [28]
+]) (./chapters/empirical_processes/maximal_ineq.tex) (./chapters/empirical_processes/functional_delta_method.tex [36]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 61.
-) [29]
+) [37]
 chapter 6.
-(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [30
+(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [38
 
-]) (./main.bbl [31
+]) (./main.bbl [39
 
-] [32
+] [40
 
-]) [33] (./main.aux)
+]) [41] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 17484 strings out of 478238
- 307691 string characters out of 5850455
- 846014 words of memory out of 5000000
- 35115 multiletter control sequences out of 15000+600000
- 482288 words of font info for 76 fonts, out of 8000000 for 9000
+ 17655 strings out of 478238
+ 311440 string characters out of 5850455
+ 851014 words of memory out of 5000000
+ 35198 multiletter control sequences out of 15000+600000
+ 485404 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,19n,120p,10636b,577s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (33 pages, 446278 bytes).
+ 122i,19n,120p,10636b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (41 pages, 492866 bytes).
 PDF statistics:
- 728 PDF objects out of 1000 (max. 8388607)
- 641 compressed objects within 7 object streams
- 282 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 908 PDF objects out of 1000 (max. 8388607)
+ 809 compressed objects within 9 object streams
+ 356 named destinations out of 1000 (max. 500000)
+ 214 words of extra memory for PDF output out of 10000 (max. 10000000)
 
