@@ -7,20 +7,20 @@
 \contentsline {section}{\numberline {2.2}Introduction}{5}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Estimating the Population Mean of Potential Outcomes}{5}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Application of Convex Optimization}{5}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Application of Matrix Concentration Inequalities}{7}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Convex Analysis}{8}{chapter.3}%
-\contentsline {section}{\numberline {3.1}A Convex Analysis Primer}{8}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Conjugate Calculus and Fenchel-Rockafellar Theorem}{11}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Tseng Bertsekas}{15}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Random Matrix Inequalities}{18}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A Matrix Analysis Primer}{18}{section.4.1}%
-\contentsline {section}{\numberline {4.2}The Method of Exchangeable Pairs}{19}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Matrix Khintchin Inequality and Applications}{21}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Generalzed Inequalities by Hermitian Dilataition}{24}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Intrinsic Dimension}{25}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Empirical Processes}{26}{chapter.5}%
-\contentsline {section}{\numberline {5.1}A Primer on Empirical Processes}{26}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Maximal Inequalities}{27}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Functional Delta Method}{28}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{29}{chapter.6}%
+\contentsline {section}{\numberline {2.5}Application of Matrix Concentration Inequalities}{8}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Convex Analysis}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}A Convex Analysis Primer}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Conjugate Calculus and Fenchel-Rockafellar Theorem}{12}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Tseng Bertsekas}{16}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Random Matrix Inequalities}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A Matrix Analysis Primer}{19}{section.4.1}%
+\contentsline {section}{\numberline {4.2}The Method of Exchangeable Pairs}{20}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Matrix Khintchin Inequality and Applications}{22}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Generalzed Inequalities by Hermitian Dilataition}{25}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Intrinsic Dimension}{26}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Empirical Processes}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}A Primer on Empirical Processes}{27}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Maximal Inequalities}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Functional Delta Method}{29}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{30}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
