@@ -11,17 +11,17 @@
 \contentsline {section}{\numberline {2.6}Application of Matrix Concentration Inequalities}{14}{section.2.6}%
 \contentsline {chapter}{\numberline {3}Convex Analysis}{17}{chapter.3}%
 \contentsline {section}{\numberline {3.1}A Convex Analysis Primer}{17}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Conjugate Calculus and Fenchel-Rockafellar Theorem}{20}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Tseng Bertsekas}{24}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Random Matrix Inequalities}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A Matrix Analysis Primer}{27}{section.4.1}%
-\contentsline {section}{\numberline {4.2}The Method of Exchangeable Pairs}{28}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Matrix Khintchin Inequality and Applications}{30}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Generalzed Inequalities by Hermitian Dilataition}{33}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Intrinsic Dimension}{34}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Empirical Processes}{35}{chapter.5}%
-\contentsline {section}{\numberline {5.1}A Primer on Empirical Processes}{35}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Maximal Inequalities}{36}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Functional Delta Method}{37}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{38}{chapter.6}%
+\contentsline {section}{\numberline {3.2}Conjugate Calculus and Fenchel-Rockafellar Theorem}{21}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Tseng Bertsekas}{25}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Random Matrix Inequalities}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A Matrix Analysis Primer}{28}{section.4.1}%
+\contentsline {section}{\numberline {4.2}The Method of Exchangeable Pairs}{29}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Matrix Khintchin Inequality and Applications}{31}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Generalzed Inequalities by Hermitian Dilataition}{34}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Intrinsic Dimension}{35}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Empirical Processes}{36}{chapter.5}%
+\contentsline {section}{\numberline {5.1}A Primer on Empirical Processes}{36}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Maximal Inequalities}{37}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Functional Delta Method}{38}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{39}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

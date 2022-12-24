@@ -24,6 +24,7 @@ After some examples, we will derive the Fenchel-Rockafellar Theorem.
     (x^*)^T x - f(x)
   \end{gather}
 \end{definition}
+\todo[color=orange!40,inline]{Add comment on nomenclature. What is Legendre transformation in this context?}
 
 Note that $f$ in Definition~\ref{ def_convex_conjugate }
 does not have to be convex. On the other hand, the convex conjugate is always convex:
@@ -42,6 +43,10 @@ does not have to be convex. On the other hand, the convex conjugate is always co
   $
   is convex.
 \end{proposition}
+\begin{proof}
+  \cite[Proposition~4.2]{Mordukhovich2022}
+  \todo[color=orange!40,inline]{Give proof Mordukhovich2022 p.256}
+\end{proof}
 
 
 \begin{lemma}
@@ -167,6 +172,10 @@ does not have to be convex. On the other hand, the convex conjugate is always co
                 g^*( y^* )
               $.
 \end{theorem}
+\begin{proof}
+  \cite[Proposition~4.28]{Mordukhovich2022}
+  \todo[color=red!40,inline]{Provide proof. Mordukhovich2022 p.270}
+\end{proof}
 
 % conjugate sum rule %
  %%%%%%%%%%%%%%%%%%%%
@@ -391,9 +400,23 @@ does not have to be convex. On the other hand, the convex conjugate is always co
   This finishes the proof.
 \end{proof}
 
+\todo[color=orange!40,inline]{Include lemma on convex conjugates of indicator functions. This should be straightforward.}
+
+\todo[color=red!40,inline]{
+Write example on convex conjugates of
+$
+F(w)
+=
+\sum_{i=1}^{n} 
+f(w_i)
+$
+.
+See notes.
+}
 
 
 
+\todo[color=green!40,inline]{Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}
 Given 
 proper convex functions $f, g : \R^n \to \overline{\R}$ 
 and
@@ -488,6 +511,7 @@ the primal minimization problem as follows:
   $y^*\in\R^m$
   yields the result.
 \end{proof}
+\todo[color=orange!40,inline]{Provide proof (Mordukhovich2022 p.293)}
 \begin{theorem}
   \label{cvxa_fenchel_theorem}
   Let 
@@ -506,7 +530,11 @@ the primal minimization problem as follows:
     .
   \end{gather}
 \end{theorem}
+\begin{proof}
+  \cite[Theorem~4.63]{Mordukhovich2022}
+\end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\todo[color=green!40,inline]{Insert lemma in chapter 1.}
 \begin{lemma}
   \label{syu_1_result}
   Let 
@@ -619,5 +647,5 @@ the primal minimization problem as follows:
 
 \begin{takeaways}
   Almost there 
-  \lipsum[1]
+  \todo[color=purple!40,inline]{Add more meaning.}
 \end{takeaways}

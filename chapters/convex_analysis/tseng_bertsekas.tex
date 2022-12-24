@@ -27,6 +27,10 @@ $
   \text{matrix,}
 $
  and $b$ is a vector in $\R^n.$
+\todo[color=green!40, inline]{
+Generalize also to take equality constraints.
+Write in unconstrained form to derive dual.
+}
 \begin{assumption}
   \begin{enumerate}[label={(\roman*)}]
     Assume that the map 
@@ -108,6 +112,7 @@ $f^*$ and $q$ are continuously differentiable.
   A closed proper convex function is (essentially) strictly convex
   if and only if its conjugate is essentially smooth.
 \end{theorem}
+\todo[color=red!40,inline]{Read and understand proof (p.270) }
 
 We will denote the gradient of $q$ at $p$ by $d(p)$
 and its $i$th coordinate by $d_i(p).$
@@ -137,6 +142,9 @@ we obtain the dual cost gradient
   .
 \end{gather}
 The last equality follows from Danskin's Theorem and \cite[Theorem~23.5]{Rockafellar1970}
+
+
+\todo[color=red!40,inline]{Read and understand proof (p.80) }
 \begin{proposition}
   \emph{(Danskin's Theorem \cite[page 649]{Bertsekas2003})}
   Let 
@@ -257,6 +265,7 @@ $
   ^\top
   .
 $
+\todo[color=orange!40,inline]{Provide details. See notes.}
 
 Given an optimal dual solution $p$,
 we may obtain an optimal primal solution from the equation 
@@ -297,6 +306,7 @@ note that
 
  We can show that $p$ and $x$ satisfy the KKT conditions and thus $x$ is an optimal solution to $(P)$.
 
+n 
 
 \begin{definition}
   \emph{\cite[§28]{Rockafellar1970}}
