@@ -563,61 +563,76 @@ The proof translates the geometric concept of convex separation to the world of 
 \begin{proof}
   \emph{\cite[Theorem~4.23]{Mordukhovich2022}}
 \todo[color=green!40,inline]{Read begining of proof in reference (p.266).}
-  We define
+  We want to use results on convex separation. To make the geometric property of convex separation fruitful
+  to our purpose we consider two special sets. We will verify that these sets meet the requirements for convex separation, i.e., that they are convex and the intresection of their relative interiors is empty. Then a simple calculation will yield $\ge$.
+  To this end, consider 
+  the sets
   \begin{gather}
     \Theta_1
-    :=
-    C_1 \times [0,\infty)
+    \ :=\ 
+    C_1 \times [\,0,\infty)
     \quad
     \text{and}
     \quad
     \Theta_2
-    :=
+    \ :=\ 
     \left\{ 
       (x,\lambda)\in \R^n
+      \ 
       \colon
+      \ 
       x \in C_2
       \ 
       \text{and}
       \ 
       \lambda
+      \,
       \le
-      \inner{x^*}{x} - \alpha
-    \right\}.
+      \,
+      \inner{x^*\!}{x} - \alpha
+    \right\}\ .
   \end{gather}
   \todo[color=green!40,inline]{Simplify proof with properties of relative interiors.}
-  Clearly $\Theta_1$ is convex by the convexity of $C_1.$
-  Consider the affine function
-  \begin{gather}
+  Clearly, $\Theta_1$ is convex by the convexity of $C_1$. To see that $\Theta_2$ is convex consider the affine function
+  $
     \varphi:
-    \R^{n+1} \to \R
+    \R^{n}\!\times \R \to \R
     ,
-    \quad
+    \ 
     (x,\lambda)
     \mapsto
-    \alpha - \inner{x^*}{x} - \lambda.
-  \end{gather}
-  It holds 
-  $
-    \Theta_2
+    \alpha - \inner{x^*\!}{x} - \lambda
+  $ .
+  From the definitions of $\varphi$ and $\Theta_2$ we get the identity
+  \begin{gather*}
+ \Theta_2
+    \ 
     =
-    \varphi^{-1}((-\infty,0])
-    \cap
+    \ 
     (
-      C_2\times \R
+      C_2\!\times\R
     )
+    \ 
+    \cap
+    \ 
+    \varphi^{-1}
+    (-\infty,0\,]
+    \,
     .
-  $
+  \end{gather*}
   Thus, by the convexity of the sets
+  $C_2$
+  and
   $
-    \varphi^{-1}((-\infty,0])
+    \varphi^{-1}(-\infty,0]
   $
-  and $C_2$
-  it follows that $\Theta_2$ is convex.
-  We want to apply convex separation to 
-  $\Theta_1$ and $\Theta_2$.
-  To this end we show 
-  $\mathrm{ri}(\Theta_1)\cap\mathrm{ri}(\Theta_2)=\emptyset.$
+  it follows the convexity of $\Theta_2$.
+  Next we show that the relative interiors of 
+  $\Theta_1$ and $\Theta_2$
+  do not intersect, i.e.,
+  ~$
+  \mathrm{ri}\,\Theta_1\cap\mathrm{ri}\,\Theta_2=\emptyset.
+  $
   First note that
   \begin{gather}
     \mathrm{ri}(\Theta_1)
