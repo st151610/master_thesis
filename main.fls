@@ -1189,6 +1189,7 @@ INPUT chapters/balancing_weights/double_robustness.tex
 INPUT ./chapters/balancing_weights/double_robustness.tex
 INPUT chapters/balancing_weights/double_robustness.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT ./chapters/balancing_weights/error_decomp.tex
 INPUT chapters/balancing_weights/error_decomp.tex
 INPUT ./chapters/balancing_weights/error_decomp.tex
@@ -1199,7 +1200,6 @@ INPUT ./chapters/balancing_weights/chapter_01.tex
 INPUT chapters/balancing_weights/chapter_01.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm

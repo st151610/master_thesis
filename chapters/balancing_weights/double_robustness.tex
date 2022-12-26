@@ -6,10 +6,10 @@
 We begin the discussion with an
 uncomplicated question:
 What is the speed of convergence in the weak law of large numbers?
-The next statement gives a clear-cut answer to this question:
+The next statement gives a clear-cut answer:
 The arithmetic mean of independent, identically distributed, square-integrable random variables 
 learns with rate $n^{-1/2}$.
-Furthermore, it is easy to prove using
+Furthermore, the statement is easy to prove using
 Bienaymé's formula and Chebyshev's inequality (cf. \cite[Theorem~5.14]{Klenke2020}).
 
 
@@ -66,18 +66,99 @@ above assessment simply by imposing
   \E[Y(T)]\ \neq\  \E[Y(1)]
   \,.
 \end{gather}
-Statisticians have wrestled with this idea for nearly a century.
+Statisticians have wrestled with this issue for nearly a century.
 
-We calculate mean and variance
+In experimental studies we usually specify treatment assignment as opposed to merely observing a unit receiving treatment. 
 
+The next statement makes use of the propensity score.
+
+\begin{theorem*}
+  Consider the weighted mean estimator with weights
+  \begin{gather}
+    w_i
+    \ 
+    =
+    \ 
+    \frac{1}{n}
+    \frac{T_i}{\pi(X_i)}
+    \,.
+  \end{gather}
+  Denote
+  $
+    V:=
+    \E[
+    (
+      Y(1)
+    )^2
+    \,/\,
+    \pi(X)
+    ]
+    -
+    \E[Y(1)]^2
+  $.  
+  Assume that \textit{weak unconfoundedness} holds.
+  Then, for any $\tau \in (0,1]$ and all $n\in\mathbb{N}$, we have
+  \begin{gather}
+   \P
+   \left[
+     \left| 
+   \sum_{i=1}^{n}
+   w_iY_i - \E[Y(1)]
+     \right|
+     \le
+     \sqrt{V}
+     \frac{1}{\sqrt{\tau}}
+     \frac{1}{\sqrt{n}}
+   \right]
+   \ge
+   1-\tau\,.
+  \end{gather}
+
+\end{theorem*}
+\begin{proof}
+We want to reinforce the coherent use of the weak law of large numbers.
+To this end, we verify 
+\begin{align*}
+  n\,\E[w(T,X)\,Y(T)]
+  \ 
+  &=
+  \ 
+  \E[Y(1)]
+  \,,
+  \\
+  n^2\,
+  \mathbf{Var}[w(T,X)\,Y(T)]
+  \ 
+  &=
+  \ 
+    \E[
+    (
+      Y(1)
+    )^2
+    \,/\,
+    \pi(X)
+    ]
+    -
+    \E[Y(1)]^2
+    \,.
+\end{align*}
+Essentially, the random weight $w(T,X)$ acts on $Y(T)$ through $T\,/\,\pi(X)$.
+In a second we will see, how it induces independence of observed outcome $Y(T)$ and treatment $T$.
+To showcase this detail we added the $n$ and $n^2$ factors in the above display.
+The calculations go as follows.
 \begin{align}
   \begin{split}
+  n\,\E[w(T,X)\,Y(T)]
+  &\ 
+  =
+  \ 
   \E
   \left[ 
     Y(T)
     \cdot
     (T\,/\,\pi(X))
   \right]
+  \\
   &\ =\ 
   \E
   \left[ 
@@ -130,26 +211,51 @@ We calculate mean and variance
   .
 \end{split}
 \end{align}
-The third equality is due to weak unconfoundedness and Bayes rule.
-With the same arguments as above it follows
+The first equality comes from the definition of the weights.
+The second, third and fifth equality stem from 
 $
-  \mathbf{Var}
-  [
-    (T/\pi(X))
+  T\in \left\{ 0,1 \right\}
+$,
+and the law of total expectation, applied with $T$ and $X$.
+The fourth equality is due to the assumption of weak unconfoundedness, i.e., 
+\begin{gather}
+  (Y(0),Y(1))\perp\!\!\!\perp T\, |\, X\,.
+\end{gather}
+The density transformation is due to Bayes's Theorem.
+With slight modifications in the above argument, it follows
+\begin{gather}
+  n^2
+  \E
+  \left[ 
+  \Big( 
     Y(T)
-  ]
+    \cdot
+    (T\,/\,\pi(X))
+  \Big)
+  ^2
+  \right]
+  \ 
     =
-    \E[
+    \ 
+    \E
+    \Big[
     (Y(1))^2
+    \,
     /
+    \,
     \pi(X)
-    ]
-    -
-    \E[Y(1)]^2
-    =:
-    \mathbf{V}^*
-    .
-$
+    \Big]
+    \,.
+\end{gather}
+We omit the details.
+Invoking the weak law of large numbers finishes the proof.
+\end{proof}
+
+\begin{gather}
+  \pi(x)=\P[T=1|X=x]
+\end{gather}
+
+
 We readily calculate the learning rate 
 \begin{gather}
   \sqrt{
