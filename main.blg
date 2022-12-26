@@ -5,45 +5,45 @@ The style file: alpha.bst
 Database file #1: literature.bib
 Warning--empty booktitle in Bertsekas2003
 Warning--empty publisher in Bertsekas2003
-You've used 18 entries,
+You've used 16 entries,
             2543 wiz_defined-function locations,
-            687 strings with 7425 characters,
-and the built_in function-call counts, 6244 in all, are:
-= -- 609
-> -- 254
-< -- 12
-+ -- 82
-- -- 78
-* -- 433
-:= -- 1038
-add.period$ -- 55
-call.type$ -- 18
-change.case$ -- 96
-chr.to.int$ -- 18
-cite$ -- 20
-duplicate$ -- 276
-empty$ -- 485
-format.name$ -- 104
-if$ -- 1268
+            672 strings with 7133 characters,
+and the built_in function-call counts, 5521 in all, are:
+= -- 538
+> -- 227
+< -- 11
++ -- 74
+- -- 70
+* -- 374
+:= -- 917
+add.period$ -- 49
+call.type$ -- 16
+change.case$ -- 85
+chr.to.int$ -- 16
+cite$ -- 18
+duplicate$ -- 247
+empty$ -- 428
+format.name$ -- 93
+if$ -- 1123
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 22
-newline$ -- 92
-num.names$ -- 54
-pop$ -- 107
+missing$ -- 20
+newline$ -- 82
+num.names$ -- 48
+pop$ -- 101
 preamble$ -- 1
-purify$ -- 120
+purify$ -- 107
 quote$ -- 0
-skip$ -- 222
+skip$ -- 199
 stack$ -- 0
-substring$ -- 294
-swap$ -- 32
-text.length$ -- 12
-text.prefix$ -- 9
+substring$ -- 247
+swap$ -- 30
+text.length$ -- 11
+text.prefix$ -- 8
 top$ -- 0
-type$ -- 120
+type$ -- 104
 warning$ -- 2
-while$ -- 57
-width$ -- 22
-write$ -- 231
+while$ -- 50
+width$ -- 19
+write$ -- 205
 (There were 2 warnings)

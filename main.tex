@@ -1,7 +1,8 @@
-\documentclass[12pt]{scrreport}
+\documentclass[11pt, a4paper, BCOR=10mm, DIV9]{scrbook}
+\linespread{1.1}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage[a4paper, margin=2.5cm]{geometry}
+%\usepackage[a4paper, margin=2.5cm]{geometry}
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{enumitem}
@@ -37,6 +38,7 @@
 
 
 \newtheorem{theorem}{Theorem}[chapter]
+\newtheorem*{theorem*}{Theorem}
 \newenvironment{ftheorem}
   {\begin{mdframed}\begin{theorem}}
   {\end{theorem}\end{mdframed}}

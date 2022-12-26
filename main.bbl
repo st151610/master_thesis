@@ -22,12 +22,6 @@ Richard~Y. Chen, Alex Gittens, and Joel~A. Tropp.
 \newblock The {{Masked Sample Covariance Estimator}}: {{An Analysis}} via
   {{Matrix Concentration Inequalities}}, June 2012.
 
-\bibitem[Hah98]{Hahn1998}
-Jinyong Hahn.
-\newblock On the {{Role}} of the {{Propensity Score}} in {{Efficient
-  Semiparametric Estimation}} of {{Average Treatment Effects}}.
-\newblock {\em Econometrica}, 66(2):315, March 1998.
-
 \bibitem[Kle20]{Klenke2020}
 Achim Klenke.
 \newblock {\em Probability {{Theory}}: {{A Comprehensive Course}}}.
@@ -98,10 +92,5 @@ Yixin Wang and Jos{\'e}~R. Zubizarreta.
 \newblock Minimal {{Dispersion Approximately Balancing Weights}}: {{Asymptotic
   Properties}} and {{Practical Considerations}}.
 \newblock {\em Biometrika}, page asz050, October 2019.
-
-\bibitem[ZP17]{Zhao2017a}
-Qingyuan Zhao and Daniel Percival.
-\newblock Entropy balancing is doubly robust.
-\newblock {\em Journal of Causal Inference}, 5(1):20160010, September 2017.
 
 \end{thebibliography}

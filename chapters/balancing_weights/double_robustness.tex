@@ -1,94 +1,101 @@
-read the paper \cite{Zhao2017a} for discussion of double robustness for balancing weights and \cite{Hahn1998} for semiparametric efficiency bounds.
+%read the paper \cite{Zhao2017a} for discussion of double robustness for balancing weights and \cite{Hahn1998} for semiparametric efficiency bounds.
 
 
-What is the best rate we can achieve?
+\subsection{Learning Rates of the weighted mean}
 
-\begin{theorem}
-  \emph{(Hartman-Winter)}
+We begin the discussion with an
+uncomplicated question:
+What is the speed of convergence in the weak law of large numbers?
+The next statement gives a clear-cut answer to this question:
+The arithmetic mean of square-integrable i.i.d. random variables 
+learns with rate $n^{-1/2}$.
+Furthermore, it is easy to prove using
+Bienaymé's formula and Chebyshev's inequality (cf. \cite[Theorem~5.14]{Klenke2020}).
+
+
+\begin{theorem*}
   Let 
   $
-    X_1,
-    X_2,
-    \ldots
+    X_1,X_2,\ldots
   $
-  be i.i.d. real random variables with 
+  be i.i.d, square-integrable random variables with 
   $
-    \E[X_1]=0
-    \ 
-    \text{and}
-    \ 
-    \mathbf{Var}
-    [X_1]
-    = 1.
-  $
-  Let
-  $
-    S_n
-    :=
-    X_1
-    +
-    \ldots
-    +
-    X_n,
-    \ 
-    n\in \mathbb{N}
-    .
-  $
-  Then
+    V:=
+    \mathbf{Var}[X_1]
+    <\infty
+  $.
+  Then, for any $\tau \in (0,1]$, we have
   \begin{gather}
-    \limsup_{n\to\infty}
-    \frac{S_n}{
-      \sqrt{
-        2n
-        \log
-        \log
-        n
-      }
-    }
-    =
-    1
-    \quad
-    \text{a.s.}
+   \P
+   \left[
+     \left| 
+   \frac{1}{n}
+   \sum_{i=1}^{n}
+   (X_i - \E[X_i])
+     \right|
+     \le
+     \sqrt{V}
+     \frac{1}{\sqrt{\tau}}
+     \frac{1}{\sqrt{n}}
+   \right]
+   \ge
+   1-\tau\,.
   \end{gather}
-\end{theorem}
-\begin{proof}
-  \cite[Theorem~22.11]{Klenke2020}
-\end{proof}
+\end{theorem*}
+
+We implicitly claim that 
 
 
 We calculate mean and variance
 
 \begin{align}
+  \begin{split}
   \E
   \left[ 
-    (T/\pi(X))
     Y(T)
+    \cdot
+    (T\,/\,\pi(X))
   \right]
-  &=
+  &\ =\ 
   \E
   \left[ 
     Y(1)
-    /\pi(X)
+    \,
+    /
+    \,
+    \pi(X)
+    \,
     \vert
+    \,
     T=1
-  \right]
-  \P[T=1]
-  \\
-  &=
-  \int_\mathcal{X}
-  \left[ 
-    Y(1)
-    \vert
-    T=1,
-    X=x
   \right]
   \cdot
   \P[T=1]
-  /
-  \pi(x)
-  \P_{X|T}(dx|1)
   \\
-  &=
+  &\ =\ 
+  \int_\mathcal{X}
+  \E
+  \left[ 
+    Y(1)
+    \,
+    \vert
+    \,
+    X=x
+    ,
+    T=1
+  \right]
+  \cdot
+  (
+  \P[T=1]
+  \,
+  /
+  \,
+  \pi(x)
+  )
+  \,
+  \P_{X|T}(dx\,|\,1)
+  \\
+  &\ =\ 
   \int_\mathcal{X}
   \left[ 
     Y(1)
@@ -99,6 +106,7 @@ We calculate mean and variance
   =
   \E[Y(1)]
   .
+\end{split}
 \end{align}
 The third equality is due to weak unconfoundedness and Bayes rule.
 With the same arguments as above it follows
