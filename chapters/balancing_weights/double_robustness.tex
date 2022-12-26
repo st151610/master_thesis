@@ -143,7 +143,11 @@ To this end, we verify
     \,.
 \end{align*}
 Essentially, the random weight $w(T,X)$ acts on $Y(T)$ through $T\,/\,\pi(X)$.
-In a second we will see, how it induces independence of observed outcome $Y(T)$ and treatment $T$.
+It does so by inducing independence of observed outcome $Y(T)$ and treatment $T$.
+This effect can only manifest itself if weak unconfoundedness holds, i.e., 
+\begin{gather}
+  (Y(0),Y(1))\perp\!\!\!\perp T\, |\, X\,.
+\end{gather}
 To showcase this detail we added the $n$ and $n^2$ factors in the above display.
 The calculations go as follows.
 \begin{align}
@@ -217,10 +221,7 @@ $
   T\in \left\{ 0,1 \right\}
 $,
 and the law of total expectation, applied with $T$ and $X$.
-The fourth equality is due to the assumption of weak unconfoundedness, i.e., 
-\begin{gather}
-  (Y(0),Y(1))\perp\!\!\!\perp T\, |\, X\,.
-\end{gather}
+The fourth equality is due to the assumption of weak unconfoundedness.
 The density transformation is due to Bayes's Theorem.
 With slight modifications in the above argument, it follows
 \begin{gather}
@@ -251,16 +252,11 @@ We omit the details.
 Invoking the weak law of large numbers finishes the proof.
 \end{proof}
 
-\begin{gather}
-  \pi(x)=\P[T=1|X=x]
-\end{gather}
+We started by asking an easy question, so it is time for a more challenging one: How do we proceed in deriving learning rates if the propensity score is unknown.
+How do we generally procede?
+[what has been done in the past. why are some methods obsolete]
+A naive answer would be: We hope to select a proper model and try to estimate the propensity score.
+Stunningly, a lot of practicioners still settle for obsolete methods when it comes to propensity score analysis.
 
 
-We readily calculate the learning rate 
-\begin{gather}
-  \sqrt{
-    \mathbf{V}^*
-    \frac{\log\log n}{n}
-  }
-  .
-\end{gather}
+
