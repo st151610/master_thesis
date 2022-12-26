@@ -7,7 +7,7 @@ We begin the discussion with an
 uncomplicated question:
 What is the speed of convergence in the weak law of large numbers?
 The next statement gives a clear-cut answer to this question:
-The arithmetic mean of square-integrable i.i.d. random variables 
+The arithmetic mean of independent, identically distributed, square-integrable random variables 
 learns with rate $n^{-1/2}$.
 Furthermore, it is easy to prove using
 Bienaymé's formula and Chebyshev's inequality (cf. \cite[Theorem~5.14]{Klenke2020}).
@@ -24,7 +24,7 @@ Bienaymé's formula and Chebyshev's inequality (cf. \cite[Theorem~5.14]{Klenke20
     \mathbf{Var}[X_1]
     <\infty
   $.
-  Then, for any $\tau \in (0,1]$, we have
+  Then, for any $\tau \in (0,1]$ and all $n\in\mathbb{N}$, we have
   \begin{gather}
    \P
    \left[
@@ -43,8 +43,30 @@ Bienaymé's formula and Chebyshev's inequality (cf. \cite[Theorem~5.14]{Klenke20
   \end{gather}
 \end{theorem*}
 
-We implicitly claim that 
-
+Deriving learning rates in this way, we make an implicit assumption.
+We assume that
+observed outcomes of the treated follow the same distribution as
+marginal potential outcomes under treatment.
+In other words, we require
+\begin{gather}
+  Y(1)\,|\,T=1
+  \ 
+  \sim 
+  \ 
+  \P_
+  {
+  Y(1)
+  }
+  \,.
+\end{gather}
+Virtually every scenario of interest violates this assumption.
+Indeed, any external influence on both $T$ and $Y(1)$ can ruin the 
+above assessment simply by imposing 
+\begin{gather}
+  \E[Y(T)]\ \neq\  \E[Y(1)]
+  \,.
+\end{gather}
+Statisticians have wrestled with this idea for nearly a century.
 
 We calculate mean and variance
 
