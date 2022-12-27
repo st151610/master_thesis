@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  26 DEC 2022 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  27 DEC 2022 17:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -50,18 +50,6 @@ Package typearea Info: You've used standard option `a4paper'.
 (typearea)             If you'd like to set the option with \KOMAoptions,
 (typearea)             you'd have to use `paper=a4' there
 (typearea)             instead of `a4paper', too.
-
-
-Package typearea Warning: You've used obsolete option `DIV9'.
-(typearea)                Usage of this option indicates an old document
-(typearea)                and changes compatibility level using
-(typearea)                `DIV=9,version=first,
-(typearea)                enabledeprecatedfontcommands' that may result
-(typearea)                in further warnings.
-(typearea)                If you don't want this, you should simply
-(typearea)                replace option `DIV9' by `DIV=9'.
-
-Package typearea Info: Switching compatibility level to `first'.
 \ta@hblk=\skip49
 \ta@vblk=\skip50
 \ta@temp=\skip51
@@ -232,7 +220,8 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6052.
 Package hyperref Info: PDF/A mode OFF on input line 6057.
 LaTeX Info: Redefining \ref on input line 6097.
 LaTeX Info: Redefining \pageref on input line 6101.
- (/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+
+(/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -744,27 +733,27 @@ Package nomencl Info: Writing nomenclature file main.nlo on input line 20.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-Package scrbase Info: activating english \contentsname on input line 95.
-Package scrbase Info: activating english \listfigurename on input line 95.
-Package scrbase Info: activating english \listtablename on input line 95.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+Package scrbase Info: activating english \contentsname on input line 96.
+Package scrbase Info: activating english \listfigurename on input line 96.
+Package scrbase Info: activating english \listtablename on input line 96.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count334
@@ -784,7 +773,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 95.
+Package hyperref Info: Link coloring OFF on input line 96.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -794,9 +783,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count340
 )
-LaTeX Info: Redefining \ref on input line 95.
-LaTeX Info: Redefining \pageref on input line 95.
-LaTeX Info: Redefining \nameref on input line 95.
+LaTeX Info: Redefining \ref on input line 96.
+LaTeX Info: Redefining \pageref on input line 96.
+LaTeX Info: Redefining \nameref on input line 96.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -808,7 +797,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 95.
+(scrbook)           before \begin{document} on input line 96.
  (/usr/share/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (/usr/share/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
@@ -834,21 +823,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
-<images//unistuttgart_logo_deutsch.jpg, id=65, 173.9298pt x 37.0986pt>
+<images//unistuttgart_logo_deutsch.jpg, id=67, 173.9298pt x 37.0986pt>
 File: images//unistuttgart_logo_deutsch.jpg Graphic file (type jpg)
 <use images//unistuttgart_logo_deutsch.jpg>
-Package pdftex.def Info: images//unistuttgart_logo_deutsch.jpg  used on input line 100.
+Package pdftex.def Info: images//unistuttgart_logo_deutsch.jpg  used on input line 101.
 (pdftex.def)             Requested size: 173.92937pt x 37.0985pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.100 
+l.101 
        [1 <./images//unistuttgart_logo_deutsch.jpg>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.101 \tableofcontents
+l.102 \tableofcontents
                        [2
 
 
@@ -866,22 +855,23 @@ chapter 1.
 
 ]
 chapter 2.
-(./chapters/balancing_weights/introdution_ch_1.tex) (./chapters/balancing_weights/double_robustness.tex [9] [10]
-Overfull \hbox (5.35666pt too wide) detected at line 217
+(./chapters/balancing_weights/introdution_ch_1.tex) (./chapters/balancing_weights/double_robustness.tex [9]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 44.
+ [10]
+Overfull \hbox (5.35666pt too wide) detected at line 216
 []
  []
 
-) (./chapters/balancing_weights/error_decomp.tex [11]
+[11]) (./chapters/balancing_weights/error_decomp.tex
 Overfull \hbox (46.09444pt too wide) detected at line 96
 []
  []
 
-) (./chapters/balancing_weights/chapter_01.tex
+[12]) (./chapters/balancing_weights/chapter_01.tex
 Overfull \hbox (104.55032pt too wide) detected at line 74
 []
  []
 
-[12]
 Package mdframed Info: mdframed works in twoside mode on input line 78.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -890,11 +880,13 @@ Package mdframed Info: mdframed works in twoside mode on input line 92.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 92.
-
-
-LaTeX Warning: Reference `primal_weighting_binary' on page 13 undefined on input line 134.
-
+Package mdframed Info: Not enough space on this page on input line 94.
 [13]
+Package mdframed Info: Not enough space on this page on input line 94.
+
+
+LaTeX Warning: Reference `primal_weighting_binary' on page 14 undefined on input line 134.
+
 
 LaTeX Warning: Reference `primal_weighting_binary' on page 14 undefined on input line 214.
 
@@ -908,26 +900,29 @@ Overfull \hbox (3.60048pt too wide) in paragraph at lines 265--284
 [][]\OT1/cmr/bx/n/10.95 2.1.4. []\OT1/cmr/m/it/10.95 There ex-ists $\OML/cmm/m/it/10.95 ^^U[] \OMS/cmsy/m/n/10.95 2 \OT1/cmr/m/n/10.95 ^^B$ \OT1/cmr/m/it/10.95 such that $[][] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 '[]$\OT1/cmr/m/it/10.95 , where $\OML/cmm/m/it/10.95 m[]\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 ^^A\OT1/cmr/m/n/10.95 ) :=
  []
 
+[14]
 
-LaTeX Warning: Reference `primal_weighting_binary' on page 14 undefined on input line 357.
+LaTeX Warning: Reference `primal_weighting_binary' on page 15 undefined on input line 357.
 
 
-LaTeX Warning: Reference `primal_weighting_binary' on page 14 undefined on input line 363.
+LaTeX Warning: Reference `primal_weighting_binary' on page 15 undefined on input line 363.
 
-[14] [15]
+[15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
+Underfull \vbox (badness 1609) has occurred while \output is active []
 
-LaTeX Warning: Reference `rmineq_bernstein' on page 17 undefined on input line 836.
+ [17]
+
+LaTeX Warning: Reference `rmineq_bernstein' on page 18 undefined on input line 836.
 
 
-LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 17 undefined on input line 863.
+LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 18 undefined on input line 863.
 
 
-LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 17 undefined on input line 937.
+LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 18 undefined on input line 937.
 
-[17]
 
 LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 18 undefined on input line 1003.
 
@@ -937,20 +932,21 @@ LaTeX Warning: Reference `rmineq_bernstein_expectation_bound' on page 18 undefin
 
 LaTeX Warning: Reference `rmineq_bernstein' on page 18 undefined on input line 1010.
 
-
-LaTeX Warning: Reference `rmineq_bernstein_probability_bound' on page 18 undefined on input line 1095.
-
-
-LaTeX Warning: Reference `rmineq_bernstein' on page 18 undefined on input line 1096.
-
 [18]
 
-LaTeX Warning: Reference `rmineq_intrinsic_bernstein_vector_corollary' on page 19 undefined on input line 1334.
+LaTeX Warning: Reference `rmineq_bernstein_probability_bound' on page 19 undefined on input line 1095.
 
-) (./chapters/balancing_weights/app_conv_opt.tex [19]
+
+LaTeX Warning: Reference `rmineq_bernstein' on page 19 undefined on input line 1096.
+
+[19]
+
+LaTeX Warning: Reference `rmineq_intrinsic_bernstein_vector_corollary' on page 20 undefined on input line 1334.
+
+) (./chapters/balancing_weights/app_conv_opt.tex [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+ [21]
 Package mdframed Info: mdframed works in twoside mode on input line 90.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -958,12 +954,12 @@ Package mdframed Info: mdframed detected package amsthm
 
 Underfull \vbox (badness 2495) has occurred while \output is active []
 
- [21]
+ [22]
 Overfull \hbox (98.45584pt too wide) detected at line 290
 []
  []
 
-) (./chapters/balancing_weights/application_matrix_concentration_ineq.tex [22]
+) (./chapters/balancing_weights/application_matrix_concentration_ineq.tex [23]
 Overfull \hbox (28.82341pt too wide) detected at line 51
 []
  []
@@ -978,20 +974,17 @@ Overfull \hbox (53.66603pt too wide) detected at line 163
 []
  []
 
-[23]
+[24]
 Overfull \hbox (119.40285pt too wide) detected at line 205
 []
  []
 
-[24]
+[25]
 Overfull \hbox (69.5209pt too wide) detected at line 333
 []
  []
 
-) [25] [26
-
-
-]
+) [26]
 chapter 3.
 (./chapters/convex_analysis/cvxa_primer.tex
 Overfull \hbox (36.1305pt too wide) in paragraph at lines 18--54
@@ -1000,7 +993,6 @@ Overfull \hbox (36.1305pt too wide) in paragraph at lines 18--54
 [] := []$
  []
 
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 72.
 
 Overfull \hbox (73.27632pt too wide) in paragraph at lines 55--72
 []\OT1/cmr/m/n/10.95 Throughout this sec-tion, we shall de-note by $\OML/cmm/m/it/10.95 B \OT1/cmr/m/n/10.95 := []$
@@ -1019,7 +1011,10 @@ Overfull \hbox (76.93842pt too wide) in paragraph at lines 73--125
 ) = [] \OML/cmm/m/it/10.95 :$ 
  []
 
-[27]
+[27
+
+
+]
 Overfull \hbox (14.8236pt too wide) in paragraph at lines 206--222
 []$[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 ) = [] \OML/cmm/m/it/10.95 :$ 
  []
@@ -1192,7 +1187,7 @@ Overfull \hbox (56.80855pt too wide) detected at line 75
  []
 
 [49])
-Overfull \hbox (75.87392pt too wide) in paragraph at lines 177--177
+Overfull \hbox (75.87392pt too wide) in paragraph at lines 178--178
  [][][][][][] 
  []
 
@@ -1247,18 +1242,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27572 strings out of 478238
- 532217 string characters out of 5850455
- 1031072 words of memory out of 5000000
- 44860 multiletter control sequences out of 15000+600000
+ 27581 strings out of 478238
+ 532351 string characters out of 5850455
+ 1033075 words of memory out of 5000000
+ 44864 multiletter control sequences out of 15000+600000
  485147 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,19n,106p,10615b,983s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (64 pages, 542621 bytes).
+Output written on main.pdf (64 pages, 544908 bytes).
 PDF statistics:
- 1076 PDF objects out of 1200 (max. 8388607)
- 951 compressed objects within 10 object streams
- 403 named destinations out of 1000 (max. 500000)
+ 1082 PDF objects out of 1200 (max. 8388607)
+ 957 compressed objects within 10 object streams
+ 408 named destinations out of 1000 (max. 500000)
  234 words of extra memory for PDF output out of 10000 (max. 10000000)
 

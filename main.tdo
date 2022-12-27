@@ -1,19 +1,20 @@
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Solve editorial issue with ball.}{27}{section*.10}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Order results to give pretty proof.}{29}{section*.11}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Read begining of proof in reference (p.266).}{30}{section*.12}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Simplify proof with properties of relative interiors.}{31}{section*.13}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Finish proof.}{31}{section*.14}%
-\contentsline {todo}{\color@fb@x {}{black}{}{purple!40}{\leavevmode {\color {purple!40}o}}\ Add more meaning.}{32}{section*.15}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Add comment on nomenclature. What is Legendre transformation in this context?}{32}{section*.16}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Give proof Mordukhovich2022 p.256}{32}{section*.17}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Provide proof. Mordukhovich2022 p.270}{33}{section*.18}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Include lemma on convex conjugates of indicator functions. This should be straightforward.}{35}{section*.19}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Write example on convex conjugates of $ F(w) = \DOTSB \sum@ \slimits@ _{i=1}^{n} f(w_i) $ . See notes. }{35}{section*.20}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}{35}{section*.21}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide proof (Mordukhovich2022 p.293)}{36}{section*.22}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Insert lemma in chapter 1.}{36}{section*.23}%
-\contentsline {todo}{\color@fb@x {}{black}{}{purple!40}{\leavevmode {\color {purple!40}o}}\ Add more meaning.}{37}{section*.24}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Generalize also to take equality constraints. Write in unconstrained form to derive dual. }{37}{section*.25}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.270) }{38}{section*.26}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.80) }{38}{section*.27}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide details. See notes.}{39}{section*.28}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ What about more refined concentration inequalities?}{10}{section*.3}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Solve editorial issue with ball.}{27}{section*.11}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Order results to give pretty proof.}{29}{section*.12}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Read begining of proof in reference (p.266).}{30}{section*.13}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Simplify proof with properties of relative interiors.}{31}{section*.14}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Finish proof.}{31}{section*.15}%
+\contentsline {todo}{\color@fb@x {}{black}{}{purple!40}{\leavevmode {\color {purple!40}o}}\ Add more meaning.}{32}{section*.16}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Add comment on nomenclature. What is Legendre transformation in this context?}{32}{section*.17}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Give proof Mordukhovich2022 p.256}{32}{section*.18}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Provide proof. Mordukhovich2022 p.270}{33}{section*.19}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Include lemma on convex conjugates of indicator functions. This should be straightforward.}{35}{section*.20}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Write example on convex conjugates of $ F(w) = \DOTSB \sum@ \slimits@ _{i=1}^{n} f(w_i) $ . See notes. }{35}{section*.21}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}{35}{section*.22}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide proof (Mordukhovich2022 p.293)}{36}{section*.23}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Insert lemma in chapter 1.}{36}{section*.24}%
+\contentsline {todo}{\color@fb@x {}{black}{}{purple!40}{\leavevmode {\color {purple!40}o}}\ Add more meaning.}{37}{section*.25}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Generalize also to take equality constraints. Write in unconstrained form to derive dual. }{37}{section*.26}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.270) }{38}{section*.27}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.80) }{38}{section*.28}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide details. See notes.}{39}{section*.29}%

@@ -3,8 +3,6 @@
 
 \subsection{Learning Rates of the weighted mean}
 
-We begin the discussion with an
-uncomplicated question:
 What is the speed of convergence in the weak law of large numbers?
 The next statement gives a clear-cut answer:
 The arithmetic mean of independent, identically distributed, square-integrable random variables 
@@ -43,6 +41,7 @@ Bienaymé's formula and Chebyshev's inequality (cf. \cite[Theorem~5.14]{Klenke20
   \end{gather}
 \end{theorem*}
 
+\todo[color=red!40, inline]{What about more refined concentration inequalities?}
 Deriving learning rates in this way, we make an implicit assumption.
 We assume that
 observed outcomes of the treated follow the same distribution as
@@ -59,11 +58,11 @@ In other words, we require
   }
   \,.
 \end{gather}
-Virtually every scenario of interest violates this assumption.
+In practice, virtually every scenario violates this assumption.
 Indeed, any external influence on both $T$ and $Y(1)$ can ruin the 
 above assessment simply by imposing 
 \begin{gather}
-  \E[Y(T)]\ \neq\  \E[Y(1)]
+  \E[Y(T)\,|\, T=1]\ \neq\  \E[Y(1)]
   \,.
 \end{gather}
 Statisticians have wrestled with this issue for nearly a century.
@@ -116,7 +115,7 @@ The next statement makes use of the propensity score.
 
 \end{theorem*}
 \begin{proof}
-We want to reinforce the coherent use of the weak law of large numbers.
+We want to reinforce coherent use of the weak law of large numbers.
 To this end, we verify 
 \begin{align*}
   n\,\E[w(T,X)\,Y(T)]
@@ -144,11 +143,11 @@ To this end, we verify
 \end{align*}
 Essentially, the random weight $w(T,X)$ acts on $Y(T)$ through $T\,/\,\pi(X)$.
 It does so by inducing independence of observed outcome $Y(T)$ and treatment $T$.
-This effect can only manifest itself if weak unconfoundedness holds, i.e., 
+This requires that weak unconfoundedness holds, i.e., 
 \begin{gather}
   (Y(0),Y(1))\perp\!\!\!\perp T\, |\, X\,.
 \end{gather}
-To showcase this detail we added the $n$ and $n^2$ factors in the above display.
+To showcase the details we added an $n$ and $n^2$ factor in the above display.
 The calculations go as follows.
 \begin{align}
   \begin{split}
@@ -215,13 +214,13 @@ The calculations go as follows.
   .
 \end{split}
 \end{align}
-The first equality comes from the definition of the weights.
-The second, third and fifth equality stem from 
+The first equality holds because of the definition of the weights.
+The second, third and last equality stem from 
 $
   T\in \left\{ 0,1 \right\}
 $,
 and the law of total expectation, applied with $T$ and $X$.
-The fourth equality is due to the assumption of weak unconfoundedness.
+The fourth equality is justified by the assumption of weak unconfoundedness.
 The density transformation is due to Bayes's Theorem.
 With slight modifications in the above argument, it follows
 \begin{gather}
@@ -258,5 +257,78 @@ How do we generally procede?
 A naive answer would be: We hope to select a proper model and try to estimate the propensity score.
 Stunningly, a lot of practicioners still settle for obsolete methods when it comes to propensity score analysis.
 
+
+Next, we consider the event that we have a consistent estimator of the 
+propensity score and the distribution of the covariate vector $X$ has compact support.
+In this case, there exists a constant $C_\pi\in (0,1/2)$ such that 
+\begin{gather}
+  C_\pi \ \le\  \pi(x) \ \le\  1-C_\pi 
+  \qquad
+  \text{for all}\ 
+  x \in \mathcal{X}\,.
+\end{gather}
+Furthermore, 
+
+\begin{align}
+  \begin{split}
+  &\sum_{i=1}^{n}
+  \,
+  w_i\,T_i\,Y_i
+  \ 
+  -
+  \ 
+  \E[Y(1)]
+  \\
+  &\quad=
+    \ 
+    \frac{1}{n}
+    \,
+  \sum_{i=1}^{n}
+  \,
+    \frac{T_i}{\pi(X_i)}
+    \,
+  \left(
+    \,
+    Y_i
+    \ 
+    -
+    \ 
+  \E[Y(1)]
+  \,
+  \right)
+  \ +
+  \ 
+  \sum_{i=1}^{n}
+  \,
+  \left( 
+    w_i
+    \ 
+    -
+    \ 
+    \frac{1}{n}\,
+    \frac{T_i}{\pi(X_i)}
+  \right)
+  \,
+  Y_i
+  \,.
+  \end{split}
+\end{align}
+
+Previously we bounded the first term, so let us seek a bound for the second term.
+To this end, we shall use maximal inequalities from the theory of empirical processes.
+Consider
+\begin{gather}
+  f_0(T,X,Y)
+  \ 
+  :=
+  \ 
+\end{gather}
+The next assumptions reduce the technical task to a minimum.
+
+\begin{assumptions*}
+  \begin{enumerate}[label={(\roman*)}]
+    \item
+  \end{enumerate}
+\end{assumptions*}
 
 
