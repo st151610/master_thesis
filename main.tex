@@ -52,6 +52,11 @@
   {\renewcommand{\qedsymbol}{$\diamondsuit$}%
    \pushQED{\qed}\begin{example/}}
   {\popQED\end{example/}}
+\newtheorem*{example*/}{Example}
+\newenvironment{example*}
+  {\renewcommand{\qedsymbol}{$\diamondsuit$}%
+   \pushQED{\qed}\begin{example*/}}
+  {\popQED\end{example*/}}
 \theoremstyle{plain}
 \newtheorem{lemma}{Lemma}[chapter]
 \newtheorem{problem}{Problem}[chapter]
