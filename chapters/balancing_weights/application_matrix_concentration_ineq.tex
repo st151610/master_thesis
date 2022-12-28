@@ -53,7 +53,7 @@ in $k$ and $i$.
   \end{gather*}
   \end{enumerate}
 \end{assumptions*}
-Note, that these assumptions allow for random covariate distributions with unbounded support. The coming example ought to reinforce this observation.
+Note, that these assumptions allow for covariate distributions with unbounded support. The coming example ought to reinforce this observation.
 \begin{example*}
   Let us assume a logistic regression model for the propensity score.
   Then there exist coefficients $\,\vartheta \,\in\,  \R^N\,$ and $\,\vartheta_0\,\in\, \R\,$ ($N$ is the number of covariates and $\vartheta_0$ is the intercept of the model) such that
@@ -101,9 +101,11 @@ Note, that these assumptions allow for random covariate distributions with unbou
   \end{align}
   where $M_X$ is the momement-generating function of the random vector $X$ (we assume it exists.).
    While the quantity in \eqref{1:5:3a}
-   may be unbounded when $X$ has unbounded support, the quantity in \eqref{1:5:3b} remains bounded for reasonable decay rates of the distribution of $X$.
-   This may, for example, be the case for the multivariate normal distribution with location parameter $\,\mu\,\in\,\R^N\,$ and covariance matrix 
-   $\,\Sigma\,\in\, \mathbb{M}_N\,$. Then the momement-generating function is given by
+   may be unbounded when $X$ has unbounded support, that in \eqref{1:5:3b} remains bounded for moderate decay rates of the
+   underlying distribution.
+
+   The multivariate normal distribution with location parameter $\,\mu\,\in\,\R^N\,$ and covariance matrix 
+   $\,\Sigma\,\in\, \mathbb{M}_N\,$ has momement-generating function
    \begin{gather*}
      M_{\mathcal{N}(\mu,\,\Sigma)}
      (t)
@@ -125,11 +127,11 @@ Note, that these assumptions allow for random covariate distributions with unbou
      \,t\ \in\ \R^N
      \,.
    \end{gather*}
-   In particular, the expression in~\eqref{1:5:3b} is finite in the event that $X$ follows a multivariate normal distribution.
+   In particular, the expression in~\eqref{1:5:3b} is finite if $X$ follows a multivariate normal distribution.
 
-   Likewise we may give a negative example.
+   Likewise we give a negative example.
    Let $\,N\,=\,1\,$ and $\,X\,\sim\, \mathrm{Exp}(\lambda)$, that is, only one exponentially distributed covariate is taken into account.
-   The momement-generating function is then confined to take arguments $\,t\,<\,\lambda\,$, in which case expression~\eqref{1:5:3b} becomes pointless if $\,4\,\vartheta\,\ge\, \lambda\,$.
+   The momement-generating function is then confined to take arguments $\,t\,<\,\lambda\,$, and thus~\eqref{1:5:3b} becomes pointless if $\,4\,\vartheta\,\ge\, \lambda\,$.
 \end{example*}
 
 Next, we recall the entity we want to examin.
