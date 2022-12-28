@@ -4,8 +4,91 @@
   \E[\max_{i \le n}\norm{A_i}^2]
   $
 }
-We recall the entity we want to examin.
-\begin{gather}
+We start from the premise that the fourth moment of 
+the random quantities $B_k(X_i)$ and $1/\pi_i$ is uniformly bounded 
+in $k$ and $i$.
+\begin{assumptions*}
+  \begin{enumerate}[label={(\roman*)}]
+    \item
+  There exists 
+  a constant 
+  $
+  \,
+    C_{\!\scriptscriptstyle B}
+  \ge
+  1
+  \,
+  $ such that
+  \begin{gather*}
+  \E\left[
+    B_k(X_i)^{4}
+    \,
+  \right]
+  \ 
+  \le
+  \ 
+    C_{\!\scriptscriptstyle B}
+    \quad
+    \text{
+  for all $\,(k,i)\ \in\  \left\{ 1, \ldots, K \right\}\times \left\{ 1, \ldots, n \right\}$.
+    }
+  \end{gather*}
+  \item
+  There exists a constant $\,C_\pi \!\ge 1\,$ such that
+  \begin{gather*}
+  \E \left[ 
+    \left(
+      \frac{1}{\pi_{i}}
+    \right)^{\!4}
+    \,
+  \right]
+  \ 
+  \le
+  \ 
+  C_\pi
+  \quad
+  \text{
+  for all $\,i\ \in\  \left\{ 1, \ldots, n \right\}$.
+  }
+  \end{gather*}
+  \end{enumerate}
+\end{assumptions*}
+Note, that these assumptions allow for random covariate distributions with unbounded support. The coming example ought to reinforce this observation.
+\begin{remark}
+  If we assume a logistic regression model for the propensity score
+  it holds for some $\theta \in \R^N$ ($N$ is the number of covariates)
+  \begin{gather}
+    \label{rmineq_rp_1}
+    \frac{1-\pi(X)}{\pi(X)}
+    =
+    \exp(-\theta X)
+    \qquad
+    \text{and}
+    \qquad
+  \end{gather}
+  \begin{gather}
+  \E \left[ 
+    \left(
+      \frac{1}{\pi_{i}}
+    \right)^{\!4}
+    \,
+  \right]
+    =
+    \E
+    [
+    \exp(-4\theta X)
+    ]
+    =
+    M_X(-4\theta)
+    ,
+  \end{gather}
+  where $M_X$ is the momement-generating function of $X$.
+   While the first quantity in \eqref{rmineq_rp_1}
+   may be unbounded when $X$ has unbounded support, the latter quantity in \eqref{rmineq_rp_1} is still bounded for reasonable choices of $X$.
+\end{remark}
+
+Next, we recall the entity we want to examin.
+\begin{gather*}
   A_i
   \ 
   =
@@ -27,9 +110,14 @@ We recall the entity we want to examin.
   \text{for}
   \ 
   i\in \{1, \ldots, n\}\,.
-\end{gather}
-First, note that
+\end{gather*}
+For all
+$
+  i\in \{1, \ldots, n\}
+$
+we get the bound
 \begin{gather}
+  \label{1:5:1}
   \left| 
     \,
     1
@@ -63,20 +151,8 @@ First, note that
   =
   \ 
   \frac{1}{\pi_i}
+  \,.
 \end{gather}
-for all
-$
-  i\in \{1, \ldots, n\}
-$.
-The next assumptions bound the random quantities $\pi(X)$ and $B(X)$.
-
-\begin{assumptions*}
-  \begin{enumerate}[label={(\roman*)}]
-    \item
-  \end{enumerate}
-\end{assumptions*}
-
-
 Let
 $i^*\in \left\{ 1, \ldots, n \right\}$
 be the index where 
@@ -85,6 +161,7 @@ $
 $
 attains its maximum.
 \begin{align}
+  \label{1:5:2}
   \begin{split}
   \E\left[\max_{i \le n}\norm{A_i}^2\right]
   &
@@ -95,8 +172,6 @@ attains its maximum.
   \ 
   \le
   \ 
-  n^{-2}
-  \,
   \E \left[ 
     \left(
       \,
@@ -108,13 +183,15 @@ attains its maximum.
     ^{\!2}
     \,
   \right]
+  \ 
+  /
+  \ 
+  n^2
   \\
   &
     \ 
   \le
   \ 
-  n^{-2}
-  \,
   \E \left[ 
     \left(
       \frac{1}{\pi_{i^*}}
@@ -127,83 +204,56 @@ attains its maximum.
   \E\left[
     \norm{B(X_{i^*})}^4
   \right]^{1/2}
+  \,
+  /
+  \ 
+  n^2
   \\
   &
   \ 
   \le
   \ 
-  n^{-2}
   \,
   K
   \,
+  /
+  \,
+  n^2
+  \ 
+  \cdot
+  \ 
   \sqrt{
     \,
     C_\pi
     C_{\!\scriptscriptstyle B}
   }
+  \,.
 \end{split}
 \end{align}
-In the last two steps we applied the Cauchy-Schwarz inequality
-and Assumption. Note that
+The first inequality comes from the bound \eqref{1:5:1}.
+The Cauchy-Schwarz inequality provides the second inequality.
+In the last step we use the assumptions made at the start of the section. 
+Paying the price of an extra $n$ factor, the 
+maximal inequality~\eqref{1:5:2}
+yields a bound of the sum, that is,
 \begin{gather}
   \sum_{i=1}^{n}
-  \E[\norm{A_i}^2]\le
-  \frac{K}{n}\sqrt{C_\pi C_B}
+  \,
+  \E\left[\norm{A_i}^2\right]
+  \ 
+  \le
+  \ 
+  \frac{K}{n}
+  \,
+  \sqrt{\,C_\pi 
+    C_{\!\scriptscriptstyle B}
+  }
 \end{gather}
 \begin{assumption}
-  There exists $C_\pi \ge 1$ such that
-  $
-    \E
-    \left[ 
-    \left(
-      \frac{1-\pi_{i}}{\pi_{i}}
-    \right)^4
-    \right]
-    \le C_\pi
-  $
-  for all $i\in \left\{ 1, \ldots, n \right\}$
   .
 \end{assumption}
  
-\begin{remark}
-  If we assume a logistic regression model for the propensity score
-  it holds for some $\theta \in \R^N$ ($N$ is the number of covariates)
-  \begin{gather}
-    \label{rmineq_rp_1}
-    \frac{1-\pi(X)}{\pi(X)}
-    =
-    \exp(-\theta X)
-    \qquad
-    \text{and}
-    \qquad
-    \E
-    \left[ 
-    \left(
-    \frac{1-\pi(X)}{\pi(X)}
-    \right)^4
-    \right]
-    =
-    \E
-    [
-    \exp(-4\theta X)
-    ]
-    =
-    M_X(-4\theta)
-    ,
-  \end{gather}
-  where $M_X$ is the momement-generating function of $X$.
-   While the first quantity in \eqref{rmineq_rp_1}
-   may be unbounded when $X$ has unbounded support, the latter quantity in \eqref{rmineq_rp_1} is still bounded for reasonable choices of $X$.
-\end{remark}
 \begin{assumption}
-  There exists $C_B \ge 1$ such that
-  $
-  \E[
-    B_k(X_i)^4
-  ]
-  \le C_B
-  $
-  for all $(k,i)\in \left\{ 1, \ldots, K \right\}\times \left\{ 1, \ldots, n \right\}$
   .
 \end{assumption}
 \begin{remark}
