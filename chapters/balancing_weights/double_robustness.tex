@@ -40,12 +40,17 @@ Bienaymé's formula and Chebyshev's inequality (cf. \cite[Theorem~5.14]{Klenke20
    1-\tau\,.
   \end{gather}
 \end{theorem*}
+\begin{reflection*}
+  Bernsteins's inequality yields better confidence.
+\end{reflection*}
 
-\todo[color=red!40, inline]{What about more refined concentration inequalities?}
+\todo[color=red!40, inline]{What about more refined concentration inequalities?cf Steinwart p225f}
 Deriving learning rates in this way, we make an implicit assumption.
-We assume that
-observed outcomes of the treated follow the same distribution as
-marginal potential outcomes under treatment.
+We assume that \textit{observed outcomes of the treated}
+follow the same distribution as
+\textit{
+marginal potential outcomes under treatment
+}.
 In other words, we require
 \begin{gather}
   Y(1)\,|\,T=1
@@ -59,8 +64,8 @@ In other words, we require
   \,.
 \end{gather}
 In practice, virtually every scenario violates this assumption.
-Indeed, any external influence on both $T$ and $Y(1)$ can ruin the 
-above assessment simply by imposing 
+Indeed, any unbalanced external influence on both $T$ and $Y(1)$ ruins the 
+above assessment, simply by imposing 
 \begin{gather}
   \E[Y(T)\,|\, T=1]\ \neq\  \E[Y(1)]
   \,.
@@ -306,8 +311,10 @@ Furthermore,
     -
     \ 
     \frac{1}{n}\,
-    \frac{T_i}{\pi(X_i)}
+    \frac{1}{\pi(X_i)}
   \right)
+  \,
+  T_i
   \,
   Y_i
   \,.
@@ -317,17 +324,39 @@ Furthermore,
 Previously we bounded the first term, so let us seek a bound for the second term.
 To this end, we shall use maximal inequalities from the theory of empirical processes.
 Consider
+\todo[color=red!40,inline]{Why deviate from normal concentration inequalities? $w_i$ are not independent, e.g., if they sum to zero.}
 \begin{gather}
   f_0(T,X,Y)
   \ 
   :=
   \ 
+  \left( 
+    w(T,X)
+    \ 
+    -
+    \ 
+    \frac{1}{n}\,
+    \frac{1}{\pi(X)}
+  \right)
+  \,
+  T
+  \,
+  Y
 \end{gather}
 The next assumptions reduce the technical task to a minimum.
 
 \begin{assumptions*}
   \begin{enumerate}[label={(\roman*)}]
     \item
+      There exists a function class $\mathcal{F}$ such that the unit ball satisfies
+      $
+        \log N_{[\,]}(\varepsilon, B_\mathcal{F}, L_2(\P))
+        \le
+        C
+        (1/\varepsilon)^{1/k} 
+      $
+      for some $k>1/2$,
+      and $f_0\in \mathcal{F}$.
   \end{enumerate}
 \end{assumptions*}
 

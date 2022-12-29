@@ -10,6 +10,7 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{mathtools}
+%\usepackage{fdsymbol}
 \usepackage{cite}
 \graphicspath{ {images/} }
 \usepackage{xcolor}         % Extended colors
@@ -46,7 +47,7 @@
 \newtheorem*{assumptions*}{Assumptions}
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{definition}{Definition}[chapter]
-\theoremstyle{remark}
+\theoremstyle{definition}
 \newtheorem{example/}{Example}[chapter]
 \newenvironment{example}
   {\renewcommand{\qedsymbol}{$\diamondsuit$}%
@@ -57,6 +58,11 @@
   {\renewcommand{\qedsymbol}{$\diamondsuit$}%
    \pushQED{\qed}\begin{example*/}}
   {\popQED\end{example*/}}
+\newtheorem*{reflection*/}{Reflection}
+\newenvironment{reflection*}
+  {\renewcommand{\qedsymbol}{$\spadesuit$}%
+   \pushQED{\qed}\begin{reflection*/}}
+  {\popQED\end{reflection*/}}
 \theoremstyle{plain}
 \newtheorem{lemma}{Lemma}[chapter]
 \newtheorem{problem}{Problem}[chapter]
