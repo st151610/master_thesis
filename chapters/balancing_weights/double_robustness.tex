@@ -345,22 +345,43 @@ Consider
 \end{gather}
 The next assumptions reduce the technical task to a minimum.
 
+      $
+        B_\mathcal{F}
+        :=
+        \left\{ 
+          f\in \mathcal{F}
+          \colon
+          \norm{f}_\infty
+          \le 
+          1
+        \right\}
+      $
 \begin{assumptions*}
   \begin{enumerate}[label={(\roman*)}]
     \item
-      There exists a function class $\mathcal{F}$ such that the unit ball satisfies
+      There exists a function class $\mathcal{F}$ such that $f_0\in \mathcal{F}$ and
       $
         \log N_{[\,]}(\varepsilon, B_\mathcal{F}, L_2(\P))
         \le
         C
         (1/\varepsilon)^{1/k} 
       $
-      for some $k>1/2$,
-      and $f_0\in \mathcal{F}$.
+      for some $k>1/2$.
       Furthermore, 
-      $
-        \norm{\mathbb{G}_n}_{B\cdot C}\le t \perp\!\!\!\perp f_0 \in B\cdot C
-        $ for all $t>0$.
+      \begin{gather}
+        \left\{ 
+          \,
+      \norm{\mathbb{G}_n}_{\,c\,\cdot B_{\mathcal{F}}\, \setminus\,  \left\{ f_0 \right\}}\ \le\  t 
+      \,
+        \right\}
+        \ 
+      \perp\!\!\!\perp 
+      \ 
+      \left\{ 
+        \,f_0 \ \in\  c\cdot B_\mathcal{F}\,
+      \right\}
+      \end{gather}
+      for all $t>0$ and all $c>0$.
   \end{enumerate}
 \end{assumptions*}
 
