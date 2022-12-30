@@ -266,14 +266,36 @@ Stunningly, a lot of practicioners still settle for obsolete methods when it com
 
 
 Next, we consider the event that we have a consistent estimator of the 
-propensity score and the distribution of the covariate vector $X$ has compact support.
-In this case, there exists a constant $C_\pi\in (0,1/2)$ such that 
+propensity score and the distribution of the covariate vector $X$, 
+along with that of the outcome $Y$, 
+has compact support.
+Then there exists a constant $C_\pi\in (0,1/2)$ such that 
 \begin{gather}
   C_\pi \ \le\  \pi(x) \ \le\  1-C_\pi 
   \qquad
   \text{for all}\ 
   x \in \mathcal{X}\,.
 \end{gather}
+
+We also have
+confidence $c_\tau$ and learning rate $(\varepsilon_n)$
+
+\begin{gather}
+  \P
+  \left[ 
+    T
+    \norm{
+      n w(T,X)
+      -
+      1/\pi(X)
+    }
+    \le
+    c_\P
+    c_{\tau}
+    \varepsilon_n
+  \right]
+\end{gather}
+
 Furthermore, 
 
 \begin{align}
@@ -362,6 +384,8 @@ The next assumptions reduce the technical task to a minimum.
       $
 \begin{assumptions*}
   \begin{enumerate}[label={(\roman*)}]
+    \item
+
     \item
       There exists a function class $\mathcal{F}$ such that $f_w\in \mathcal{F}$ and
       $
@@ -458,4 +482,53 @@ The next assumptions reduce the technical task to a minimum.
   }{t}
 \end{align}
 
+\todo[color=red!40, inline]{derive concentration with markov ineq and entropy.}
+
+\begin{align}
+  \E^*\left[ 
+    \norm{\G_n}_{\mathcal{F}_n}
+  \right]
+  &
+  \ 
+  \le
+  \ 
+  \int_0^{c_n}
+  \sqrt{
+    \log 
+    N_{[\,]}
+    \left( 
+    \varepsilon / c_n
+    ,
+    B_{\mathcal{F}}
+    ,
+    L_2(\P)
+    \right)
+  }
+  d\varepsilon
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \int_0^{c_n}
+  \left( 
+    \frac{c_n }{\varepsilon}
+  \right)^{1/(2k)}
+  d \varepsilon
+  \ 
+  =
+  \ 
+  c_n
+\end{align}
+It follows
+\begin{gather}
+  \P^*\left[ 
+    \norm{\G_n}_{\mathcal{F}_n}
+    \le c_n \frac{1}{\tau}
+  \right]
+  \ge
+  1-\tau
+   \,.
+\end{gather}
+The confidence $1/\tau$ is substandard. Improvements may involve Bernstein like concentration for empirical processes (cf. \cite[Section~2.14.2]{vaart2013})
 
