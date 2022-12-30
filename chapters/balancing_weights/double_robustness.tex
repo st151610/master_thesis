@@ -351,50 +351,16 @@ Consider
 the random function
 \todo[color=red!40,inline]{Why deviate from normal concentration inequalities? $w_i$ are not independent, e.g., if they sum to zero.}
 \begin{gather}
-  f_w(T,X,Y)
-  \ 
-  :=
-  \ 
-  \left( 
-    w(T,X)
-    \ 
-    -
-    \ 
-    \frac{1}{n}\,
-    \frac{1}{\pi(X)}
-  \right)
-  \,
-  T
-  \,
-  Y
 \end{gather}
 The weights $w$ are random, so $f_w$ is random as well. 
 The next assumptions reduce the technical task to a minimum.
 
       $
-        B_\mathcal{F}
-        :=
-        \left\{ 
-          f\in \mathcal{F}
-          \colon
-          \norm{f}_\infty
-          \le 
-          1
-        \right\}
       $
 \begin{assumptions*}
   \begin{enumerate}[label={(\roman*)}]
     \item
 
-    \item
-      There exists a function class $\mathcal{F}$ such that $f_w\in \mathcal{F}$ and
-      $
-        \log N_{[\,]}(\varepsilon, B_\mathcal{F}, L_2(\P))
-        \le
-        C_{\mathcal{F}}
-        (1/\varepsilon)^{1/k} 
-      $
-      for some $k>1/2$.
   \end{enumerate}
 \end{assumptions*}
 
@@ -581,7 +547,7 @@ t \in (0,1)
 \frac{
 \varepsilon_n
 \cdot
-  C_{\tau_n}
+  C_{t}
 }{n}
   \le
   t
@@ -589,18 +555,169 @@ t \in (0,1)
 $
 We then achieve learning rate for the weighted mean of $\tau_n\cdot n$.
 Best is $C_\tau=1$, when we recover the learnrate of the estimator $\varepsilon_n$.
-A confidence is $C_\tau /\tau$
 and a uniform constant is 
-$
+
+
+\begin{theorem*}
+  Let the assumptions below hold.
+  Then the weighted mean learns with rate
+  $
+    (\varepsilon_n)
+  $
+  defined by
+  \begin{gather*}
+    \varepsilon_n
+    \ 
+    :=
+    \ 
+    \inf
+    \left\{ \,t \,\in\,  (\,0,1]
+      \ 
+      \colon
+      \ 
+  r_n \cdot \gamma_{\,t/n}
+  \ 
+  \le
+  \ 
+  t
+  \,
+    \right\}
+    \ 
+    \land 
+    \ 
+    1
+    \qquad
+    \text{for all}
+    \ 
+    n\in \mathbb{N}
+    \,.
+  \end{gather*}
+  Furthermore, it has confidence constants
+  $
+  (c_\tau)
+  $
+  given by
+\begin{gather}
+  c_\tau = \gamma_\tau /\tau
+\end{gather}
+  and uniform constant
+  \begin{gather}
+C_\P    
+=
 \max
 \left\{ 
-  \sqrt{V},
   \sqrt{C_\mathcal{F}}
-  C_\P
+  C_w
   ,
   C_Y
-  C_\P
+  C_w
   ,
   \frac{C_Y}{C_\pi}
 \right\}
-$
+  \end{gather}
+\end{theorem*}
+\todo[color=red!40,inline]{Give proof}
+\begin{assumptions*}
+  Let the following hold.
+  \begin{enumerate}[label={(\roman*)}]
+    \item
+      There exists $C_Y\ge 1$ such that $|Y(1)|\le C_Y$ almost surely. 
+    \item
+      There exists $C_\pi > 0$ such that $C_\pi < \pi(X)$ almost surely.
+    \item
+      There exists a function class $\mathcal{F}$ 
+      with unit ball 
+      $
+        B_\mathcal{F}
+        :=
+        \left\{ 
+          f\in \mathcal{F}
+          \colon
+          \norm{f}_\infty
+          \le 
+          1
+        \right\}
+      $
+      such that  
+      $
+          \log N_{[\,]}(\varepsilon, B_\mathcal{F}, L_2(\P))
+        \le
+        C_{\mathcal{F}}
+        (1/\varepsilon)^{1/k} 
+      $
+      for some $k>1/2$ and some constant $C_\mathcal{F}\ge 1$.
+    \item
+      The random function $f_w$ defined by
+      $
+  f_w(T,X,Y)
+  \ 
+  :=
+  \ 
+  \left( 
+   n\, w(X)
+    \ 
+    -
+    \ 
+    \frac{1}{\pi(X)}
+  \right)
+  \,
+  T
+  \,
+  Y
+      $
+      satisfies
+      $f_w\in \mathcal{F}$
+      almost surely
+      .
+  \item 
+    There exist a learning rate 
+    $
+    (r_n)
+    $,
+    confidence constants
+    $
+    (\gamma_\tau)
+    $
+    and 
+    uniform constant
+    $
+    C_w\ge 1
+    $
+    such that
+    for all $\tau \in(0,1]$
+    and all $n \in \mathbb{N}$
+    it holds
+    $
+    \P
+    \left[ 
+    \norm{w(X) - \frac{1}{\pi(X)}}_\infty
+    \le
+    C_w
+    c_\tau
+    \varepsilon_n
+    \right]
+    \ge 
+    1-\tau
+    $
+    \item
+      There exists $\alpha > 1$ 
+  such that 
+  $
+  \varepsilon_n \cdot c_{n^{-\alpha}}
+  \to 
+  0
+  $
+  as 
+  $
+  n\to \infty
+  $
+  and 
+  $
+  \varepsilon_n \cdot c_{n^{-\alpha}}
+  \le 
+  1
+  $
+  for all 
+  $n \in \mathbb{N}$.
+  \end{enumerate}
+\end{assumptions*}
