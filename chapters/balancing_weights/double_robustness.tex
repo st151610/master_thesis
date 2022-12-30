@@ -391,7 +391,7 @@ The next assumptions reduce the technical task to a minimum.
       $
         \log N_{[\,]}(\varepsilon, B_\mathcal{F}, L_2(\P))
         \le
-        C
+        C_{\mathcal{F}}
         (1/\varepsilon)^{1/k} 
       $
       for some $k>1/2$.
@@ -532,3 +532,75 @@ It follows
 \end{gather}
 The confidence $1/\tau$ is substandard. Improvements may involve Bernstein like concentration for empirical processes (cf. \cite[Section~2.14.2]{vaart2013})
 
+\todo[color=red!40,inline]{Streamline the term}
+\begin{gather}
+  \sqrt{V}\frac{1}{\sqrt{\tau}}\frac{1}{\sqrt{n}}
+  +
+  \sqrt{C_\mathcal{F}}
+  C_\P
+  \frac{C_\tau}{\tau}
+  \frac{\varepsilon_n}{\sqrt{n}}
+  +
+  C_Y
+  (
+  C_\P 
+  C_{\tau_n}
+  \varepsilon_n
+  +
+  (n
+  +
+  \frac{1}{C_\pi}
+  )
+  \tau_n
+  )
+\end{gather}
+For this we require
+existence of a rate $(\tau_n) \subset (0,1)
+$
+such that
+
+$
+\tau_n\cdot n \to 0
+$
+and
+$
+\varepsilon_n
+\cdot
+  C_{\tau_n}
+  \to 0
+$.
+Take as learning rate 
+
+$
+\tau_n
+:=
+\inf
+\left\{ 
+t \in (0,1)
+\colon
+\frac{
+\varepsilon_n
+\cdot
+  C_{\tau_n}
+}{n}
+  \le
+  t
+\right\}
+$
+We then achieve learning rate for the weighted mean of $\tau_n\cdot n$.
+Best is $C_\tau=1$, when we recover the learnrate of the estimator $\varepsilon_n$.
+A confidence is $C_\tau /\tau$
+and a uniform constant is 
+$
+\max
+\left\{ 
+  \sqrt{V},
+  \sqrt{C_\mathcal{F}}
+  C_\P
+  ,
+  C_Y
+  C_\P
+  ,
+  \frac{C_Y}{C_\pi}
+\right\}
+$
