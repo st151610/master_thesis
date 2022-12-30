@@ -64,7 +64,9 @@ In other words, we require
   \,.
 \end{gather}
 In practice, virtually every scenario violates this assumption.
-Indeed, any unbalanced external influence on both $T$ and $Y(1)$ ruins the 
+Compare the health of an asthmatic nonsmoker with that of an otherwise healthy smoker.
+\todo[color=green!40,inline]{Find reference to more confounded scenarios.}
+  Indeed, any unbalanced external influence on both $T$ and $Y(1)$ ruins the 
 above assessment, simply by imposing 
 \begin{gather}
   \E[Y(T)\,|\, T=1]\ \neq\  \E[Y(1)]
@@ -324,9 +326,10 @@ Furthermore,
 Previously we bounded the first term, so let us seek a bound for the second term.
 To this end, we shall use maximal inequalities from the theory of empirical processes.
 Consider
+the random function
 \todo[color=red!40,inline]{Why deviate from normal concentration inequalities? $w_i$ are not independent, e.g., if they sum to zero.}
 \begin{gather}
-  f_0(T,X,Y)
+  f_w(T,X,Y)
   \ 
   :=
   \ 
@@ -343,6 +346,7 @@ Consider
   \,
   Y
 \end{gather}
+The weights $w$ are random, so $f_w$ is random as well. 
 The next assumptions reduce the technical task to a minimum.
 
       $
@@ -359,7 +363,7 @@ The next assumptions reduce the technical task to a minimum.
 \begin{assumptions*}
   \begin{enumerate}[label={(\roman*)}]
     \item
-      There exists a function class $\mathcal{F}$ such that $f_0\in \mathcal{F}$ and
+      There exists a function class $\mathcal{F}$ such that $f_w\in \mathcal{F}$ and
       $
         \log N_{[\,]}(\varepsilon, B_\mathcal{F}, L_2(\P))
         \le
@@ -367,22 +371,91 @@ The next assumptions reduce the technical task to a minimum.
         (1/\varepsilon)^{1/k} 
       $
       for some $k>1/2$.
-      Furthermore, 
-      \begin{gather}
-        \left\{ 
-          \,
-      \norm{\mathbb{G}_n}_{\,c\,\cdot B_{\mathcal{F}}\, \setminus\,  \left\{ f_0 \right\}}\ \le\  t 
-      \,
-        \right\}
-        \ 
-      \perp\!\!\!\perp 
-      \ 
-      \left\{ 
-        \,f_0 \ \in\  c\cdot B_\mathcal{F}\,
-      \right\}
-      \end{gather}
-      for all $t>0$ and all $c>0$.
   \end{enumerate}
 \end{assumptions*}
+
+
+\begin{align}
+  \P[
+  \mathbb{G}_n f_w \le t
+  ]
+  \ge
+  \P[
+  f_w \in \mathcal{F}_n
+  \ \text{and}\ 
+  \norm{\G_n}_{\mathcal{F}_n}^*
+  \le t
+  ]
+  =
+  \P[
+  \norm{\G_n}_{\mathcal{F}_n}^*
+  \le t
+  |
+  f_w \in \mathcal{F}_n
+  ]
+  \cdot
+  \P[
+  f_w \in \mathcal{F}_n
+  ]
+  \\
+  \ge
+  \P[
+  f_w \in \mathcal{F}_n
+  ]
+  -
+  \P[
+  f_w \in \mathcal{F}_n
+  ]
+  \frac{
+    \E[
+  \norm{\G_n}_{\mathcal{F}_n}^*
+  |
+  f_w \in \mathcal{F}_n
+  ]
+  }{t}
+  \\
+  =
+  \P[
+  f_w \in \mathcal{F}_n
+  ]
+  +
+  \P[
+  f_w \notin \mathcal{F}_n
+  ]
+  \frac{
+    \E[
+  \norm{\G_n}_{\mathcal{F}_n}^*
+  |
+  f_w \notin \mathcal{F}_n
+  ]
+  }{t}
+  -
+  \frac{
+    \E[
+  \norm{\G_n}_{\mathcal{F}_n}^*
+    ]
+  }{t}
+  \\
+  \ge
+  \P[
+  f_w \in \mathcal{F}_n
+  ]
+  -
+  \frac{
+    \E[
+  \norm{\G_n}_{\mathcal{F}_n}^*
+    ]
+  }{t}
+  =
+  \P[
+  f_w \in \mathcal{F}_n
+  ]
+  -
+  \frac{
+    \E^*[
+  \norm{\G_n}_{\mathcal{F}_n}
+    ]
+  }{t}
+\end{align}
 
 

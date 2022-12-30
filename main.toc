@@ -6,8 +6,8 @@
 \contentsline {section}{\numberline {2.1}Introduction}{9}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Double Robustness}{10}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Learning Rates of the weighted mean}{10}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Error Decompositions}{12}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Estimating the Population Mean of Potential Outcomes}{13}{section.2.4}%
+\contentsline {section}{\numberline {2.3}Error Decompositions}{13}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Estimating the Population Mean of Potential Outcomes}{14}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Application of Convex Optimization}{20}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Application of Matrix Concentration Inequalities}{23}{section.2.6}%
 \contentsline {chapter}{\numberline {3}Convex Analysis}{27}{chapter.3}%
