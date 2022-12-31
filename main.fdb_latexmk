@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1672470369 "main.aux" "main.bbl" "main" 1672470453
+["bibtex main"] 1672484608 "main.aux" "main.bbl" "main" 1672484613
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1671819149 56704 496d9ee9fa2eaa7f6b7b46e789771e50 ""
-  "main.aux" 1672470452 28293 3d42f8f625d647e100b4c183a3be824c "pdflatex"
+  "main.aux" 1672484612 28293 3d42f8f625d647e100b4c183a3be824c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1672470448 "main.tex" "main.pdf" "main" 1672470453
+["pdflatex"] 1672484609 "main.tex" "main.pdf" "main" 1672484613
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -243,18 +243,18 @@
   "chapters/random_matrix_ineq/application_rosenthal_pinelis.tex" 1670573507 2049 fef99346640ef15a2f126a3d4c85b33c ""
   "chapters/random_matrix_ineq/exchangable_pairs.tex" 1671610494 6095 ad13bfab19aae057e3a270ea4acc4ec3 ""
   "chapters/random_matrix_ineq/generalization.tex" 1671611676 435 2c1bd25e5c015bd4377738ccc60f9f95 ""
-  "chapters/random_matrix_ineq/intrinsic_dimension.tex" 1671611271 1714 ad022bc2023c6d88000b95ecd515c76f ""
+  "chapters/random_matrix_ineq/intrinsic_dimension.tex" 1672484603 3057 8a7371af3ace41702beac413c5bc107d ""
   "chapters/random_matrix_ineq/matrix_analysis.tex" 1671611601 3252 10a24fa22eeb86523f5bd8db058b5373 ""
   "chapters/random_matrix_ineq/matrix_khintchine.tex" 1671610711 12348 b997ef594541f7b9d4961c06124da560 ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1672470452 28293 3d42f8f625d647e100b4c183a3be824c "pdflatex"
-  "main.bbl" 1672470369 3534 e0452f7529180d014e59737de2505dbd "bibtex main"
+  "main.aux" 1672484612 28293 3d42f8f625d647e100b4c183a3be824c "pdflatex"
+  "main.bbl" 1672484609 3534 e0452f7529180d014e59737de2505dbd "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
-  "main.tdo" 1672470452 4376 deee25ac27c1aff3b247856cf34ada8c "pdflatex"
+  "main.tdo" 1672484612 4376 deee25ac27c1aff3b247856cf34ada8c "pdflatex"
   "main.tex" 1672297367 7806 7ce1367a831df131b81923bba6cd4c8f ""
-  "main.toc" 1672470452 2433 23182d5e146ed47bccc1c98fea786a71 "pdflatex"
+  "main.toc" 1672484612 2433 23182d5e146ed47bccc1c98fea786a71 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

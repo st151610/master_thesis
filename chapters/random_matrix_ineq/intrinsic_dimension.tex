@@ -74,6 +74,94 @@
     .
   \end{gather}
 \end{proof}
+The next example applies the preceding lemma to bound the Schatten-norm in terms of the spectral norm and the intrinsic dimension.
+  \begin{example*}
+    Let 
+    $
+      \mathbf{B} \in \mathbb{C}^{m\times n}
+    $
+    be any rectangular matrix and let $p\ge 2$.
+    Then 
+    $
+      \varphi(x)
+      :=
+      \left| x \right|
+    $
+  defines a convex function with $\varphi(0)=0$.
+  The intrinsic dimension lemma yields
+  \begin{gather}
+    \norm{B}^p_p
+    =
+    \mathrm{tr}
+      \left|
+      B^* B
+      \right|
+      ^{p/2}
+    \le
+    \mathrm{intdim}
+    (
+      B^* B
+    )
+      \cdot
+      \norm{
+      B^* B
+    }^{p/2}
+    =
+    \mathrm{intdim}
+    (
+      B^* B
+    )
+      \cdot
+      \norm{
+        B
+    }^{p}
+    \,.
+  \end{gather}
+  If, additionally, $\mathbf{B}$ is self-adjoint and positive-semidefinite
+  then it holds 
+  \begin{gather}
+    \mathrm{tr}
+    (
+      B^* B
+    )
+    =
+    \mathrm{tr}
+    (
+    B^2
+    )
+    =
+    \sum_{i=1}^{n} 
+    \lambda_i^2
+    \le 
+    \left( 
+    \sum_{i=1}^{n} 
+    \lambda_i
+    \right)
+    ^{2}
+    =
+    \left( 
+    \mathrm{tr}
+    B
+    \right)
+    ^2
+    \,,
+  \end{gather}
+  und consequently
+  \begin{gather}
+    \norm{B}^p_p
+    \le
+    \left( 
+    \mathrm{intdim}
+    B
+    \right)
+    ^2
+      \cdot
+      \norm{
+        B
+    }^{p}
+    \,.
+  \end{gather}
+  \end{example*}
 \begin{takeaways}
   Is it intrinsic or extrinsic?
   \lipsum[4]
