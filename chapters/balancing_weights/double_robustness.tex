@@ -815,7 +815,8 @@ and consequently
 \begin{gather}
   \P\left[
   \norm{\G_n}^*_{\mathcal{F}_{n,\tau}}
-  \le \frac{1}{\tau}
+  \le 
+  \frac{1}{\tau}
   C_Y
   C_w
   \gamma_\tau
@@ -826,7 +827,37 @@ and consequently
   \ 
   1-\tau
 \end{gather}
-
-
-
+Next, note that
+\begin{gather}
+  \norm{f_w}_\infty
+  \le
+  C_Y
+  \norm{nw- \frac{1}{\pi(X)}}
+  \le
+  C_Y
+  C_w
+  \gamma_\tau
+  r_n
+\end{gather}
+with probability greater than $1-\tau$.
+Thus 
+$
+f_w \in \mathcal{F}_{n,\tau}
+$
+with probability greater than $1-\tau$.
+It follows
+\begin{gather}
+  \P
+  \left[
+  \G_n f_w \le 
+  \frac{1}{\tau}
+  C_Y
+  C_w
+  \gamma_\tau
+  r_n
+  \right]
+  \ge
+  1 - 2\tau
+  \,.
+\end{gather}
 \end{proof}
