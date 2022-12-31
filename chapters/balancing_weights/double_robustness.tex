@@ -860,4 +860,62 @@ It follows
   1 - 2\tau
   \,.
 \end{gather}
+\todo[color=green!40,inline]{Streamline analysis of second term.}
+\subsubsection*{3rd term}
+We localize with regards to 
+$
+f_w \in \mathcal{F}_{n,\tau}
+.
+$
+We require the weights to be smalle that 1, such that 
+we always have
+$
+\norm{nw-  \frac{1}{\pi}}
+\le
+n + \frac{1}{C_\pi}
+$.
+\begin{gather}
+  \E[f_w]
+  \le
+  C_Y 
+  C_w
+  \gamma_\tau
+  r_n
+  (1-\tau)
+  +
+  C_Y
+  (
+n + \frac{1}{C_\pi}
+  )
+  \tau
+  \\
+  \le
+  C_Y
+  \left( 
+  C_w
+  \gamma_\tau
+  r_n
+  +
+  \left(
+n + \frac{1}{C_\pi}
+  \right)
+  \tau
+  \right)
+  \,.
+\end{gather}
+If we choose  $\tau=\varepsilon_n$
+we get
+\begin{gather}
+  \E[f_w]
+  \le
+  C_Y
+  \left( 
+C_w+1+ \frac{1}{C_\pi}
+  \right)
+  \varepsilon_n
+  \,.
+\end{gather}
+Selecting the worst instance of learning rate, confidence and uniform constant concludes the proof.
+
+\todo[color=green!40,inline]{Streamline analysis of third term.}
 \end{proof}

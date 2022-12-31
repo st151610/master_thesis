@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  31 DEC 2022 07:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  31 DEC 2022 08:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -811,19 +811,16 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+) [1
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@tdo=\write6
 \openout6 = `main.tdo'.
 
- [1
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
-
-
-]
-<images//unistuttgart_logo_deutsch.jpg, id=82, 173.9298pt x 37.0986pt>
+ [2]
+<images//unistuttgart_logo_deutsch.jpg, id=86, 173.9298pt x 37.0986pt>
 File: images//unistuttgart_logo_deutsch.jpg Graphic file (type jpg)
 <use images//unistuttgart_logo_deutsch.jpg>
 Package pdftex.def Info: images//unistuttgart_logo_deutsch.jpg  used on input line 112.
@@ -833,7 +830,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.112 
-       [1 <./images//unistuttgart_logo_deutsch.jpg>]
+       [1
+
+
+ <./images//unistuttgart_logo_deutsch.jpg>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -875,17 +875,16 @@ Overfull \hbox (6.29335pt too wide) in paragraph at lines 509--532
 []\OT1/cmr/m/it/10.95 The ran-dom func-tion $\OML/cmm/m/it/10.95 f[]$ \OT1/cmr/m/it/10.95 de-fined by $\OML/cmm/m/it/10.95 f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 T; X; Y\OT1/cmr/m/n/10.95 )  :=  []  \OML/cmm/m/it/10.95 T Y$
  []
 
-[13] [14]) (./chapters/balancing_weights/error_decomp.tex
+[13] [14] [15]) (./chapters/balancing_weights/error_decomp.tex
 Overfull \hbox (46.09444pt too wide) detected at line 96
 []
  []
 
-[15]) (./chapters/balancing_weights/chapter_01.tex
+) (./chapters/balancing_weights/chapter_01.tex [16]
 Overfull \hbox (104.55032pt too wide) detected at line 74
 []
  []
 
-[16]
 Package mdframed Info: mdframed works in twoside mode on input line 78.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -895,18 +894,18 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 92.
 
-
 LaTeX Warning: Reference `primal_weighting_binary' on page 17 undefined on input line 134.
 
+[17]
 
-LaTeX Warning: Reference `primal_weighting_binary' on page 17 undefined on input line 214.
+LaTeX Warning: Reference `primal_weighting_binary' on page 18 undefined on input line 214.
 
 
 Overfull \hbox (9.02264pt too wide) in paragraph at lines 227--246
 [][]\OT1/cmr/bx/n/10.95 2.1.1. []\OT1/cmr/m/it/10.95 The min-i-mizer $\OML/cmm/m/it/10.95 ^^U[] \OT1/cmr/m/n/10.95 = [] [][] \OT1/cmr/bx/n/10.95 E []$ \OT1/cmr/m/it/10.95 is unique,
  []
 
-[17]
+
 Overfull \hbox (3.60048pt too wide) in paragraph at lines 265--284
 [][]\OT1/cmr/bx/n/10.95 2.1.4. []\OT1/cmr/m/it/10.95 There ex-ists $\OML/cmm/m/it/10.95 ^^U[] \OMS/cmsy/m/n/10.95 2 \OT1/cmr/m/n/10.95 ^^B$ \OT1/cmr/m/it/10.95 such that $[][] \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 '[]$\OT1/cmr/m/it/10.95 , where $\OML/cmm/m/it/10.95 m[]\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 ^^A\OT1/cmr/m/n/10.95 ) :=
  []
@@ -917,11 +916,8 @@ LaTeX Warning: Reference `primal_weighting_binary' on page 18 undefined on input
 
 LaTeX Warning: Reference `primal_weighting_binary' on page 18 undefined on input line 363.
 
-[18]
-Underfull \vbox (badness 3260) has occurred while \output is active []
-
- [19]
-Underfull \vbox (badness 1609) has occurred while \output is active []
+[18] [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
 
@@ -933,16 +929,16 @@ LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 21 undefined on input
 
 LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 21 undefined on input line 937.
 
-
-LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 21 undefined on input line 1003.
-
-
-LaTeX Warning: Reference `rmineq_bernstein_expectation_bound' on page 21 undefined on input line 1009.
-
-
-LaTeX Warning: Reference `rmineq_bernstein' on page 21 undefined on input line 1010.
-
 [21]
+
+LaTeX Warning: Reference `rmineq_bernstein_cond_1' on page 22 undefined on input line 1003.
+
+
+LaTeX Warning: Reference `rmineq_bernstein_expectation_bound' on page 22 undefined on input line 1009.
+
+
+LaTeX Warning: Reference `rmineq_bernstein' on page 22 undefined on input line 1010.
+
 
 LaTeX Warning: Reference `rmineq_bernstein_probability_bound' on page 22 undefined on input line 1095.
 
@@ -1242,18 +1238,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27636 strings out of 478238
- 533078 string characters out of 5850455
+ 27646 strings out of 478238
+ 533242 string characters out of 5850455
  1041201 words of memory out of 5000000
- 44887 multiletter control sequences out of 15000+600000
+ 44891 multiletter control sequences out of 15000+600000
  485147 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,19n,106p,10615b,983s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (68 pages, 561620 bytes).
+Output written on main.pdf (68 pages, 563840 bytes).
 PDF statistics:
- 1150 PDF objects out of 1200 (max. 8388607)
- 1020 compressed objects within 11 object streams
- 440 named destinations out of 1000 (max. 500000)
+ 1159 PDF objects out of 1200 (max. 8388607)
+ 1029 compressed objects within 11 object streams
+ 446 named destinations out of 1000 (max. 500000)
  234 words of extra memory for PDF output out of 10000 (max. 10000000)
 
