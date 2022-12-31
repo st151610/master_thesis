@@ -6,23 +6,23 @@
 \contentsline {section}{\numberline {2.1}Introduction}{9}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Double Robustness}{10}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Learning Rates of the weighted mean}{10}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Error Decompositions}{14}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Estimating the Population Mean of Potential Outcomes}{15}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Application of Convex Optimization}{22}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Application of Matrix Concentration Inequalities}{25}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Convex Analysis}{29}{chapter.3}%
-\contentsline {section}{\numberline {3.1}A Convex Analysis Primer}{29}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Conjugate Calculus and Fenchel-Rockafellar Theorem}{34}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Tseng Bertsekas}{39}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Random Matrix Inequalities}{43}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A Matrix Analysis Primer}{43}{section.4.1}%
-\contentsline {section}{\numberline {4.2}The Method of Exchangeable Pairs}{44}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Matrix Khintchin Inequality and Applications}{47}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Generalzed Inequalities by Hermitian Dilataition}{51}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Intrinsic Dimension}{52}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Empirical Processes}{55}{chapter.5}%
-\contentsline {section}{\numberline {5.1}A Primer on Empirical Processes}{55}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Maximal Inequalities}{56}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Functional Delta Method}{57}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{59}{chapter.6}%
+\contentsline {section}{\numberline {2.3}Error Decompositions}{15}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Estimating the Population Mean of Potential Outcomes}{16}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Application of Convex Optimization}{23}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Application of Matrix Concentration Inequalities}{26}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Convex Analysis}{31}{chapter.3}%
+\contentsline {section}{\numberline {3.1}A Convex Analysis Primer}{31}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Conjugate Calculus and Fenchel-Rockafellar Theorem}{36}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Tseng Bertsekas}{41}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Random Matrix Inequalities}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A Matrix Analysis Primer}{45}{section.4.1}%
+\contentsline {section}{\numberline {4.2}The Method of Exchangeable Pairs}{46}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Matrix Khintchin Inequality and Applications}{49}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Generalzed Inequalities by Hermitian Dilataition}{53}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Intrinsic Dimension}{54}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Empirical Processes}{57}{chapter.5}%
+\contentsline {section}{\numberline {5.1}A Primer on Empirical Processes}{57}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Maximal Inequalities}{58}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Functional Delta Method}{59}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Simple yet useful Calculations}{61}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

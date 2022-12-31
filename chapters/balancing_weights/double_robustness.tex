@@ -298,58 +298,11 @@ confidence $c_\tau$ and learning rate $(\varepsilon_n)$
 
 Furthermore, 
 
-\begin{align}
-  \begin{split}
-  &\sum_{i=1}^{n}
-  \,
-  w_i\,T_i\,Y_i
-  \ 
-  -
-  \ 
-  \E[Y(1)]
-  \\
-  &\quad=
-    \ 
-    \frac{1}{n}
-    \,
-  \sum_{i=1}^{n}
-  \,
-    \frac{T_i}{\pi(X_i)}
-    \,
-  \left(
-    \,
-    Y_i
-    \ 
-    -
-    \ 
-  \E[Y(1)]
-  \,
-  \right)
-  \ +
-  \ 
-  \sum_{i=1}^{n}
-  \,
-  \left( 
-    w_i
-    \ 
-    -
-    \ 
-    \frac{1}{n}\,
-    \frac{1}{\pi(X_i)}
-  \right)
-  \,
-  T_i
-  \,
-  Y_i
-  \,.
-  \end{split}
-\end{align}
-
 Previously we bounded the first term, so let us seek a bound for the second term.
 To this end, we shall use maximal inequalities from the theory of empirical processes.
 Consider
 the random function
-\todo[color=red!40,inline]{Why deviate from normal concentration inequalities? $w_i$ are not independent, e.g., if they sum to zero.}
+  \todo[color=red!40,inline]{Why deviate from normal concentration inequalities? $w_i$ are not independent, e.g., if they sum to zero.}
 \begin{gather}
 \end{gather}
 The weights $w$ are random, so $f_w$ is random as well. 
@@ -448,44 +401,8 @@ The next assumptions reduce the technical task to a minimum.
   }{t}
 \end{align}
 
-\todo[color=red!40, inline]{derive concentration with markov ineq and entropy.}
+  \todo[color=red!40, inline]{derive concentration with markov ineq and entropy.}
 
-\begin{align}
-  \E^*\left[ 
-    \norm{\G_n}_{\mathcal{F}_n}
-  \right]
-  &
-  \ 
-  \le
-  \ 
-  \int_0^{c_n}
-  \sqrt{
-    \log 
-    N_{[\,]}
-    \left( 
-    \varepsilon / c_n
-    ,
-    B_{\mathcal{F}}
-    ,
-    L_2(\P)
-    \right)
-  }
-  d\varepsilon
-  \\
-  &
-  \ 
-  \le
-  \ 
-  \int_0^{c_n}
-  \left( 
-    \frac{c_n }{\varepsilon}
-  \right)^{1/(2k)}
-  d \varepsilon
-  \ 
-  =
-  \ 
-  c_n
-\end{align}
 It follows
 \begin{gather}
   \P^*\left[ 
@@ -558,64 +475,6 @@ Best is $C_\tau=1$, when we recover the learnrate of the estimator $\varepsilon_
 and a uniform constant is 
 
 
-\begin{theorem*}
-  Let the assumptions below hold.
-  Then the weighted mean learns with rate
-  $
-    (\varepsilon_n)
-  $
-  defined by
-  \begin{gather*}
-    \varepsilon_n
-    \ 
-    :=
-    \ 
-    \inf
-    \left\{ \,t \,\in\,  (\,0,1]
-      \ 
-      \colon
-      \ 
-  r_n \cdot \gamma_{\,t/n}
-  \ 
-  \le
-  \ 
-  t
-  \,
-    \right\}
-    \ 
-    \land 
-    \ 
-    1
-    \qquad
-    \text{for all}
-    \ 
-    n\in \mathbb{N}
-    \,.
-  \end{gather*}
-  Furthermore, it has confidence constants
-  $
-  (c_\tau)
-  $
-  given by
-\begin{gather}
-  c_\tau = \gamma_\tau /\tau
-\end{gather}
-  and uniform constant
-  \begin{gather}
-C_\P    
-=
-\max
-\left\{ 
-  \sqrt{C_\mathcal{F}}
-  C_w
-  ,
-  C_Y
-  C_w
-  ,
-  \frac{C_Y}{C_\pi}
-\right\}
-  \end{gather}
-\end{theorem*}
 \todo[color=red!40,inline]{Give proof}
 \begin{assumptions*}
   Let the following hold.
@@ -721,3 +580,253 @@ C_\P
   $n \in \mathbb{N}$.
   \end{enumerate}
 \end{assumptions*}
+\begin{theorem*}
+  Let the assumptions.
+  Then the weighted mean learns with rate
+  $
+    (\varepsilon_n)
+  $
+  defined by
+  \begin{gather*}
+    \varepsilon_n
+    \ 
+    :=
+    \ 
+    \inf
+    \left\{ \,t \,\in\,  (\,0,1]
+      \ 
+      \colon
+      \ 
+  r_n \cdot \gamma_{\,t/n}
+  \ 
+  \le
+  \ 
+  t
+  \,
+    \right\}
+    \ 
+    \land 
+    \ 
+    1
+    \qquad
+    \text{for all}
+    \ 
+    n\in \mathbb{N}
+    \,.
+  \end{gather*}
+  Furthermore, it has confidence constants
+  $
+  (c_\tau)
+  $
+  given by
+\begin{gather}
+  c_\tau = \gamma_\tau /\tau
+\end{gather}
+  and uniform constant
+  \begin{gather}
+C_\P    
+=
+\max
+\left\{ 
+  \sqrt{C_\mathcal{F}}
+  C_w
+  ,
+  C_Y
+  C_w
+  ,
+  \frac{C_Y}{C_\pi}
+\right\}
+  \end{gather}
+\end{theorem*}
+
+\begin{proof}
+  We consider the following error decomposition.
+\begin{align}
+  \begin{split}
+  &\sum_{i=1}^{n}
+  \,
+  w_i\,T_i\,Y_i
+  \ 
+  -
+  \ 
+  \E[Y(1)]
+  \\
+  &\quad=
+    \ 
+    \frac{1}{n}
+    \,
+  \sum_{i=1}^{n}
+  \,
+    \frac{T_i}{\pi(X_i)}
+    \,
+  \left(
+    \,
+    Y_i
+    \ 
+    -
+    \ 
+  \E[Y(1)]
+  \,
+  \right)
+  \ +
+  \ 
+  \sum_{i=1}^{n}
+  \,
+  \left( 
+    w_i
+    \ 
+    -
+    \ 
+    \frac{1}{n}\,
+    \frac{1}{\pi(X_i)}
+  \right)
+  \,
+  T_i
+  \,
+  Y_i
+  \,.
+  \\
+  & 
+  \quad
+  =
+  \ 
+   \frac{1}{n}
+    \,
+  \sum_{i=1}^{n}
+  \,
+    \frac{T_i}{\pi(X_i)}
+    \,
+  \left(
+    \,
+    Y_i
+    \ 
+    -
+    \ 
+  \E[Y(1)]
+  \,
+  \right)
+  \ 
+  +
+  \ 
+  \frac{1}{\sqrt{n}}
+  \,
+  \G_n f_w
+  \ 
+  -
+  \ 
+  \E[
+  \,
+  f_w(T,X,Y)
+  \,
+  ]
+  \,.
+  \end{split}
+\end{align}
+We already bounded the first term. 
+To bound the remaining terms we will use the learning rates of $w$.
+To this end, we employ maximal inequalities for empirical processes to bound the second term.
+We bound the third term by the law of total expectation and balancing learning rates and confidence.
+\subsubsection*{2nd term}
+Denote
+$
+  \mathcal{F}_{n,\tau}
+  :=
+  (
+  C_Y
+  C_w
+  \gamma_\tau
+  r_n
+  )
+  \cdot
+  B_\mathcal{F}
+  =:
+  \delta_{n,\tau}
+  \cdot
+  B_\mathcal{F}
+$.
+It holds by maximal inequalities
+\begin{align*}
+  \E^*\left[ 
+    \norm{\G_n}_{\mathcal{F}_{n,\tau}}
+  \right]
+  &
+  \ 
+  \le
+  \ 
+  \int_0^{\delta{n,\tau}}
+  \sqrt{
+    \log 
+    N_{[\,]}
+    \left( 
+      \varepsilon / \delta_{n,\tau}
+    ,
+    B_{\mathcal{F}}
+    ,
+    L_2(\P)
+    \right)
+  }
+  d\varepsilon
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \int_0^{\delta_{n,\tau}}
+  \left( 
+    \frac{\delta_{n,\tau}}{\varepsilon}
+  \right)^{1/(2k)}
+  d \varepsilon
+  \ 
+  =
+  \ 
+  \delta_{n,\tau}
+  \,.
+\end{align*}
+For $t>0$,
+Markov's inequality gives
+\begin{gather}
+  \P\left[
+  \norm{\G_n}^*_{\mathcal{F}_{n,\tau}}
+   \ge t
+  \right]
+  \ 
+  \le
+  \ 
+  \frac{1
+  }{t}
+  \,
+    \E\left[
+  \norm{\G_n}^*_{\mathcal{F}_{n,\tau}}
+    \right]
+  \ 
+  \le
+  \ 
+  \frac{1
+  }{t}
+  \,
+    \E^*\left[
+  \norm{\G_n}_{\mathcal{F}_{n,\tau}}
+    \right]
+    \le
+    \frac{\delta_{n,\tau}}{t}
+    \,,
+\end{gather}
+and consequently
+\begin{gather}
+  \P\left[
+  \norm{\G_n}^*_{\mathcal{F}_{n,\tau}}
+  \le \frac{1}{\tau}
+  C_Y
+  C_w
+  \gamma_\tau
+  r_n
+  \right]
+  \ 
+  \ge
+  \ 
+  1-\tau
+\end{gather}
+
+
+
+\end{proof}
