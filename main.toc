@@ -19,7 +19,7 @@
 \contentsline {section}{\numberline {4.2}The Method of Exchangeable Pairs}{46}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Matrix Khintchin Inequality and Applications}{49}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Generalzed Inequalities by Hermitian Dilataition}{53}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Intrinsic Dimension}{54}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Intrinsic Dimension}{55}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Empirical Processes}{57}{chapter.5}%
 \contentsline {section}{\numberline {5.1}A Primer on Empirical Processes}{57}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Maximal Inequalities}{58}{section.5.2}%
