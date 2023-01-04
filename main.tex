@@ -164,28 +164,23 @@ We will deliver the details that are omited in the paper.
   which lately received a lot of attention.
   In particular an approach via the method of exchangable pairs \cite{Mackey2014}
   has been fruitful in simplifying the proofs of long standing results such as the matrix Khintchin inequality.
-  We base our exposition on \cite{Mackey2014}. A lot will be exact copy of this paper, so no originality is claimed. Where it seemed fit, we conducted some calculations in more detail than presented in the paper. 
+  The paper offers a comprehensive introduction to this method.
 
-  We will first introduce the method of exchangable pairs and derive auxiliary theorems to establish the matrix Khintchin inequality.
-  Then we will derive inequalities for moments of matrices, first for psd matrices and then via the Hermitian dilataition for general rectangular matrices. In a last step we will introduce the notion of intrinsic dimension to improve the bounds.
-
+  We will cite the matrix Khintchin inequality and 
+  inequalities for moments of matrices that follow from it\cite{Chen2012}. 
+  As a novelty, we will apply intrinsic dimension results and Hermition Dilitation from \cite{Tropp2015}  
+  to matrix moments inequalities. Even though it is straightforward, to the best of our knowledge the calculations have not been carried out in any publication so far.
   \section{A Matrix Analysis Primer}
   \input{chapters/random_matrix_ineq/matrix_analysis.tex}
-  \section{The Method of Exchangeable Pairs}
-  \input{chapters/random_matrix_ineq/exchangable_pairs.tex}
+  %\section{The Method of Exchangeable Pairs}
+  %\input{chapters/random_matrix_ineq/exchangable_pairs.tex}
  \section{Matrix Khintchin Inequality and Applications}
- The goal of this section is to derive the matrix Khintchin inequality and show some important applications.
- For this we need an auxiliary theorem which is an extension of the 
- \textit{Burkholder-Davis-Gundy (BDG) inequality} from classical martingale theory~\cite{Burkholder1973}.
-  We prepare for the proof of this theorem by assembling some analytic tools.
+ In this section we state the matrix Khintchin inequality and matrix moment inequalities as an applications.
+ We provide the proof of auxiliary theorems which are cited without proof in \cite{Mackey2014}. They are needed to prove the matrix Khintchin inequality. 
   \input{chapters/random_matrix_ineq/matrix_khintchine.tex}
   \section{Generalzed Inequalities by Hermitian Dilataition}
   \input{chapters/random_matrix_ineq/generalization.tex}
   \input{chapters/random_matrix_ineq/application_rosenthal_pinelis.tex}
-  \begin{takeaways}
-    Dilataition is so deep.
-    \lipsum[3]
-  \end{takeaways}
   
   \newpage
   \section{Intrinsic Dimension}
@@ -193,14 +188,19 @@ We will deliver the details that are omited in the paper.
 
 
 \chapter{Empirical Processes}
-\section{A Primer on Empirical Processes}
-\input{chapters/empirical_processes/ep_primer.tex}
+Classical references are \cite{Vaart2000} and \cite{vaart2013}.
+For maximal inequalities see \cite[§19]{Vaart2000}
+For Functional Delta-Method see \cite[§20]{Vaart2000}
+For an introduction to empirical processes and outer expectation 
+see the beginning of \cite{vaart2013}.
+%\section{A Primer on Empirical Processes}
+%\input{chapters/empirical_processes/ep_primer.tex}
 
-\section{Maximal Inequalities}
-\input{chapters/empirical_processes/maximal_ineq.tex}
+%\section{Maximal Inequalities}
+%\input{chapters/empirical_processes/maximal_ineq.tex}
 
-\section{Functional Delta Method}
-\input{chapters/empirical_processes/functional_delta_method.tex}
+%\section{Functional Delta Method}
+%\input{chapters/empirical_processes/functional_delta_method.tex}
 
 \chapter{Simple yet useful Calculations} 
 \input{chapters/simple_yet_useful.tex}

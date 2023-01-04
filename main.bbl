@@ -1,21 +1,15 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{MJC{\etalchar{+}}14}
 
-\bibitem[Bha97]{Bhatia1997}
-Rajendra Bhatia.
-\newblock {\em Matrix {{Analysis}}}, volume 169 of {\em Graduate {{Texts}} in
-  {{Mathematics}}}.
-\newblock {Springer}, {New York, NY}, 1997.
-
 \bibitem[BT03]{Bertsekas2003}
 Dimitri~P. Bertsekas and John~N. Tsitsiklis.
 \newblock Parallel and {{Distributed Computation}}:{{Numerical Methods}}.
 \newblock November 2003.
 
-\bibitem[Bur73]{Burkholder1973}
-D.~L. Burkholder.
-\newblock Distribution {{Function Inequalities}} for {{Martingales}}.
-\newblock {\em The Annals of Probability}, 1(1):19--42, 1973.
+\bibitem[CGT12]{Chen2012}
+Richard~Y. Chen, Alex Gittens, and Joel~A. Tropp.
+\newblock The {{Masked Sample Covariance Estimator}}: {{An Analysis}} via
+  {{Matrix Concentration Inequalities}}, June 2012.
 
 \bibitem[Kle20]{Klenke2020}
 Achim Klenke.
@@ -56,14 +50,6 @@ Ingo Steinwart and Andreas Christmann.
 \newblock {\em Support {{Vector Machines}}}.
 \newblock {Springer Science \& Business Media}, September 2008.
 
-\bibitem[Ste72]{Stein1972}
-Charles Stein.
-\newblock A bound for the error in the normal approximation to the distribution
-  of a sum of dependent random variables.
-\newblock {\em Proceedings of the Sixth Berkeley Symposium on Mathematical
-  Statistics and Probability, Volume 2: Probability Theory}, 6.2:583--603,
-  January 1972.
-
 \bibitem[TB91]{Tseng1991}
 Paul Tseng and Dimitri~P. Bertsekas.
 \newblock Relaxation {{Methods}} for {{Problems}} with {{Strictly Convex
@@ -74,12 +60,6 @@ Paul Tseng and Dimitri~P. Bertsekas.
 Joel~A. Tropp.
 \newblock An {{Introduction}} to {{Matrix Concentration Inequalities}}, January
   2015.
-
-\bibitem[vdV98]{Vaart1998}
-A.~W. van~der Vaart.
-\newblock {\em Asymptotic {{Statistics}}}.
-\newblock Cambridge {{Series}} in {{Statistical}} and {{Probabilistic
-  Mathematics}}. {Cambridge University Press}, {Cambridge}, 1998.
 
 \bibitem[vdV00]{Vaart2000}
 A.~W. van~der Vaart.
