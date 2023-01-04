@@ -1,31 +1,30 @@
+In this section we extend the weighting scheme to estimating the marginal distribution of the outcome.
+We extend the error decomposition in \cite[page 27]{Wang2019}
+
 The following decomposition is flexible in $\Phi.$
-We get different causal estimaands $\E[\Phi(Y(1))],$
-e.g.
-the popolation average of $Y(1)$
+We get different causal estimands $\E[\Phi(Y(1))]$,
+for example, 
+the population average of $Y(1)$
 for 
 $
-  \Phi(Y)=Y,
-$
-i.e.
+  \Phi(Y)=Y
+$, that is,
 $
 \E[Y(1)]
-,
-$
-ot the distribution function of $Y(1)$ at $t$
+$.
+Likewise we get the distribution function of $Y(1)$ at $t$
 for 
 $
   \Phi(Y)=
   \mathbf{1}_{(-\infty, t]}
   (Y)
-  ,
-$
-i.e.
+$,
+that is,
 $
 \P[
 Y(1)\le t
 ]
-.
-$
+$.
 \begin{gather}
  \sum_{i=1}^{n}  
  w_i
@@ -120,3 +119,10 @@ indexed over
 If $\mathcal{F}=\left\{ f_\Phi \colon \Phi \in \ \text{some set}\right\}$
 is $\P$-Donsker, the empirical process converges to a tight gaussian process.
 Then the functional delta Method is applicable.
+
+A plethora of applications of the delta method to estimates of the distribution function are to be found in \cite{Vaart2000} and \cite{vaart2013}.
+This includes Quantile estimation \cite[§21]{Vaart2000}\cite[§3.9.21/24]{vaart2013},
+survival analysis via Nelson-Aalen and Kaplan-Meier estimator\cite[§3.9.19/31]{vaart2013},
+Wilcoxon Test~\cite[§3.9.4.1]{vaart2013},
+and much more.
+Maybe Boostrapping from the weighted distribution is also sensible .

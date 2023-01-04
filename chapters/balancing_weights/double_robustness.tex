@@ -1,6 +1,11 @@
 %read the paper \cite{Zhao2017a} for discussion of double robustness for balancing weights and \cite{Hahn1998} for semiparametric efficiency bounds.
 
-
+By double robustness we mean the property of an estimator that it is consistent if either one of treatment or outcome model is well specified.
+The augmented weighting estimator was designed to have exactly this property.
+Surprisingly, the weighted mean estimator in the balancing weights approach of \cite{Wang2019} retains this feature despite its simplicity \cite{Zhao2017a}. 
+In the following we explore double robustness in the weighted mean estimator from the perspective of learning rates.
+We will adopt a similar notion of learning rates as in \cite{Steinwart2008}.
+To the best of our knowledge this approach is new. Indeed, the existing literature is mostly concerned with consistency and treats learning rates somewhat superficially. 
 \subsection{Learning Rates of the weighted mean}
 
 What is the speed of convergence in the weak law of large numbers?
@@ -72,6 +77,7 @@ above assessment, simply by imposing
   \E[Y(T)\,|\, T=1]\ \neq\  \E[Y(1)]
   \,.
 \end{gather}
+\todo[color=orange!40,inline]{Formulate better transition to propensity score weighting.}
 Statisticians have wrestled with this issue for nearly a century.
 
 In experimental studies we usually specify treatment assignment as opposed to merely observing a unit receiving treatment. 
@@ -231,7 +237,6 @@ The fourth equality is justified by the assumption of weak unconfoundedness.
 The density transformation is due to Bayes's Theorem.
 With slight modifications in the above argument, it follows
 \begin{gather}
-  n^2
   \E
   \left[ 
   \Big( 
@@ -258,9 +263,10 @@ We omit the details.
 Invoking the weak law of large numbers finishes the proof.
 \end{proof}
 
+\todo[color=orange!40,inline]{Formulate better transition to weights with estimated propensity score.}
 We started by asking an easy question, so it is time for a more challenging one: How do we proceed in deriving learning rates if the propensity score is unknown.
 How do we generally procede?
-[what has been done in the past. why are some methods obsolete]
+[what has been done in the past. Why are some methods obsolete]
 A naive answer would be: We hope to select a proper model and try to estimate the propensity score.
 Stunningly, a lot of practicioners still settle for obsolete methods when it comes to propensity score analysis.
 
@@ -269,213 +275,8 @@ Next, we consider the event that we have a consistent estimator of the
 propensity score and the distribution of the covariate vector $X$, 
 along with that of the outcome $Y$, 
 has compact support.
-Then there exists a constant $C_\pi\in (0,1/2)$ such that 
-\begin{gather}
-  C_\pi \ \le\  \pi(x) \ \le\  1-C_\pi 
-  \qquad
-  \text{for all}\ 
-  x \in \mathcal{X}\,.
-\end{gather}
-
-We also have
-confidence $c_\tau$ and learning rate $(\varepsilon_n)$
-
-\begin{gather}
-  \P
-  \left[ 
-    T
-    \norm{
-      n w(T,X)
-      -
-      1/\pi(X)
-    }
-    \le
-    c_\P
-    c_{\tau}
-    \varepsilon_n
-  \right]
-\end{gather}
-
-Furthermore, 
-
-Previously we bounded the first term, so let us seek a bound for the second term.
-To this end, we shall use maximal inequalities from the theory of empirical processes.
-Consider
-the random function
-  \todo[color=red!40,inline]{Why deviate from normal concentration inequalities? $w_i$ are not independent, e.g., if they sum to zero.}
-\begin{gather}
-\end{gather}
-The weights $w$ are random, so $f_w$ is random as well. 
 The next assumptions reduce the technical task to a minimum.
 
-      $
-      $
-\begin{assumptions*}
-  \begin{enumerate}[label={(\roman*)}]
-    \item
-
-  \end{enumerate}
-\end{assumptions*}
-
-
-\begin{align}
-  \P[
-  \mathbb{G}_n f_w \le t
-  ]
-  \ge
-  \P[
-  f_w \in \mathcal{F}_n
-  \ \text{and}\ 
-  \norm{\G_n}_{\mathcal{F}_n}^*
-  \le t
-  ]
-  =
-  \P[
-  \norm{\G_n}_{\mathcal{F}_n}^*
-  \le t
-  |
-  f_w \in \mathcal{F}_n
-  ]
-  \cdot
-  \P[
-  f_w \in \mathcal{F}_n
-  ]
-  \\
-  \ge
-  \P[
-  f_w \in \mathcal{F}_n
-  ]
-  -
-  \P[
-  f_w \in \mathcal{F}_n
-  ]
-  \frac{
-    \E[
-  \norm{\G_n}_{\mathcal{F}_n}^*
-  |
-  f_w \in \mathcal{F}_n
-  ]
-  }{t}
-  \\
-  =
-  \P[
-  f_w \in \mathcal{F}_n
-  ]
-  +
-  \P[
-  f_w \notin \mathcal{F}_n
-  ]
-  \frac{
-    \E[
-  \norm{\G_n}_{\mathcal{F}_n}^*
-  |
-  f_w \notin \mathcal{F}_n
-  ]
-  }{t}
-  -
-  \frac{
-    \E[
-  \norm{\G_n}_{\mathcal{F}_n}^*
-    ]
-  }{t}
-  \\
-  \ge
-  \P[
-  f_w \in \mathcal{F}_n
-  ]
-  -
-  \frac{
-    \E[
-  \norm{\G_n}_{\mathcal{F}_n}^*
-    ]
-  }{t}
-  =
-  \P[
-  f_w \in \mathcal{F}_n
-  ]
-  -
-  \frac{
-    \E^*[
-  \norm{\G_n}_{\mathcal{F}_n}
-    ]
-  }{t}
-\end{align}
-
-  \todo[color=red!40, inline]{derive concentration with markov ineq and entropy.}
-
-It follows
-\begin{gather}
-  \P^*\left[ 
-    \norm{\G_n}_{\mathcal{F}_n}
-    \le c_n \frac{1}{\tau}
-  \right]
-  \ge
-  1-\tau
-   \,.
-\end{gather}
-The confidence $1/\tau$ is substandard. Improvements may involve Bernstein like concentration for empirical processes (cf. \cite[Section~2.14.2]{vaart2013})
-
-\todo[color=red!40,inline]{Streamline the term}
-\begin{gather}
-  \sqrt{V}\frac{1}{\sqrt{\tau}}\frac{1}{\sqrt{n}}
-  +
-  \sqrt{C_\mathcal{F}}
-  C_\P
-  \frac{C_\tau}{\tau}
-  \frac{\varepsilon_n}{\sqrt{n}}
-  +
-  C_Y
-  (
-  C_\P 
-  C_{\tau_n}
-  \varepsilon_n
-  +
-  (n
-  +
-  \frac{1}{C_\pi}
-  )
-  \tau_n
-  )
-\end{gather}
-For this we require
-existence of a rate $(\tau_n) \subset (0,1)
-$
-such that
-
-$
-\tau_n\cdot n \to 0
-$
-and
-$
-\varepsilon_n
-\cdot
-  C_{\tau_n}
-  \to 0
-$.
-Take as learning rate 
-
-$
-\tau_n
-:=
-\inf
-\left\{ 
-t \in (0,1)
-\colon
-\frac{
-\varepsilon_n
-\cdot
-  C_{t}
-}{n}
-  \le
-  t
-\right\}
-$
-We then achieve learning rate for the weighted mean of $\tau_n\cdot n$.
-Best is $C_\tau=1$, when we recover the learnrate of the estimator $\varepsilon_n$.
-and a uniform constant is 
-
-
-\todo[color=red!40,inline]{Give proof}
 \begin{assumptions*}
   Let the following hold.
   \begin{enumerate}[label={(\roman*)}]
@@ -919,3 +720,14 @@ Selecting the worst instance of learning rate, confidence and uniform constant c
 
 \todo[color=green!40,inline]{Streamline analysis of third term.}
 \end{proof}
+
+\begin{reflection*}
+  Why did we use empirical process theory instead of conventional concentration inequalities?
+  The weights $w$ are random, so $f_w$ is random as well. 
+
+
+Best is $\gamma_\tau=1$, when we recover the learning rate of the estimator, that is, $(r_n)$.
+The confidence $\gamma_\tau/\tau$ is substandard. Improvements may involve Bernstein like concentration for empirical processes (cf. \cite[Section~2.14.2]{vaart2013})
+\end{reflection*}
+\todo[color=red!40, inline]{Continue section with rates for right outcome model and then both models right. Do the rates improve?}
+

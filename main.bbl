@@ -17,11 +17,6 @@ D.~L. Burkholder.
 \newblock Distribution {{Function Inequalities}} for {{Martingales}}.
 \newblock {\em The Annals of Probability}, 1(1):19--42, 1973.
 
-\bibitem[CGT12]{Chen2012}
-Richard~Y. Chen, Alex Gittens, and Joel~A. Tropp.
-\newblock The {{Masked Sample Covariance Estimator}}: {{An Analysis}} via
-  {{Matrix Concentration Inequalities}}, June 2012.
-
 \bibitem[Kle20]{Klenke2020}
 Achim Klenke.
 \newblock {\em Probability {{Theory}}: {{A Comprehensive Course}}}.
@@ -56,6 +51,11 @@ Axel Ruhe.
 \newblock Perturbation bounds for means of eigenvalues and invariant subspaces.
 \newblock {\em BIT Numerical Mathematics}, 10(3):343--354, September 1970.
 
+\bibitem[SC08]{Steinwart2008}
+Ingo Steinwart and Andreas Christmann.
+\newblock {\em Support {{Vector Machines}}}.
+\newblock {Springer Science \& Business Media}, September 2008.
+
 \bibitem[Ste72]{Stein1972}
 Charles Stein.
 \newblock A bound for the error in the normal approximation to the distribution
@@ -81,6 +81,11 @@ A.~W. van~der Vaart.
 \newblock Cambridge {{Series}} in {{Statistical}} and {{Probabilistic
   Mathematics}}. {Cambridge University Press}, {Cambridge}, 1998.
 
+\bibitem[vdV00]{Vaart2000}
+A.~W. van~der Vaart.
+\newblock {\em Asymptotic {{Statistics}}}.
+\newblock {Cambridge University Press}, June 2000.
+
 \bibitem[vdvW13]{vaart2013}
 Aad van~der {vaart} and Jon Wellner.
 \newblock {\em Weak {{Convergence}} and {{Empirical Processes}}: {{With
@@ -92,5 +97,10 @@ Yixin Wang and Jos{\'e}~R. Zubizarreta.
 \newblock Minimal {{Dispersion Approximately Balancing Weights}}: {{Asymptotic
   Properties}} and {{Practical Considerations}}.
 \newblock {\em Biometrika}, page asz050, October 2019.
+
+\bibitem[ZP17]{Zhao2017a}
+Qingyuan Zhao and Daniel Percival.
+\newblock Entropy balancing is doubly robust.
+\newblock {\em Journal of Causal Inference}, 5(1):20160010, September 2017.
 
 \end{thebibliography}
