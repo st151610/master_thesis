@@ -234,4 +234,281 @@ Thus by Proposition~\ref{syu_1_result}
     \text{a.s.}
   \end{gather}
 \end{theorem*}
+\begin{lemma}
+  For any proper function
+  $
+    f:\R^n\to\overline{\R}
+  $
+  we have
+  \begin{gather}
+    f^*(x^*) 
+    =
+    \sigma_{\mathrm{epi}(f)}
+    (x^*,-1)
+    \qquad
+    \text{for}
+    \ 
+    x^* \in \R^n.
+  \end{gather}
+\end{lemma}
+\begin{proof}
+  Let $x^*\in\R^n$
+  and
+  $
+    (x,\lambda)\in \mathrm{epi}(f).
+  $
+  Then
+  $
+    x \in \mathrm{dom}(f)
+  $
+  and
+  $
+    f(x)\le \lambda.
+  $
+  Thus
+  \begin{gather}
+    \inner{x^*}{x} - f(x)
+    \ge
+    \inner{x^*}{x} - \lambda
+    \qquad
+    \text{for all}\ 
+    (x,\lambda)\in \mathrm{epi}(f).
+  \end{gather}
+  On the other hand 
+  $
+    (x,f(x))\in \mathrm{epi}(f)
+  $
+  for all
+  $
+    x \in \mathrm{dom}(f).
+  $
+  It follows
+  \begin{gather}
+    \inner{x^*}{x} - f(x)
+    \le
+    \sup_{(x,\lambda)\in\mathrm{epi}(f)}
+    \inner{x^*}{x} - \lambda
+    \qquad
+    \text{for all}\ 
+    x \in \mathrm{dom}(f).
+  \end{gather}
+  Taking the supremum in the last two displays yields
+  \begin{align}
+    f^*(x^*)
+    =
+    \sup_{x\in\mathrm{dom}(f)}
+    \inner{x^*}{x} - f(x)
+    &=
+    \sup_{(x,\lambda)\in\mathrm{epi}(f)}
+    \inner{x^*}{x} - \lambda
+    \\
+    &=
+    \sup_{(x,\lambda)\in\mathrm{epi}(f)}
+    \inner{(x^*,-1)}{(x,\lambda)} 
+    =
+    \sigma_{\mathrm{epi}(f)}
+    (x^*,-1).
+  \end{align}
+\end{proof}
+\begin{proof}
+  Let $x^*\in\R^n$ and fix $x_1^*,x_2^*\in\R^n$ such that
+  $x^*=x^*_1+x^*_2$.
+  We get
+  \begin{align*}
+    f^*(x^*_1)+g^*(x^*_2)
+    &=
+    \sup_{x\in\R^n}
+    \inner{x^*_1}{x}-f(x)
+    +
+    \sup_{x\in\R^n}
+    \inner{x^*_2}{x}-g(x)
+    \\
+    &\ge
+    \sup_{x\in\R^n}
+    \inner{x^*_1}{x}-f(x)
+    +
+    \inner{x^*_2}{x}-g(x)
+    =
+    \sup_{x\in\R^n}
+    \inner{x^*_1+x^*_2}{x}-(f(x)+g(x))
+    \\
+    &=
+    \sup_{x\in\R^n}
+    \inner{x^*}{x}-(f+g)(x)
+    =(f+g)^*(x^*)
+  \end{align*}
+  Taking the infimum over $x_1^*,x_2^*\in\R^n$ in the above display gives 
+  $
+  (f^*\square g^*)(x^*)
+  \ge
+  (f+g)^*(x^*).
+  $
+  Let us prove now $\le$ under the condition
+  $
+  \text{ri}\left( \text{dom}(f) \right)
+  \cap
+  \text{ri}\left( \text{dom}(g) \right)
+  \neq 
+  \emptyset
+  .
+  $
+  The only case we need to consider is
+  $
+    (f+g)^*(x^*)<\infty.
+  $
+  Define two convex sets by
+  \begin{align}
+    \Omega_1
+    &:=
+    \left\{ 
+      (x,\alpha,\beta)\in\R^{n+2}
+      \colon
+      \alpha\ge f(x)
+    \right\}
+    =
+    \mathrm{epi}(f)\times \R,
+    \\
+    \Omega_2
+    &:=
+    \left\{ 
+      (x,\alpha,\beta)\in\R^{n+2}
+      \colon
+      \beta\ge g(x)
+    \right\}.
+  \end{align}
+  Similar to Lemma we get the representation
+  \begin{gather}
+    (f+g)^*(x^*)
+    =
+    \sigma_{\Omega_1\cap\Omega_2}
+    (x^*,-1,-1).
+  \end{gather}
+  Indeed, the only thing we need to verify is
+  $
+    \mathrm{dom}(f)\cap\mathrm{dom}(g)
+    =
+    \mathrm{dom}(f+g).
+  $
+  The inclusion $\subseteq$ is clear.
+  Assume towards a contradiction that
+  $
+    (f+g)(x)<\infty
+  $
+  and
+  $
+    f(x)=\infty.
+  $
+  Since $g(x)>-\infty$ it holds
+  \begin{gather}
+    \infty
+    =
+    \infty+g(x)
+    =f(x)+g(x)
+    =(f+g)(x)
+    <
+    \infty.
+  \end{gather}
+  This is a contradiction. The same holds for $f$ and $g$ reversed. It follows the inclusion $\supseteq$ and equality.
+  By the support function intersection rule there exist triples
+  \begin{gather}
+    (x^*_1,-\alpha_1,-\beta_1),
+    (x^*_2,-\alpha_2,-\beta_2)
+    \in \R^{n+2}
+    \quad
+    \text{such that}
+    \quad
+    (x^*,-1,-1)
+    =
+    (x^*_1+x^*_2,-(\alpha_1+\alpha_2),-(\beta_1+\beta_2))
+  \end{gather}
+  and
+  \begin{gather}
+    (f+g)^*(x^*)
+    =
+    \sigma_{\Omega_1\cap\Omega_2}
+    (x^*,-1,-1)
+    =
+    \sigma_{\Omega_1}
+    (x^*_1,-\alpha_1,-\beta_1)
+    +
+    \sigma_{\Omega_2}
+    (x^*_2,-\alpha_2,-\beta_2).
+  \end{gather}
+  Next we show
+  $\beta_1=\alpha_2=0.$
+  Suppose towards a contradiction that 
+  $\beta_1\neq 0.$ 
+  We fix 
+  $(\overline{x},\overline{\alpha})\in\mathrm{epi}(f).$
+  Then
+  \begin{gather}
+    \sigma_{\Omega_1}
+    (x^*_1,-\alpha_1,-\beta_1)
+    =
+    \sup_{(x,\alpha,\beta)\in \mathrm{epi}(f)\times \R}
+    \inner{x^*}{x}-\alpha \alpha_1 -\beta \beta_1
+    \ge
+    \sup_{\beta\in \R}
+    \inner{x^*}{\overline{x}}-\overline{\alpha} \alpha_1 -\beta \beta_1
+    =\infty.
+  \end{gather}
+  This contradicts
+  $
+    (f+g)^*(x^*)<\infty.
+  $
+  In a similar fashion we can derive a contradiction for $\alpha_2\neq0.$
+  Employing Lemma and taking into account the structures of the sets 
+  $\Omega_1$ and $\Omega_2$ this implies
+  \begin{align}
+    (f+g)^*(x^*)
+    &=
+    \sigma_{\Omega_1\cap\Omega_2}
+    (x^*,-1,-1)
+    =
+    \sigma_{\Omega_1}
+    (x^*_1,-1,0)
+    +
+    \sigma_{\Omega_2}
+    (x^*_2,0,-1)
+    \\
+    &=
+    \sigma_{\mathrm{epi}(f)}(x^*_1,-1)
+    +
+    \sigma_{\mathrm{epi}(g)}(x^*_2,-1)
+    =
+    f^*(x^*_1)
+    +
+    g^*(x^*_2)
+    \ge
+    (f^*\square g^*)(x^*).
+  \end{align}
+  This finishes the proof.
+\end{proof}
+It holds
+  \begin{align*}
+    - f^*(A^\top y^*) - g^*(y^*) 
+    &=
+      -\sup_{x\in \R^n}\inner{A^\top y^*}{x}-f(x)
+      -\sup_{y\in \R^m}\inner{-y^*}{y}-g(y)
+      \\
+    &=
+    \inf_{x\in \R^n}f(x)-\inner{y^*}{Ax}
+      +\inf_{y\in \R^m}g(y)+\inner{y^*}{y}
+      \\
+    &\le
+      \inf_{x\in \R^n}f(x)-\inner{y^*}{Ax}
+      +\inf_{x\in \R^n}g(Ax)+\inner{y^*}{Ax}
+      \\
+    &\le
+      \inf_{x\in \R^n}f(x)-\inner{y^*}{Ax} + g(Ax) + \inner{y^*}{Ax}
+      \\
+    &=  
+      \inf_{x\in \R^n}f(x)+g(Ax)
+    =
+      \widehat{p}
+  \end{align*}
+  The first equality is due to the definition of convex conjugates, the second equality due to $\inner{A^\top y}{x}=\inner{y}{Ax}$ and $\inf \left\{ -B \right\}=-\sup \left\{ B \right\}$ for all $B \subseteq \overline{\R}$ and the first inequality due to $\mathrm{Im}(A)\subseteq \R^m$.
+  Taking the supremum with respect to all 
+  $y^*\in\R^m$
+  yields the result.
 

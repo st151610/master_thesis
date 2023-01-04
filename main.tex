@@ -140,17 +140,15 @@ In particular we want to obtain primal optimal solutions from dual solutions.
 To accomplish the task we need technical tools from convex analysis, 
 mainly conjugate calculus and some KKT related results.
 
-Our starting point is the support function intersection rule, which we will prove in full detail employing a theorem on convex separation is finite dimensions.
-To this end, we will have a closer look in relative interiors and support functions.
-As an application we may prove the conjugate chain and sum rule,
-which are vital to application of duality. As a simple corollary we will obtain the classical Fenche-Rockafellar Duality theorem
-which gives general conditions for dual und primal optimal values to be equal.
+Our starting point is the support function intersection rule~\cite[Theorem 4.23]{Mordukhovich2022}.
+We give the details in the case of finite dimensions and refer for the rest of the proof to the book.
+The conjugate sum rule is applied to give first conjugate sum and then chain rule,
+which are vital to calculating convex conjugates. The proofs are omited, since the book is thorough enough. The well known Fenche-Rockafellar Duality theorem is a corollary of conjugate sum and chain rule. It gives general conditions under which dual and primal values coincide.
+The material we present is very well known, so we claim no originality. 
+We paraphrase the approach of \cite{Mordukhovich2022} to Duality. As an introduction, we recommend this recently published book together with the classical reference \cite{Rockafellar1970}.
 
-The material we present is very well known, so we claim no originality. We orient our exposition closly by
-\cite{Rockafellar1970, Mordukhovich2022}
-.
-
-We finish the chapter with an exposition of \cite{Tseng1991}, where for strictly convex functions we get a dual relationship in terms of the optimal solutions.
+We finish the chapter with ideas from \cite{Tseng1991}. They provide the high-level ideas to obtain for strictly convex functions a dual relationship in terms of the optimal solutions.
+We will deliver the details that are omited in the paper.
   \section{A Convex Analysis Primer}
   \input{chapters/convex_analysis/cvxa_primer.tex}
   \section{Conjugate Calculus and Fenchel-Rockafellar Theorem}

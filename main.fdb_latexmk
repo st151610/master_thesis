@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1672813136 "main.aux" "main.bbl" "main" 1672813299
+["bibtex main"] 1672822573 "main.aux" "main.bbl" "main" 1672822730
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1672808867 59331 39e46317bef9b7e1ef5cc951f7f54680 ""
-  "main.aux" 1672813299 24215 0347410e58784d360cbdc859453b06b2 "pdflatex"
+  "main.aux" 1672822729 22815 279333f1774ecc47cae3520dd2e4583d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1672813295 "main.tex" "main.pdf" "main" 1672813299
+["pdflatex"] 1672822726 "main.tex" "main.pdf" "main" 1672822730
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -228,9 +228,9 @@
   "chapters/balancing_weights/application_matrix_concentration_ineq.tex" 1672813293 8372 74e444c76e5ff6e5e6ed388f2b1b1ad4 ""
   "chapters/balancing_weights/double_robustness.tex" 1672812232 13288 bf72dce5b462db7fa77c6fc83f5a54ef ""
   "chapters/balancing_weights/error_decomp.tex" 1672811836 2341 13789b21db72906060e7ac9bf20842a4 ""
-  "chapters/convex_analysis/conjugate_calculus.tex" 1671872366 14229 23b568a7854779290d7e73c5a98ad40e ""
-  "chapters/convex_analysis/cvxa_primer.tex" 1671964396 14053 749bb7754c75737016f382931c161636 ""
-  "chapters/convex_analysis/tseng_bertsekas.tex" 1671870332 7988 83c55d71a0f20611e03e948f8473edc9 ""
+  "chapters/convex_analysis/conjugate_calculus.tex" 1672822591 8547 4a03e32672ed28006a6bb0859ad2948f ""
+  "chapters/convex_analysis/cvxa_primer.tex" 1672821634 14198 bf7ef59f9771702f371bd6c4f1ef58df ""
+  "chapters/convex_analysis/tseng_bertsekas.tex" 1672822725 8031 6676af616471c049ce743f7baf9a2eaf ""
   "chapters/empirical_processes/ep_primer.tex" 1672322971 4374 003ccbdfb013c14f5cfe234645ae2e8f ""
   "chapters/empirical_processes/functional_delta_method.tex" 1671626831 1893 d4ae809ac9741bcacbe3342754b478dc ""
   "chapters/empirical_processes/maximal_ineq.tex" 1671624136 3618 ee6cbec9722c8058e45395294b026f5c ""
@@ -243,13 +243,13 @@
   "chapters/random_matrix_ineq/matrix_khintchine.tex" 1671610711 12348 b997ef594541f7b9d4961c06124da560 ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1672813299 24215 0347410e58784d360cbdc859453b06b2 "pdflatex"
-  "main.bbl" 1672813136 3837 fb1901ed69d0b42b4cc02eed12bcf676 "bibtex main"
+  "main.aux" 1672822729 22815 279333f1774ecc47cae3520dd2e4583d "pdflatex"
+  "main.bbl" 1672822574 3837 fb1901ed69d0b42b4cc02eed12bcf676 "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
-  "main.tdo" 1672813299 4904 18e7c7ad8554f63eb4da1f88234ceafd "pdflatex"
-  "main.tex" 1672807569 7890 63b6cbfa6cfe0001cb7f04df27214696 ""
-  "main.toc" 1672813299 1924 4d91c17b0aceb6757e945c1cd0fcf653 "pdflatex"
+  "main.tdo" 1672822729 3931 a95a640c0d23f090865614abfa0f76ec "pdflatex"
+  "main.tex" 1672820975 8131 cd92632416e0ab4d1161c09a2ca7dcfb ""
+  "main.toc" 1672822729 1924 f5340e1d54c1a0f99edfd0674cd7696c "pdflatex"
   (generated)
   "main.aux"
   "main.log"
