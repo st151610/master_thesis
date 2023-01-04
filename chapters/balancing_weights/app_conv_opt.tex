@@ -56,6 +56,14 @@
       $
   \end{enumerate}
 \end{assumption}
+\todo[color=red!40, inline]{Elaborate on assumptions. Give as a counterexample 
+  \[
+  f(x):=
+  (1+\delta_{x\ge 0})
+  (x^2
+  +x\cdot \lambda)
+\]
+}
 
 We consider the following optimization problem.
 \begin{problem}
@@ -151,7 +159,7 @@ subject to the constraints
   is the absolute value of a real-valued scalar.
   Moreover, if $\lambda^\dagger$
   is an optimal solution then
-  \begin{gather}
+  \begin{gather*}
     w_i^*
     =
     (f^{'})^{-1}
@@ -161,7 +169,7 @@ subject to the constraints
     ,
     \quad
     i\in \left\{ 1,\ldots, n \right\}
-  \end{gather}
+  \end{gather*}
   are the unique optimal solutions to (P)
   .
 \end{ftheorem}
@@ -185,15 +193,15 @@ subject to the constraints
     \inner{d}{\lambda}
   \end{gather*}
   subject to
-  \begin{gather}
+  \begin{gather*}
     \lambda_k \ge 0
     \quad
     \text{for all}\ 
     k \in \left\{ 1, \ldots, K \right\}
     ,
-  \end{gather}
+  \end{gather*}
   where
-  \begin{gather}
+  \begin{gather*}
     \mathbf{Q}
     :=
     \begin{bmatrix}
@@ -220,13 +228,13 @@ subject to the constraints
       \delta
     \end{bmatrix}
     .
-  \end{gather}
+  \end{gather*}
 
   \end{lemma}
   \begin{proof}
     \emph{Lemma}
     We write the optimization problem in the form of \cite{Tseng1991}.
-    \begin{gather}
+    \begin{gather*}
     \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
     \qquad
     \sum_{i = 1}^{n} T_i f(w_i)
@@ -255,9 +263,9 @@ subject to the constraints
       \frac{1}{n} \sum_{i = 1}^{n} B_k(X_i)
       \quad
       k=1,\ldots,K
-    \end{gather}
+    \end{gather*}
     Next we write
- \begin{gather}
+ \begin{gather*}
     \mathbf{Q}
     :=
     \begin{bmatrix}
@@ -287,7 +295,7 @@ subject to the constraints
       - \overline{B(\mathbf{X})}
     \end{bmatrix}
     ,
-  \end{gather}
+  \end{gather*}
   where
   $
        \overline{B(\mathbf{X})}
@@ -309,7 +317,7 @@ $
       .
 $
 We get
-\begin{gather}
+\begin{gather*}
     \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
     \qquad
     \sum_{i = 1}^{n} T_i f(w_i)
@@ -318,15 +326,15 @@ We get
     =0
     \\
     \mathbf{Q}w \ge d
-\end{gather}
+\end{gather*}
 The convex conjugate is
-\begin{gather}
+\begin{gather*}
   \sum_{T_i=1} T_i f^*(\lambda_i)
   +
   \sum_{T_i=0} 
   \delta_{\left\{ 0 \right\}}(\lambda_i)
   .
-\end{gather}
+\end{gather*}
 Since
 $
 \mathbf{Q}_{\bullet i}=\mathrm{0}_n
@@ -337,5 +345,7 @@ T_i=0
 $
 we get the desired representation. Note that the equality constraint vanishes automatically.
   \end{proof}
+
+\todo[color=red!40, inline]{Continue with paraphrase of \cite[page 20]{Wang2019}}
 
 \end{proof}

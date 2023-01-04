@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  4 JAN 2023 06:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  4 JAN 2023 07:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -811,16 +811,21 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
+ [][] [][][][] \OT1/cmr/m/n/10.95 Elab-o-rate on as-sump-tions. Give as a coun-terex-am-ple  
+ []
+
+[1
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@tdo=\write6
 \openout6 = `main.tdo'.
 
- [1
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<images//unistuttgart_logo_deutsch.jpg, id=84, 173.9298pt x 37.0986pt>
+ [2]
+<images//unistuttgart_logo_deutsch.jpg, id=101, 173.9298pt x 37.0986pt>
 File: images//unistuttgart_logo_deutsch.jpg Graphic file (type jpg)
 <use images//unistuttgart_logo_deutsch.jpg>
 Package pdftex.def Info: images//unistuttgart_logo_deutsch.jpg  used on input line 114.
@@ -868,34 +873,40 @@ Overfull \hbox (46.09444pt too wide) detected at line 95
  []
 
 [10]) (./chapters/balancing_weights/app_conv_opt.tex [11]
-Package mdframed Info: mdframed works in twoside mode on input line 90.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 90.
-
-Underfull \vbox (badness 2495) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-Overfull \hbox (98.45584pt too wide) detected at line 290
+Package mdframed Info: mdframed works in twoside mode on input line 98.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 98.
+
+Underfull \vbox (badness 4181) has occurred while \output is active []
+
+ [13]
+Overfull \hbox (98.45584pt too wide) detected at line 298
 []
  []
 
-) (./chapters/balancing_weights/application_matrix_concentration_ineq.tex [13] [14]
-Overfull \hbox (52.08891pt too wide) detected at line 354
+) (./chapters/balancing_weights/application_matrix_concentration_ineq.tex [14] [15]
+Overfull \hbox (52.08891pt too wide) detected at line 357
 []
  []
 
 
-Overfull \hbox (119.23836pt too wide) detected at line 396
+Overfull \hbox (119.23836pt too wide) detected at line 399
 []
  []
 
-[15]
-Overfull \hbox (69.5209pt too wide) detected at line 523
+[16]
+Overfull \hbox (69.5209pt too wide) detected at line 526
 []
  []
 
-) [16]
+) [17] [18
+
+
+]
 chapter 2.
 (./chapters/convex_analysis/cvxa_primer.tex
 Overfull \hbox (36.1305pt too wide) in paragraph at lines 18--54
@@ -922,10 +933,7 @@ Overfull \hbox (76.93842pt too wide) in paragraph at lines 73--125
 ) = [] \OML/cmm/m/it/10.95 :$ 
  []
 
-[17
-
-
-]
+[19]
 Overfull \hbox (14.8236pt too wide) in paragraph at lines 206--222
 []$[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 C\OT1/cmr/m/n/10.95 ) = [] \OML/cmm/m/it/10.95 :$ 
  []
@@ -935,12 +943,12 @@ Overfull \hbox (5.57808pt too wide) in paragraph at lines 253--272
 []\OT1/cmr/m/it/10.95 Suppose $[][] \OML/cmm/m/it/10.95 C[] \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ;$ \OT1/cmr/m/it/10.95 for a fi-nite in-dex set $\OML/cmm/m/it/10.95 I:$ \OT1/cmr/m/it/10.95 Then $[] [] \OT1/cmr/m/n/10.95 = [][] [](\OML/cmm/m/it/10.95 C[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 :$ 
  []
 
-[18]
+[20]
 Package mdframed Info: mdframed works in twoside mode on input line 444.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 444.
- [19]
+ [21]
 Package mdframed Info: mdframed works in twoside mode on input line 509.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -950,12 +958,12 @@ Overfull \hbox (11.66759pt too wide) detected at line 594
 []
  []
 
-[20]
+[22]
 Overfull \hbox (1.89658pt too wide) in paragraph at lines 796--796
  [][][][][][] 
  []
 
-[21]) (./chapters/convex_analysis/conjugate_calculus.tex [22]
+[23]) (./chapters/convex_analysis/conjugate_calculus.tex [24]
 Overfull \hbox (22.24744pt too wide) in paragraph at lines 186--202
 [][]\OT1/cmr/bx/n/10.95 Theorem 2.5. []\OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95 f; g \OT1/cmr/m/n/10.95 : \U/msb/m/n/10.95 R[] \OMS/cmsy/m/n/10.95 ! \OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 ^^@1\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 1\OT1/cmr/m/n/10.95 ]$ \OT1/cmr/m/it/10.95 be proper con-vex func-tions and $[] [] \OMS/cmsy/m/n/10.95 \
  []
@@ -965,7 +973,7 @@ Overfull \hbox (41.79732pt too wide) detected at line 254
 []
  []
 
-[23]
+[25]
 Overfull \hbox (99.68204pt too wide) detected at line 338
 []
  []
@@ -980,7 +988,7 @@ Overfull \hbox (6.01004pt too wide) detected at line 399
 []
  []
 
-[24]
+[26]
 
 Package hyperref Warning: No autoref name for `problem' on input line 448.
 
@@ -996,7 +1004,7 @@ Package hyperref Warning: No autoref name for `problem' on input line 474.
 
 Package hyperref Warning: No autoref name for `problem' on input line 474.
 
-[25]
+[27]
 Overfull \hbox (0.64003pt too wide) in paragraph at lines 517--525
 [][]\OT1/cmr/bx/n/10.95 Theorem 2.6. []\OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95 f; g \OT1/cmr/m/n/10.95 : \U/msb/m/n/10.95 R[] \OMS/cmsy/m/n/10.95 ! []$ \OT1/cmr/m/it/10.95 be proper con-vex func-tions and $\OT1/cmr/m/n/10.95 0 \OMS/cmsy/m/n/10.95 2 []\OT1/cmr/m/n/10.95 ([](\OML/cmm/m/it/10.95 g\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^@
  []
@@ -1006,12 +1014,12 @@ Overfull \hbox (60.85783pt too wide) detected at line 554
 []
  []
 
-[26]
+[28]
 Overfull \hbox (1.89658pt too wide) in paragraph at lines 651--651
  [][][][][][] 
  []
 
-) (./chapters/convex_analysis/tseng_bertsekas.tex [27] [28] [29]
+) (./chapters/convex_analysis/tseng_bertsekas.tex [29] [30] [31]
 Package mdframed Info: mdframed works in twoside mode on input line 366.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1021,7 +1029,7 @@ Overfull \hbox (1.89658pt too wide) in paragraph at lines 464--464
  [][][][][][] 
  []
 
-) [30]
+) [32]
 chapter 3.
 (./chapters/random_matrix_ineq/matrix_analysis.tex
 Overfull \hbox (59.31049pt too wide) detected at line 69
@@ -1033,7 +1041,7 @@ Overfull \hbox (7.728pt too wide) in paragraph at lines 74--120
 []\OT1/cmr/m/n/10.95 For each $\OML/cmm/m/it/10.95 p \OMS/cmsy/m/n/10.95 ^^U \OT1/cmr/m/n/10.95 1$ the \OT1/cmr/bx/n/10.95 Schat-ten $\OML/cmm/m/it/10.95 p$\OT1/cmr/bx/n/10.95 -norm \OT1/cmr/m/n/10.95 is de-fined as $[][] := ([]([][]))[] [] \OT1/cmr/bx/n/10.95 B \OMS/cmsy/m/n/10.95 2
  []
 
-[31
+[33
 
 
 ]
@@ -1041,12 +1049,12 @@ Overfull \hbox (1.89658pt too wide) in paragraph at lines 161--161
  [][][][][][] 
  []
 
-) (./chapters/random_matrix_ineq/exchangable_pairs.tex [32] [33]
+) (./chapters/random_matrix_ineq/exchangable_pairs.tex [34] [35]
 Overfull \hbox (1.89658pt too wide) in paragraph at lines 425--425
  [][][][][][] 
  []
 
-) (./chapters/random_matrix_ineq/matrix_khintchine.tex [34]
+) (./chapters/random_matrix_ineq/matrix_khintchine.tex [36]
 Overfull \hbox (3.22646pt too wide) in paragraph at lines 43--70
 [] \OT1/cmr/m/it/10.95 [[]Pet94[], Propo-si-tion 3] \OT1/cmr/m/n/10.95 Let $\OT1/cmr/bx/n/10.95 A \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 ^^U[]\OT1/cmr/bx/n/10.95 P[]P[] [] B \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 ^^V[]\OT1/cmr/bx/n/10.95 Q[]Q[]$
  []
@@ -1056,12 +1064,12 @@ Overfull \hbox (25.06772pt too wide) detected at line 207
 []
  []
 
-[35]
+[37]
 Overfull \hbox (1.83298pt too wide) detected at line 297
 []
  []
 
-[36]
+[38]
 Overfull \hbox (0.59534pt too wide) in paragraph at lines 650--653
 []\OT1/cmr/m/n/10.95 Apply method of ex-change-able pairs, gen-er-al-ized Klein in-equal-ity, trace H^^?older
  []
@@ -1070,7 +1078,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 658.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 658.
-[37]
+[39]
 Package mdframed Info: mdframed works in twoside mode on input line 759.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1083,7 +1091,7 @@ Overfull \hbox (1.89658pt too wide) in paragraph at lines 889--889
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38]) (./chapters/random_matrix_ineq/generalization.tex
+ [40]) (./chapters/random_matrix_ineq/generalization.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 6.
  (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1092,7 +1100,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 1.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1.
- [39]
+ [41]
 Overfull \hbox (56.80855pt too wide) detected at line 75
 []
  []
@@ -1102,17 +1110,17 @@ Overfull \hbox (1.89658pt too wide) in paragraph at lines 190--190
  [][][][][][] 
  []
 
-[40] (./chapters/random_matrix_ineq/intrinsic_dimension.tex
+[42] (./chapters/random_matrix_ineq/intrinsic_dimension.tex
 Overfull \hbox (1.89658pt too wide) in paragraph at lines 246--246
  [][][][][][] 
  []
 
-[41]) [42]
+[43]) [44]
 chapter 4.
-(./chapters/empirical_processes/ep_primer.tex [43
+(./chapters/empirical_processes/ep_primer.tex [45
 
 
-]) (./chapters/empirical_processes/maximal_ineq.tex [44]) (./chapters/empirical_processes/functional_delta_method.tex
+]) (./chapters/empirical_processes/maximal_ineq.tex [46]) (./chapters/empirical_processes/functional_delta_method.tex
 Package mdframed Info: mdframed works in twoside mode on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1128,40 +1136,40 @@ Package mdframed Warning: You got a bad break
 Package mdframed Info: You first box width is to small
  mdframed fixed it
 (mdframed)              on input line 141.
-[45]
+[47]
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last split box is empty
 (mdframed)                You have to change the settings on input line 141.
 
-) [46]
+) [48]
 chapter 5.
-(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [47
+(./chapters/simple_yet_useful.tex) (./chapters/notation_index.tex) (./main.nls [49
 
 
-] [48
+] [50
 
 
-]) (./main.bbl [49] [50
+]) (./main.bbl [51] [52
 
 
-] [51]) [52] (./main.aux)
+] [53]) [54] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27500 strings out of 478238
- 530705 string characters out of 5850455
- 1041238 words of memory out of 5000000
- 44834 multiletter control sequences out of 15000+600000
+ 27493 strings out of 478238
+ 530633 string characters out of 5850455
+ 1039238 words of memory out of 5000000
+ 44842 multiletter control sequences out of 15000+600000
  483295 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,19n,106p,10615b,983s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (54 pages, 518217 bytes).
+Output written on main.pdf (56 pages, 521127 bytes).
 PDF statistics:
- 948 PDF objects out of 1000 (max. 8388607)
+ 950 PDF objects out of 1000 (max. 8388607)
  836 compressed objects within 9 object streams
- 367 named destinations out of 1000 (max. 500000)
+ 352 named destinations out of 1000 (max. 500000)
  186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

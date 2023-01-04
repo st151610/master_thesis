@@ -1,3 +1,6 @@
+We extend the analysis to covariates with unbounded support. To the best of our knowledge this has not been done in this setting.
+Indeed, \cite[Assumption 1]{Wang2019} only allows for covariates with bounded support.
+Our idea is to apply Matrix Moment Inequalities instead of Bernstein's inequality. We learned from this possibility from \cite[(6.1.6)]{Tropp2015}
 \subsubsection*{
   Analysis of 
   $
@@ -283,7 +286,7 @@ In the last step we use the assumptions made at the start of the section.
 Paying the price of an extra $n$ factor, the 
 maximal inequality~\eqref{1:5:2}
 yields a bound of the sum, that is,
-\begin{gather}
+\begin{gather*}
   \sum_{i=1}^{n}
   \,
   \E\left[\norm{A_i}^2\right]
@@ -295,7 +298,7 @@ yields a bound of the sum, that is,
   \sqrt{\,C_\pi 
     C_{\!\scriptscriptstyle B}
   }
-\end{gather}
+\end{gather*}
 \begin{assumption}
   .
 \end{assumption}
@@ -309,7 +312,7 @@ With Assumption we also get a bound on the fourth moment of
   \norm{B(X_{i})}
   $. Indeed, by the convexity of 
   $x\mapsto x^2$, the monotonicity and linearity of the expectation it holds   
-  \begin{align}
+  \begin{align*}
     \begin{split}
   \E[
   \norm{B(X_{i})}^4
@@ -351,7 +354,7 @@ With Assumption we also get a bound on the fourth moment of
   \le
   K^2 C_B
   \end{split}
-  \end{align}
+  \end{align*}
 \end{remark}
 \subsubsection*{Analysis of $v(\mathbf{S})$}
 We use the fact that 
@@ -366,7 +369,7 @@ $
   }
 $
 It holds
-\begin{gather}
+\begin{gather*}
   \sum_{i=1}^{n}
   \E[A_iA_i^\top]
   =
@@ -393,9 +396,9 @@ It holds
   \right)
   _{1\le k,l \le K}
   .
-\end{gather}
+\end{gather*}
 Thus
-\begin{align}
+\begin{align*}
   \begin{split}
   &\norm{
   \sum_{i=1}^{n}
@@ -446,9 +449,9 @@ Thus
   \right)^2
   C_\pi C_B
   \end{split}
-\end{align}
+\end{align*}
 On the other hand
-\begin{align}
+\begin{align*}
   \begin{split}
   \norm{
   \sum_{i=1}^{n}
@@ -484,18 +487,18 @@ On the other hand
   C_\pi C_B
     }
   \end{split}
-\end{align}
+\end{align*}
 It follows
-\begin{gather}
+\begin{gather*}
   v(\mathbf{S})
   \le
     \frac{K}{n}\sqrt{
   C_\pi C_B
   }
-\end{gather}
+\end{gather*}
 Thus we can apply Theorem~\ref{rmineq_rosenthal_pinelis}
 to get
-\begin{gather}
+\begin{gather*}
   \E[\norm{\mathbf{S}}_2]
   \le
   \sqrt{
@@ -520,4 +523,4 @@ to get
   \sqrt{
     \frac{K \log(K+1)}{n}
   }
-\end{gather}
+\end{gather*}
