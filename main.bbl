@@ -72,6 +72,11 @@ Aad van~der {vaart} and Jon Wellner.
   Applications}} to {{Statistics}}}.
 \newblock {Springer Science \& Business Media}, March 2013.
 
+\bibitem[Wag82]{Wagner1982}
+Clifford~H. Wagner.
+\newblock Simpson's {{Paradox}} in {{Real Life}}.
+\newblock {\em The American Statistician}, 36(1):46--48, 1982.
+
 \bibitem[WZ19]{Wang2019}
 Yixin Wang and Jos{\'e}~R. Zubizarreta.
 \newblock Minimal {{Dispersion Approximately Balancing Weights}}: {{Asymptotic

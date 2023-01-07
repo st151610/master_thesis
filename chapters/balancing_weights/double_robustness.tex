@@ -96,42 +96,53 @@ Bienaymé's formula and Chebyshev's inequality (cf. \cite[Theorem~5.14]{Klenke20
   i=1,\ldots,n
   $.
   Then we have
-  \begin{gather}
+  \begin{gather*}
     \P
     \left[ 
+      \,
       \left| 
       \frac{1}{n}
         \sum_{i=1}^{n} 
         X_i
       \right|
+      \ 
       \ge
+      \ 
       \sqrt{
-        \frac{2\sigma^2 \tau}{n}
+        \,
+        \frac{2\,\sigma^2 \tau}{n}
+        \,
       }
+      \ 
       +
+      \
       \frac{2 B \tau}{3n}
+      \,
     \right]
+    \ 
     \le
-    2
-    e^{-\tau}
+    \ 
+    \exp(1-\tau)
+    \,
     ,
     \qquad
     \tau>0\,.
-  \end{gather}
+  \end{gather*}
 \end{theorem}
 \begin{proof}
   Confer \cite[Theorem~6.12]{Steinwart2008}
   for the one-sided version. 
   The two-sided version, as stated in the above theorem, is an easy consequence. We omit the details.
 \end{proof}
-
-\todo[color=red!40, inline]{What about more refined concentration inequalities?cf Steinwart p225f}
-Deriving learning rates in this way, we make an implicit assumption.
-We assume that \textit{observed outcomes of the treated}
-follow the same distribution as
-\textit{
-marginal potential outcomes under treatment
-}.
+$
+\sqrt{2}(\sigma\lor B)\frac{1}{\sqrt{n}}
+\log(e/\tau)
+$
+\todo[color=green!40, inline]{Improve quality of presentation in order to merge this part with more cultivated sections of the thesis.}
+Deriving learning rates in this way, we call for \textit{observed outcomes of the treated}
+following the same distribution as
+~\textit{
+marginal potential outcomes under treatment.}
 In other words, we require
 \begin{gather}
   Y(1)\,|\,T=1
@@ -146,14 +157,16 @@ In other words, we require
 \end{gather}
 In practice, virtually every scenario violates this assumption.
 Compare the health of an asthmatic nonsmoker with that of an otherwise healthy smoker.
-\todo[color=green!40,inline]{Find reference to more confounded scenarios.}
   Indeed, any unbalanced external influence on both $T$ and $Y(1)$ ruins the 
 above assessment, simply by imposing 
 \begin{gather}
   \E[Y(T)\,|\, T=1]\ \neq\  \E[Y(1)]
   \,.
 \end{gather}
-\todo[color=orange!40,inline]{Formulate better transition to propensity score weighting.}
+We speak of a \textbf{confounded} scenario, that is, the unbalanced external influence is called a \textbf{confounder}. Having asthma  is a confounder when regarding the health risks of smoking.
+
+The presence of confounders, especially when overlooked, is so aggravating that the statistical literature calls it paradoxical. Indeed, the term \textit{Simpson's paradox} bears to the issue of confounding (cf.\cite{Wagner1982} for a brief discussion of Simpson's paradox and some real world examples).
+\todo[color=orange!40,inline]{What solutions were offerd to deal with confounding? Start from propensity scores.}
 Statisticians have wrestled with this issue for nearly a century.
 
 In experimental studies we usually specify treatment assignment as opposed to merely observing a unit receiving treatment. 
@@ -189,16 +202,24 @@ The next statement makes use of the propensity score.
   \begin{gather}
    \P
    \left[
+     \,
      \left| 
+     \,
    \sum_{i=1}^{n}
    w_iY_i - \E[Y(1)]
+   \,
      \right|
+     \ 
      \le
+     \ 
      \sqrt{V}
      \frac{1}{\sqrt{\tau}}
      \frac{1}{\sqrt{n}}
+     \,
    \right]
+   \ 
    \ge
+   \ 
    1-\tau\,.
   \end{gather}
 
@@ -338,6 +359,7 @@ With slight modifications in the above argument, it follows
 We omit the details.
 Invoking the weak law of large numbers finishes the proof.
 \end{proof}
+\todo[color=orange!40,inline]{Formulate improved version with Bernstein.}
 
 \todo[color=orange!40,inline]{Formulate better transition to weights with estimated propensity score.}
 We started by asking an easy question, so it is time for a more challenging one: How do we proceed in deriving learning rates if the propensity score is unknown.
