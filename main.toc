@@ -11,7 +11,7 @@
 \contentsline {chapter}{\numberline {3}Random Matrix Inequalities}{31}{chapter.3}%
 \contentsline {section}{\numberline {3.1}A Matrix Analysis Primer}{31}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Matrix Khintchin Inequality and Applications}{32}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Generalzed Inequalities by Hermitian Dilataition}{35}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Generalzed Inequalities by Hermitian Dilation}{35}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Intrinsic Dimension}{37}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Empirical Processes}{39}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Simple yet useful Calculations}{41}{chapter.5}%
