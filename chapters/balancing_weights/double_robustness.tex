@@ -49,6 +49,82 @@ Bienaymé's formula and Chebyshev's inequality (cf. \cite[Theorem~5.14]{Klenke20
   Bernsteins's inequality yields better confidence.
 \end{reflection*}
 
+\begin{theorem}
+  \emph{(Bernstein's inequality)}
+  Let
+  $
+  (\Omega,\mathcal{A},\P)
+  $ 
+  be a probability space, 
+  $
+  B>0
+  $ 
+  and
+  $
+  \sigma>0
+  $
+  be real numbers,
+  and
+  $
+  n\ge 1
+  $
+  be an integer.
+  Furthermore, 
+  let
+  $
+  X_1,\ldots,X_n
+  :
+  \Omega
+  \to
+  \R
+  $
+  be independent random variables satisfying
+  $
+  \E[X_i]=0
+  $,
+  $
+  \norm{X_i}_\infty
+  \le
+  B
+  $
+  and
+  $
+  \E[X_i^2]\le \sigma^2
+  $
+  for all 
+  $
+  i=1,\ldots,n
+  $.
+  Then we have
+  \begin{gather}
+    \P
+    \left[ 
+      \left| 
+      \frac{1}{n}
+        \sum_{i=1}^{n} 
+        X_i
+      \right|
+      \ge
+      \sqrt{
+        \frac{2\sigma^2 \tau}{n}
+      }
+      +
+      \frac{2 B \tau}{3n}
+    \right]
+    \le
+    2
+    e^{-\tau}
+    ,
+    \qquad
+    \tau>0\,.
+  \end{gather}
+\end{theorem}
+\begin{proof}
+  Confer \cite[Theorem~6.12]{Steinwart2008}
+  for the one-sided version. 
+  The two-sided version, as stated in the above theorem, is an easy consequence. We omit the details.
+\end{proof}
+
 \todo[color=red!40, inline]{What about more refined concentration inequalities?cf Steinwart p225f}
 Deriving learning rates in this way, we make an implicit assumption.
 We assume that \textit{observed outcomes of the treated}
