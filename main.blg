@@ -3,47 +3,48 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: literature.bib
+Warning--to sort, need author or key in zotero-327
 Warning--empty booktitle in Bertsekas2003
 Warning--empty publisher in Bertsekas2003
-You've used 16 entries,
+You've used 17 entries,
             2543 wiz_defined-function locations,
-            667 strings with 6870 characters,
-and the built_in function-call counts, 5606 in all, are:
-= -- 540
-> -- 249
+            670 strings with 6957 characters,
+and the built_in function-call counts, 5815 in all, are:
+= -- 561
+> -- 250
 < -- 8
 + -- 81
 - -- 78
-* -- 383
-:= -- 939
-add.period$ -- 48
-call.type$ -- 16
-change.case$ -- 87
-chr.to.int$ -- 16
-cite$ -- 18
-duplicate$ -- 244
-empty$ -- 429
+* -- 393
+:= -- 961
+add.period$ -- 50
+call.type$ -- 17
+change.case$ -- 91
+chr.to.int$ -- 17
+cite$ -- 21
+duplicate$ -- 254
+empty$ -- 456
 format.name$ -- 99
-if$ -- 1137
+if$ -- 1187
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 20
-newline$ -- 82
+newline$ -- 86
 num.names$ -- 48
-pop$ -- 106
+pop$ -- 116
 preamble$ -- 1
-purify$ -- 109
+purify$ -- 114
 quote$ -- 0
-skip$ -- 201
+skip$ -- 211
 stack$ -- 0
-substring$ -- 245
-swap$ -- 28
+substring$ -- 253
+swap$ -- 29
 text.length$ -- 8
 text.prefix$ -- 6
 top$ -- 0
-type$ -- 104
-warning$ -- 2
+type$ -- 112
+warning$ -- 3
 while$ -- 51
-width$ -- 21
-write$ -- 201
-(There were 2 warnings)
+width$ -- 22
+write$ -- 210
+(There were 3 warnings)

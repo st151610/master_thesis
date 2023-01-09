@@ -83,6 +83,10 @@ Yixin Wang and Jos{\'e}~R. Zubizarreta.
   Properties}} and {{Practical Considerations}}.
 \newblock {\em Biometrika}, page asz050, October 2019.
 
+\bibitem[zot]{zotero-327}
+Definition of {{CONFOUND}}.
+\newblock https://www.merriam-webster.com/dictionary/confound.
+
 \bibitem[ZP17]{Zhao2017a}
 Qingyuan Zhao and Daniel Percival.
 \newblock Entropy balancing is doubly robust.

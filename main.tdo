@@ -1,13 +1,13 @@
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Improve quality of presentation in order to merge this part with more cultivated sections of the thesis.}{6}{section*.3}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ What solutions were offerd to deal with confounding? Start from propensity scores.}{6}{section*.4}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ What solutions were offerd to deal with confounding? Start from propensity scores.}{7}{section*.4}%
 \contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Formulate improved version with Bernstein.}{8}{section*.5}%
 \contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Formulate better transition to weights with estimated propensity score.}{8}{section*.6}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Elaborate on assumptions. For example (iii) \cite [§2.7.1]{vaart2013} \cite [§19.9]{Vaart2000} }{8}{section*.7}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Elaborate on assumptions. For example (iii) \cite [§2.7.1]{vaart2013} \cite [§19.9]{Vaart2000} }{9}{section*.7}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of second term.}{10}{section*.9}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of third term.}{10}{section*.11}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue section with rates for right outcome model and then both models right. Do the rates improve?}{10}{section*.12}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Elaborate on assumptions. Give as a counterexample \[ f(x):= (1+\delta _{x\ge 0}) (x^2 +x\cdot \lambda ) \] }{12}{section*.13}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue with paraphrase of \cite [page 20]{Wang2019}}{14}{section*.14}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of third term.}{11}{section*.11}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue section with rates for right outcome model and then both models right. Do the rates improve?}{11}{section*.12}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Elaborate on assumptions. Give as a counterexample \[ f(x):= (1+\delta _{x\ge 0}) (x^2 +x\cdot \lambda ) \] }{13}{section*.13}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue with paraphrase of \cite [page 20]{Wang2019}}{15}{section*.14}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Solve editorial issue with ball.}{19}{section*.17}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Order results to give pretty proof.}{21}{section*.18}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Simplify proof with properties of relative interiors.}{23}{section*.19}%
