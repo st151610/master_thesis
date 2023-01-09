@@ -3,16 +3,16 @@
 \contentsline {subsection}{\numberline {1.1.1}Learning Rates of the weighted mean}{5}{subsection.1.1.1}%
 \contentsline {section}{\numberline {1.2}Error Decompositions}{12}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Application of Convex Optimization}{13}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Application of Matrix Concentration Inequalities}{15}{section.1.4}%
-\contentsline {chapter}{\numberline {2}Convex Analysis}{19}{chapter.2}%
-\contentsline {section}{\numberline {2.1}A Convex Analysis Primer}{19}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Conjugate Calculus and Fenchel-Rockafellar Theorem}{24}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Tseng Bertsekas}{27}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Random Matrix Inequalities}{31}{chapter.3}%
-\contentsline {section}{\numberline {3.1}A Matrix Analysis Primer}{31}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Matrix Khintchin Inequality and Applications}{32}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Generalzed Inequalities by Hermitian Dilation}{35}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Intrinsic Dimension}{37}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Empirical Processes}{39}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Simple yet useful Calculations}{41}{chapter.5}%
+\contentsline {section}{\numberline {1.4}Application of Matrix Concentration Inequalities}{16}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Convex Analysis}{21}{chapter.2}%
+\contentsline {section}{\numberline {2.1}A Convex Analysis Primer}{21}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Conjugate Calculus and Fenchel-Rockafellar Theorem}{26}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Tseng Bertsekas}{29}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Random Matrix Inequalities}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}A Matrix Analysis Primer}{33}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Matrix Khintchin Inequality and Applications}{34}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Generalzed Inequalities by Hermitian Dilation}{37}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Intrinsic Dimension}{39}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Empirical Processes}{41}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Simple yet useful Calculations}{43}{chapter.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

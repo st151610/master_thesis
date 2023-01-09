@@ -892,7 +892,7 @@ Also the bias of the outcome regression has to be bounded in terms of the weight
   \\
   +
   \sum_{i=1}^{n} 
-  (w_i-1/n)
+  (T_i w_i-1/n)
   (
   \E[Y(1)|X_i]
   -
@@ -989,3 +989,64 @@ The third term is bounded in terms of the weights.
   &\quad
   =\ 0
 \end{align*}
+
+\begin{align}
+  \left| 
+  \sum_{i=1}^{n} 
+  (T_i w_i-1/n)
+  (
+  \E[Y(1)|X_i]
+  -
+  B(X_i)\lambda
+  )
+  \right|
+  \le
+  2
+  \max_{i=1,\ldots,n}
+  \left| 
+  \E[Y(1)|X_i]
+  -
+  B(X_i)\lambda
+  \right|
+  \\
+  \le
+  2
+  \,
+  \text{lerning rate triple of regression}
+\end{align}
+with probability greater than $1-\tau$.
+Note, that 
+the weights sum to 1.
+Assume 
+$
+  \left| 
+  \sum_{i=1}^{n} 
+  (T_i w_i-1/n)
+  B_k(X_i)
+  \right|
+  \le \delta_k
+$
+for all $k=1,\ldots,K$ and the deltas go to zero with some rate.
+The by Cauchy-Schwarz it follows
+\begin{gather}
+  \left| 
+  \sum_{i=1}^{n} 
+  (T_i w_i-1/n)
+  B(X_i)\cdot \lambda
+  \right|
+  \le \left| 
+  \inner{(\delta_k)}{\lambda}
+  \right|
+  \le
+  \text{rate of deltas}
+  \cdot
+  \norm{\lambda}
+\end{gather}
+So we assume $\lambda\in \Theta$, where the parameter space $\Theta$ is compact or grows moderately with $K$.
+
+
+
+\begin{takeaways}
+  Each decomposition gives us more information about the asymptotic properties of the weighted mean. If both models hold we choose the faster rate of weights or regression. The true benefit is semiparametric efficiency.
+\end{takeaways}
+
