@@ -11,6 +11,12 @@ Richard~Y. Chen, Alex Gittens, and Joel~A. Tropp.
 \newblock The {{Masked Sample Covariance Estimator}}: {{An Analysis}} via
   {{Matrix Concentration Inequalities}}, June 2012.
 
+\bibitem[Hah98]{Hahn1998}
+Jinyong Hahn.
+\newblock On the {{Role}} of the {{Propensity Score}} in {{Efficient
+  Semiparametric Estimation}} of {{Average Treatment Effects}}.
+\newblock {\em Econometrica}, 66(2):315, March 1998.
+
 \bibitem[Kle20]{Klenke2020}
 Achim Klenke.
 \newblock {\em Probability {{Theory}}: {{A Comprehensive Course}}}.

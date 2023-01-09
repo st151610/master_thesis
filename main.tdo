@@ -6,18 +6,19 @@
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of second term.}{10}{section*.9}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of third term.}{11}{section*.11}%
 \contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue section with rates for right outcome model and then both models right. Do the rates improve?}{11}{section*.12}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Elaborate on assumptions. Give as a counterexample \[ f(x):= (1+\delta _{x\ge 0}) (x^2 +x\cdot \lambda ) \] }{14}{section*.13}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue with paraphrase of \cite [page 20]{Wang2019}}{16}{section*.14}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Solve editorial issue with ball.}{21}{section*.17}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Order results to give pretty proof.}{23}{section*.18}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Simplify proof with properties of relative interiors.}{25}{section*.19}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Add comment on nomenclature. What is Legendre transformation in this context?}{26}{section*.20}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Include lemma on convex conjugates of indicator functions. This should be straightforward.}{27}{section*.21}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Write example on convex conjugates of $ F(w) = \DOTSB \sum@ \slimits@ _{i=1}^{n} f(w_i) $ . See notes. }{27}{section*.22}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}{27}{section*.23}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Insert lemma in chapter 1.}{28}{section*.24}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Generalize also to take equality constraints. Write in unconstrained form to derive dual. }{29}{section*.25}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.270) }{30}{section*.26}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.80) }{30}{section*.27}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide details. See notes.}{31}{section*.28}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Apply to estimate \cite [above (A.4)]{Chen2012} to get intrinsic dimension version of Rosenthal-Pinelis inequality.}{40}{section*.29}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Introduce concept of semiparametric efficiency. For the semiparametric efficiency bound of propensity score weighting, \cite {Hahn1998} is a good reference. General introduction to semiparametric models see \cite [§25]{Vaart2000}.}{12}{section*.13}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Elaborate on assumptions. Give as a counterexample \[ f(x):= (1+\delta _{x\ge 0}) (x^2 +x\cdot \lambda ) \] }{14}{section*.14}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue with paraphrase of \cite [page 20]{Wang2019}}{16}{section*.15}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Solve editorial issue with ball.}{21}{section*.18}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Order results to give pretty proof.}{23}{section*.19}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Simplify proof with properties of relative interiors.}{25}{section*.20}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Add comment on nomenclature. What is Legendre transformation in this context?}{26}{section*.21}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Include lemma on convex conjugates of indicator functions. This should be straightforward.}{27}{section*.22}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Write example on convex conjugates of $ F(w) = \DOTSB \sum@ \slimits@ _{i=1}^{n} f(w_i) $ . See notes. }{27}{section*.23}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}{27}{section*.24}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Insert lemma in chapter 1.}{28}{section*.25}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Generalize also to take equality constraints. Write in unconstrained form to derive dual. }{29}{section*.26}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.270) }{30}{section*.27}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.80) }{30}{section*.28}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide details. See notes.}{31}{section*.29}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Apply to estimate \cite [above (A.4)]{Chen2012} to get intrinsic dimension version of Rosenthal-Pinelis inequality.}{40}{section*.30}%

@@ -6,45 +6,45 @@ Database file #1: literature.bib
 Warning--to sort, need author or key in zotero-327
 Warning--empty booktitle in Bertsekas2003
 Warning--empty publisher in Bertsekas2003
-You've used 17 entries,
+You've used 18 entries,
             2543 wiz_defined-function locations,
-            670 strings with 6957 characters,
-and the built_in function-call counts, 5815 in all, are:
-= -- 561
-> -- 250
-< -- 8
-+ -- 81
-- -- 78
-* -- 393
-:= -- 961
-add.period$ -- 50
-call.type$ -- 17
-change.case$ -- 91
-chr.to.int$ -- 17
-cite$ -- 21
-duplicate$ -- 254
-empty$ -- 456
-format.name$ -- 99
-if$ -- 1187
+            678 strings with 7126 characters,
+and the built_in function-call counts, 6124 in all, are:
+= -- 591
+> -- 258
+< -- 9
++ -- 83
+- -- 80
+* -- 417
+:= -- 1012
+add.period$ -- 53
+call.type$ -- 18
+change.case$ -- 96
+chr.to.int$ -- 18
+cite$ -- 22
+duplicate$ -- 269
+empty$ -- 482
+format.name$ -- 103
+if$ -- 1249
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 20
-newline$ -- 86
-num.names$ -- 48
-pop$ -- 116
+missing$ -- 21
+newline$ -- 91
+num.names$ -- 51
+pop$ -- 119
 preamble$ -- 1
-purify$ -- 114
+purify$ -- 120
 quote$ -- 0
-skip$ -- 211
+skip$ -- 222
 stack$ -- 0
-substring$ -- 253
-swap$ -- 29
-text.length$ -- 8
-text.prefix$ -- 6
+substring$ -- 269
+swap$ -- 30
+text.length$ -- 9
+text.prefix$ -- 7
 top$ -- 0
-type$ -- 112
+type$ -- 120
 warning$ -- 3
-while$ -- 51
-width$ -- 22
-write$ -- 210
+while$ -- 54
+width$ -- 23
+write$ -- 223
 (There were 3 warnings)
