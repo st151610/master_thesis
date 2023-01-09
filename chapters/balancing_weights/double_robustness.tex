@@ -907,3 +907,81 @@ Also the bias of the outcome regression has to be bounded in terms of the weight
 The expectation of summand in the first term is zero. Hence the convergence by wlln or more refined methods.
 The second term goes to 0 by the consistency of the outcome regression.
 The third term is bounded in terms of the weights.
+
+\begin{align*}
+  &\E[
+    w T
+    (
+      Y(T) - \E[Y(1)|X]
+    )
+  ]
+  \\
+  &
+  \quad 
+  =
+  \ 
+  \E
+  [
+  \,
+    T
+    \cdot
+    \E[
+    \,
+    w
+    \,
+    |
+    \,
+    T,X
+    \,
+    ]
+    \cdot
+    (
+    \,
+      \E[\,Y(T)\,|\,T,X\,]
+      \ 
+      -
+      \ 
+      \E[\,Y(1)\,|\,T,X\,]
+      \,
+    )
+  ]
+  \\
+  &
+  \quad 
+  =
+  \ 
+  \E
+  [
+  \,
+    \E[
+    \,
+    w
+    \,
+    |
+    \,
+    T=1,X
+    \,
+    ]
+    \cdot
+    (
+    \,
+      \E[\,Y(1)\,|\,T=1,X\,]
+      \ 
+      -
+      \ 
+      \E[\,Y(1)\,|\,T=1,X\,]
+      \,
+    )
+    \,
+    |\,T=1
+    \,
+  ]
+  \\
+  &\qquad
+  \ 
+  \cdot
+  \P[T=1]
+  \\
+  &\quad
+  =\ 0
+\end{align*}
