@@ -881,3 +881,29 @@ The confidence $\gamma_\tau/\tau$ is substandard. Improvements may involve Berns
 \end{reflection*}
 \todo[color=red!40, inline]{Continue section with rates for right outcome model and then both models right. Do the rates improve?}
 
+Next we need to assume that the weights and outcome are independent given treatment and covariates.
+Also the bias of the outcome regression has to be bounded in terms of the weights. We get the following error decomposition
+\begin{align}
+  \frac{1}{n}
+  \sum_{i=1}^{n}
+  nw_i T_i (Y_i - \E[Y(1)|X_i])
+  +
+  (\E[Y(1)|X_i]-\E[Y(1)])
+  \\
+  +
+  \sum_{i=1}^{n} 
+  (w_i-1/n)
+  (
+  \E[Y(1)|X_i]
+  -
+  B(X_i)\lambda
+  )
+  \\
+  +
+  \sum_{i=1}^{n} 
+  (w_i-1/n)
+  B(X_i)\lambda
+\end{align}
+The expectation of summand in the first term is zero. Hence the convergence by wlln or more refined methods.
+The second term goes to 0 by the consistency of the outcome regression.
+The third term is bounded in terms of the weights.
