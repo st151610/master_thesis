@@ -592,87 +592,76 @@ C_\P
 
 \begin{proof}
   We consider the following error decomposition.
-\begin{align}
+\begin{align*}
   \begin{split}
   &\sum_{i=1}^{n}
   \,
-  w_i\,T_i\,Y_i
+  w_i T_i\,Y_i
   \ 
   -
   \ 
-  \E[Y(1)]
+  \E[Y\!(1)]
   \\
-  &\quad=
+  &\qquad=
     \ 
     \frac{1}{n}
-    \,
   \sum_{i=1}^{n}
   \,
     \frac{T_i}{\pi(X_i)}
     \,
   \left(
-    \,
     Y_i
-    \ 
     -
-    \ 
-  \E[Y(1)]
+  \E[Y\!(1)]
   \,
   \right)
   \ +
   \ 
   \sum_{i=1}^{n}
   \,
+  T_i
   \left( 
     w_i
-    \ 
     -
-    \ 
-    \frac{1}{n}\,
-    \frac{1}{\pi(X_i)}
+    \frac{1}{n\,\pi(X_i)}
+    \,
   \right)
   \,
-  T_i
-  \,
   Y_i
-  \,.
   \\
   & 
-  \quad
+  \qquad
   =
   \ 
-   \frac{1}{n}
-    \,
+\frac{1}{n}
   \sum_{i=1}^{n}
   \,
     \frac{T_i}{\pi(X_i)}
     \,
   \left(
-    \,
     Y_i
-    \ 
     -
-    \ 
-  \E[Y(1)]
+  \E[Y\!(1)]
   \,
   \right)
-  \ 
+  \\
+  &\hspace{60mm}
   +
   \ 
   \frac{1}{\sqrt{n}}
   \,
   \G_n f_w
-  \ 
+  \\
+  &\hspace{83mm}
   -
   \ 
   \E[
-  \,
   f_w(T,X,Y)
   \,
   ]
   \,.
   \end{split}
-\end{align}
+\end{align*}
 We already bounded the first term. 
 To bound the remaining terms we will use the learning rates of $w$.
 To this end, we employ maximal inequalities for empirical processes to bound the second term.
@@ -705,7 +694,9 @@ It holds by maximal inequalities
   \le
   \ 
   \int_0^{\delta{n,\tau}}
+  \!\!\!
   \sqrt{
+    \,
     \log 
     N_{[\,]}
     \left( 
@@ -716,6 +707,7 @@ It holds by maximal inequalities
     L_2(\P)
     \right)
   }
+  \,
   d\varepsilon
   \\
   &
@@ -723,9 +715,11 @@ It holds by maximal inequalities
   \le
   \ 
   \int_0^{\delta_{n,\tau}}
+  \!
   \left( 
     \frac{\delta_{n,\tau}}{\varepsilon}
   \right)^{1/(2k)}
+  \!
   d \varepsilon
   \ 
   =
@@ -875,13 +869,16 @@ Selecting the worst instance of learning rate, confidence and uniform constant c
   Why did we use empirical process theory instead of conventional concentration inequalities?
   The weights $w$ are random, so $f_w$ is random as well. 
 
-
 Best is $\gamma_\tau=1$, when we recover the learning rate of the estimator, that is, $(r_n)$.
 The confidence $\gamma_\tau/\tau$ is substandard. Improvements may involve Bernstein like concentration for empirical processes (cf. \cite[Section~2.14.2]{vaart2013})
 \end{reflection*}
 \todo[color=red!40, inline]{Continue section with rates for right outcome model and then both models right. Do the rates improve?}
 
-Next we need to assume that the weights and outcome are independent given treatment and covariates.
+Next we need to assume that the weights and outcome are independent given treatment and covariates, that is,
+\begin{gather}
+  Y\!(1)\perp\!\!\!\perp w\ |\ X,T 
+  \,.
+\end{gather}
 Also the bias of the outcome regression has to be bounded in terms of the weights. We get the following error decomposition
 \begin{align}
   \frac{1}{n}
@@ -909,86 +906,36 @@ The second term goes to 0 by the consistency of the outcome regression.
 The third term is bounded in terms of the weights.
 
 \begin{align*}
-  &\E[
-  \,
-    T\, w
+  \E[
+    Tw
     \cdot
     (
-    \,
-      Y(T)\  -\  \E[\,Y(1)\,|\,X\,]
+      Y\!(T) - \E[Y\!(1)\,|\,X]
       \,
     )
   ]
-  \\
-  &
-  \quad 
+  \ 
   =
   \ 
   \E
   [
-  \,
     T
     \cdot
     \E[
-    \,
     w
     \,
     |
     \,
     T,X
-    \,
     ]
     \cdot
-    (
-    \,
-      \E[\,Y(T)\,|\,T,X\,]
-      \ 
-      -
-      \ 
-      \E[\,Y(1)\,|\,T,X\,]
+      \E[Y\!(T)-Y\!(1)\,|\,T,X]
       \,
-    )
   ]
-  \\
-  &
-  \quad 
-  =
   \ 
-  \E
-  [
-  \,
-    \E[
-    \,
-    w
-    \,
-    |
-    \,
-    T=1,X
-    \,
-    ]
-    \cdot
-    (
-    \,
-      \E[\,Y(1)\,|\,T=1,X\,]
-      \ 
-      -
-      \ 
-      \E[\,Y(1)\,|\,T=1,X\,]
-      \,
-    )
-    \,
-    |\,T=1
-    \,
-  ]
-  \\
-  &\qquad
-  \ 
-  \cdot
-  \P[\,T=1\,]
-  \\
-  &\quad
   =\ 0
 \end{align*}
+The first equality stems from the conditional independence assumptions. The resulting term vanishes because the difference $Y\!(T)-Y\!(1)$ does so after conditioning on $T=1$.
 
 \begin{align}
   \left| 
@@ -1048,6 +995,6 @@ So we assume $\lambda\in \Theta$, where the parameter space $\Theta$ is compact 
 \todo[color=red!40, inline]{Introduce concept of semiparametric efficiency. For the semiparametric efficiency bound of propensity score weighting, \cite{Hahn1998} is a good reference. General introduction to semiparametric models see \cite[§25]{Vaart2000}.}
 
 \begin{takeaways}
-  Each decomposition gives us more information about the asymptotic properties of the weighted mean. Each case has consistency but may differ in speed of convergence. This is also a matter of technique. If both models hold we choose the faster rate of weights or regression. The true benefit to recover semiparametric efficiency from propensity score weighting with the true PS.
+  Each error decomposition furnishes information about the asymptotic properties of the weighted mean. We always get consistency, but learning rates may differ. Obtaining good confidence depends on employing more refined concentration inequalities like Bernstein's inequality. If both treatment and outcome model are well specified we reach the semiparametric efficiency bound of weighting with the true inverse propensity score.
 \end{takeaways}
 
