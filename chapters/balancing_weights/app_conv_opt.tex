@@ -56,6 +56,9 @@
       $
   \end{enumerate}
 \end{assumption}
+Assumption (i),(ii) and (iv) are from \cite{Tseng1991}. See corresponding section in the thesis.
+Assumption (iii) and (v) is needed to get a meaningful analytic expression for the weights after establishing the properties pointed out in \cite{Tseng1991}.
+
 \todo[color=red!40, inline]{Elaborate on assumptions. Give as a counterexample 
   \[
   f(x):=
@@ -66,6 +69,7 @@
 }
 
 We consider the following optimization problem.
+\todo[color=orange!40, inline]{Consider Non-negativity constraints only for $f(x)=x\log x$. Incorporating Non-negativity constraint for general $f$ is complicated or impossible. Maybe find counterexample.}
 \begin{problem}
   \begin{gather*}
     \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
