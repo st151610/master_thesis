@@ -1240,6 +1240,10 @@ INPUT ./chapters/random_matrix_ineq/intrinsic_dimension.tex
 INPUT chapters/random_matrix_ineq/intrinsic_dimension.tex
 INPUT ./chapters/random_matrix_ineq/intrinsic_dimension.tex
 INPUT chapters/random_matrix_ineq/intrinsic_dimension.tex
+INPUT ./chapters/empirical_processes/ep_primer.tex
+INPUT chapters/empirical_processes/ep_primer.tex
+INPUT ./chapters/empirical_processes/ep_primer.tex
+INPUT chapters/empirical_processes/ep_primer.tex
 INPUT ./chapters/simple_yet_useful.tex
 INPUT chapters/simple_yet_useful.tex
 INPUT ./chapters/simple_yet_useful.tex

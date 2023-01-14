@@ -1,162 +1,3 @@
-\todo[color=red!40,inline]{Add outer probability calculus. \cite{vaart2013} p.6}
-
-Let 
-$
-(
-\mathbb{D}
-,
-d
-)
-$
-be a metric space, and let 
-$
-(\P_n)_{n\in \mathbb{N}}
-  \P
-$
-be (Borel) probability measures
-on
-$
-(
-\mathbb{D}
-,
-\mathcal{D}
-)
-,
-$
-where 
-$\mathcal{D}$
-is the Borel $\sigma$-algebra on $\mathbb{D},$
-the smallest $\sigma$-algebra
-containing all open sets.
-Then the sequence 
-$\P_n$
-\textbf{converges weakly}
-to 
-$\P,$
-which we denote as $\P_n \rightsquigarrow \P,$
-if and only if 
-\begin{gather}
-  \int_\mathbb{D}
-  f
-  \text{d}
-  \P_n
-  \to
-  \int_\mathbb{D}
-  f
-  \text{d}
-  \P
-  \qquad
-  \text{for all}
-  \ 
-  f
-  \in
-  C_b(\mathbb{D})
-  .
-\end{gather}
-Here 
-$
-  C_b(\mathbb{D})
-$
-denotes the set of all bounded, continuous, real functions on $\mathbb{D}.$
-Equivalently, if 
-$X_n$ and $X$
-are 
-$\mathbb{D}$-valued
-random variables with distribution 
-$\P_n$ and $\P$
-respectively, then 
-$X_n \to X$
-if and only if 
-\begin{gather}
-  \E[f(X_n)]
-  \to
-  \E[f(X)]
-  \qquad
-  \text{for all}
-  \ 
-  f
-  \in
-  C_b(\mathbb{D})
-  .
-\end{gather}
-
-This definitions yield the classical theory of weak convergence.
-For a modern treatment see \cite{Klenke2020}.
-
-The classical theory requires that 
-$\P_n$
-is defined, for each $n\in \mathbb{N},$
-on the Borel $\sigma$-algebra $\mathcal{D},$
-or, equivalently, that $X_n$ is a Borel measurable map for each $n\in \mathbb{N}.$
-If 
-$
-(
-\Omega_n,
-\mathcal{A}_n,
-\P_n
-)
-$
-are the underlying probability spaces on which the maps 
-$X_n$
-are defined, this means that
-$X_n^{-1}(D)\in \mathcal{A}_n$
-for every Borel set $D \in \mathcal{D}.$
-This required measurability usually holds when $\mathbb{D}$
-is a separable metric space such as $\R^k$
-or $C([0,1])$ with the supremum metric.
-
-However, this apparently modest requirement can and does easily fail when the metric space $\mathbb{D}$ is not separable.
-
-\begin{example}
-  \emph{\cite[Problem~1.7.3]{vaart2013}}
-  Let $\mathbb{D}=D([0,1])$ be the \textbf{Skorohod space} of all right-continuous functions on $[0,1]$
-  with left limits endowed with the metric induced by the supremum norm.
-  Define 
-  $
-    X:
-    [0,1]
-    \to
-    \mathbb{D}
-    ,\ 
-    \omega
-    \mapsto
-    \mathbf{1}_{[\omega,1]}
-    .
-  $
-  If we equip $[0,1]$ with the Borel $\sigma$-algebra 
-  $\mathcal{B}([0,1])$, then 
-  $X$ is not measurable. To see this, let $B_s$ be the open ball of radius $1/2$ in $\mathbb{D}$ around the function $\mathbf{1}_{[s,1]}.$
-  Now $X(\omega)\in B_s$
-  if and only if $\omega=s.$ Indeed, if $\omega\neq s$ there exists an $x$ between $\omega$ and $s$ such that the difference of the indicator functions is 1 at $x$. Conversely, if the distance is greater than
-  $1/2$ at a point $x\in [0,1]$, it is because $x$ lies between $\omega$ and $s$ and the indicator functions have difference 1.
-  Since arbitrary (even uncountable) unions of open sets are open,
-  we get for every $S\subseteq [0,1]$ the open set 
-  $
-  G
-  :=
-  \bigcup_{s\in S}
-    B_s
-    \in \mathcal{D}
-    .
-  $
-  It follows
-  $
-  X^{-1}(G)=S 
-  \ 
-  \text{for all}
-  \ 
-  S \subseteq [0,1]
-  .
-  $
-  Since not all subsets of $[0,1]$ are measurable, we have
-  $
-  X^{-1}(\mathcal{D})\nsubseteq \mathcal{B}([0,1])
-.
-$
-But then $X$ is not measurable. The $\sigma$-algebra $\mathcal{D}$ is to large.
-\end{example}
-
-
 
 Let 
 $
@@ -166,18 +7,16 @@ $
     \P
   \right)
 $
-be a probability space
-and
+be a probability space,
 $
   \left( 
     \mathcal{X},
     \Sigma
   \right)
 $
-a measurable space.
-Let 
+a measurable space, and 
 $
-  X_j
+  X_1,\ldots,X_n
   :
   \left( 
     \Omega,
@@ -189,13 +28,26 @@ $
     \mathcal{X},
     \Sigma
   \right)
-  ,
-  j=1,\ldots, n
-$ be independent and identically-distributed (i.i.d.)
+$
+a sample 
+of independent and identically-distributed
 random variables
-with probability distribution $\P_X$ 
-and
-$\mathcal{F}$ a family of measurable functions
+with probability distribution $\P_{\!X}$.
+Throughout this section we consider the~\textbf{empirical~measure}
+of this sample, that is, the discrete random measure
+\begin{gather}
+  \P_{\!n}:\Sigma \to [0,1]
+  ,
+  \quad
+  C\mapsto 
+  \frac{1}{n}
+  \#\left\{ 
+1\le i \le n \colon
+X_i \in C
+  \right\}
+  \,.
+\end{gather}
+A family $\mathcal{F}$ of measurable functions 
 $
   f:
   \left( 
@@ -207,38 +59,47 @@ $
     \R,
     \mathcal{B}(\R)
   \right)
-$.
-Consider the map
+$
+induces a stochastic process by
+\begin{gather}
+  f\mapsto \P_{\!n} f\,,
+\end{gather}
+where for a measure $Q$ on 
+$
+  \left( 
+    \mathcal{X},
+    \Sigma
+  \right)
+$
+we denote $Q f:= \int_\mathcal{X}f\, Q(dx)$.
+In this way we define the $\mathcal{F}\!$-indexed \textbf{empirical process} $\G_n$ by
 \begin{gather}
   f
+  \ 
   \mapsto
-  G_n f
+  \ 
+  \G_n f 
+  \ 
   :=
+  \ 
   \sqrt{n}
-  \left( 
-    \frac{1}{n}
-    \sum_{i = 1}^{n}
-      f(X_i)
+  (\P_{\!n}-\P)f 
+  \ 
+  =
+  \ 
+  \frac{1}{\sqrt{n}}
+  \sum_{i=1}^{n} 
+  (
+    f(X_i)
     -
-    \P_X f
-  \right),
+    \P f
+  )
+  \,.
 \end{gather}
-where
-$
-  \P_X f 
-  :=
-  \int_\mathcal{X} f \text{d}\P_X.
-$
-We call 
-$
-  \left( 
-    G_n f
-  \right)_{f \in \mathcal{F}}
-$
-the empirical process indexed by $\mathcal{F}$.
-Furthermore
+The purpose of this notation is to abstract the behaviour of $\G_n$ ranging over $\mathcal{F}$.
+Conforming with this integral viewpoint, we define the (random) norm
 \begin{gather}
-  \norm{G_n f}_\mathcal{F}
+  \norm{\G_n}_\mathcal{F}
   :=
   \sup_
         { f \in \mathcal{F}}
@@ -247,5 +108,50 @@ Furthermore
         \right|
         .
 \end{gather}
+We stress that 
+$
+  \norm{\G_n}_\mathcal{F}
+$
+often ceases to be measurable, even in simple situations~\cite[page 3]{vaart2013}.
+To deal with this, we introduce the notion of \textbf{outer expectation} $\E^*$, that is,
+\begin{gather}
+  \E^*[T]
+  \ 
+  :=
+  \ 
+    \inf
+  \left\{ 
+    \E[U]
+  \ 
+  \lvert
+  \ 
+    U\ge T,
+    \ 
+    U:
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+  \to 
+  \left( 
+    \overline{\R},
+    \mathcal{B}(\overline{\R})
+  \right)
+  \text{measurable and}
+  \ 
+  \E[U]<\infty
+  \right\}
+  \,.
+\end{gather}
+In our application the technical difficulties halt at this point, because we only consider $T$ with $\E^*[T]<\infty$. Then there exists a smallest measurable function $T^*$ dominating $T$ with
+$\E^*[T]=\E[T^*]$. Thus, we may assume $T$ to be measurable in this regard.
+
+In our application we need concentration inequalities for 
+$
+  \norm{\G_n}_\mathcal{F}
+$.
+One easy way is to use maximal inequalities for the expectation together with Markov's inequality. There are also Bernstein-like inequalities for empirical processes.
+
 
 

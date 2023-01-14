@@ -16,7 +16,7 @@
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Simplify proof with properties of relative interiors.}{25}{section*.22}%
 \contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Add comment on nomenclature. What is Legendre transformation in this context?}{26}{section*.23}%
 \contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Include lemma on convex conjugates of indicator functions. This should be straightforward.}{26}{section*.24}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Streamline example. Provide explanaition in the end. }{26}{section*.25}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Streamline example. Provide explanaition in the end. Confer \cite [bottom p.337]{Rockafellar1970} }{26}{section*.25}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}{28}{section*.26}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Insert lemma in chapter 1.}{29}{section*.27}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Generalize also to take equality constraints. Write in unconstrained form to derive dual. }{30}{section*.28}%
