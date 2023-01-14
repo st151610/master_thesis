@@ -163,6 +163,190 @@ See notes.
 }
 
 
+\begin{example*}
+  Let 
+  $
+    f:\R\to \overline{\R}
+  $
+  be a proper convex function, that is, 
+  $
+    \mathrm{dom}\,f
+    \neq
+    \emptyset
+  $
+  and $f$ is convex.
+  In steps we apply the conjugate chain and sum rule, together with mathematical induction,
+  to prove the conjugate relationship 
+  \begin{align*}
+    &S_f:\R^n \to \overline{\R},
+    \qquad
+    (x_1,\ldots,x_n)
+    \mapsto
+    \sum_{i=1}^{n} 
+    f(x_i)
+    ,
+    \\
+    &S_f^*:\R^n \to \overline{\R},
+    \qquad
+    (x^*_1,\ldots,x^*_n)
+    \mapsto
+    \sum_{i=1}^{n} 
+    f^*(x^*_i)
+    \,.
+  \end{align*}
+  This relationship is very natural and the ensuing calculations serve to confirm our intuition.
+
+  First, we work in the projections on the coordinates. 
+  For the $i$-th coordinate, where $i=1,\ldots,n$, this is 
+  \begin{gather}
+    p_i:\R^n\to \R
+    ,
+    \quad
+    (x_1,\ldots,x_n)
+    \mapsto
+    x_i\,.
+  \end{gather}
+  All projections 
+  $p_i$
+  are linear function with matrix representation
+  $
+    e_i^\top
+  $,
+  where $e_i$ is $i$-the coordinate vector.
+  The adjoint of $p_i$ is therefore
+  \begin{gather}
+    p^*_i:\R\to \R^n
+    ,
+    \quad
+    x
+    \mapsto
+    e_i\cdot x
+    \,.
+  \end{gather}
+  For the inverse image of the adjoint of $p_i$ it holds
+  \begin{gather}
+    (p_i^*)^{-1}
+    \left\{ 
+    (x_1^*,\ldots,x_n^*)
+    \right\}
+    \ 
+    =
+    \ 
+    \begin{cases}
+      \left\{ x_i^* \right\},
+      \quad
+      &\text{if}\ 
+      x_j^*=0\ \text{for all}\ j\neq i\,,
+      \\
+      \ \ \emptyset
+      \quad
+      &\text{else.}
+    \end{cases}
+  \end{gather}
+  Throughout this example we use the asterisk character $^*$ somewhat inconsistently. 
+  Note that $f^*$ is the convex conjugate 
+  of the function $f$ and $p_i^*$ is the adjoint linear function of the projection on the $i$-th coordinate. Likewise, we denote dual variables, that is, the arguments of convex conjugates, as $x^*$.
+
+  Next, we employ the conjugate chain rule to establish the conjugate relationship 
+  \begin{align*}
+    f_i&:\R^n\to \overline{\R}
+    ,
+    \quad
+    (x_1,\ldots,x_n)\mapsto x_i \mapsto f(x_i)
+    \,,
+    \\
+    f^*_i&:\R^n\to \overline{\R}
+    ,
+    \quad
+    (x^*_1,\ldots,x^*_n)\mapsto 
+    \begin{cases}
+      f^*(x_i^*),
+      \quad
+      &\text{if}\ 
+      x_j^*=0\ \text{for all}\ j\neq i\,,
+      \\
+      \infty
+      \quad
+      &\text{else.}
+    \end{cases}
+  \end{align*}
+  Note, that 
+  $
+    f_i
+    =
+    (f\circ p_i)
+  $
+  and
+  $
+    f^*_i
+    =
+    (f\circ p_i)^*
+  $.
+  Since 
+  $
+    \mathrm{Im}\,p_i=\R
+  $
+  and 
+  $
+    \mathrm{dom}\, f
+    \neq
+    \emptyset
+  $,
+  it holds
+  $
+    \mathrm{Im}\, p_i
+    \cap
+    \mathrm{ri}(
+    \mathrm{dom}\, f
+    )
+    \neq
+    \emptyset
+  $.
+  Then $f$ and $p_i$ conform with the demands of the conjugate chain rule.
+  It follows
+  \begin{align*}
+    &f_i^*
+    (x^*_1,\ldots,x^*_n) 
+    \ 
+    =
+    \ 
+    (f\circ p_i)^*
+    (x^*_1,\ldots,x^*_n) 
+    \ =
+    \ 
+    \inf
+    \left\{ 
+    f^*(y)
+    \ 
+    |
+    \ 
+    y\in 
+    (p_i^*)^{-1}
+    \left\{ 
+    (x_1^*,\ldots,x_n^*)
+    \right\}
+    \right\}
+    \\
+    &\quad=
+    \ 
+    \begin{cases}
+      f^*(x_i^*),
+      \quad
+      &\text{if}\ 
+      x_j^*=0\ \text{for all}\ j\neq i\,,
+      \\
+      \infty
+      \quad
+      &\text{else,}
+    \end{cases}
+  \end{align*}
+  where we keep to the convention $\inf\emptyset=\infty$.
+\end{example*}
+
+
+
+
+
 
 \todo[color=green!40,inline]{Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}
 Given 
