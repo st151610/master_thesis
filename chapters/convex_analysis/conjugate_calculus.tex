@@ -150,16 +150,8 @@ does not have to be convex. On the other hand, the convex conjugate is always co
 
 \todo[color=orange!40,inline]{Include lemma on convex conjugates of indicator functions. This should be straightforward.}
 
-\todo[color=red!40,inline]{
-Write example on convex conjugates of
-$
-F(w)
-=
-\sum_{i=1}^{n} 
-f(w_i)
-$
-.
-See notes.
+\todo[color=orange!40,inline]{
+  Streamline example. Provide explanaition in the end.
 }
 
 
@@ -178,7 +170,7 @@ See notes.
   In steps we apply the conjugate chain and sum rule, together with mathematical induction,
   to prove the conjugate relationship 
   \begin{align*}
-    &S_f:\R^n \to \overline{\R},
+    &S_{f,n}:\R^n \to \overline{\R},
     \qquad
     (x_1,\ldots,x_n)
     \mapsto
@@ -186,7 +178,7 @@ See notes.
     f(x_i)
     ,
     \\
-    &S_f^*:\R^n \to \overline{\R},
+    &S_{f,n}^*:\R^n \to \overline{\R},
     \qquad
     (x^*_1,\ldots,x^*_n)
     \mapsto
@@ -252,7 +244,8 @@ See notes.
     f_i&:\R^n\to \overline{\R}
     ,
     \quad
-    (x_1,\ldots,x_n)\mapsto x_i \mapsto f(x_i)
+    (x_1,\ldots,x_n)
+    \mapsto x_i \mapsto f(x_i)
     \,,
     \\
     f^*_i&:\R^n\to \overline{\R}
@@ -341,6 +334,142 @@ See notes.
     \end{cases}
   \end{align*}
   where we keep to the convention $\inf\emptyset=\infty$.
+
+  Next, note that for $n=1$ we arrive at the result. Thus, for some $n\in \mathbb{N}$ it holds
+  $
+  \left( 
+    S_{f,n}
+  \right)
+  ^*
+  =
+    S_{f,n}^*
+  $.
+  In order to apply the conjugate sum rule to 
+  $
+    S_{f,n}
+  $
+  and
+  $
+    f_{n+1}
+  $
+  we note that
+  \begin{align*}
+    \mathrm{dom}\, f_i
+    &
+    \ =\ 
+    \left\{ 
+      (x_1,\ldots,x_{n+1})
+      \in \R^{n+1}
+      :
+      x_i\in \mathrm{dom}\,f
+    \right\}
+    \ 
+    \neq 
+    \ 
+    \emptyset
+    \qquad
+    \text{for all}
+    \ 
+    i=1,\ldots,n+1
+    \,,
+    \\
+    \bigcap_{i=1}^{n+1}
+    \mathrm{dom}\, f_i
+    &
+    \ =\ 
+    \left\{ 
+      (x_1,\ldots,x_{n+1})
+      \in \R^{n+1}
+      :
+      x_i\in \mathrm{dom}\,f
+      \ 
+    \text{for all}
+    \ 
+    i=1,\ldots,n+1
+    \right\}
+    \ 
+    \neq 
+    \ 
+    \emptyset
+    \,,
+  \end{align*}
+  and
+\begin{align*}
+  &
+  \mathrm{ri}\left( 
+    \mathrm{dom}\,S_{f,n}
+  \right)
+  \ 
+  \cap
+  \ 
+  \mathrm{ri}\left( 
+    \mathrm{dom}\,f_{n+1}
+  \right)
+  \\
+  &
+  \hspace{25mm}
+  =
+  \ 
+  \mathrm{ri}\left( 
+    \mathrm{dom}\,S_{f,n}
+  \ 
+  \cap
+  \ 
+    \mathrm{dom}\,f_{n+1}
+  \right)
+  \ 
+  =
+  \ 
+  \mathrm{ri}
+  \left( 
+    \bigcap_{i=1}^{n+1}
+    \mathrm{dom}\, f_i
+  \right)
+  \ 
+  \neq
+  \ 
+  \emptyset
+  \,.
+\end{align*}
+By the conjugate sum rule it follows
+\begin{align*}
+  (
+  S_{f,n+1}
+  )^*
+  (x_1^*,\ldots,x_{n+1}^*)
+  =
+  (
+  S_{f,n}
+  +
+  f_{n+1}
+  )^*
+  (x_1^*,\ldots,x_{n+1}^*)
+  =
+  (
+  (
+  S_{f,n}
+  )
+  ^*
+  \square
+  f_{n+1}^*
+  )
+  (x_1^*,\ldots,x_{n+1}^*)
+  \\
+  (
+  f_1^*
+  \square\cdots \square
+  f_{n+1}^*
+  )
+  (x_1^*,\ldots,x_{n+1}^*)
+  =
+  \sum_{i=1}^{n+1} 
+  f_{i}^*
+  (x_{i}^*)
+  =
+  S^*_{f,n+1}
+  (x_1^*,\ldots,x_{n+1}^*)
+  \,.
+\end{align*}
 \end{example*}
 
 
