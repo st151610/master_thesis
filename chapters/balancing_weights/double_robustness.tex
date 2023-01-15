@@ -12,8 +12,8 @@ What is the speed of convergence in the weak law of large numbers?
 The next statement gives a clear-cut answer:
 The arithmetic mean of independent, identically distributed, square-integrable random variables 
 learns with rate $n^{-1/2}$.
-Furthermore, the statement is easy to prove using
-Bienaymé's formula and Chebyshev's inequality (cf. \cite[Theorem~5.14]{Klenke2020}).
+Furthermore, using
+Bienaymé's formula and Chebyshev's inequality, the statement is easy to prove~(cf. \cite[Theorem~5.14]{Klenke2020}).
 
 
 \begin{theorem*}
@@ -156,16 +156,15 @@ In other words, we require
   \,.
 \end{gather}
 In practice, virtually every scenario violates this assumption.
-Compare the health of an asthmatic nonsmoker with that of an otherwise healthy smoker.
+Compare the health of an otherwise healthy smoker with that of an asthmatic nonsmoker.
   Indeed, any unbalanced external influence on both $T$ and $Y(1)$ ruins the 
-above assessment, simply by imposing 
+above assessment, for example, by imposing 
 \begin{gather}
   \E[Y(T)\,|\, T=1]\ \neq\  \E[Y(1)]
   \,.
 \end{gather}
-We speak of a \textbf{confounded} scenario, that is, the unbalanced external influence is called a \textbf{confounder}. Having asthma  is a confounder when regarding the health risks of smoking.
-
-
+We speak of a \textbf{confounded} scenario, that is, the unbalanced external influence is called a \textbf{confounder}. 
+When regarding the health risks of smoking, indicators of asthma, such as frequent cough or shortness of breath, are confounders.
 
 \begin{ftheorem}
   \emph{(Work in progress)}
@@ -213,8 +212,13 @@ ruin the analysis, assesment.
 
 
 \end{ftheorem}
+To encourage practicioners
+red-flag confounding in their investigation of empirical data, the statistical literature coins the term 
+\textit{Simpson's paradox}. It relates to surprising changes of effect when stratifying the data~(cf.\cite{Wagner1982} for a brief discussion of Simpson's paradox and some real world examples).
+Despite widespread acceptance of its causal nature,
+handling confounding in empirical data analysis is subject to lasting debate~\cite[§6]{pearl2009causality}.
+This indicates the complexity of the matter.
 
-The presence of confounders, especially when overlooked, is so mystifying that the statistical literature coins the term \textit{Simpson's paradox} to relate to the issue of confounding (cf.\cite{Wagner1982} for a brief discussion of Simpson's paradox and some real world examples).
 \todo[color=orange!40,inline]{What solutions were offerd to deal with confounding? Start from propensity scores.}
 Statisticians have wrestled with this issue for nearly a century.
 
