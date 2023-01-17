@@ -19,8 +19,9 @@
 \contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Streamline example. Provide explanaition in the end. Confer \cite [bottom p.337]{Rockafellar1970} }{26}{section*.25}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}{28}{section*.26}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Insert lemma in chapter 1.}{29}{section*.27}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Generalize also to take equality constraints. Write in unconstrained form to derive dual. }{30}{section*.28}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.270) }{31}{section*.29}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.80) }{31}{section*.30}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide details. See notes.}{32}{section*.31}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Apply to estimate \cite [above (A.4)]{Chen2012} to get intrinsic dimension version of Rosenthal-Pinelis inequality.}{41}{section*.32}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Adjust notation with matrix chapter. }{30}{section*.28}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ What does closed mean and does $f$ meet this condition?}{31}{section*.29}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Read first paper of tseng Bertsekas for equality constraints.}{31}{section*.30}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.80) }{31}{section*.31}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide details. See notes.}{32}{section*.32}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Apply to estimate \cite [above (A.4)]{Chen2012} to get intrinsic dimension version of Rosenthal-Pinelis inequality.}{41}{section*.33}%
