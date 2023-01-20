@@ -70,7 +70,6 @@ Assumption (iii) and (v) is needed to get a meaningful analytic expression for t
 
 We consider the following optimization problem.
 \todo[color=orange!40, inline]{Consider Non-negativity constraints only for $f(x)=x\log x$. Incorporating Non-negativity constraint for general $f$ is complicated or impossible. Maybe find counterexample.}
-\begin{problem}
   \begin{gather*}
     \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
     \qquad
@@ -78,26 +77,33 @@ We consider the following optimization problem.
   \end{gather*}
 subject to the constraints
 \begin{gather*}
-    w_i T_i \ge 0,
-    \qquad 
-    i = 1, \ldots, n,
-    \\
-  \sum_{ i = 1 }^{n}
-    w_i T_i
-  =
-  1
-  \\
+%    w_i T_i \ge 0,
+%   \qquad 
+%    i = 1, \ldots, n,
+%   \\
+%  \sum_{ i = 1 }^{n}
+%    w_i T_i
+%  =
+%  1
+%  \\
     \left| 
-      \sum_{i = 1}^{n} w_i T_i B_k(X_i)
+      \frac{1}{n} 
+      \sum_{i = 1}^{n} 
+      (
+      w_i T_i 
       - 
-      \frac{1}{n} \sum_{i = 1}^{n} B_k(X_i)
+      1
+      )
+      \cdot
+      B_k(X_i)
     \right|
+    \ 
     \le 
+    \ 
     \delta_k,
     \qquad
     k = 1, \ldots, K
 \end{gather*}
-\end{problem}
 \pagebreak
 ~\begin{ftheorem}
   Under Assumption,
@@ -107,29 +113,47 @@ subject to the constraints
     \qquad
     \frac{1}{n}
     \sum_{i = 1}^{n} 
-    nT_i 
+    T_i 
+    \cdot
     f^*
     (
       \inner{B(X_i)}{\lambda}
     )
     -
     \inner{B(X_i)}{\lambda}
+    \ 
     +
+    \ 
     \inner{\delta}{\left| \lambda \right|}
-    ,
+    \,,
   \end{gather*}
   where
-  $
-  t \mapsto
-    f^*(t)
-    =
+  \begin{gather*}
+  f^*
+  \,
+  \colon
+  \, 
+  \R
+  \ 
+  \to
+  \ 
+  \R
+  \,
+  ,
+  \qquad 
+  t 
+  \ 
+  \mapsto
+  \ 
     t\,(f^{'})^{-1}(t)
+  \ 
     -
+  \ 
     f
     \left( 
       (f^{'})^{-1}(t)
     \right)
-  $
+  \end{gather*}
   is the Legendre transformation of $f$,
   $
     B(X_i)
@@ -186,14 +210,17 @@ subject to the constraints
     \qquad
     \frac{1}{n}
     \sum_{i = 1}^{n} 
-    nT_i 
+    T_i 
+    \cdot
     f^*
     (
     \inner{Q_{\bullet i}}{\lambda}
     )
     -
     \inner{Q_{\bullet i}}{\lambda}
+    \ 
     +
+    \ 
     \inner{d}{\lambda}
   \end{gather*}
   subject to
@@ -209,9 +236,9 @@ subject to the constraints
     \mathbf{Q}
     :=
     \begin{bmatrix}
-      \mathbf{I}_n\\
-      \mathbf{B}(\mathbf{X})\\
-      -\mathbf{B}(\mathbf{X})
+     % \mathbf{I}_n\\
+     % \mathbf{B}(\mathbf{X})\\
+      \pm \, \mathbf{B}(\mathbf{X})
     \end{bmatrix}
     ,
     \qquad
@@ -227,7 +254,7 @@ subject to the constraints
     d
     :=
     \begin{bmatrix}
-      0_n\\
+      %0_n\\
       \delta \\
       \delta
     \end{bmatrix}
@@ -243,93 +270,64 @@ subject to the constraints
     \qquad
     \sum_{i = 1}^{n} T_i f(w_i)
     \\
-    w_i T_i \ge 0,
-    \qquad 
-    i = 1, \ldots, n,
-    \\
-  \sum_{ i = 1 }^{n}
-    w_i T_i
-  =
-  1
-    \\  
-      \sum_{i = 1}^{n} w_i T_i B_k(X_i)
+      \pm\,\sum_{i = 1}^{n} w_i T_i B_k(X_i)
+      \ 
       \ge
-      -\delta_k
-      + 
-      \frac{1}{n} \sum_{i = 1}^{n} B_k(X_i)
-      \quad
-      k=1,\ldots,K
-    \\  
-    -  \sum_{i = 1}^{n} w_i T_i B_k(X_i)
-      \ge
-      -\delta_k
-      - 
-      \frac{1}{n} \sum_{i = 1}^{n} B_k(X_i)
-      \quad
+      \ 
+      -n\cdot\delta_k
+      \ 
+      \pm 
+      \ 
+      \sum_{i = 1}^{n} B_k(X_i)
+      \,,
+      \qquad
       k=1,\ldots,K
     \end{gather*}
     Next we write
- \begin{gather*}
+ \begin{align*}
     \mathbf{Q}
+    &
+    \ 
     :=
+    \ 
     \begin{bmatrix}
-      \mathbf{diag}[T_1,\ldots,T_n]\\
-      \mathbf{B}(\mathbf{X})\\
-      -\mathbf{B}(\mathbf{X})
+      \pm\,\mathbf{TB}(\mathbf{X})
     \end{bmatrix}
     ,
-    \qquad
-    \mathbf{B}(\mathbf{X})
+    \\
+    \mathbf{TB}(\mathbf{X})
+    &
+    \ 
     :=
+    \ 
     \begin{bmatrix}
       T_1B(X_1), \ldots, T_nB(X_n)
     \end{bmatrix}
     ,
-    \qquad
-    \text{and}
-    \qquad
+    \\
     d
+    &
+    \ 
     :=
+    \ 
     \begin{bmatrix}
-      0_n\\
-      -\delta 
-      + \overline{B(\mathbf{X})}
-      \\
-      -\delta
-      - \overline{B(\mathbf{X})}
+      -n\cdot\delta 
+      \pm\,
+      \sum_{i = 1}^{n} B_k(X_i)
     \end{bmatrix}
-    ,
-  \end{gather*}
-  where
-  $
-       \overline{B(\mathbf{X})}
-       :=
-       [
-       \overline{B_1(\mathbf{X})}
-       ,
-       \ldots
-       ,
-       \overline{B_K(\mathbf{X})}
-       ]
-       ^\top
-  $
-and
-$
-       \overline{B_k(\mathbf{X})}
-       :=
-      \frac{1}{n} \sum_{i = 1}^{n} B_k(X_i)
-      .
-$
+    \,.
+  \end{align*}
 We get
 \begin{gather*}
     \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
     \qquad
-    \sum_{i = 1}^{n} T_i f(w_i)
+    \sum_{i = 1}^{n} T_i \cdot f(w_i)
     \\
-    \mathrm{1}_n \cdot w
-    =0
-    \\
-    \mathbf{Q}w \ge d
+    \mathbf{Q}w 
+    \ 
+    \ge
+    \ 
+    d
 \end{gather*}
 The convex conjugate is
 \begin{gather*}
@@ -347,7 +345,7 @@ $
 \ 
 T_i=0
 $
-we get the desired representation. Note that the equality constraint vanishes automatically.
+we get the desired representation. 
   \end{proof}
 
 \todo[color=red!40, inline]{Continue with paraphrase of \cite[page 20]{Wang2019}}
