@@ -263,8 +263,8 @@ subject to the constraints
 
   \end{lemma}
   \begin{proof}
-    \emph{Lemma}
-    We write the optimization problem in the form of \cite{Tseng1991}.
+    First we disentangle the box constraints.
+    To this end, we get
     \begin{gather*}
     \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
     \qquad
@@ -282,20 +282,34 @@ subject to the constraints
       \,,
       \qquad
       k=1,\ldots,K
+      \,.
     \end{gather*}
-    Next we write
- \begin{align*}
+    The corresponding matrix notation is
+ \begin{gather*}
+    \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
+    \qquad
+    \sum_{i = 1}^{n} T_i \cdot f(w_i)
+    \\
+    \mathbf{Q}w 
+    \ 
+    \ge
+    \ 
+    d
+    \,,
+\end{gather*}
+where
+\begin{align*}
     \mathbf{Q}
     &
     \ 
     :=
     \ 
     \begin{bmatrix}
-      \pm\,\mathbf{TB}(\mathbf{X})
+      \pm\,T\mathbf{B}(\mathbf{X})
     \end{bmatrix}
     ,
     \\
-    \mathbf{TB}(\mathbf{X})
+    T\mathbf{B}(\mathbf{X})
     &
     \ 
     :=
@@ -317,35 +331,62 @@ subject to the constraints
     \end{bmatrix}
     \,.
   \end{align*}
-We get
-\begin{gather*}
-    \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
-    \qquad
-    \sum_{i = 1}^{n} T_i \cdot f(w_i)
-    \\
-    \mathbf{Q}w 
-    \ 
-    \ge
-    \ 
-    d
-\end{gather*}
 The convex conjugate is
 \begin{gather*}
   \sum_{T_i=1} T_i f^*(\lambda_i)
   +
   \sum_{T_i=0} 
   \delta_{\left\{ 0 \right\}}(\lambda_i)
-  .
+  \,,
 \end{gather*}
-Since
-$
-\mathbf{Q}_{\bullet i}=\mathrm{0}_n
-\ 
-\text{if}
-\ 
-T_i=0
-$
-we get the desired representation. 
+where
+\begin{gather*}
+  \delta_{\left\{ 0 \right\}}
+  (t)
+  =
+  \begin{cases}
+    0,& \text{if}\, t=0,\\
+    \infty,& \text{else}\,.
+  \end{cases}
+\end{gather*}
+Note that
+\begin{gather*}
+  \sum_{T_i=0} 
+  \delta_{\left\{ 0 \right\}}
+  (
+  T_i \cdot \inner{B(X_i)}{\lambda}
+  )
+  =
+  0
+  \,.
+\end{gather*}
+
+The corresponding dual problem in \cite{Tseng1991} is then
+\begin{gather*}
+  \underset
+  {\lambda_1,\ldots,\lambda_{K}\ge 0}
+  {
+  \mathrm{minimize}
+  }
+  \quad
+  \sum_{i=1} 
+  ^n
+  T_i
+  \cdot
+  f^*
+  (
+  T_i \cdot\inner{B(X_i)}{\lambda}
+  )
+  -
+  \inner{B(X_i)}{\lambda}
+  \ 
+  +
+  \ 
+  n\inner{\lambda}{d}
+  \,.
+\end{gather*}
+  If we keep only the outer $T_i$ and divide by $1/n$ the problem remains the same.
+  This concludes the proof.
   \end{proof}
 
 \todo[color=red!40, inline]{Continue with paraphrase of \cite[page 20]{Wang2019}}
