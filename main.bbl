@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{MJC{\etalchar{+}}14}
+\begin{thebibliography}{GKKW02}
 
 \bibitem[BT03]{Bertsekas2003}
 Dimitri~P. Bertsekas and John~N. Tsitsiklis.
@@ -10,6 +10,12 @@ Dimitri~P. Bertsekas and John~N. Tsitsiklis.
 Richard~Y. Chen, Alex Gittens, and Joel~A. Tropp.
 \newblock The {{Masked Sample Covariance Estimator}}: {{An Analysis}} via
   {{Matrix Concentration Inequalities}}, June 2012.
+
+\bibitem[GKKW02]{Gyorfi2002}
+L{\'a}szl{\'o} Gy{\"o}rfi, Michael Kohler, Adam Krzy{\.z}ak, and Harro Walk.
+\newblock {\em A {{Distribution-Free Theory}} of {{Nonparametric Regression}}}.
+\newblock Springer {{Series}} in {{Statistics}}. {Springer}, {New York, NY},
+  2002.
 
 \bibitem[Hah98]{Hahn1998}
 Jinyong Hahn.

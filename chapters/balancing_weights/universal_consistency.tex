@@ -1,0 +1,151 @@
+We leverage (weak) universal consistency
+of partitioning estimates~\cite{Gyorfi2002}.
+To this end, we choose the basis functions as
+\begin{gather}
+  B_k(x)
+  :=
+  \frac{
+  \mathbf{1}_{X_k \in A_n(x)}
+  }{
+  \sum_{j=1}^{n} 
+  \mathbf{1}_{X_j \in A_n(x)}
+  }
+  \,,
+  \qquad
+  k=
+  1,\ldots,n
+  \,.
+\end{gather}
+The euclidian norm of 
+$
+  B(x)
+$
+is bounded by one.
+\begin{gather}
+  \norm{B(x)}^2
+  =
+  \sum_{k=1}^{n} 
+  \left( 
+  \frac{
+  \mathbf{1}_{X_k \in A_n(x)}
+  }{
+  \sum_{j=1}^{n} 
+  \mathbf{1}_{X_j \in A_n(x)}
+  }
+  \right)
+  ^2
+  \le
+  \sum_{k=1}^{n} 
+  \frac{
+  \mathbf{1}_{X_k \in A_n(x)}
+  }{
+  \sum_{j=1}^{n} 
+  \mathbf{1}_{X_j \in A_n(x)}
+  }
+  =1
+  \,.
+\end{gather}
+The oracle parameters are
+$
+  \left[ 
+    f^{'}
+    \left( 
+      \frac{1}{\pi_i}
+    \right)
+  \right] _ { i = 1,\ldots,n }
+$
+and
+$
+  \left[ 
+    Y_i(1)
+  \right] _ { i = 1,\ldots,n }
+$
+.
+It even holds
+\begin{gather}
+  \lambda ^ \dagger _ i \to 
+    f^{'}
+    \left( 
+      \frac{1}{\pi_i}
+    \right)
+\end{gather}
+in probability.
+
+ \begin{gather}
+   G(\lambda)
+   :=
+      \frac{1}{n}
+      \sum_{j = 1}^{n} 
+        f^* 
+        \left( 
+          \inner
+          {B(X_i)}
+          {\lambda}
+        \right)
+      -
+          \inner
+          {B(X_i)}
+          {\lambda}
+      +
+      \inner
+      { | \lambda | }
+      { \delta }
+ \end{gather} 
+ The consistency of 
+ $
+  \lambda ^ \dagger
+ $
+ relates to the difference being nonnegative.
+ For all 
+ $
+  \varepsilon > 0
+ $
+ it holds
+ \begin{gather}
+   \P
+   \left[ 
+     \norm
+     {
+      \lambda ^ \dagger
+      -
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+     }
+     \le
+     \varepsilon
+   \right]
+   =
+   \P
+   \left[ 
+     \inf _ { \norm{\Delta} = \varepsilon }
+     G
+     (
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+      +
+      \Delta
+     )
+     -
+     G
+     (
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+     )
+     \ge 
+     0
+   \right]
+ \end{gather}
+
+\begin{takeaways}
+  To ensure double robustness, we leverage primal and dual optimization
+  problem. The dual problem solves propensity score estimation and the 
+  primal problem the bias of the final estimate.
+  Partitioning estimates as in \cite{Gyorfi2002}. 
+\end{takeaways}
+
