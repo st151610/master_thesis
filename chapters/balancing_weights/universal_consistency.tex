@@ -696,20 +696,20 @@ with probability tending to 1.
     \infty
   $.
   Then 
-  \begin{gather}
+  \begin{gather*}
     \frac{1}{n}
     \sum_{i=1}^{n} 
     w_i
     T_i
     Y_i
-  \end{gather}
+  \end{gather*}
   is a consistent estimator for $\E[Y(1)]$,
   that is, for all 
   $
     \varepsilon > 0
   $
   it holds
-  \begin{gather}
+  \begin{gather*}
     \P
     \left[ 
       \left| 
@@ -728,10 +728,58 @@ with probability tending to 1.
     \to
     \ 
     0
-  \end{gather}
+  \end{gather*}
   for 
   $n\to \infty$.
 \end{ftheorem}
+\begin{remark}
+  The entropy 
+  \begin{gather*}
+    f \colon (0, \infty)
+    \to 
+    \R
+    \,,
+    \quad
+    x \mapsto x\log x
+  \end{gather*}
+  is a prevailing choice.
+  Then the requirement on $\pi$ is
+  \begin{gather*}
+    \E
+    [
+    (
+    \log \pi(X)
+    )
+    ^2
+    ]
+    <
+    \infty
+    \,.
+  \end{gather*}
+  This is a very weak requirement.
+  Likewise, the requirement for the variance
+  \begin{gather*}
+    f \colon 
+    \R
+    \to 
+    \R
+    \,,
+    \quad
+    x \mapsto (x-1/n)^2
+  \end{gather*}
+  is
+  \begin{gather*}
+    \E
+    [
+    1/
+    \pi(X)
+    ^2
+    ]
+    <
+    \infty
+    \,.
+  \end{gather*}
+\end{remark}
 
 \begin{takeaways}
   To ensure double robustness, we leverage primal and dual optimization
