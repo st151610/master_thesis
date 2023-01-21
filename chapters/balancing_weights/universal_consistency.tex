@@ -423,6 +423,316 @@ in probability.
    \,,
  \end{gather*}
  for $ n \to \infty $.
+ Furthermore,
+ \begin{align*}
+   \left| 
+   w_i
+   -
+   1 / \pi_i
+   \right|
+   & 
+   \ 
+   =
+   \ 
+   \left| 
+   (
+      f ^ { ' }
+   )
+   ^ {-1}
+   \inner
+   {B(X_i)}
+   { \lambda ^ \dagger }
+   -
+     (f ^ { ' }) ^ { -1 }
+     \left( 
+      f ^ { ' }
+      \left( 
+        1 / \pi _ i
+      \right)
+     \right)
+   \right|
+   %%%% 1 %%%%
+   \\
+   & 
+   \ 
+   \le
+   \ 
+   \left| 
+   (
+      f ^ { ' }
+   )
+   ^ {-1}
+   \inner
+   {B(X_i)}
+   { \lambda ^ \dagger }
+   -
+   (
+      f ^ { ' }
+   )
+   ^ {-1}
+          \inner
+          {B(X_i)}
+          {
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+          }
+   \right|
+   %%%% 1 a %%%%
+   \\
+   &
+   \qquad
+   +
+   \ 
+   \left| 
+   (
+      f ^ { ' }
+   )
+   ^ {-1}
+          \inner
+          {B(X_i)}
+          {
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+          }
+   -
+     (f ^ { ' }) ^ { -1 }
+     \left( 
+      f ^ { ' }
+      \left( 
+        1 / \pi _ i
+      \right)
+     \right)
+   \right|
+   %%%% 2 %%%%
+   \\
+   &
+   \ 
+   \le
+   \ 
+   \omega
+   \left( 
+     (f ^ { ' }) ^ { -1 }
+     ,
+     \norm{ \lambda ^ \dagger - f ^ {'} (1/\pi) }
+   \right)
+   \ 
+   +
+   \ 
+   \omega
+   \left( 
+     (f ^ { ' }) ^ { -1 }
+     ,
+     \varepsilon _ m
+   \right)
+   %%%% 3 %%%%
+   \\
+   &
+   \ 
+   \le
+   \ 
+   \omega
+   \left( 
+     (f ^ { ' }) ^ { -1 }
+     ,
+     \varepsilon _ \dagger
+   \right)
+   \ 
+   +
+   \ 
+   \omega
+   \left( 
+     (f ^ { ' }) ^ { -1 }
+     ,
+     \varepsilon _ m
+   \right)
+   %%%% 4 %%%%
+   \\
+   &
+   \ 
+   \le
+   \ 
+   \varepsilon
+ \end{align*}
+ with probability tending to 1.
+
+ Next we consider the estimate.
+\begin{align*}
+  \left| 
+    \frac{1}{n}
+    \sum_{i=1}^{n} 
+    w_i
+    T_i
+    Y_i
+    -
+    \E[Y(1)]
+  \right|
+  &
+  \ 
+  \le
+  \ 
+  \left|  
+  \frac{1}{n}
+    \sum_{i=1}^{n} 
+    (
+    w_i T_i
+    -
+    1
+    )
+    \inner
+    {B(X_i))}
+    { \mathbf{Y}(1) }
+  \right|
+  %%%% 1 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{n}
+    \sum_{i=1}^{n} 
+    (
+    w_i T_i
+    -
+    1
+    )
+    \left( 
+    \E[Y(1)| X_i]
+    -
+    \inner
+    {B(X_i))}
+    { \mathbf{Y}(1) }
+    \right)
+  \right|
+  %%%% 2 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{n}
+    \sum_{i=1}^{n} 
+    T_i
+    \cdot
+    (
+    w_i 
+    -
+    1/\pi_i
+    )
+    \left( 
+      Y_i
+    -
+    \E[Y(1)| X_i]
+    \right)
+  \right|
+  %%%% 3 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{n}
+    \sum_{i=1}^{n} 
+    T_i
+    /\pi_i
+    \left( 
+      Y_i
+    -
+    \E[Y(1)| X_i]
+    \right)
+    +
+    \left( 
+    \E[Y(1)| X_i]
+    -
+    \E[Y(1)]
+    \right)
+  \right|
+  %%%% 4 %%%%
+  \\
+  &
+  \ 
+  \le
+  \ 
+  C_Y
+  \varepsilon _ \delta
+  +
+  C_w
+  \varepsilon _ m
+  +
+  C_{\E Y}
+  \varepsilon _ w
+  +
+  \varepsilon _ {\mathrm{WLLN}}
+  %%%% 4 %%%%
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \varepsilon
+\end{align*}
+with probability tending to 1.
+\begin{ftheorem}
+  Let 
+  $Y$
+  be bounded
+  and 
+  $
+    \E
+    \left[ 
+      f ^ { ' }
+\left( 
+  1 / \pi(X)
+\right)
+^2
+    \right]
+    <
+    \infty
+  $.
+  Then 
+  \begin{gather}
+    \frac{1}{n}
+    \sum_{i=1}^{n} 
+    w_i
+    T_i
+    Y_i
+  \end{gather}
+  is a consistent estimator for $\E[Y(1)]$,
+  that is, for all 
+  $
+    \varepsilon > 0
+  $
+  it holds
+  \begin{gather}
+    \P
+    \left[ 
+      \left| 
+    \frac{1}{n}
+    \sum_{i=1}^{n} 
+    w_i
+    T_i
+    Y_i
+    -
+    \E[Y(1)]
+      \right|
+    \ge 
+    \varepsilon
+    \right]
+    \ 
+    \to
+    \ 
+    0
+  \end{gather}
+  for 
+  $n\to \infty$.
+\end{ftheorem}
+
 \begin{takeaways}
   To ensure double robustness, we leverage primal and dual optimization
   problem. The dual problem solves propensity score estimation and the 

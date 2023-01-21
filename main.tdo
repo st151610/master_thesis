@@ -1,27 +1,27 @@
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Improve quality of presentation in order to merge this part with more cultivated sections of the thesis.}{7}{section*.3}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ What solutions were offerd to deal with confounding? Start from propensity scores.}{8}{section*.4}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Formulate improved version with Bernstein.}{10}{section*.5}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Formulate better transition to weights with estimated propensity score.}{10}{section*.6}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Elaborate on assumptions. For example (iii) \cite [§2.7.1]{vaart2013} \cite [§19.9]{Vaart2000} }{10}{section*.7}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of second term.}{12}{section*.9}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of third term.}{12}{section*.11}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue section with rates for right outcome model and then both models right. Do the rates improve?}{12}{section*.12}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Introduce concept of semiparametric efficiency. For the semiparametric efficiency bound of propensity score weighting, \cite {Hahn1998} is a good reference. General introduction to semiparametric models see \cite [§25]{Vaart2000}.}{13}{section*.13}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Elaborate on assumptions. Give as a counterexample \[ f(x):= (1+\delta _{x\ge 0}) (x^2 +x\cdot \lambda ) \] }{15}{section*.14}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Consider Non-negativity constraints only for $f(x)=x\qopname \relax o{log}x$. Incorporating Non-negativity constraint for general $f$ is complicated or impossible. Maybe find counterexample.}{15}{section*.15}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue with paraphrase of \cite [page 20]{Wang2019}}{17}{section*.16}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Give explanation why simple estimates are insufficient. See notes.}{20}{section*.19}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Solve editorial issue with ball.}{21}{section*.20}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Order results to give pretty proof.}{23}{section*.21}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Simplify proof with properties of relative interiors.}{25}{section*.22}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Add comment on nomenclature. What is Legendre transformation in this context?}{26}{section*.23}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Include lemma on convex conjugates of indicator functions. This should be straightforward.}{26}{section*.24}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Streamline example. Provide explanaition in the end. Confer \cite [bottom p.337]{Rockafellar1970} }{26}{section*.25}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}{28}{section*.26}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Insert lemma in chapter 1.}{29}{section*.27}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Adjust notation with matrix chapter. }{30}{section*.28}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ What does closed mean and does $f$ meet this condition?}{31}{section*.29}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Read first paper of tseng Bertsekas for equality constraints.}{31}{section*.30}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.80) }{31}{section*.31}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide details. See notes.}{32}{section*.32}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Apply to estimate \cite [above (A.4)]{Chen2012} to get intrinsic dimension version of Rosenthal-Pinelis inequality.}{41}{section*.33}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Improve quality of presentation in order to merge this part with more cultivated sections of the thesis.}{8}{section*.3}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ What solutions were offerd to deal with confounding? Start from propensity scores.}{10}{section*.4}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Formulate improved version with Bernstein.}{11}{section*.5}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Formulate better transition to weights with estimated propensity score.}{11}{section*.6}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Elaborate on assumptions. For example (iii) \cite [§2.7.1]{vaart2013} \cite [§19.9]{Vaart2000} }{12}{section*.7}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of second term.}{13}{section*.9}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of third term.}{13}{section*.11}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue section with rates for right outcome model and then both models right. Do the rates improve?}{14}{section*.12}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Introduce concept of semiparametric efficiency. For the semiparametric efficiency bound of propensity score weighting, \cite {Hahn1998} is a good reference. General introduction to semiparametric models see \cite [§25]{Vaart2000}.}{14}{section*.13}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Elaborate on assumptions. Give as a counterexample \[ f(x):= (1+\delta _{x\ge 0}) (x^2 +x\cdot \lambda ) \] }{16}{section*.14}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Consider Non-negativity constraints only for $f(x)=x\qopname \relax o{log}x$. Incorporating Non-negativity constraint for general $f$ is complicated or impossible. Maybe find counterexample.}{16}{section*.15}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue with paraphrase of \cite [page 20]{Wang2019}}{19}{section*.16}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Give explanation why simple estimates are insufficient. See notes.}{22}{section*.19}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Solve editorial issue with ball.}{23}{section*.20}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Order results to give pretty proof.}{25}{section*.21}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Simplify proof with properties of relative interiors.}{27}{section*.22}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Add comment on nomenclature. What is Legendre transformation in this context?}{28}{section*.23}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Include lemma on convex conjugates of indicator functions. This should be straightforward.}{28}{section*.24}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Streamline example. Provide explanaition in the end. Confer \cite [bottom p.337]{Rockafellar1970} }{28}{section*.25}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}{30}{section*.26}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Insert lemma in chapter 1.}{31}{section*.27}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Adjust notation with matrix chapter. }{32}{section*.28}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ What does closed mean and does $f$ meet this condition?}{33}{section*.29}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Read first paper of tseng Bertsekas for equality constraints.}{33}{section*.30}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.80) }{33}{section*.31}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide details. See notes.}{34}{section*.32}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Apply to estimate \cite [above (A.4)]{Chen2012} to get intrinsic dimension version of Rosenthal-Pinelis inequality.}{43}{section*.33}%
