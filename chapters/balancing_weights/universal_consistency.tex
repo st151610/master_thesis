@@ -71,11 +71,16 @@ It even holds
 \end{gather}
 in probability.
 
- \begin{gather}
+ \begin{align*}
    G(\lambda)
+   &
+   \ 
    :=
+   \ 
       \frac{1}{n}
       \sum_{j = 1}^{n} 
+        T_i
+        \cdot
         f^* 
         \left( 
           \inner
@@ -90,7 +95,17 @@ in probability.
       \inner
       { | \lambda | }
       { \delta }
- \end{gather} 
+      \\
+   &
+   \ 
+   =:
+   \ 
+      L( \lambda )
+      +
+      \inner
+      { | \lambda | }
+      { \delta }
+ \end{align*} 
  The consistency of 
  $
   \lambda ^ \dagger
@@ -140,7 +155,191 @@ in probability.
      \ge 
      0
    \right]
+   \,.
  \end{gather}
+ The term on the right-hand side.
+ \begin{align*}
+   &
+     G
+     (
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+      +
+      \Delta
+     )
+     \ 
+     -
+     \ 
+     G
+     (
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+     )
+     %%%%%%%%%%%%% 1 %%%%%%%%%%%%%%
+     \\
+     &
+     \quad
+     \ge
+     \ 
+     \inner
+     {
+     \nabla 
+     L
+     (
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+     )
+     }
+     {
+     \Delta
+     }
+     \ 
+     +
+     \ 
+     \inner
+     {
+      | 
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+      +
+      \Delta
+     |
+     \ 
+      -
+     \ 
+     | 
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+     |
+     }
+     { \delta }
+     %%%% 2 %%%%
+     \\
+     &
+     \quad
+     \ge
+     \ 
+     -
+     \norm{\Delta}
+     \left( 
+     \norm{\delta}
+     \ 
+     +
+     \ 
+     \norm{B(X_i)}
+     \cdot
+     \frac{1}{n}
+     \sum_{i=1}^{n} 
+     \left| 
+     \,
+      1
+     \ 
+      -
+     \ 
+        T_i
+        \cdot
+     (f ^ { ' }) ^ { -1 }
+          \inner
+          {B(X_i)}
+          {
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+          }
+          \,
+     \right|
+     \right)
+     %%%% 3 %%%%
+     \\
+     &
+     \quad
+     \ge
+     \ 
+     -
+     \varepsilon
+     \left( 
+     \norm{\delta}
+     \ 
+     +
+     \ 
+     \max _ { i = 1,\ldots,n }
+     \left| 
+     \,
+      1
+      /
+      \pi_i
+     \ 
+      -
+     \ 
+     (f ^ { ' }) ^ { -1 }
+          \inner
+          {B(X_i)}
+          {
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+          }
+          \,
+     \right|
+     +
+     \frac{1}{n}
+     \sum_{i=1}^{n} 
+     \left| 
+     \,
+     1
+     \ 
+      -
+     \ 
+      T_i
+      /
+      \pi_i
+     \right|
+     \right)
+     %%%% 4 %%%%
+     \\
+     &
+     \quad
+     \ge
+     \ 
+     -
+     \varepsilon
+     \left( 
+     \varepsilon _ {\delta}
+     \ 
+     +
+     \ 
+     \omega (
+     (f ^ { ' }) ^ { -1 }
+     ,
+     \varepsilon _ m
+     )
+     \ 
+     +
+     \ 
+     \varepsilon _ {\mathrm{WLLN}}
+     \right)
+     %%%% 5 %%%%
+     \\
+     &
+     \quad
+     \ge
+     \ 
+     - \varepsilon _ G
+     \,,
+ \end{align*}
+ with probability tending to 1.
 
 \begin{takeaways}
   To ensure double robustness, we leverage primal and dual optimization

@@ -1,14 +1,14 @@
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Improve quality of presentation in order to merge this part with more cultivated sections of the thesis.}{6}{section*.3}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Improve quality of presentation in order to merge this part with more cultivated sections of the thesis.}{7}{section*.3}%
 \contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ What solutions were offerd to deal with confounding? Start from propensity scores.}{8}{section*.4}%
 \contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Formulate improved version with Bernstein.}{9}{section*.5}%
 \contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Formulate better transition to weights with estimated propensity score.}{9}{section*.6}%
 \contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Elaborate on assumptions. For example (iii) \cite [§2.7.1]{vaart2013} \cite [§19.9]{Vaart2000} }{10}{section*.7}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of second term.}{11}{section*.9}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of third term.}{11}{section*.11}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of third term.}{12}{section*.11}%
 \contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue section with rates for right outcome model and then both models right. Do the rates improve?}{12}{section*.12}%
 \contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Introduce concept of semiparametric efficiency. For the semiparametric efficiency bound of propensity score weighting, \cite {Hahn1998} is a good reference. General introduction to semiparametric models see \cite [§25]{Vaart2000}.}{13}{section*.13}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Elaborate on assumptions. Give as a counterexample \[ f(x):= (1+\delta _{x\ge 0}) (x^2 +x\cdot \lambda ) \] }{14}{section*.14}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Consider Non-negativity constraints only for $f(x)=x\qopname \relax o{log}x$. Incorporating Non-negativity constraint for general $f$ is complicated or impossible. Maybe find counterexample.}{14}{section*.15}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Elaborate on assumptions. Give as a counterexample \[ f(x):= (1+\delta _{x\ge 0}) (x^2 +x\cdot \lambda ) \] }{15}{section*.14}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Consider Non-negativity constraints only for $f(x)=x\qopname \relax o{log}x$. Incorporating Non-negativity constraint for general $f$ is complicated or impossible. Maybe find counterexample.}{15}{section*.15}%
 \contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue with paraphrase of \cite [page 20]{Wang2019}}{17}{section*.16}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Give explanation why simple estimates are insufficient. See notes.}{20}{section*.19}%
 \contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Solve editorial issue with ball.}{21}{section*.20}%
