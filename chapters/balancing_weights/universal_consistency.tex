@@ -781,6 +781,29 @@ with probability tending to 1.
   \end{gather*}
 \end{remark}
 
+\begin{remark}
+  Both partitioning estimates are covered by \cite[§4]{Gyorfi2002},
+  because we only estimate quantities depending on $X$,
+  that is 
+  $
+  f^{-1}(1/\pi(X))
+  $
+  and 
+  $
+  \E[Y(1)|X]
+  $.
+  The corresponding coefficients in the partitioning estimate are then
+  $
+  f^{-1}(1/\pi_i)
+  $
+  and
+  $
+  Y_i(1)
+  $,
+  which is the potential outcome of unit $i$ under treatment.
+  Note, that both quantities are generally unknown to us, but we can 
+  nevertheless leverage there existence in the proof.
+\end{remark}
 \begin{takeaways}
   To ensure double robustness, we leverage primal and dual optimization
   problem. The dual problem solves propensity score estimation and the 
