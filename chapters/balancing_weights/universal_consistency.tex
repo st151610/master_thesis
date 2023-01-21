@@ -1,7 +1,7 @@
 We leverage (weak) universal consistency
 of partitioning estimates~\cite{Gyorfi2002}.
 To this end, we choose the basis functions as
-\begin{gather}
+\begin{gather*}
   B_k(x)
   :=
   \frac{
@@ -15,13 +15,13 @@ To this end, we choose the basis functions as
   k=
   1,\ldots,n
   \,.
-\end{gather}
+\end{gather*}
 The euclidian norm of 
 $
   B(x)
 $
 is bounded by one.
-\begin{gather}
+\begin{gather*}
   \norm{B(x)}^2
   =
   \sum_{k=1}^{n} 
@@ -44,7 +44,7 @@ is bounded by one.
   }
   =1
   \,.
-\end{gather}
+\end{gather*}
 The oracle parameters are
 $
   \left[ 
@@ -62,13 +62,13 @@ $
 $
 .
 It even holds
-\begin{gather}
+\begin{gather*}
   \lambda ^ \dagger _ i \to 
     f^{'}
     \left( 
       \frac{1}{\pi_i}
     \right)
-\end{gather}
+\end{gather*}
 in probability.
 
  \begin{align*}
@@ -116,7 +116,7 @@ in probability.
   \varepsilon > 0
  $
  it holds
- \begin{gather}
+ \begin{gather*}
    \P
    \left[ 
      \norm
@@ -156,7 +156,7 @@ in probability.
      0
    \right]
    \,.
- \end{gather}
+ \end{gather*}
  The term on the right-hand side.
  \begin{align*}
    &
@@ -340,7 +340,89 @@ in probability.
      \,,
  \end{align*}
  with probability tending to 1.
-
+ %%%% convergence G %%%%
+ It follows
+ for all $\varepsilon, \varepsilon_G > 0 $
+ \begin{gather*}
+   \P
+   \left[ 
+     \inf _ { \norm{\Delta} = \varepsilon }
+     G
+     (
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+      +
+      \Delta
+     )
+     -
+     G
+     (
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+     )
+     \ge 
+     - \varepsilon_G
+   \right]
+   \ 
+   \to 
+   \ 
+   1
+   \,
+ \end{gather*}
+ for $ n \to \infty $.
+ %%%% convergence lambda %%%%
+ Thus, for all $ \varepsilon > 0 $
+ it holds
+ \begin{gather*}
+   \P
+   \left[ 
+     \norm
+     {
+      \lambda ^ \dagger
+      -
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+     }
+     \le
+     \varepsilon
+   \right]
+   =
+   \P
+   \left[ 
+     \inf _ { \norm{\Delta} = \varepsilon }
+     G
+     (
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+      +
+      \Delta
+     )
+     -
+     G
+     (
+      f ^ { ' }
+      \left( 
+        1 / \pi 
+      \right)
+     )
+     \ge 
+     0
+   \right]
+   \ 
+   \to 
+   \ 
+   1
+   \,,
+ \end{gather*}
+ for $ n \to \infty $.
 \begin{takeaways}
   To ensure double robustness, we leverage primal and dual optimization
   problem. The dual problem solves propensity score estimation and the 
