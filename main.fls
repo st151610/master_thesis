@@ -1205,6 +1205,10 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT ./chapters/balancing_weights/continuous_treatment.tex
+INPUT chapters/balancing_weights/continuous_treatment.tex
+INPUT ./chapters/balancing_weights/continuous_treatment.tex
+INPUT chapters/balancing_weights/continuous_treatment.tex
 INPUT ./chapters/convex_analysis/cvxa_primer.tex
 INPUT chapters/convex_analysis/cvxa_primer.tex
 INPUT ./chapters/convex_analysis/cvxa_primer.tex
