@@ -1,9 +1,9 @@
 \contentsline {chapter}{\numberline {1}Balancing Weights}{5}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Consistency}{5}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Double Robustness}{8}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Learning Rates of the weighted mean}{8}{subsection.1.2.1}%
-\contentsline {section}{\numberline {1.3}Error Decompositions}{15}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Application of Convex Optimization}{16}{section.1.4}%
+\contentsline {section}{\numberline {1.1}Application of Convex Optimization}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Consistency}{7}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Double Robustness}{10}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Learning Rates of the weighted mean}{10}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.4}Error Decompositions}{18}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Application of Matrix Concentration Inequalities}{19}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Continuous Treatment}{22}{section.1.6}%
 \contentsline {chapter}{\numberline {2}Convex Analysis}{25}{chapter.2}%

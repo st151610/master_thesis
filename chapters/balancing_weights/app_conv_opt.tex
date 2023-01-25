@@ -1,91 +1,223 @@
-\begin{assumption}
-  \begin{enumerate}[label={(\roman*)}]
-    Assume that the map 
-    $
-      f: \R \to \overline{\R}
-    $
-    has the following properties.
-    \item
-      $
-        f 
-        \ 
-        \text{is strictly convex.}
-      $
-    \item
-      $
-        f
-        \ 
-        \text{is lower-semicontinuous and continuously differentiable on}
-        \ 
-        \mathrm{int}(\mathrm{dom}(f))
-        .
-      $
-    \item
-      $
-        \text{The derivative of}\ 
-        f\ 
-        \text{on}\ 
-        \mathrm{int}(\mathrm{dom}(f))
-        \ 
-        \text{is a diffeomorphism.}
-      $
-    \item
-      $
-        \text{The Legendre transformation}
-        \ 
-        f^*
-        \ 
-        \text{of}\ 
-        f
-        \ 
-        \text{is finite}
-        .
-      $
-    \item
-      $
-        \text{The function}\
-        x\mapsto xt - f(x)
-        \ 
-        \text{takes its supremum on}
-        \ 
-        \mathrm{int}(\mathrm{dom}(f))
-        \ 
-        \text{for all}
-        \ 
-        t\in \R.
-      $
-  \end{enumerate}
-\end{assumption}
-Assumption (i),(ii) and (iv) are from \cite{Tseng1991}. See corresponding section in the thesis.
-Assumption (iii) and (v) is needed to get a meaningful analytic expression for the weights after establishing the properties pointed out in \cite{Tseng1991}.
-
-\todo[color=red!40, inline]{Elaborate on assumptions. Give as a counterexample 
-  \[
-  f(x):=
-  (1+\delta_{x\ge 0})
-  (x^2
-  +x\cdot \lambda)
-\]
-}
-
-We consider the following optimization problem.
-\todo[color=orange!40, inline]{Consider Non-negativity constraints only for $f(x)=x\log x$. Incorporating Non-negativity constraint for general $f$ is complicated or impossible. Maybe find counterexample.}
-  \begin{gather*}
-    \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
+%\begin{assumption}
+%  \begin{enumerate}[label={(\roman*)}]
+%    Assume that the map 
+%    $
+%      f: \R \to \overline{\R}
+%    $
+%    has the following properties.
+%    \item
+%      $
+%        f 
+%        \ 
+%        \text{is strictly convex.}
+%      $
+%    \item
+%      $
+%        f
+%        \ 
+%        \text{is lower-semicontinuous and continuously differentiable on}
+%        \ 
+%        \mathrm{int}(\mathrm{dom}(f))
+%        .
+%      $
+%    \item
+%      $
+%        \text{The derivative of}\ 
+%        f\ 
+%        \text{on}\ 
+%        \mathrm{int}(\mathrm{dom}(f))
+%        \ 
+%        \text{is a diffeomorphism.}
+%      $
+%    \item
+%      $
+%        \text{The Legendre transformation}
+%        \ 
+%        f^*
+%        \ 
+%        \text{of}\ 
+%        f
+%        \ 
+%        \text{is finite}
+%        .
+%      $
+%    \item
+%      $
+%        \text{The function}\
+%        x\mapsto xt - f(x)
+%        \ 
+%        \text{takes its supremum on}
+%        \ 
+%        \mathrm{int}(\mathrm{dom}(f))
+%        \ 
+%        \text{for all}
+%        \ 
+%        t\in \R.
+%      $
+%  \end{enumerate}
+%\end{assumption}
+%Assumption (i),(ii) and (iv) are from \cite{Tseng1991}. See corresponding section in the thesis.
+%Assumption (iii) and (v) is needed to get a meaningful analytic expression for the weights after establishing the properties pointed out in \cite{Tseng1991}.
+%
+%\todo[color=red!40, inline]{Elaborate on assumptions. Give as a counterexample 
+%  \[
+%  f(x):=
+%  (1+\delta_{x\ge 0})
+%  (x^2
+%  +x\cdot \lambda)
+%\]
+%}
+%
+%We consider the following optimization problem.
+%\todo[color=orange!40, inline]{Consider Non-negativity constraints only for $f(x)=x\log x$. Incorporating Non-negativity constraint for general $f$ is complicated or impossible. Maybe find counterexample.}
+We consider a partition
+$
+  \mathcal{P}_n
+  =
+  \left\{ 
+    A_{n,1}
+    ,
+    A_{n,2}
+    ,
+    \ldots
+  \right\}
+$
+of $ \R^d $
+and define
+$ A_n(x) $ to be the cell of $ \mathcal{P}_n $ containing $x$.
+Next we define $ m_n $ by
+\begin{gather}
+  m_n(Y|x)
+  \ 
+  :=
+  \ 
+  \frac
+  {
+    \sum_{k=1}^{n} 
+    Y_k
+    \cdot
+    \mathbf{1}
+    _
+    {
+      \left\{ 
+      X_k \in A_n(x)
+      \right\}
+    }
+  }
+  {
+    \sum_{j=1}^{n} 
+    \mathbf{1}
+    _
+    {
+      \left\{ 
+      X_j \in A_n(x)
+      \right\}
+    }
+  }
+  \,.
+\end{gather}
+In the terminology of \cite[§4]{Gyorfi2002}
+$m_n$ is called a partitioning estimate.
+We want to control the sumands.
+To this end we define a set of basis functions by
+\begin{gather}
+  B_k(x)
+  \ 
+  :=
+  \ 
+  \frac
+  {
+    \mathbf{1}
+    _
+    {
+      \left\{ 
+      X_k \in A_n(x)
+      \right\}
+    }
+  }
+  {
+    \sum_{j=1}^{n} 
+    \mathbf{1}
+    _
+    {
+      \left\{ 
+      X_j \in A_n(x)
+      \right\}
+    }
+  }
+  \qquad
+  \text{for}\ 
+  k \in \left\{ 1,\ldots,n \right\}
+  \,.
+\end{gather}
+This yields
+\begin{gather}
+  m_n(Y|x)
+  =
+  \sum_{k=1}^{n} 
+  Y_k
+  \cdot
+  B_k(x)
+  \,.
+\end{gather}
+We consider the objective function
+\begin{gather}
+  f
+  \ 
+  \colon
+  \ 
+  [0,\infty)
+  \ 
+  \to 
+  \ 
+  \R
+  ,
+  \quad
+  x
+  \ 
+  \mapsto
+  \ 
+  x \log x\,,
+\end{gather}
+together with 
+										%%%%%%%%%%%%%
+										%%%% (P) %%%%
+										%%%%%%%%%%%%%
+\begin{fproblem}
+  \label{bw:1:primal}
+\begin{align*}
+  %%%% objective %%%%
+    &\underset{w_1, \ldots, w_n \in \R}
+    {\text{minimize}}
+    &&\qquad\qquad
+    \sum_{i = 1}^{n} 
+    T_i
+    f(w_i)
+    &&&
+    \\
+    %%%% w_i T_i >= 0 %%%%
+    &\text{subject to}
+    &&\qquad\qquad
+    w_i T_i
+    \ge
+    0
+    &&&
     \qquad
-    \sum_{i = 1}^{n} T_i f(w_i)
-  \end{gather*}
-subject to the constraints
-\begin{gather*}
-%    w_i T_i \ge 0,
-%   \qquad 
-%    i = 1, \ldots, n,
-%   \\
-%  \sum_{ i = 1 }^{n}
-%    w_i T_i
-%  =
-%  1
-%  \\
+    \text{for all}\ 
+    i \in \left\{ 1, \ldots, n \right\}
+    \,,
+    \\
+    %%%% 1/n sum w = 1 %%%%
+    & 
+    &&\qquad\qquad
+    \frac{1}{n}
+    \sum_{i=1}^{n} 
+    T_i w_i
+    =1
+    \\
+    %%%% box constraints %%%%
+    & 
+    &&\qquad
     \left| 
       \frac{1}{n} 
       \sum_{i = 1}^{n} 
@@ -100,16 +232,18 @@ subject to the constraints
     \ 
     \le 
     \ 
-    \delta_k,
+    \delta_k
+    &&&
     \qquad
-    k = 1, \ldots, K
-\end{gather*}
-\pagebreak
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, n \right\}
+    \,.
+\end{align*}
+\end{fproblem}
 ~\begin{ftheorem}
-  Under Assumption,
-  the dual of the above Problem is the unconstrained optimization problem 
+  The dual of Problem~\ref{bw:1:primal} is the unconstrained optimization problem 
   \begin{gather*}
-    \underset{\lambda \in \R^K}{\mathrm{minimize}}
+    \underset{\lambda \in \R^n}{\mathrm{minimize}}
     \qquad
     \frac{1}{n}
     \sum_{i = 1}^{n} 
@@ -117,10 +251,10 @@ subject to the constraints
     \cdot
     f^*
     (
-      \inner{B(X_i)}{\lambda}
+      m_n(\lambda|X_i)
     )
     -
-    \inner{B(X_i)}{\lambda}
+      m_n(\lambda|X_i)
     \ 
     +
     \ 

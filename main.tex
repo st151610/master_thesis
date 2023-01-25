@@ -72,9 +72,13 @@
   {\renewcommand{\qedsymbol}{$\spadesuit$}%
    \pushQED{\qed}\begin{reflection*/}}
   {\popQED\end{reflection*/}}
+\newtheorem{problem}{Problem}[chapter]
+\newenvironment{fproblem}
+  {\begin{mdframed}\begin{problem}}
+  {\end{problem}\end{mdframed}}
+  %%%% plain %%%%
 \theoremstyle{plain}
 \newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{problem}{Problem}[chapter]
 \newtheorem{proposition}{Proposition}[chapter]
 \newtheorem{subassumption}{}[assumption]
 
@@ -122,6 +126,8 @@
 %\input{chapters/causal_inference.tex}
 
 \chapter{Balancing Weights}
+  \section{Application of Convex Optimization}
+  \input{chapters/balancing_weights/app_conv_opt.tex}
   \section{Consistency}
   \input{chapters/balancing_weights/universal_consistency.tex}
  % \section{Introduction}
@@ -132,8 +138,6 @@
   \input{chapters/balancing_weights/error_decomp.tex}
   %\section{Estimating the Population Mean of Potential Outcomes}
   %\input{chapters/balancing_weights/chapter_01.tex}
-  \section{Application of Convex Optimization}
-  \input{chapters/balancing_weights/app_conv_opt.tex}
   \section{Application of Matrix Concentration Inequalities}
   \input{chapters/balancing_weights/application_matrix_concentration_ineq.tex}
 
