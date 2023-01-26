@@ -1,50 +1,30 @@
 We present the relevant parts of the paper \cite{Bertsekas2003}.
-
-Consider the following optimization problem
-
-  \begin{gather*}
-    \underset{x\in \R^m}{\mathrm{minimize}}
-    \qquad
+\begin{fproblem}
+  \label{cv:ts:primal}
+\begin{align*}
+  %%%% objective %%%%
+    &\underset{x \in \R^n}
+    {\text{minimize}}
+    &&\qquad\qquad
     f(x)
-  \end{gather*}
-subject to the constraints
-\begin{gather}
-  \mathbf{A}x \ge a\,,
-  \\
-  \mathbf{B}x = b\,.
-\end{gather}
-Where 
-$
-  f:
-  \R^m
-  \to 
-  \overline{\R}
-  $, 
-  $
-  \mathbf{A} 
-  \in 
-  \R^{n_a\times m}
-$, 
-$
-  \mathbf{B} 
-  \in 
-  \R^{n_b\times m}
-$, 
-$
-a\in \R^{n_a}
-$
-and 
-$
-b\in \R^{n_b}
-$.
-\todo[color=green!40, inline]{
-  Adjust notation with matrix chapter.
-}
-\begin{assumption}
+    &&&
+    \\
+    %%%% Ax >= b %%%%
+    &\text{subject to}
+    &&\qquad\qquad
+    \mathbf{A}x
+    \ 
+    \ge
+    \ 
+    b
+    \,.
+\end{align*}
+\end{fproblem}
+\begin{assumptions*}
   \begin{enumerate}[label={(\roman*)}]
     Assume that the map 
     $
-      f: \R^m \to \overline{\R}
+      f: \R^n \to \overline{\R}
     $
     has the following properties.
     \item
@@ -57,9 +37,9 @@ $.
       $
         f
         \ 
-        \text{is lower-semicontinuous and continuous}
+        \text{is lower-semicontinuous and continuous on}
         \ 
-        \mathrm{dom}(f)
+        \mathrm{dom}\,f
         .
       $
     \item
@@ -75,48 +55,61 @@ $.
         .
       $
   \end{enumerate}
-\end{assumption}
+\end{assumptions*}
 
-The dual optimization problem $(D)$ associated with $(P)$
-is 
-
-
-  \begin{gather*}
-    \underset{
-      (y_a,y_b)\in \R^{n_a+n_b}
-    }{\mathrm{maximize}}
-    \qquad
-    q(y_{a},y_{b})
-  \end{gather*}
-subject to the constraints
+The dual optimization problem of Problem~\ref{cv:ts:primal} 
+is
+\begin{fproblem}
+  \label{cv:ts:dual}
+  \begin{alignat*}{2}
+  %%%% objective %%%%
+    &\underset{y \in \R^m}
+    {\text{maximize}}
+    &&\qquad\qquad
+    \inner
+    {y}
+    {b}
+    \ 
+    -
+    \ 
+    f^*
+    ( A ^ \top y )
+    \\
+    %%%% Ax >= b %%%%
+    &\text{subject to}
+    &&\qquad\qquad
+    y
+    \ 
+    \ge
+    \ 
+    0
+    \,.
+\end{alignat*}
+\end{fproblem}
+Let $q$ denote the objective function of Problem~\ref{cv:ts:dual},
+that is,
 \begin{gather}
-  y_a \ge 0
-  ,
+  q
+  \, 
+  : 
+  \, 
+  \R^m  \to\  \R\,,
+  \qquad
+  y
+  \ 
+  \mapsto
+  \ 
+  \inner
+    {y}
+    {b}
+    \, 
+    -
+    \, 
+    f^*
+    ( A ^ \top y )
+  \,.
 \end{gather}
-where 
-$
-q: \R^{n_a}\!\!\times\R^{n_b}\, \to\  \overline{\R}
-$
-is the concave function given by
-\begin{gather}
-  q(y_a,y_b)
-  \ 
-  :=
-  \ 
-  \inner{y_a}{a}
-  +
-  \inner{y_b}{b}
-  \ 
-  -
-  \ 
-  f^*(
-    \mathbf{A}^{\!\!\top}y_a
-    +
-    \mathbf{B}^{\!\top} y_b 
-  )
-  \,
-  .
-\end{gather}
+q is concave.
 The dual problem $(D)$ is a concave program
 with nonnegativity constraints on the dual variable $y_a$
 of the inequality constraints in $(P)$.
@@ -285,6 +278,37 @@ $
   .
 $
 \todo[color=orange!40,inline]{Provide details. See notes.}
+
+
+\subsection*{Complementary Slackness}
+We show that for all 
+$
+  i\in \left\{ 1,\ldots, n \right\}
+$
+it holds
+\begin{alignat*}{2}
+  \text{either}
+  &
+  &&
+  \qquad
+  p_i = 0
+  \quad
+  \text{and}
+  \quad
+  d_i(p) \le 0
+  \\
+  \text{or}
+  &
+  &&
+  \qquad
+  p_i > 0
+  \quad
+  \text{and}
+  \quad
+  d_i(p) = 0
+  \,.
+\end{alignat*}
+
 
 Given an optimal dual solution $p$,
 we may obtain an optimal primal solution from the equation 

@@ -1173,7 +1173,6 @@ INPUT ./main.toc
 INPUT main.toc
 INPUT main.toc
 OUTPUT main.toc
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT ./chapters/balancing_weights/app_conv_opt.tex
 INPUT chapters/balancing_weights/app_conv_opt.tex
 INPUT ./chapters/balancing_weights/app_conv_opt.tex
@@ -1185,6 +1184,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT ./chapters/balancing_weights/universal_consistency.tex
 INPUT chapters/balancing_weights/universal_consistency.tex
 INPUT ./chapters/balancing_weights/universal_consistency.tex

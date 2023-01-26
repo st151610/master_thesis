@@ -1,3 +1,4 @@
+\subsection*{Introduction}
 %\begin{assumption}
 %  \begin{enumerate}[label={(\roman*)}]
 %    Assume that the map 
@@ -240,7 +241,11 @@ together with
     \,.
 \end{align*}
 \end{fproblem}
-~\begin{ftheorem}
+%%%%%%%%%%%%%
+%%%% (D) %%%%
+%%%%%%%%%%%%%
+\subsubsection*{Dual Problem}
+\begin{ftheorem}
   The dual of Problem~\ref{bw:1:primal} is the unconstrained optimization problem 
   \begin{gather*}
     \underset{\lambda \in \R^n}{\mathrm{minimize}}
@@ -328,7 +333,12 @@ together with
     \ 
     (f^{'})^{-1}
     \left( 
-      \inner{B(X_i)}{\lambda^\dagger}
+      m_n
+      (
+      \lambda^\dagger
+      |
+      X_i
+      )
     \right)
     \quad
     \text{for all}\ 
@@ -529,5 +539,16 @@ The corresponding dual problem in \cite{Tseng1991} is then
   \end{proof}
 
 \todo[color=red!40, inline]{Continue with paraphrase of \cite[page 20]{Wang2019}}
-
+%%%%%%%%%%%
+%%%% λ %%%%
+%%%%%%%%%%%
+\subsection*{Consistency of the dual variables}
+%%%%%%%%%%%
+%%%% ω %%%%
+%%%%%%%%%%%
+\subsection*{Consistency of the weights}
+%%%%%%%%%%%
+%%%% E[Y] %%%%
+%%%%%%%%%%%
+\subsection*{Consistency of the weighted mean}
 \end{proof}
