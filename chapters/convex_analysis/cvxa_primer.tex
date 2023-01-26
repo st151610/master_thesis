@@ -200,6 +200,7 @@ $C$ is regarded as a subset of its affine hull.
 \end{definition}
 Next we collect some useful properties of relative interiors.
 \begin{proposition}
+  \label{cv:primer:prop}
   Let $C$ be a non-empty convex set in $\R^n.$ The following holds:
 \begin{enumerate}[label={(\roman*)}]
   \item
@@ -343,7 +344,6 @@ if and only if
 
 \end{proposition}
 
-\todo[color=green!40,inline]{Order results to give pretty proof.}
 
 \begin{proof}
   For a proof of (i)-(vi) we refer to~\cite[Theorem 6.2 - 6.7]{Rockafellar1970}.
@@ -624,7 +624,15 @@ The proof translates the geometric concept of convex separation to the world of 
 \end{lemma}
 \begin{proof}
   We fix 
-  $ x^* \in \mathrm{dom}\, \sigma_{C_1\cap C_2} $.
+  $ x^* \in \mathrm{dom}\, \sigma_{C_1\cap C_2} $
+  and write
+  $ 
+  \alpha
+  \ 
+  :=
+  \ 
+  \sigma_{C_1\cap C_2}(x^*)
+  $.
   In order to apply convex separation in finite dimension 
   (Theorem~\ref{cv:primer:sep})
   to
@@ -632,7 +640,7 @@ The proof translates the geometric concept of convex separation to the world of 
   $ \Theta_1 $ and $ \Theta_2(x^*) $,
   it suffics to show
   their convexity and
-  \begin{gather}
+  $
     \mathrm{ri}\, 
     \Theta_1
     \cap
@@ -640,14 +648,171 @@ The proof translates the geometric concept of convex separation to the world of 
     \Theta_2(x^*)
     =
     \emptyset
-    \,.
-  \end{gather}
+  $.
   \subsubsection*{Convexity of 
   $ \Theta_1 $ and $ \Theta_2(x^*) $
   }
+  Clearly, 
+  $ \Theta_1 $ is convex by the convexity of 
+  $ C_1 $ and $ [0,\infty) $.
+ To see that $\Theta_2(x^*)$ is convex consider the linear function
+ \begin{gather*}
+    L
+    \,
+    :
+    \,
+    C_2\times\,  \R 
+    \ 
+    \to
+    \ 
+    \R
+    \,,
+    \qquad 
+    (x,\lambda)
+    \ 
+    \mapsto
+    \ 
+    \inner{x^*\!}{x} - \lambda
+    \,.
+ \end{gather*}
+ From the definitions of $L$ and $\Theta_2(x^*)$ we get 
+  \begin{gather*}
+ \Theta_2
+ (x^*)
+    \ 
+    =
+    \ 
+    \ 
+    L^{\!-1}
+    [\,\alpha,\infty)
+    \,
+    .
+  \end{gather*}
+  Thus,
+  by
+  Proposition~\ref{cv:primer:prop}~(v)
+  and the convexity of $C_2$ we get the convexity of
+  $
+    L^{\!-1}
+    [\,\alpha,\infty)
+  $ and with it that of $\Theta_2(x^*)$.
+
   \subsubsection*{Relative interiors of
   $ \Theta_1 $ and $ \Theta_2(x^*) $
   are disjoint}
+  We start by calculating the relative interiors. It holds
+  \begin{alignat*}{3}
+    \mathrm{ri}\,
+    \Theta_1
+    &
+    \ 
+    =
+    \ 
+    \mathrm{ri}
+    ( C_1\times [0,\infty) )
+    &&
+    \ 
+    =
+    \ 
+    \mathrm{ri}\,
+    C_1
+    \!
+    \times
+    \mathrm{ri}\,
+    [0,\infty)
+    \ 
+    =
+    \ 
+    \mathrm{ri}\,
+    C_1
+    \!
+    \times
+    (0,\infty)
+    \,,
+    %%%%%%%%%%%%%%%%%
+    \\
+    \mathrm{ri}\,
+    \Theta_2(x^*)
+    & 
+    \ 
+    =
+    \ 
+    \mathrm{ri}
+    (
+    L^{\!-1}
+    [\,\alpha,\infty)
+    )
+    &&
+    \ 
+    =
+    \ 
+    L^{\!-1}
+    (
+    \mathrm{ri}\,
+    [\,\alpha,\infty)
+    )
+    \ 
+    \ 
+    =
+    \ 
+    L^{\!-1}
+    (\alpha,\infty)
+    \,.
+  \end{alignat*}
+  Suppose there exists
+  $ (\lambda,x) \in
+    \mathrm{ri}\, 
+    \Theta_1
+    \cap
+    \,
+    \mathrm{ri}\, 
+    \Theta_2(x^*)
+  $.
+  Then it holds 
+  $ x \in C_1\!\times C_2 $
+  and 
+  $ \lambda >0 $.
+  We also note, that
+  \begin{gather*}
+  \alpha
+  \ 
+  =
+  \ 
+  \sigma_{C_1\cap\, C_2}(x^*)
+    \ 
+  =
+    \ 
+  \sup_{z \in C_1\cap\, C_2}
+  \inner
+  {x^*}
+  {z}
+  \ 
+  \ge
+  \ 
+  \inner
+  {x^*}
+  {x}
+  \,.
+  \end{gather*}
+  Then it follows
+  \begin{gather*}
+    \alpha
+    \ 
+    <
+    \ 
+  \inner
+  {x^*}
+  {x}
+  - \lambda
+    \ 
+  \le
+    \ 
+  \alpha\,,
+  \end{gather*}
+  a contradiction.
+  Thus, the relative interiors of
+  $ \Theta_1 $ and $ \Theta_2(x^*) $
+  are disjoint.
 
   Applying Theorem~\ref{cv:primer:sep} finishes the proof.
 \end{proof}
@@ -714,41 +879,8 @@ The proof translates the geometric concept of convex separation to the world of 
   To this end, consider 
   the sets
   \todo[color=green!40,inline]{Simplify proof with properties of relative interiors.}
-  Clearly, $\Theta_1$ is convex by the convexity of $C_1$. To see that $\Theta_2$ is convex consider the affine function
-  $
-    \varphi:
-    \R^{n}\!\times \R \to \R
-    ,
-    \ 
-    (x,\lambda)
-    \mapsto
-    \alpha - \inner{x^*\!}{x} - \lambda
-  $ .
-  From the definitions of $\varphi$ and $\Theta_2$ we get the identity
-  \begin{gather*}
- \Theta_2
-    \ 
-    =
-    \ 
-    (
-      C_2\!\times\R
-    )
-    \ 
-    \cap
-    \ 
-    \varphi^{-1}
-    (-\infty,0\,]
-    \,
-    .
-  \end{gather*}
-  Thus, by the convexity of the sets
-  $C_2$
-  and
-  $
-    \varphi^{-1}(-\infty,0]
-  $
-  it follows the convexity of $\Theta_2$.
-  Next we show that the relative interiors of 
+  Clearly, $\Theta_1$ is convex by the convexity of $C_1$.
+   Next we show that the relative interiors of 
   $\Theta_1$ and $\Theta_2$
   do not intersect, i.e.,
   ~$
