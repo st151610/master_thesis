@@ -200,12 +200,56 @@ $C$ is regarded as a subset of its affine hull.
 \end{definition}
 Next we collect some useful properties of relative interiors.
 \begin{proposition}
-  Let $C$ be a non-empty convex set in $\R^n.$ Then we get the representation
+  Let $C$ be a non-empty convex set in $\R^n.$ The following holds:
 \begin{enumerate}[label={(\roman*)}]
   \item
     $
+      \mathrm{ri}(C)
+      \ 
+      \neq
+      \ 
+      \emptyset
+      $
+if and only if
+      $
+      C
+      \ 
+      \neq
+      \ 
+      \emptyset
+    $
+  \item
+    The sets
+    $
+      \mathrm{cl}\,C
+      $
+      and
+      $
+      \mathrm{ri}\,C
+    $
+    are convex
+  \item
+    $
+      \mathrm{cl}(\mathrm{ri}\,C)
+      \ 
+      =
+      \ 
+      \mathrm{cl}\,C
+      $
+      and
+      $
+      \mathrm{ri}(\mathrm{cl}\,C)
+      \ 
+      =
+      \ 
+      \mathrm{ri}(C)
+    $
+  \item
+    $
     \mathrm{ri}(C)
+      \ 
     =
+      \ 
     \left\{ 
       z \in C
       \colon
@@ -216,90 +260,69 @@ Next we collect some useful properties of relative interiors.
       \text{such that}\ 
       z + t (z-x)
       \in C
-    \right\}.
-    $
-  \item
-    $
-      \mathrm{ri}(C)
-      \neq
-      \emptyset
-      \ 
-      \text{if}\ 
-      C\neq \emptyset
-      .
-    $
-  \item
-    $
-      \mathrm{cl}(C)
-      \ 
-      \text{and}\ 
-      \mathrm{ri}(C)
-    $
-    are convex sets.
-  \item
-    $
-      \mathrm{cl}(\mathrm{ri}(C))
-      =
-      \mathrm{cl}(C)
-      \ 
-      \text{and}
-      \  
-      \mathrm{ri}(\mathrm{cl}(C))
-      =
-      \mathrm{ri}(C)
-      .
+    \right\}
     $
   \item
     Suppose
     $
       \bigcap_{i\in I} C_i
+      \ 
       \neq
+      \ 
       \emptyset
     $
-    for a finite index set $I.$
+    for a finite index set $I$.
     Then
     $
       \mathrm{ri}
       \left( 
         \bigcap_{i\in I} C_i
       \right)
+      \ 
       =
+      \ 
       \bigcap_{i\in I}  
       \mathrm{ri}(C_i)
-      .
-    $
+    $.
     \item
       Let 
       $
-        L:\R^n \to \R^m
+        L\,:\,\R^n \to\  \R^m
       $
-      be a linear mapping. Then
+      be a linear function. Then
       $
-        \mathrm{ri}(L(C))
+        \mathrm{ri}\,L(C)
+        \ 
         =
-        L(\mathrm{ri}(C))
-        .
+        \ 
+        L(\mathrm{ri}\,C)
+      $.
+      If it also holds
       $
-      If additionally it holds
-      $
-        L^{-1}(\mathrm{ri}(C))
+        L^{\!-1}(\mathrm{ri}\,C)
+        \ 
         \neq
+        \ 
         \emptyset
-      $
+      $,
       we have
       $
-      \mathrm{ri}(L^{-1}(C))
+      \mathrm{ri}\,L^{\!-1}(C)
+      \ 
         =
-        L^{-1}(\mathrm{ri}(C))
-        .
-      $
+      \ 
+        L^{\!-1}(\mathrm{ri}\,C)
+      $.
       \item
         $
-          \mathrm{ri}(C_1\times C_2)
+          \mathrm{ri}(C_1\!\times C_2)
+          \ 
           = 
-          \mathrm{ri}(C_1)
+          \ 
+          \mathrm{ri}\,C_1
+          \! 
           \times
-          \mathrm{ri}(C_2).
+          \mathrm{ri}\,C_2
         $
       \item
         $
@@ -323,84 +346,138 @@ Next we collect some useful properties of relative interiors.
 \todo[color=green!40,inline]{Order results to give pretty proof.}
 
 \begin{proof}
-\begin{enumerate}[label={(\roman*)}]
-  \item
-    \cite[Theorem~6.4]{Rockafellar1970}
-  \item
-    \cite[Theorem~6.2]{Rockafellar1970}
-  \item
-    \cite[Theorem~6.2]{Rockafellar1970}
-  \item
-    \cite[Theorem~6.3]{Rockafellar1970}
-  \item
-    \cite[Theorem~6.5]{Rockafellar1970}
-  \item
-    \cite[Theorem~6.6-6.7]{Rockafellar1970}
-  \item
+  For a proof of (i)-(vi) we refer to~\cite[Theorem 6.2 - 6.7]{Rockafellar1970}.
+
+To prove (vii) we use (iv).
 Let
   $
   (z_1, z_2)
   \in 
-  \mathrm{ri}(C_1\times C_2).
+  \mathrm{ri}(C_1\!\times C_2).
   $
   Then for all 
   $
   (x_1, x_2)
   \in 
-  C_1\times C_2
+  C_1\!\times C_2
   $
   there exists
   $t>0$
   such that
   \begin{gather}
+    \label{cv:primer:prop:1}
       z_i + t (z_i-x_i)
       \in C_i
       \qquad
-      \text{for}\ 
+      \text{for all}\ 
       i\in \left\{ 1,2 \right\}.
   \end{gather}
-  This proves $\subseteq.$
+  Using (iv) again, we get
+  $
+  \mathrm{ri}(C_1\!\times C_2)
+  \, 
+  \subseteq
+  \,
+          \mathrm{ri}\,C_1
+          \! 
+          \times
+          \mathrm{ri}\,C_2
+  $.
   Suppose 
   $
-    z_1 
+  (z_1,z_2)
     \in
-    \mathrm{ri}(C_1)
-  $
-  and
-  $
-    z_2 
-    \in
-    \mathrm{ri}(C_2).
-  $
-  Let
+    \mathrm{ri}\,C_1
+    \!
+    \times
+    \mathrm{ri}\,C_2
+  $.
+  By (iv), for all
   $
     (x_1,x_2)\in C_1\times C_2
   $
-  with
-  If $t_1=t_2$ everything is clear.
-  W.l.o.g.
-  assume 
-  $t_1<t_2$. Define $\theta:=\frac{t_1}{t_2}\in (0,1).$
-  By the convexity of $C_2$ it follows
+  there exist
+  $
+    (t_1,t_2)>0
+  $
+  such that
   \begin{gather}
+    \label{cv:primer:prop:2}
+      z_i + t_i (z_i-x_i)
+      \in C_i
+      \qquad
+      \text{for all}\ 
+      i\in \left\{ 1,2 \right\}.
+  \end{gather}
+  If $t_1=t_2$
+  we recover
+  \eqref{cv:primer:prop:1}
+  from
+  \eqref{cv:primer:prop:2}.
+  By (iv) it holds
+  $
+  (z_1,z_2)
+    \in
+    \mathrm{ri}
+    (C_1
+    \!
+    \times
+    C_2)
+  $.
+  If
+  $t_1<t_2$
+  we
+  define $\theta:=\frac{t_1}{t_2}\in (0,1).$
+  Consider  
+  \eqref{cv:primer:prop:2} with $i=2$,
+  together with $z_2 \in C_2$
+  and
+  the convexity of $C_2$.
+  It follows
+  \begin{gather}
+    \label{cv:primer:prop:3}
     z_2 + t_1 (z_2 - x_2)
+    \ 
     =
+    \ 
     \theta
+    \cdot
     (
     z_2 + t_2 (z_2 - x_2)
     )
+    \ 
     +
-    (1-\theta)z_2
-    \in C_2.
+    \ 
+    (1-\theta)
+    \cdot
+    z_2
+    \in C_2
+    \,.
   \end{gather}
-  Thus
+  Now we consider
+  \eqref{cv:primer:prop:3} and
+  \eqref{cv:primer:prop:2} with $i=1$.
+  This gives \eqref{cv:primer:prop:1} with $t=t_1$.
+  As before, it follows
   $
-  (z_1,z_2)\in\mathrm{ri}(C_1\times C_2). 
+  (z_1,z_2)\in\mathrm{ri}(C_1\!\times C_2)
+  $.
+  If 
+  $t_1>t_2$
+  similar arguments lead to the same result.
+  We have proven 
   $
-  This proves $\supseteq$ and equality.
-  \item
+  \mathrm{ri}(C_1\!\times C_2)
+  \, 
+  \supseteq
+  \,
+          \mathrm{ri}\,C_1
+          \! 
+          \times
+          \mathrm{ri}\,C_2
+  $
+  and equality.
     \cite[Theorem~2.92]{Mordukhovich2022}
-\end{enumerate}
 \end{proof}
  
 We procede with convex separation results which are vital to the subsequent developments.
@@ -442,6 +519,7 @@ We procede with convex separation results which are vital to the subsequent deve
   \cite[Theorem~11.1]{Rockafellar1970}
 \end{proof}
 \begin{ftheorem}
+  \label{cv:primer:sep}
   \emph{(Convex separation in finite dimension)}
   Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$. 
   Then $C_1$ and $C_2$ can be properly separated if and only if 
@@ -506,6 +584,75 @@ We procede with convex separation results which are vital to the subsequent deve
 The next result establishes a connection between the support function of the intersection of two convex sets and the infimal convolution of the support functions of the sets taken by themselfes.
 The proof translates the geometric concept of convex separation to the world of convex functions.
 
+\begin{lemma}
+  Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$.
+  For any
+  $ x^* \in \mathrm{dom}\, \sigma_{C_1\cap C_2} $
+  the sets
+  \begin{align*}
+    \Theta_1
+    &
+    \ :=\ 
+    C_1 \times [\,0,\infty)
+    \,,
+    \\
+    \Theta_2
+    (x^*)
+    &
+    \ :=\ 
+    \left\{ 
+      (x,\lambda)\in \R^n
+      \ 
+      \colon
+      \ 
+      x \in C_2
+      \ 
+      \text{and}
+      \ 
+      \lambda
+      \,
+      \le
+      \,
+      \inner{x^*\!}{x} 
+      \ 
+      -
+      \ 
+      \sigma_{C_1\cap C_2}(x^*)
+    \right\}
+  \end{align*}
+  can by properly separated.
+\end{lemma}
+\begin{proof}
+  We fix 
+  $ x^* \in \mathrm{dom}\, \sigma_{C_1\cap C_2} $.
+  In order to apply convex separation in finite dimension 
+  (Theorem~\ref{cv:primer:sep})
+  to
+  the sets
+  $ \Theta_1 $ and $ \Theta_2(x^*) $,
+  it suffics to show
+  their convexity and
+  \begin{gather}
+    \mathrm{ri}\, 
+    \Theta_1
+    \cap
+    \mathrm{ri}\, 
+    \Theta_2(x^*)
+    =
+    \emptyset
+    \,.
+  \end{gather}
+  \subsubsection*{Convexity of 
+  $ \Theta_1 $ and $ \Theta_2(x^*) $
+  }
+  \subsubsection*{Relative interiors of
+  $ \Theta_1 $ and $ \Theta_2(x^*) $
+  are disjoint}
+
+  Applying Theorem~\ref{cv:primer:sep} finishes the proof.
+\end{proof}
+
+
 \begin{ftheorem}
   Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$ with
   $\mathrm{ri}(C_1)\cap\mathrm{ri}(C_2)\neq\emptyset.$
@@ -566,31 +713,6 @@ The proof translates the geometric concept of convex separation to the world of 
   to our purpose we consider two special sets. We will verify that these sets meet the requirements for convex separation, i.e., that they are convex and the intersection of their relative interiors is empty. The rest of the proof is as in the cited reference at the beginning of the proof.
   To this end, consider 
   the sets
-  \begin{gather}
-    \Theta_1
-    \ :=\ 
-    C_1 \times [\,0,\infty)
-    \quad
-    \text{and}
-    \quad
-    \Theta_2
-    \ :=\ 
-    \left\{ 
-      (x,\lambda)\in \R^n
-      \ 
-      \colon
-      \ 
-      x \in C_2
-      \ 
-      \text{and}
-      \ 
-      \lambda
-      \,
-      \le
-      \,
-      \inner{x^*\!}{x} - \alpha
-    \right\}\ .
-  \end{gather}
   \todo[color=green!40,inline]{Simplify proof with properties of relative interiors.}
   Clearly, $\Theta_1$ is convex by the convexity of $C_1$. To see that $\Theta_2$ is convex consider the affine function
   $
