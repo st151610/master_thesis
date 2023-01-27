@@ -532,38 +532,61 @@ the primal minimization problem as follows:
    - f^*(A^\top y^*) - g^*(y^*).
   \end{gather*}
 \end{problem}
-\begin{proposition}
-  Consider the optimization problem~\autoref{cvxa_primal_problem} and its dual~\autoref{cvxa_dual_problem}, where the functions $f$ and $g$ are not assumed to be convex. Define the \textbf{optimal values} of these problems by
-  \begin{gather*}
-    \widehat{p}:= \inf_{x\in\R^n}f(x)+g(Ax)
-    \quad
-    \text{and}
-    \quad
-    \widehat{d}:= \sup_{y\in\R^m} - f^*(A^\top y) - g^*(y).
-  \end{gather*}
-  Then we have the relationship
-  $\widehat{d}\le \widehat{p}$.
-\end{proposition}
-\begin{proof}
-  \cite[Proposition 4.62]{Mordukhovich2022}
-  \end{proof}
+%\begin{proposition}
+%  Consider the optimization problem~\autoref{cvxa_primal_problem} and its dual~\autoref{cvxa_dual_problem}, where the functions $f$ and $g$ are not assumed to be convex. Define the \textbf{optimal values} of these problems by
+%  \begin{gather*}
+%    \widehat{p}:= \inf_{x\in\R^n}f(x)+g(Ax)
+%    \quad
+%    \text{and}
+%    \quad
+%    \widehat{d}:= \sup_{y\in\R^m} - f^*(A^\top y) - g^*(y).
+%  \end{gather*}
+%  Then we have the relationship
+%  $\widehat{d}\le \widehat{p}$.
+%\end{proposition}
+%\begin{proof}
+%  \cite[Proposition 4.62]{Mordukhovich2022}
+%  \end{proof}
 \begin{theorem}
   \label{cvxa_fenchel_theorem}
   Let 
-  $f, g : \R^n \to \overline{\R}$ 
+  $f$ 
+  and
+  $g\, :\, \R^n \to \ \overline{\R}$ 
   be proper convex functions
   and
-  $0 \in \text{ri}(\text{dom}(g) - A (\text{dom}(f)) )$
-  .
+  \begin{gather*}
+  \mathrm{ri}(\mathrm{dom}\,g)
+  \,
+  \cap
+  \,
+  \mathrm{ri}(A \, \mathrm{dom}\,f)
+  \ 
+  \neq
+  \ 
+  \emptyset
+  \,.
+  \end{gather*}
   Then the optimal values of \eqref{cvxa_primal_problem} and \eqref{cvxa_dual_problem} are equal, 
-  i.e.
-  \begin{gather}
+  that is,
+  \begin{gather*}
     \inf_{x \in \R^n} 
-    \left\{ f(x) + g(Ax) \right\}
+    \left\{ f(x) 
+      \ 
+    +
+    \ 
+  g(Ax) \right\}
+    \ 
     =
-    \sup_{y \in \R^n} \left\{   -f^* \left( A^T y \right) - g^*(-y) \right\}
-    .
-  \end{gather}
+    \ 
+    \sup_{y \in \R^n}
+    \left\{   -f^* \left( A^T y \right) 
+      \ 
+    - 
+      \ 
+  g^*(-y) \right\}
+  \,.
+  \end{gather*}
 \end{theorem}
 \begin{proof}
   \cite[Theorem~4.63]{Mordukhovich2022}
@@ -573,44 +596,53 @@ the primal minimization problem as follows:
 \begin{lemma}
   \label{syu_1_result}
   Let 
-  $f : \R^n \to (-\infty, \infty]$ 
+  $f \,:\, \R^n \to \overline{\R}$ 
   be convex.
   Then 
-  for all $y \in \R^n$ and $C>0$ 
+  for all $y \in \R^n$ and $\varepsilon>0$ 
     \begin{gather}
       \label{7060_0}
-      \inf_{\norm{\Delta}=C} f(y+\Delta) - f(y) \ge 0 \quad
-      \Longrightarrow
-      \quad
-    \exists y^* \in \R^n
-    \colon
-    y^* \,\text{is global minimum of $f$ and}\,
-      \norm{y^* - y} \le C.
+      \inf_{\norm{\Delta}=\varepsilon} f(y+\Delta) - f(y) \ge 0 \quad
     \end{gather}
+    implies
+    the existence of  
+    a global minimum
+    $
+    y^* \in \,\R^n
+    $
+    of $f$
+    satisfying
+    $
+      \norm{y^* - y} \le \varepsilon
+    $.
 \end{lemma}
 \begin{proof}
   Since 
-  $\mathcal{C}:=\left\{ \norm{\Delta}\le C \right\}$
-  is convex
-  $f$ has a local minimum in 
   $
-    y + \mathcal{C}
-    :=
-    \left\{ 
-      y + \Delta \,
-      \mid \,
-      \norm{\Delta}\le C
-    \right\}
-    .
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
   $
+  is convex, it contains a 
+  local minimum  
+  of $f$.
   Suppose towards a contradiction that
   $
-    y^* \in 
-            y + \mathcal{C}
+    y^* 
+    \ 
+    \in 
+    \ 
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
   $
-  is a local minimum, but not a global minimum 
-  and
-  the left-hand side of 
+  is a local minimum, but not a global one, and
   \eqref{7060_0} is true.
   Then it holds
   \begin{gather}
@@ -622,23 +654,46 @@ the primal minimization problem as follows:
     \in 
     \R^n 
     \setminus 
-      y + \mathcal{C}
-    .
+    \left( 
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    \right)
+  \,.
   \end{gather}
-  Furthermore since $y + \mathcal{C}$ is compact and contains $y^*$,
-  the line segment $\mathcal{L}[y^*,x]$ contains a point on the boundary of 
-  $y + \mathcal{C}$, i.e.
+  Furthermore, since 
+  $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+  $ is compact and contains $y^*$,
+  the line segment connecting 
+  $y^*$ and $x$
+  intersects the boundary of 
+  $y + \mathcal{C}$, that is,
+  there exist
+  $
+    \theta \in (0,1)
+  $
+  and 
+  $
+    \Delta_x
+  $
+  with 
+  $
+    \norm{\Delta_x}=\varepsilon
+  $
+  such that
   \begin{gather}
     \label{7060_4}
     \theta x + (1 - \theta) y^* = y + \Delta_x
-    \quad
-    \text{for some}\ 
-    \theta \in (0,1)\ 
-    \text{and}\ 
-    \Delta_x \ 
-    \text{with}\ 
-    \norm{\Delta_x}=C
-    .
+    \,.
   \end{gather}
     It follows
     \begin{align}
@@ -665,17 +720,31 @@ the primal minimization problem as follows:
       \end{split}
     \end{align}
     which is a contradiction.
-    Thus every local minimum of $f$ in $y + \mathcal{C}$ is also a global minimum.
     The first inequality is due to
     $y^*$ being a local minimum of $f$ in
     $
-      y + \mathcal{C},
-    $
-    the second inequality is due to the left-hand side of 
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    $,
+    the second inequality is due to  
     \eqref{7060_0} being true,
     the equality is due to \eqref{7060_4},
     the third inequality is due to the convexity of $f$
     and the strict inequality is due to \eqref{7060_3}.
+    Thus every local minimum of $f$ in
+    $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    $
+    is also a global minimum.
     %It follows the right-hand side of \eqref{7060_0}.
 \end{proof}
 

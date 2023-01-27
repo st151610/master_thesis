@@ -8,13 +8,13 @@
 \contentsline {chapter}{\numberline {2}Convex Analysis}{25}{chapter.2}%
 \contentsline {section}{\numberline {2.1}A Convex Analysis Primer}{25}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Conjugate Calculus and Fenchel-Rockafellar Theorem}{29}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Tseng Bertsekas}{34}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Random Matrix Inequalities}{39}{chapter.3}%
-\contentsline {section}{\numberline {3.1}A Matrix Analysis Primer}{39}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Matrix Khintchin Inequality and Applications}{40}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Generalzed Inequalities by Hermitian Dilation}{42}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Intrinsic Dimension}{44}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Empirical Processes}{47}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A Primer on Empirical Processes}{47}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Simple yet useful Calculations}{49}{chapter.5}%
+\contentsline {section}{\numberline {2.3}Tseng Bertsekas}{33}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Random Matrix Inequalities}{37}{chapter.3}%
+\contentsline {section}{\numberline {3.1}A Matrix Analysis Primer}{37}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Matrix Khintchin Inequality and Applications}{38}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Generalzed Inequalities by Hermitian Dilation}{40}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Intrinsic Dimension}{42}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Empirical Processes}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A Primer on Empirical Processes}{45}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Simple yet useful Calculations}{47}{chapter.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

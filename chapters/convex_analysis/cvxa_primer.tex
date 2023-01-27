@@ -175,7 +175,7 @@ This concept is motivated by the fact that a line segment embedded in $\R^2$
 does have a natural interior in $\R$ which is not a true interior in $\R^2.$
 The relative interior of $C$ is defined as the interior which results when
 $C$ is regarded as a subset of its affine hull.
-\begin{definition}
+\begin{definition*}
   Let 
   $\Omega\subseteq \R^n.$
   We define the \textbf{relative interior} of $\Omega$ by
@@ -197,7 +197,7 @@ $C$ is regarded as a subset of its affine hull.
       \Omega
     \right\}.
   \end{gather}
-\end{definition}
+\end{definition*}
 Next we collect some useful properties of relative interiors.
 \begin{proposition}
   \label{cv:primer:prop}
@@ -482,7 +482,7 @@ Let
  
 We procede with convex separation results which are vital to the subsequent developments.
 
-\begin{definition}
+\begin{definition*}
   Let 
   $C_1$ and $C_2$
   be two non-empty convex sets in $\R^n$. 
@@ -494,30 +494,30 @@ We procede with convex separation results which are vital to the subsequent deve
   \textbf{properly} if 
   $C_1$ and $C_2$
   are not \textit{both} actually contained in $H$ itselef.
-\end{definition}
-\begin{theorem}
-  Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$. 
-  There exists a hyperplane separating
-  $C_1$ and $C_2$
-  properly 
-  if and only if
-  there exists a vector $b\in \R^n$ such that
-  \begin{gather}
-    \sup_{x\in C_2} \inner{x}{b}
-    \le
-    \inf_{x\in C_1} \inner{x}{b}
-    \quad 
-    \text{and}
-    \quad 
-    \inf_{x\in C_2} \inner{x}{b}
-    <
-    \sup_{x\in C_1} \inner{x}{b}
-    .
-  \end{gather}
-\end{theorem}
-\begin{proof}
-  \cite[Theorem~11.1]{Rockafellar1970}
-\end{proof}
+\end{definition*}
+%\begin{theorem}
+%  Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$. 
+%  There exists a hyperplane separating
+%  $C_1$ and $C_2$
+%  properly 
+%  if and only if
+%  there exists a vector $b\in \R^n$ such that
+%  \begin{gather}
+%    \sup_{x\in C_2} \inner{x}{b}
+%    \le
+%    \inf_{x\in C_1} \inner{x}{b}
+%    \quad 
+%    \text{and}
+%    \quad 
+%    \inf_{x\in C_2} \inner{x}{b}
+%    <
+%    \sup_{x\in C_1} \inner{x}{b}
+%    .
+%  \end{gather}
+%\end{theorem}
+%\begin{proof}
+%  \cite[Theorem~11.1]{Rockafellar1970}
+%\end{proof}
 \begin{ftheorem}
   \label{cv:primer:sep}
   \emph{(Convex separation in finite dimension)}
@@ -532,42 +532,57 @@ We procede with convex separation results which are vital to the subsequent deve
 
 
 
-\begin{definition}
+\begin{definition*}
   Given a nonempty subset 
-  $\Omega \subseteq \R^n$
+  $\Omega \subseteq \R^n$,
+  we define
   the \textbf{support function} 
   $
-  \sigma_\Omega : \R^n \to \overline{\R}
   $
   of $\Omega$
-  is defined by
-  \begin{gather}
-    \sigma_\Omega
-    (x^*)
-    :=
+  to be
+  \begin{gather*}
+  \sigma_\Omega 
+  \,
+  :
+  \,
+  \R^n \to\  \overline{\R}
+  \,,
+  \qquad
+  x^*
+  \ 
+  \mapsto
+  \ 
     \sup_{x \in \Omega}
     \ 
-    \inner{x^*}{x}
-    \qquad
-    \text{for}\ 
-    x^* \in \R^n
-    .
-  \end{gather}
-\end{definition}
+    \inner{x^*\!}{x}
+    \,.
+  \end{gather*}
+\end{definition*}
 
 
 \begin{definition}
   Given functions
   $
-    f_i:
-    \R^n \to (-\infty, \infty]
+    f_i\,:\,
+    \R^n \to\  \overline{\R}
   $
-  for $ i = 1, \ldots, m $
-  the \textbf{infimal convolution} of these functions is defined as
-  \begin{gather}
-    (f_1 \square \cdots \square f_m)(x)
+  for $ i = 1, \ldots, m $,
+  we define the \textbf{infimal convolution} of these functions to be
+  \begin{gather*}
+    f_1 \square \cdots \square f_m
     \ 
-    :=
+    \colon
+    \ 
+    \R^n
+    \to
+    \ 
+    \overline{\R}
+    \,,
+    \quad
+    x
+    \ 
+    \mapsto
     \ 
     \inf
     \left\{ 
@@ -584,7 +599,8 @@ We procede with convex separation results which are vital to the subsequent deve
       =
       x
     \right\}
-  \end{gather}
+    \,.
+  \end{gather*}
 \end{definition}
  
 The next result establishes a connection between the support function of the intersection of two convex sets and the infimal convolution of the support functions of the sets taken by themselfes.
