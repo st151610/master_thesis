@@ -1,22 +1,11 @@
 \contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue with paraphrase of \cite [page 20]{Wang2019}}{7}{section*.5}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Improve quality of presentation in order to merge this part with more cultivated sections of the thesis.}{11}{section*.9}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ What solutions were offerd to deal with confounding? Start from propensity scores.}{12}{section*.10}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Formulate improved version with Bernstein.}{14}{section*.11}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Formulate better transition to weights with estimated propensity score.}{14}{section*.12}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Elaborate on assumptions. For example (iii) \cite [§2.7.1]{vaart2013} \cite [§19.9]{Vaart2000} }{14}{section*.13}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of second term.}{16}{section*.15}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Streamline analysis of third term.}{16}{section*.17}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Continue section with rates for right outcome model and then both models right. Do the rates improve?}{16}{section*.18}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Introduce concept of semiparametric efficiency. For the semiparametric efficiency bound of propensity score weighting, \cite {Hahn1998} is a good reference. General introduction to semiparametric models see \cite [§25]{Vaart2000}.}{17}{section*.19}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Give explanation why simple estimates are insufficient. See notes.}{21}{section*.22}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Solve editorial issue with ball.}{25}{section*.23}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Add comment on nomenclature. What is Legendre transformation in this context?}{30}{section*.26}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Include lemma on convex conjugates of indicator functions. This should be straightforward.}{30}{section*.27}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Streamline example. Provide explanaition in the end. Confer \cite [bottom p.337]{Rockafellar1970} }{30}{section*.28}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}{32}{section*.29}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Insert lemma in chapter 1.}{33}{section*.30}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ What does closed mean and does $f$ meet this condition?}{34}{section*.31}%
-\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Read first paper of tseng Bertsekas for equality constraints.}{35}{section*.32}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.80) }{35}{section*.33}%
-\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide details. See notes.}{35}{section*.34}%
-\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Apply to estimate \cite [above (A.4)]{Chen2012} to get intrinsic dimension version of Rosenthal-Pinelis inequality.}{43}{section*.36}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Solve editorial issue with ball.}{11}{section*.9}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Add comment on nomenclature. What is Legendre transformation in this context?}{16}{section*.12}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Include lemma on convex conjugates of indicator functions. This should be straightforward.}{16}{section*.13}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Streamline example. Provide explanaition in the end. Confer \cite [bottom p.337]{Rockafellar1970} }{16}{section*.14}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}{18}{section*.15}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Insert lemma in chapter 1.}{19}{section*.16}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ What does closed mean and does $f$ meet this condition?}{20}{section*.17}%
+\contentsline {todo}{\color@fb@x {}{black}{}{green!40}{\leavevmode {\color {green!40}o}}\ Read first paper of tseng Bertsekas for equality constraints.}{21}{section*.18}%
+\contentsline {todo}{\color@fb@x {}{black}{}{red!40}{\leavevmode {\color {red!40}o}}\ Read and understand proof (p.80) }{21}{section*.19}%
+\contentsline {todo}{\color@fb@x {}{black}{}{orange!40}{\leavevmode {\color {orange!40}o}}\ Provide details. See notes.}{21}{section*.20}%

@@ -308,7 +308,90 @@ it holds
   d_i(p) = 0
   \,.
 \end{alignat*}
-
+Assume towards a contradiction that $d_i(p)>0$ for some 
+$
+  i\in \left\{ 1,\ldots, n \right\}
+$.
+Consider
+the $\mu$ perturbation of $p$ in the $i$-th coordinate, that is,
+\begin{gather}
+  \tilde{p}
+  (\mu)
+  :=
+  p
+  +
+  e_i
+  \cdot
+  \mu
+  \,.
+\end{gather}
+By the continuity of $d_i$ there exists $\mu >0$ such that
+$
+d_i(
+  \tilde{p}
+  (\mu)
+)
+>0$.
+By the concavity of $q$ it follows
+\begin{gather}
+  \label{cv:ts:cs:1}
+  q
+  (
+  \tilde{p}
+  (\mu)
+  )
+  -
+  q(p)
+  \ge
+d_i(
+  \tilde{p}
+  (\mu)
+)
+\cdot
+\mu
+>0
+\,.
+\end{gather}
+Since
+$ 
+  \tilde{p}
+  (\mu)
+  )
+  \ge
+  0
+$
+this is a contradiction to the optimality of $p$ in Problem~\ref{cv:ts:dual}. 
+Thus
+$
+  d_i(p)\le 0
+$
+for all 
+$
+  i\in \left\{ 1,\ldots, n \right\}
+$.
+Now assume that
+$ p_i>0 $ and 
+$
+  d_i(p)< 0
+$
+for some
+$
+  i\in \left\{ 1,\ldots, n \right\}
+$.
+Again, by the 
+continuity of $d_i$ there exists $\mu <0$ such that
+$
+d_i(
+  \tilde{p}
+  (\mu)
+)
+<0$
+and
+$
+p_i+\mu >0
+$.
+But then it follows \eqref{cv:ts:cs:1}.
+We have shown the complementary slackness of $p$ and $d(p)$.
 
 Given an optimal dual solution $p$,
 we may obtain an optimal primal solution from the equation 
