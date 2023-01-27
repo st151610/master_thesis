@@ -562,22 +562,28 @@ We procede with convex separation results which are vital to the subsequent deve
     f_i:
     \R^n \to (-\infty, \infty]
   $
-  for $ i = 1, \ldots, n $
+  for $ i = 1, \ldots, m $
   the \textbf{infimal convolution} of these functions is defined as
   \begin{gather}
-    (f_1 \square \ldots \square f_m)(x)
+    (f_1 \square \cdots \square f_m)(x)
+    \ 
     :=
-    \inf_{
-    \begin{smallmatrix}
-      x_i \in \R^n \\
+    \ 
+    \inf
+    \left\{ 
+    \sum_{i = 1}^{m}
+      f_i(x_i)
+      \ 
+      \colon
+      \ 
+      x_i \in \R^n 
+      \ 
+      \mathrm{and}\ 
       \sum_{i = 1}^{m} 
         x_i
       =
       x
-    \end{smallmatrix}
-    }
-    \sum_{i = 1}^{m}
-      f_i(x_i)
+    \right\}
   \end{gather}
 \end{definition}
  
@@ -585,6 +591,7 @@ The next result establishes a connection between the support function of the int
 The proof translates the geometric concept of convex separation to the world of convex functions.
 
 \begin{lemma}
+  \label{cv:primer:lem}
   Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$.
   For any
   $ x^* \in \mathrm{dom}\, \sigma_{C_1\cap C_2} $
@@ -661,7 +668,7 @@ The proof translates the geometric concept of convex separation to the world of 
     \,
     :
     \,
-    C_2\times\,  \R 
+    \R^n\times\,  \R 
     \ 
     \to
     \ 
@@ -682,6 +689,11 @@ The proof translates the geometric concept of convex separation to the world of 
     \ 
     =
     \ 
+    (
+    C_2\!\times\R
+    )
+    \ 
+    \cap
     \ 
     L^{\!-1}
     [\,\alpha,\infty)
@@ -818,21 +830,21 @@ The proof translates the geometric concept of convex separation to the world of 
 \end{proof}
 
 
-\begin{ftheorem}
+\begin{theorem*}
   Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$ with
-  $\mathrm{ri}(C_1)\cap\mathrm{ri}(C_2)\neq\emptyset.$
+  $\mathrm{ri}\,C_1\cap\mathrm{ri}\,C_2\neq\emptyset.$
   Then the support function of the intersection 
   $
-    C_1 \cap C_2
+    C_1\! \cap C_2
   $
   is represented as
   \begin{gather}
     (\sigma_{
-    C_1 \cap C_2
+    C_1 \cap\, C_2
     })
     (x^*)
     =
-    (\sigma_{C_1}\square \sigma_{C_2})
+    (\sigma_{C_1}\square \,\sigma_{C_2})
     (x^*)
     \qquad
     \text{for all}\ 
@@ -842,7 +854,7 @@ The proof translates the geometric concept of convex separation to the world of 
   $
   x^*\in \mathrm{dom}
     (\sigma_{
-    C_1 \cap C_2
+    C_1 \cap\, C_2
     })
   $
   there exist dual elements 
@@ -863,7 +875,7 @@ The proof translates the geometric concept of convex separation to the world of 
   and
   \begin{gather}
     (\sigma_{
-    C_1 \cap C_2
+    C_1 \cap\, C_2
     })
     (x^*)
     =
@@ -871,178 +883,11 @@ The proof translates the geometric concept of convex separation to the world of 
     +
     \sigma_{C_2}(x_2^*).
   \end{gather}
-\end{ftheorem}
+\end{theorem*}
 \begin{proof}
-  \emph{\cite[Theorem~4.23]{Mordukhovich2022}}
-  We want to use results on convex separation. To make the geometric property of convex separation fruitful
-  to our purpose we consider two special sets. We will verify that these sets meet the requirements for convex separation, i.e., that they are convex and the intersection of their relative interiors is empty. The rest of the proof is as in the cited reference at the beginning of the proof.
-  To this end, consider 
-  the sets
-  \todo[color=green!40,inline]{Simplify proof with properties of relative interiors.}
-  Clearly, $\Theta_1$ is convex by the convexity of $C_1$.
-   Next we show that the relative interiors of 
-  $\Theta_1$ and $\Theta_2$
-  do not intersect, i.e.,
-  ~$
-  \mathrm{ri}\,\Theta_1\cap\mathrm{ri}\,\Theta_2=\emptyset.
-  $
-  First note that
-  \begin{gather}
-    \mathrm{ri}(\Theta_1)
-    =
-    \mathrm{ri}(C_1)
-    \times
-    \mathrm{ri}([0,\infty))
-    \subseteq
-    \mathrm{ri}(C_1)
-    \times
-    (0,\infty).
-  \end{gather}
-  Indeed, if 
-  $
-    0\in
-    \mathrm{ri}([0,\infty))
-  $
-  then there exists $t>0$ such that $-tx\ge 0$ for some $x>0.$ A contradiction.
-  Furthermore
-\begin{gather}
-  \mathrm{ri}(\Theta_2)
-  \subseteq
-    \left\{ 
-      (x,\lambda)\in \R^n
-      \colon
-      x \in \mathrm{ri}(C_2) 
-      \ 
-      \text{and}
-      \ 
-      \lambda
-      <
-      \inner{x^*}{x} - \alpha
-    \right\}.
-\end{gather}
-To see this, assume there is 
-$
-(x,\lambda)
-\in \mathrm{ri}(\Theta_2)
-$
-with
-$
-      \lambda
-      =
-      \inner{x^*}{x} - \alpha
-      .
-$
-Then for some 
-$
-  (y,\mu)
-  \in \Theta_2
-$
-with
-$
-      \mu    
-      <
-      \inner{x^*}{y} - \alpha
-$
-there exists $t>0$ such that 
-$
-  (x,\lambda)
-  +
-  t
-  (
-  (x,\lambda)
-  -
-  (y,\mu)
-  )
-  \in \Theta_2.
-$
-It follows
-\begin{align}
-  0
-  \le
-  (1+t)(\inner{x^*}{x}-\alpha -\lambda)
-  +
-  t
-  (
-    \mu 
-    -\inner{x^*}{y}
-    +
-    \alpha
-  )
-  <0
-,
-\end{align}
-a contradiction.
-The first inequality is due to 
-$
-  (x,\lambda)
-  +
-  t
-  (
-  (x,\lambda)
-  -
-  (y,\mu)
-  )
-  \in \Theta_2
-$
-and the second inequality due to
-$
-      \mu    
-      <
-      \inner{x^*}{y} - \alpha
-$
-and
-$
-      \lambda
-      =
-      \inner{x^*}{x} - \alpha
-      .
-$
-But then 
-$
-\mathrm{ri}(\Theta_1)\cap\mathrm{ri}(\Theta_2)=\emptyset
-.
-$
-Indeed, suppose that there exists 
-$
-  (x,\lambda)
-  \in
-  \mathrm{ri}(\Theta_1)\cap\mathrm{ri}(\Theta_2)
-  .
-$
-Then it holds
-$
-  \inner{x^*}{x}
-  -
-  \alpha
-  \le
-  0
-$
-and $\lambda>0$
-since 
-$
- x
- \in
-  \mathrm{ri}(C_1)\cap\mathrm{ri}(C_2)
-  \subseteq
-  C_1\cap C_2.
-$
-On the other hand
-\begin{gather}
-  0
-  <
-  \lambda
-  <
-  \inner{x^*}{x}
-  -
-  \alpha
-  \le
-  0
-  ,
-\end{gather}
-a contradiction.
-
-Thus, convex separation is applicable. Confer \cite[Theorem 4.23]{Mordukhovich2022}
-about the rest of the proof.
+  Using Lemma~\ref{cv:primer:lem}
+  the rest of the proof is as that of
+  \emph{\cite[Theorem~4.23(b)]{Mordukhovich2022}}.
 \end{proof}
 
 \begin{takeaways}
