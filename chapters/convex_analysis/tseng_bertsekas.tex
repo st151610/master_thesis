@@ -127,13 +127,12 @@ $f^*$ and $q$ are continuously differentiable~(cf.\cite[Theorem~26.3]{Rockafella
 
 We will denote the gradient of $q$ at $p$ by $d(p)$
 and its $i$th coordinate by $d_i(p).$
-Since $q$ is continuously differentiable, $d_i(p)$ is continuous, 
-and since $q$ is concave, 
-$d_i(p)$ as nonincreasing in $p_i.$
+Since $q$ is continuously differentiable, $d_i(p)$ is continuous.
 
-By differentiating and by using the chain rule, 
+By differentiating and using the chain rule, 
 we obtain the dual cost gradient
 \begin{gather}
+  \label{cv:ts:1}
   d(p)=b-\mathbf{A}x,
   \quad
   \text{where}
@@ -152,12 +151,10 @@ we obtain the dual cost gradient
   - f(\xi)
   .
 \end{gather}
-\todo[color=green!40, inline]{Read first paper of tseng Bertsekas for equality constraints.}
 The last equality follows from Danskin's Theorem and \cite[Theorem~23.5]{Rockafellar1970}
 
 
-\todo[color=red!40,inline]{Read and understand proof (p.80) }
-\begin{proposition}
+\begin{proposition*}
   \emph{(Danskin's Theorem \cite[page 649]{Bertsekas2003})}
   Let 
   $
@@ -246,40 +243,18 @@ The last equality follows from Danskin's Theorem and \cite[Theorem~23.5]{Rockafe
     (\partial \phi / \partial x_i)
     (x,\overline{z})
   $
-\end{proposition}
-
+\end{proposition*}
 Note that $x$ is the unique vector satisfying 
 \begin{gather}
-  \mathbf{A}p
+  \mathbf{A}^\top p
   \in 
   \partial
   f(x)
-  .
+  \,.
 \end{gather}
-From the optimality conditions for $(D)$ it follows that 
-a dual vector is an optimal solution of $(D)$
-if and only if 
-\begin{gather}
-  p
-  =
-  [p + d(p)]^+
-  ,
-\end{gather}
-where $[\ \cdot \ ]^+$ is the projection onto the positive orthant, i.e.,
-$
-  [y]^+
-  =
-  [
-    0 \lor y_1,
-    \ldots
-    0 \lor y_n,
-  ]
-  ^\top
-  .
-$
-\todo[color=orange!40,inline]{Provide details. See notes.}
 
-
+In the following let $p$ be an optimal solution to 
+Problem~\ref{cv:ts:dual}.
 \subsection*{Complementary Slackness}
 We show that for all 
 $
@@ -393,48 +368,50 @@ $.
 But then it follows \eqref{cv:ts:cs:1}.
 We have shown the complementary slackness of $p$ and $d(p)$.
 
-Given an optimal dual solution $p$,
-we may obtain an optimal primal solution from the equation 
-$
-  x=
-  \nabla
-  f^*
-  (
-    \mathbf{A}^\top
-    p
-  )
-.
-$
-To see this, 
-note that 
- \begin{gather}
-   \mathbf{A}x \ge b
-   \quad
-   \text{and}
-   \quad
-   p_i 
-   =
-   0
-   \quad 
-   \text{for all}
-   \ 
-   i
-   \ 
-   \text{such that}
-   \quad 
-   \sum_{j=1}^{m} 
-   a_{ij}
-   x_j
-   >
-   b_i
-   .
- \end{gather}
-
- We can show that $p$ and $x$ satisfy the KKT conditions and thus $x$ is an optimal solution to $(P)$.
-
-n 
-
-\begin{definition}
+To obtain the primal solution by a dual solution we use results
+of Karush-Kuhn-Tucker.
+%Given an optimal dual solution $p$,
+%we may obtain an optimal primal solution from the equation 
+%$
+%  x=
+%  \nabla
+%  f^*
+%  (
+%    \mathbf{A}^\top
+%    p
+%  )
+%.
+%$
+%To see this, 
+%note that 
+% \begin{gather}
+%   \mathbf{A}x \ge b
+%   \quad
+%   \text{and}
+%   \quad
+%   p_i 
+%   =
+%   0
+%   \quad 
+%   \text{for all}
+%   \ 
+%   i
+%   \ 
+%   \text{such that}
+%   \quad 
+%   \sum_{j=1}^{m} 
+%   a_{ij}
+%   x_j
+%   >
+%   b_i
+%   .
+% \end{gather}
+%
+% We can show that $p$ and $x$ satisfy the KKT conditions and thus $x$ is an optimal solution to $(P)$.
+%
+%n 
+%
+\begin{definition*}
   \emph{\cite[§28]{Rockafellar1970}}
   By an \textbf{ordinary convex program}
   $(P)$
@@ -449,47 +426,48 @@ subject to the constraints
   f_1(x)\le 0,
   \ldots,
   f_r(x)\le 0,
-  \qquad
-  f_{r+1}(x)= 0,
-  \ldots,
-  f_m(x)= 0,
+%  \qquad
+%  f_{r+1}(x)= 0,
+%  \ldots,
+%  f_m(x)= 0,
 \end{gather}
 where $C\subseteq \R^n$
-is a non-empty convex set,
-$f_i$ is a finite convex function on $C$ for $i\in \left\{ 1,\ldots,r \right\}$
- and 
- $f_i$ is an affine function on $C$ for $i\in \left\{ r+1, \ldots, m \right\}.$
-\end{definition}
+is a non-empty convex set and
+$f_i$ is a finite convex function on $C$ for $i\in \left\{ 1,\ldots,r \right\}$.
+% and 
+% $f_i$ is an affine function on $C$ for $i\in \left\{ r+1, \ldots, m \right\}.$
+\end{definition*}
 
-\begin{definition}
-  We define 
-  $
-    [\lambda_1, \ldots, \lambda_m]\in \R^m
-  $
-  to be a \textbf{Karush-Kuhn-Tucker (KKT) vector}
-  for $(P)$, if
-  \begin{enumerate}[label={(\roman*)}]
-    \item
-      $
-        \lambda_i \ge 0
-        \ 
-        \text{for all}
-        \ 
-        i\in \left\{ 1,\ldots,r \right\}.
-      $
-    \item
-      The infimum of the proper convex function 
-      $
-        f_0
-        +
-        \sum_{i=1}^{m}
-        \lambda_1 f_i
-      $
-      is finite and equal to the optimal value in $(P).$
-  \end{enumerate}
-\end{definition}
-
+%\begin{definition}
+%  We define 
+%  $
+%    [\lambda_1, \ldots, \lambda_m]\in \R^m
+%  $
+%  to be a \textbf{Karush-Kuhn-Tucker (KKT) vector}
+%  for $(P)$, if
+%  \begin{enumerate}[label={(\roman*)}]
+%    \item
+%      $
+%        \lambda_i \ge 0
+%        \ 
+%        \text{for all}
+%        \ 
+%        i\in \left\{ 1,\ldots,r \right\}.
+%      $
+%    \item
+%      The infimum of the proper convex function 
+%      $
+%        f_0
+%        +
+%        \sum_{i=1}^{m}
+%        \lambda_1 f_i
+%      $
+%      is finite and equal to the optimal value in $(P).$
+%  \end{enumerate}
+%\end{definition}
+%
 \begin{ftheorem}
+  \label{cv:ts:kkt}
   \emph{(Karush-Kuhn-Tucker conditions)}
   Let $(P)$
   be an ordinary convex program,
@@ -503,16 +481,16 @@ $f_i$ is a finite convex function on $C$ for $i\in \left\{ 1,\ldots,r \right\}$
    \in \R^n.
    $
    Then 
-   $
-  \overline{\alpha}
-   $
-   is a KKT vector for $(P)$
-   and 
+%   $
+%  \overline{\alpha}
+%   $
+%   is a KKT vector for $(P)$
+%   and 
    $
    \overline{z}
    $
    is an optimal solution to $(P)$
-   if and only if 
+   if  
    $
    \overline{z}
    $
@@ -545,20 +523,19 @@ $f_i$ is a finite convex function on $C$ for $i\in \left\{ 1,\ldots,r \right\}$
         \text{for all}
         \ 
         i\in \left\{ 1, \ldots, r \right\}
-        .
-      $
-      \item
-        $
-        f_i(
-   \overline{z}
-        )
-        =0
-        \ 
-        \text{for}
-        \ 
-        i\in \left\{ r+1, \ldots, m \right\}
-        .
-        $
+      $.
+%      \item
+%        $
+%        f_i(
+%   \overline{z}
+%        )
+%        =0
+%        \ 
+%        \text{for}
+%        \ 
+%        i\in \left\{ r+1, \ldots, m \right\}
+%        .
+%        $
       \item
         $
          0
@@ -584,7 +561,117 @@ $f_i$ is a finite convex function on $C$ for $i\in \left\{ 1,\ldots,r \right\}$
 \begin{proof}
   \cite[Theorem~28.3]{Rockafellar1970}
 \end{proof}
-
+\subsubsection*{Karush-Kuhn-Tucker conditions}
+Problem~\ref{cv:ts:primal} is an ordinary convex program with
+$
+f_0=f
+$
+and
+$
+f_i(x)
+=
+ b_i
+ -
+\sum_{j=1}^{n} 
+a_{ij}x_j
+$.
+From \eqref{cv:ts:1}
+it follows
+$
+f_i(x)=d_i(p)\le 0
+$.
+From the complementary slackness it follows
+$
+p_i\cdot f_i(x)=p_i \cdot d_i(p)= 0
+$.
+Let $x^* \in \R^n$.
+It holds
+\begin{align}
+  \inner
+  {
+    - \mathbf{A}^\top
+    e_i
+  }
+  {
+    x^*-x
+  }
+  =
+  \inner{e_i}
+  {
+    \mathbf{A}
+    x
+  }
+  -
+  \inner{e_i}
+  {
+    \mathbf{A}
+    x^*
+  }
+  =
+  f_i(x^*)
+  -
+  f_i(x)
+  \,.
+\end{align}
+Thus 
+$
+    - \mathbf{A}^\top
+    e_i
+$
+is a subgradient of $f_i$ at $x$, that is,
+$
+    - \mathbf{A}^\top
+    e_i
+    \in
+    \partial
+    f_i(x)
+$.
+By 
+$
+    \mathbf{A}^\top p
+    \in
+    \partial
+    f(x)
+$
+it follows
+\begin{gather}
+  0
+  =
+    \mathbf{A}^\top p
+    -
+    \sum_{p_i\neq 0} 
+    p_i 
+     \mathbf{A}^\top
+     e_i
+     \in
+         [
+          \partial
+        f_0(
+   \overline{x}
+        )
+        +
+        \sum_{p_i\neq 0}
+        p_i 
+        \partial
+        f_i(
+   \overline{x}
+        )
+         ]
+         \,.
+\end{gather}
+Thus, by Theorem~\ref{cv:ts:kkt}, 
+\begin{gather}
+x=
+  \nabla
+  f^*
+  (
+    \mathbf{A}^\top
+    p
+  )
+\end{gather}
+is an optimal solution to Problem~\ref{cv:ts:primal}. 
+Since
+$f$ is strictly convex, this solution is the only one.
 \begin{takeaways}
   Employing the Karush-Kuhn-Tucker conditions, we
   derive a dual relationship between optimal solutions
