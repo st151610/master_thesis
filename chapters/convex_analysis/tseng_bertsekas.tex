@@ -177,34 +177,34 @@ The last equality follows from Danskin's Theorem and \cite[Theorem~23.5]{Rockafe
   $
     z \in Z.
   $
-  Then the function 
+  Consider the function
   \begin{gather}
-    f:\R^n \to \R
+    f^*:\R^n \to \R
     ,
     \qquad
     x\mapsto
     \sup_{z\in Z}
     \phi(x,z)
   \end{gather}
-  is convex and has directional derivative given by
-  \begin{gather}
-    f^{'}(x;y)
-    =
-    \sup_{z \in Z(x)}
-    \phi^{'}(x,z; y)
-    ,
-  \end{gather}
-  where 
-  $
-    \phi^{'}(x,z; y)
-  $
-  is the directional derivative of the function 
-  $
-    \phi(\cdot,z)
-  $
-  at
-  $x$ in the direction $y,$
   and
+  the set.
+%  \begin{gather}
+%    f^{'}(x;y)
+%    =
+%    \sup_{z \in Z(x)}
+%    \phi^{'}(x,z; y)
+%    ,
+%  \end{gather}
+%  where 
+%  $
+%    \phi^{'}(x,z; y)
+%  $
+%  is the directional derivative of the function 
+%  $
+%    \phi(\cdot,z)
+%  $
+%  at
+%  $x$ in the direction $y,$
   \begin{gather}
     Z(x)
     :=
@@ -213,26 +213,24 @@ The last equality follows from Danskin's Theorem and \cite[Theorem~23.5]{Rockafe
       \colon
       \phi(x, \overline{z})
       =
-    \sup_{z\in Z}
-    \phi(x,z)
+      f^*(x)
   \right\}
   .
   \end{gather}
-  In particular, if $Z(x)$ consists of a unique point 
+  If $Z(x)$ consists of a unique point 
   $\overline{z}$
   and
   $
     \phi(\cdot, \overline{z})
   $
   is differentiable at $x,$
-  and 
-  $
-    \nabla f(x)
+  then
+  \begin{gather}
+    \nabla f^*(x)
     =
     \nabla_x
     \phi(x,\overline{z})
-    ,
-  $
+  \end{gather}
   where 
   $
     \nabla_x
@@ -242,8 +240,52 @@ The last equality follows from Danskin's Theorem and \cite[Theorem~23.5]{Rockafe
   $
     (\partial \phi / \partial x_i)
     (x,\overline{z})
-  $
+  $.
 \end{proposition*}
+\begin{example*}
+  We choose $f^*$ to be the convex conjugate of $f$, that is,
+  \begin{gather}
+    f^*(t)
+    =
+    \sup_{x\in\R^n}
+    \inner{x}{t}-f(x)
+    \,,
+  \end{gather}
+  and accordingly
+  \begin{gather}
+    \phi
+    (t,x)
+    =
+    \inner{x}{t}-f(x)
+    \,.
+  \end{gather}
+  By the strict convexity of $f$ there exists a unique
+  global maximum $\overline{z}$ of $\phi(t,\cdot)$. 
+  Since $f^*$ is differentiable by Theorem
+  it follows from the Proposition
+  \begin{gather}
+    \nabla f^*(\mathbf{A}^\top p)
+    =
+    \nabla_{\mathbf{A}^\top p}
+\left( 
+    \inner
+    {
+      \mathbf{A}^\top p
+    }
+    {
+      \overline{z}
+    }
+    -
+    f
+    (
+      \overline{z}
+    )
+\right)
+=
+      \overline{z}
+      \,.
+  \end{gather}
+\end{example*}
 Note that $x$ is the unique vector satisfying 
 \begin{gather}
   \mathbf{A}^\top p
@@ -252,6 +294,35 @@ Note that $x$ is the unique vector satisfying
   f(x)
   \,.
 \end{gather}
+Indeed
+\begin{gather}
+  \inner
+  {\mathbf{A}^\top p}
+  {x^*- x}
+  -
+  f(x^*)
+  +
+  f(x)
+  =
+  \inner{p}
+  {\mathbf{A}x^*}
+  -
+  f(x^*)
+  \ 
+  -
+  \ 
+  \inner{p}
+  {\mathbf{A}x}
+  -
+  f(x)
+  \le 
+  0
+\end{gather}
+for all
+$x^*\in \R^n$.
+
+Confer \cite[Theorem 23.5]{Rockafellar1970}
+for the last result.
 
 In the following let $p$ be an optimal solution to 
 Problem~\ref{cv:ts:dual}.
