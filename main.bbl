@@ -1,5 +1,11 @@
 \begin{thebibliography}{GKKW02}
 
+\bibitem[Ber09]{Bertsekas2009}
+D.~Bertsekas.
+\newblock {\em Convex {{Optimization Theory}}}.
+\newblock Athena {{Scientific}} Optimization and Computation Series. {Athena
+  Scientific}, 2009.
+
 \bibitem[BT03]{Bertsekas2003}
 Dimitri~P. Bertsekas and John~N. Tsitsiklis.
 \newblock Parallel and {{Distributed Computation}}:{{Numerical Methods}}.

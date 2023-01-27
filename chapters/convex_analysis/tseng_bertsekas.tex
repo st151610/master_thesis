@@ -117,13 +117,16 @@ Furthermore, strong duality holds for $(P)$ and $(D)$,
 that is, they have the same optimal value.
 
 Since $f^*$ is real-valued and $f$ is strictly convex, 
-$f^*$ and $q$ are continuously differentiable~(cf.\cite[Theorem~26.3]{Rockafellar1970}).
+$f^*$ and $q$ are continuously differentiable~().
 \begin{theorem*}
-  \emph{}
   A closed proper convex function is strictly convex
   if and only if its conjugate is continuously differentiable.
 \end{theorem*}
-\todo[color=green!40, inline]{What does closed mean and does $f$ meet this condition?}
+\begin{proof}
+  cf.\cite[Theorem~26.3]{Rockafellar1970}
+semicontinuous and cofinite is closed
+\cite[Proposition~1.1.3]{Bertsekas2009}
+\end{proof}
 
 We will denote the gradient of $q$ at $p$ by $d(p)$
 and its $i$th coordinate by $d_i(p).$
@@ -144,12 +147,7 @@ we obtain the dual cost gradient
     \mathbf{A}^\top
     p
   )
-  =
-  \mathrm{argsup}
-  _{\xi \in \R^m}
-  \inner{p}{\mathbf{A}\xi}
-  - f(\xi)
-  .
+  \,.
 \end{gather}
 The last equality follows from Danskin's Theorem and \cite[Theorem~23.5]{Rockafellar1970}
 
@@ -242,6 +240,18 @@ The last equality follows from Danskin's Theorem and \cite[Theorem~23.5]{Rockafe
     (x,\overline{z})
   $.
 \end{proposition*}
+\begin{theorem*}
+   For any proper convex function $f$ and any vector $x$, 
+   it holds $t\in \partial f(x)$ 
+   if and only if 
+   $
+   \inner
+   {\cdot}{t}
+   -
+   f(\cdot)
+   $
+   achieves its supremum at $x$.
+\end{theorem*}
 \begin{example*}
   We choose $f^*$ to be the convex conjugate of $f$, that is,
   \begin{gather}
@@ -285,44 +295,18 @@ The last equality follows from Danskin's Theorem and \cite[Theorem~23.5]{Rockafe
       \overline{z}
       \,.
   \end{gather}
-\end{example*}
-Note that $x$ is the unique vector satisfying 
+  Then by Theorem it follows
 \begin{gather}
   \mathbf{A}^\top p
   \in 
   \partial
-  f(x)
+    f
+    (
+      \overline{z}
+    )
   \,.
 \end{gather}
-Indeed
-\begin{gather}
-  \inner
-  {\mathbf{A}^\top p}
-  {x^*- x}
-  -
-  f(x^*)
-  +
-  f(x)
-  =
-  \inner{p}
-  {\mathbf{A}x^*}
-  -
-  f(x^*)
-  \ 
-  -
-  \ 
-  \inner{p}
-  {\mathbf{A}x}
-  -
-  f(x)
-  \le 
-  0
-\end{gather}
-for all
-$x^*\in \R^n$.
-
-Confer \cite[Theorem 23.5]{Rockafellar1970}
-for the last result.
+\end{example*}
 
 In the following let $p$ be an optimal solution to 
 Problem~\ref{cv:ts:dual}.
