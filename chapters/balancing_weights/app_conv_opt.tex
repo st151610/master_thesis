@@ -593,7 +593,118 @@ The corresponding dual problem in \cite{Tseng1991} is then
       \lambda_n^-
     \end{bmatrix}
     ^\top
+    \,.
   \end{gather}
+  To illustrate the procedure, we show
+
+
+\begin{alignat*}{2}
+  \text{either}
+  &
+  &&
+  \qquad
+      \lambda_0^+ > 0
+  \\
+  \text{or}
+  &
+  &&
+  \qquad
+      \lambda_0^- > 0
+  \,.
+\end{alignat*}
+Assume towards a contradiction that both
+$
+      \lambda_0^+ > 0
+$
+and
+$
+      \lambda_0^- > 0
+$ 
+and that 
+$\lambda$ is optimal.
+Consider
+  \begin{gather}
+    \tilde{\lambda}
+    :=
+    \begin{bmatrix}
+      \rho_1,
+      \ldots,
+      \rho_n,
+      \ 
+      \lambda_0^+
+      -
+      (
+      \lambda_0^+
+      \land
+      \lambda_0^-
+      ),
+      \lambda_0^-
+      -
+      (
+      \lambda_0^+
+      \land
+      \lambda_0^-
+      ),
+      \ 
+      \lambda_1^+,
+      \ldots,
+      \lambda_n^+,
+      \ 
+      \lambda_1^-,
+      \ldots,
+      \lambda_n^-
+    \end{bmatrix}
+    ^\top
+    \,.
+  \end{gather}
+  Since 
+  $
+      \lambda_0^\pm
+      -
+      (
+      \lambda_0^+
+      \land
+      \lambda_0^-
+      )
+      \ge 
+      0
+  $,
+  the perturbed vector $\tilde{\lambda}$ is in the domain of the 
+  optimization problem.
+  But 
+  $
+  G(\tilde{\lambda})
+  -
+  G(\lambda)
+  >0
+  $,
+  which contradicts the optimality of $\lambda$.
+  Likewise we can show
+\begin{alignat*}{2}
+  \text{either}
+  &
+  &&
+  \qquad
+      \lambda_i^+ > 0
+  \\
+  \text{or}
+  &
+  &&
+  \qquad
+      \lambda_i^- > 0
+  \,.
+\end{alignat*}
+But then 
+$
+\lambda^\pm_i
+\ge 0
+$
+collapses to
+$
+\lambda_i\in \R
+$ 
+for 
+$i\in \left\{ 0,\ldots,n \right\}$.
   \end{proof}
 
 \todo[color=red!40, inline]{Continue with paraphrase of \cite[page 20]{Wang2019}}
