@@ -412,13 +412,9 @@ together with
 
   \end{lemma}
   \begin{proof}
-    First we disentangle the box constraints.
+    First we disentangle the constraints.
     To this end, we get
     \begin{gather*}
-    \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
-    \qquad
-    \sum_{i = 1}^{n} T_i f(w_i)
-    \\
       \pm\,\sum_{i = 1}^{n} w_i T_i B_k(X_i)
       \ 
       \ge
@@ -448,12 +444,18 @@ together with
 \end{gather*}
 where
 \begin{align*}
-    \mathbf{Q}
+    T\mathbf{Q}
     &
     \ 
     :=
     \ 
     \begin{bmatrix}
+      \mathrm{diag}
+      [T_1,\ldots,T_n]
+      \\
+      \pm
+      [T_1,\ldots,T_n]
+      \\
       \pm\,T\mathbf{B}(\mathbf{X})
     \end{bmatrix}
     ,
@@ -474,6 +476,10 @@ where
     :=
     \ 
     \begin{bmatrix}
+      0_n
+      \\
+      \pm n
+      \\
       -n\cdot\delta 
       \pm\,
       \sum_{i = 1}^{n} B_k(X_i)
@@ -498,44 +504,96 @@ where
     \infty,& \text{else}\,.
   \end{cases}
 \end{gather*}
-Note that
+Note that the $i$-th column of $T\mathbf{Q}$ vanishes if 
+$T_i=0$. Likewise, in the columns with $T_i=1$ we can ommit $T_i$.
+In the ts chapter, the dual problem features
+\begin{gather}
+  f^*(A^\top p)
+\end{gather}
+which by example is here
 \begin{gather*}
+  \sum_{T_i=1} T_i f^*(T\mathbf{Q}_{\bullet i}^\top\lambda)
+  +
   \sum_{T_i=0} 
   \delta_{\left\{ 0 \right\}}
-  (
-  T_i \cdot \inner{B(X_i)}{\lambda}
-  )
+(T\mathbf{Q}_{\bullet i}^\top\lambda)
   =
-  0
-  \,.
+  \sum_{i=1}^n T_i f^*(\mathbf{Q}_{\bullet i}^\top\lambda)
+  \,,
 \end{gather*}
+where
+\begin{align*}
+    \mathbf{Q}
+    &
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      \mathbf{I}_n
+      \\
+      \pm
+      \mathrm{1}_n
+      \\
+      \pm\,\mathbf{B}(\mathbf{X})
+    \end{bmatrix}
+    \\
+    \mathbf{B}(\mathbf{X})
+    &
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      B(X_1), \ldots, B(X_n)
+    \end{bmatrix}
+\end{align*}
+
 
 The corresponding dual problem in \cite{Tseng1991} is then
 \begin{gather*}
   \underset
   {\lambda_1,\ldots,\lambda_{K}\ge 0}
   {
-  \mathrm{minimize}
+  \mathrm{maximize}
   }
   \quad
+  -
   \sum_{i=1} 
   ^n
   T_i
   \cdot
   f^*
-  (
-  T_i \cdot\inner{B(X_i)}{\lambda}
-  )
-  -
-  \inner{B(X_i)}{\lambda}
+(\mathbf{Q}_{\bullet i}^\top\lambda)
   \ 
   +
   \ 
   n\inner{\lambda}{d}
   \,.
 \end{gather*}
-  If we keep only the outer $T_i$ and divide by $1/n$ the problem remains the same.
-  This concludes the proof.
+  $1/n$ the problem remains the same.
+
+  Next we want to remove the non-negativity constraints on $\lambda$.
+  To this end we write
+  \begin{gather}
+    \lambda
+    :=
+    \begin{bmatrix}
+      \rho_1,
+      \ldots,
+      \rho_n,
+      \ 
+      \lambda_0^+,
+      \lambda_0^-,
+      \ 
+      \lambda_1^+,
+      \ldots,
+      \lambda_n^+,
+      \ 
+      \lambda_1^-,
+      \ldots,
+      \lambda_n^-
+    \end{bmatrix}
+    ^\top
+  \end{gather}
   \end{proof}
 
 \todo[color=red!40, inline]{Continue with paraphrase of \cite[page 20]{Wang2019}}
