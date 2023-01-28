@@ -625,7 +625,6 @@ The corresponding dual problem in \cite{Tseng1991} is then
 \inner
 {B(X_i)}
 {\lambda^+ \!- \lambda^-}
-\ 
   \right)
   \\
   &+
@@ -794,14 +793,219 @@ $
 \lambda_i\in \R
 $ 
 for 
-$i\in \left\{ 0,\ldots,n \right\}$.
-
+$i\in \left\{ 0,\ldots,n \right\}$, that is,
+$ \lambda_i=\lambda_i^+\!-\lambda_i^- $.
+Note that
+$ |\lambda_i|=\lambda_i^+\!+\lambda_i^- $.
+Likewise we can see, that 
+$
+\lambda_0
+=
+\lambda_0^+
+-
+\lambda_0^-
+\in \R
+$
+removes the constraint on $\lambda_0^\pm$.
+Let us take this into account for $G$. We get
+  \begin{align*}
+    G
+    (
+    \rho,
+    \lambda_0,
+    \lambda
+    )
+    =
+  &-
+  \sum_{i=1} 
+  ^n
+  T_i
+  \cdot
+  f^*
+  \left( 
+\rho_i
+\ 
++
+\ 
+\lambda_0
+\ 
++
+\ 
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \\
+  &+
+  \ 
+  n
+  \cdot
+\lambda_0
+  \ 
++
+  \ 
+\inner
+{B(X_i)}
+{\lambda}
+  \ 
+-
+  \ 
+  n
+  \cdot
+\inner
+{\delta}
+{|\lambda|}
+\,.
+  \end{align*}
+Next we show, that $\rho=0$.
+Suppose there exists 
+$
+i\in \left\{ 1,\ldots, n \right\}
+$
+such that 
+$
+\rho_i>0
+$
+and
+$
+  T_i
+  \cdot
+  (f^{'})^{-1}
+  \left( 
+\rho_i
+\ 
++
+\ 
+\lambda_0
+\ 
++
+\ 
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  <
+  0
+$.
+It follows
+\begin{gather}
+  G(0,\lambda_0,\lambda)
+  -
+  G(\rho_i,\lambda_0,\lambda)
+  \ge
+  T_i
+  \cdot
+  (f^{'})^{-1}
+  \left( 
+\rho_i
+\ 
++
+\ 
+\lambda_0
+\ 
++
+\ 
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+(-\rho_i)
+>0,
+\end{gather}
+which contradicts the optimality of $\lambda$.
+Suppose
+$
+  T_i
+  \cdot
+  (f^{'})^{-1}
+  \left( 
+\rho_i
+\ 
++
+\ 
+\lambda_0
+\ 
++
+\ 
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  >
+  0
+$.
+Then the claim yields to a perturbation argument as in ts.
+Thus
 To eliminate the constraints for $\rho$ 
 we use a similar argument as in the complementary slackness
 section of the ts chapter.
+Thus we have complementary slackness of 
+$\rho_i$ and
+$
+  T_i
+  \cdot
+  (f^{'})^{-1}
+  \left( 
+\rho_i
+\ 
++
+\ 
+\lambda_0
+\ 
++
+\ 
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+$.
+But then
+every
+optimal solution $\lambda$ remains optimal by taking $\rho=0$.
+
+Dividing the optimization problem by $n$ and reversing it, we get
+
+\begin{gather*}
+  \underset
+  {\lambda_0,\ldots,\lambda_{n}\in \R}
+  {
+    \mathrm{minimize}
+  }
+  \quad
+  \frac{1}{n}
+\sum_{i=1} 
+  ^n
+  \left[ 
+  T_i
+  \cdot
+  f^*
+  \left( 
+\lambda_0
+\ 
++
+\ 
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  -
+\inner
+{B(X_i)}
+{\lambda}
+  \right]
+\ 
+-
+\lambda_0
+  \ 
++
+\inner
+{\delta}
+{|\lambda|}
+  \,.
+\end{gather*}
   \end{proof}
 
-\todo[color=red!40, inline]{Continue with paraphrase of \cite[page 20]{Wang2019}}
+  \todo[color=red!40, inline]{What to do about intercept $\lambda_0$?}
 %%%%%%%%%%%
 %%%% λ %%%%
 %%%%%%%%%%%
