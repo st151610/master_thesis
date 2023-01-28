@@ -624,7 +624,7 @@ The corresponding dual problem in \cite{Tseng1991} is then
 \ 
 \inner
 {B(X_i)}
-{\lambda^+ \!- \lambda^-}
+{\,\lambda^+ \!\!- \lambda^-}
   \right)
   \\
   &+
@@ -640,9 +640,11 @@ The corresponding dual problem in \cite{Tseng1991} is then
   \ 
 +
   \ 
+  \sum_{i=1} 
+  ^n
 \inner
 {B(X_i)}
-{\lambda^+ \!- \lambda^-}
+{\,\lambda^+ \!\!- \lambda^-}
   \ 
 -
   \ 
@@ -650,7 +652,7 @@ The corresponding dual problem in \cite{Tseng1991} is then
   \cdot
 \inner
 {\delta}
-{\lambda^+ \!+ \lambda^-}
+{\,\lambda^+ \!+ \lambda^-}
   \end{align*}
   To illustrate the procedure, we show 
   for all $i \in \left\{ 1,\ldots,n \right\}$
@@ -844,6 +846,8 @@ Let us take this into account for $G$. We get
   \ 
 +
   \ 
+  \sum_{i=1} 
+  ^n
 \inner
 {B(X_i)}
 {\lambda}
@@ -976,28 +980,33 @@ Dividing the optimization problem by $n$ and reversing it, we get
 \sum_{i=1} 
   ^n
   \left[ 
+    \,
   T_i
   \cdot
   f^*
+  \!
   \left( 
 \lambda_0
-\ 
 +
-\ 
 \inner
 {B(X_i)}
 {\lambda}
   \right)
-  -
+  \ 
+-
+\ 
+  \left( 
+\lambda_0
++
 \inner
 {B(X_i)}
 {\lambda}
+  \right)
+  \,
   \right]
-\ 
--
-\lambda_0
   \ 
 +
+\ 
 \inner
 {\delta}
 {|\lambda|}
