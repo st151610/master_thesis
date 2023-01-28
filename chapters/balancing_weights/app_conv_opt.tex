@@ -566,7 +566,7 @@ The corresponding dual problem in \cite{Tseng1991} is then
   \ 
   +
   \ 
-  n\inner{\lambda}{d}
+  \inner{\lambda}{d}
   \,.
 \end{gather*}
   $1/n$ the problem remains the same.
@@ -595,7 +595,66 @@ The corresponding dual problem in \cite{Tseng1991} is then
     ^\top
     \,.
   \end{gather}
-  To illustrate the procedure, we show
+  We expand the objective function $G$ of the dual problem.
+  \begin{align*}
+    G
+    (
+    \rho,
+    \lambda_0^\pm,
+    \lambda^\pm
+    )
+    =
+  &-
+  \sum_{i=1} 
+  ^n
+  T_i
+  \cdot
+  f^*
+  \left( 
+\rho_i
+\ 
++
+\ 
+\lambda_0^+
+\!
+-
+\lambda_0^-
+\ 
++
+\ 
+\inner
+{B(X_i)}
+{\lambda^+ \!- \lambda^-}
+\ 
+  \right)
+  \\
+  &+
+  \ 
+  n
+  \cdot
+  (
+\lambda_0^+
+\!
+-
+\lambda_0^-
+  )
+  \ 
++
+  \ 
+\inner
+{B(X_i)}
+{\lambda^+ \!- \lambda^-}
+  \ 
+-
+  \ 
+  n
+  \cdot
+\inner
+{\delta}
+{\lambda^+ \!+ \lambda^-}
+  \end{align*}
+  To illustrate the procedure, we show 
+  for all $i \in \left\{ 1,\ldots,n \right\}$
 
 
 \begin{alignat*}{2}
@@ -603,16 +662,19 @@ The corresponding dual problem in \cite{Tseng1991} is then
   &
   &&
   \qquad
-      \lambda_0^+ > 0
+      \lambda_i^+ > 0
   \\
   \text{or}
   &
   &&
   \qquad
-      \lambda_0^- > 0
+      \lambda_i^- > 0
   \,.
 \end{alignat*}
-Assume towards a contradiction that both
+Assume towards a contradiction that 
+there exists
+$i \in \left\{ 1,\ldots,n \right\}$
+such that
 $
       \lambda_0^+ > 0
 $
@@ -625,32 +687,41 @@ $\lambda$ is optimal.
 Consider
   \begin{gather}
     \tilde{\lambda}
+    \ 
     :=
+    \ 
     \begin{bmatrix}
-      \rho_1,
-      \ldots,
-      \rho_n,
+      \rho
+      ,
       \ 
-      \lambda_0^+
-      -
-      (
-      \lambda_0^+
-      \land
-      \lambda_0^-
-      ),
-      \lambda_0^-
-      -
-      (
-      \lambda_0^+
-      \land
-      \lambda_0^-
-      ),
+      \lambda_0^\pm,
       \ 
       \lambda_1^+,
       \ldots,
+      \ 
+      \lambda_i^+
+      \!
+      -
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      ),
+      \ldots
       \lambda_n^+,
       \ 
       \lambda_1^-,
+      \ldots,
+      \lambda_i^-
+      \!
+      -
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      ),
       \ldots,
       \lambda_n^-
     \end{bmatrix}
@@ -659,12 +730,13 @@ Consider
   \end{gather}
   Since 
   $
-      \lambda_0^\pm
+      \lambda_i^\pm
       -
       (
-      \lambda_0^+
+      \lambda_i^+
+      \!
       \land
-      \lambda_0^-
+      \lambda_i^-
       )
       \ge 
       0
@@ -672,12 +744,30 @@ Consider
   the perturbed vector $\tilde{\lambda}$ is in the domain of the 
   optimization problem.
   But 
-  $
+  \begin{align}
   G(\tilde{\lambda})
   -
   G(\lambda)
-  >0
-  $,
+  \ 
+  =
+  \ 
+  2
+  n
+  \cdot
+  \delta_i
+  \cdot
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      )
+  \ 
+  >
+  \ 
+  0
+  \,,
+  \end{align}
   which contradicts the optimality of $\lambda$.
   Likewise we can show
 \begin{alignat*}{2}
@@ -705,6 +795,10 @@ $
 $ 
 for 
 $i\in \left\{ 0,\ldots,n \right\}$.
+
+To eliminate the constraints for $\rho$ 
+we use a similar argument as in the complementary slackness
+section of the ts chapter.
   \end{proof}
 
 \todo[color=red!40, inline]{Continue with paraphrase of \cite[page 20]{Wang2019}}
