@@ -10,7 +10,7 @@ We investigate how learning rates change in different scenarios.
 \subsection{Learning Rates of the weighted mean}
 
 What is the speed of convergence in the weak law of large numbers?
-The next statement gives a clear-cut answer:
+A clear-cut answer is:
 The arithmetic mean of independent, identically distributed, square-integrable random variables 
 learns with rate $n^{-1/2}$.
 Furthermore, using
@@ -139,89 +139,41 @@ $
 \sqrt{2}(\sigma\lor B)\frac{1}{\sqrt{n}}
 \log(e/\tau)
 $
-\todo[color=green!40, inline]{Improve quality of presentation in order to merge this part with more cultivated sections of the thesis.}
-Deriving learning rates in this way, we call for \textit{observed outcomes} of the treated
-matching
+
+We conflate \textit{observed outcomes} 
+with
 ~\textit{
-marginal potential outcomes} under treatment, that is,
-\begin{gather}
-  Y(1)\,|\,T=1
-  \ 
-  \sim 
-  \ 
-  \P_
-  {
-  Y(1)
-  }
-  \,.
-\end{gather}
-In practice, virtually every scenario violates this assumption.
-Compare the health of an otherwise thriving smoker with that of an asthmatic nonsmoker.
-Or the dropout rates of study programs with and without compulsory entrance examinations.
-  Indeed, any unbalanced external influence on both treatment and outcome ruins the 
-above assessment.
-We speak of a \textbf{confounded} scenario, and the unbalanced external influence is called a \textbf{confounder}. 
-When regarding the health risks of smoking, indicators of asthma, such as frequent cough or shortness of breath, are confounders.
-We emphasize that they are so, not merely by being signs of bad health, but because asthmatics are also less likely to smoke.
+marginal potential outcomes}.
+%, that is,
+%\begin{gather}
+%  Y(1)\,|\,T=1
+%  \ 
+%  \sim 
+%  \ 
+%  \P_
+%  {
+%  Y(1)
+%  }
+%  \,.
+%\end{gather}
+But few study populations allow for such disregard.
+If, by chance, we compare the health of 
+systematically different persons, such as
+that of a thriving smoker with that of an asthmatic non-smoker,
+the conclusion leads us astray.
+Smoking is not healthy.
+\textbf{Confounders}, as the literature calls 
+unbalanced external influences
+on both treatment and outcome,
+are lurking in the data.
+The term
+\textit{Simpson's paradox} 
+is a collection of painful stories telling about surprising changes of effect in subclasses of the data~(cf.\cite{Wagner1982} for a brief discussion of Simpson's paradox and some real world examples).
+The probabilistic tools of the community were not sharp enough,
+so non-probabilistic frameworks, like causal framework,
+found widespread acceptance. 
+Their proper use in empirical data analysis is, however, still subject to debate~\cite[§6]{pearl2009causality}.
 
-Let us take a moment to understand the word ‘‘to confound".
-
-\begin{ftheorem}
-  \emph{(Work in progress)}
-The verb \textit{to confound} has nuances of meaning\cite{zotero-327}
-
-to throw (a person) into confusion
-
-in this case the Statistician or whoever wishes to inform his decisions on the basis of data.
-
-refute
-
-A change of effect when stratifying is a strong refutation.
-
-to put to shame
-
-To embarrass some on who used invalid analysis as an argument in a  public debate. 
-
-damn
-
-
-
-to fail to discern differences between : mix up
-
-Maybe in the sense of conflate: see causal effects where there are non.
-
-to increase the confusion of
-
-after a change of effect. what should be trusted?
-
-baffle, frustrate
-
-yield to this and stop asking causal questions.
-
-
-
-archaic : to bring to ruin
-
-ruin the analysis, assesment.
-
- obsolete : consume, waste 
-
- waste the effort of conducting the analysis.
-
-
-
-\end{ftheorem}
-Short, confounding is nasty.
-
-Encouraging practicioners
-to address confounding in their investigations, the statistical literature coins the term 
-\textit{Simpson's paradox}. It relates to surprising changes of effect in subclasses of the data~(cf.\cite{Wagner1982} for a brief discussion of Simpson's paradox and some real world examples).
-Use non-probabilistic frameworks, such as causal framework.
-Despite widespread acceptance, 
-their use in empirical data analysis is still subject to debate~\cite[§6]{pearl2009causality}.
-
-\todo[color=orange!40,inline]{What solutions were offerd to deal with confounding? Start from propensity scores.}
-Statisticians have wrestled with this issue for nearly a century.
 
 In experimental studies we usually specify treatment assignment as opposed to merely observing a unit receiving treatment. 
 
