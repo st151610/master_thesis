@@ -315,11 +315,11 @@ together with
       ,
       \ldots
       ,
-      B_K(X_i)
+      B_n(X_i)
     \right]
     ^\top
   $
-  denotes the $K$ basis functions of the covariates 
+  denotes the $n$ basis functions of the covariates 
   of unit $i\in \left\{ 1, \ldots, n \right\}$
   and
   $
@@ -330,7 +330,7 @@ together with
       ,
       \ldots
       ,
-      \left| \lambda_K \right|
+      \left| \lambda_n \right|
     \right]
     ^\top
     ,
@@ -340,7 +340,7 @@ together with
   Moreover, if $\lambda^\dagger$
   is an optimal solution then
   \begin{gather*}
-    w_i^*
+    w_i^\dagger
     \ 
     =
     \ 
@@ -376,10 +376,10 @@ together with
     \cdot
     f^*
     (
-    \inner{Q_{\bullet i}}{\lambda}
+    \inner{A_{\bullet i}}{\lambda}
     )
     -
-    \inner{Q_{\bullet i}}{\lambda}
+    \inner{A_{\bullet i}}{\lambda}
     \ 
     +
     \ 
@@ -395,7 +395,7 @@ together with
   \end{gather*}
   where
   \begin{gather*}
-    \mathbf{Q}
+    \mathbf{A}
     :=
     \begin{bmatrix}
      % \mathbf{I}_n\\
@@ -439,7 +439,7 @@ together with
       \sum_{i = 1}^{n} B_k(X_i)
       \,,
       \qquad
-      k=1,\ldots,K
+      k=1,\ldots,n
       \,.
     \end{gather*}
     The corresponding matrix notation is
@@ -448,7 +448,7 @@ together with
     \qquad
     \sum_{i = 1}^{n} T_i \cdot f(w_i)
     \\
-    \mathbf{Q}w 
+    \mathbf{A}w 
     \ 
     \ge
     \ 
@@ -457,7 +457,7 @@ together with
 \end{gather*}
 where
 \begin{align*}
-    T\mathbf{Q}
+    T\mathbf{A}
     &
     \ 
     :=
@@ -517,7 +517,7 @@ where
     \infty,& \text{else}\,.
   \end{cases}
 \end{gather*}
-Note that the $i$-th column of $T\mathbf{Q}$ vanishes if 
+Note that the $i$-th column of $T\mathbf{A}$ vanishes if 
 $T_i=0$. Likewise, in the columns with $T_i=1$ we can ommit $T_i$.
 In the ts chapter, the dual problem features
 \begin{gather}
@@ -525,18 +525,18 @@ In the ts chapter, the dual problem features
 \end{gather}
 which by example is here
 \begin{gather*}
-  \sum_{T_i=1} T_i f^*(T\mathbf{Q}_{\bullet i}^\top\lambda)
+  \sum_{T_i=1} T_i f^*(T\mathbf{A}_{\bullet i}^\top\lambda)
   +
   \sum_{T_i=0} 
   \delta_{\left\{ 0 \right\}}
-(T\mathbf{Q}_{\bullet i}^\top\lambda)
+(T\mathbf{A}_{\bullet i}^\top\lambda)
   =
-  \sum_{i=1}^n T_i f^*(\mathbf{Q}_{\bullet i}^\top\lambda)
+  \sum_{i=1}^n T_i f^*(\mathbf{A}_{\bullet i}^\top\lambda)
   \,,
 \end{gather*}
 where
 \begin{align*}
-    \mathbf{Q}
+    \mathbf{A}
     &
     \ 
     :=
@@ -575,7 +575,7 @@ The corresponding dual problem in \cite{Tseng1991} is then
   T_i
   \cdot
   f^*
-(\mathbf{Q}_{\bullet i}^\top\lambda)
+(\mathbf{A}_{\bullet i}^\top\lambda)
   \ 
   +
   \ 
