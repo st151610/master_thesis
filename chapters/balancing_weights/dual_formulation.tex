@@ -1,0 +1,284 @@
+\begin{ftheorem*}
+  The dual of Problem~\ref{bw:1:primal} is the unconstrained optimization problem 
+  \begin{gather*}
+    \underset{\lambda \in \R^n}{\mathrm{minimize}}
+    \qquad
+    \frac{1}{n}
+    \sum_{i = 1}^{n} 
+    T_i 
+    \cdot
+    f^*
+    (
+      m_n(\lambda|X_i)
+    )
+    -
+      m_n(\lambda|X_i)
+    \ 
+    +
+    \ 
+    \inner{\delta}{\left| \lambda \right|}
+    \,,
+  \end{gather*}
+  where
+  \begin{gather*}
+  f^*
+  \,
+  \colon
+  \, 
+  \R
+  \ 
+  \to
+  \ 
+  \R
+  \,
+  ,
+  \qquad 
+  x^*
+  \ 
+  \mapsto
+  \ 
+    x^*
+    \!
+    \cdot
+    (f^{'})^{-1}(x^*)
+  \ 
+    -
+  \ 
+    f
+    \left( 
+      (f^{'})^{-1}(x^*)
+    \right)
+  \end{gather*}
+  is the Legendre transformation of $f$,
+  $
+    B(X_i)
+    =
+    \left[ 
+      B_1(X_i)
+      ,
+      \ldots
+      ,
+      B_n(X_i)
+    \right]
+    ^\top
+  $
+  denotes the $n$ basis functions of the covariates 
+  of unit $i\in \left\{ 1, \ldots, n \right\}$
+  and
+  $
+    \left| \lambda \right|
+    =
+    \left[ 
+      \left| \lambda_1 \right|
+      ,
+      \ldots
+      ,
+      \left| \lambda_n \right|
+    \right]
+    ^\top
+    ,
+  $
+  where $\left| \,\cdot\, \right|$
+  is the absolute value of a real-valued scalar.
+  Moreover, if $\lambda^\dagger$
+  is an optimal solution then
+  for all $i$ with $T_i=1$
+  \begin{gather*}
+    w_i^\dagger
+    \ 
+    =
+    \ 
+    (f^{'})^{-1}
+    \left( 
+      m_n
+      (
+      \lambda^\dagger
+      |
+      X_i
+      )
+    \right)
+  \end{gather*}
+  is part of the optimal solution to 
+  Problem~\ref{bw:1:primal}
+  .
+\end{ftheorem*}
+\subsection*{Plan of proof}
+We bring 
+  Problem~\ref{bw:1:primal}
+  in the form of ts.
+  Then we apply the results of the ts chapter.
+  We wait to conclude on the weights.
+  Then we eliminate the non-negativity constraints
+  on the dual variables leveraging convexity and optimality.
+%%%%%%%%%%%%%%%  
+%%%% PROOF %%%%
+%%%%%%%%%%%%%%%
+\begin{proof}
+We denote
+\begin{align*}
+    B(X_i)
+    &
+    \ 
+    :=
+    \ 
+    \left[ 
+      B_1(X_i)
+      ,
+      \ldots
+      ,
+      B_n(X_i)
+    \right]
+    ^\top
+    \quad
+    \text{for all}
+    \ 
+    i\in
+    \left\{ 1,\ldots,n \right\}
+    ,
+    \\
+d
+    &
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      0_n
+      \\
+      \pm n
+      \\
+      -n\cdot\delta 
+      \pm\,
+      \sum_{i = 1}^{n} B_k(X_i)
+    \end{bmatrix}
+    \,,
+    \\
+    T\mathbf{B}(\mathbf{X})
+    &
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      T_1B(X_1), \ldots, T_nB(X_n)
+    \end{bmatrix}
+    ,
+    \\
+    T\mathbf{A}
+    &
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      \mathrm{diag}
+      [T_1,\ldots,T_n]
+      \\
+      \pm
+      [T_1,\ldots,T_n]
+      \\
+      \pm\,T\mathbf{B}(\mathbf{X})
+    \end{bmatrix}
+        \,.
+  \end{align*}
+  This are the vector of the basis functions of the non-parametric regression estimator, the constraint vector,
+  the matrix of basis functions with indicator of treatment and 
+  the constraint matrix with indicator of treatment.
+    The corresponding matrix notation is
+ \begin{gather*}
+    \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
+    \qquad
+    \sum_{i = 1}^{n} T_i \cdot f(w_i)
+    \\
+    \mathbf{A}w 
+    \ 
+    \ge
+    \ 
+    d
+    \,,
+\end{gather*}
+The convex conjugate is
+\begin{gather*}
+  \sum_{T_i=1} f^*(\lambda_i)
+  +
+  \sum_{T_i=0} 
+  \chi_{\left\{ 0 \right\}}(\lambda_i)
+  \,,
+\end{gather*}
+where
+\begin{gather*}
+  \chi_{\left\{ 0 \right\}}
+  (t)
+  =
+  \begin{cases}
+    0,& \text{if}\, t=0,\\
+    \infty,& \text{else}\,.
+  \end{cases}
+\end{gather*}
+Note that the $i$-th column of $T\mathbf{A}$,
+which we denote as 
+$T\mathbf{A}_i$,
+vanishes if 
+$T_i=0$. Likewise, in the columns with $T_i=1$ we can ommit $T_i$.
+In the ts chapter, the dual problem features
+\begin{gather}
+  f^*(A^\top p)
+\end{gather}
+which by example is here
+\begin{gather*}
+  \sum_{T_i=1}  f^*(T\mathbf{A}_{ i}^\top\lambda)
+  +
+  \sum_{T_i=0} 
+  \chi_{\left\{ 0 \right\}}
+(T\mathbf{A}_{i}^\top\lambda)
+  =
+  \sum_{i=1}^n T_i f^*(\mathbf{A}_{ i}^\top\lambda)
+  \,.
+\end{gather*}
+where
+\begin{align*}
+    \mathbf{A}
+    &
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      \mathbf{I}_n
+      \\
+      \pm
+      \mathrm{1}_n
+      \\
+      \pm\,\mathbf{B}(\mathbf{X})
+    \end{bmatrix}
+    \\
+    \mathbf{B}(\mathbf{X})
+    &
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      B(X_1), \ldots, B(X_n)
+    \end{bmatrix}
+\end{align*}
+
+
+The corresponding dual problem in \cite{Tseng1991} is then
+\begin{gather*}
+  \underset
+  {\lambda_1,\ldots,\lambda_{K}\ge 0}
+  {
+  \mathrm{maximize}
+  }
+  \quad
+  -
+  \sum_{i=1} 
+  ^n
+  T_i
+  \cdot
+  f^*
+(\mathbf{A}_{ i}^\top\lambda)
+  \ 
+  +
+  \ 
+  \inner{\lambda}{d}
+  \,.
+\end{gather*}
+
+\end{proof}

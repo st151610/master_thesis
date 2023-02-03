@@ -45,6 +45,9 @@
 \newenvironment{ftheorem}
   {\begin{mdframed}\begin{theorem}}
   {\end{theorem}\end{mdframed}}
+\newenvironment{ftheorem*}
+  {\begin{mdframed}\begin{theorem*}}
+  {\end{theorem*}\end{mdframed}}
 \newtheorem{assumption}{Assumption}[chapter]
 \newtheorem*{assumptions*}{Assumptions}
 \newtheorem{corollary}{Corollary}[theorem]
@@ -127,6 +130,8 @@
 %\input{chapters/causal_inference.tex}
 
 \chapter{Balancing Weights}
+  \section{Dual Formulation}
+  \input{chapters/balancing_weights/dual_formulation.tex}
   %\section{Application of Convex Optimization}
   \input{chapters/balancing_weights/app_conv_opt.tex}
   \section{Consistency}
