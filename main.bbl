@@ -1,4 +1,4 @@
-\begin{thebibliography}{GKKW02}
+\begin{thebibliography}{MMN22}
 
 \bibitem[Ber09]{Bertsekas2009}
 D.~Bertsekas.
@@ -10,12 +10,6 @@ D.~Bertsekas.
 Dimitri~P. Bertsekas and John~N. Tsitsiklis.
 \newblock Parallel and {{Distributed Computation}}:{{Numerical Methods}}.
 \newblock November 2003.
-
-\bibitem[GKKW02]{Gyorfi2002}
-L{\'a}szl{\'o} Gy{\"o}rfi, Michael Kohler, Adam Krzy{\.z}ak, and Harro Walk.
-\newblock {\em A {{Distribution-Free Theory}} of {{Nonparametric Regression}}}.
-\newblock Springer {{Series}} in {{Statistics}}. {Springer}, {New York, NY},
-  2002.
 
 \bibitem[MMN22]{Mordukhovich2022}
 Boris~S. Mordukhovich and Nguyen Mau~Nam.
