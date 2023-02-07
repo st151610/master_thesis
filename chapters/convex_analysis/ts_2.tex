@@ -171,10 +171,15 @@ is given by
 \end{gather}
 \end{ftheorem}
 \begin{proof}
-  We work with the objective function $G$ of the dual problem, that is,
+  We fix 
+  $
+  \lambda_a^*
+  $
+  and
+  work with the objective function $G$ of the dual problem, that is,
   \begin{gather}
     G
-(\lambda_d,\lambda_a)
+(\lambda_d)
 :
 =
     \inner
@@ -221,7 +226,7 @@ be the $i$-th coordinate of
 $
 \nabla
 G
-(\lambda_d^*,\lambda_a^*)
+(\lambda_d^*)
 $.
 We show that for all 
 $
@@ -260,89 +265,105 @@ it holds
   ) = 0
   \,.
 \end{alignat*}
-Assume towards a contradiction that $d_i(p)>0$ for some 
+Assume towards a contradiction that 
 $
-  i\in \left\{ 1,\ldots, n \right\}
+\nabla G_i(\lambda_d^*)>0
+$
+for some 
+$
+  i\in \left\{ 1,\ldots, s \right\}
 $.
-Consider
-the $\mu$ perturbation of $p$ in the $i$-th coordinate, that is,
-\begin{gather}
-  \tilde{p}
-  (\mu)
-  :=
-  p
-  +
-  e_i
-  \cdot
-  \mu
-  \,.
-\end{gather}
-By the continuity of $d_i$ there exists $\mu >0$ such that
+By the continuity of $\nabla G$ there exists $\varepsilon>0$ such that 
 $
-d_i(
-  \tilde{p}
-  (\mu)
+\nabla G_i(
+\lambda_d^*
++
+e_i\cdot \varepsilon
 )
->0$.
-By the concavity of $q$ it follows
+>
+0
+$.
+Thus
 \begin{gather}
-  \label{cv:ts:cs:1}
-  q
+  G
   (
-  \tilde{p}
-  (\mu)
+\lambda_d^*
++
+e_i\cdot \varepsilon
   )
   -
-  q(p)
-  \ge
-d_i(
-  \tilde{p}
-  (\mu)
-)
-\cdot
-\mu
->0
-\,.
-\end{gather}
-Since
-$ 
-  \tilde{p}
-  (\mu)
+  G
+  (
+\lambda_d^*
   )
   \ge
-  0
+\nabla G_i(
+\lambda_d^*
++
+e_i\cdot \varepsilon
+)
+\cdot
+\varepsilon
+>0
+\,,
+\end{gather}
+which contradicts the optimality of 
 $
-this is a contradiction to the optimality of $p$ in Problem~\ref{cv:ts:dual}. 
-Thus
-$
-  d_i(p)\le 0
-$
-for all 
-$
-  i\in \left\{ 1,\ldots, n \right\}
+\lambda_d^*
 $.
 Now assume that
-$ p_i>0 $ and 
+$ \lambda_{d,i}^*>0 $ and 
 $
-  d_i(p)< 0
+  \nabla G_i(\lambda_d^*)< 0
 $
 for some
 $
-  i\in \left\{ 1,\ldots, n \right\}
+  i\in \left\{ 1,\ldots, s \right\}
 $.
 Again, by the 
-continuity of $d_i$ there exists $\mu <0$ such that
+continuity of $\nabla G$ there exists $\varepsilon>0$ such that
 $
-d_i(
-  \tilde{p}
-  (\mu)
-)
-<0$
+  \nabla G_i(\lambda_d^*-e_i\cdot \varepsilon)< 0
+$
 and
 $
-p_i+\mu >0
+\varepsilon
+-
+\lambda_{d,i}^*
+<0
 $.
-But then it follows \eqref{cv:ts:cs:1}.
-We have shown the complementary slackness of $p$ and $d(p)$.
+Thus
+\begin{gather}
+  G
+  (
+\lambda_d^*
+-
+e_i\cdot \varepsilon
+  )
+  -
+  G
+  (
+\lambda_d^*
+  )
+  \ge
+\nabla G_i(
+\lambda_d^*
+-
+e_i\cdot \varepsilon
+)
+\cdot
+\left( 
+\varepsilon
+-
+\lambda_{d,i}^*
+\right)
+>0
+\,,
+\end{gather}
+which contradicts the optimality of 
+$
+\lambda_d^*
+$.
+We have shown the complementary slackness.
 
 \end{proof}
