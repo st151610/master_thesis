@@ -365,5 +365,195 @@ $
 \lambda_d^*
 $.
 We have shown the complementary slackness.
+\subsubsection*{remanining part}
+We want to show
 
+\begin{gather}
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+      \in
+\partial f (w^*)
+\,,
+\end{gather}
+where
+\begin{gather}
+  w^*
+  :=
+  \nabla
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+    \right)
+\end{gather}
+By \cite[Theorem~23.5(a)-(b)]{Rockafellar1970}
+it suffices to show
+that
+$
+\inner
+{(\cdot)}
+{
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+}
+-
+f(\cdot)
+$
+achieves its supremum at
+$w^*$.
+Since $f$ is strictly convex the above expression achieves its maximum at the unique
+point $w^*$.
+But then it holds
+\begin{gather}
+  \nabla
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+    \right)
+    =
+    \nabla
+    \left( 
+\inner
+{w^*}
+{
+  \cdot
+}
+-
+f(w^*)
+    \right)
+    \left( 
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+    \right)
+    =
+w^*
+\,.
+\end{gather}
+
+Next we show
+\begin{gather}
+  -
+  \left( 
+      \mathbf{U}^\top  
+      +
+      \mathbf{A}^\top  
+  \right)
+  \in
+  \left[ 
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{U}w
+    \right)
+    (w^*)
+    +
+    \partial
+    \left( 
+      w
+      \mapsto
+      a
+      -
+      \mathbf{A}w
+    \right)
+    (w^*)
+  \right]
+  \,.
+\end{gather}
+
+To this end, note that
+\begin{gather}
+  \inner
+  {
+  -
+\mathbf{U}^\top
+\cdot e_i
+}
+  {w-w^*}
+  =
+  \left( 
+    d-
+\mathbf{U}^\top
+\cdot w
+  \right)_i
+  -
+  \left( 
+    d-
+\mathbf{U}^\top\cdot w^*
+  \right)_i
+  \,.
+\end{gather}
+Thus
+$
+-
+\mathbf{U}^\top
+\in
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{U}w
+    \right)
+    (w^*)
+$.
+In the same way it follows
+$
+-
+\mathbf{A}^\top
+\in
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{A}w
+    \right)
+    (w^*)
+$.
+We conclude that
+\begin{gather}
+  \mathrm{0}
+  \in
+  [
+  \partial
+  f(w^*)
+  +
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{U}w
+    \right)
+    (w^*)
+    \cdot
+    \lambda_d^*
+    +
+    \partial
+    \left( 
+      w
+      \mapsto
+      a
+      -
+      \mathbf{A}w
+    \right)
+    (w^*)
+    \cdot
+    \lambda_a^*
+  ]
+  \,.
+\end{gather}
+By the Karush-Kuhn-Tucker conditions we finish the proof.
 \end{proof}
