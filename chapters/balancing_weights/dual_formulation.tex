@@ -120,6 +120,8 @@
 %%%% PROOF %%%%
 %%%%%%%%%%%%%%%
 \begin{proof}
+
+  \subsubsection*{Form}
   We consider the vector of basis functions of the covariates 
   of unit $i\in \left\{ 1, \ldots, n \right\}$, that is,
 \begin{align*}
@@ -254,7 +256,7 @@ We consider the form of the dual in ts to get
 \end{gather*}
 where
 $\mathbf{A}$
- is as $T\mathbf{A}$ without the indicators of treatment.
+ is as $T\mathbf{A}$ with the indicators of treatment replaced by $1$.
  It is important, that in the final form the indicators of treatment are outside the argument of $f^*$ and we have no singularity for 
  $T_i=0$.
 The corresponding dual problem in \cite{Tseng1991} is then
@@ -278,6 +280,9 @@ The corresponding dual problem in \cite{Tseng1991} is then
   \inner{\lambda}{d}
   \,.
 \end{gather*}
+
+\subsubsection*{Non-negativity constraints}
+
   Next we want to remove the non-negativity constraints on $\lambda$.
   To this end we write
   \begin{gather}
@@ -384,11 +389,11 @@ there exists
 $i \in \left\{ 1,\ldots,n \right\}$
 such that
 $
-      \lambda_0^+ > 0
+      \lambda_i^+ > 0
 $
 and
 $
-      \lambda_0^- > 0
+      \lambda_i^- > 0
 $ 
 and that 
 $\lambda$ is optimal.
@@ -415,8 +420,9 @@ Consider
       \!
       \land
       \lambda_i^-
-      ),
-      \ldots
+      )\,,
+      \ 
+      \ldots,
       \lambda_n^+,
       \ 
       \lambda_1^-,
@@ -429,7 +435,8 @@ Consider
       \!
       \land
       \lambda_i^-
-      ),
+      )\,,
+      \ 
       \ldots,
       \lambda_n^-
     \end{bmatrix}
@@ -492,6 +499,62 @@ Consider
       \lambda_i^- > 0
   \,.
 \end{alignat*}
+Let now
+\begin{gather}
+    \tilde{\lambda}
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      \rho
+      ,
+      \ 
+      \lambda_0^\pm
+      \!
+      -
+      (
+      \lambda_0^+
+      \!
+      \land
+      \lambda_0^-
+      )\,,
+      \ 
+      \lambda_1^+,
+      \ldots,
+      \lambda_n^+,
+      \ 
+      \lambda_1^-,
+      \ldots,
+      \lambda_n^-
+    \end{bmatrix}
+    ^\top
+    \,.
+  \end{gather}
+We get
+  \begin{align}
+  G(\tilde{\lambda})
+  -
+  G(\lambda)
+  \ 
+  =
+  \ 
+  2
+  n
+  \cdot
+  \delta_i
+  \cdot
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      )
+  \ 
+  >
+  \ 
+  0
+  \,,
+  \end{align}
 But then 
 $
 \lambda^\pm_i

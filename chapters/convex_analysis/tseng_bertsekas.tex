@@ -12,13 +12,25 @@ We present the relevant parts of the paper \cite{Bertsekas2003}.
     %%%% Ax >= b %%%%
     &\text{subject to}
     &&\qquad\qquad
-    \mathbf{A}x
+    \mathbf{U}x
     \ 
     \ge
     \ 
-    b
-    \,.
+    d
+    \\
+    &
+    &&\qquad\qquad
+    \mathbf{A}x
+    \ 
+    =
+    \ 
+    a
+    \,,
 \end{align*}
+where 
+$\mathbf{U}\in \R^{r\times n}$
+and
+$\mathbf{A}\in \R^{s\times n}$
 \end{fproblem}
 \begin{assumptions*}
   \begin{enumerate}[label={(\roman*)}]
@@ -63,22 +75,36 @@ is
   \label{cv:ts:dual}
   \begin{alignat*}{2}
   %%%% objective %%%%
-    &\underset{y \in \R^m}
+    &\underset{
+    \lambda_d \in \R^r
+,
+    \lambda_a \in \R^s
+  }
     {\text{maximize}}
     &&\qquad\qquad
     \inner
-    {y}
-    {b}
+    {\lambda_d}
+    {d}
+    \ 
+    +
+    \ 
+    \inner
+    {\lambda_a}
+    {a}
     \ 
     -
     \ 
     f^*
-    ( A ^ \top y )
+    \left( 
+      \mathbf{U}^\top  \lambda_d
+      +
+      \mathbf{A}^\top  \lambda_a
+    \right)
     \\
     %%%% Ax >= b %%%%
     &\text{subject to}
     &&\qquad\qquad
-    y
+    y_d
     \ 
     \ge
     \ 

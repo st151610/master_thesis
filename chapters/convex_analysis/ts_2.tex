@@ -1,0 +1,348 @@
+
+\begin{fproblem}
+  \label{cv:ts:primal}
+\begin{align*}
+  %%%% objective %%%%
+    &\underset{w \in \R^n}
+    {\text{minimize}}
+    &&\qquad\qquad
+    f(w)
+    &&&
+    \\
+    %%%% Ax >= b %%%%
+    &\text{subject to}
+    &&\qquad\qquad
+    \mathbf{U}w
+    \ 
+    \ge
+    \ 
+    d
+    \\
+    &
+    &&\qquad\qquad
+    \mathbf{A}w
+    \ 
+    =
+    \ 
+    a
+    \,,
+\end{align*}
+where 
+$\mathbf{U}\in \R^{r\times n}$
+and
+$\mathbf{A}\in \R^{s\times n}$
+\end{fproblem}
+%%%%%%%%%%%%%
+%%%% (D) %%%%
+%%%%%%%%%%%%%
+We consider the dual optimization problem of Problem~\ref{cv:ts:primal}.
+\begin{fproblem}
+  \label{cv:ts:dual}
+  \begin{alignat*}{2}
+  %%%% objective %%%%
+    &\underset{
+    \lambda_d \in \R^r
+,
+    \lambda_a \in \R^s
+  }
+    {\text{maximize}}
+    &&\qquad\qquad
+    \inner
+    {\lambda_d}
+    {d}
+    \ 
+    +
+    \ 
+    \inner
+    {\lambda_a}
+    {a}
+    \ 
+    -
+    \ 
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d
+      +
+      \mathbf{A}^\top  \lambda_a
+    \right)
+    \\
+    %%%% Ax >= b %%%%
+    &\text{subject to}
+    &&\qquad\qquad
+    \lambda_d
+    \ 
+    \ge
+    \ 
+    0
+    \,.
+\end{alignat*}
+\end{fproblem}
+Note that we have non-negativity constraints only for 
+the dual variable associated with the inequality constraints.
+\subsubsection*{Plan of Proof}
+We use the Karush-Kuhn-Tucker conditions for 
+Problem~\ref{cv:ts:primal}
+.
+We assume that an optimal solution 
+$(\lambda_d^*,\lambda_a^*)$
+to 
+Problem~\ref{cv:ts:dual}
+exists.
+Next we write
+$
+  w^*
+  :=
+  \nabla
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+    \right)
+$.
+We show complementary slackness for $\lambda_d^*$ using the continuity
+of $f^*$.
+Then we show $0\in$.
+This follows from
+$
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+      \in
+\partial f (w^*)
+$
+and 
+$
+$
+\begin{gather}
+  -
+  \left( 
+      \mathbf{U}^\top  
+      +
+      \mathbf{A}^\top  
+  \right)
+  \in
+  \left[ 
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{U}w
+    \right)
+    (w^*)
+    +
+    \partial
+    \left( 
+      w
+      \mapsto
+      a
+      -
+      \mathbf{A}w
+    \right)
+    (w^*)
+  \right]
+  \,.
+\end{gather}
+
+
+\begin{ftheorem}
+  Let 
+$
+(\lambda_d^*,\lambda_a^*)
+$
+be an optimal solution to
+Problem~\ref{cv:ts:dual}.
+Then the unique optimal solution $w^*$ to 
+Problem~\ref{cv:ts:primal}
+is given by
+\begin{gather}
+  w^*
+  =
+  \nabla
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+    \right)
+    \,.
+\end{gather}
+\end{ftheorem}
+\begin{proof}
+  We work with the objective function $G$ of the dual problem, that is,
+  \begin{gather}
+    G
+(\lambda_d,\lambda_a)
+:
+=
+    \inner
+    {\lambda_d}
+    {d}
+    \ 
+    +
+    \ 
+    \inner
+    {\lambda_a}
+    {a}
+    \ 
+    -
+    \ 
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d
+      +
+      \mathbf{A}^\top  \lambda_a
+    \right)
+    \,.
+  \end{gather}
+  Since $f^*$ is continuously differentiable, so is $G$. 
+  Since $f^*$ is convex, $G$ is concave.
+  For concave differentiable functions it holds
+  \begin{gather}
+    G(x)-G(y)
+    \ge
+    \nabla
+    G(x)^\top
+    (x-y)
+    \,.
+  \end{gather}
+Let
+$\lambda_{d,i}^*$ be the $i$-th coordinate of $\lambda_d^*$ and for
+fixed
+$\lambda_a^*$ let
+$
+\nabla
+G_i
+(\lambda_d^*)
+$
+be the $i$-th coordinate of 
+$
+\nabla
+G
+(\lambda_d^*,\lambda_a^*)
+$.
+We show that for all 
+$
+  i\in \left\{ 1,\ldots, s \right\}
+$
+it holds
+\begin{alignat*}{2}
+  \text{either}
+  &
+  &&
+  \qquad
+  \lambda_{d,i}^*
+  = 0
+  \quad
+  \text{and}
+  \quad
+  \nabla
+  G
+  _i(
+  \lambda_{d}^*
+  ) \le 0
+  \\
+  \text{or}
+  &
+  &&
+  \qquad
+  \lambda_{d,i}^*
+  > 0
+  \quad
+  \text{and}
+  \quad
+  \nabla
+  G
+  _i(
+  \lambda_{d}^*
+  ) = 0
+  \,.
+\end{alignat*}
+Assume towards a contradiction that $d_i(p)>0$ for some 
+$
+  i\in \left\{ 1,\ldots, n \right\}
+$.
+Consider
+the $\mu$ perturbation of $p$ in the $i$-th coordinate, that is,
+\begin{gather}
+  \tilde{p}
+  (\mu)
+  :=
+  p
+  +
+  e_i
+  \cdot
+  \mu
+  \,.
+\end{gather}
+By the continuity of $d_i$ there exists $\mu >0$ such that
+$
+d_i(
+  \tilde{p}
+  (\mu)
+)
+>0$.
+By the concavity of $q$ it follows
+\begin{gather}
+  \label{cv:ts:cs:1}
+  q
+  (
+  \tilde{p}
+  (\mu)
+  )
+  -
+  q(p)
+  \ge
+d_i(
+  \tilde{p}
+  (\mu)
+)
+\cdot
+\mu
+>0
+\,.
+\end{gather}
+Since
+$ 
+  \tilde{p}
+  (\mu)
+  )
+  \ge
+  0
+$
+this is a contradiction to the optimality of $p$ in Problem~\ref{cv:ts:dual}. 
+Thus
+$
+  d_i(p)\le 0
+$
+for all 
+$
+  i\in \left\{ 1,\ldots, n \right\}
+$.
+Now assume that
+$ p_i>0 $ and 
+$
+  d_i(p)< 0
+$
+for some
+$
+  i\in \left\{ 1,\ldots, n \right\}
+$.
+Again, by the 
+continuity of $d_i$ there exists $\mu <0$ such that
+$
+d_i(
+  \tilde{p}
+  (\mu)
+)
+<0$
+and
+$
+p_i+\mu >0
+$.
+But then it follows \eqref{cv:ts:cs:1}.
+We have shown the complementary slackness of $p$ and $d(p)$.
+
+\end{proof}

@@ -3,47 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: literature.bib
-Warning--empty booktitle in Bertsekas2003
-Warning--empty publisher in Bertsekas2003
-You've used 5 entries,
+You've used 3 entries,
             2543 wiz_defined-function locations,
-            593 strings with 5297 characters,
-and the built_in function-call counts, 1689 in all, are:
-= -- 160
-> -- 73
-< -- 2
-+ -- 22
-- -- 22
-* -- 107
-:= -- 296
-add.period$ -- 17
-call.type$ -- 5
-change.case$ -- 25
-chr.to.int$ -- 5
-cite$ -- 7
-duplicate$ -- 78
-empty$ -- 135
-format.name$ -- 29
-if$ -- 342
+            581 strings with 5011 characters,
+and the built_in function-call counts, 1054 in all, are:
+= -- 101
+> -- 46
+< -- 1
++ -- 14
+- -- 14
+* -- 69
+:= -- 190
+add.period$ -- 10
+call.type$ -- 3
+change.case$ -- 15
+chr.to.int$ -- 3
+cite$ -- 3
+duplicate$ -- 45
+empty$ -- 81
+format.name$ -- 18
+if$ -- 211
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 8
-newline$ -- 28
-num.names$ -- 15
-pop$ -- 36
+missing$ -- 5
+newline$ -- 18
+num.names$ -- 9
+pop$ -- 18
 preamble$ -- 1
-purify$ -- 33
+purify$ -- 20
 quote$ -- 0
-skip$ -- 56
+skip$ -- 34
 stack$ -- 0
-substring$ -- 60
-swap$ -- 4
-text.length$ -- 2
-text.prefix$ -- 2
+substring$ -- 46
+swap$ -- 3
+text.length$ -- 1
+text.prefix$ -- 1
 top$ -- 0
-type$ -- 28
-warning$ -- 2
-while$ -- 15
-width$ -- 8
-write$ -- 65
-(There were 2 warnings)
+type$ -- 16
+warning$ -- 0
+while$ -- 10
+width$ -- 6
+write$ -- 41
