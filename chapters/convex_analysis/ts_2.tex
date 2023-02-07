@@ -1,16 +1,18 @@
 
-\begin{fproblem}
+\begin{ftheorem}
+  Consider the optimization problem
+\begin{align}
   \label{cv:ts:primal}
-\begin{align*}
   %%%% objective %%%%
     &\underset{w \in \R^n}
-    {\text{minimize}}
+    {\mathrm{minimize}}
     &&\qquad\qquad
     f(w)
     &&&
     \\
     %%%% Ax >= b %%%%
-    &\text{subject to}
+    \nonumber
+    &\mathrm{subject}\ \mathrm{to} 
     &&\qquad\qquad
     \mathbf{U}w
     \ 
@@ -18,6 +20,7 @@
     \ 
     d
     \\
+    \nonumber
     &
     &&\qquad\qquad
     \mathbf{A}w
@@ -26,26 +29,17 @@
     \ 
     a
     \,,
-\end{align*}
-where 
-$\mathbf{U}\in \R^{r\times n}$
-and
-$\mathbf{A}\in \R^{s\times n}$
-\end{fproblem}
-%%%%%%%%%%%%%
-%%%% (D) %%%%
-%%%%%%%%%%%%%
-We consider the dual optimization problem of Problem~\ref{cv:ts:primal}.
-\begin{fproblem}
-  \label{cv:ts:dual}
-  \begin{alignat*}{2}
+\end{align}
+and its dual problem
+  \begin{alignat}{2}
+    \label{cv:ts:dual}
   %%%% objective %%%%
     &\underset{
     \lambda_d \in \R^r
 ,
     \lambda_a \in \R^s
   }
-    {\text{maximize}}
+    {\mathrm{maximize}}
     &&\qquad\qquad
     \inner
     {\lambda_d}
@@ -67,7 +61,8 @@ We consider the dual optimization problem of Problem~\ref{cv:ts:primal}.
     \right)
     \\
     %%%% Ax >= b %%%%
-    &\text{subject to}
+    \nonumber
+    &\mathrm{subject}\ \mathrm{to} 
     &&\qquad\qquad
     \lambda_d
     \ 
@@ -75,21 +70,132 @@ We consider the dual optimization problem of Problem~\ref{cv:ts:primal}.
     \ 
     0
     \,.
-\end{alignat*}
-\end{fproblem}
-Note that we have non-negativity constraints only for 
-the dual variable associated with the inequality constraints.
-\subsubsection*{Plan of Proof}
-We use the Karush-Kuhn-Tucker conditions for 
-Problem~\ref{cv:ts:primal}
-.
-We assume that an optimal solution 
-$(\lambda_d^*,\lambda_a^*)$
-to 
-Problem~\ref{cv:ts:dual}
-exists.
-Next we write
+\end{alignat}
+  Let 
 $
+(\lambda_d^*,\lambda_a^*)
+$
+be an optimal solution to \eqref{cv:ts:dual}.
+If the objective function $f$ of 
+\eqref{cv:ts:primal} is strictly convex and its
+convex conjugate $f^*$ is continuously differentiable,
+then the unique optimal solution to 
+\eqref{cv:ts:primal}
+is given by
+\begin{gather}
+  w^*
+  =
+  \nabla
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+    \right)
+    \,.
+\end{gather}
+\end{ftheorem}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%% PLAN OF PROOF %%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Plan of Proof}
+We show that for $w^*$ and 
+$
+(\lambda_d^*,\lambda_a^*)
+$
+the Karush-Kuhn-Tucker conditions are met.
+They are
+\textbf{complementary slackness}
+\begin{gather}
+\inner
+{\lambda_d^*}{d-\mathbf{U} w^*}
+=
+0
+\,,
+\end{gather}
+\textbf{primal} and \textbf{dual feasibility}
+\begin{gather}
+  \label{primal_feas}
+    \mathbf{U}w^*
+    \ 
+    \ge
+    \ 
+    d
+    \\
+    \nonumber
+    \mathbf{A}w^*
+    \ 
+    =
+    \ 
+    a
+  \\
+  \label{dual_feas}
+  \lambda_d^*\ge 0
+\end{gather}
+and 
+\textbf{stationarity}
+\begin{gather}
+  \mathrm{0}
+  \in
+  [
+  \partial
+  f(w^*)
+  +
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{U}w
+    \right)
+    (w^*)
+    \cdot
+    \lambda_d^*
+    +
+    \partial
+    \left( 
+      w
+      \mapsto
+      a
+      -
+      \mathbf{A}w
+    \right)
+    (w^*)
+    \cdot
+    \lambda_a^*
+  ]
+  \,.
+\end{gather}
+Then by \cite[Theorem~28.3]{Rockafellar1970}
+it follows the result.
+We need strict convexity of $f$ to obtain stationarity. The other
+conditions follow from 
+continuous differentiability of $f^*$.
+Also we will use
+%%%%%%%%%%%%%%%
+%%%% PROOF %%%%
+%%%%%%%%%%%%%%%
+\begin{proof}
+  Let 
+$
+(\lambda_d^*,\lambda_a^*)
+$
+be an optimal solution to
+\eqref{cv:ts:dual}.
+  \subsubsection*{Stationarity}
+  First we show
+\begin{gather}
+  \label{cv:ts:st:1}
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+      \in
+\partial f (w^*)
+\,,
+\end{gather}
+where
+\begin{gather*}
   w^*
   :=
   \nabla
@@ -99,21 +205,86 @@ $
       +
       \mathbf{A}^\top  \lambda_a^*
     \right)
-$.
-We show complementary slackness for $\lambda_d^*$ using the continuity
-of $f^*$.
-Then we show $0\in$.
-This follows from
+    \,.
+\end{gather*}
+To this end we need
+\begin{proposition}
+  \label{cv:ts:prop}
+  \emph{
+\cite[Theorem~23.5(a)-(b)]{Rockafellar1970}.
+  }
+   For any proper convex function $f$ and any vector $x$, 
+   it holds $t\in \partial f(x)$ 
+   if and only if 
+   $
+   \inner
+   {\cdot}{t}
+   -
+   f(\cdot)
+   $
+   achieves its supremum at $x$.
+\end{proposition}
+By Proposition~\ref{cv:ts:prop}
+it suffices to show
+that
 $
+$
+\begin{gather}
+  w
+  \mapsto
+\inner
+{w}
+{
       \mathbf{U}^\top  \lambda_d^*
       +
       \mathbf{A}^\top  \lambda_a^*
-      \in
-\partial f (w^*)
-$
-and 
-$
-$
+}
+-
+f(w)
+\end{gather}
+achieves its supremum at
+$w^*$.
+Since $f$ is strictly convex 
+there exists a unique vector $x^*$
+where
+the above expression achieves its maximum.
+Since
+$f^*$ is differentiable it holds
+\begin{gather*}
+  w^*
+  =
+  \nabla
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+    \right)
+    =
+    \nabla
+    \left( 
+      \lambda
+      \mapsto
+\inner
+{x^*}
+{
+  \lambda
+}
+-
+f(x^*)
+    \right)
+    \left( 
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+    \right)
+    =
+x^*
+\,.
+\end{gather*}
+It follows 
+\eqref{cv:ts:st:1}
+Next we show
 \begin{gather}
   -
   \left( 
@@ -146,31 +317,93 @@ $
   \,.
 \end{gather}
 
-
-\begin{ftheorem}
-  Let 
-$
-(\lambda_d^*,\lambda_a^*)
-$
-be an optimal solution to
-Problem~\ref{cv:ts:dual}.
-Then the unique optimal solution $w^*$ to 
-Problem~\ref{cv:ts:primal}
-is given by
+To this end, note that
 \begin{gather}
-  w^*
+  \inner
+  {
+  -
+\mathbf{U}^\top
+\cdot e_i
+}
+  {w-w^*}
   =
-  \nabla
-    f^*
-    \left( 
-      \mathbf{U}^\top  \lambda_d^*
-      +
-      \mathbf{A}^\top  \lambda_a^*
-    \right)
-    \,.
+  \left( 
+    d-
+\mathbf{U}^\top
+\cdot w
+  \right)_i
+  -
+  \left( 
+    d-
+\mathbf{U}^\top\cdot w^*
+  \right)_i
+  \,.
 \end{gather}
-\end{ftheorem}
-\begin{proof}
+Thus
+$
+-
+\mathbf{U}^\top
+\in
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{U}w
+    \right)
+    (w^*)
+$.
+In the same way it follows
+$
+-
+\mathbf{A}^\top
+\in
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{A}w
+    \right)
+    (w^*)
+$.
+We conclude that
+\begin{gather}
+  \mathrm{0}
+  \in
+  [
+  \partial
+  f(w^*)
+  +
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{U}w
+    \right)
+    (w^*)
+    \cdot
+    \lambda_d^*
+    +
+    \partial
+    \left( 
+      w
+      \mapsto
+      a
+      -
+      \mathbf{A}w
+    \right)
+    (w^*)
+    \cdot
+    \lambda_a^*
+  ]
+  \,.
+\end{gather}
+
   We fix 
   $
   \lambda_a^*
@@ -365,195 +598,5 @@ $
 \lambda_d^*
 $.
 We have shown the complementary slackness.
-\subsubsection*{remanining part}
-We want to show
-
-\begin{gather}
-      \mathbf{U}^\top  \lambda_d^*
-      +
-      \mathbf{A}^\top  \lambda_a^*
-      \in
-\partial f (w^*)
-\,,
-\end{gather}
-where
-\begin{gather}
-  w^*
-  :=
-  \nabla
-    f^*
-    \left( 
-      \mathbf{U}^\top  \lambda_d^*
-      +
-      \mathbf{A}^\top  \lambda_a^*
-    \right)
-\end{gather}
-By \cite[Theorem~23.5(a)-(b)]{Rockafellar1970}
-it suffices to show
-that
-$
-\inner
-{(\cdot)}
-{
-      \mathbf{U}^\top  \lambda_d^*
-      +
-      \mathbf{A}^\top  \lambda_a^*
-}
--
-f(\cdot)
-$
-achieves its supremum at
-$w^*$.
-Since $f$ is strictly convex the above expression achieves its maximum at the unique
-point $w^*$.
-But then it holds
-\begin{gather}
-  \nabla
-    f^*
-    \left( 
-      \mathbf{U}^\top  \lambda_d^*
-      +
-      \mathbf{A}^\top  \lambda_a^*
-    \right)
-    =
-    \nabla
-    \left( 
-\inner
-{w^*}
-{
-  \cdot
-}
--
-f(w^*)
-    \right)
-    \left( 
-      \mathbf{U}^\top  \lambda_d^*
-      +
-      \mathbf{A}^\top  \lambda_a^*
-    \right)
-    =
-w^*
-\,.
-\end{gather}
-
-Next we show
-\begin{gather}
-  -
-  \left( 
-      \mathbf{U}^\top  
-      +
-      \mathbf{A}^\top  
-  \right)
-  \in
-  \left[ 
-    \partial
-    \left( 
-      w
-      \mapsto
-      d
-      -
-      \mathbf{U}w
-    \right)
-    (w^*)
-    +
-    \partial
-    \left( 
-      w
-      \mapsto
-      a
-      -
-      \mathbf{A}w
-    \right)
-    (w^*)
-  \right]
-  \,.
-\end{gather}
-
-To this end, note that
-\begin{gather}
-  \inner
-  {
-  -
-\mathbf{U}^\top
-\cdot e_i
-}
-  {w-w^*}
-  =
-  \left( 
-    d-
-\mathbf{U}^\top
-\cdot w
-  \right)_i
-  -
-  \left( 
-    d-
-\mathbf{U}^\top\cdot w^*
-  \right)_i
-  \,.
-\end{gather}
-Thus
-$
--
-\mathbf{U}^\top
-\in
-    \partial
-    \left( 
-      w
-      \mapsto
-      d
-      -
-      \mathbf{U}w
-    \right)
-    (w^*)
-$.
-In the same way it follows
-$
--
-\mathbf{A}^\top
-\in
-    \partial
-    \left( 
-      w
-      \mapsto
-      d
-      -
-      \mathbf{A}w
-    \right)
-    (w^*)
-$.
-We conclude that
-\begin{gather}
-  \mathrm{0}
-  \in
-  [
-  \partial
-  f(w^*)
-  +
-    \partial
-    \left( 
-      w
-      \mapsto
-      d
-      -
-      \mathbf{U}w
-    \right)
-    (w^*)
-    \cdot
-    \lambda_d^*
-    +
-    \partial
-    \left( 
-      w
-      \mapsto
-      a
-      -
-      \mathbf{A}w
-    \right)
-    (w^*)
-    \cdot
-    \lambda_a^*
-  ]
-  \,.
-\end{gather}
 By the Karush-Kuhn-Tucker conditions we finish the proof.
 \end{proof}
