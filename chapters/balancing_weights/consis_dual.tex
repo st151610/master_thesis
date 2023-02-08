@@ -1,0 +1,538 @@
+\begin{lemma}
+  \label{bw:cd:lem}
+  Let $m\in\mathbb{N}$ and
+  $g \,:\, \R^m \to \overline{\R}$ 
+  be convex.
+  Then 
+  for all $y \in \R^m$ and $\varepsilon>0$ 
+    \begin{gather}
+      \label{7060_0}
+      \inf_{\norm{\Delta}=\varepsilon} g(y+\Delta) - g(y) \ge 0 \quad
+    \end{gather}
+    implies
+    the existence of  
+    a global minimum
+    $
+    y^* \in \,\R^m
+    $
+    of $g$
+    satisfying
+    $
+      \norm{y^* - y} \le \varepsilon
+    $.
+\end{lemma}
+\begin{proof}
+  Since 
+  $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+  $
+  is convex, it contains a 
+  local minimum  
+  of $g$.
+  Suppose towards a contradiction that
+  $
+    y^* 
+    \ 
+    \in 
+    \ 
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+  $
+  is a local minimum, but not a global one, and
+  \eqref{7060_0} is true.
+  Then it holds
+  \begin{gather}
+    \label{7060_3}
+    g(x) < g(y^*)
+    \quad
+    \text{for some}\ 
+    x 
+    \in 
+    \R^m 
+    \setminus 
+    \left( 
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    \right)
+  \,.
+  \end{gather}
+  Furthermore, since 
+  $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+  $ is compact and contains $y^*$,
+  the line segment connecting 
+  $y^*$ and $x$
+  intersects the boundary of 
+  $y + \mathcal{C}$, that is,
+  there exist
+  $
+    \theta \in (0,1)
+  $
+  and 
+  $
+    \Delta_x
+  $
+  with 
+  $
+    \norm{\Delta_x}=\varepsilon
+  $
+  such that
+  \begin{gather}
+    \label{7060_4}
+    \theta x + (1 - \theta) y^* = y + \Delta_x
+    \,.
+  \end{gather}
+    It follows
+    \begin{align}
+      \label{7060_5}
+      \begin{split}
+      g(y^*)
+      \le
+      g(y)
+      \le
+      g(y + \Delta_x)
+      &=
+      g(
+        \theta x + (1 - \theta) y^*
+      )
+      \\
+      &\le
+      \theta g(x)
+      + 
+      (1 - \theta)
+      g(y^*)
+      <
+      g(y^*)
+      ,
+      \end{split}
+    \end{align}
+    which is a contradiction.
+    The first inequality is due to
+    $y^*$ being a local minimum of $g$ in
+    $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    $,
+    the second inequality is due to  
+    \eqref{7060_0} being true,
+    the equality is due to \eqref{7060_4},
+    the third inequality is due to the convexity of $g$
+    and the strict inequality is due to \eqref{7060_3}.
+    Thus every local minimum of $g$ in
+    $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    $
+    is also a global minimum.
+    %It follows the right-hand side of \eqref{7060_0}.
+\end{proof}
+
+Let $\lambda^*$ denote the vector with coordinates
+\begin{gather}
+  \lambda^*_i
+  :=
+  f^{'}(1/\pi_i)
+  -
+  \lambda^\dagger_0
+\end{gather}
+It follows from Lemma~\ref{bw:cd:lem}
+ \begin{gather*}
+   \P
+   \left[ 
+     \norm
+     {
+      \lambda ^ \dagger
+      -
+      \lambda^*
+     }
+     \le
+     \varepsilon
+   \right]
+   =
+   \P
+   \left[ 
+     \inf _ { 
+       \norm{
+         (
+     \Delta
+     ,
+     \Delta_0
+         )
+ } 
+= \varepsilon }
+     G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     -
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge 
+     0
+   \right]
+   \,.
+ \end{gather*}
+ 
+ We separate the differentiable part in $G$ to get
+
+ \begin{align*}
+   &
+   G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     -
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+         %%%%%%%%%%%%% 1 %%%%%%%%%%%%%%
+     \\
+     &
+     \quad
+     \ge
+     -
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left[ 
+       B(X_i)^\top,
+       1
+     \right]
+     \cdot
+     \begin{bmatrix}
+       \Delta\\
+       \Delta_0
+     \end{bmatrix}
+     \left( 
+       1
+       \ 
+       -
+       \ 
+     T_i
+     \cdot
+     (f^{'})^{-1}
+     \left( 
+       \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+     \right)
+     \right)
+     \\
+     &
+     \qquad
+     +
+     \ 
+     \inner
+     {\delta}
+     {
+       |\lambda^*+\Delta|
+       -
+       |\lambda^*|
+     }
+     %%%% 2 %%%%
+     \\
+     &
+     \quad
+     \ge
+     \ 
+     -
+       \norm{
+         (
+     \Delta
+     ,
+     \Delta_0
+         )
+ } 
+     \left( 
+     \norm{B(X_i)}
+     \cdot
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left| 
+       1
+       \ 
+       -
+       \ 
+     T_i
+     \cdot
+     (f^{'})^{-1}
+     \left( 
+       \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+     \right)
+     \right|
+     \ 
+     +
+     \ 
+     \norm{\delta}
+     \right)
+     %%%%% 2 %%%%
+     \\
+     &
+     \quad
+     \ge
+     \ 
+     -
+     \varepsilon
+     \left( 
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left| 
+       1
+       \ 
+       -
+       \ 
+     T_i
+     \cdot
+     (f^{'})^{-1}
+     \left( 
+       \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+     \right)
+     \right|
+     \ 
+     +
+     \ 
+     \norm{\delta}
+     \right)
+     \ 
+     =:
+     -\varepsilon
+     (S+\norm{\delta})
+ \end{align*}
+ \subsubsection*{Analysis of $S$}
+ By the triangle inequality we get
+ \begin{gather}
+  S
+  \le
+  \frac{1}{N}
+  \sum_{i=1}^{N} 
+  |
+  1
+  -
+  T_i
+  /
+  \pi_i
+  |
+  +
+  \max_{i=1,\ldots,n}
+     \left| 
+     (f^{'})^{-1}
+     \left( 
+       \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+     \right)
+     \ 
+      -
+      \ 
+      1/\pi_i
+     \right|
+     \\
+     =:
+     S_1
+     +
+     M
+ \end{gather}
+
+ \subsubsection*{Analysis of $S_1$}
+ Since
+ $X_i$ and $T_i$ are i.i.d. 
+ and
+ \begin{gather}
+   \E[
+  T_i
+  /
+  \pi_i
+   ]
+   =
+   \E[
+   \E[
+  T_i
+  |X_i
+   ]
+  /
+  \pi_i
+   ]
+   =1
+ \end{gather}
+ it holds by the weak law of large numbers
+ \begin{gather}
+   \P[S_1\le 
+   \tilde{\varepsilon}/(4\varepsilon)
+   ]\to 1
+   \quad
+   \text{for}\ 
+   n\to \infty
+ \end{gather}
+ \subsubsection*{Analysis of $M$}
+ Since  
+ \begin{gather}
+   \inner{B(X_i)}{\mathrm{1_N}}=1
+ \end{gather}
+ and
+ \begin{gather}
+   \lambda^*_i
+   =
+  f^{'}(1/\pi_i)
+  -
+  \lambda^\dagger_0
+ \end{gather}
+ it holds
+ \begin{gather}
+       \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+     =
+    \sum_{k=1}^{N}  
+  f^{'}(1/\pi_i)
+  \cdot
+       B_k(X_i)
+ \end{gather}
+
+By the universal consistency of $B$
+this converges to $
+f^{'}
+(
+1/\pi_i
+)
+$ in probability.
+By the continuity of 
+$
+(
+f^{'}
+)^{-1}
+$
+it follows
+
+ \begin{gather}
+   \P[M\le 
+   \tilde{\varepsilon}/(4\varepsilon)
+   ]\to 1
+   \quad
+   \text{for}\ 
+   n\to \infty
+ \end{gather}
+ \subsubsection*{Conclusion}
+ It follows
+ \begin{gather}
+   \P[S\le
+   \tilde{\varepsilon}/(2\varepsilon)
+   ]\to 1
+   \quad
+   \text{for}\ 
+   n\to \infty
+ \end{gather}
+We get
+for all $\tilde{\varepsilon}>0$
+\begin{gather}
+   G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     -
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge
+     -
+     \tilde{\varepsilon}
+\end{gather}
+with probability going to 1 for $n\to \infty$.
+Thus it also holds
+\begin{gather}
+  \P
+  \left[ 
+   G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     -
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge
+     0
+  \right]
+  \to
+  0
+  \qquad
+  \text{for}
+  \ 
+  n\to \infty
+  \,.
+\end{gather}
+This finishes the proof.
+
+
+
