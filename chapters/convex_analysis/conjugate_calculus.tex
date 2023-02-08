@@ -24,7 +24,6 @@ After some examples, we cite the Fenchel-Rockafellar Theorem.
     (x^*)^T x - f(x)
   \end{gather}
 \end{definition}
-\todo[color=orange!40,inline]{Add comment on nomenclature. What is Legendre transformation in this context?}
 
 Note that $f$ in Definition~\ref{ def_convex_conjugate }
 does not have to be convex. On the other hand, the convex conjugate is always convex:
@@ -46,59 +45,6 @@ does not have to be convex. On the other hand, the convex conjugate is always co
 \begin{proof}
   \cite[Proposition~4.2]{Mordukhovich2022}
 \end{proof}
-
-
-% conjugate chain rule %
- %%%%%%%%%%%%%%%%%%%%%%
-\begin{theorem}
-  \emph{(Conjugate Chain Rule)}
-  \label{cvxa_conjugate_chain_rule}
-  Let 
-  $
-    A:
-      \R^m \to \R^n
-  $
-  be a linear map (matrix)
-  and
-  $
-    g:
-      \R^n \to (-\infty, \infty]
-  $
-  a proper convex function. If
-  $
-    \text{Im}(A) \cap \text{ri}(\text{dom}(g))
-    \neq
-    \emptyset
-  $
-  it follows
-  \begin{gather}
-    ( g \circ A )^* ( x^* )
-    =
-    \inf_
-          { y^* \in ( A^* )^{ -1 } ( x^* )}
-                                          g^*( y^* )
-                                          .
-  \end{gather}
-  Furthermore, 
-    for any 
-      $
-        x^* \in \text{dom}( g \circ A)^*
-      $
-        there exists
-          $
-            y^* \in ( A^* )^{ -1 } ( x^* )
-          $
-            such that
-              $
-                ( g \circ A)^* ( x^* )
-                =
-                g^*( y^* )
-              $.
-\end{theorem}
-\begin{proof}
-  \cite[Proposition~4.28]{Mordukhovich2022}
-\end{proof}
-
 % conjugate sum rule %
  %%%%%%%%%%%%%%%%%%%%
 
@@ -120,7 +66,10 @@ does not have to be convex. On the other hand, the convex conjugate is always co
   \emptyset
   .
   $
-  Then we have the conjugate sum rule
+  Then we have the 
+  \textbf{
+  conjugate sum rule
+  }
   \begin{gather}
     ( f + g )^*(x^*)
     =
@@ -147,13 +96,63 @@ does not have to be convex. On the other hand, the convex conjugate is always co
     x^* = x_1^* + x_2^*.
   \end{gather}
 \end{theorem}
+\begin{proof}
+  \cite[Theorem~4.27(c)]{Mordukhovich2022}
+\end{proof}
 
-\todo[color=orange!40,inline]{Include lemma on convex conjugates of indicator functions. This should be straightforward.}
 
-\todo[color=orange!40,inline]{
-  Streamline example. Provide explanaition in the end.
-  Confer \cite[bottom p.337]{Rockafellar1970}
-}
+
+% conjugate chain rule %
+ %%%%%%%%%%%%%%%%%%%%%%
+\begin{theorem}
+  \label{cvxa_conjugate_chain_rule}
+  Let 
+  $
+    A:
+      \R^m \to \R^n
+  $
+  be a linear map (matrix)
+  and
+  $
+    g:
+      \R^n \to (-\infty, \infty]
+  $
+  a proper convex function. If
+  $
+    \text{Im}(A) \cap \text{ri}(\text{dom}(g))
+    \neq
+    \emptyset
+  $
+  it follows
+  the 
+  \textbf{conjugate chain rule}
+  \begin{gather}
+    ( g \circ A )^* ( x^* )
+    =
+    \inf_
+          { y^* \in ( A^* )^{ -1 } ( x^* )}
+                                          g^*( y^* )
+                                          .
+  \end{gather}
+  Furthermore, 
+    for any 
+      $
+        x^* \in \text{dom}( g \circ A)^*
+      $
+        there exists
+          $
+            y^* \in ( A^* )^{ -1 } ( x^* )
+          $
+            such that
+              $
+                ( g \circ A)^* ( x^* )
+                =
+                g^*( y^* )
+              $.
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~4.28(c)]{Mordukhovich2022}
+\end{proof}
 
 
 \begin{example*}
@@ -335,6 +334,27 @@ does not have to be convex. On the other hand, the convex conjugate is always co
     \end{cases}
   \end{align*}
   where we keep to the convention $\inf\emptyset=\infty$.
+  In the same way it follows
+  \begin{gather}
+    \left( 
+      S_{f,n}
+      \circ
+      p_{\left\{ 1,\ldots,n \right\}}
+    \right)^*
+    (x^*_1,\ldots,x^*_{n+1})
+    =
+    \begin{cases}
+      S_{f,n}^*
+    (x^*_1,\ldots,x^*_{n})
+      \quad
+      &\text{if}\ 
+      x_{n+1}^*=0\,,
+      \\
+      \infty
+      \quad
+      &\text{else,}
+    \end{cases}
+  \end{gather}
 
   Next, note that for $n=1$ we arrive at the result. Thus, for some $n\in \mathbb{N}$ it holds
   $
@@ -398,7 +418,12 @@ does not have to be convex. On the other hand, the convex conjugate is always co
 \begin{align*}
   &
   \mathrm{ri}\left( 
-    \mathrm{dom}\,S_{f,n}
+    \mathrm{dom}
+    \left( 
+    S_{f,n}
+    \circ
+    p_{\left\{ 1,\ldots,n \right\}}
+    \right)
   \right)
   \ 
   \cap
@@ -412,7 +437,12 @@ does not have to be convex. On the other hand, the convex conjugate is always co
   =
   \ 
   \mathrm{ri}\left( 
-    \mathrm{dom}\,S_{f,n}
+    \mathrm{dom}
+    \left( 
+    S_{f,n}
+    \circ
+    p_{\left\{ 1,\ldots,n \right\}}
+    \right)
   \ 
   \cap
   \ 
@@ -437,38 +467,32 @@ By the conjugate sum rule it follows
   (
   S_{f,n+1}
   )^*
-  (x_1^*,\ldots,x_{n+1}^*)
   =
   (
-  S_{f,n}
+    S_{f,n}
+    \circ
+    p_{\left\{ 1,\ldots,n \right\}}
   +
   f_{n+1}
   )^*
-  (x_1^*,\ldots,x_{n+1}^*)
   =
   (
-  (
-  S_{f,n}
+    S_{f,n}
+    \circ
+    p_{\left\{ 1,\ldots,n \right\}}
   )
   ^*
   \square
   f_{n+1}^*
-  )
-  (x_1^*,\ldots,x_{n+1}^*)
   \\
-  (
-  f_1^*
-  \square\cdots \square
-  f_{n+1}^*
-  )
-  (x_1^*,\ldots,x_{n+1}^*)
   =
-  \sum_{i=1}^{n+1} 
-  f_{i}^*
-  (x_{i}^*)
+    S_{f,n}^*
+    \circ
+    p_{\left\{ 1,\ldots,n \right\}}
+    +
+  f_{n+1}^*
   =
   S^*_{f,n+1}
-  (x_1^*,\ldots,x_{n+1}^*)
   \,.
 \end{align*}
 \end{example*}
@@ -478,119 +502,119 @@ By the conjugate sum rule it follows
 
 
 
-\todo[color=green!40,inline]{Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}
-Given 
-proper convex functions $f, g : \R^n \to \overline{\R}$ 
-and
-a matrix $A \in \R^{n \times n}$,
-we define 
-the primal minimization problem as follows:
-\begin{problem}
-  \emph{(Primal)}
-  Given proper convex functions 
-  $
-  f:\R^n \to \overline{\R} 
-  $,
-  $
-  g:\R^m \to \overline{\R} 
-  $
-  and a matrix 
-  $
-    A\in \R^{m \times n}
-  $
-  we define the \textbf{primal optimization problem} to be
-  \label{cvxa_primal_problem}
-  \begin{gather*}
-    \underset{x \in \R^n}{\mathrm{minimize}}
-    \qquad
-    f(x) + g(Ax)
-  \end{gather*}
-\end{problem}
-\begin{remark}
-  Problem \autoref{cvxa_primal_problem}
-  appears in the unconstrained form. We can impose constraints by controling for the domains of $f$ and $g$.
-  To incorporate linear constraints $Ax \le 0$
-  or more general constraints $x\in\Omega$, where $\Omega$ is a convex set,
-  we can choose
-  \begin{gather}
-    g(x)=\delta_\Omega(x):=
-  \end{gather}
-  where $x\notin\Omega$
-  leads to 
-  $f(x) + g(x)=\infty$
-  and the optimization problem (if feasible) will exclude $x$ from the solutions.
-\end{remark}
-\begin{problem}
-  \emph{(Dual)}
-  \label{cvxa_dual_problem}
-  Consider the same setting as in Problem~\autoref{cvxa_primal_problem}.
-  Using the convex conjugates of $f,g$ and the transpose of $A$
-  we define the \textbf{dual problem} of Problem~\autoref{cvxa_primal_problem} to be
-  \begin{gather*}
-    \underset{y^* \in \R^m}{\mathrm{maximize}}
-    \qquad
-   - f^*(A^\top y^*) - g^*(y^*).
-  \end{gather*}
-\end{problem}
-%\begin{proposition}
-%  Consider the optimization problem~\autoref{cvxa_primal_problem} and its dual~\autoref{cvxa_dual_problem}, where the functions $f$ and $g$ are not assumed to be convex. Define the \textbf{optimal values} of these problems by
+%\todo[color=green!40,inline]{Find right moment to introduce nomenclature for optimization problem. See also end of Tseng Bertsekas chapter.}
+%Given 
+%proper convex functions $f, g : \R^n \to \overline{\R}$ 
+%and
+%a matrix $A \in \R^{n \times n}$,
+%we define 
+%the primal minimization problem as follows:
+%\begin{problem}
+%  \emph{(Primal)}
+%  Given proper convex functions 
+%  $
+%  f:\R^n \to \overline{\R} 
+%  $,
+%  $
+%  g:\R^m \to \overline{\R} 
+%  $
+%  and a matrix 
+%  $
+%    A\in \R^{m \times n}
+%  $
+%  we define the \textbf{primal optimization problem} to be
+%  \label{cvxa_primal_problem}
 %  \begin{gather*}
-%    \widehat{p}:= \inf_{x\in\R^n}f(x)+g(Ax)
-%    \quad
-%    \text{and}
-%    \quad
-%    \widehat{d}:= \sup_{y\in\R^m} - f^*(A^\top y) - g^*(y).
+%    \underset{x \in \R^n}{\mathrm{minimize}}
+%    \qquad
+%    f(x) + g(Ax)
 %  \end{gather*}
-%  Then we have the relationship
-%  $\widehat{d}\le \widehat{p}$.
-%\end{proposition}
+%\end{problem}
+%\begin{remark}
+%  Problem \autoref{cvxa_primal_problem}
+%  appears in the unconstrained form. We can impose constraints by controling for the domains of $f$ and $g$.
+%  To incorporate linear constraints $Ax \le 0$
+%  or more general constraints $x\in\Omega$, where $\Omega$ is a convex set,
+%  we can choose
+%  \begin{gather}
+%    g(x)=\delta_\Omega(x):=
+%  \end{gather}
+%  where $x\notin\Omega$
+%  leads to 
+%  $f(x) + g(x)=\infty$
+%  and the optimization problem (if feasible) will exclude $x$ from the solutions.
+%\end{remark}
+%\begin{problem}
+%  \emph{(Dual)}
+%  \label{cvxa_dual_problem}
+%  Consider the same setting as in Problem~\autoref{cvxa_primal_problem}.
+%  Using the convex conjugates of $f,g$ and the transpose of $A$
+%  we define the \textbf{dual problem} of Problem~\autoref{cvxa_primal_problem} to be
+%  \begin{gather*}
+%    \underset{y^* \in \R^m}{\mathrm{maximize}}
+%    \qquad
+%   - f^*(A^\top y^*) - g^*(y^*).
+%  \end{gather*}
+%\end{problem}
+%%\begin{proposition}
+%%  Consider the optimization problem~\autoref{cvxa_primal_problem} and its dual~\autoref{cvxa_dual_problem}, where the functions $f$ and $g$ are not assumed to be convex. Define the \textbf{optimal values} of these problems by
+%%  \begin{gather*}
+%%    \widehat{p}:= \inf_{x\in\R^n}f(x)+g(Ax)
+%%    \quad
+%%    \text{and}
+%%    \quad
+%%    \widehat{d}:= \sup_{y\in\R^m} - f^*(A^\top y) - g^*(y).
+%%  \end{gather*}
+%%  Then we have the relationship
+%%  $\widehat{d}\le \widehat{p}$.
+%%\end{proposition}
+%%\begin{proof}
+%%  \cite[Proposition 4.62]{Mordukhovich2022}
+%%  \end{proof}
+%\begin{theorem}
+%  \label{cvxa_fenchel_theorem}
+%  Let 
+%  $f$ 
+%  and
+%  $g\, :\, \R^n \to \ \overline{\R}$ 
+%  be proper convex functions
+%  and
+%  \begin{gather*}
+%  \mathrm{ri}(\mathrm{dom}\,g)
+%  \,
+%  \cap
+%  \,
+%  \mathrm{ri}(A \, \mathrm{dom}\,f)
+%  \ 
+%  \neq
+%  \ 
+%  \emptyset
+%  \,.
+%  \end{gather*}
+%  Then the optimal values of \eqref{cvxa_primal_problem} and \eqref{cvxa_dual_problem} are equal, 
+%  that is,
+%  \begin{gather*}
+%    \inf_{x \in \R^n} 
+%    \left\{ f(x) 
+%      \ 
+%    +
+%    \ 
+%  g(Ax) \right\}
+%    \ 
+%    =
+%    \ 
+%    \sup_{y \in \R^n}
+%    \left\{   -f^* \left( A^T y \right) 
+%      \ 
+%    - 
+%      \ 
+%  g^*(-y) \right\}
+%  \,.
+%  \end{gather*}
+%\end{theorem}
 %\begin{proof}
-%  \cite[Proposition 4.62]{Mordukhovich2022}
-%  \end{proof}
-\begin{theorem}
-  \label{cvxa_fenchel_theorem}
-  Let 
-  $f$ 
-  and
-  $g\, :\, \R^n \to \ \overline{\R}$ 
-  be proper convex functions
-  and
-  \begin{gather*}
-  \mathrm{ri}(\mathrm{dom}\,g)
-  \,
-  \cap
-  \,
-  \mathrm{ri}(A \, \mathrm{dom}\,f)
-  \ 
-  \neq
-  \ 
-  \emptyset
-  \,.
-  \end{gather*}
-  Then the optimal values of \eqref{cvxa_primal_problem} and \eqref{cvxa_dual_problem} are equal, 
-  that is,
-  \begin{gather*}
-    \inf_{x \in \R^n} 
-    \left\{ f(x) 
-      \ 
-    +
-    \ 
-  g(Ax) \right\}
-    \ 
-    =
-    \ 
-    \sup_{y \in \R^n}
-    \left\{   -f^* \left( A^T y \right) 
-      \ 
-    - 
-      \ 
-  g^*(-y) \right\}
-  \,.
-  \end{gather*}
-\end{theorem}
-\begin{proof}
-  \cite[Theorem~4.63]{Mordukhovich2022}
-\end{proof}
+%  \cite[Theorem~4.63]{Mordukhovich2022}
+%\end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \todo[color=green!40,inline]{Insert lemma in chapter 1.}
 \begin{lemma}
