@@ -2,25 +2,49 @@
   The dual of 
   Problem~\ref{bw:1:primal}
   is the unconstrained optimization problem 
-  \begin{gather*}
-    \underset{\lambda \in \R^n}{\mathrm{minimize}}
-    \qquad
-    \frac{1}{n}
-    \sum_{i = 1}^{n} 
-    T_i 
-    \cdot
-    f^*
-    (
-      m_n(\lambda|X_i)
-    )
-    -
-      m_n(\lambda|X_i)
-    \ 
-    +
-    \ 
-    \inner{\delta}{\left| \lambda \right|}
-    \,,
-  \end{gather*}
+\begin{gather*}
+  \underset
+  {\lambda_0,\ldots,\lambda_{N}\in \R}
+  {
+    \mathrm{minimize}
+  }
+  \quad
+  \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left[ 
+    \,
+  T_i
+  \cdot
+  f^*
+  \!
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \ 
+-
+\ 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \,
+  \right]
+  \ 
++
+\ 
+\inner
+{\delta}
+{|\lambda|}
+  \,.
+\end{gather*}
   where
   \begin{gather*}
   f^*
@@ -66,8 +90,8 @@
     ^\top
   $
   denotes 
-  the $n$ basis functions of the covariates 
-  of unit $i\in \left\{ 1, \ldots, n \right\}$
+  the $N$ basis functions of the covariates 
+  of unit $i\in \left\{ 1, \ldots, N \right\}$
   and
   $
     \left| \lambda \right|
@@ -77,7 +101,7 @@
       ,
       \ldots
       ,
-      \left| \lambda_n \right|
+      \left| \lambda_N \right|
     \right]
     ^\top
     ,
@@ -87,8 +111,9 @@
   Moreover,
   if $\lambda^\dagger$
   is an optimal solution of the above problem 
-  then
-  for all $i$ with $T_i=1$
+  then the optimal solution to problem
+  Problem~\ref{bw:1:primal}
+  is given by
   \begin{gather*}
     w_i^\dagger
     \ 
@@ -96,17 +121,17 @@
     \ 
     (f^{'})^{-1}
     \left( 
-      m_n
-      (
-      \lambda^\dagger
-      |
-      X_i
-      )
+      \inner
+      {B(X_i)}
+      {\lambda^\dagger}
+      +
+      \lambda_0^\dagger
     \right)
+    \qquad
+    \text{for}\ 
+    i\in \left\{ 1\ldots,n \right\}
+    \,.
   \end{gather*}
-  is part of the optimal solution to 
-  Problem~\ref{bw:1:primal}
-  .
 \end{ftheorem*}
 \subsection*{Plan of proof}
   We bring 
@@ -135,11 +160,11 @@
       ,
       \ldots
       ,
-      B_n(X_i)
+      B_N(X_i)
     \right]
     ^\top
     \,,
-    \intertext{the constraints vector}
+    \intertext{the constraints vectors}
 d
     &
     \ 
@@ -148,228 +173,173 @@ d
     \begin{bmatrix}
       0_n
       \\
-      \pm n
-      \\
-      -n\cdot\delta 
+      -N\cdot\delta 
       \pm\,
-      \sum_{i = 1}^{n} B_k(X_i)
+      \sum_{i = 1}^{N} B_k(X_i)
     \end{bmatrix}
     \,,
+    \\
+  a
+&
+  \ 
+    :=
+    \ 
+    N
     \intertext{
-  the matrix of the basis functions with indicators of treatment
+  the matrix of the basis functions of the treated
   }
-    T\mathbf{B}(\mathbf{X})
+    \mathbf{B}(\mathbf{X})
     &
     \ 
     :=
     \ 
     \begin{bmatrix}
-      T_1B(X_1), \ldots, T_nB(X_n)
+      B(X_1), \ldots, B(X_n)
     \end{bmatrix}
     \intertext{
       and
-  the constraint matrix with indicator of treatment
+  the constraint matrices
     }
-    T\mathbf{A}
+    \mathbf{U}
     &
     \ 
     :=
     \ 
     \begin{bmatrix}
-      \mathrm{diag}
-      [T_1,\ldots,T_n]
+      \mathbf{I}_n
       \\
-      \pm
-      [T_1,\ldots,T_n]
-      \\
-      \pm\,T\mathbf{B}(\mathbf{X})
+      \pm\,\mathbf{B}(\mathbf{X})
     \end{bmatrix}
         \,.
+        \\
+    \mathbf{A}
+    &
+    \ 
+    :=
+    \ 
+      \mathrm{1}_n
   \end{align*}
-  Next we write
-  Problem~\ref{bw:1:primal}
-  in the form of ts.
- \begin{gather*}
-    \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
-    \qquad
-    \sum_{i = 1}^{n} T_i \cdot f(w_i)
-    \\
-    \mathbf{A}w 
-    \ 
-    \ge
-    \ 
-    d
-    \,,
-\end{gather*}
-The convex conjugate of the objective function 
+  By Example~\ref{cv:cc:ex}
+the convex conjugate of the objective function 
 of 
-  Problem~\ref{bw:1:primal}
-is
+  Problem~\ref{bw:1:primal} is
 \begin{gather*}
   [x^*_1,\ldots,x^*_n]^\top
   \ 
   \mapsto
   \ 
-  \sum_{T_i=1} f^*(x^*_i)
-  +
-  \sum_{T_i=0} 
-  \chi_{\left\{ 0 \right\}}(x^*_i)
+  \sum_{i=1}^n f^*(x^*_i)
   \,,
 \end{gather*}
-where we define the characteristic function $\chi$ by
-\begin{gather*}
-  \chi_{\left\{ 0 \right\}}
-  (t)
-  \ 
-  =
-  \ 
-  \infty
-  \cdot
-  (
-  1-\mathbf{1}_{\left\{ 0 \right\}}(t)
-  )
-  \ 
-  =
-  \ 
-  \begin{cases}
-    0,& \text{if}\ t=0,\\
-    \infty,& \text{else}\,.
-  \end{cases}
-\end{gather*}
-Note that the $i$-th column of $T\mathbf{A}$,
-which we denote as 
-$T\mathbf{A}_i$,
-vanishes if 
-$T_i=0$. 
-In the subsecquent analysis
-this prevents the characteristic function from blowing up.
-We consider the form of the dual in ts to get
-\begin{gather*}
-  \sum_{T_i=1}  f^*(T\mathbf{A}_{ i}^\top\lambda)
-  +
-  \sum_{T_i=0} 
-  \chi_{\left\{ 0 \right\}}
-(T\mathbf{A}_{i}^\top\lambda)
-  =
-  \sum_{i=1}^n T_i f^*(\mathbf{A}_{ i}^\top\lambda)
-  \,.
-\end{gather*}
-where
-$\mathbf{A}$
- is as $T\mathbf{A}$ with the indicators of treatment replaced by $1$.
- It is important, that in the final form the indicators of treatment are outside the argument of $f^*$ and we have no singularity for 
- $T_i=0$.
-The corresponding dual problem in \cite{Tseng1991} is then
-\begin{gather*}
-  \underset
-  {\lambda_1,\ldots,\lambda_{K}\ge 0}
-  {
-  \mathrm{maximize}
-  }
-  \quad
-  -
-  \sum_{i=1} 
-  ^n
-  T_i
-  \cdot
-  f^*
-(\mathbf{A}_{ i}^\top\lambda)
-  \ 
-  +
-  \ 
-  \inner{\lambda}{d}
-  \,.
-\end{gather*}
+Before we apply Theorem~\ref{cv:ts:th}
+we eliminate the non-negativity constraints.
+To this end, we consider the objective function $G$ of the dual
+problem and update it until we reach its final form.
+We write
+\begin{gather}
+  \lambda_d
+  =:
+  \begin{bmatrix}
+    \rho\\
+    \lambda^+\\
+    \lambda^-
+  \end{bmatrix}
+\end{gather}
+\begin{align*}
+G(\lambda_d,\lambda_0)
+&
+\ 
+=
+\ 
+G
+\left( 
+\rho,
+  \lambda^+,
+  \lambda^-,
+\lambda_0
+\right)
+\\
+&
+\ 
+:=
+\ 
+    \sum_{i = 1}^{N} 
+    -
+    f^*
+    \left( 
+    \rho_i
+    +
+    \lambda_0
+    +
+    \inner{B(X_i)}
+    {\lambda^+-\lambda^-}
+    \right)
+    \ 
+    +
+    \ 
+    \left( 
+    \lambda_0
+    +
+    \inner{B(X_i)}
+    {\lambda^+-\lambda^-}
+    \right)
+\\
+&
+    \qquad 
+    -
+    \ 
+    N
+    \cdot
+    \inner{\delta}
+    {\lambda^++\lambda^-}
+\end{align*}
+Since we maximize $G$ and $f^*$ is strictly non-decreasing, 
+$\rho=0$ is optimal. We update $G$.
+\begin{align*}
+G
+\left( 
+  \lambda^+,
+  \lambda^-,
+\lambda_0
+\right)
+&
+\ 
+=
+\ 
+    \sum_{i = 1}^{N} 
+    -
+    f^*
+    \left( 
+    \lambda_0
+    +
+    \inner{B(X_i)}
+    {\lambda^+-\lambda^-}
+    \right)
+    \ 
+    +
+    \ 
+    \left( 
+    \lambda_0
+    +
+    \inner{B(X_i)}
+    {\lambda^+-\lambda^-}
+    \right)
+\\
+&
+    \qquad 
+    -
+    \ 
+    N
+    \cdot
+    \inner{\delta}
+    {\lambda^++\lambda^-}
+\end{align*}
 
 \subsubsection*{Non-negativity constraints}
 
-  Next we want to remove the non-negativity constraints on $\lambda$.
-  To this end we write
-  \begin{gather}
-    \lambda
-    :=
-    \begin{bmatrix}
-      \rho_1,
-      \ldots,
-      \rho_n,
-      \ 
-      \lambda_0^+,
-      \lambda_0^-,
-      \ 
-      \lambda_1^+,
-      \ldots,
-      \lambda_n^+,
-      \ 
-      \lambda_1^-,
-      \ldots,
-      \lambda_n^-
-    \end{bmatrix}
-    ^\top
-    \,.
-  \end{gather}
-  We expand the objective function $G$ of the dual problem.
-  \begin{align*}
-    G
-    (
-    \rho,
-    \lambda_0^\pm,
-    \lambda^\pm
-    )
-    =
-  &-
-  \sum_{i=1} 
-  ^n
-  T_i
-  \cdot
-  f^*
-  \left( 
-\rho_i
-\ 
-+
-\ 
-\lambda_0^+
-\!
--
-\lambda_0^-
-\ 
-+
-\ 
-\inner
-{B(X_i)}
-{\,\lambda^+ \!\!- \lambda^-}
-  \right)
-  \\
-  &+
-  \ 
-  n
-  \cdot
-  (
-\lambda_0^+
-\!
--
-\lambda_0^-
-  )
-  \ 
-+
-  \ 
-  \sum_{i=1} 
-  ^n
-\inner
-{B(X_i)}
-{\,\lambda^+ \!\!- \lambda^-}
-  \ 
--
-  \ 
-  n
-  \cdot
-\inner
-{\delta}
-{\,\lambda^+ \!+ \lambda^-}
-  \end{align*}
-  To illustrate the procedure, we show 
-  for all $i \in \left\{ 1,\ldots,n \right\}$
-
-
+  Next we want to remove the non-negativity constraints on $\lambda^\pm$.
+  We show 
+  for all $i \in \left\{ 1,\ldots,N \right\}$
 \begin{alignat*}{2}
   \text{either}
   &
@@ -386,7 +356,7 @@ The corresponding dual problem in \cite{Tseng1991} is then
 \end{alignat*}
 Assume towards a contradiction that 
 there exists
-$i \in \left\{ 1,\ldots,n \right\}$
+$i \in \left\{ 1,\ldots,N \right\}$
 such that
 $
       \lambda_i^+ > 0
@@ -396,7 +366,7 @@ $
       \lambda_i^- > 0
 $ 
 and that 
-$\lambda$ is optimal.
+$\lambda^\pm$ is optimal.
 Consider
   \begin{gather}
     \tilde{\lambda}
@@ -404,10 +374,6 @@ Consider
     :=
     \ 
     \begin{bmatrix}
-      \rho
-      ,
-      \ 
-      \lambda_0^\pm,
       \ 
       \lambda_1^+,
       \ldots,
@@ -423,7 +389,7 @@ Consider
       )\,,
       \ 
       \ldots,
-      \lambda_n^+,
+      \lambda_N^+,
       \ 
       \lambda_1^-,
       \ldots,
@@ -438,7 +404,9 @@ Consider
       )\,,
       \ 
       \ldots,
-      \lambda_n^-
+      \lambda_N^-
+      \,,
+      \lambda_0
     \end{bmatrix}
     ^\top
     \,.
@@ -467,7 +435,7 @@ Consider
   =
   \ 
   2
-  n
+  N
   \cdot
   \delta_i
   \cdot
@@ -484,77 +452,6 @@ Consider
   \,,
   \end{align}
   which contradicts the optimality of $\lambda$.
-  Likewise we can show
-\begin{alignat*}{2}
-  \text{either}
-  &
-  &&
-  \qquad
-      \lambda_i^+ > 0
-  \\
-  \text{or}
-  &
-  &&
-  \qquad
-      \lambda_i^- > 0
-  \,.
-\end{alignat*}
-Let now
-\begin{gather}
-    \tilde{\lambda}
-    \ 
-    :=
-    \ 
-    \begin{bmatrix}
-      \rho
-      ,
-      \ 
-      \lambda_0^\pm
-      \!
-      -
-      (
-      \lambda_0^+
-      \!
-      \land
-      \lambda_0^-
-      )\,,
-      \ 
-      \lambda_1^+,
-      \ldots,
-      \lambda_n^+,
-      \ 
-      \lambda_1^-,
-      \ldots,
-      \lambda_n^-
-    \end{bmatrix}
-    ^\top
-    \,.
-  \end{gather}
-We get
-  \begin{align}
-  G(\tilde{\lambda})
-  -
-  G(\lambda)
-  \ 
-  =
-  \ 
-  2
-  n
-  \cdot
-  \delta_i
-  \cdot
-      (
-      \lambda_i^+
-      \!
-      \land
-      \lambda_i^-
-      )
-  \ 
-  >
-  \ 
-  0
-  \,,
-  \end{align}
 But then 
 $
 \lambda^\pm_i
@@ -564,191 +461,25 @@ collapses to
 $
 \lambda_i\in \R
 $ 
-for 
-$i\in \left\{ 0,\ldots,n \right\}$, that is,
+for all
+$i\in \left\{ 0,\ldots,N \right\}$, that is,
 $ \lambda_i=\lambda_i^+\!-\lambda_i^- $.
 Note that
 $ |\lambda_i|=\lambda_i^+\!+\lambda_i^- $.
-Likewise we can see, that 
-$
-\lambda_0
-=
-\lambda_0^+
--
-\lambda_0^-
-\in \R
-$
-removes the constraint on $\lambda_0^\pm$.
-Let us take this into account for $G$. We get
-  \begin{align*}
-    G
-    (
-    \rho,
-    \lambda_0,
-    \lambda
-    )
-    =
-  &-
-  \sum_{i=1} 
-  ^n
-  T_i
-  \cdot
-  f^*
-  \left( 
-\rho_i
-\ 
-+
-\ 
-\lambda_0
-\ 
-+
-\ 
-\inner
-{B(X_i)}
-{\lambda}
-  \right)
-  \\
-  &+
-  \ 
-  n
-  \cdot
-\lambda_0
-  \ 
-+
-  \ 
-  \sum_{i=1} 
-  ^n
-\inner
-{B(X_i)}
-{\lambda}
-  \ 
--
-  \ 
-  n
-  \cdot
-\inner
-{\delta}
-{|\lambda|}
-\,.
-  \end{align*}
-Next we show, that $\rho=0$.
-Suppose there exists 
-$
-i\in \left\{ 1,\ldots, n \right\}
-$
-such that 
-$
-\rho_i>0
-$
-and
-$
-  T_i
-  \cdot
-  (f^{'})^{-1}
-  \left( 
-\rho_i
-\ 
-+
-\ 
-\lambda_0
-\ 
-+
-\ 
-\inner
-{B(X_i)}
-{\lambda}
-  \right)
-  <
-  0
-$.
-It follows
-\begin{gather}
-  G(0,\lambda_0,\lambda)
-  -
-  G(\rho_i,\lambda_0,\lambda)
-  \ge
-  T_i
-  \cdot
-  (f^{'})^{-1}
-  \left( 
-\rho_i
-\ 
-+
-\ 
-\lambda_0
-\ 
-+
-\ 
-\inner
-{B(X_i)}
-{\lambda}
-  \right)
-(-\rho_i)
->0,
-\end{gather}
-which contradicts the optimality of $\lambda$.
-Suppose
-$
-  T_i
-  \cdot
-  (f^{'})^{-1}
-  \left( 
-\rho_i
-\ 
-+
-\ 
-\lambda_0
-\ 
-+
-\ 
-\inner
-{B(X_i)}
-{\lambda}
-  \right)
-  >
-  0
-$.
-Then the claim yields to a perturbation argument as in ts.
-Thus
-To eliminate the constraints for $\rho$ 
-we use a similar argument as in the complementary slackness
-section of the ts chapter.
-Thus we have complementary slackness of 
-$\rho_i$ and
-$
-  T_i
-  \cdot
-  (f^{'})^{-1}
-  \left( 
-\rho_i
-\ 
-+
-\ 
-\lambda_0
-\ 
-+
-\ 
-\inner
-{B(X_i)}
-{\lambda}
-  \right)
-$.
-But then
-every
-optimal solution $\lambda$ remains optimal by taking $\rho=0$.
 
-Dividing the optimization problem by $n$ and reversing it, we get
+We update the objective function one more time.
+Multiplying with $-1/N$ and introducing $T$ we get
 
 \begin{gather*}
   \underset
-  {\lambda_0,\ldots,\lambda_{n}\in \R}
+  {\lambda_0,\ldots,\lambda_{N}\in \R}
   {
     \mathrm{minimize}
   }
   \quad
-  \frac{1}{n}
+  \frac{1}{N}
 \sum_{i=1} 
-  ^n
+  ^N
   \left[ 
     \,
   T_i
@@ -782,5 +513,5 @@ Dividing the optimization problem by $n$ and reversing it, we get
 {|\lambda|}
   \,.
 \end{gather*}
-
+We apply Theorem~\ref{cv:ts:th} to finish the proof.
 \end{proof}
