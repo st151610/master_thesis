@@ -1192,6 +1192,14 @@ INPUT ./chapters/balancing_weights/consis_dual.tex
 INPUT chapters/balancing_weights/consis_dual.tex
 INPUT ./chapters/balancing_weights/consis_dual.tex
 INPUT chapters/balancing_weights/consis_dual.tex
+INPUT ./chapters/balancing_weights/consis_primal.tex
+INPUT chapters/balancing_weights/consis_primal.tex
+INPUT ./chapters/balancing_weights/consis_primal.tex
+INPUT chapters/balancing_weights/consis_primal.tex
+INPUT ./chapters/balancing_weights/consis_est.tex
+INPUT chapters/balancing_weights/consis_est.tex
+INPUT ./chapters/balancing_weights/consis_est.tex
+INPUT chapters/balancing_weights/consis_est.tex
 INPUT ./chapters/convex_analysis/cvxa_primer.tex
 INPUT chapters/convex_analysis/cvxa_primer.tex
 INPUT ./chapters/convex_analysis/cvxa_primer.tex

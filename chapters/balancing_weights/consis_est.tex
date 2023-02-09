@@ -1,0 +1,165 @@
+\begin{align*}
+  \left| 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    Y_i
+    -
+    \E[Y(1)]
+  \right|
+  &
+  \ 
+  \le
+  \ 
+  \left|  
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w_i
+    B(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B(X_i)
+  \right)
+  ^\top
+     \mathbf{Y}(1) 
+  \right|
+  %%%% 1 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    \left( 
+    \E[Y(1)| X_i]
+    -
+    \inner
+    {B(X_i))}
+    { \mathbf{Y}(1) }
+    \right)
+  \right|
+  %%%% 1 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left( 
+    \E[Y(1)| X_i]
+    -
+    \inner
+    {B(X_i))}
+    { \mathbf{Y}(1) }
+    \right)
+  \right|
+  %%%% 2 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{N}
+    \sum_{i=1}^{n} 
+    (
+    w_i 
+    -
+    1/\pi_i
+    )
+    \left( 
+      Y_i
+    -
+    \E[Y(1)| X_i]
+    \right)
+  \right|
+  %%%% 3 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    T_i
+    /\pi_i
+    \left( 
+      Y_i
+    -
+    \E[Y(1)| X_i]
+    \right)
+    +
+    \left( 
+    \E[Y(1)| X_i]
+    -
+    \E[Y(1)]
+    \right)
+  \right|
+  \\
+  %%%%%%%%%%%%%%%
+  &
+  \ 
+  =:
+  \ 
+  R_1
+  +
+  R_2
+  +
+  R_3
+  +
+  R_4
+  +
+  R_5
+  \end{align*}
+  \subsubsection*{Analysis of $R_1$}
+  By the Cauchy-Schwarz inequality it holds
+  \begin{gather}
+    R_1
+    \ 
+    =
+    \ 
+   \left|  
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w_i
+    B(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B(X_i)
+  \right)
+  ^\top
+     \mathbf{Y}(1) 
+  \right|
+  \le
+  \norm{\delta}
+  \norm{
+     \mathbf{Y}(1) 
+  }
+  \end{gather}
+
+  \subsubsection*{Analysis of $R_2$ and $R_3$}
+By the universal consistency of $B$ and 
+$
+  \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    =1
+$
+the terms
+$R_2$ and $R_3$ converge to $0$ in probability.
+\subsubsection*{Analysis of $R_4$}
+By the boundedness of $Y$ and the primal consistency 
+$R_4$ 
+converges to $0$ in probability.
+\subsubsection*{Analysis of $R_5$}
+Since the expectation is $0$, the term $R_5$ 
+converges to $0$ in probability by the weak law of large numbers.
+
