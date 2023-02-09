@@ -404,7 +404,7 @@ We conclude that
   ]
   \,.
 \end{gather}
-
+\subsubsection*{Complementary Slackness}
   We fix 
   $
   \lambda_a^*
@@ -599,5 +599,99 @@ $
 \lambda_d^*
 $.
 We have shown the complementary slackness.
-By the Karush-Kuhn-Tucker conditions we finish the proof.
+\subsubsection*{Primal Feasibility}
+In the previous subsection we showed
+$
+  \nabla G(\lambda_d^*)\le 0
+$.
+But it holds
+\begin{gather}
+  \nabla G(\lambda_d^*)
+  \ 
+  =
+  \ 
+  d
+  -
+  \mathbf{U}
+  \cdot
+  \nabla
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+    \right)
+    \ 
+  =
+  \ 
+  d
+  -
+  \mathbf{U}w^*
+  \,.
+\end{gather}
+Thus
+$w^*$ satisfies the inequality constraints. 
+
+We view $G$ from a different angel. Let for fixed
+$\lambda^*_d$
+\begin{gather}
+  G(\lambda_a)
+  :=
+  \inner
+  {\lambda_a}{a}
+  -
+  \left( 
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+    \right)
+    -
+  \inner
+  {\lambda_d^*}{d}
+  \right)
+  =:
+  \inner
+  {\lambda_a}{a}
+  -
+  g(\lambda_a)
+  .
+\end{gather}
+The function $g$ inherits convexity and differentiability from 
+$f^*$.
+From the optimality of $\lambda_a^*$ we know that
+$G$ takes its maximum there. But then by Proposition~\ref{cv:ts:prop}
+and the differentiability of $g$ it holds
+\begin{gather}
+  a
+  \in
+  \partial
+  g(\lambda_a^*)
+  =
+  \left\{ 
+    \mathbf{A}
+    \nabla
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^*
+      +
+      \mathbf{A}^\top  \lambda_a^*
+    \right)
+  \right\}
+  =
+  \left\{ 
+    \mathbf{A}
+    w^*
+  \right\}
+  \,.
+\end{gather}
+Thus $a=
+    \mathbf{A}
+    w^*
+$. But then $w^*$ satisfies also the equality constraints.
+\subsubsection*{Conclusion}
+Since the dual constraints imply dual feasibility, we verified 
+all Karush-Kuhn-Tucker conditions. The result follows from applying 
+\cite[Theorem~28.3]{Rockafellar1970}.
 \end{proof}

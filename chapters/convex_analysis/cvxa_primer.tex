@@ -15,114 +15,114 @@ The Cartesian product of convex sets is convex. The intersection of a collection
 
 
 
-Given (not necessary convex) sets 
-$
-  \Omega,
-  \Omega_1,
-  \Omega_2
-  \subseteq 
-  \R^n
-$
-and
-$\lambda\in\R,$
-define the \textbf{set addition} and \textbf{multiplication}
-by a real scalar as 
-$
-  \Omega_1 
-  +
-  \Omega_2 
-  :=
-  \left\{ 
-    x_1 + x_2 
-    \colon
-    x_1 \in \Omega_1
-    ,
-    x_2 \in \Omega_2
-  \right\}
-$
-and
-$
-  \lambda \Omega
-  :=
-  \left\{ 
-    \lambda x
-    \colon
-    x\in\Omega
-  \right\}.
-$
-For convex sets the addition and multiplication by a real scalar are convex.
-
-Throughout this section, we shall denote by 
-$
-  B
-  :=
-  \left\{ 
-    x=
-    [x_1, \ldots, x_n]^\top
-    \in\R^n
-    \colon
-    (
-    \sum_{i=1}^{n} 
-    x_i^2
-    )
-    ^{1/2}
-    \le 1
-  \right\}
-$
-\todo[color=green!40,inline]{Solve editorial issue with ball.}
-the \textbf{Euclidian unit ball} in $\R^n.$
-This is a closed convex set. For any $a\in\R^n,$ 
-the \textbf{ball with radius $\varepsilon >0$ and center $a$}
-is given by
-$
-  \left\{ 
-   a+x 
-    \in\R^n
-    \colon
-    (
-    \sum_{i=1}^{n} 
-    x_i^2
-    )
-    ^{1/2}
-    \le \varepsilon
-  \right\}
-  =
-  a
-  +
-  \varepsilon B
-  .
-$
-For any set $\Omega$ in $\R^n,$ 
-the set of points $x$ whose distance from $\Omega$
-does not exceed $\varepsilon$ is 
-$
-\Omega + \varepsilon B.
-$
-The \textbf{closure} $\mathrm{cl}(\Omega)$
-and \textbf{interior} $\mathrm{int}(\Omega)$
-of $\Omega$
-can therefore be expressed by 
-$
-  \mathrm{cl}(\Omega)
-  =
-  \bigcap_{\varepsilon>0}
-  \Omega + \varepsilon B
-$
-and
-$
-  \mathrm{int}(\Omega)
-  =
-  \left\{ 
-    x\in \Omega
-    \colon
-    \text{there exists $\varepsilon>0$ such that }
-    x+\varepsilon B
-    \subseteq
-    \Omega
-  \right\}
-  .
-$
-
+%Given (not necessary convex) sets 
+%$
+%  \Omega,
+%  \Omega_1,
+%  \Omega_2
+%  \subseteq 
+%  \R^n
+%$
+%and
+%$\lambda\in\R,$
+%define the \textbf{set addition} and \textbf{multiplication}
+%by a real scalar as 
+%$
+%  \Omega_1 
+%  +
+%  \Omega_2 
+%  :=
+%  \left\{ 
+%    x_1 + x_2 
+%    \colon
+%    x_1 \in \Omega_1
+%    ,
+%    x_2 \in \Omega_2
+%  \right\}
+%$
+%and
+%$
+%  \lambda \Omega
+%  :=
+%  \left\{ 
+%    \lambda x
+%    \colon
+%    x\in\Omega
+%  \right\}.
+%$
+%For convex sets the addition and multiplication by a real scalar are convex.
+%
+%Throughout this section, we shall denote by 
+%$
+%  B
+%  :=
+%  \left\{ 
+%    x=
+%    [x_1, \ldots, x_n]^\top
+%    \in\R^n
+%    \colon
+%    (
+%    \sum_{i=1}^{n} 
+%    x_i^2
+%    )
+%    ^{1/2}
+%    \le 1
+%  \right\}
+%$
+%\todo[color=green!40,inline]{Solve editorial issue with ball.}
+%the \textbf{Euclidian unit ball} in $\R^n.$
+%This is a closed convex set. For any $a\in\R^n,$ 
+%the \textbf{ball with radius $\varepsilon >0$ and center $a$}
+%is given by
+%$
+%  \left\{ 
+%   a+x 
+%    \in\R^n
+%    \colon
+%    (
+%    \sum_{i=1}^{n} 
+%    x_i^2
+%    )
+%    ^{1/2}
+%    \le \varepsilon
+%  \right\}
+%  =
+%  a
+%  +
+%  \varepsilon B
+%  .
+%$
+%For any set $\Omega$ in $\R^n,$ 
+%the set of points $x$ whose distance from $\Omega$
+%does not exceed $\varepsilon$ is 
+%$
+%\Omega + \varepsilon B.
+%$
+%The \textbf{closure} $\mathrm{cl}(\Omega)$
+%and \textbf{interior} $\mathrm{int}(\Omega)$
+%of $\Omega$
+%can therefore be expressed by 
+%$
+%  \mathrm{cl}(\Omega)
+%  =
+%  \bigcap_{\varepsilon>0}
+%  \Omega + \varepsilon B
+%$
+%and
+%$
+%  \mathrm{int}(\Omega)
+%  =
+%  \left\{ 
+%    x\in \Omega
+%    \colon
+%    \text{there exists $\varepsilon>0$ such that }
+%    x+\varepsilon B
+%    \subseteq
+%    \Omega
+%  \right\}
+%  .
+%$
+%
   A set 
   $A\subseteq \R^n$
   is called \textbf{affine set}, if
@@ -165,16 +165,12 @@ $
 $
 The image and inverse image/preimage of convex sets under affine mappings are also convex.
 
-
-
-
-
 Because the notion of interior is not precise enough for our purposes
 we define the relative interior which is the interior relative to the affine hull.
-This concept is motivated by the fact that a line segment embedded in $\R^2$
-does have a natural interior in $\R$ which is not a true interior in $\R^2.$
-The relative interior of $C$ is defined as the interior which results when
-$C$ is regarded as a subset of its affine hull.
+%%This concept is motivated by the fact that a line segment embedded in $\R^2$
+%%does have a natural interior in $\R$ which is not a true interior in $\R^2.$
+%%The relative interior of $C$ is defined as the interior which results when
+%%$C$ is regarded as a subset of its affine hull.
 \begin{definition*}
   Let 
   $\Omega\subseteq \R^n.$
@@ -219,16 +215,6 @@ if and only if
       \ 
       \emptyset
     $
-  \item
-    The sets
-    $
-      \mathrm{cl}\,C
-      $
-      and
-      $
-      \mathrm{ri}\,C
-    $
-    are convex
   \item
     $
       \mathrm{cl}(\mathrm{ri}\,C)
@@ -325,30 +311,15 @@ if and only if
           \times
           \mathrm{ri}\,C_2
         $
-      \item
-        $
-          \mathrm{ri}(C_1)
-          \cap
-          \mathrm{ri}(C_2)
-          =
-          \emptyset
-        $
-        if and only if
-        $
-          0 \notin
-          \mathrm{ri}
-          (C_1 - C_2)
-          .
-        $
 \end{enumerate}
 
 \end{proposition}
 
 
 \begin{proof}
-  For a proof of (i)-(vi) we refer to~\cite[Theorem 6.2 - 6.7]{Rockafellar1970}.
+  For a proof of (i)-(v) we refer to~\cite[Theorem 6.2 - 6.7]{Rockafellar1970}.
 
-To prove (vii) we use (iv).
+To prove (vi) we use (iii).
 Let
   $
   (z_1, z_2)
@@ -372,7 +343,7 @@ Let
       \text{for all}\ 
       i\in \left\{ 1,2 \right\}.
   \end{gather}
-  Using (iv) again, we get
+  Using (iii) again, we get
   $
   \mathrm{ri}(C_1\!\times C_2)
   \, 
@@ -392,7 +363,7 @@ Let
     \times
     \mathrm{ri}\,C_2
   $.
-  By (iv), for all
+  By (iii), for all
   $
     (x_1,x_2)\in C_1\times C_2
   $
@@ -414,7 +385,7 @@ Let
   \eqref{cv:primer:prop:1}
   from
   \eqref{cv:primer:prop:2}.
-  By (iv) it holds
+  By (iii) it holds
   $
   (z_1,z_2)
     \in
@@ -477,7 +448,6 @@ Let
           \mathrm{ri}\,C_2
   $
   and equality.
-    \cite[Theorem~2.92]{Mordukhovich2022}
 \end{proof}
  
 We procede with convex separation results which are vital to the subsequent developments.
