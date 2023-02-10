@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  10 FEB 2023 09:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  10 FEB 2023 10:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -848,35 +848,40 @@ l.125 \tableofcontents
 
 ]
 chapter 1.
-(./chapters/balancing_weights/intro_2.tex [5] [6]
-Package mdframed Info: mdframed works in twoside mode on input line 291.
+(./chapters/balancing_weights/intro_2.tex
+Overfull \hbox (3.99112pt too wide) in paragraph at lines 63--67
+\OT1/cmr/m/n/10.95 Nevertheless we lever-age (weak) uni-ver-sal con-sis-tency of re-gres-sion ba-sis as in [[]GKKW02[],
+ []
+
+[5] [6] [7]
+Package mdframed Info: mdframed works in twoside mode on input line 483.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 291.
+(mdframed)              on input line 483.
 
-Overfull \hbox (38.7337pt too wide) detected at line 345
+Overfull \hbox (38.7337pt too wide) detected at line 537
 []
  []
 
-) [7] (./chapters/balancing_weights/dual_formulation.tex
+) [8] (./chapters/balancing_weights/dual_formulation.tex
 Package mdframed Info: mdframed works in twoside mode on input line 1.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1.
- [8] [9]) [10] (./chapters/balancing_weights/consis_dual.tex [11] [12]) (./chapters/balancing_weights/consis_primal.tex) (./chapters/balancing_weights/consis_est.tex [13]
+ [9] [10]) [11] (./chapters/balancing_weights/consis_dual.tex [12] [13]) (./chapters/balancing_weights/consis_primal.tex) (./chapters/balancing_weights/consis_est.tex [14]
 Overfull \hbox (10.992pt too wide) detected at line 153
 []
  []
 
-[14]) [15] [16
-
-
-]
+[15]) [16]
 chapter 2.
 (./chapters/convex_analysis/cvxa_primer.tex
 Underfull \vbox (badness 1377) has occurred while \output is active []
 
- [17] [18]
+ [17
+
+
+] [18]
 Package mdframed Info: mdframed works in twoside mode on input line 491.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -907,18 +912,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27077 strings out of 478238
- 522485 string characters out of 5850455
+ 27095 strings out of 478238
+ 522710 string characters out of 5850455
  1023225 words of memory out of 5000000
- 44644 multiletter control sequences out of 15000+600000
- 480675 words of font info for 70 fonts, out of 8000000 for 9000
+ 44653 multiletter control sequences out of 15000+600000
+ 481016 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,19n,106p,10616b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (33 pages, 377360 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on main.pdf (33 pages, 387014 bytes).
 PDF statistics:
- 503 PDF objects out of 1000 (max. 8388607)
- 426 compressed objects within 5 object streams
- 171 named destinations out of 1000 (max. 500000)
+ 527 PDF objects out of 1000 (max. 8388607)
+ 448 compressed objects within 5 object streams
+ 179 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

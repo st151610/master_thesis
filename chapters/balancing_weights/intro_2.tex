@@ -34,6 +34,164 @@ We extend ideas from entropy balancing weights~\cite{Wang2019}.
 
 To be precise in our statements, we introduce some notation.
 \subsection*{Basis Functions}
+We adopt ideas from \cite{Gyorfi2002}. Another angle would be sieve estimates\cite{Newey1997a}.
+We need a different notion of
+Consistency as is given 
+in\cite[Definitien~1.1]{Gyorfi2002}.
+\begin{gather}
+  \E
+  \left[ 
+    \int_\mathcal{X}
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(x)
+    \cdot
+    m(X_k)
+    -
+    m(x)
+    \right|
+    ^2
+    \P_X(dx)
+  \right]
+  \to
+  0
+  \qquad
+  \text{as}
+  \ 
+  n\to \infty
+  \,.
+\end{gather}
+Nevertheless we leverage (weak) universal consistency 
+of regression basis as
+in\cite[Definitien~1.3]{Gyorfi2002}.
+\begin{theorem}
+  Assume
+  $\E[m(X)^2]<\infty$
+  and the basis function are 
+(weak) universal consistency in the sense of 
+\cite[Definitien~1.3]{Gyorfi2002}.
+Then it holds for all $\varepsilon>0$
+\begin{gather}
+  \P
+  \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    \ge
+    \varepsilon
+  \right]
+  \to
+  0
+  \qquad
+  \text{as}
+  \ 
+  n\to \infty
+  \,.
+\end{gather}
+\end{theorem}
+\begin{proof}
+  By Markov's inequality it holds
+  \begin{align*}
+    &
+  \P
+  \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    \ge
+    \varepsilon
+  \right]
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \frac
+  {
+  \E
+  \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    ^2
+  \right]
+  }
+  {\varepsilon^2}
+  \\
+  &
+  \ 
+  =
+  \ 
+  \frac
+  {
+  \E
+  \left[ 
+    \E
+    \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    ^2
+    |
+    X_1,
+    \ldots,
+    X_N
+    \right]
+  \right]
+  }
+  {\varepsilon^2}
+  \\
+  &
+  \ 
+  =
+  \ 
+  \frac
+  {
+  \E
+  \left[ 
+    \int_\mathcal{X}
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(x)
+    \cdot
+    m(X_k)
+    -
+    m(x)
+    \right|
+    ^2
+    \P_X(dx)
+  \right]
+  }
+  {\varepsilon^2}
+  \,.
+  \end{align*}
+  The last equality is due to \cite[(1.2)]{Gyorfi2002}.
+  By the weak universal consistency of $B$
+  the last expression goes to $0$ as $N\to \infty$.
+\end{proof}
+Next we partitioning and kernel estimates form \cite[§4,§5]{Gyorfi2002}.
+
+\subsubsection*{Partitioning Estimates}
 We consider a partition
 $
   \mathcal{P}_N
@@ -92,6 +250,7 @@ The euclidian norm of the basis functions is bounded above by $1$.
 \end{gather*}
 Under mild conditions, the basis functions are universally consistent.
 \begin{theorem}
+  \label{bw:i:bf:pe:th:c}
   If for each sphere $S$ centered at the origin 
   \begin{gather}
     \max
@@ -143,7 +302,40 @@ Under mild conditions, the basis functions are universally consistent.
   is
   universally consistent (definition).
 \end{theorem}
+\begin{proof}
+  \cite[Theorem~4.2.]{Gyorfi2002}
+\end{proof}
+\begin{corollary}
+Assume
+  $\E[m(X)^2]<\infty$
+  and the basis functions $B$ belong to a partitioning estimate.
+  Furthermore assume that the conditions of 
+  Theorem~\ref{bw:i:bf:pe:th:c} are met.
+Then it holds for all $\varepsilon>0$
+\begin{gather}
+  \P
+  \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    \ge
+    \varepsilon
+  \right]
+  \to
+  0
+  \qquad
+  \text{as}
+  \ 
+  n\to \infty
+  \,.
+\end{gather}
 
+\end{corollary}
 \subsection*{Objective Function}
 We will consider the sum.
 We need $f$ to be strictly convex and its convex conjugate

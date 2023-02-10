@@ -1,4 +1,10 @@
-\begin{thebibliography}{MMN22}
+\begin{thebibliography}{GKKW02}
+
+\bibitem[GKKW02]{Gyorfi2002}
+L{\'a}szl{\'o} Gy{\"o}rfi, Michael Kohler, Adam Krzy{\.z}ak, and Harro Walk.
+\newblock {\em A {{Distribution-Free Theory}} of {{Nonparametric Regression}}}.
+\newblock Springer {{Series}} in {{Statistics}}. {Springer}, {New York, NY},
+  2002.
 
 \bibitem[MMN22]{Mordukhovich2022}
 Boris~S. Mordukhovich and Nguyen Mau~Nam.
@@ -6,6 +12,11 @@ Boris~S. Mordukhovich and Nguyen Mau~Nam.
   Theory}}}.
 \newblock Springer {{Series}} in {{Operations Research}} and {{Financial
   Engineering}}. {Springer International Publishing}, {Cham}, 2022.
+
+\bibitem[New97]{Newey1997a}
+Whitney~K. Newey.
+\newblock Convergence rates and asymptotic normality for series estimators.
+\newblock {\em Journal of Econometrics}, 79(1):147--168, July 1997.
 
 \bibitem[Roc70]{Rockafellar1970}
 R.~Tyrrell Rockafellar.
