@@ -122,6 +122,7 @@ Karush-Kuhn-Tucker conditions for \ref{cv:ts:primal},
 that is,
 \textbf{complementary slackness}
 \begin{gather}
+  \label{cv:ts:comps}
 \inner
 {\lambda_d^\dagger\,}{d-\mathbf{U} w^\dagger}
 \ 
@@ -225,4 +226,203 @@ strict convexity of $f$, the smoothness of $f^*$ and
 \end{proposition}
 
 \begin{proof}
+  Let 
+$
+(\lambda_d^\dagger,\lambda_a^\dagger)
+$
+be an optimal solution to \eqref{cv:ts:dual}. 
+
+\subsubsection*{Complementary Slackness}
+  We fix 
+  $
+  \lambda_a^\dagger
+  $
+  and
+  work with the objective function $G$ of the dual problem, that is,
+  \begin{gather*}
+    G
+(\lambda_d)
+\
+:
+=
+\
+    \inner
+    {\lambda_d}
+    {d}
+    \ 
+    +
+    \ 
+    \inner
+    {\lambda_a^\dagger}
+    {a}
+    \ 
+    -
+    \ 
+    f^*
+    \left( 
+      \mathbf{U}^\top \!\lambda_d
+      +
+      \mathbf{A}^\top \! \lambda_a^\dagger
+    \right)
+    \,.
+  \end{gather*}
+  Since $f^*$ is continuously differentiable, so is $G$.
+  Thus
+  \begin{gather*}
+    \nabla
+    G
+(\lambda_d^\dagger)
+\
+:
+=
+\
+d
+\ 
+    -
+    \ 
+    \mathbf{U}
+    \cdot
+    \nabla
+    f^*
+    \!
+    \left( 
+      \mathbf{U}^\top \lambda_d^\dagger
+      +
+      \mathbf{A}^\top  \lambda_a^\dagger
+    \right)
+    \ 
+    =
+    \ 
+d
+\ 
+    -
+    \ 
+    \mathbf{U}
+    w^\dagger
+    \,.
+  \end{gather*}
+Let
+$\lambda_{d,i}^\dagger$ be the $i$-th coordinate of $\lambda_d^\dagger$ 
+and
+$
+\nabla
+G_i
+(\lambda_d^\dagger)
+$
+be the $i$-th coordinate of 
+$
+\nabla
+G
+(\lambda_d^\dagger)
+$.
+  To establish \eqref{cv:ts:comps} we will show
+  for all coordinates 
+\begin{alignat*}{2}
+  \text{either}
+  &
+  &&
+  \qquad
+  \lambda_{d,i}^\dagger
+  = 0
+  \quad
+  \text{and}
+  \quad
+  \nabla
+  G
+  _i(
+  \lambda_{d}^\dagger
+  ) \le 0
+  \\
+  \text{or}
+  &
+  &&
+  \qquad
+  \lambda_{d,i}^\dagger
+  > 0
+  \quad
+  \text{and}
+  \quad
+  \nabla
+  G
+  _i(
+  \lambda_{d}^\dagger
+  ) = 0
+  \,.
+\end{alignat*}
+It is well know that a concave functions $g$ satisfies
+  \begin{gather}
+    \label{cv:ts:concD}
+    g(x)-g(y)
+    \ge
+    \nabla
+    g(x)^\top
+    (x-y)
+    \qquad 
+    \text{for all}\ 
+    x,y\,.
+  \end{gather}
+  But $G$ is concave 
+  by the convexity of $f^*$(cf. Proposition~\ref{cv:cc:pr:ccc}).
+
+First, we show 
+\begin{gather}
+  \label{cv:ts:comps:d}
+\nabla G_i(\lambda_d^\dagger)
+\ 
+\le
+\ 
+0
+\qquad
+\text{for all}\ 
+  i\in \left\{ 1,\ldots, s \right\}
+  \,.
+\end{gather}
+Assume towards a contradiction that 
+$
+\nabla G_i(\lambda_d^\dagger)>0
+$
+for some 
+$
+  i\in \left\{ 1,\ldots, s \right\}
+$.
+By the continuity of $\nabla G$ there exists $\varepsilon>0$ such that 
+$
+\nabla G_i(
+\lambda_d^\dagger
++
+e_i\cdot \varepsilon
+)
+>
+0
+$.
+It follows from \eqref{cv:ts:concD}
+\begin{gather*}
+  G
+  (
+\lambda_d^\dagger
++
+e_i\cdot \varepsilon
+  )
+  -
+  G
+  (
+\lambda_d^\dagger
+  )
+  \ge
+\nabla G_i(
+\lambda_d^\dagger
++
+e_i\cdot \varepsilon
+)
+\cdot
+\varepsilon
+>0
+\,,
+\end{gather*}
+which contradicts the optimality of 
+$
+\lambda_d^\dagger
+$
+for\eqref{cv:ts:dual}.
+It follows\eqref{cv:ts:comps:d}.
 \end{proof}
