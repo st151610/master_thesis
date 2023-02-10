@@ -1,3 +1,36 @@
+\begin{theorem}
+  \label{bw:ce:th}
+  For all
+  $\varepsilon>0$ it holds
+  \begin{gather}
+    \P
+    \left[ 
+  \left| 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    Y_i
+    -
+    \E[Y(1)]
+  \right|
+    \ge
+    \varepsilon
+    \right]
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}\ 
+    N
+    \to 
+    \infty
+    \,,
+  \end{gather}
+  that is, the weighted mean is a consistent estimator.
+\end{theorem}
+
+\begin{proof}
 \begin{align*}
   \left| 
     \frac{1}{N}
@@ -162,4 +195,6 @@ converges to $0$ in probability.
 \subsubsection*{Analysis of $R_5$}
 Since the expectation is $0$, the term $R_5$ 
 converges to $0$ in probability by the weak law of large numbers.
+
+\end{proof}
 

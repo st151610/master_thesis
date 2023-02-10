@@ -1,3 +1,89 @@
+Let $\lambda^*$ denote the vector with coordinates
+\begin{gather}
+  \lambda^*_i
+  :=
+  f^{'}(1/\pi_i)
+  -
+  \lambda^\dagger_0
+\end{gather}
+
+\begin{theorem}
+  \label{bw:cd:th}
+  For all
+  $\varepsilon>0$ it holds
+  \begin{gather}
+    \P
+    \left[ 
+    \norm{
+      \lambda^\dagger
+      -
+      \lambda^*
+    }
+    \ge
+    \varepsilon
+    \right]
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}\ 
+    N
+    \to 
+    \infty
+    \,.
+  \end{gather}
+\end{theorem}
+
+The following Lemma allows us to leverage the convexity of
+the objective function of the dual to get
+ \begin{gather*}
+   \P
+   \left[ 
+     \norm
+     {
+      \lambda ^ \dagger
+      -
+      \lambda^*
+     }
+     \le
+     \varepsilon
+   \right]
+   =
+   \P
+   \left[ 
+     \inf _ { 
+       \norm{
+         (
+     \Delta
+     ,
+     \Delta_0
+         )
+ } 
+= \varepsilon }
+     G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     -
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge 
+     0
+   \right]
+   \,.
+ \end{gather*}
+ 
+
 \begin{lemma}
   \label{bw:cd:lem}
   Let $m\in\mathbb{N}$ and
@@ -153,61 +239,12 @@
     %It follows the right-hand side of \eqref{7060_0}.
 \end{proof}
 
-Let $\lambda^*$ denote the vector with coordinates
-\begin{gather}
-  \lambda^*_i
-  :=
-  f^{'}(1/\pi_i)
-  -
-  \lambda^\dagger_0
-\end{gather}
-It follows from Lemma~\ref{bw:cd:lem}
- \begin{gather*}
-   \P
-   \left[ 
-     \norm
-     {
-      \lambda ^ \dagger
-      -
-      \lambda^*
-     }
-     \le
-     \varepsilon
-   \right]
-   =
-   \P
-   \left[ 
-     \inf _ { 
-       \norm{
-         (
-     \Delta
-     ,
-     \Delta_0
-         )
- } 
-= \varepsilon }
-     G
-     (
-     \lambda^*
-      +
-      \Delta
-      ,
-      \lambda^\dagger_0
-      +
-     \Delta_0
-     )
-     -
-     G
-     (
-     \lambda^*,
-      \lambda^\dagger_0
-     )
-     \ge 
-     0
-   \right]
-   \,.
- \end{gather*}
- 
+\begin{proof}
+  \emph{
+    (
+  Theorem~\ref{bw:cd:th}
+    )
+  }
  We separate the differentiable part in $G$ to get
 
  \begin{align*}
@@ -532,7 +569,9 @@ Thus it also holds
   n\to \infty
   \,.
 \end{gather}
-This finishes the proof.
+Applying Lemma~\ref{bw:cd:lem} finishes the proof.
 
 
+
+\end{proof}
 

@@ -18,4 +18,10 @@ Paul Tseng and Dimitri~P. Bertsekas.
   Costs}} and {{Linear Constraints}}.
 \newblock {\em Mathematics of Operations Research}, 16(3):462--481, 1991.
 
+\bibitem[WZ19]{Wang2019}
+Yixin Wang and Jos{\'e}~R. Zubizarreta.
+\newblock Minimal {{Dispersion Approximately Balancing Weights}}: {{Asymptotic
+  Properties}} and {{Practical Considerations}}.
+\newblock {\em Biometrika}, page asz050, October 2019.
+
 \end{thebibliography}
