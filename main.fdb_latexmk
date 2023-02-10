@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1676012358 "main.aux" "main.bbl" "main" 1676012362
+["bibtex main"] 1676017169 "main.aux" "main.bbl" "main" 1676017650
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1675145952 63641 67dfbb1413ba2c5bfc9e5c5a8c28f4bc ""
-  "main.aux" 1676012361 7839 7d2063b5efe49c504bc366c6820cefb2 "pdflatex"
+  "main.aux" 1676017649 7432 6696369342cfa436482f95f26f77940d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1676012359 "main.tex" "main.pdf" "main" 1676012362
+["pdflatex"] 1676017646 "main.tex" "main.pdf" "main" 1676017650
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1650183167 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1650183167 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -213,20 +213,20 @@
   "chapters/balancing_weights/consis_est.tex" 1676012354 2482 3d5203d9c213f9cd7f8a36e863fe76f7 ""
   "chapters/balancing_weights/consis_primal.tex" 1676012210 1550 d8a90222e03dd08a49af4acc9a3a79ca ""
   "chapters/balancing_weights/dual_formulation.tex" 1675852012 6979 c251ad70726dd246208c4893816e28bc ""
-  "chapters/balancing_weights/intro_2.tex" 1676011279 4064 495711ba7e798c8857b55779cd8b1ffc ""
+  "chapters/balancing_weights/intro_2.tex" 1676017645 5962 5fa52cd8fd0101c1d3c69377336fcba4 ""
   "chapters/convex_analysis/conjugate_calculus.tex" 1675957584 11839 36665540119d0e0e3ead455a9a8c0162 ""
   "chapters/convex_analysis/cvxa_primer.tex" 1675958481 14982 4d471b10dee65146e1519f677fda2a72 ""
   "chapters/convex_analysis/ts_2.tex" 1675957560 9531 fc2821a28ed8112cff918108d911734a ""
   "chapters/notation_index.tex" 1669465352 876 fc24c8fd633396d30e0eb0da469cf1ba ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1676012361 7839 7d2063b5efe49c504bc366c6820cefb2 "pdflatex"
-  "main.bbl" 1676012359 997 b3ea07cfc946807256a26e935d0bb747 "bibtex main"
+  "main.aux" 1676017649 7432 6696369342cfa436482f95f26f77940d "pdflatex"
+  "main.bbl" 1676017169 997 b3ea07cfc946807256a26e935d0bb747 "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
   "main.tdo" 0 -1 0 "pdflatex"
-  "main.tex" 1676011298 9148 71bee642886199c02ac4cc6190ef5752 ""
-  "main.toc" 1676012361 838 90fec3b64bef5475de86b0303ca39d70 "pdflatex"
+  "main.tex" 1676012468 9152 2858f62a73a44af0676a68320b63c0a0 ""
+  "main.toc" 1676017649 757 9580a43ca02440c02304329d9ca06fc0 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
