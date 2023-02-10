@@ -1209,10 +1209,10 @@ INPUT ./chapters/convex_analysis/conjugate_calculus.tex
 INPUT chapters/convex_analysis/conjugate_calculus.tex
 INPUT ./chapters/convex_analysis/conjugate_calculus.tex
 INPUT chapters/convex_analysis/conjugate_calculus.tex
-INPUT ./chapters/convex_analysis/ts_2.tex
-INPUT chapters/convex_analysis/ts_2.tex
-INPUT ./chapters/convex_analysis/ts_2.tex
-INPUT chapters/convex_analysis/ts_2.tex
+INPUT ./chapters/convex_analysis/ts_3.tex
+INPUT chapters/convex_analysis/ts_3.tex
+INPUT ./chapters/convex_analysis/ts_3.tex
+INPUT chapters/convex_analysis/ts_3.tex
 INPUT ./chapters/simple_yet_useful.tex
 INPUT chapters/simple_yet_useful.tex
 INPUT ./chapters/simple_yet_useful.tex

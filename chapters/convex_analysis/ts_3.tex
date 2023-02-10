@@ -1,0 +1,206 @@
+We consider a general convex optimization problem 
+with matrix equality and inequality constraints.
+For this problem there exists a related problem,
+which we call its dual.
+With ideas from \cite{Tseng1991} we establish 
+a functional relationship
+between the optimal solution of the original problem 
+and
+optimal solutions of the dual.
+The main assumption is that in the original problem we have a strictly convex objective function 
+with continuously differentiable 
+convex conjugate(cf. Definition~\ref{cv:cc:d:cc}). 
+\begin{ftheorem}
+  \label{cv:ts:th}
+  Consider the optimization problem
+\begin{align}
+  \label{cv:ts:primal}
+  %%%% objective %%%%
+    &\underset{w \in \R^n}
+    {\mathrm{minimize}}
+    &&\qquad\qquad
+    f(w)
+    &&&
+    \\
+    %%%% Ax >= b %%%%
+    \nonumber
+    &\mathrm{subject}\ \mathrm{to} 
+    &&\qquad\qquad
+    \mathbf{U}w
+    \ 
+    \ge
+    \ 
+    d
+    \,.
+    \\
+    \nonumber
+    &
+    &&\qquad\qquad
+    \mathbf{A}w
+    \ 
+    =
+    \ 
+    a
+    \,,
+\end{align}
+and its dual problem
+  \begin{alignat}{2}
+    \label{cv:ts:dual}
+  %%%% objective %%%%
+    &\underset{
+    \lambda_d \in \R^r
+,
+    \lambda_a \in \R^s
+  }
+    {\mathrm{maximize}}
+    &&\qquad\qquad
+    \inner
+    {\lambda_d}
+    {d}
+    \ 
+    +
+    \ 
+    \inner
+    {\lambda_a}
+    {a}
+    \ 
+    -
+    \ 
+    f^*
+    \!
+    \left( 
+      \mathbf{U}^\top \! \lambda_d
+      +
+      \mathbf{A}^\top \! \lambda_a
+    \right)
+    \\
+    %%%% Ax >= b %%%%
+    \nonumber
+    &\mathrm{subject}\ \mathrm{to} 
+    &&\qquad\qquad
+    \lambda_d
+    \ 
+    \ge
+    \ 
+    0
+    \,.
+\end{alignat}
+  Let 
+$
+(\lambda_d^\dagger,\lambda_a^\dagger)
+$
+be an optimal solution to \eqref{cv:ts:dual}.
+If the objective function $f$ of 
+\eqref{cv:ts:primal} is strictly convex and its
+convex conjugate $f^*$ is continuously differentiable,
+then the unique optimal solution to 
+\eqref{cv:ts:primal}
+is given by
+\begin{gather}
+  w^\dagger
+  =
+  \nabla
+    f^*
+    \!
+    \left( 
+      \mathbf{U}^\top  \lambda_d^\dagger
+      +
+      \mathbf{A}^\top  \lambda_a^\dagger
+    \right)
+    \,.
+\end{gather}
+\end{ftheorem}
+
+\subsubsection*{Plan of Proof}
+We show that 
+$w^\dagger$ and 
+$
+(\lambda_d^\dagger,\lambda_a^\dagger)
+$
+meet the 
+Karush-Kuhn-Tucker conditions for \ref{cv:ts:primal},
+that is,
+\textbf{complementary slackness}
+\begin{gather}
+\inner
+{\lambda_d^\dagger\,}{d-\mathbf{U} w^\dagger}
+\ 
+=
+\ 
+0
+\,,
+\end{gather}
+\textbf{primal} and \textbf{dual feasibility}
+\begin{align}
+  \label{primal_feas}
+    \mathbf{U}w^\dagger
+    &
+    \ 
+    \ge
+    \ 
+    d
+    \,,
+    \\
+    \nonumber
+    \mathbf{A}w^\dagger
+    &
+    \ 
+    =
+    \ 
+    a
+    \,,
+  \\
+  \label{dual_feas}
+  \lambda_d^\dagger
+    &
+    \ 
+  \ge
+  \ 
+  0
+    \,,
+\end{align}
+and 
+\textbf{stationarity}
+\begin{gather}
+  \mathrm{0}_n
+  \ 
+  \in
+  \ 
+  [
+  \partial
+  f(w^\dagger)
+  \ 
+  +
+  \ 
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{U}w
+    \right)
+    (w^\dagger)
+    \cdot
+    \lambda_d^\dagger
+    \ 
+    +
+    \ 
+    \partial
+    \left( 
+      w
+      \mapsto
+      a
+      -
+      \mathbf{A}w
+    \right)
+    (w^\dagger)
+    \cdot
+    \lambda_a^\dagger
+    \,
+  ]
+  \,.
+\end{gather}
+Applying the well know result\cite[Theorem~28.3]{Rockafellar1970}
+finishes the proof.
+
