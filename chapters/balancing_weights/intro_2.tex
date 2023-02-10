@@ -3,10 +3,14 @@ $N\in\mathbb{N}$ independent and identically distributed copies
 $X_1,\ldots,X_N$. Furthermore, let $T\in \left\{ 0,1 \right\}$ 
 denote the indicator of treatment and let $T_1,\ldots,T_N$ be i.i.d. 
 copies.
-Let $Y\in[-M,M]$ be a real-valued bounded random variable with 
+Let $(Y(0),Y(1))\in[-M,M]^2$ be a real-valued bounded random variables with 
 $M\in\R$.
 We call $X$ the covariate vector, $T$ the indicator of treatment
-and $Y$ the outcome.
+and
+$
+(Y(0),Y(1))
+$
+the marginal potential outcomes under treatment.
 Before we begin the analysis we order the i.i.d. copies, such that
 the first $n$ units received treatment and the remaining $N-n$ units 
 are in the control group.
@@ -25,7 +29,7 @@ In the presence of confounders we have
   \,.
 \end{gather}
 We want to create weights
-$w_1,\ldots,w_n$ for the treated, such that for large $n$ we get
+$w_1,\ldots,w_n$ for the treated, such that for large $N$ we get
 \begin{gather}
   w_i \cdot Y_i \sim Y(1)
   \,.
@@ -34,7 +38,7 @@ We extend ideas from entropy balancing weights~\cite{Wang2019}.
 
 To be precise in our statements, we introduce some notation.
 \subsection*{Basis Functions}
-We adopt ideas from \cite{Gyorfi2002}. Another angle would be sieve estimates\cite{Newey1997a}.
+We adopt ideas from \cite{Gyorfi2002}. Another angle would be sieve estimates\cite{Newey1997a} where the number of basis functions can grow slower than $N$.
 We need a different notion of
 Consistency as is given 
 in\cite[Definitien~1.1]{Gyorfi2002}.
@@ -334,7 +338,76 @@ Then it holds for all $\varepsilon>0$
   n\to \infty
   \,.
 \end{gather}
-
+\end{corollary}
+\subsubsection*{Kernel Estimates}
+Let $K\colon \R^d\to [0,1]$ (bounded kernel) and $h_n>0$ (bandwith).
+For examples see \cite[§5.1.]{Gyorfi2002}.
+We define
+\begin{gather}
+  B_k(x)
+  :=
+  \frac
+  {
+    K \left( \frac{x-X_k}{h_n} \right)
+  }
+  {
+    \sum_{i=1}^{N} 
+    K \left( \frac{x-X_i}{h_n} \right)
+  }
+  \,.
+\end{gather}
+By the boundedness of the kernel it follows
+$\norm{B(x)}\le 1$.
+\begin{theorem}
+  \label{bw:i:bf:ke:th:c}
+  Assume that there are 
+  balls
+  $S_{0,r}$ of radius $r$ 
+  and
+  balls
+  $S_{0,R}$ of radius $R$ 
+  centered at the origin with $0<r\le R$, and a constant $b>0$ such that
+  \begin{gather}
+    \mathbf{1}_{\left\{ x\in S_{0,R} \right\}}
+    \ge
+    K(x)
+    \ge
+    b
+    \cdot
+    \mathbf{1}_{\left\{ x\in S_{0,r} \right\}}
+  \end{gather}
+\end{theorem}
+(boxed kernel). Then for bandwiths with $h_n\to0$ and
+$n\cdot h_n^d\to\infty$ as $n\to \infty$ the kernel estimate is weakly universally consistent.
+\begin{corollary}
+Assume
+  $\E[m(X)^2]<\infty$
+  and the basis functions $B$ belong to a kernel estimate.
+  Furthermore assume that the conditions of 
+  Theorem~\ref{bw:i:bf:ke:th:c} are met.
+Then it holds for all $\varepsilon>0$
+\begin{gather}
+  \P
+  \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    \ge
+    \varepsilon
+  \right]
+  \to
+  0
+  \qquad
+  \text{as}
+  \ 
+  n\to \infty
+  \,.
+\end{gather}
 \end{corollary}
 \subsection*{Objective Function}
 We will consider the sum.
