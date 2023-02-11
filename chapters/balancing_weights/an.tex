@@ -1,0 +1,44 @@
+\begin{theorem}
+  The estimate 
+  \begin{gather}
+    \sqrt{N}
+    \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    \mathbf{1}
+    _{\left\{ Y_i\le t \right\}}
+    -
+    \P[Y(1)\le t]
+    \right)
+  \end{gather}
+  is Asymptoticaly normal.
+\end{theorem}
+\begin{proof}
+The term 
+\begin{gather}
+    \left|  
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left( 
+    T_i
+    w_i
+    -
+    1
+    \right)
+    \left( 
+    \P[Y(1)\le t | X_i]
+    -
+    \inner
+    {B(X_i))}
+    {\lambda^*}
+    \right)
+  \right|
+\end{gather}
+gives back the expectation. We control its rate 
+with the factor of basis rates and primal weights.
+Choose $d$ to be faster than $\sqrt{n}$.
+The rest follows with standard empirical theory.
+Expectations are 0.
+$\norm{\delta}$ has to converge fast enough.
+\end{proof}
