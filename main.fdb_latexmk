@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1676121107 "main.aux" "main.bbl" "main" 1676121111
+["bibtex main"] 1676130797 "main.aux" "main.bbl" "main" 1676132729
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1675145952 63641 67dfbb1413ba2c5bfc9e5c5a8c28f4bc ""
-  "main.aux" 1676121110 9954 32731bcccc8f331d79bc0c6c5815b2c0 "pdflatex"
+  "main.aux" 1676132728 9998 0c4b1550e331dc2d050133a9bdeff5ee "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1676121108 "main.tex" "main.pdf" "main" 1676121111
+["pdflatex"] 1676132726 "main.tex" "main.pdf" "main" 1676132729
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -213,10 +213,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1668447558 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1668447517 2927666 1f051fb934722d94e995cdec3e18511c ""
-  "chapters/balancing_weights/an.tex" 1676120831 779 8ca13b6886c2cde024a0c98c2955e168 ""
-  "chapters/balancing_weights/an_dual.tex" 1676119988 370 89742db33ba4b760526db605acabd6c1 ""
-  "chapters/balancing_weights/an_intro.tex" 1676119794 341 651cd13c2e2b07461e9a82ebe5e778a4 ""
-  "chapters/balancing_weights/an_primal.tex" 1676120193 331 f2a9c61ced1e8bbdbb2e20803d0b4926 ""
+  "chapters/balancing_weights/an.tex" 1676132725 2184 ea7eaccbd926254021beec9f2c05e32c ""
+  "chapters/balancing_weights/an_dual.tex" 1676131524 469 443ba5c4f9c1bed8248608c3483227cb ""
+  "chapters/balancing_weights/an_intro.tex" 1676122341 403 dbccb19ecc6bad423e615003fcbc5e03 ""
+  "chapters/balancing_weights/an_primal.tex" 1676131270 1965 a6d068b061ce1f8c10ccdd4cd8a91ad6 ""
   "chapters/balancing_weights/consis_dual.tex" 1676011983 7661 dd6a18153e8a6215da45322f37c24e76 ""
   "chapters/balancing_weights/consis_est.tex" 1676012354 2482 3d5203d9c213f9cd7f8a36e863fe76f7 ""
   "chapters/balancing_weights/consis_primal.tex" 1676012210 1550 d8a90222e03dd08a49af4acc9a3a79ca ""
@@ -230,13 +230,13 @@
   "chapters/notation_index.tex" 1669465352 876 fc24c8fd633396d30e0eb0da469cf1ba ""
   "chapters/simple_yet_useful.tex" 1668442790 2193 9950137eba95ffb300761bbc565b2a69 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1676121110 9954 32731bcccc8f331d79bc0c6c5815b2c0 "pdflatex"
-  "main.bbl" 1676121107 1839 aea2d9bcc7f3f73e75e26c10b3c08fc9 "bibtex main"
+  "main.aux" 1676132728 9998 0c4b1550e331dc2d050133a9bdeff5ee "pdflatex"
+  "main.bbl" 1676130797 1839 aea2d9bcc7f3f73e75e26c10b3c08fc9 "bibtex main"
   "main.nls" 1669465354 1296 85888c2c8179aecf77b980ea8a73612b ""
   "main.out" 0 -1 0 "pdflatex"
   "main.tdo" 0 -1 0 "pdflatex"
   "main.tex" 1676121057 9578 d1196233a7d242e56a1df9cf5b8b776d ""
-  "main.toc" 1676121110 981 def40edbae5152d866066e98be3507fc "pdflatex"
+  "main.toc" 1676132728 981 6fc059d4e7818aa2b78e5c02d28cfc5b "pdflatex"
   (generated)
   "main.aux"
   "main.log"

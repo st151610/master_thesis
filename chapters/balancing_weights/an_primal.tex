@@ -2,13 +2,143 @@
   Under conditions
   the weights satisfy
   \begin{gather}
-    \E|w_i^\dagger-1/\pi_i|
+    \E
+    [
+    |
+    w^\dagger(X)
+    -
+    1/\pi(X)
+    |
+    ^2
+    ]
+    ^{1/2}
     \le
     C_\P
-    \varepsilon_n
+  \sqrt{\log(n)}
+  n^{-1/(2+d)}
   \end{gather}
   where 
   $varepsilon_n$ depends on the Learning rate of the basis functions
   and the confidence of the dual.
   $C_\P$ depends on the size of the parameter space.
 \end{theorem}
+\begin{proof}
+  \begin{align}
+    \E
+    [
+    |
+    w^\dagger(X)
+    -
+    1/\pi(X)
+    |
+    ^2
+    ]
+    ^{1/2}
+    &
+    \ 
+    =
+    \ 
+    \E
+    \left[ 
+    \left| 
+    (f^{'})^{-1}
+    \left( 
+      \inner
+      {B(X)}
+      {\lambda^\dagger}
+      +
+      \lambda_0^\dagger
+    \right)
+    -
+    1/\pi(X)
+    \right|
+    ^2
+    \right]
+    ^{1/2}
+    \\
+    &
+    \ 
+    \le
+    \ 
+    \left| 
+    (f^{'})^{-1}
+    \right|_L
+    \left( 
+      I_1 + I_2
+    \right)
+  \end{align}
+  where
+  \begin{align}
+    I_1
+    & 
+    \ 
+    :=
+    \ 
+    \left( 
+    \E\norm{\lambda^\dagger-\lambda^*}^2
+    \right)
+    ^{1/2}
+    \\
+    I_2
+    & 
+    \ 
+    :=
+    \ 
+      \E
+      \left[ 
+        \left| 
+        \sum_{k=1}^{N} 
+        B_k(X)\cdot 
+        f^{'}(X_k)
+        -
+        f^{'}(X)
+        \right|
+        ^2
+      \right]
+    ^{1/2}
+  \end{align}
+  It holds 
+  $I_2\le n^{-1/(d+2)}$
+  by the lr of the basis.
+  To analyse $I_1$ we use the lr of the dual.
+  \begin{align}
+   I_1
+   \le
+   C_\tau
+   n^{-1/(d+2)}
+   +
+   \sqrt{\tau}
+   \cdot
+   \mathrm{diam}\,\Theta
+  \end{align}
+Note that the Markov confidence $1/\sqrt{\tau}$ is insufficient. 
+We need the Bernstein confidence $\sqrt{\log(1/\tau)}$. 
+With Bernstein confidence, bounded diameter and $\tau=n^{-2/(d+2)}$
+we get
+\begin{gather}
+  I_1
+  \le
+  C
+  \cdot
+  \sqrt{\log(n)}
+  n^{-1/(2+d)}
+\end{gather}
+Thus
+\begin{gather}
+    \E
+    [
+    |
+    w^\dagger(X)
+    -
+    1/\pi(X)
+    |
+    ^2
+    ]
+    ^{1/2}
+    \le
+    C
+    \cdot
+  \sqrt{\log(n)}
+  n^{-1/(2+d)}
+\end{gather}
+\end{proof}

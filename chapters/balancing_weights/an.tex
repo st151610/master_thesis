@@ -41,4 +41,152 @@ Choose $d$ to be faster than $\sqrt{n}$.
 The rest follows with standard empirical theory.
 Expectations are 0.
 $\norm{\delta}$ has to converge fast enough.
+\begin{align*}
+  &
+  \sqrt{N}
+  \cdot
+  \E
+  \left[ 
+    \left( 
+    T
+    \cdot
+    w(X)
+    -
+    1
+    \right)
+    \left( 
+      \P
+      [
+      Y(1)\le t
+      |X
+      ]
+      -
+      \inner
+      {B(X)}
+      {\lambda^*}
+    \right)
+  \right]
+  \\
+  &
+  \ 
+  =
+  \ 
+  \sqrt{N}
+  \cdot
+  \E
+  \left[ 
+    \pi(X)
+    \cdot
+    \left( 
+    w(X)
+    -
+    1
+    /
+    \pi(X)
+    \right)
+    \left( 
+      \P
+      [
+      Y(1)\le t
+      |X
+      ]
+      -
+      \inner
+      {B(X)}
+      {\lambda^*}
+    \right)
+  \right]
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \sqrt{N}
+  \cdot
+  \E
+  \left[ 
+    \left| 
+    w(X)
+    -
+    1
+    /
+    \pi(X)
+    \right|
+    ^2
+    \right]
+    ^{1/2}
+  \E
+  \left[ 
+    \left| 
+      \P
+      [
+      Y(1)\le t
+      |X
+      ]
+      -
+      \inner
+      {B(X)}
+      {\lambda^*}
+    \right|
+    ^2
+    \right]
+    ^{1/2}
+    \\
+  &
+  \ 
+  \le
+  \ 
+  C
+  \sqrt{N}
+  \sqrt{\log(N)}
+  N^{-1/(d+2)}
+  \cdot
+  N^{-1/(d+2)}
+    \\
+  &
+  \ 
+  \le
+  \ 
+  C
+  \sqrt{\log(N)}
+  N^{-1/6}
+  \to 0
+  \qquad
+  \text{for}\ 
+  N\to\infty
+\end{align*}
+Note, that we get no convergence for $d>1$. 
+Also note that
+\begin{gather*}
+  \E
+  \left[ 
+    T
+    \cdot
+    w(X)
+    -
+    1
+    |
+    X,
+    X_1,
+    \ldots,
+    X_N
+    \right]
+    =
+  \E
+  \left[ 
+    T
+    |
+    X
+    \right]
+    w(X)
+    -
+    1
+    =
+    \pi(X)
+    \left( 
+      w(X)
+      -
+      1/\pi(X)
+    \right)
+\end{gather*}
 \end{proof}
