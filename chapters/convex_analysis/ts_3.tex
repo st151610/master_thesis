@@ -133,7 +133,7 @@ that is,
 \end{gather}
 \textbf{primal} and \textbf{dual feasibility}
 \begin{align}
-  \label{primal_feas}
+  \label{cv:ts:pfea}
     \mathbf{U}w^\dagger
     &
     \ 
@@ -151,7 +151,7 @@ that is,
     a
     \,,
   \\
-  \label{dual_feas}
+  \label{cv:ts:dfea}
   \lambda_d^\dagger
     &
     \ 
@@ -163,6 +163,7 @@ that is,
 and 
 \textbf{stationarity}
 \begin{gather}
+  \label{cv:ts:st}
   \mathrm{0}_n
   \ 
   \in
@@ -403,6 +404,67 @@ It follows from \eqref{cv:ts:concD}
 +
 e_i\cdot \varepsilon
   )
+  \ 
+  -
+  \ 
+  G
+  (
+\lambda_d^\dagger
+  )
+  \ 
+  \ge
+  \ 
+\nabla G_i(
+\lambda_d^\dagger
++
+e_i\cdot \varepsilon
+)
+\cdot
+\varepsilon
+\ 
+>
+\ 
+0
+\,,
+\end{gather*}
+which contradicts the optimality of 
+$
+\lambda_d^\dagger
+$
+for \eqref{cv:ts:dual}.
+It follows \eqref{cv:ts:comps:d}.
+
+Next, 
+we assume that
+$ \lambda_{d,i}^\dagger>0 $ 
+and 
+$
+  \nabla G_i(\lambda_d^\dagger)< 0
+$
+for some
+$
+  i\in \left\{ 1,\ldots, s \right\}
+$.
+Again, by the 
+continuity of $\nabla G$ there exists $\varepsilon>0$ such that
+$
+  \nabla G_i(\lambda_d^\dagger-e_i\cdot \varepsilon)< 0
+$
+and
+$
+\varepsilon
+-
+\lambda_{d,i}^\dagger
+<0
+$.
+Thus
+\begin{gather*}
+  G
+  (
+\lambda_d^\dagger
+-
+e_i\cdot \varepsilon
+  )
   -
   G
   (
@@ -411,18 +473,378 @@ e_i\cdot \varepsilon
   \ge
 \nabla G_i(
 \lambda_d^\dagger
-+
+-
 e_i\cdot \varepsilon
 )
 \cdot
+\left( 
+  -
 \varepsilon
+\right)
 >0
 \,,
 \end{gather*}
 which contradicts the optimality of 
 $
 \lambda_d^\dagger
+$.
+It follows \eqref{cv:ts:comps}, that is,
+we proved complementary slackness.
+\subsubsection*{Primal Feasibility}
+Since $f^*$ is continuously differentiable it holds
+\begin{gather*}
+  \nabla G(\lambda_d^\dagger)
+  \ 
+  =
+  \ 
+  d
+  \ 
+  -
+  \ 
+  \mathbf{U}
+  \cdot
+  \nabla
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^\dagger
+      +
+      \mathbf{A}^\top  \lambda_a^\dagger
+    \right)
+    \ 
+  =
+  \ 
+  d
+  -
+  \mathbf{U}w^\dagger
+  \,.
+\end{gather*}
+Thus, by \eqref{cv:ts:comps:d},
+$w^\dagger$ satisfies the inequality constraints in \eqref{cv:ts:primal}. 
+To prove this for the equality constraints,
+we view $G$ from a different angel. Let for fixed
+$\lambda^\dagger_d$
+\begin{gather*}
+  G(\lambda_a)
+  \ 
+  :=
+  \ 
+  \inner
+  {\lambda_a}{a}
+  \ 
+  -
+  \ 
+  \left( 
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^\dagger
+      +
+      \mathbf{A}^\top  \lambda_a
+    \right)
+    -
+  \inner
+  {\lambda_d^\dagger}{d}
+  \right)
+  \ 
+  =:
+  \ 
+  \inner
+  {\lambda_a}{a}
+  \ 
+  -
+  \ 
+  g(\lambda_a)
+  \,
+  .
+\end{gather*}
+The function $g$ inherits convexity and differentiability from 
+$f^*$.
+From the optimality of $\lambda_a^\dagger$ we know that
+$G$ takes its maximum there. But then by Proposition~\ref{cv:ts:prop}
+and the differentiability of $g$ it holds
+\begin{gather}
+  a
+  \ 
+  \in
+  \ 
+  \partial
+  g(\lambda_a^\dagger)
+  \ 
+  =
+  \ 
+  \left\{ 
+    \mathbf{A}
+    \cdot
+    \nabla
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^\dagger
+      +
+      \mathbf{A}^\top  \lambda_a^\dagger
+    \right)
+  \right\}
+  \ 
+  =
+  \ 
+  \left\{ 
+    \mathbf{A}
+    w^\dagger
+  \right\}
+  \,.
+\end{gather}
+Thus $a=
+    \mathbf{A}
+    w^\dagger
+$. But then $w^\dagger$ satisfies also the equality constraints.
+We proved \eqref{cv:ts:pfea}.
+\subsubsection*{Stationarity}
+First we show
+\begin{gather}
+  \label{cv:ts:st:1}
+      \mathbf{U}^\top  \lambda_d^\dagger
+      \ 
+      +
+      \ 
+      \mathbf{A}^\top  \lambda_a^\dagger
+      \ 
+      \in
+      \ 
+\partial f (w^\dagger)
+\,.
+\end{gather}
+By Proposition~\ref{cv:ts:prop}
+it suffices to show
+that
+\begin{gather*}
+  w
+  \ 
+  \mapsto
+  \ 
+\inner
+{w}
+{
+      \mathbf{U}^\top  \lambda_d^\dagger
+      +
+      \mathbf{A}^\top  \lambda_a^\dagger
+}
+  \ 
+-
+  \ 
+f(w)
+\end{gather*}
+achieves its supremum at
+$w^\dagger$.
+Since $f$ is strictly convex 
+there exists a unique vector $x^\dagger$
+where
+the above expression achieves its maximum.
+Since
+$f^*$ is differentiable it holds
+\begin{gather*}
+  w^\dagger
+  \ 
+  =
+  \ 
+  \nabla
+    f^*
+    \left( 
+      \mathbf{U}^\top  \lambda_d^\dagger
+      +
+      \mathbf{A}^\top  \lambda_a^\dagger
+    \right)
+  \ 
+    =
+  \ 
+    \nabla
+    \left( 
+      \lambda
+      \mapsto
+\inner
+{x^\dagger}
+{
+  \lambda
+}
+  \ 
+-
+  \ 
+f(x^\dagger)
+    \right)
+    \left( 
+      \mathbf{U}^\top  \lambda_d^\dagger
+      +
+      \mathbf{A}^\top  \lambda_a^\dagger
+    \right)
+  \ 
+    =
+  \ 
+x^\dagger
+\,.
+\end{gather*}
+It follows 
+\eqref{cv:ts:st:1}.
+Next we show
+\begin{gather}
+  \label{cv:ts:st:2}
+-
+\mathbf{U}^\top
+\in
+\ 
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{U}w
+    \right)
+    (w^\dagger)
+    \qquad
+    \text{and}
+\qquad
+-
+\mathbf{A}^\top
+\in
+\ 
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{A}w
+    \right)
+    (w^\dagger)
+    \,.
+\end{gather}
+To this end, note that
+\begin{gather*}
+  \inner
+  {
+  -
+\mathbf{U}^\top
+\!
+ e_i
+}
+  {w-w^\dagger}
+  \ 
+  =
+  \ 
+  \left( 
+    d-
+\mathbf{U}
+w
+  \right)_i
+  \ 
+  -
+  \ 
+  (
+    d-
+\mathbf{U} w^\dagger
+  )
+  _i
+  \qquad
+  \text{for all}\ 
+  i\in\left\{ 1,\ldots,r \right\}
+  \,.
+\end{gather*}
+Thus
 $
-for\eqref{cv:ts:dual}.
-It follows\eqref{cv:ts:comps:d}.
+-
+\mathbf{U}^\top
+\in
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{U}w
+    \right)
+    (w^\dagger)
+$.
+In the same way it follows
+$
+-
+\mathbf{A}^\top
+\in
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{A}w
+    \right)
+    (w^\dagger)
+$.
+From \eqref{cv:ts:st:1} and \eqref{cv:ts:st:2} we conclude
+\begin{align*}
+  \mathrm{0}_n
+  &
+      \ 
+  =
+      \ 
+      \left( 
+      \mathbf{U}^\top  \lambda_d^\dagger
+      \ 
+      +
+      \ 
+      \mathbf{A}^\top  \lambda_a^\dagger
+      \right)
+      -
+      \mathbf{U}^\top  \lambda_d^\dagger
+      \ 
+      -
+      \ 
+      \mathbf{A}^\top  \lambda_a^\dagger
+      \\
+      &
+      \ 
+  \in
+      \ 
+  [
+  \partial
+  f(w^\dagger)
+  \ 
+  +
+  \ 
+    \partial
+    \left( 
+      w
+      \mapsto
+      d
+      -
+      \mathbf{U}w
+    \right)
+    (w^\dagger)
+    \cdot
+    \lambda_d^\dagger
+  \ 
+    +
+  \ 
+    \partial
+    \left( 
+      w
+      \mapsto
+      a
+      -
+      \mathbf{A}w
+    \right)
+    (w^\dagger)
+    \cdot
+    \lambda_a^\dagger
+    \, 
+  ]
+  \,.
+\end{align}
+We have proved \eqref{cv:ts:st}, that is, stationarity.
+\subsubsection*{Dual Feasibility and Conclusion}
+Dual feasibility \eqref{cv:ts:dfea} follows immediately from the optimality of $\lambda_d^\dagger$ for \eqref{cv:ts:dual}.
+Thus, $(\lambda_d^\dagger,\lambda_a^\dagger)$ and $w^\dagger$ satisfy the Karush-Kuhn-Tucker conditions for \eqref{cv:ts:primal}.
+Applying 
+\cite[Theorem~28.3]{Rockafellar1970} finishes the proof.
 \end{proof}
+\begin{takeaways}
+  For strictly convexity objective functions with continuously
+  differentiable convex conjugate we get a functional relationship
+  of primal and dual solutions via the Karush-Kuhn-Tucker conditions.
+\end{takeaways}
