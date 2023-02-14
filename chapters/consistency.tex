@@ -1,0 +1,584 @@
+Throughout this section assume the existence of an 
+optimal solution 
+$(\lambda^\dagger,\lambda_0^\dagger)$.
+We use a hint from the last display of~\cite[p.22]{Wang2019}.
+The high-level idea is, 
+to connect the optimality of a dual solution 
+to 
+being in the 
+neighborhood of an oracle parameter
+by looking at the objective function of the dual.
+We deliver the omitted technical details.
+\subsection*{Neighbourhood of Oracle Parameter}
+Let $\lambda^*$ denote the vector with coordinates
+\begin{gather}
+  \lambda^*_i
+  :=
+  f^{'}(1/\pi_i)
+  -
+  \lambda^\dagger_0
+  \,,
+\end{gather}
+where $\pi_i=\P[T_i=1|X_i]$ is the \textbf{propensity score} of the 
+$i$-th unit.
+
+\begin{theorem}
+  \label{bw:cd:th}
+  For all
+  $\varepsilon>0$ it holds
+  \begin{gather}
+    \P
+    \left[ 
+    \norm{
+      \lambda^\dagger
+      -
+      \lambda^*
+    }
+    \ge
+    \varepsilon
+    \right]
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}\ 
+    N
+    \to 
+    \infty
+    \,.
+  \end{gather}
+\end{theorem}
+We want to leverage the convexity of
+the objective function of the dual to get
+ \begin{gather*}
+   \P
+   \left[ 
+     \norm
+     {
+      \lambda ^ \dagger
+      -
+      \lambda^*
+     }
+     \le
+     \varepsilon
+   \right]
+   =
+   \P
+   \left[ 
+     \inf _ { 
+       \norm{
+         (
+     \Delta
+     ,
+     \Delta_0
+         )
+ } 
+= \varepsilon }
+     G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     -
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge 
+     0
+   \right]
+   \,.
+ \end{gather*}
+We learned about a similar idea from \cite[p.22]{Wang2019}. The next Lemma makes this rigorous. 
+\begin{lemma}
+  \label{bw:cd:lem}
+  Let $m\in\mathbb{N}$ and
+  $g \,:\, \R^m \to \overline{\R}$ 
+  be convex.
+  Then 
+  for all $y \in \R^m$ and $\varepsilon>0$ 
+    \begin{gather}
+      \label{7060_0}
+      \inf_{\norm{\Delta}=\varepsilon} g(y+\Delta) - g(y) \ge 0 \quad
+    \end{gather}
+    implies
+    the existence of  
+    a global minimum
+    $
+    y^* \in \,\R^m
+    $
+    of $g$
+    satisfying
+    $
+      \norm{y^* - y} \le \varepsilon
+    $.
+\end{lemma}
+\begin{proof}
+  Since 
+  $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+  $
+  is convex, it contains a 
+  local minimum  
+  of $g$.
+  Suppose towards a contradiction that
+  $
+    y^* 
+    \ 
+    \in 
+    \ 
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+  $
+  is a local minimum, but not a global one, and
+  \eqref{7060_0} is true.
+  Then it holds
+  \begin{gather}
+    \label{7060_3}
+    g(x) < g(y^*)
+    \quad
+    \text{for some}\ 
+    x 
+    \in 
+    \R^m 
+    \setminus 
+    \left( 
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    \right)
+  \,.
+  \end{gather}
+  Furthermore, since 
+  $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+  $ is compact and contains $y^*$,
+  the line segment connecting 
+  $y^*$ and $x$
+  intersects the boundary of 
+  $y + \mathcal{C}$, that is,
+  there exist
+  $
+    \theta \in (0,1)
+  $
+  and 
+  $
+    \Delta_x
+  $
+  with 
+  $
+    \norm{\Delta_x}=\varepsilon
+  $
+  such that
+  \begin{gather}
+    \label{7060_4}
+    \theta x + (1 - \theta) y^* = y + \Delta_x
+    \,.
+  \end{gather}
+    It follows
+    \begin{align}
+      \label{7060_5}
+      \begin{split}
+      g(y^*)
+      \le
+      g(y)
+      \le
+      g(y + \Delta_x)
+      &=
+      g(
+        \theta x + (1 - \theta) y^*
+      )
+      \\
+      &\le
+      \theta g(x)
+      + 
+      (1 - \theta)
+      g(y^*)
+      <
+      g(y^*)
+      ,
+      \end{split}
+    \end{align}
+    which is a contradiction.
+    The first inequality is due to
+    $y^*$ being a local minimum of $g$ in
+    $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    $,
+    the second inequality is due to  
+    \eqref{7060_0} being true,
+    the equality is due to \eqref{7060_4},
+    the third inequality is due to the convexity of $g$
+    and the strict inequality is due to \eqref{7060_3}.
+    Thus every local minimum of $g$ in
+    $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    $
+    is also a global minimum.
+    %It follows the right-hand side of \eqref{7060_0}.
+\end{proof}
+\begin{proof}
+  The objective function $G$ of the dual satisfies
+\begin{gather*}
+  G(\lambda,\lambda_0)
+  \ 
+  :=
+  \ 
+    \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left[ 
+    \,
+  T_i
+  \cdot
+  f^*
+  \!
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \ 
+-
+\ 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \,
+  \right]
+  \ 
++
+\ 
+\inner
+{\delta}
+{|\lambda|}
+\,.
+\end{gather*}
+Without the last term, this is a differentiable convex function.
+
+It is well know that a differentiable convex functions $g$ satisfies
+  \begin{gather}
+    \label{cv:ts:concD}
+    g(x)-g(y)
+    \ge
+    \nabla
+    g(y)^\top
+    (x-y)
+    \qquad 
+    \text{for all}\ 
+    x,y\,.
+  \end{gather}
+  The gradient of
+  \begin{gather}
+    g := 
+    (\lambda,\lambda_0)
+    \mapsto
+    \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left[ 
+    \,
+  T_i
+  \cdot
+  f^*
+  \!
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \ 
+-
+\ 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \,
+  \right]
+  \end{gather}
+  is 
+
+  \begin{gather}
+    \nabla
+    g
+    =
+    (\lambda,\lambda_0)
+    \mapsto
+\frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left[ 
+    \,
+  T_i
+  \cdot
+  (f^{'})^{-1}
+  \!
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \ 
+-
+\ 
+1
+  \right]
+  [
+  B(X_i)^\top
+  ,
+  1
+  ]^\top
+  \end{gather}
+  Thus
+\begin{align}
+     &
+   G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     \ 
+     -
+     \ 
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+         %%%%%%%%%%%%% 1 %%%%%%%%%%%%%%
+     \\
+     &
+     \quad
+     \ge
+     -
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left[ 
+       B(X_i)^\top,
+       1
+     \right]
+     \cdot
+     \begin{bmatrix}
+       \Delta\\
+       \Delta_0
+     \end{bmatrix}
+     \left( 
+       1
+       \ 
+       -
+       \ 
+     T_i
+     \cdot
+     (f^{'})^{-1}
+     \left( 
+       \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+     \right)
+     \right)
+     \\
+     &
+     \qquad
+     +
+     \ 
+     \inner
+     {\delta}
+     {
+       |\lambda^*+\Delta|
+       -
+       |\lambda^*|
+     }
+     \,.
+\end{align}
+We control the \textbf{first term} by (what?) 
+and the \textbf{second term} by $\norm{\delta}$.
+\subsection*{First Term}
+We note, that by $\norm{B(x)}\le 1$ and the Cauchy-Schwarz inequality
+it holds
+\begin{gather}
+      \left[ 
+       B(X_i)^\top,
+       1
+     \right]
+     \cdot
+     \begin{bmatrix}
+       \Delta\\
+       \Delta_0
+     \end{bmatrix}
+     \ 
+     \lesssim
+     \ 
+     \norm{(\Delta,\Delta_0)}
+     =\varepsilon
+     \,.
+\end{gather}
+Next, we see that
+\begin{align}
+  \begin{split}
+  &
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left( 
+       1
+       \ 
+       -
+       \ 
+     T_i
+     \cdot
+     (f^{'})^{-1}
+     \left( 
+       \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+     \right)
+     \right)
+     \\
+     &
+     \ 
+     \lesssim
+     \ 
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left|
+     1
+     -
+     \frac{T_i}{\pi_i}
+     \right|
+      \ 
+     +
+      \ 
+     \max_{i=1,\ldots,N}
+     \left| 
+        \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+      \ 
+        -
+        \ 
+        f^{'}
+        \left( 
+          \frac{1}{\pi_i}
+        \right)
+     \right|
+     \\
+     &
+     \ 
+     =:
+     \ 
+     S_N
+     \
+     +
+     \ 
+     M_N
+     \,.
+\end{split}
+\end{align}
+By the properties of conditional expectation it holds.
+\begin{gather}
+  \E
+  \left[ 
+    \frac{T}{\pi(X)}
+  \right]
+  =
+  \E
+  \left[ 
+    \frac{\E[T|X]}{\pi(X)}
+  \right]
+  =1
+  \,.
+\end{gather}
+By the weak law of large numbers (L1 version ? some assumption on 1/pi?)
+it holds $S_N\le \varepsilon$?? with probability going to 1.
+ \begin{gather}
+   \inner{B(X_i)}{\mathrm{1_N}}=1
+ \end{gather}
+We estimat
+\begin{gather}
+    \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left[ 
+       B(X_i)^\top,
+       1
+     \right]
+     \cdot
+     \begin{bmatrix}
+       \Delta\\
+       \Delta_0
+     \end{bmatrix}
+     \left( 
+       1
+       \ 
+       -
+       \ 
+     T_i
+     \cdot
+     (f^{'})^{-1}
+     \left( 
+       \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+     \right)
+     \right)
+\end{gather}
+\end{proof}

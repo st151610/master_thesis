@@ -110,7 +110,7 @@ This is a (convex) optimization problem. We will talk about the \textbf{objectiv
 the \textbf{equality} and \textbf{inequality constraints}, especially about the 
 \textbf{regression basis} $B$.
 
-\subsection*{Objective Function}
+\section*{Objective Function}
 Strictly speaking, we consider the sum
 \begin{gather}
   [w_1,\ldots,w_n]^\top
@@ -133,7 +133,7 @@ where $f^*$ is the Legendre transformation of $f$.
 
 In the sequel we need $f$ to be strictly convex and its convex conjugate (or Legendre transformation) to be continuously differentiable and strictly non-decreasing.
 Two popular choices of $f$ are the \textbf{negative entropy} and the \textbf{sample variance}.
-\subsubsection*{Negative Entropy}
+\subsection*{Negative Entropy}
 We define the negative entropy to be
 \begin{gather}
   f
@@ -202,7 +202,7 @@ Thus
   Thus $f^*$ is smooth and strictly non-decreasing.
 
 
-  \subsubsection*{Sample Variance}
+  \subsection*{Sample Variance}
 We define the sample variance to be
 \begin{gather}
   f
@@ -267,12 +267,12 @@ Thus
   we need $f^*$ also to be
   strictly non-decreasing. But the sample variance violates this assumption.
 
-\subsection*{Constraints}
+\section*{Constraints}
 Let's turn our attention to the constraints.
 The first constraint makes sure we do not extrapolate from the poputation.
 The second constraint norms the weights. 
 The third constraint controls the bias of the resulting estimator.
-\subsection*{Regression Basis}
+\section*{Regression Basis}
 We adopt ideas from \cite{Gyorfi2002}. Another angle would be sieve estimates\cite{Newey1997a} where the number of basis functions can grow slower than $N$.
 Their notion of (weak) consistency~\cite[Definitien~1.1]{Gyorfi2002} for noiseless estimands
 is
@@ -432,7 +432,7 @@ Then it holds for all $\varepsilon>0$
 Classical choices of the basis functions are \textbf{partitioning estimates} and 
 \textbf{kernel estimates}(cf.\cite[§4,§5]{Gyorfi2002}).
 
-\subsubsection*{Partitioning Estimates}
+\subsection*{Partitioning Estimates}
 We consider a partition
 $
   \mathcal{P}_N
@@ -576,7 +576,7 @@ Then it holds for all $\varepsilon>0$
   \,.
 \end{gather}
 \end{corollary}
-\subsubsection*{Kernel Estimates}
+\subsection*{Kernel Estimates}
 Let $K\colon \R^d\to [0,1]$ (bounded kernel) and $h_n>0$ (bandwith).
 For examples see \cite[§5.1.]{Gyorfi2002}.
 We define
@@ -647,4 +647,521 @@ Then it holds for all $\varepsilon>0$
 \end{gather}
 \end{corollary}
 
+In the sequel we mainly work with the dual problem.
+
+\section*{Dual Problem}
+\begin{ftheorem*}
+  The dual of 
+  Problem~\ref{bw:1:primal}
+  is the unconstrained optimization problem 
+\begin{gather*}
+  \underset
+  {\lambda_0,\ldots,\lambda_{N}\in \R}
+  {
+    \mathrm{minimize}
+  }
+  \quad
+  \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left[ 
+    \,
+  T_i
+  \cdot
+  f^*
+  \!
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \ 
+-
+\ 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \,
+  \right]
+  \ 
++
+\ 
+\inner
+{\delta}
+{|\lambda|}
+  \,.
+\end{gather*}
+  where
+  \begin{gather*}
+  f^*
+  \,
+  \colon
+  \, 
+  \R
+  \ 
+  \to
+  \ 
+  \R
+  \,
+  ,
+  \qquad 
+  x^*
+  \ 
+  \mapsto
+  \ 
+    x^*
+    \!
+    \cdot
+    (f^{'})^{-1}(x^*)
+  \ 
+    -
+  \ 
+    f
+    \left( 
+      (f^{'})^{-1}(x^*)
+    \right)
+  \end{gather*}
+  is the Legendre transformation of $f$,
+  the vector
+  $
+    B(X_i)
+    =
+    \left[ 
+      B_1(X_i)
+      ,
+      \ldots
+      ,
+      B_n(X_i)
+    \right]
+    ^\top
+  $
+  denotes 
+  the $N$ basis functions of the covariates 
+  of unit $i\in \left\{ 1, \ldots, N \right\}$
+  and
+  $
+    \left| \lambda \right|
+    =
+    \left[ 
+      \left| \lambda_1 \right|
+      ,
+      \ldots
+      ,
+      \left| \lambda_N \right|
+    \right]
+    ^\top
+    ,
+  $
+  where $\left| \,\cdot\, \right|$
+  is the absolute value of a real-valued scalar.
+  Moreover,
+  if $\lambda^\dagger$
+  is an optimal solution of the above problem 
+  then the optimal solution to problem
+  Problem~\ref{bw:1:primal}
+  is given by
+  \begin{gather*}
+    w_i^\dagger
+    \ 
+    =
+    \ 
+    (f^{'})^{-1}
+    \left( 
+      \inner
+      {B(X_i)}
+      {\lambda^\dagger}
+      +
+      \lambda_0^\dagger
+    \right)
+    \qquad
+    \text{for}\ 
+    i\in \left\{ 1\ldots,n \right\}
+    \,.
+  \end{gather*}
+\end{ftheorem*}
+\subsection*{Plan of proof}
+  We want to apply Theorem~\ref{cv:ts:th}.
+  To this end, we find the suitable \textbf{matrix notation}.
+  (\cite[p.20-22]{Wang2019} fail to do so. The problem is, that they divide by 0 in the second display on p.21).
+  Theorem~\ref{cv:ts:th} covers only parts of the constraints, 
+  so we apply the argument in \cite[p.19-20]{Wang2019} to eliminate the remaining \textbf{non-negativity constraints}. 
+%%%%%%%%%%%%%%%  
+%%%% PROOF %%%%
+%%%%%%%%%%%%%%%
+\begin{proof}
+  \subsubsection*{Matrix notation}
+  We consider the vector of basis functions of the covariates 
+  of unit $i\in \left\{ 1, \ldots, n \right\}$, that is,
+\begin{align*}
+    B(X_i)
+    &
+    \ 
+    :=
+    \ 
+    \left[ 
+      B_1(X_i)
+      ,
+      \ldots
+      ,
+      B_N(X_i)
+    \right]
+    ^\top
+    \,,
+    \intertext{the constraints vectors}
+d
+    &
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      0_n
+      \\
+      -N\cdot\delta 
+      \pm\,
+      \sum_{i = 1}^{N} B_k(X_i)
+    \end{bmatrix}
+    \,,
+    \\
+  a
+&
+  \ 
+    :=
+    \ 
+    N
+    \intertext{
+  the matrix of the basis functions of the treated
+  }
+    \mathbf{B}(\mathbf{X})
+    &
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      B(X_1), \ldots, B(X_n)
+    \end{bmatrix}
+    \intertext{
+      and
+  the constraint matrices
+    }
+    \mathbf{U}
+    &
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      \mathbf{I}_n
+      \\
+      \pm\,\mathbf{B}(\mathbf{X})
+    \end{bmatrix}
+        \,.
+        \\
+    \mathbf{A}
+    &
+    \ 
+    :=
+    \ 
+      \mathrm{1}_n
+  \end{align*}
+  By Example~\ref{cv:cc:ex}
+the convex conjugate of the objective function 
+of 
+  Problem~\ref{bw:1:primal} is
+\begin{gather*}
+  [x^*_1,\ldots,x^*_n]^\top
+  \ 
+  \mapsto
+  \ 
+  \sum_{i=1}^n f^*(x^*_i)
+  \,,
+\end{gather*}
+Before we apply Theorem~\ref{cv:ts:th}
+we eliminate the non-negativity constraints.
+To this end, we consider the objective function $G$ of the dual
+problem and update it until we reach its final form.
+We write
+\begin{gather}
+  \lambda_d
+  =:
+  \begin{bmatrix}
+    \rho\\
+    \lambda^+\\
+    \lambda^-
+  \end{bmatrix}
+\end{gather}
+\begin{align*}
+G(\lambda_d,\lambda_0)
+&
+\ 
+=
+\ 
+G
+\left( 
+\rho,
+  \lambda^+,
+  \lambda^-,
+\lambda_0
+\right)
+\\
+&
+\ 
+:=
+\ 
+    \sum_{i = 1}^{N} 
+    -
+    f^*
+    \left( 
+    \rho_i
+    +
+    \lambda_0
+    +
+    \inner{B(X_i)}
+    {\lambda^+-\lambda^-}
+    \right)
+    \ 
+    +
+    \ 
+    \left( 
+    \lambda_0
+    +
+    \inner{B(X_i)}
+    {\lambda^+-\lambda^-}
+    \right)
+\\
+&
+    \qquad 
+    -
+    \ 
+    N
+    \cdot
+    \inner{\delta}
+    {\lambda^++\lambda^-}
+\end{align*}
+Since we maximize $G$ and $f^*$ is strictly non-decreasing, 
+$\rho=0$ is optimal. We update $G$.
+\begin{align*}
+G
+\left( 
+  \lambda^+,
+  \lambda^-,
+\lambda_0
+\right)
+&
+\ 
+=
+\ 
+    \sum_{i = 1}^{N} 
+    -
+    f^*
+    \left( 
+    \lambda_0
+    +
+    \inner{B(X_i)}
+    {\lambda^+-\lambda^-}
+    \right)
+    \ 
+    +
+    \ 
+    \left( 
+    \lambda_0
+    +
+    \inner{B(X_i)}
+    {\lambda^+-\lambda^-}
+    \right)
+\\
+&
+    \qquad 
+    -
+    \ 
+    N
+    \cdot
+    \inner{\delta}
+    {\lambda^++\lambda^-}
+\end{align*}
+
+\subsubsection*{Non-negativity constraints}
+
+  Next we want to remove the non-negativity constraints on $\lambda^\pm$.
+  We show 
+  for all $i \in \left\{ 1,\ldots,N \right\}$
+\begin{alignat*}{2}
+  \text{either}
+  &
+  &&
+  \qquad
+      \lambda_i^+ > 0
+  \\
+  \text{or}
+  &
+  &&
+  \qquad
+      \lambda_i^- > 0
+  \,.
+\end{alignat*}
+Assume towards a contradiction that 
+there exists
+$i \in \left\{ 1,\ldots,N \right\}$
+such that
+$
+      \lambda_i^+ > 0
+$
+and
+$
+      \lambda_i^- > 0
+$ 
+and that 
+$\lambda^\pm$ is optimal.
+Consider
+  \begin{gather}
+    \tilde{\lambda}
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      \ 
+      \lambda_1^+,
+      \ldots,
+      \ 
+      \lambda_i^+
+      \!
+      -
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      )\,,
+      \ 
+      \ldots,
+      \lambda_N^+,
+      \ 
+      \lambda_1^-,
+      \ldots,
+      \lambda_i^-
+      \!
+      -
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      )\,,
+      \ 
+      \ldots,
+      \lambda_N^-
+      \,,
+      \lambda_0
+    \end{bmatrix}
+    ^\top
+    \,.
+  \end{gather}
+  Since 
+  $
+      \lambda_i^\pm
+      -
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      )
+      \ge 
+      0
+  $,
+  the perturbed vector $\tilde{\lambda}$ is in the domain of the 
+  optimization problem.
+  But 
+  \begin{align}
+  G(\tilde{\lambda})
+  -
+  G(\lambda)
+  \ 
+  =
+  \ 
+  2
+  N
+  \cdot
+  \delta_i
+  \cdot
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      )
+  \ 
+  >
+  \ 
+  0
+  \,,
+  \end{align}
+  which contradicts the optimality of $\lambda$.
+But then 
+$
+\lambda^\pm_i
+\ge 0
+$
+collapses to
+$
+\lambda_i\in \R
+$ 
+for all
+$i\in \left\{ 0,\ldots,N \right\}$, that is,
+$ \lambda_i=\lambda_i^+\!-\lambda_i^- $.
+Note that
+$ |\lambda_i|=\lambda_i^+\!+\lambda_i^- $.
+
+We update the objective function one more time.
+Multiplying with $-1/N$ and introducing $T$ we get
+
+\begin{gather*}
+  \underset
+  {\lambda_0,\ldots,\lambda_{N}\in \R}
+  {
+    \mathrm{minimize}
+  }
+  \quad
+  \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left[ 
+    \,
+  T_i
+  \cdot
+  f^*
+  \!
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \ 
+-
+\ 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \,
+  \right]
+  \ 
++
+\ 
+\inner
+{\delta}
+{|\lambda|}
+  \,.
+\end{gather*}
+We apply Theorem~\ref{cv:ts:th} to finish the proof.
+\end{proof}
 We have gathered all the tools to tackle consistency of the weighted mean.
