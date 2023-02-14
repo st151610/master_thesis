@@ -1,9 +1,55 @@
-$N$ units.
-$1,\ldots,n$ receive treatment,
-$n+1,\ldots,N$ are control.
-										%%%%%%%%%%%%%
-										%%%% (P) %%%%
-										%%%%%%%%%%%%%
+We consider a study population in which we want to test the effect of a treatment.
+We introduce the \textbf{indicator of treatment} $T\in \left\{ 0,1 \right\}$.
+For each treatment level there exist the \textbf{marginal potential outcomes}
+$(Y(0),Y(1))$. We would like to estimate $\E[Y(1)]$. If we succeed the same technique
+shall yield an estimate of $\E[Y(0)]$. We shall compare $\E[Y(1)]$ and $\E[Y(0)]$ and 
+find out something about the effect of the treatment in the population.
+
+The data we acquire is independent and identically distributed. But usually
+\begin{gather}
+  Y(1)|T=1 \nsim Y(1) 
+  \,,
+\end{gather}
+that is, $T=1$ carries more information than observing the outcome under treatment.
+We say that $Y(1)|T=1$ is \textbf{confounded}. To extract that plus of information from $T=1$ and put it where it belongs by collecting more data.
+We gather it in $X\in \R^d$ and assume
+\begin{gather}
+  (Y(0),Y(1))
+  \perp
+  T
+  \ 
+  |
+  \ 
+  X
+  \,,
+\end{gather}
+that is, \textbf{conditional unconfoundedness}.
+Thus, we end up collecting $N\in \mathbb{N}$ independent and identically distributed copies of 
+$(T,X,Y(T))$. For convenience, we assume that the first $n\in \mathbb{N}$ copies have $T=1$.
+
+A natural estimator for $\E[Y(1)]$ is the weighted mean
+\begin{gather}
+  \frac{1}{n}
+  \sum_{i=1}^{n} 
+  w_i Y_i
+  \,.
+\end{gather}
+The weights should satisfy (in a broader sense)
+\begin{gather}
+  w_i\cdot Y_i \to Y(1)
+  \qquad 
+  \text{for}\ 
+  N
+  \ 
+  \to
+  \ 
+  \infty
+  \,.
+\end{gather}
+One class of such weights has been recently analyzed in \cite{Wang2019}.
+We take ideas and extend.
+
+\subsection*{The algorithm}
 \begin{fproblem}
   \label{bw:1:primal}
 \begin{align*}
@@ -56,8 +102,549 @@ $n+1,\ldots,N$ are control.
     &&&
     \qquad
     \text{for all}\ 
-    k \in \left\{ 1, \ldots, n \right\}
+    k \in \left\{ 1, \ldots, N \right\}
     \,.
 \end{align*}
 \end{fproblem}
+This is a (convex) optimization problem. We will talk about the \textbf{objective function} $f$ and
+the \textbf{equality} and \textbf{inequality constraints}, especially about the 
+\textbf{regression basis} $B$.
 
+\subsection*{Objective Function}
+Strictly speaking, we consider the sum
+\begin{gather}
+  [w_1,\ldots,w_n]^\top
+  \ 
+  \mapsto
+  \ 
+  \sum_{i=1}^{n} 
+  f(w_i)
+\end{gather}
+as the objective function. It is natural to consider the dual formulation of the optimization problem. This involves the \textbf{convex conjugate}(cf.Definition~?) of the original objective function. We show in Example that for the sum this is
+\begin{gather}
+  [\lambda_1,\ldots,\lambda_n]^\top
+  \ 
+  \mapsto
+  \ 
+  \sum_{i=1}^{n} 
+  f^*(\lambda_i)
+\end{gather}
+where $f^*$ is the Legendre transformation of $f$.
+
+In the sequel we need $f$ to be strictly convex and its convex conjugate (or Legendre transformation) to be continuously differentiable and strictly non-decreasing.
+Two popular choices of $f$ are the \textbf{negative entropy} and the \textbf{sample variance}.
+\subsubsection*{Negative Entropy}
+We define the negative entropy to be
+\begin{gather}
+  f
+  \colon
+  [0,\infty)
+  \to
+  \R
+  ,\quad
+  w
+  \mapsto
+  \begin{cases}
+    0\quad\text{if}\ w=0,\\
+    w\log w\quad
+    \text{else}.
+  \end{cases}
+\end{gather}
+It is strictly convex. To compute its Legendre transformation we note, that
+\begin{gather}
+  (f^{'})^{-1}
+  =
+  \lambda\mapsto
+  e^{\lambda-1}
+\end{gather}
+Thus
+  \begin{align*}
+  f^*
+  (\lambda)
+  &
+  \ 
+  =
+  \ 
+  \lambda
+    \cdot
+    (f^{'})^{-1}(\lambda)
+  \ 
+    -
+  \ 
+    f
+    \left( 
+      (f^{'})^{-1}(\lambda)
+    \right)
+    \\
+  &
+  \ 
+  =
+  \ 
+  \lambda
+    \cdot
+  e^{\lambda-1}
+  \ 
+    -
+  \ 
+  e^{\lambda-1}
+  \log
+  \left( 
+  e^{\lambda-1}
+  \right)
+  \\
+  &
+  \ 
+  =
+  \ 
+  e^{\lambda-1}
+  \,.
+  \end{align*}
+  Thus $f^*$ is smooth and strictly non-decreasing.
+
+
+  \subsubsection*{Sample Variance}
+We define the sample variance to be
+\begin{gather}
+  f
+  \colon
+  \R
+  \to
+  \R
+  ,\quad
+  w
+  \mapsto
+  (w-1/n)^2
+\end{gather}
+It is strictly convex. To compute its Legendre transformation we note, that
+\begin{gather}
+  (f^{'})^{-1}
+  =
+  \lambda\mapsto
+  \frac{\lambda}{2}
+  +
+  \frac{1}{n}
+\end{gather}
+Thus
+  \begin{align*}
+  f^*
+  (\lambda)
+  &
+  \ 
+  =
+  \ 
+  \lambda
+    \cdot
+    \left( 
+  \frac{\lambda}{2}
+  +
+  \frac{1}{n}
+    \right)
+  \ 
+    -
+  \ 
+    \left( 
+    \left( 
+  \frac{\lambda}{2}
+  +
+  \frac{1}{n}
+    \right)
+    -
+    \frac{1}{n}
+    \right)
+    ^2
+    \\
+  &
+  \ 
+  =
+  \ 
+  \frac{\lambda^2}{4}
+  +
+  \frac{\lambda}{n}
+  \,.
+  \end{align*}
+  Thus $f^*$ is smooth.
+  To eliminate some variables in the optimization problem,
+  we need $f^*$ also to be
+  strictly non-decreasing. But the sample variance violates this assumption.
+
+\subsection*{Constraints}
+Let's turn our attention to the constraints.
+The first constraint makes sure we do not extrapolate from the poputation.
+The second constraint norms the weights. 
+The third constraint controls the bias of the resulting estimator.
+\subsection*{Regression Basis}
+We adopt ideas from \cite{Gyorfi2002}. Another angle would be sieve estimates\cite{Newey1997a} where the number of basis functions can grow slower than $N$.
+Their notion of (weak) consistency~\cite[Definitien~1.1]{Gyorfi2002} for noiseless estimands
+is
+\begin{gather}
+  \E
+  \left[ 
+    \int_\mathcal{X}
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(x)
+    \cdot
+    m(X_k)
+    -
+    m(x)
+    \right|
+    ^2
+    \P_X(dx)
+  \right]
+  \to
+  0
+  \qquad
+  \text{as}
+  \ 
+  n\to \infty
+  \,.
+\end{gather}
+Universal consistency in this sense holds, if this is true for all distributions with
+$\E[m(X)^2]<\infty$(cf.\cite[Definition~1.3]{Gyorfi2002}).
+
+We adopt a slightly different notion of consistency. The next theorem dose the translation work. 
+\begin{theorem}
+  Assume
+  $\E[m(X)^2]<\infty$
+  and the basis function are 
+(weak) universal consistency in the sense of 
+\cite[Definitien~1.3]{Gyorfi2002}.
+Then it holds for all $\varepsilon>0$
+\begin{gather}
+  \P
+  \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    \ge
+    \varepsilon
+  \right]
+  \to
+  0
+  \qquad
+  \text{as}
+  \ 
+  n\to \infty
+  \,.
+\end{gather}
+\end{theorem}
+\begin{proof}
+  By Markov's inequality it holds
+  \begin{align*}
+    &
+  \P
+  \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    \ge
+    \varepsilon
+  \right]
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \frac
+  {
+  \E
+  \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    ^2
+  \right]
+  }
+  {\varepsilon^2}
+  \\
+  &
+  \ 
+  =
+  \ 
+  \frac
+  {
+  \E
+  \left[ 
+    \E
+    \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    ^2
+    |
+    X_1,
+    \ldots,
+    X_N
+    \right]
+  \right]
+  }
+  {\varepsilon^2}
+  \\
+  &
+  \ 
+  =
+  \ 
+  \frac
+  {
+  \E
+  \left[ 
+    \int_\mathcal{X}
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(x)
+    \cdot
+    m(X_k)
+    -
+    m(x)
+    \right|
+    ^2
+    \P_X(dx)
+  \right]
+  }
+  {\varepsilon^2}
+  \,.
+  \end{align*}
+  The last equality is due to \cite[(1.2)]{Gyorfi2002}.
+  By the weak universal consistency of $B$
+  the last expression goes to $0$ as $N\to \infty$.
+\end{proof}
+
+Classical choices of the basis functions are \textbf{partitioning estimates} and 
+\textbf{kernel estimates}(cf.\cite[§4,§5]{Gyorfi2002}).
+
+\subsubsection*{Partitioning Estimates}
+We consider a partition
+$
+  \mathcal{P}_N
+  =
+  \left\{ 
+    A_{N,1}
+    ,
+    A_{N,2}
+    ,
+    \ldots
+  \right\}
+$
+of $ \R^d $
+and define
+$ A_N(x) $ to be the cell of $ \mathcal{P}_N $ containing $x$.
+We define $N$ basis functions $B_k$ of the covariates by
+\begin{gather*}
+  B_k(x)
+  :=
+  \frac{
+  \mathbf{1}_{X_k \in A_N(x)}
+  }{
+  \sum_{j=1}^{N} 
+  \mathbf{1}_{X_j \in A_N(x)}
+  }
+  \,,
+  \qquad
+  k=
+  1,\ldots,N
+  \,.
+\end{gather*}
+The euclidian norm of the basis functions is bounded above by $1$.
+\begin{gather*}
+  \norm{B(x)}^2
+  =
+  \sum_{k=1}^{n} 
+  \left( 
+  \frac{
+  \mathbf{1}_{X_k \in A_n(x)}
+  }{
+  \sum_{j=1}^{n} 
+  \mathbf{1}_{X_j \in A_n(x)}
+  }
+  \right)
+  ^2
+  \le
+  \sum_{k=1}^{n} 
+  \frac{
+  \mathbf{1}_{X_k \in A_n(x)}
+  }{
+  \sum_{j=1}^{n} 
+  \mathbf{1}_{X_j \in A_n(x)}
+  }
+  =1
+  \,.
+\end{gather*}
+Under mild conditions, the basis functions are universally consistent.
+\begin{theorem}
+  \label{bw:i:bf:pe:th:c}
+  If for each sphere $S$ centered at the origin 
+  \begin{gather}
+    \max
+    _
+    {
+      j\colon
+      A_{N,j} 
+      \cap
+      S
+      \neq
+      \emptyset
+    }
+    \mathrm{diam}
+    \ 
+      A_{N,j} 
+      \ 
+      \to
+      \ 
+      0
+      \qquad
+      \text{for}\ 
+      N\to \infty 
+  \end{gather}
+  and
+  \begin{gather}
+    \frac
+    {
+    \#
+    \left\{  
+      j\colon
+      A_{N,j} 
+      \cap
+      S
+      \neq
+      \emptyset
+    \right\}
+    }
+    {N}
+      \ 
+      \to
+      \ 
+      0
+      \qquad
+      \text{for}\ 
+      N\to \infty 
+  \end{gather}
+  then the partitioning regression function estimate 
+  (definition)
+  is
+  universally consistent (definition).
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~4.2.]{Gyorfi2002}
+\end{proof}
+\begin{corollary}
+Assume
+  $\E[m(X)^2]<\infty$
+  and the basis functions $B$ belong to a partitioning estimate.
+  Furthermore assume that the conditions of 
+  Theorem~\ref{bw:i:bf:pe:th:c} are met.
+Then it holds for all $\varepsilon>0$
+\begin{gather}
+  \P
+  \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    \ge
+    \varepsilon
+  \right]
+  \to
+  0
+  \qquad
+  \text{as}
+  \ 
+  n\to \infty
+  \,.
+\end{gather}
+\end{corollary}
+\subsubsection*{Kernel Estimates}
+Let $K\colon \R^d\to [0,1]$ (bounded kernel) and $h_n>0$ (bandwith).
+For examples see \cite[§5.1.]{Gyorfi2002}.
+We define
+\begin{gather}
+  B_k(x)
+  :=
+  \frac
+  {
+    K \left( \frac{x-X_k}{h_n} \right)
+  }
+  {
+    \sum_{i=1}^{N} 
+    K \left( \frac{x-X_i}{h_n} \right)
+  }
+  \,.
+\end{gather}
+By the boundedness of the kernel it follows
+$\norm{B(x)}\le 1$.
+\begin{theorem}
+  \label{bw:i:bf:ke:th:c}
+  Assume that there are 
+  balls
+  $S_{0,r}$ of radius $r$ 
+  and
+  balls
+  $S_{0,R}$ of radius $R$ 
+  centered at the origin with $0<r\le R$, and a constant $b>0$ such that
+  \begin{gather}
+    \mathbf{1}_{\left\{ x\in S_{0,R} \right\}}
+    \ge
+    K(x)
+    \ge
+    b
+    \cdot
+    \mathbf{1}_{\left\{ x\in S_{0,r} \right\}}
+  \end{gather}
+\end{theorem}
+(boxed kernel). Then for bandwiths with $h_n\to0$ and
+$n\cdot h_n^d\to\infty$ as $n\to \infty$ the kernel estimate is weakly universally consistent.
+\begin{corollary}
+Assume
+  $\E[m(X)^2]<\infty$
+  and the basis functions $B$ belong to a kernel estimate.
+  Furthermore assume that the conditions of 
+  Theorem~\ref{bw:i:bf:ke:th:c} are met.
+Then it holds for all $\varepsilon>0$
+\begin{gather}
+  \P
+  \left[ 
+    \left| 
+    \sum_{k=1}^{N} 
+    B_k(X)
+    \cdot
+    m(X_k)
+    -
+    m(X)
+    \right|
+    \ge
+    \varepsilon
+  \right]
+  \to
+  0
+  \qquad
+  \text{as}
+  \ 
+  n\to \infty
+  \,.
+\end{gather}
+\end{corollary}
+
+We have gathered all the tools to tackle consistency of the weighted mean.
