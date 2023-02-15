@@ -924,6 +924,56 @@ Thus by Lemma~\ref{bw:cd:lem}
 Finally, note that this holds for all $\varepsilon>0$. This finishes the proof.
 \end{proof}
 \section*{Consistency for Inverse Propensitiy Score}
+\begin{theorem}
+  For all $\varepsilon>0$ it holds
+  \begin{align*}
+    \P
+    \left[ 
+  \left| 
+  w(X)
+  -
+  1/\pi(X)
+  \right|
+  \ge
+  \varepsilon
+    \right]
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}
+    \ 
+    N
+    \to
+    \infty
+    \,.
+    \intertext{
+  Furthermore, it holds
+    }
+  \E
+    \left[ 
+  \left| 
+  w(X)
+  -
+  1/\pi(X)
+  \right|
+    \right]
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}
+    \ 
+    N
+    \to
+    \infty
+    \,.
+  \end{align*}
+\end{theorem}
+\begin{proof}
+  We employ the consistency of the dual variable, the universal consistency and boundedness of the regression basis and the constraint on the arithmetic mean of the weights. 
 \begin{align}
   \begin{split}
   \left| 
@@ -1003,3 +1053,53 @@ Finally, note that this holds for all $\varepsilon>0$. This finishes the proof.
 \end{split}
 \end{align}
 with probability going to $1$ as $N\to\infty$.
+
+If we prove boundedness, $L_1$-convergence follows readily.
+\begin{align*}
+    \left| 
+  w(X)
+  -
+  \frac{1}{\pi(X)}
+  \right|
+  &
+  \ 
+  \le
+  \ 
+  \frac{1}{N}
+  \sum_{i=1}^{N} 
+  \left| 
+  w(X)-w(X_i)
+  \right|
+  +
+  1
+  +
+  \frac{1}{C_\pi}
+  \\
+  &
+  \ 
+  \lesssim
+  \ 
+  \frac{1}{N}
+  \sum_{i=1}^{N} 
+  \left| 
+  \inner{B(X)-B(X_i)}
+  {\lambda^\dagger}
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \frac{1}{N}
+  \sum_{i=1}^{N} 
+  \norm{B(X)-B(X_i)}
+  \norm{\lambda^\dagger}
+  \\
+  &
+  \ 
+  \le
+  \ 
+  2\cdot\mathrm{diam}\,\Theta
+\end{align*}
+\end{proof}
+

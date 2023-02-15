@@ -1,9 +1,9 @@
 \contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Consistency}{13}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Asymptotic Normality and Convergence to Gaussian Bridge}{17}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Application to Plug In Estimators}{19}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Convex Analysis}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A Convex Analysis Primer}{21}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Conjugate Calculus}{25}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Duality of Optimal Solutions}{28}{section.4.3}%
+\contentsline {chapter}{\numberline {3}Asymptotic Normality and Convergence to Gaussian Bridge}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Application to Plug In Estimators}{21}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Convex Analysis}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A Convex Analysis Primer}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Conjugate Calculus}{27}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Duality of Optimal Solutions}{30}{section.4.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
