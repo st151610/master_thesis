@@ -1396,6 +1396,140 @@ it holds
   \,.
 \end{gather*}
 \subsection*{Analysis of $R_4$}
+\begin{align}
+  \begin{split}
+  \E
+  \left[ 
+    Y(T)
+    \cdot
+    (T\,/\,\pi(X))
+  \right]
+  &\ =\ 
+  \E
+  \left[ 
+    Y(1)
+    \,
+    /
+    \,
+    \pi(X)
+    \,
+    \vert
+    \,
+    T=1
+  \right]
+  \cdot
+  \P[T=1]
+  \\
+  &\ =\ 
+  \int_\mathcal{X}
+  \E
+  \left[ 
+    Y(1)
+    \,
+    \vert
+    \,
+    X=x
+    ,
+    T=1
+  \right]
+  \cdot
+  (
+  \P[T=1]
+  \,
+  /
+  \,
+  \pi(x)
+  )
+  \,
+  \P_{X|T}(dx\,|\,1)
+  \\
+  &\ =\ 
+  \int_\mathcal{X}
+  \left[ 
+    Y(1)
+    \vert
+    X=x
+  \right]
+  \P_X(dx)
+  \\
+  &
+ \  
+  =
+  \ 
+  \E[Y(1)]
+  \,.
+\end{split}
+\end{align}
+The first equality holds because of the definition of the weights.
+The second, third and last equality stem from 
+$
+  T\in \left\{ 0,1 \right\}
+$,
+and the law of total expectation, applied with $T$ and $X$.
+The fourth equality is justified by the assumption of conditional unconfoundedness.
+The density transformation is due to Bayes's Theorem.
+Thus the expectation of the summands in $R_4$ is 0.
+Convergence follows from the WLLN.
+\subsection*{Conclusion}
+We conclude that 
+\begin{gather}
+  \left| 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    Y_i
+    -
+    \E[Y(1)]
+  \right|
+  \le \varepsilon
+\end{gather}
+with probability going to 1 as $N\to \infty$. To show the second statement we calculate
+\begin{align}
+  \left| 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    Y_i
+    -
+    \E[Y(1)]
+  \right|
+  ^p
+  &
+  \ 
+  =
+  \ 
+  \left| 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    \left( 
+    Y_i
+    -
+    \E[Y(1)]
+    \right)
+  \right|
+  ^p
+  \\
+  &
+  \ 
+  \le
+  \ 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+  \left| 
+    \left( 
+    Y_i
+    -
+    \E[Y(1)]
+    \right)
+  \right|
+  ^p
+  \ 
+  \le
+  \ 
+  (2M)^p
+\end{align}
 \end{proof}
 
 
