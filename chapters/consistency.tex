@@ -379,6 +379,8 @@ It is well know that a differentiable convex functions $g$ satisfies
   \end{gather}
   Thus
 \begin{align}
+  \label{c:1}
+  \begin{split}
      &
    G
      (
@@ -444,13 +446,25 @@ It is well know that a differentiable convex functions $g$ satisfies
        |\lambda^*|
      }
      \,.
+   \end{split}
 \end{align}
+We fix $
+\tilde{\varepsilon}
+>0
+$
+and establish the lower bound
+$
+-
+\tilde{\varepsilon}
+$
+with probability going to $1$ as $N\to\infty$.
 We control the \textbf{first term} by (what?) 
 and the \textbf{second term} by $\norm{\delta}$.
 \subsection*{First Term}
 We note, that by $\norm{B(x)}\le 1$ and the Cauchy-Schwarz inequality
 it holds
 \begin{gather}
+  \label{c:first:0}
       \left[ 
        B(X_i)^\top,
        1
@@ -469,6 +483,7 @@ it holds
 \end{gather}
 Next, we see that
 \begin{align}
+  \label{c:first:1}
   \begin{split}
   &
      \frac{1}{N}
@@ -504,7 +519,8 @@ Next, we see that
       \ 
      +
       \ 
-     \max_{i=1,\ldots,N}
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
      \left| 
         \inner
        {B(X_i)}
@@ -532,8 +548,23 @@ Next, we see that
      \,.
 \end{split}
 \end{align}
-By the properties of conditional expectation it holds.
-\begin{gather}
+With $
+\tilde{\varepsilon}
+>0
+$
+fixed previously,
+we want to
+establish the upper bound
+$
+\tilde{\varepsilon}
+/
+(2\varepsilon)
+$
+with probability going to $1$ as $N\to\infty$.
+
+First, we bound $S_N$.
+By the properties of conditional expectation it holds
+\begin{gather*}
   \E
   \left[ 
     \frac{T}{\pi(X)}
@@ -545,40 +576,350 @@ By the properties of conditional expectation it holds.
   \right]
   =1
   \,.
-\end{gather}
+\end{gather*}
 By the weak law of large numbers (L1 version ? some assumption on 1/pi?)
-it holds $S_N\le \varepsilon$?? with probability going to 1.
- \begin{gather}
-   \inner{B(X_i)}{\mathrm{1_N}}=1
- \end{gather}
-We estimat
 \begin{gather}
-    \frac{1}{N}
-     \sum_{i=1}^{N} 
-     \left[ 
-       B(X_i)^\top,
-       1
-     \right]
-     \cdot
-     \begin{bmatrix}
-       \Delta\\
-       \Delta_0
-     \end{bmatrix}
-     \left( 
-       1
-       \ 
-       -
-       \ 
-     T_i
-     \cdot
-     (f^{'})^{-1}
-     \left( 
-       \inner
-       {B(X_i)}
-       {\lambda^*}
-       +
-      \lambda^\dagger_0
-     \right)
-     \right)
+  \P
+  \left[ 
+    S_N
+    \ge
+\tilde{\varepsilon}
+/(4\varepsilon)
+  \right]
+  \ 
+  \to 
+  \ 
+  0
+  \qquad 
+  \text{for}\ 
+  N\to \infty
+  \,.
 \end{gather}
+Next, we bound $M_N$.
+Recall that $\sum_{k=1}^{N}B_k(x)=1$. Thus
+\begin{gather*}
+        \inner
+       {B(X)}
+       {\lambda^*}
+      \ 
+       +
+      \ 
+      \lambda^\dagger_0
+      \ 
+      =
+      \ 
+      \sum_{k=1}^{N} 
+      B_k(X)
+      \left( 
+        f^{'}
+        \left( 
+          \frac{1}{\pi_k}
+      \right)
+      -
+      \lambda_0^\dagger
+      \right)
+      \ 
+      +
+      \ 
+      \lambda_0^\dagger
+      \ 
+      =
+      \ 
+      \sum_{k=1}^{N} 
+      B_k(X)
+      \cdot
+        f^{'}
+        \left( 
+          \frac{1}{\pi_k}
+      \right)
+      \,.
+\end{gather*}
+By Markov's inequality it holds
+\begin{align*}
+  &
+  \P \left[ 
+    M_N \ge 
+\tilde{\varepsilon}
+/(4\varepsilon)
+  \right]
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \frac{4\varepsilon}{
+\tilde{\varepsilon}
+  }
+  \, 
+  \frac{1}{N}
+  \sum_{i=1}^{N} 
+  \E
+  \left[ 
+    \left| 
+      \sum_{k=1}^{N} 
+      B_k(X_i)
+      \cdot
+        f^{'}
+        \left( 
+          \frac{1}{\pi_k}
+      \right)
+      -
+        f^{'}
+        \left( 
+          \frac{1}{\pi_i}
+      \right)
+    \right|
+  \right]
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \frac{4\varepsilon}{
+\tilde{\varepsilon}
+  }
+  \, 
+  \E
+  \left[ 
+    \left| 
+      \sum_{k=1}^{N} 
+      B_k(X)
+      \cdot
+        f^{'}
+        \left( 
+          \frac{1}{\pi_k}
+      \right)
+      -
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X)}
+      \right)
+    \right|
+  \right]
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \frac{4\varepsilon}{
+\tilde{\varepsilon}
+}
+  \, 
+  \E
+  \left[ 
+    \left| 
+      \sum_{k=1}^{N} 
+      B_k(X)
+      \cdot
+        f^{'}
+        \left( 
+          \frac{1}{\pi_k}
+      \right)
+      -
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X)}
+      \right)
+    \right|
+    ^2
+  \right]
+  ^{1/2}
+  \ 
+  \to 
+  \ 
+  0
+  \qquad 
+  \text{for}\ 
+  N\to \infty
+  \,.
+\end{align*}
+The convergence is due to the universal consistency of $B$.
+This establishes the desired bound of 
+$
+\tilde{\varepsilon}/(2\varepsilon)
+$
+in \eqref{c:first:1}.
+Together with \eqref{c:first:0}
+we conclude that the \textbf{first term} 
+in
+\eqref{c:1}
+is bounded below by
+$
+-
+\tilde{\varepsilon}/2
+$
+with probability going to $1$ as $N\to\infty$.
+\subsection*{Second Term}
+It holds
+\begin{gather*}
+  |x+y|-|x|\ge
+  -|y|
+  \qquad
+  \text{for all}\ 
+  x,y
+  \,.
+\end{gather*}
+Since
+$\delta\ge 0$
+we get
+\begin{align*}
+  &
+     \inner
+     {\delta}
+     {
+       |\lambda^*+\Delta|
+       -
+       |\lambda^*|
+     }
+     \\
+     &
+     \ 
+     \ge
+     \ 
+     -
+     \inner{\delta}
+     {|\Delta|}
+     \ 
+     \ge
+     \ 
+     -
+     \norm{\delta}
+     \norm{\Delta}
+     \ 
+     \ge
+     \ 
+     -
+     \norm{\delta}
+     \norm{(\Delta,\Delta_0)}
+     \ 
+     \ge
+     \ 
+     -
+     \norm{\delta}
+     \varepsilon
+     \ 
+     \ge
+     \ 
+     -
+     \tilde{\varepsilon}/2
+     \,,
+\end{align*}
+with probability going to $1$ as $N\to \infty$.
+The convergence is due to $\norm{\delta}$ converging to $0$ in probability.
+\subsection*{Conclusion}
+With the analysis of the \textbf{first} and \textbf{second term} in
+\eqref{c:1} we conclude
+\begin{gather}
+  G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     \ 
+     -
+     \ 
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge
+     -
+     \tilde{\varepsilon}
+\end{gather}
+with probability going to $1$ as $N\to \infty$.
+Since this holds true for all $\tilde{\varepsilon}>0$ we get
+\begin{gather}
+  G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     \ 
+     -
+     \ 
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge
+     0
+\end{gather}
+with probability going to $1$ as $N\to \infty$.
+But this holds for all 
+$
+(\Delta,\Delta_0)
+$
+with 
+$
+\norm{
+(\Delta,\Delta_0)
+}
+=\varepsilon
+$. Thus
+\begin{gather}
+   \inf _ { 
+       \norm{
+         (
+     \Delta
+     ,
+     \Delta_0
+         )
+ } 
+= \varepsilon }
+     G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     -
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge 
+     0
+\end{gather}
+with probability going to $1$ as $N\to \infty$.
+Thus by Lemma~\ref{bw:cd:lem}
+\begin{gather}
+  \P
+    \left[ 
+    \norm{
+      \lambda^\dagger
+      -
+      \lambda^*
+    }
+    \ge
+    \varepsilon
+    \right]
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}\ 
+    N
+    \to 
+    \infty
+    \,.
+\end{gather}
+Finally, note that this holds for all $\varepsilon>0$. This finishes the proof.
 \end{proof}
