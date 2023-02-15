@@ -958,7 +958,9 @@ Finally, note that this holds for all $\varepsilon>0$. This finishes the proof.
   -
   1/\pi(X)
   \right|
+  ^2
     \right]
+    ^{1/2}
     \ 
     \to
     \ 
@@ -1054,52 +1056,346 @@ Finally, note that this holds for all $\varepsilon>0$. This finishes the proof.
 \end{align}
 with probability going to $1$ as $N\to\infty$.
 
-If we prove boundedness, $L_1$-convergence follows readily.
+If we prove boundedness, $L_2$-convergence follows readily.
 \begin{align*}
     \left| 
   w(X)
   -
   \frac{1}{\pi(X)}
   \right|
+  ^2
   &
   \ 
   \le
   \ 
-  \frac{1}{N}
-  \sum_{i=1}^{N} 
-  \left| 
-  w(X)-w(X_i)
-  \right|
-  +
-  1
-  +
+    \left| 
+  w(X)
+  -
   \frac{1}{C_\pi}
+  \right|
+  ^2
   \\
   &
   \ 
   \lesssim
   \ 
-  \frac{1}{N}
-  \sum_{i=1}^{N} 
-  \left| 
-  \inner{B(X)-B(X_i)}
-  {\lambda^\dagger}
+    \left| 
+    \inner
+    {B(X)}
+    {\lambda^\dagger}
+    +
+    \lambda_0^\dagger
+  -
+  f^{'}
+  \left( 
+  \frac{1}{C_\pi}
+  \right)
   \right|
+  ^2
   \\
   &
   \ 
-  \le
-  \ 
-  \frac{1}{N}
-  \sum_{i=1}^{N} 
-  \norm{B(X)-B(X_i)}
-  \norm{\lambda^\dagger}
-  \\
-  &
-  \ 
-  \le
-  \ 
-  2\cdot\mathrm{diam}\,\Theta
+  \lesssim
+  \left( 
+    \mathrm{diam}\,\Theta
+  +
+  f^{'}
+  \left( 
+  \frac{1}{C_\pi}
+  \right)
+  \right)
+  ^2
 \end{align*}
 \end{proof}
+
+\subsection*{Consistency of the Weighted Mean}
+\begin{theorem}
+  \label{bw:ce:th}
+  For all
+  $\varepsilon>0$ it holds
+  \begin{gather*}
+    \P
+    \left[ 
+      \,
+  \left| 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    Y_i
+    \ 
+    -
+    \ 
+    \E[Y(1)]
+  \right|
+    \ 
+    \ge
+    \ 
+    \varepsilon
+    \right]
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}\ 
+    N
+    \to 
+    \infty
+    \,,
+  \end{gather*}
+  that is, the weighted mean is a consistent estimator.
+  Furthermore, it holds for all $p\in [1,\infty)$
+  \begin{gather*}
+    \E
+  \left| 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    Y_i
+    \ 
+    -
+    \ 
+    \E[Y(1)]
+  \right|
+  ^p
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}\ 
+    N
+    \to 
+    \infty
+    \,.
+  \end{gather*}
+\end{theorem}
+\begin{proof}
+  Let
+  $
+    \mathbf{Y}(1)
+  $
+  be the vector with $i$-th coordinate
+  $
+  Y_i(1)
+  $,
+  that is, the vector of marginal potential outcomes under treatment.
+  Note, that $\mathbf{Y}(1)$ is usually unknown. Nevertheless, we can leverage its existence in the following error decomposition.
+  Also note, that for $i>n$ we may choose $w_i=1/\pi_i$.
+\begin{align*}
+  \left| 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    Y_i
+    -
+    \E[Y(1)]
+  \right|
+  &
+  \ 
+  \le
+  \ 
+  \left|  
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w_i
+    B(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B(X_i)
+  \right)
+  ^\top
+     \mathbf{Y}(1) 
+  \right|
+  %%%% 1 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left( T_i\cdot w_i -1 \right)
+    \left( 
+    \E[Y(1)| X_i]
+    -
+    \inner
+    {B(X_i)}
+    { \mathbf{Y}(1) }
+    \right)
+  \right|
+  %%%% 2 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    T_i
+    (
+    w_i 
+    -
+    1/\pi_i
+    )
+    \left( 
+      Y_i
+    -
+    \E[Y(1)| X_i]
+    \right)
+  \right|
+  %%%% 3 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    T_i
+    /\pi_i
+    \left( 
+      Y_i
+    -
+    \E[Y(1)| X_i]
+    \right)
+    +
+    \left( 
+    \E[Y(1)| X_i]
+    -
+    \E[Y(1)]
+    \right)
+  \right|
+  \\
+  %%%%%%%%%%%%%%%
+  &
+  \ 
+  =:
+  \ 
+  R_1
+  +
+  R_2
+  +
+  R_3
+  +
+  R_4
+  \end{align*}
+  \subsubsection*{Analysis of $R_1$}
+  By the Cauchy-Schwarz inequality it holds
+  \begin{align*}
+   \left|  
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w_i
+    B(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B(X_i)
+  \right)
+  ^\top
+     \mathbf{Y}(1) 
+  \right|
+    \ 
+  \le
+    \ 
+  \norm{\delta}
+  \norm{
+     \mathbf{Y}(1) 
+  }
+  \ 
+  \lesssim 
+  \ 
+  \norm{\delta}
+  N
+  \to
+  0
+  \qquad
+  \text{for}\ 
+  N\to \infty
+  \,.
+  \end{align*}
+  \subsubsection*{Analysis of $R_2$}
+This calculation will be central to the asymptotic normality.
+\begin{align*}
+  &
+  \P[R_2\ge \varepsilon]
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \varepsilon^{-1}
+  \frac{1}{N}\sum_{i=1}^{N} 
+  \E
+  \left[ 
+\left| 
+    \left( T_i\cdot w_i -1 \right)
+    \left( 
+    \E[Y(1)| X_i]
+    -
+    \inner
+    {B(X_i)}
+    { \mathbf{Y}(1) }
+    \right)
+\right|
+  \right]
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \varepsilon^{-1}
+  \E
+  \left[ 
+\left| 
+    w(X) - 1/\pi(X)
+\right|
+^2
+  \right]
+  ^{1/2}
+  \E
+  \left[ 
+\left| 
+    \E[Y(1)| X_i]
+    -
+    \inner
+    {B(X_i)}
+    { \mathbf{Y}(1) }
+\right|
+^2
+  \right]
+  ^{1/2}
+  \ 
+  \to
+  \ 
+  0
+  \\
+  &
+\end{align*}
+for $N\to\infty$. 
+Notice that the rates multiply. This is important for later.
+\subsection*{Analysis of $R_3$}
+By Theorem?
+it holds
+\begin{gather*}
+  \P[R_3\ge \varepsilon]\le
+  \frac{\E[\left| w(X) - 1/\pi(X)\right|^2]^{1/2}}{\varepsilon}
+  \ 
+  \to
+  0
+  \qquad
+  \text{for}\ 
+  N
+  \to
+  \infty
+  \,.
+\end{gather*}
+\subsection*{Analysis of $R_4$}
+\end{proof}
+
 
