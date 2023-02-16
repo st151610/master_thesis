@@ -17,3 +17,351 @@
   $\varepsilon_n$ is the square root of the basis function Learning rate and $C_\tau$ depends on the Concentration Inequality.
   We need bernstein confidence $\sqrt{\log (1/\tau)}$ to preserve minimal Learning rate for $d=1$.
 \end{theorem}
+
+
+\begin{theorem}
+  \emph{(Bernstein's inequality)}
+  Let
+  $
+  (\Omega,\mathcal{A},\P)
+  $ 
+  be a probability space, 
+  $
+  B>0
+  $ 
+  and
+  $
+  \sigma>0
+  $
+  be real numbers,
+  and
+  $
+  n\ge 1
+  $
+  be an integer.
+  Furthermore, 
+  let
+  $
+  X_1,\ldots,X_n
+  :
+  \Omega
+  \to
+  \R
+  $
+  be independent random variables satisfying
+  $
+  \E[X_i]=0
+  $,
+  $
+  \norm{X_i}_\infty
+  \le
+  B
+  $
+  and
+  $
+  \E[X_i^2]\le \sigma^2
+  $
+  for all 
+  $
+  i=1,\ldots,n
+  $.
+  Then we have
+  \begin{gather*}
+   \P
+    \left[ 
+      \,
+      \left| 
+      \frac{1}{n}
+        \sum_{i=1}^{n} 
+        X_i
+      \right|
+      \ 
+      \le
+      \ 
+      \sqrt{
+        \,
+        \frac{2\,\sigma^2 \log (e/\tau)}{n}
+        \,
+      }
+      \ 
+      +
+      \
+      \frac{2 B \log(e/\tau)}{3n}
+      \,
+    \right]
+    \ 
+    \ge
+    \ 
+    1-\tau
+    \qquad
+    \text{for all}\ 
+    \tau
+    >
+    0
+    \,.
+  \end{gather*}
+\end{theorem}
+\begin{proof}
+  See \cite[Theorem~6.12]{Steinwart2008}
+  for the one-sided version. 
+  The two-sided version, as stated in the above theorem, is an easy consequence. We omit the details.
+\end{proof}
+
+We analyze
+$
+1-T_i/\pi_i
+$.
+It holds
+$\E[
+1-T_i/\pi_i
+]=0$.
+Furthermore,
+\begin{gather}
+  \left| 
+1
+-
+\frac{T_i}{\pi_i}
+  \right|
+  \ 
+\le
+  \ 
+1
+\land
+\frac{1-\pi_i}{\pi_i}
+  \ 
+\le
+  \ 
+1
++
+\frac{1-\pi_i}{\pi_i}
+  \ 
+=
+  \ 
+\frac{1}{\pi_i}
+  \ 
+\le
+  \ 
+\frac{1}{C_\pi}
+\qquad
+\text{almost surely.}
+\end{gather}
+Also
+\begin{gather}
+  \E
+  \left[ 
+  \left| 
+1
+-
+\frac{T_i}{\pi_i}
+  \right|
+  ^2
+  \right]
+\ 
+=
+\ 
+1
+-
+2
+\E
+\left[ 
+\frac{T_i}{\pi_i}
+\right]
++
+\E
+\left[ 
+\frac{T_i}{\pi_i^2}
+\right]
+\ 
+=
+\ 
+\E
+\left[ 
+\frac{1}{\pi_i}
+\right]
+-1
+\ 
+\le
+\ 
+\frac{1}{C_\pi}
+\,.
+\end{gather}
+Thus, by Bernstein's inequality, it holds
+\begin{gather}
+   \P
+    \left[ 
+      \,
+      \left| 
+      \frac{1}{n}
+        \sum_{i=1}^{n} 
+1
+-
+\frac{T_i}{\pi_i}
+      \right|
+      \ 
+      \lesssim
+      \ 
+      \sqrt{
+        \frac{
+        \log (e/\tau)}
+      {N}
+      }
+    \right]
+    \ 
+    \ge
+    \ 
+    1-\tau
+    \qquad
+    \text{for all}\ 
+    \tau
+    >
+    0
+    \,.
+\end{gather}
+
+Next, we analyze 
+\begin{gather}
+  \sum_{k=1}^{N} 
+  B_k(X_i)\cdot
+  f^{'}\left( \frac{1}{\pi_k} \right)
+  -
+  f^{'}\left( \frac{1}{\pi_i} \right)
+  -
+  \E[\cdots]
+  \,.
+\end{gather}
+To this end,
+\begin{align*}
+  &
+  \left| 
+  \sum_{k=1}^{N} 
+  B_k(X_i)\cdot
+  f^{'}\left( \frac{1}{\pi_k} \right)
+  -
+  f^{'}\left( \frac{1}{\pi_i} \right)
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \left| 
+  \sum_{k=1}^{N} 
+  B_k(X_i)\cdot
+  \left( 
+  f^{'}\left( \frac{1}{\pi_k} \right)
+  -
+  f^{'}\left( \frac{1}{\pi_i} \right)
+  \right)
+  \right|
+  \ 
+  \le
+  \ 
+  \sum_{k=1}^{N} 
+  B_k(X_i)\cdot
+  \left| 
+  f^{'}\left( \frac{1}{\pi_k} \right)
+  -
+  f^{'}\left( \frac{1}{\pi_i} \right)
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+  2
+  f^{'}\left( \frac{1}{C_\pi} \right)
+  \,.
+\end{align*}
+Also
+\begin{align*}
+  &
+  \E
+  \left[ 
+  \left| 
+  \sum_{k=1}^{N} 
+  B_k(X_i)\cdot
+  f^{'}\left( \frac{1}{\pi_k} \right)
+  -
+  f^{'}\left( \frac{1}{\pi_i} \right)
+  -
+  \E[\cdots]
+  \right|^2
+\right]^{1/2}
+\\
+  &
+  \ 
+\le
+  \ 
+  \E
+  \left[ 
+  \left| 
+  \sum_{k=1}^{N} 
+  B_k(X_i)\cdot
+  f^{'}\left( \frac{1}{\pi_k} \right)
+  -
+  f^{'}\left( \frac{1}{\pi_i} \right)
+  \right|^2
+\right]^{1/2}
+  \ 
++
+  \ 
+\left| 
+\E
+\left[ 
+  \sum_{k=1}^{N} 
+  B_k(X_i)\cdot
+  f^{'}\left( \frac{1}{\pi_k} \right)
+  -
+  f^{'}\left( \frac{1}{\pi_i} \right)
+\right]
+\right|
+\\
+  &
+  \ 
+\lesssim
+  \ 
+N^{-1/(d+2)}
+  \ 
++
+  \ 
+  2
+  f^{'}\left( \frac{1}{C_\pi} \right)
+  \,.
+\end{align*}
+Thus, by Bernstein's inequality, it holds
+\begin{gather}
+   \P
+    \left[ 
+      \,
+      \left| 
+      \frac{1}{N}
+  \sum_{i,k=1}^{N} 
+  B_k(X_i)\cdot
+  f^{'}\left( \frac{1}{\pi_k} \right)
+  -
+  f^{'}\left( \frac{1}{\pi_i} \right)
+  -
+  \E[\cdots]
+      \right|
+      \ 
+      \lesssim
+      \ 
+      \sqrt{
+        \frac{
+        \log (e/\tau)}
+      {N}
+      }
+    \right]
+    \ 
+    \ge
+    \ 
+    1-\tau
+    \qquad
+    \text{for all}\ 
+    \tau
+    >
+    0
+    \,.
+\end{gather}
+
+
