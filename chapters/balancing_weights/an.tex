@@ -287,45 +287,91 @@ Also note that
     \right)
 \end{gather*}
 \end{proof}
+Let 
+\begin{gather}
+  B_{\mathcal{F}}
+  :=
+  \left\{ 
+    f\in \mathcal{F}
+    \colon
+    \norm{f}_\infty
+    \le
+    1
+  \right\}
+\end{gather}
+be the intersection of the unit ball with $\mathcal{F}$.
 \begin{lemma}
-  Under conditions it holds
-  for all $\varepsilon>0$
+  Let $(\varepsilon_N)$ be a sequence converging to 0
+  and let 
+  $
+  \left( 
+    \mathcal{F}_N
+  \right)
+    :=
+    \left( 
+    \varepsilon_N\cdot B_\mathcal{F}
+    \right)
+  $
+  denote the sequence of scaled unit balls in $\mathcal{F}$.
+  Assume that 
+  there exists
+  $k<2$ such that 
+  the covering number of the unit ball in $\mathcal{F}$
+  satisfies
   \begin{gather}
-    \P
-    \left[ 
-      \norm{G_N}^*_{\mathcal{F}_N}\ge \varepsilon
-    \right]
+        \log 
+      N_{[\,]}
+\left( \varepsilon, B_\mathcal{F},\mathrm{L}_2(\P) \right)
+\ 
+\le
+\ 
+\left( \frac{1}{\varepsilon} \right)^k
+\qquad
+\text{for all}\ 
+\varepsilon>0
+\,.
+  \end{gather}
+  Then it holds
+  $
+      \norm{G_N}^*_{\mathcal{F}_N}
     \ 
-    \to 
+    \overset{\P}
+    {\to}
     \ 
     0
-    \qquad
-    \text{for}\ 
-    N\to\infty
-    \,.
-  \end{gather}
+  $
+  for $N\to \infty$. 
 \end{lemma}
 \begin{proof}
   By maximal inequalities it holds
-  \begin{gather}
+  \begin{align*}
     \E^*
     \left[ 
       \norm{G_N}_{\mathcal{F}_N}
     \right]
+    &
       \ 
       \lesssim
       \ 
       J_{[\,]}\left( \varepsilon_N, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
       \\
+    &
+      \ 
       =
+      \ 
       \int_0^{\varepsilon_N}
-      \sqrt{\log 
+      \sqrt{
+        \log 
       N_{[\,]}
 \left( \varepsilon, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
     }
     \,
     d\varepsilon
+    \\
+    &
+    \ 
     =
+    \ 
       \int_0^{\varepsilon_N}
       \sqrt{\log 
       N_{[\,]}
@@ -334,7 +380,10 @@ Also note that
     \,
     d\varepsilon
     \\
+    &
+    \ 
     \le
+    \ 
       \int_0^{\varepsilon_N}
       \left( 
       \frac{\varepsilon_N}{\varepsilon}
@@ -342,32 +391,168 @@ Also note that
     \,
     d\varepsilon
     \\
+    &
+    \ 
     \lesssim
+    \ 
   \varepsilon_N^{k/2}
   \frac{1}{1-k/2}
   \varepsilon_N^{1-k/2}
+  \\
+    &
+    \ 
   \lesssim
+    \ 
   \varepsilon_N
+  \\
+    &
+    \ 
   \to
+  \ 
   0
   \qquad
   \text{for}\ 
   N\to
   \infty
   \,.
-  \end{gather}
+  \end{align*}
   Note, that $k<2$.
   By the boundedness of $\E^*$ there is no measurability problem.
   By Markov's Inequality it holds
-  \begin{align}
+  \begin{align*}
     \P
     \left[ 
       \norm{G_N}^*_{\mathcal{F}_N}\ge \varepsilon
     \right]
     \le
+    \varepsilon^{-1}
+    \,
     \E^*
     \left[ 
       \norm{G_N}_{\mathcal{F}_N}
     \right]
-  \end{align}
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}\ 
+    N\to\infty
+    \,.
+  \end{align*}
 \end{proof}
+We define $f^\dagger$ by
+\begin{gather}
+  f^\dagger(T,X,Y)
+  :=
+  T
+  \left( 
+    (f^{'})^{-1}
+    \left( 
+      \inner
+      {B(X)}
+      {\lambda^\dagger}
+    +
+    \lambda_0^\dagger
+    \right)
+    -
+    \frac{1}{\pi(X)}
+  \right)
+  \left( 
+    Y(T)
+    -
+    \E
+    [
+    Y(1)|X
+    ]
+  \right)
+\end{gather}
+\begin{lemma}
+  Assume that 
+  $f^\dagger \in \mathcal{F}$ almost surely 
+  for some function class $\mathcal{F}$ satisfying the requirements 
+  of the previous lemma. It then holds
+  $
+  \left| G_Nf^\dagger \right|
+  \overset{\P}{\to}0$ for 
+  $N\to\infty$.
+\end{lemma}
+\begin{proof}
+  Let $(\varepsilon_N)$ be the lr of the primal
+  then
+  \begin{gather}
+    \P
+    \left[ 
+      f^\dagger
+      \in
+      \mathcal{F}_N
+    \right]
+    \to 1
+    \qquad
+    \text{for}\ 
+    N\to\infty
+    \,.
+  \end{gather}
+  For all $\varepsilon>0$ it holds
+  \begin{align*}
+    \P
+    \left[ 
+  \left| G_Nf^\dagger \right|
+  \le
+  \varepsilon
+    \right]
+    &
+    \ 
+    \ge
+    \ 
+    \P
+    \left[ 
+  \left| G_Nf^\dagger \right|
+  \le
+  \norm{G_N}^*_{\mathcal{F}_N}
+  \le
+  \varepsilon
+    \right]
+    \\
+    &
+    \ 
+    \ge
+    \ 
+    \P
+    \left[ 
+      f^\dagger\in\mathcal{F}_N
+      \ 
+      \text{and}\ 
+  \norm{G_N}^*_{\mathcal{F}_N}
+  \le
+  \varepsilon
+    \right]
+    \\
+    &
+    \ 
+    \ge
+    \ 
+    \P
+    \left[ 
+      f^\dagger\in\mathcal{F}_N
+    \right]
+    -
+    \P
+    \left[ 
+  \norm{G_N}^*_{\mathcal{F}_N}
+    \ 
+  \ge
+    \ 
+  \varepsilon
+    \right]
+    \\
+    &
+    \ 
+    \to
+    \ 
+    1
+    \,.
+  \end{align*}
+  The last step is due to Lemma.
+\end{proof}
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  16 FEB 2023 13:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  16 FEB 2023 16:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -901,44 +901,47 @@ Overfull \hbox (6.02411pt too wide) detected at line 1321
 
 ]
 chapter 3.
-(./chapters/balancing_weights/an_intro.tex) (./chapters/balancing_weights/an_dual.tex) (./chapters/balancing_weights/an_primal.tex [21]) (./chapters/balancing_weights/an.tex [22]) (./chapters/balancing_weights/gaussian_bridge.tex [23]) (./chapters/balancing_weights/plug_in_est.tex) (./chapters/balancing_weights/double_robustness.tex [24] [25]
+(./chapters/balancing_weights/an_intro.tex) (./chapters/balancing_weights/an_dual.tex) (./chapters/balancing_weights/an_primal.tex [21]) (./chapters/balancing_weights/an.tex [22]
+Underfull \vbox (badness 1460) has occurred while \output is active []
+
+ [23]) (./chapters/balancing_weights/gaussian_bridge.tex [24]) (./chapters/balancing_weights/plug_in_est.tex) (./chapters/balancing_weights/double_robustness.tex [25] [26]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 368.
- [26]
+ [27]
 Overfull \hbox (51.54774pt too wide) in paragraph at lines 437--467
 \OML/cmm/m/it/10.95 C[] \OMS/cmsy/m/n/10.95 ^^U \OT1/cmr/m/n/10.95 1$ \OT1/cmr/m/it/10.95 such that for all $\OML/cmm/m/it/10.95 ^^\ \OMS/cmsy/m/n/10.95 2 \OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1]$ \OT1/cmr/m/it/10.95 and all $\OML/cmm/m/it/10.95 n \OMS/cmsy/m/n/10.95 2 \U/msb/m/n/10.95 N$ \OT1/cmr/m/it/10.95 it holds $\OT1/cmr/bx/n/10.95 P [] \OMS/cmsy/m/n/10.95 ^^U
  []
 
-[27] [28] [29]) [30]
+[28] [29] [30]) [31] [32
+
+
+]
 chapter 4.
 (./chapters/convex_analysis/cvxa_primer.tex
 Underfull \vbox (badness 1377) has occurred while \output is active []
 
- [31
-
-
-] [32]
+ [33] [34]
 Package mdframed Info: mdframed works in twoside mode on input line 491.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 491.
- [33] [34]) (./chapters/convex_analysis/conjugate_calculus.tex
+ [35] [36]) (./chapters/convex_analysis/conjugate_calculus.tex
 
-LaTeX Warning: Reference ` def_convex_conjugate ' on page 35 undefined on input line 28.
+LaTeX Warning: Reference ` def_convex_conjugate ' on page 37 undefined on input line 28.
 
-[35] [36]) [37] (./chapters/convex_analysis/ts_3.tex
+[37] [38]) [39] (./chapters/convex_analysis/ts_3.tex
 Package mdframed Info: mdframed works in twoside mode on input line 13.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 13.
- [38] [39] [40]
+ [40] [41] [42]
 Overfull \hbox (33.23724pt too wide) in paragraph at lines 748--780
 \OT1/cmr/m/n/10.95 Thus $\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/bx/n/10.95 U[] \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 @ [] \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 )$. In the same way it fol-lows $\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/bx/n/10.95 A[] \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 @ [] \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 )$.
  []
 
-) (./main.bbl [41] [42
+) (./main.bbl [43] [44
 
 
-] [43]) [44] (./main.aux)
+] [45]) [46] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -949,18 +952,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27298 strings out of 478238
- 526588 string characters out of 5850455
+ 27299 strings out of 478238
+ 526581 string characters out of 5850455
  1028225 words of memory out of 5000000
  44765 multiletter control sequences out of 15000+600000
  482868 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,106p,10616b,973s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (46 pages, 464518 bytes).
+Output written on main.pdf (48 pages, 467313 bytes).
 PDF statistics:
- 748 PDF objects out of 1000 (max. 8388607)
- 650 compressed objects within 7 object streams
- 266 named destinations out of 1000 (max. 500000)
+ 755 PDF objects out of 1000 (max. 8388607)
+ 655 compressed objects within 7 object streams
+ 267 named destinations out of 1000 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1676549945 "main.aux" "main.bbl" "main" 1676550114
+["bibtex main"] 1676561444 "main.aux" "main.bbl" "main" 1676561582
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1675145952 63641 67dfbb1413ba2c5bfc9e5c5a8c28f4bc ""
-  "main.aux" 1676550113 12275 023bb0716d77d152268f8120035ff802 "pdflatex"
+  "main.aux" 1676561581 12275 61776c9f88d15b9b432bda0e5af710e4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1676550110 "main.tex" "main.pdf" "main" 1676550114
+["pdflatex"] 1676561578 "main.tex" "main.pdf" "main" 1676561582
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -215,7 +215,7 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1668447558 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1668447517 2927666 1f051fb934722d94e995cdec3e18511c ""
-  "chapters/balancing_weights/an.tex" 1676550110 4773 74738e55ca012d423801496e8853dd35 ""
+  "chapters/balancing_weights/an.tex" 1676561578 7274 67f6745504030419e1e56dc69364dda7 ""
   "chapters/balancing_weights/an_dual.tex" 1676131524 469 443ba5c4f9c1bed8248608c3483227cb ""
   "chapters/balancing_weights/an_intro.tex" 1676138241 342 46847f111922abccff594382e0f3a210 ""
   "chapters/balancing_weights/an_primal.tex" 1676131270 1965 a6d068b061ce1f8c10ccdd4cd8a91ad6 ""
@@ -228,12 +228,12 @@
   "chapters/convex_analysis/cvxa_primer.tex" 1675958481 14982 4d471b10dee65146e1519f677fda2a72 ""
   "chapters/convex_analysis/ts_3.tex" 1676105486 12376 028e4f5924126e68ca4274a519028b86 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1676550113 12275 023bb0716d77d152268f8120035ff802 "pdflatex"
-  "main.bbl" 1676549945 2897 fbed745d7772584c7956aac70feca618 "bibtex main"
+  "main.aux" 1676561581 12275 61776c9f88d15b9b432bda0e5af710e4 "pdflatex"
+  "main.bbl" 1676561444 2897 fbed745d7772584c7956aac70feca618 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
-  "main.tdo" 1676550113 1379 7eabe49cfa34686a10c5ae01e34d29b9 "pdflatex"
+  "main.tdo" 1676561581 1379 474e2c9776b2e660dbe3e208dd0547fb "pdflatex"
   "main.tex" 1676530738 9595 bcd1c1444366852bbea116d59b20de6b ""
-  "main.toc" 1676550113 916 aa1c02519beea4835d62880ec06ebddb "pdflatex"
+  "main.toc" 1676561581 916 f26af0bddd1b6c62d52688bc01170edd "pdflatex"
   (generated)
   "main.aux"
   "main.log"
