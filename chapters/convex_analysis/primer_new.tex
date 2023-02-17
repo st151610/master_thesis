@@ -358,8 +358,11 @@ f
 \to
 \overline{\R}
 $
-is called \textbf{convex function}, if the set above its graph, that is, its epigraph(cf.), is convex. We shall often use an equivalent definition. To this end, a function $f$ is convex if and only if 
+is called \textbf{convex function}, if the area above its graph, that is, its epigraph(cf.\cite[§2.4.1]{Mordukhovich2022}), is convex. We shall often use an equivalent definition.
+To this end, 
+a function $f$ is convex if and only if 
 \begin{gather}
+  \label{cv:cf}
   f(\theta x + (1-\theta)y)
   \ 
   \le
@@ -375,6 +378,38 @@ is called \textbf{convex function}, if the set above its graph, that is, its epi
   \theta\in[0,1]
   \,.
 \end{gather}
+This definition extends to convex cominbinations
+$
+  \theta_1,\ldots,\theta_m\in[0,1]
+$
+with
+$
+  \sum_{i=1}^{m} 
+  \theta_i
+  =1
+$, that is, 
+a function $f$ is convex if and only if 
+\begin{gather}
+  f
+  \left( 
+    \sum_{i=1}^{m} 
+    \theta_i
+    x_i
+  \right)
+  \ 
+  \le
+  \ 
+    \sum_{i=1}^{m} 
+    \theta_i
+    f(x_i)
+  \qquad
+  \text{for all}\ 
+  x_1,\ldots,x_m\in \R^n
+  \,.
+\end{gather}
+We call a function \textbf{strictly convex} if the inequality in
+\eqref{cv:cf} is strict.
+
 We define the \textbf{domain} $\mathrm{dom}\,f$
 of a convex function $f$ to be the set where $f$ is finite, that is,
 \begin{gather}
@@ -389,6 +424,84 @@ f(x)<\infty
   \right\}
   \,.
 \end{gather}
+The domain of a convex function is convex. 
+We say that $f$ is a \textbf{proper function} if  $\mathrm{dom}\,f\neq\emptyset$. 
+
+For any $\overline{x}\in\mathrm{dom}\,f$ we call $x^*\in\R^n$ a 
+\textbf{subgradient} of $f$ at $\overline{x}$ if for all 
+$x\in\R^n$ it holds
+\begin{gather}
+  \inner{x^*}{x-\overline{x}}
+  \le
+  f(x)
+  -
+  f(\overline{x})
+  \,.
+\end{gather}
+We denote the collection of all subgradients at $\overline{x}$, that is, the \textbf{subdifferential} of $f$ at $\overline{x}$, as
+$
+\partial f(\overline{x})
+$.
+If $f$ is differentiable at $\overline{x}$ it holds
+$
+\partial f(\overline{x})
+=
+\left\{ 
+  \nabla
+  f(\overline{x})
+\right\}
+$
+and thus
+\begin{gather}
+  \inner{
+  \nabla
+  f(\overline{x})
+}{x-\overline{x}}
+  \le
+  f(x)
+  -
+  f(\overline{x})
+  \,.
+\end{gather}
+We call a differentiable function $f$ \textbf{strongly convex} with parameter
+$m>0$ if for all
+$x,y\in\mathrm{dom}\,f$ it holds
+\begin{gather}
+  f(y)-f(x)
+  \ 
+  \ge
+  \ 
+  \inner
+  {
+  \nabla
+  f(x)
+  }
+  {y-x}
+  \ 
+  +
+  \ 
+  \frac{m}{2}
+  \norm{y-x}^2
+  \,.
+\end{gather}
+If $f$ is twice continuously differentiable, then it is strongly 
+convex with parameter $m>0$ if and only if the matrix
+\begin{gather}
+\nabla^2f(x)
+-m\cdot\mathbf{I}
+\qquad
+\text{
+is positive semi-definite for all
+}\ 
+x\in\mathrm{dom}\,f
+\,,
+\end{gather}
+ where 
+$
+\nabla^2f
+$
+is the Hessian Matrix.
+
 One important application of convex functions is in optimization.
 There we often analyse a dual problem instead, which relies on the notion of \textbf{convex conjugate} 
 $
