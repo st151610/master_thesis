@@ -349,5 +349,61 @@ Let
   $
   and equality.
 \end{proof}
- 
 \subsection*{Functions}
+A function 
+$
+f
+\colon
+\R^n
+\to
+\overline{\R}
+$
+is called \textbf{convex function}, if the set above its graph, that is, its epigraph(cf.), is convex. We shall often use an equivalent definition. To this end, a function $f$ is convex if and only if 
+\begin{gather}
+  f(\theta x + (1-\theta)y)
+  \ 
+  \le
+  \ 
+  \theta f(x)
+  +
+  (1-\theta)f(y)
+  \qquad
+  \text{for all}\ 
+  x,y\in \R^n
+  \ 
+  \text{and all}\ 
+  \theta\in[0,1]
+  \,.
+\end{gather}
+We define the \textbf{domain} $\mathrm{dom}\,f$
+of a convex function $f$ to be the set where $f$ is finite, that is,
+\begin{gather}
+  \mathrm{dom}\,f
+  \ 
+  :=
+  \ 
+  \left\{ 
+x\in\R^n
+:
+f(x)<\infty
+  \right\}
+  \,.
+\end{gather}
+One important application of convex functions is in optimization.
+There we often analyse a dual problem instead, which relies on the notion of \textbf{convex conjugate} 
+$
+    f^*:
+    \R^n \to \overline{\R}
+  $
+  of $f$ defined by
+  \begin{gather}
+    f^*(x^*)
+    :=
+    \sup_{ x \in \R^n }
+    \inner
+    {x^*}{x}
+    - f(x)
+    \,.
+  \end{gather}
+  Even for arbitrary functions, the convex conjugate is convex(cf.).
+  Like in differential calculus, there exist sum and chain rule for computing the convex conjugate.
