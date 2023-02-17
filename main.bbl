@@ -6,17 +6,6 @@ L{\'a}szl{\'o} Gy{\"o}rfi, Michael Kohler, Adam Krzy{\.z}ak, and Harro Walk.
 \newblock Springer {{Series}} in {{Statistics}}. {Springer}, {New York, NY},
   2002.
 
-\bibitem[Hah98]{Hahn1998}
-Jinyong Hahn.
-\newblock On the {{Role}} of the {{Propensity Score}} in {{Efficient
-  Semiparametric Estimation}} of {{Average Treatment Effects}}.
-\newblock {\em Econometrica}, 66(2):315, March 1998.
-
-\bibitem[Kle20]{Klenke2020}
-Achim Klenke.
-\newblock {\em Probability {{Theory}}: {{A Comprehensive Course}}}.
-\newblock Universitext. {Springer International Publishing}, {Cham}, 2020.
-
 \bibitem[MMN22]{Mordukhovich2022}
 Boris~S. Mordukhovich and Nguyen Mau~Nam.
 \newblock {\em Convex {{Analysis}} and {{Beyond}}: {{Volume I}}: {{Basic
@@ -28,11 +17,6 @@ Boris~S. Mordukhovich and Nguyen Mau~Nam.
 Whitney~K. Newey.
 \newblock Convergence rates and asymptotic normality for series estimators.
 \newblock {\em Journal of Econometrics}, 79(1):147--168, July 1997.
-
-\bibitem[Pea09]{pearl2009causality}
-J.~Pearl.
-\newblock {\em Causality}.
-\newblock {Cambridge University Press}, 2009.
 
 \bibitem[Roc70]{Rockafellar1970}
 R.~Tyrrell Rockafellar.
@@ -61,20 +45,10 @@ Aad van~der {vaart} and Jon Wellner.
   Applications}} to {{Statistics}}}.
 \newblock {Springer Science \& Business Media}, March 2013.
 
-\bibitem[Wag82]{Wagner1982}
-Clifford~H. Wagner.
-\newblock Simpson's {{Paradox}} in {{Real Life}}.
-\newblock {\em The American Statistician}, 36(1):46--48, 1982.
-
 \bibitem[WZ19]{Wang2019}
 Yixin Wang and Jos{\'e}~R. Zubizarreta.
 \newblock Minimal {{Dispersion Approximately Balancing Weights}}: {{Asymptotic
   Properties}} and {{Practical Considerations}}.
 \newblock {\em Biometrika}, page asz050, October 2019.
-
-\bibitem[ZP17]{Zhao2017a}
-Qingyuan Zhao and Daniel Percival.
-\newblock Entropy balancing is doubly robust.
-\newblock {\em Journal of Causal Inference}, 5(1):20160010, September 2017.
 
 \end{thebibliography}

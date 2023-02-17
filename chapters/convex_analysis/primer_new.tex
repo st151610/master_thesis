@@ -1,0 +1,353 @@
+Throughout this section let $n\in\mathbb{N}$.
+\subsection*{Sets}
+A subset $C\subseteq \R^n$ is called \textbf{convex set}, 
+if for all $x,y\in C$ and all $\theta\in [0,1]$,
+we have 
+$
+  \theta x + (1-\theta)y 
+  \in
+  C
+$.
+Many set operations preserve convexity. Among them
+forming the 
+\textbf{Cartesian product} of two convex sets, 
+\textbf{intersection} of a collection of convex sets and 
+taking the \textbf{inverse image under linear functions}.
+
+The classical theory evolves around the question 
+if convex sets can be separated.
+\begin{definition*}
+  Let 
+  $C_1$ and $C_2$
+  be two non-empty convex sets in $\R^n$. 
+  A hyperplane $H$ is said to \textbf{separate}
+  $C_1$ and $C_2$
+  if $C_1$ is contained in one of the closed half-spaces associated with
+  $H$ and $C_2$ lies in the opposite closed half-space. It is said to separate 
+  $C_1$ and $C_2$
+  \textbf{properly} if 
+  $C_1$ and $C_2$
+  are not both contained in $H$.
+\end{definition*}
+
+We need a refined concept of interiors, since some convex sets have empty interior. To this end, 
+  we call a set
+  $A\subseteq \R^n$ 
+  \textbf{affine set}, if
+  $
+    \alpha x + (1-\alpha)y \in A
+    \quad
+    \text{for all}
+    \ 
+    x,y \in A
+    \ 
+    \text{and}
+    \ 
+    \alpha \in \R
+  $.
+  The \textbf{affine hull} 
+  $\mathrm{aff}(\Omega)$
+  of a set 
+  $\Omega\subseteq \R^n$
+  is the smallest affine set that includes $\Omega$.
+  We define the \textbf{relative interior} $\mathrm{ri}\,\Omega$ 
+  of a set 
+  $\Omega\subseteq \R^n$
+  to be the interior relative to the affine hull, that is,
+    \begin{gather}
+    \mathrm{ri}(\Omega)
+    \ 
+    :=
+    \ 
+    \left\{ 
+      x \in \Omega 
+      \ 
+      |
+      \ 
+      \exists
+      \,
+      \varepsilon > 0\ 
+      \colon
+      (
+      x+\varepsilon B_{\R^n}
+      )
+      \cap
+      \mathrm{aff}(\Omega)
+      \ 
+      \subset
+      \ 
+      \Omega
+      \,
+    \right\}
+    \,.
+  \end{gather}
+
+\begin{ftheorem}
+  \label{cv:primer:sep}
+  \emph{(Convex separation in finite dimension)}
+  Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$. 
+  Then $C_1$ and $C_2$ can be properly separated if and only if 
+  $\mathrm{ri}(C_1)\cap\mathrm{ri}(C_2)=\emptyset.$
+\end{ftheorem}
+\begin{proof}
+  \cite[Theorem~11.3]{Rockafellar1970}
+\end{proof}
+We collect some useful 
+properties of relative interiors
+before we get on to convex functions.
+\begin{proposition}
+  \label{cv:primer:prop}
+  Let $C$ be a non-empty convex set in $\R^n.$ The following holds:
+\begin{enumerate}[label={(\roman*)}]
+  \item
+    $
+      \mathrm{ri}(C)
+      \ 
+      \neq
+      \ 
+      \emptyset
+      $
+if and only if
+      $
+      C
+      \ 
+      \neq
+      \ 
+      \emptyset
+    $
+  \item
+    $
+      \mathrm{cl}(\mathrm{ri}\,C)
+      \ 
+      =
+      \ 
+      \mathrm{cl}\,C
+      $
+      and
+      $
+      \mathrm{ri}(\mathrm{cl}\,C)
+      \ 
+      =
+      \ 
+      \mathrm{ri}(C)
+    $
+  \item
+    $
+    \mathrm{ri}(C)
+      \ 
+    =
+      \ 
+    \left\{ 
+      z \in C
+      \colon
+      \text{for all}\ 
+      x \in C \ 
+      \text{there exists}\ 
+      t > 0 \ 
+      \text{such that}\ 
+      z + t (z-x)
+      \in C
+    \right\}
+    $
+  \item
+    Suppose
+    $
+      \bigcap_{i\in I} C_i
+      \ 
+      \neq
+      \ 
+      \emptyset
+    $
+    for a finite index set $I$.
+    Then
+    $
+      \mathrm{ri}
+      \left( 
+        \bigcap_{i\in I} C_i
+      \right)
+      \ 
+      =
+      \ 
+      \bigcap_{i\in I}  
+      \mathrm{ri}(C_i)
+    $.
+    \item
+      Let 
+      $
+        L\,:\,\R^n \to\  \R^m
+      $
+      be a linear function. Then
+      $
+        \mathrm{ri}\,L(C)
+        \ 
+        =
+        \ 
+        L(\mathrm{ri}\,C)
+      $.
+      If it also holds
+      $
+        L^{\!-1}(\mathrm{ri}\,C)
+        \ 
+        \neq
+        \ 
+        \emptyset
+      $,
+      we have
+      $
+      \mathrm{ri}\,L^{\!-1}(C)
+      \ 
+        =
+      \ 
+        L^{\!-1}(\mathrm{ri}\,C)
+      $.
+      \item
+        $
+          \mathrm{ri}(C_1\!\times C_2)
+          \ 
+          = 
+          \ 
+          \mathrm{ri}\,C_1
+          \! 
+          \times
+          \mathrm{ri}\,C_2
+        $
+\end{enumerate}
+
+\end{proposition}
+
+
+\begin{proof}
+  For a proof of (i)-(v) we refer to~\cite[Theorem 6.2 - 6.7]{Rockafellar1970}.
+
+To prove (vi) we use (iii).
+Let
+  $
+  (z_1, z_2)
+  \in 
+  \mathrm{ri}(C_1\!\times C_2).
+  $
+  Then for all 
+  $
+  (x_1, x_2)
+  \in 
+  C_1\!\times C_2
+  $
+  there exists
+  $t>0$
+  such that
+  \begin{gather}
+    \label{cv:primer:prop:1}
+      z_i + t (z_i-x_i)
+      \in C_i
+      \qquad
+      \text{for all}\ 
+      i\in \left\{ 1,2 \right\}.
+  \end{gather}
+  Using (iii) again, we get
+  $
+  \mathrm{ri}(C_1\!\times C_2)
+  \, 
+  \subseteq
+  \,
+          \mathrm{ri}\,C_1
+          \! 
+          \times
+          \mathrm{ri}\,C_2
+  $.
+  Suppose 
+  $
+  (z_1,z_2)
+    \in
+    \mathrm{ri}\,C_1
+    \!
+    \times
+    \mathrm{ri}\,C_2
+  $.
+  By (iii), for all
+  $
+    (x_1,x_2)\in C_1\times C_2
+  $
+  there exist
+  $
+    (t_1,t_2)>0
+  $
+  such that
+  \begin{gather}
+    \label{cv:primer:prop:2}
+      z_i + t_i (z_i-x_i)
+      \in C_i
+      \qquad
+      \text{for all}\ 
+      i\in \left\{ 1,2 \right\}.
+  \end{gather}
+  If $t_1=t_2$
+  we recover
+  \eqref{cv:primer:prop:1}
+  from
+  \eqref{cv:primer:prop:2}.
+  By (iii) it holds
+  $
+  (z_1,z_2)
+    \in
+    \mathrm{ri}
+    (C_1
+    \!
+    \times
+    C_2)
+  $.
+  If
+  $t_1<t_2$
+  we
+  define $\theta:=\frac{t_1}{t_2}\in (0,1).$
+  Consider  
+  \eqref{cv:primer:prop:2} with $i=2$,
+  together with $z_2 \in C_2$
+  and
+  the convexity of $C_2$.
+  It follows
+  \begin{gather}
+    \label{cv:primer:prop:3}
+    z_2 + t_1 (z_2 - x_2)
+    \ 
+    =
+    \ 
+    \theta
+    \cdot
+    (
+    z_2 + t_2 (z_2 - x_2)
+    )
+    \ 
+    +
+    \ 
+    (1-\theta)
+    \cdot
+    z_2
+    \in C_2
+    \,.
+  \end{gather}
+  Now we consider
+  \eqref{cv:primer:prop:3} and
+  \eqref{cv:primer:prop:2} with $i=1$.
+  This gives \eqref{cv:primer:prop:1} with $t=t_1$.
+  As before, it follows
+  $
+  (z_1,z_2)\in\mathrm{ri}(C_1\!\times C_2)
+  $.
+  If 
+  $t_1>t_2$
+  similar arguments lead to the same result.
+  We have proven 
+  $
+  \mathrm{ri}(C_1\!\times C_2)
+  \, 
+  \supseteq
+  \,
+          \mathrm{ri}\,C_1
+          \! 
+          \times
+          \mathrm{ri}\,C_2
+  $
+  and equality.
+\end{proof}
+ 
+\subsection*{Functions}
