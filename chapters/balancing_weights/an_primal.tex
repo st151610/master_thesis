@@ -112,16 +112,16 @@
    \mathrm{diam}\,\Theta
   \end{align}
 Note that the Markov confidence $1/\sqrt{\tau}$ is insufficient. 
-We need the Bernstein confidence $\sqrt{\log(1/\tau)}$. 
 With Bernstein confidence, bounded diameter and $\tau=n^{-2/(d+2)}$
 we get
 \begin{gather}
   I_1
-  \le
-  C
+  \lesssim
+  \log(N)
+  \ 
   \cdot
-  \sqrt{\log(n)}
-  n^{-1/(2+d)}
+  \ 
+  N^{-1/(2+d)}
 \end{gather}
 Thus
 \begin{gather}
@@ -135,10 +135,13 @@ Thus
     ^2
     ]
     ^{1/2}
-    \le
-    C
-    \cdot
-  \sqrt{\log(n)}
-  n^{-1/(2+d)}
+    \ 
+  \lesssim
+    \ 
+  \log(N)
+  \ 
+  \cdot
+  \ 
+  N^{-1/(2+d)}
 \end{gather}
 \end{proof}

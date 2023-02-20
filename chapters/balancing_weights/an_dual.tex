@@ -18,6 +18,10 @@
   We need bernstein confidence $\sqrt{\log (1/\tau)}$ to preserve minimal Learning rate for $d=1$.
 \end{theorem}
 
+\subsection*{Plan of Proof}
+The path is similar to that of the previous chapter. 
+We will use strong convexity to obtain a quadratic term.
+This gives us the flexibility to obtain learning rates.
 
 \begin{theorem}
   \emph{(Bernstein's inequality)}
@@ -107,6 +111,119 @@
   The two-sided version, as stated in the above theorem, is an easy consequence. We omit the details.
 \end{proof}
 
+
+
+
+\subsection*{Strong Convexity}
+For simpler notation we define $B_0(x):=1$.
+The Hessian matrix of $g$ as in ??
+is
+\begin{gather}
+  \nabla^2 
+  g(\lambda_0^\dagger,\lambda^\dagger)
+  =
+  \left[ 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    \left( 
+    (
+    f^{'}
+    )
+    ^{-1}
+    \right)
+    ^{'}
+    \left( 
+      \lambda_0^\dagger
+      +
+      \inner{B(X_i)}
+      {\lambda^\dagger}
+    \right)
+    B_k(X_i)
+    \cdot
+    B_l(X_i)
+  \right]
+  _{0\le k,l\le N}
+  \,.
+\end{gather}
+Since
+$
+    \left( 
+    (
+    f^{'}
+    )
+    ^{-1}
+    \right)
+    ^{'}
+    >0
+$
+by the strict convexity of $f$, 
+$(\lambda_0^\dagger,\lambda^\dagger)\in \Theta$,
+where $\Theta$ is compact parameter space,
+and the support of $X$ is compact it holds
+
+\begin{gather}
+     \left( 
+    (
+    f^{'}
+    )
+    ^{-1}
+    \right)
+    ^{'}
+    \left( 
+      \lambda_0^\dagger
+      +
+      \inner{B(X_i)}
+      {\lambda^\dagger}
+    \right)
+    >
+    \frac{1}{C}
+    \,.
+\end{gather}
+Consider
+\begin{gather}
+  \mathbf{B}(X):=
+  \begin{bmatrix}
+    1 & B_1(X_1) & \cdots & B_N(X_1)\\
+    \vdots & \vdots & \ddots & \vdots \\
+    1 & B_1(X_n) & \cdots & B_N(X_n)
+  \end{bmatrix}
+  \in \R^{n\times (N+1)}
+\end{gather}
+
+Since $B_k(x)\ge 0$ for all $k$ it holds
+
+\begin{gather}
+  \nabla^2 
+  g(\lambda_0^\dagger,\lambda^\dagger)
+  \succcurlyeq
+  \frac{1}{C}
+  N^{-1}
+  \mathbf{B}(X)^\top
+  \mathbf{B}(X)
+  \succcurlyeq
+  \frac{\lambda_{\min}(
+  N^{-1}
+  \mathbf{B}(X)^\top
+  \mathbf{B}(X)
+  )}{C}
+  \cdot
+  \mathbf{I}
+  \succcurlyeq
+  \frac{1}
+  {
+  C \sqrt{\log(1/\tau)}
+}
+  \cdot
+  \mathbf{I}
+\end{gather}
+with probability greater than $1-\tau$.
+Thus $g$ is strongly convex with parameter 
+$
+\left(
+  C \sqrt{\log(1/\tau)}
+\right)^{-1}
+$
+with probability greater than $1-\tau$.
 We analyze
 $
 1-T_i/\pi_i
@@ -364,4 +481,87 @@ Thus, by Bernstein's inequality, it holds
     \,.
 \end{gather}
 
+Similar to the analysis of the first and second term we get
 
+\begin{align}
+      G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     \ 
+     -
+     \ 
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge
+     \norm{\Delta}
+     \left(
+     \frac{\norm{\Delta}}
+     {
+       C \sqrt{\log(1/\tau)}
+     }
+     -
+       \sqrt{
+       \frac{\log(1/\tau)}{N}
+       }
+       -
+       N^{-1/(d+2)}
+     \right)
+\end{align}
+with probability greater than $1-\tau$.
+Thus for
+\begin{gather}
+  \norm{\Delta}
+  =
+  C
+  \log(1/\tau)
+  N^{-1/(d+2)}
+\end{gather}
+it holds
+\begin{gather}
+       G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     \ 
+     -
+     \ 
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge
+0
+\end{gather}
+with probability greater than $1-\tau$.
+We conclude
+  \begin{gather}
+    \P
+    \left[ 
+      \norm{\lambda^\dagger - \lambda^*}
+    \lesssim
+  \log(1/\tau)
+  N^{-1/(d+2)}
+    \right]
+    \ 
+    \ge
+    \ 
+    1-\tau
+    \,.
+  \end{gather}

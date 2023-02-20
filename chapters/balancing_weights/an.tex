@@ -13,6 +13,21 @@
     \right)
   \end{gather}
   is Asymptoticaly normal.
+  Furthermore, the stochastic process 
+  \begin{gather}
+    \sqrt{N}
+    \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    \mathbf{1}
+    _{\left\{ Y_i\le z \right\}}
+    -
+    \P[Y(1)\le z]
+    \right)
+    _{z\in\R}
+  \end{gather}
+  converges to a Gaussian process with mean 0 and covariance ??.
 \end{theorem}
 \begin{proof}
 \begin{align*}
@@ -231,21 +246,19 @@ $\norm{\delta}$ has to converge fast enough.
     \\
   &
   \ 
-  \le
+  \lesssim
   \ 
-  C
   \sqrt{N}
-  \sqrt{\log(N)}
+  \log(N)
   N^{-1/(d+2)}
   \cdot
   N^{-1/(d+2)}
     \\
   &
   \ 
-  \le
+  \lesssim
   \ 
-  C
-  \sqrt{\log(N)}
+  \log(N)
   N^{-1/6}
   \to 0
   \qquad
@@ -554,5 +567,9 @@ We define $f^\dagger$ by
     \,.
   \end{align*}
   The last step is due to Lemma.
+
+  The convergence of the stochastic process:
+  \cite[Example~19.6]{Vaart2000}
+  Slutsky for stochastic process?
 \end{proof}
 
