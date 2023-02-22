@@ -1171,6 +1171,10 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 OUTPUT main.toc
+INPUT ./chapters/true_intro.tex
+INPUT chapters/true_intro.tex
+INPUT ./chapters/true_intro.tex
+INPUT chapters/true_intro.tex
 INPUT ./chapters/balancing_weights/intro_new.tex
 INPUT chapters/balancing_weights/intro_new.tex
 INPUT ./chapters/balancing_weights/intro_new.tex

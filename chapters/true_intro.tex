@@ -1,0 +1,28 @@
+Starting point:
+Propensitiy score analysis~\cite{Rosenbaum1983}.
+Two major branches: PS-weighting and matching.
+We study a weighting method.
+Procedure: Estimate PS, invert, weight.
+Problem: Extreme weights when PS close to 0.
+Bias when estimation model is misspecified.
+Solution: Balance some measure of dependence simultaneously, e.g.
+Covariate balancing PS~\cite{Imai2014a}.
+Other solution: Doubly robust estimators\cite{H2005}.
+They incorporate treatment and outcome model.
+Problem: bad results if either are (slightly) misspecified\cite{Kang2007}.
+A third option is obtaining weights (seamingly) unrelated to PS.
+Entropy Balancing \cite{Hainmueller2012}, ?balancing\cite{Zubizarreta2015}.
+Problem: contstraint $\delta=0$ to strict. Bad convergence.
+Solution: relax to $\delta\to 0$ for $N\to\infty$.
+Paper with mathematical analysis\cite{Wang2019}. Surprising connection
+to PS. Also doubly robust\cite{Zhao2017a}.
+This attracted my attention. 
+
+I choose different basis as in \cite{Gyorfi2002}. Does analysis work?
+Consistency? Asymptotic Normality? Beyond that?
+
+\cite{Wang2019}: Proofs are substandard. Many mistakes. Missing assumptions. Theorems have to be differently.
+
+This thesis is no erratum of\cite{Wang2019}, but can be consulted for writing one.
+
+We thank Wang and Zubi for discussions.

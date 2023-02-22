@@ -6,6 +6,31 @@ L{\'a}szl{\'o} Gy{\"o}rfi, Michael Kohler, Adam Krzy{\.z}ak, and Harro Walk.
 \newblock Springer {{Series}} in {{Statistics}}. {Springer}, {New York, NY},
   2002.
 
+\bibitem[Hai12]{Hainmueller2012}
+Jens Hainmueller.
+\newblock Entropy {{Balancing}} for {{Causal Effects}}: {{A Multivariate
+  Reweighting Method}} to {{Produce Balanced Samples}} in {{Observational
+  Studies}}.
+\newblock {\em Political Analysis}, 20(1):25--46, 2012.
+
+\bibitem[HJ05]{H2005}
+Bang H and Robins Jm.
+\newblock Doubly robust estimation in missing data and causal inference models.
+\newblock {\em Biometrics}, 61(4), December 2005.
+
+\bibitem[IR14]{Imai2014a}
+Kosuke Imai and Marc Ratkovic.
+\newblock Covariate balancing propensity score.
+\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)}, 76:243--263, 2014.
+
+\bibitem[KS07]{Kang2007}
+Joseph D.~Y. Kang and Joseph~L. Schafer.
+\newblock Demystifying {{Double Robustness}}: {{A Comparison}} of {{Alternative
+  Strategies}} for {{Estimating}} a {{Population Mean}} from {{Incomplete
+  Data}}.
+\newblock {\em Statistical Science}, 22(4):523--539, November 2007.
+
 \bibitem[MMN22]{Mordukhovich2022}
 Boris~S. Mordukhovich and Nguyen Mau~Nam.
 \newblock {\em Convex {{Analysis}} and {{Beyond}}: {{Volume I}}: {{Basic
@@ -22,6 +47,12 @@ Whitney~K. Newey.
 R.~Tyrrell Rockafellar.
 \newblock {\em Convex {{Analysis}}}.
 \newblock {Princeton University Press}, 1970.
+
+\bibitem[RR83]{Rosenbaum1983}
+Paul~R. Rosenbaum and Donald~B. Rubin.
+\newblock The {{Central Role}} of the {{Propensity Score}} in {{Observational
+  Studies}} for {{Causal Effects}}.
+\newblock {\em Biometrika}, 70(1):41--55, 1983.
 
 \bibitem[SC08]{Steinwart2008}
 Ingo Steinwart and Andreas Christmann.
@@ -50,5 +81,17 @@ Yixin Wang and Jos{\'e}~R. Zubizarreta.
 \newblock Minimal {{Dispersion Approximately Balancing Weights}}: {{Asymptotic
   Properties}} and {{Practical Considerations}}.
 \newblock {\em Biometrika}, page asz050, October 2019.
+
+\bibitem[ZP17]{Zhao2017a}
+Qingyuan Zhao and Daniel Percival.
+\newblock Entropy balancing is doubly robust.
+\newblock {\em Journal of Causal Inference}, 5(1):20160010, September 2017.
+
+\bibitem[Zub15]{Zubizarreta2015}
+Jos{\'e}~R. Zubizarreta.
+\newblock Stable {{Weights}} that {{Balance Covariates}} for {{Estimation With
+  Incomplete Outcome Data}}.
+\newblock {\em Journal of the American Statistical Association},
+  110(511):910--922, July 2015.
 
 \end{thebibliography}
