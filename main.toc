@@ -1,10 +1,11 @@
-\contentsline {chapter}{\numberline {1}True Introduction}{5}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Introduction}{7}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Consistency}{15}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Asymptotic Normality and Convergence to Gaussian Bridge}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Application to Plug In Estimators}{29}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Convex Analysis}{31}{chapter.5}%
-\contentsline {section}{\numberline {5.1}A Convex Analysis Primer}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Conjugate Calculus}{34}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Duality of Optimal Solutions}{38}{section.5.3}%
+\contentsline {chapter}{\numberline {1}Intro for all}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}True Introduction}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Introduction}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Consistency}{17}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Asymptotic Normality and Convergence to Gaussian Bridge}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Application to Plug In Estimators}{30}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Convex Analysis}{31}{chapter.6}%
+\contentsline {section}{\numberline {6.1}A Convex Analysis Primer}{31}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Conjugate Calculus}{34}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Duality of Optimal Solutions}{38}{section.6.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

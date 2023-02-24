@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1677048769 "main.aux" "main.bbl" "main" 1677048772
+["bibtex main"] 1677258109 "main.aux" "main.bbl" "main" 1677258202
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
-  "literature.bib" 1677048257 66609 eceecc832687636ff57776b2c9b675c8 ""
-  "main.aux" 1677048772 9583 b8e3c590517e8925313730e50e450331 "pdflatex"
+  "literature.bib" 1677148368 67595 3592a738195ce3c729dedb41dd0307a8 ""
+  "main.aux" 1677258202 10197 172e3ff3d24d04c729dac1f29b1d46e4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1677048769 "main.tex" "main.pdf" "main" 1677048772
+["pdflatex"] 1677258199 "main.tex" "main.pdf" "main" 1677258202
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -215,9 +215,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1668447558 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1668447517 2927666 1f051fb934722d94e995cdec3e18511c ""
-  "chapters/balancing_weights/an.tex" 1676882393 7676 8e3749f348c6aad8008f60c508315b1f ""
   "chapters/balancing_weights/an_dual.tex" 1676879889 7550 ba1434d49b5716b8493450fca97ea307 ""
   "chapters/balancing_weights/an_intro.tex" 1676138241 342 46847f111922abccff594382e0f3a210 ""
+  "chapters/balancing_weights/an_new.tex" 1677258199 2691 21490ecc5480993fd7ef6b55e8365cab ""
   "chapters/balancing_weights/an_primal.tex" 1676880264 1924 5dbf2045aa5a120cba4c8bfb54f36869 ""
   "chapters/balancing_weights/gaussian_bridge.tex" 1676121100 468 91520ed6ba0bbc1ef489f988ecc94d65 ""
   "chapters/balancing_weights/intro_new.tex" 1676369901 18806 89625d0fead187c2aa6b470c14081b31 ""
@@ -226,14 +226,15 @@
   "chapters/convex_analysis/conjugate_calculus.tex" 1676045180 11850 a713624bef60ee862308fd524ef73662 ""
   "chapters/convex_analysis/primer_new.tex" 1676639232 9357 eb58f1dc39a8e7dfe186873452eed823 ""
   "chapters/convex_analysis/ts_3.tex" 1676105486 12376 028e4f5924126e68ca4274a519028b86 ""
+  "chapters/intro_for_all.tex" 1677149057 2770 4a69bf60f45a11f918c90be73d9ae62d ""
   "chapters/true_intro.tex" 1677048765 1303 529ba9efff1d86e51b2d7dea5a9cfe5e ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1677048772 9583 b8e3c590517e8925313730e50e450331 "pdflatex"
-  "main.bbl" 1677048769 3661 17eda0d65be4ef1b75f2167da313e04c "bibtex main"
+  "main.aux" 1677258202 10197 172e3ff3d24d04c729dac1f29b1d46e4 "pdflatex"
+  "main.bbl" 1677258109 4096 3ad68d5946f09ec3f9d183c1529712a3 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
   "main.tdo" 0 -1 0 "pdflatex"
-  "main.tex" 1677047566 9601 075086f10244f429f9ee90fa1bfdefbe ""
-  "main.toc" 1677048772 805 2fa354e251fabe127f23539da016a0a5 "pdflatex"
+  "main.tex" 1677254188 9708 686fc9279be869c0dc30f6fd53dc9702 ""
+  "main.toc" 1677258202 874 f0703d62c7e6dc4b891442d16d802182 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

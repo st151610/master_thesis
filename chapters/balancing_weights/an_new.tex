@@ -1,0 +1,192 @@
+\begin{theorem}
+  \emph{(Slutzky's theorem)}
+  Let
+  $
+  (E,d)
+  $
+  be a metric space 
+  and let
+  $X,X_1,X_2,\ldots$
+  and
+  $Y_1,Y_2,\ldots$
+  be random variables with values in $E$.
+  Assume
+  $X_n\to X$ in distribution and 
+  $d(X_n,Y_n)\to 0$ in probability. Then 
+  $Y_n\to X$ in distribution.
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~13.8]{Klenke2020}
+\end{proof}
+
+\begin{ftheorem}
+  Under conditions 
+the stochastic process
+\begin{gather}
+    \sqrt{N}
+    \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    \mathbf{1}
+    _{\left\{ Y_i\le z \right\}}
+    -
+    \P[Y(1)\le z]
+    \right)
+    _{z\in\R}
+    \,.
+  \end{gather}
+  converges in
+  $l^\infty(\R)$
+  to a Gaussian process with mean 0 and covariance ??.
+\end{ftheorem}
+\begin{proof}
+  For fixed $z\in\R$ we use the following error decomposition.
+  Recall $\pi(x):=\P[T=1|X=x]$ and
+  $
+  w(x)
+  :=
+  (
+  f^{'}
+  )^{-1}
+  \left( 
+    \inner{B(x)}{\lambda^\dagger}
+    +
+    \lambda_0^\dagger
+  \right)
+  $,
+  where $(\lambda^\dagger,\lambda_0^\dagger)$ is the optimal dual solution.
+  We also write
+  $
+  F_{Y(1)}(z|x)
+  =
+  \P[Y(1)\le z|X=x]
+  $
+  and
+  $
+  F_{Y(1)}(z)
+  =
+  \P[Y(1)\le z]
+  $.
+\begin{align*}
+  &
+  \sqrt{N}
+\left( 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w(X_i)
+    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    \ 
+    -
+    \ 
+    \P[Y(1)\le z]
+\right)
+    \\
+  &
+  \ 
+  =
+  \ 
+  \sqrt{N}
+  \sum_{k=1}^{N} 
+  \left[ 
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w(X_i)
+    B_k(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B_k(X_i)
+  \right)
+  F_{Y(1)}(z|X_k)
+  \right]
+  %%%% 1 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \sqrt{N}
+    \sum_{i=1}^{N} 
+    \left[ 
+  \frac{
+    T_i\cdot w(X_i) -1 }{N}
+    \left( 
+  F_{Y(1)}(z|X_i)
+    \ 
+    -
+    \ 
+    \sum_{k=1}^{N} 
+    B_k(X_i)
+    \cdot
+  F_{Y(1)}(z|X_k)
+    \right)
+    \right]
+  %%%% 2 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \sqrt{N}
+  \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left[ 
+    T_i
+    \left( 
+    w(X_i) 
+    -
+    \frac{1}{\pi(X_i)}
+    \right)
+    \left( 
+    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    -
+  F_{Y(1)}(z|X_i)
+    \right)
+    \right]
+  \right)
+  %%%% 3 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \sqrt{N}
+  \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \frac{T_i}{\pi(X_i)}
+    \left( 
+    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    -
+  F_{Y(1)}(z|X_i)
+    \right)
+    \ 
+    +
+    \ 
+    \left( 
+  F_{Y(1)}(z|X_i)
+    -
+  F_{Y(1)}(z)
+    \right)
+  \right)
+  \\
+  %%%%%%%%%%%%%%%
+  &
+  \ 
+  =:
+  \ 
+  R_1(z)
+  +
+  R_2(z)
+  +
+  R_3(z)
+  +
+  R_4(z)
+  \end{align*}
+  We show that $\sup_{z\in\R}\left| R_i(z) \right|\to 0 $ in
+  probability for $i=1,2,3$.
+  The term $(R_4)_{z\in\R}$ is $\P$-Donsker and determines the 
+  covariance.
+\end{proof}

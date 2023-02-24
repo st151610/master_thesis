@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  22 FEB 2023 07:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  24 FEB 2023 18:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -852,11 +852,16 @@ l.125 \tableofcontents
 
 ]
 chapter 1.
-(./chapters/true_intro.tex) [5] [6
+(./chapters/intro_for_all.tex [5]) [6]
+chapter 2.
+(./chapters/true_intro.tex) [7
+
+
+] [8
 
 
 ]
-chapter 2.
+chapter 3.
 (./chapters/balancing_weights/intro_new.tex
 Package mdframed Info: mdframed works in twoside mode on input line 53.
 Package mdframed Info: mdframed detected package amsthm 
@@ -868,44 +873,44 @@ Overfull \hbox (38.7337pt too wide) detected at line 107
  []
 
 Package mdframed Info: Not enough space on this page on input line 108.
-[7]
+[9]
 Package mdframed Info: Not enough space on this page on input line 108.
- [8] [9]
+ [10] [11]
 Overfull \hbox (16.55327pt too wide) in paragraph at lines 301--304
 \OT1/cmr/m/n/10.95 Universal con-sis-tency in this sense holds, if this is true for all dis-tri-bu-tions with $\OT1/cmr/bx/n/10.95 E\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 m\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X\OT1/cmr/m/n/10.95 )[]] \OML/cmm/m/it/10.95 <
  []
 
-[10] [11]
+[12] [13]
 Package mdframed Info: mdframed works in twoside mode on input line 653.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 653.
- [12] [13]) [14]
-chapter 3.
-(./chapters/consistency.tex [15
+ [14] [15]) [16]
+chapter 4.
+(./chapters/consistency.tex [17
 
 
-] [16] [17]
+] [18] [19]
 Overfull \hbox (3.4822pt too wide) in paragraph at lines 858--871
 \OT1/cmr/m/n/10.95 with prob-a-bil-ity go-ing to $1$ as $\OML/cmm/m/it/10.95 N \OMS/cmsy/m/n/10.95 ! 1$\OT1/cmr/m/n/10.95 . But this holds for all $(^^A\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 ^^A[])$ with $[] =
  []
 
-[18]
+[20]
 Overfull \hbox (10.992pt too wide) detected at line 1286
 []
  []
 
-[19]
+[21]
 Overfull \hbox (6.02411pt too wide) detected at line 1321
 []
  []
 
-[20]) [21] [22
+[22]) [23] [24
 
 
 ]
-chapter 4.
-(./chapters/balancing_weights/an_intro.tex) (./chapters/balancing_weights/an_dual.tex [23] [24]
+chapter 5.
+(./chapters/balancing_weights/an_intro.tex) (./chapters/balancing_weights/an_dual.tex [25] [26]
 Overfull \hbox (17.96954pt too wide) detected at line 447
 []
  []
@@ -915,12 +920,20 @@ Overfull \hbox (42.46187pt too wide) detected at line 482
 []
  []
 
-) (./chapters/balancing_weights/an_primal.tex [25]) (./chapters/balancing_weights/an.tex [26] [27] [28]) (./chapters/balancing_weights/gaussian_bridge.tex) (./chapters/balancing_weights/plug_in_est.tex) [29] [30
+) (./chapters/balancing_weights/an_primal.tex [27]) (./chapters/balancing_weights/an_new.tex
+Package mdframed Info: mdframed works in twoside mode on input line 22.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 22.
+Package mdframed Info: Not enough space on this page on input line 42.
+ [28]
+Package mdframed Info: Not enough space on this page on input line 42.
+) (./chapters/balancing_weights/gaussian_bridge.tex) (./chapters/balancing_weights/plug_in_est.tex) [29] [30]
+chapter 6.
+(./chapters/convex_analysis/primer_new.tex [31
 
 
 ]
-chapter 5.
-(./chapters/convex_analysis/primer_new.tex [31]
 Package mdframed Info: mdframed works in twoside mode on input line 85.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -953,18 +966,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27190 strings out of 478238
- 524041 string characters out of 5850455
- 1027169 words of memory out of 5000000
- 44674 multiletter control sequences out of 15000+600000
+ 27196 strings out of 478238
+ 524195 string characters out of 5850455
+ 1027170 words of memory out of 5000000
+ 44680 multiletter control sequences out of 15000+600000
  482868 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,106p,10616b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (46 pages, 449616 bytes).
+Output written on main.pdf (46 pages, 450070 bytes).
 PDF statistics:
- 706 PDF objects out of 1000 (max. 8388607)
- 608 compressed objects within 7 object streams
- 249 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 709 PDF objects out of 1000 (max. 8388607)
+ 611 compressed objects within 7 object streams
+ 246 named destinations out of 1000 (max. 500000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

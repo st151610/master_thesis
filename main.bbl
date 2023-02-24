@@ -24,6 +24,11 @@ Kosuke Imai and Marc Ratkovic.
 \newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
   Methodology)}, 76:243--263, 2014.
 
+\bibitem[Kle20]{Klenke2020}
+Achim Klenke.
+\newblock {\em Probability {{Theory}}: {{A Comprehensive Course}}}.
+\newblock Universitext. {Springer International Publishing}, {Cham}, 2020.
+
 \bibitem[KS07]{Kang2007}
 Joseph D.~Y. Kang and Joseph~L. Schafer.
 \newblock Demystifying {{Double Robustness}}: {{A Comparison}} of {{Alternative
@@ -53,6 +58,12 @@ Paul~R. Rosenbaum and Donald~B. Rubin.
 \newblock The {{Central Role}} of the {{Propensity Score}} in {{Observational
   Studies}} for {{Causal Effects}}.
 \newblock {\em Biometrika}, 70(1):41--55, 1983.
+
+\bibitem[Rub07]{Rubin2007}
+Donald~B. Rubin.
+\newblock The design versus the analysis of observational studies for causal
+  effects: Parallels with the design of randomized trials.
+\newblock {\em Statistics in Medicine}, 26(1):20--36, January 2007.
 
 \bibitem[SC08]{Steinwart2008}
 Ingo Steinwart and Andreas Christmann.
