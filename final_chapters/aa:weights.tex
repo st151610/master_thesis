@@ -1,0 +1,109 @@
+The following theorem is an easy consequence of Theorem~\ref{bw:cd:th}.
+\begin{ftheorem}
+  Consider the weights function defined by
+  \begin{gather}
+    w(x)
+    :=
+    (
+    f^{'}
+    )^{-1}
+    \left( 
+      \inner{B(x)}{\lambda^\dagger}
+      +
+      \lambda_0^\dagger
+    \right)
+    \qquad
+    \text{for all}\ 
+    x\in\mathcal{X}
+    \,.
+  \end{gather}
+  Under the conditions of Theorem~\ref{bw:cd:th} 
+  it holds
+  $w(X)\ 
+  \overset{\P}{\to}
+  \ 
+  1/\pi(X)
+  $
+\end{ftheorem}
+\begin{proof}
+  For all $\varepsilon>0$ it holds
+\begin{align}
+  \begin{split}
+  \left| 
+  w(X)
+  -
+  \frac{1}{\pi(X)}
+  \right|
+  &
+  \ 
+  =
+  \ 
+  \left| 
+  (f^{'})^{-1}
+  \left( 
+    \inner{B(X)}
+    {\lambda^\dagger}
+    +
+    \lambda_0^\dagger
+  \right)
+  -
+  \frac{1}{\pi(X)}
+  \right|
+  \\
+  &
+  \ 
+  \lesssim
+  \ 
+  \left| 
+  \inner
+  {B(X)}
+  {\lambda^\dagger-\lambda^*}
+  \right|
+  +
+  \left| 
+    \inner{B(X)}
+    {\lambda^\dagger}
+    +
+    \lambda_0^\dagger
+    -
+    f^{'}
+    \left( 
+  \frac{1}{\pi(X)}
+    \right)
+  \right|
+  \\
+  &
+  \ 
+  \lesssim
+  \ 
+  \norm{\lambda^\dagger-\lambda^*}_2
+  +
+  \left| 
+  \sum_{i=1}^{N} 
+  B_k(X)
+  \cdot
+    f^{'}
+    \left( 
+  \frac{1}{\pi_k}
+    \right)
+    -
+    f^{'}
+    \left( 
+  \frac{1}{\pi(X)}
+    \right)
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \frac{\varepsilon}{2}
++
+  \frac{\varepsilon}{2}
+  \le
+  \varepsilon
+  \,,
+\end{split}
+\end{align}
+with probability going to $1$ as $N\to\infty$.
+\end{proof}

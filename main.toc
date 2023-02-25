@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {4.1}Consistency of Optimal Solutions}{15}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Estimate of an Oracle Parameter by the Dual}{15}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Estimate of the Inverse Propensitiy Score by the Weights}{20}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Application to Plug In Estimators}{25}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Application to Plug In Estimators}{26}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Convex Analysis}{27}{chapter.5}%
 \contentsline {section}{\numberline {5.1}A Convex Analysis Primer}{27}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Conjugate Calculus}{30}{section.5.2}%
