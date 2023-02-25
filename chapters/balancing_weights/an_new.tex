@@ -547,6 +547,211 @@ We conclude
   \ 
   0\,.
 \end{align*}
-\subsection*{Analysis of R_3}
+\subsection*{Analysis of $R_3$}
+We will apply theory of empirical processes to bound
+\begin{gather}
+  R_3(z)
+  =
+  \sqrt{N}
+  \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left[ 
+    T_i
+    \left( 
+    w(X_i) 
+    -
+    \frac{1}{\pi(X_i)}
+    \right)
+    \left( 
+    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    -
+  F_{Y(1)}(z|X_i)
+    \right)
+    \right]
+  \right)
+\end{gather}
+in probability. Why don't we use simple concentration inequalities such as Bernstein's  or Markov's inequality? The reason is, that
+the weights
+$
+  w(x)
+  :=
+  (
+  f^{'}
+  )^{-1}
+  \left( 
+    \inner{B(x)}{\lambda^\dagger}
+    +
+    \lambda_0^\dagger
+  \right)
+  $
+  depend (thorough $B$ and $(\lambda^\dagger,\lambda_0^\dagger)$)
+  on the whole data set $D:=(T_i,X_i)_{i=1,\ldots,N}$. Thus, it is more honest to write
+  $w(x,D)$ instead. This captures the whole dependence on probabilities. Note, that $(Y_i)_{i=1,\ldots N}$ are independent of $w$ given $D$. 
+  A standard computation shows
+  \begin{gather}
+    \E
+    \left[ 
+    \frac{T}{\pi(X)}
+    \left( 
+    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+    \right)
+    \right]
+    =0
+    \,.
+  \end{gather}
+  Furthermore
+  \begin{align*}
+    &
+    \E
+    \left[ 
+      Tw(X,D)
+    \left( 
+    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+    \right)
+    \right]
+    \\
+    &
+    \ 
+    =
+    \ 
+    \E
+    \left[ 
+      \E
+      \left[ 
+      w(X,D)
+      \left( 
+    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+      \right)
+  |T=1,X,D
+      \right]
+    \right]
+    \\
+    &
+    \ 
+    =
+    \ 
+    \E
+    \left[ 
+      w(X,D)
+      \E
+      \left[ 
+    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+  |X,D
+      \right]
+    \right]
+    \\
+    &
+    \ 
+    =
+    \ 
+    \E
+    \left[ 
+      w(X,D)
+      \E
+      \left[ 
+    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+  |X
+      \right]
+    \right]
+    \\
+    &
+    \ 
+    =
+    \ 
+    0
+  \end{align*}
+  The second equality is due to the assumption of $(Y(0),Y(1))\perp T |X$.
+  The third equality is due to $X\perp D$.
+  Next we define
+  the (random) function
+  $f_D^z$ by
+  \begin{gather}
+    f_{D}^z(T,X,Y(T))
+    :=
+    T
+    \left( 
+    w(D,X)- \frac{1}{\pi(X)}
+    \right)
+    \left( 
+    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+    \right)
+    \,.
+  \end{gather}
+  We just showed
+  $
+  \E
+  [
+    f_{D}^z(T,X,Y(T))
+  ]
+  =
+  0
+  $
+  for all $z\in\R$.
+  Thus
+  \begin{gather}
+    R_3(z)
+    =
+    G_N
+    f_D^z
+    \,.
+  \end{gather}
+  By the consistency of the weights there exists a learning rate $(\varepsilon_N)$ such that
+  \begin{gather}
+    \P
+    \left[ 
+      \left| 
+      w(X,D)
+      -
+      \frac{1}{\pi(X)}
+      \right|
+      \le
+      \varepsilon_N
+    \right]
+    \to 1 
+    \qquad
+    \text{for}\ 
+    N\to \infty
+    \,.
+  \end{gather}
+  Let
+  $
+  \mathcal{F}_N
+  :=
+  \varepsilon_N B_{\mathcal{F}}$.
+  It holds
+  \begin{gather}
+    \P
+    \left[ 
+    f_D^z
+    \in
+  \mathcal{F}_N
+  \ \forall\,z\in\R
+    \right]
+    =
+    \P
+    \left[ 
+      \sup_{z\in\R}
+      \left| 
+    f_D^z
+      \right|
+      \le
+      \varepsilon_N
+    \right]
+    \to 1
+  \end{gather}
+  Then the lemma applies?.
 \end{proof}
 
