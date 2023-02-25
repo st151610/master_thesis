@@ -673,33 +673,6 @@ $
   \end{align*}
   The second equality is due to the assumption of $(Y(0),Y(1))\perp T |X$.
   The third equality is due to $X\perp D$.
-  Next we define
-  the (random) function
-  $f_D^z$ by
-  \begin{gather}
-    f_{D}^z(T,X,Y(T))
-    :=
-    T
-    \left( 
-    w(D,X)- \frac{1}{\pi(X)}
-    \right)
-    \left( 
-    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
-    -
-  F_{Y(1)}(z|X)
-    \right)
-    \,.
-  \end{gather}
-  We just showed
-  $
-  \E
-  [
-    f_{D}^z(T,X,Y(T))
-  ]
-  =
-  0
-  $
-  for all $z\in\R$.
   Thus
   \begin{gather}
     R_3(z)
@@ -753,5 +726,341 @@ $
     \to 1
   \end{gather}
   Then the lemma applies?.
+\begin{lemma}
+  \label{lemma_max_ineq}
+  Consider a function class $\mathcal{F}$ with unit ball
+  $
+  B_{\mathcal{F}}
+  :=
+  \left\{ 
+    f\in \mathcal{F}
+    \colon
+    \norm{f}_\infty
+    \le
+    1
+  \right\}
+  $.
+  Let $(\varepsilon_N)$ be a sequence converging to 0
+  and let 
+  $
+  \left( 
+    \mathcal{F}_N
+  \right)
+    :=
+    \left( 
+      C\cdot
+    \varepsilon_N\cdot B_\mathcal{F}
+    \right)
+  $
+  denote the sequence of scaled unit balls in $\mathcal{F}$.
+  Assume that 
+  there exists
+  $k<2$ such that 
+  the covering number of the unit ball in $\mathcal{F}$
+  satisfies
+  \begin{gather}
+        \log 
+      N_{[\,]}
+\left( \varepsilon, B_\mathcal{F},\mathrm{L}_2(\P) \right)
+\ 
+\lesssim
+\ 
+\left( \frac{1}{\varepsilon} \right)^k
+\qquad
+\text{for all}\ 
+\varepsilon>0
+\,.
+  \end{gather}
+  Then it holds
+  $
+      \norm{G_N}^*_{\mathcal{F}_N}
+    \ 
+    \overset{\P}
+    {\to}
+    \ 
+    0
+  $
+  for $N\to \infty$. 
+\end{lemma}
+\begin{proof}
+  By maximal inequalities it holds
+  \begin{align*}
+    \E^*
+    \left[ 
+      \norm{G_N}_{\mathcal{F}_N}
+    \right]
+    &
+      \ 
+      \lesssim
+      \ 
+      J_{[\,]}\left( \varepsilon_N, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
+      \\
+    &
+      \ 
+      =
+      \ 
+      \int_0^{\varepsilon_N}
+      \sqrt{
+        \log 
+      N_{[\,]}
+\left( \varepsilon, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
+    }
+    \,
+    d\varepsilon
+    \\
+    &
+    \ 
+    =
+    \ 
+      \int_0^{\varepsilon_N}
+      \sqrt{\log 
+      N_{[\,]}
+\left( \varepsilon/(C\cdot \varepsilon_N), B_\mathcal{F},\mathrm{L}_2(\P) \right)
+    }
+    \,
+    d\varepsilon
+    \\
+    &
+    \ 
+    \lesssim
+    \ 
+      \int_0^{\varepsilon_N}
+      \left( 
+      \frac{\varepsilon_N}{\varepsilon}
+    \right)^{k/2}
+    \,
+    d\varepsilon
+    \\
+    &
+    \ 
+    =
+    \ 
+  \varepsilon_N^{k/2}
+  \frac{1}{1-k/2}
+  \varepsilon_N^{1-k/2}
+  \\
+    &
+    \ 
+  \lesssim
+    \ 
+  \varepsilon_N
+  \\
+    &
+    \ 
+  \to
+  \ 
+  0
+  \qquad
+  \text{for}\ 
+  N\to
+  \infty
+  \,.
+  \end{align*}
+  Note, that $k<2$.
+  By the boundedness of $\E^*$ there is no measurability problem.
+  By Markov's Inequality it holds
+  \begin{align*}
+    \P
+    \left[ 
+      \norm{G_N}^*_{\mathcal{F}_N}\ge \varepsilon
+    \right]
+    \le
+    \varepsilon^{-1}
+    \,
+    \E^*
+    \left[ 
+      \norm{G_N}_{\mathcal{F}_N}
+    \right]
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}\ 
+    N\to\infty
+    \,.
+  \end{align*}
 \end{proof}
+\begin{lemma}
+  Consider 
+  the (random) function
+  $
+  f_D^z
+  $ given by
+  \begin{gather}
+    f_{D}^z(T,X,Y(T))
+    :=
+    T
+    \left( 
+    w(D,X)- \frac{1}{\pi(X)}
+    \right)
+    \left( 
+    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+    \right)
+    \,.
+  \end{gather}
+  Assume that 
+  there exists a function class $\mathcal{F}$ satisfying the requirements of Lemma~\ref{lemma_max_ineq} and that
+  $
+  f_D^z
+  \in \mathcal{F}
+  $
+  for all $z\in\R$ almost surely.
+  It then holds
+  $
+  \sup_{z\in\R} \left| G_Nf_D^z \right|
+  \overset{\P}{\to}0$ for 
+  $N\to\infty$.
+\end{lemma}
+\begin{proof}
+  By the consistency of the weights there exists a learning rate $(\varepsilon_N)$ such that
+  \begin{gather}
+    \P
+    \left[ 
+      \left| 
+      w(X,D)
+      -
+      \frac{1}{\pi(X)}
+      \right|
+      \le
+      \varepsilon_N
+    \right]
+    \to 1 
+    \qquad
+    \text{for}\ 
+    N\to \infty
+    \,.
+  \end{gather}
+  Let
+  $\mathcal{F}_N:=\varepsilon_NB_\mathcal{F}$ as in 
+  Lemma~\ref{lemma_max_ineq}.
+  It holds
+\begin{gather}
+      \sup_{z\in\R}
+      \left| 
+    f_D^z
+      \right|
+      \lesssim
+      \left| 
+      w(X,D)
+      -
+      \frac{1}{\pi(X)}
+      \right|
+      \le
+      \varepsilon_N
+\end{gather}
+with probability going to 1 as $N\to\infty$.
+Thus
+ \begin{gather}
+    \P
+    \left[ 
+    f_D^z
+    \in
+  \mathcal{F}_N
+  \ \forall\,z\in\R
+    \right]
+    =
+    \P
+    \left[ 
+      \sup_{z\in\R}
+      \left| 
+    f_D^z
+      \right|
+      \lesssim
+      \varepsilon_N
+    \right]
+    \to 1
+    \qquad
+    \text{as}
+    \ 
+    N\to\infty
+    \,.
+  \end{gather}
+  Then it holds
+  for all $\varepsilon>0$ 
+  \begin{align*}
+    \P
+    \left[ 
+      \sup_{z\in\R}
+  \left| G_Nf_D^z \right|
+  \le
+  \varepsilon
+    \right]
+    &
+    \ 
+    \ge
+    \ 
+    \P
+    \left[ 
+      \sup_{z\in\R}
+  \left| G_Nf_D^z \right|
+  \le
+  \norm{G_N}^*_{\mathcal{F}_N}
+  \le
+  \varepsilon
+    \right]
+    \\
+    &
+    \ 
+    \ge
+    \ 
+    \P
+    \left[ 
+    f_D^z
+    \in
+  \mathcal{F}_N
+  \ \forall\,z\in\R
+      \ 
+      \text{and}\ 
+  \norm{G_N}^*_{\mathcal{F}_N}
+  \le
+  \varepsilon
+    \right]
+    \\
+    &
+    \ 
+    \ge
+    \ 
+    \P
+    \left[ 
+    f_D^z
+    \in
+  \mathcal{F}_N
+  \ \forall\,z\in\R
+    \right]
+    -
+    \P
+    \left[ 
+  \norm{G_N}^*_{\mathcal{F}_N}
+    \ 
+  \ge
+    \ 
+  \varepsilon
+    \right]
+    \\
+    &
+    \ 
+    \to
+    \ 
+    1
+    \,.
+  \end{align*}
+  The convergence of the second term is due to Lemma~\ref{lemma_max_ineq}.
 
+\end{proof}
+  Since
+  $
+  \E
+  [
+    f_{D}^z(T,X,Y(T))
+  ]
+  =
+  0
+  $
+  for all $z\in\R$.
+  We conclude
+  $\sup_{z\in\R}\left| R_3(z) \right|\overset{\P}{\to}0$.
+  \subsection*{Analysis of $R_4$}
+\end{proof}
