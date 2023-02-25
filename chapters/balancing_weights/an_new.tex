@@ -27,7 +27,7 @@ the stochastic process
     \left( 
   \frac{1}{N}
     \sum_{i=1}^{n} 
-    w_i
+    w_i^\dagger
     \mathbf{1}
     _{\left\{ Y_i\le z \right\}}
     -
@@ -187,6 +187,207 @@ the stochastic process
   \end{align*}
   We show that $\sup_{z\in\R}\left| R_i(z) \right|\to 0 $ in
   probability for $i=1,2,3$.
-  The term $(R_4)_{z\in\R}$ is $\P$-Donsker and determines the 
-  covariance.
+  The term $(R_4)_{z\in\R}$ is $\P$-Donsker and determines the covariance of the limiting process.
+  \subsection*{Analysis of $R_1$}
+  By Theorem~\ref{dual_solution_th}
+  it holds $w_i^\dagger=w(X_i)$ for $i\in \left\{ 1,\ldots,n \right\}$, that is, for $i\le n$ we can identify $w(X_i)$ with the optimal
+  solution to 
+  problem~\ref{bw:1:primal}. 
+  Thus the constraints of the problem apply.
+  \begin{gather}
+      \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{n} 
+      w(X_i)
+      B_k(X_i)
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    \qquad
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, N \right\}
+    \,.
+  \end{gather}
+  Note, that the first sum goes over $\left\{ 1,\ldots,n \right\}$ while the second sum goes over $\left\{ 1,\ldots,N \right\}$.
+  A second, equivalent version of the constraints is
+  \begin{gather}
+      \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{N} 
+      T_i
+      w(X_i)
+      B_k(X_i)
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    \qquad
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, N \right\}
+    \,.
+  \end{gather}
+  Now both sums go over $\left\{ 1,\ldots,N \right\}$ and the
+  indicator of treatment $T_i$ takes care that in the first sum only the terms with $i\le n$ are effective. 
+  Having this flexibility with the versions helps. I regard the firs version as suitable for non-probabilistic computations, although $n$ is of course a random variable. On the other hand, the second version is more honest, exactly telling the dependence on the indicator of treatment. This version is useful in probabilistic computations. 
+
+  Let's bound $R_1$.
+  \begin{align}
+    &
+    \sup_{z\in\R}
+    \left| 
+    R_1(z)
+    \right|
+    =
+    \sup_{z\in\R}
+    \left| 
+  \sqrt{N}
+  \sum_{k=1}^{N} 
+  \left[ 
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w(X_i)
+    B_k(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B_k(X_i)
+  \right)
+  F_{Y(1)}(z|X_k)
+  \right]
+    \right|
+    \\
+    &
+    \le
+  \sqrt{N}
+  \sum_{k=1}^{N} 
+  \left| 
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w(X_i)
+    B_k(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B_k(X_i)
+  \right)
+  \right|
+    \sup_{z\in\R}
+  F_{Y(1)}(z|X_k)
+  \\
+    &
+    \le
+  \sqrt{N}
+  \sum_{k=1}^{N} 
+  \delta_k
+  \end{align}
+  Playing around with norm equivalences we discover, that 
+  $\norm{\delta}_1\cdot\sqrt{N}\to 0$ is the weakest assumption to
+  get sufficient control over $R_1$ and the \textbf{second term}.
+  Indeed, different ways to bound are
+  $\norm{\delta}_2\cdot N$ 
+  \begin{gather}
+  \sqrt{N}
+  \sum_{k=1}^{N} 
+  \left| 
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w(X_i)
+    B_k(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B_k(X_i)
+  \right)
+  \right|
+    \sup_{z\in\R}
+  F_{Y(1)}(z|X_k)
+  \\
+  \le
+  \sqrt{N}
+  \norm{\delta}_2
+  \cdot
+  \left( 
+  \sum_{k=1}^{N} 
+  \left( 
+    \sup_{z\in\R}
+  F_{Y(1)}(z|X_k)
+  \right)^2
+\right)^{1/2}
+\\
+\le
+N
+  \norm{\delta}_2
+  \end{gather}
+  since 
+  $
+  F_{Y(1)}\in [0,1]
+  $.
+Or
+\begin{gather}
+  \sqrt{N}
+  \sum_{k=1}^{N} 
+  \left| 
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w(X_i)
+    B_k(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B_k(X_i)
+  \right)
+  \right|
+    \sup_{z\in\R}
+  F_{Y(1)}(z|X_k)
+  \\
+  \le
+  \sqrt{N}
+  \norm{\delta}_\infty
+  \sum_{k=1}^{N} 
+    \sup_{z\in\R}
+  F_{Y(1)}(z|X_k)
+  \\
+  \le
+  N^{3/2}
+  \norm{\delta}_\infty
+\end{gather}
+But it holds
+\begin{gather}
+  \sqrt{N}\norm{\delta}_1
+  \le
+  N\norm{\delta}_2
+  \le
+  N^{3/2}\norm{\delta}_\infty
+\end{gather}
+Furthermore, the first occurence of $\delta$ is also covered.
+\begin{gather}
+  \inner{\delta}{\left| \Delta \right|}
+  =
+  \sum_{k=1}^{N} 
+  \delta_k
+  \left| \Delta_k \right|
+  \le
+  \norm{\delta}_1
+  \norm{\Delta}_\infty
+  \le
+  \norm{\delta}_1
+  \norm{\Delta}_2
+  \le
+  \norm{\delta}_1
+  \varepsilon
+  \,.
+\end{gather}
 \end{proof}
