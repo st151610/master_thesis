@@ -1,0 +1,619 @@
+Throughout this section we assume for all $N\in\mathbb{N}$ the existence of an 
+optimal solution 
+$(\lambda_0^\dagger,\lambda^\dagger)$
+to Problem?
+We define the oracle parameter $\lambda^*\in\R^N$ to be the vector with coordinates
+\begin{gather}
+  \label{oracle_1}
+  \lambda^*_k
+  \ 
+  :=
+  \ 
+  f^{'}
+  \left( 
+    \frac{1}{\pi(X_k)}
+  \right)
+  \ 
+  -
+  \ 
+  \lambda^\dagger_0
+  \qquad
+  \text{for all}\ 
+  k\in \left\{ 1,\ldots,N \right\}
+  \,,
+\end{gather}
+where $\pi(x)=\P[T=1|X=x]$ is the \textbf{propensity score} at $x\in\mathcal{X}$. Why this choice? First, the $\lambda_0^\dagger$ part is unimportant. We need it to eliminate the same factor in
+\begin{gather}
+  w(x):=
+  (
+  f^{'}
+  )^{-1}
+  \left( \inner{B(x)}{\lambda^\dagger}+\lambda_0^\dagger \right)
+\end{gather}
+that is 
+\begin{gather}
+  \inner{B(x)}{\lambda^*}+\lambda_0^\dagger 
+  =
+\sum_{k=1}^{N} 
+B_k(x)
+  f^{'}
+  \left( 
+    \frac{1}{\pi(X_k)}
+  \right)
+  \,.
+\end{gather}
+The other part is the foundation of why everything works.
+We will show
+\begin{gather}
+\left| 
+\sum_{k=1}^{N} 
+B_k(X_i)
+  f^{'}
+  \left( 
+    \frac{1}{\pi(X_k)}
+  \right)
+  -
+  f^{'}
+  \left( 
+    \frac{1}{\pi(X_k)}
+  \right)
+\right|
+\ 
+\le
+\ 
+      \omega
+      \left( f^{'}\circ (x\mapsto1/x)\circ \pi,h_N \right)
+      \,.
+\end{gather}
+Consequently, if $\pi$ is continuous and positive (not 0) on $\mathcal{X}$ and the width of the partition $h_N$ converges to 0, we get 
+\begin{gather}
+ \left| 
+  \inner{B(X_i)}{\lambda^*}+\lambda_0^\dagger 
+  -
+  f^{'}
+  \left( 
+    \frac{1}{\pi(X_k)}
+  \right)
+ \right| 
+ \
+ \to
+ \ 
+ 0
+ \qquad
+ \text{almost surely.}
+\end{gather}
+This helps proving 
+\begin{ftheorem}
+  \label{bw:cd:th}
+  Let 
+$(\lambda_0^\dagger,\lambda^\dagger)$
+be an optimal solution 
+to Problem?
+and define the oracle parameter $\lambda^*$ as in \eqref{oracle_1}.
+Furthermore, assume that the propensity score function is continuous and positive on $\mathcal{X}$.
+Then 
+$
+    \norm{
+      \lambda^\dagger
+      -
+      \lambda^*
+    }_2
+    \ 
+    \overset{\P}{\to}
+    \ 
+    0
+$
+for $N\to\infty$.
+\end{ftheorem}
+\begin{proof}
+We use a hint from the last display of~\cite[p.22]{Wang2019}.
+The high-level idea is that the connection of
+optimality of  
+$(\lambda_0^\dagger,\lambda^\dagger)$
+to proximity to (any) oracle parameter $\lambda^*$
+is due to
+convexity and differentiability of (parts of) the 
+the objective function of Problem.
+We deliver the omitted technical details.
+I proved the following lemma by myself.
+\begin{lemma}
+  \label{bw:cd:lem}
+  Let $m\in\mathbb{N}$ and
+  $g \,:\, \R^m \to \overline{\R}$ 
+  be convex.
+  Then 
+  for all $y \in \R^m$ and $\varepsilon>0$ 
+    \begin{gather}
+      \label{7060_0}
+      \inf_{\norm{\Delta}=\varepsilon} g(y+\Delta) - g(y) \ge 0 \quad
+    \end{gather}
+    implies
+    the existence of  
+    a global minimum
+    $
+    y^* \in \,\R^m
+    $
+    of $g$
+    satisfying
+    $
+      \norm{y^* - y}_2 \le \varepsilon
+    $.
+\end{lemma}
+\begin{proof}
+  Let $B$ be the euclidian ball in $\R^m$.
+  Since 
+  $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+  $
+  is convex, it contains a 
+  local minimum  
+  of $g$.
+  Suppose towards a contradiction that
+  $
+    y^* 
+    \ 
+    \in 
+    \ 
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+  $
+  is a local minimum, but not a global one, and
+  \eqref{7060_0} is true.
+  Then it holds
+  \begin{gather}
+    \label{7060_3}
+    g(x) < g(y^*)
+    \quad
+    \text{for some}\ 
+    x 
+    \in 
+    \R^m 
+    \setminus 
+    \left( 
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    \right)
+  \,.
+  \end{gather}
+  Furthermore, since 
+  $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+  $ is compact and contains $y^*$,
+  the line segment connecting 
+  $y^*$ and $x$
+  intersects the boundary of 
+  $y + \mathcal{C}$, that is,
+  there exist
+  $
+    \theta \in (0,1)
+  $
+  and 
+  $
+    \Delta_x
+  $
+  with 
+  $
+    \norm{\Delta_x}_2=\varepsilon
+  $
+  such that
+  \begin{gather}
+    \label{7060_4}
+    \theta x + (1 - \theta) y^* = y + \Delta_x
+    \,.
+  \end{gather}
+    It follows
+    \begin{align}
+      \label{7060_5}
+      \begin{split}
+      g(y^*)
+      \le
+      g(y)
+      \le
+      g(y + \Delta_x)
+      &=
+      g(
+        \theta x + (1 - \theta) y^*
+      )
+      \\
+      &\le
+      \theta g(x)
+      + 
+      (1 - \theta)
+      g(y^*)
+      <
+      g(y^*)
+      ,
+      \end{split}
+    \end{align}
+    which is a contradiction.
+    The first inequality is due to
+    $y^*$ being a local minimum of $g$ in
+    $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    $,
+    the second inequality is due to  
+    \eqref{7060_0} being true,
+    the equality is due to \eqref{7060_4},
+    the third inequality is due to the convexity of $g$
+    and the strict inequality is due to \eqref{7060_3}.
+    Thus every local minimum of $g$ in
+    $
+  y
+  \,
+  +
+  \,
+  \varepsilon
+  B
+    $
+    is also a global minimum.
+    %It follows the right-hand side of \eqref{7060_0}.
+\end{proof}
+Since 
+$
+(\lambda_0^\dagger,\lambda^\dagger)
+$
+is a global minimum (in $\R^{N+1}$) of the 
+objective function $G$ of Problem?, that is,
+\begin{gather*}
+  G(\lambda,\lambda_0)
+  \ 
+  :=
+  \ 
+    \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left[ 
+    \,
+  T_i
+  \cdot
+  f^*
+  \!
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \ 
+-
+\ 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \,
+  \right]
+  \ 
++
+\ 
+\inner
+{\delta}
+{|\lambda|}
+\,.
+\end{gather*}
+an immediate consequence of Lemma~\ref{bw:cd:lem} is
+\begin{gather*}
+   \P
+   \left[ 
+     \norm
+     {
+      \lambda ^ \dagger
+      -
+      \lambda^*
+     }_2
+     \le
+     \varepsilon
+   \right]
+   \
+   \ge
+   \ 
+   \P
+   \left[ 
+     \inf _ { 
+       \norm{
+         (
+     \Delta
+     ,
+     \Delta_0
+         )
+ } 
+= \varepsilon }
+     G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     -
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge 
+     0
+   \right]
+   \,.
+ \end{gather*}
+
+ To prove Theorem~\ref{bw:cd:th}
+ it thus suffices to prove
+ \begin{lemma}
+   Under the conditions of Theorem~\ref{bw:cd:th} it holds
+   for all $\varepsilon>0$
+\begin{gather}
+   \P
+   \left[ 
+     \inf _ { 
+       \norm{
+         (
+     \Delta
+     ,
+     \Delta_0
+         )
+ } 
+= \varepsilon }
+     G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     -
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge 
+     0
+   \right]
+   \ 
+   \to
+   \ 
+   1
+   \qquad
+   \text{for}
+   \ 
+   N\to\infty
+   \,.
+\end{gather}
+ \end{lemma}
+ \begin{proof}
+  Recall the objective function $G$ of Problem? 
+\begin{gather*}
+  G(\lambda,\lambda_0)
+  \ 
+  :=
+  \ 
+    \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left[ 
+    \,
+  T_i
+  \cdot
+  f^*
+  \!
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \ 
+-
+\ 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \,
+  \right]
+  \ 
++
+\ 
+\inner
+{\delta}
+{|\lambda|}
+\,.
+\end{gather*}
+   Since we assume the convex conjugate $f^*$ to be differentiable
+   (it always convex),
+without the last term, $G$ would be a differentiable convex function.
+
+It is well know that a differentiable convex functions $g$ satisfies
+  \begin{gather}
+    \label{cv:ts:concD}
+    g(x)-g(y)
+    \ge
+    \nabla
+    g(y)^\top
+    (x-y)
+    \qquad 
+    \text{for all}\ 
+    x,y\,.
+  \end{gather}
+  The gradient of
+  \begin{gather}
+    g := 
+    (\lambda,\lambda_0)
+    \mapsto
+    \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left[ 
+    \,
+  T_i
+  \cdot
+  f^*
+  \!
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \ 
+-
+\ 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \,
+  \right]
+  \end{gather}
+  is 
+
+  \begin{gather}
+    \nabla
+    g
+    =
+    (\lambda,\lambda_0)
+    \mapsto
+\frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left[ 
+    \,
+  T_i
+  \cdot
+  (f^{'})^{-1}
+  \!
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \ 
+-
+\ 
+1
+  \right]
+  [
+  B(X_i)^\top
+  ,
+  1
+  ]^\top
+  \end{gather}
+  Thus
+\begin{align}
+  \label{c:1}
+  \begin{split}
+     &
+   G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     \ 
+     -
+     \ 
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+         %%%%%%%%%%%%% 1 %%%%%%%%%%%%%%
+     \\
+     &
+     \quad
+     \ge
+     -
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left[ 
+       B(X_i)^\top,
+       1
+     \right]
+     \cdot
+     \begin{bmatrix}
+       \Delta\\
+       \Delta_0
+     \end{bmatrix}
+     \left( 
+       1
+       \ 
+       -
+       \ 
+     T_i
+     \cdot
+     (f^{'})^{-1}
+     \left( 
+       \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+     \right)
+     \right)
+     \\
+     &
+     \qquad
+     +
+     \ 
+     \inner
+     {\delta}
+     {
+       |\lambda^*+\Delta|
+       -
+       |\lambda^*|
+     }
+     \,.
+   \end{split}
+\end{align}
+
+ \end{proof}
+\end{proof}
+

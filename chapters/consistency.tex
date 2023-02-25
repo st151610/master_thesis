@@ -599,6 +599,7 @@ Next, we bound $M_N$.
 Recall that $\sum_{k=1}^{N}B_k(x)=1$. Thus
 \begin{align*}
   &
+\left| 
         \inner
        {B(X_i)}
        {\lambda^*}
@@ -611,21 +612,22 @@ Recall that $\sum_{k=1}^{N}B_k(x)=1$. Thus
         \ 
         f^{'}
         \left( 
-     \frac{1}{\P[T_i=1|X_i]}
+          \frac{1}{\pi(X_i)}
      \right)
+\right|
       \\
       &
       \ 
       =
       \ 
+      \left| 
       \sum_{k=1}^{N} 
       B_k(X_i)
       \left( 
-  \frac{1}{\P_X[A_N(X_k)]}
-  \int_{A_N(X_k)}
-  f^{'}\left( \frac{1}{\P[T_k=1|X_k=x]} \right)
-  \P_X(dx)
-  \ 
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_k)}
+     \right)
   -
   \ 
   \lambda_0^\dagger
@@ -634,37 +636,69 @@ Recall that $\sum_{k=1}^{N}B_k(x)=1$. Thus
       +
       \ 
       \lambda_0^\dagger
-      \\
-      &
-      \quad 
-        -
-        \ 
+      -
         f^{'}
         \left( 
-     \frac{1}{\P[T_i=1|X_i]}
+          \frac{1}{\pi(X_i)}
      \right)
+      \right|
       \\
       &
       \ 
       =
       \ 
+      \left| 
       \sum_{k=1}^{N} 
-      B_k(X)
-      \cdot
-  \frac{1}{\P_X[A_N(X_k)]}
-  \int_{A_N(X_k)}
-  f^{'}\left( \frac{1}{\P[T_k=1|X_k=x]} \right)
-  \P_X(dx)
-      \right)
-      \ 
-        -
-        \ 
+      B_k(X_i)
+      \left( 
         f^{'}
         \left( 
-     \frac{1}{\P[T_i=1|X_i]}
+          \frac{1}{\pi(X_k)}
      \right)
+     -
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_i)}
+     \right)
+      \right)
+      \right|
+      \\
+      &
+      \ 
+      \le
+      \ 
+      \sum_{k=1}^{N} 
+      \frac{1_{\left\{ X_k\in A_N(X_i) \right\}}}
+      {
+        \sum_{j=1}^{N} 
+1_{\left\{ X_j\in A_N(X_i) \right\}}
+      }
+      \left| 
+      \left( 
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_k)}
+     \right)
+     -
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_i)}
+     \right)
+      \right)
+      \right|
+      \\
+      &
+      \ 
+      \le
+      \ 
+      \omega
+      \left( f^{'}\circ (x\mapsto1/x)\circ \pi,h_N \right)
+      \to
+      0
       \,.
 \end{align*}
+Since $f^{'}$ is continuous, $\pi(x)\in(0,1)$ for all $x\in \mathrm{supp}\,X$ and the (assumed) continuity of $\pi$, and by $h_N\to 0$ for $N\to\infty$.
+Note, that this works because of the partitioning.
 
 
 %Next, we bound $M_N$.
@@ -855,19 +889,19 @@ we get
      \ge
      \ 
      -
-     \norm{\delta}
-     \norm{\Delta}
+     \norm{\delta}_1
+     \norm{\Delta}_\infty
      \ 
      \ge
      \ 
      -
-     \norm{\delta}
-     \norm{(\Delta,\Delta_0)}
+     \norm{\delta}_1
+     \norm{(\Delta,\Delta_0)}_2
      \ 
      \ge
      \ 
      -
-     \norm{\delta}
+     \norm{\delta}_1
      \varepsilon
      \ 
      \ge
@@ -877,7 +911,7 @@ we get
      \,,
 \end{align*}
 with probability going to $1$ as $N\to \infty$.
-The convergence is due to $\norm{\delta}$ converging to $0$ in probability.
+The convergence is due to $\norm{\delta}_1$ converging to $0$ in probability.
 \subsection*{Conclusion}
 With the analysis of the \textbf{first} and \textbf{second term} in
 \eqref{c:1} we conclude
