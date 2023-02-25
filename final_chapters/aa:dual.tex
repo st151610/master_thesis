@@ -613,7 +613,497 @@ It is well know that a differentiable convex functions $g$ satisfies
      \,.
    \end{split}
 \end{align}
+Next, we fix $
+\tilde{\varepsilon}
+>0
+$
+and establish in \eqref{c:1} the lower bound
+$
+-
+\tilde{\varepsilon}
+$
+with probability going to $1$ as $N\to\infty$.
+Then we conclude that this holds for all $\tilde{\varepsilon}>0$.
+The measurability of
+$
+G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     \ 
+     -
+     \ 
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+$
+will give us the lower bound 0 in \eqref{c:1} with probability going to $1$.
 
+In \eqref{c:1} we control the \textbf{first term} by (what?) 
+and the \textbf{second term} by $\norm{\delta}_1$.
+\subsection*{First Term}
+We note, that by $\norm{B(x)}_2\le 1$ for all $x\in\mathcal{X}$ and the Cauchy-Schwarz inequality
+it holds
+\begin{gather}
+  \label{c:first:0}
+      \left[ 
+       B(X_i)^\top,
+       1
+     \right]
+     \cdot
+     \begin{bmatrix}
+       \Delta\\
+       \Delta_0
+     \end{bmatrix}
+     \ 
+     \lesssim
+     \ 
+     \norm{(\Delta,\Delta_0)}
+     =\varepsilon
+     \,.
+\end{gather}
+Next, we see that
+\begin{align}
+  \label{c:first:1}
+  \begin{split}
+  &
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left( 
+       1
+       \ 
+       -
+       \ 
+     T_i
+     \cdot
+     (f^{'})^{-1}
+     \left( 
+       \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+     \right)
+     \right)
+     \\
+     &
+     \ 
+     \lesssim
+     \ 
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left|
+     1
+     -
+     \frac{T_i}{\pi(X_i)}
+     \right|
+      \ 
+     +
+      \ 
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left| 
+        \inner
+       {B(X_i)}
+       {\lambda^*}
+       +
+      \lambda^\dagger_0
+      \ 
+        -
+        \ 
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_i)}
+        \right)
+     \right|
+     \\
+     &
+     \ 
+     =:
+     \ 
+     S_N
+     \
+     +
+     \ 
+     M_N
+     \,.
+\end{split}
+\end{align}
+With $
+\tilde{\varepsilon}
+>0
+$
+fixed previously,
+we want to
+establish the upper bound
+$
+\tilde{\varepsilon}
+/
+(2\varepsilon)
+$
+with probability going to $1$ as $N\to\infty$.
+First, we bound $S_N$.
+By the properties of conditional expectation it holds
+\begin{gather*}
+  \E
+  \left[ 
+    \frac{T}{\pi(X)}
+  \right]
+  =
+  \E
+  \left[ 
+    \frac{\E[T|X]}{\pi(X)}
+  \right]
+  =1
+  \,.
+\end{gather*}
+Also
+\begin{gather}
+  \E
+  \left[ 
+    \left| 
+    1
+    -
+    \frac{T}{\pi(X)}
+    \right|
+  \right]
+  \le
+  1
+  +
+  \E
+  \left[ 
+    \frac{T}{\pi(X)}
+  \right]
+  =
+  2
+  \,.
+\end{gather}
+Thus Etemadi's ($\mathcal{L}_1$ version) strong law of large numbers (cf.\cite[Theorem~5.17]{Klenke2020}) applies
+to $S_N$, that is,
+$S_N \le 
+\tilde{\varepsilon}
+/
+(4\varepsilon)
+$
+with probability going to 1.
+Next, we bound $M_N$.
+Recall that $\sum_{k=1}^{N}B_k(x)=1$ for all $x\in\mathcal{X}$. Thus
+\begin{align*}
+  &
+\left| 
+        \inner
+       {B(X_i)}
+       {\lambda^*}
+      \ 
+       +
+      \ 
+      \lambda^\dagger_0
+      \ 
+        -
+        \ 
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_i)}
+     \right)
+\right|
+      \\
+      &
+      \ 
+      =
+      \ 
+      \left| 
+      \sum_{k=1}^{N} 
+      B_k(X_i)
+      \left( 
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_k)}
+     \right)
+  -
+  \ 
+  \lambda_0^\dagger
+      \right)
+      \ 
+      +
+      \ 
+      \lambda_0^\dagger
+      -
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_i)}
+     \right)
+      \right|
+      \\
+      &
+      \ 
+      =
+      \ 
+      \left| 
+      \sum_{k=1}^{N} 
+      B_k(X_i)
+      \left( 
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_k)}
+     \right)
+     -
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_i)}
+     \right)
+      \right)
+      \right|
+      \\
+      &
+      \ 
+      \le
+      \ 
+      \sum_{k=1}^{N} 
+      \frac{1_{\left\{ X_k\in A_N(X_i) \right\}}}
+      {
+        \sum_{j=1}^{N} 
+1_{\left\{ X_j\in A_N(X_i) \right\}}
+      }
+      \left| 
+      \left( 
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_k)}
+     \right)
+     -
+        f^{'}
+        \left( 
+          \frac{1}{\pi(X_i)}
+     \right)
+      \right)
+      \right|
+      \\
+      &
+      \ 
+      \le
+      \ 
+      \omega
+      \left( f^{'}\circ (x\mapsto1/x)\circ \pi,h_N \right)
+      \to
+      0
+      \qquad
+      \text{almost surely}
+      \,,
+\end{align*}
+where $\omega$ is the modulus of continuity.
+The convergence to 0 is due to $f^{'}$ being continuous, $\pi(x)\in(0,1)$ for all $x\in\mathcal{X}$ and the (assumed) continuity of $\pi$.
+Indeed, by $h_N\to 0$ for $N\to\infty$ it follows
+$
+      \omega
+      \left( f^{'}\circ (x\mapsto1/x)\circ \pi,h_N \right)
+      \to
+      0
+$
+.
+Note, that this works because of the partitioning.
+We conclude, that $
+M_N\le
+\tilde{\varepsilon}
+/
+(4\varepsilon)
+$
+with probability going to 1.
+
+This establishes the desired bound of 
+$
+\tilde{\varepsilon}/(2\varepsilon)
+$
+in \eqref{c:first:1}.
+Together with \eqref{c:first:0}
+we conclude that the \textbf{first term} 
+in
+\eqref{c:1}
+is bounded below by
+$
+-
+\tilde{\varepsilon}/2
+$
+with probability going to $1$ as $N\to\infty$.
+\subsection*{Second Term}
+It holds
+\begin{gather*}
+  |x+y|-|x|\ge
+  -|y|
+  \qquad
+  \text{for all}\ 
+  x,y
+  \,.
+\end{gather*}
+Since
+$\delta\ge 0$
+we get
+\begin{align*}
+  &
+     \inner
+     {\delta}
+     {
+       |\lambda^*+\Delta|
+       -
+       |\lambda^*|
+     }
+     \\
+     &
+     \ 
+     \ge
+     \ 
+     -
+     \inner{\delta}
+     {|\Delta|}
+     \ 
+     \ge
+     \ 
+     -
+     \norm{\delta}_1
+     \norm{\Delta}_\infty
+     \ 
+     \ge
+     \ 
+     -
+     \norm{\delta}_1
+     \norm{(\Delta,\Delta_0)}_2
+     \ 
+     \ge
+     \ 
+     -
+     \norm{\delta}_1
+     \varepsilon
+     \ 
+     \ge
+     \ 
+     -
+     \tilde{\varepsilon}/2
+     \,,
+\end{align*}
+with probability going to $1$ as $N\to \infty$.
+The convergence is due to $\norm{\delta}_1$ converging to $0$ in probability.
+\subsection*{Conclusion}
+With the analysis of the \textbf{first} and \textbf{second term} in
+\eqref{c:1} we conclude
+\begin{gather}
+  G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     \ 
+     -
+     \ 
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge
+     -
+     \tilde{\varepsilon}
+\end{gather}
+with probability going to $1$ as $N\to \infty$.
+A closer look reveils the measurability of 
+$
+  G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     \ 
+     -
+     \ 
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+$.
+Since this holds true for all $\tilde{\varepsilon}>0$ we get
+\begin{gather}
+  G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     \ 
+     -
+     \ 
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge
+     0
+\end{gather}
+with probability going to $1$ as $N\to \infty$.
+But this holds for all 
+$
+(\Delta,\Delta_0)
+$
+with 
+$
+\norm{
+(\Delta,\Delta_0)
+}
+=\varepsilon
+$. Thus
+\begin{gather}
+   \inf _ { 
+       \norm{
+         (
+     \Delta
+     ,
+     \Delta_0
+         )
+ } 
+= \varepsilon }
+     G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     -
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge 
+     0
+\end{gather}
+with probability going to $1$ as $N\to \infty$.
+We see, that this holds for all $\varepsilon>0$. This finish the proof.
  \end{proof}
+
 \end{proof}
 
