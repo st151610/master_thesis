@@ -241,16 +241,20 @@ the stochastic process
   \end{gather}
   Now both sums go over $\left\{ 1,\ldots,N \right\}$ and the
   indicator of treatment $T_i$ takes care that in the first sum only the terms with $i\le n$ are effective. 
-  Having this flexibility with the versions helps. I regard the firs version as suitable for non-probabilistic computations, although $n$ is of course a random variable. On the other hand, the second version is more honest, exactly telling the dependence on the indicator of treatment. This version is useful in probabilistic computations. 
+  Having this flexibility with the versions helps. I regard the first version as suitable for non-probabilistic computations, although $n$ is of course a random variable. On the other hand, the second version is more honest, exactly telling the dependence on the indicator of treatment. This version is useful in probabilistic computations. 
 
   Let's bound $R_1$.
   \begin{align}
-    &
+    \label{R_1:1}
+    \begin{split}
     \sup_{z\in\R}
     \left| 
     R_1(z)
     \right|
+    &
+    \ 
     =
+    \ 
     \sup_{z\in\R}
     \left| 
   \sqrt{N}
@@ -270,7 +274,9 @@ the stochastic process
     \right|
     \\
     &
+    \ 
     \le
+    \ 
   \sqrt{N}
   \sum_{k=1}^{N} 
   \left| 
@@ -288,37 +294,25 @@ the stochastic process
   F_{Y(1)}(z|X_k)
   \\
     &
+    \ 
     \le
+    \ 
   \sqrt{N}
-  \sum_{k=1}^{N} 
-  \delta_k
+  \norm{\delta}_1
+    \end{split}
   \end{align}
-  Playing around with norm equivalences we discover, that 
-  $\norm{\delta}_1\cdot\sqrt{N}\to 0$ is the weakest assumption to
-  get sufficient control over $R_1$ and the \textbf{second term}.
-  Indeed, different ways to bound are
-  $\norm{\delta}_2\cdot N$ 
-  \begin{gather}
-  \sqrt{N}
-  \sum_{k=1}^{N} 
-  \left| 
-  \frac{1}{N}
-  \left( 
-    \sum_{i=1}^{n} 
-    w(X_i)
-    B_k(X_i)
-    -
-    \sum_{i=1}^{N} 
-    B_k(X_i)
-  \right)
-  \right|
-    \sup_{z\in\R}
-  F_{Y(1)}(z|X_k)
-  \\
+  Playing around with norm equivalences we discover that 
+  $\sqrt{N}\norm{\delta}_1\to 0$ for $N\to \infty$ is the weakest
+  (natural) assumption to
+  control $R_1$.
+  Indeed, other ways to continue the second row in \eqref{R_1:1} are
+  \begin{gather*}
+    (\,\cdots)
+    \ 
   \le
+    \ 
   \sqrt{N}
   \norm{\delta}_2
-  \cdot
   \left( 
   \sum_{k=1}^{N} 
   \left( 
@@ -326,68 +320,233 @@ the stochastic process
   F_{Y(1)}(z|X_k)
   \right)^2
 \right)^{1/2}
-\\
+\ 
 \le
+\ 
 N
-  \norm{\delta}_2
-  \end{gather}
-  since 
+  \norm{\delta}_2\,,
+  \end{gather*}
+  by the Cauchy-Schwarz inequality and
   $
   F_{Y(1)}\in [0,1]
-  $.
-Or
-\begin{gather}
-  \sqrt{N}
-  \sum_{k=1}^{N} 
-  \left| 
-  \frac{1}{N}
-  \left( 
-    \sum_{i=1}^{n} 
-    w(X_i)
-    B_k(X_i)
-    -
-    \sum_{i=1}^{N} 
-    B_k(X_i)
-  \right)
-  \right|
-    \sup_{z\in\R}
-  F_{Y(1)}(z|X_k)
-  \\
+  $,
+or
+\begin{gather*}
+  (\,\cdots)
+  \ 
   \le
+  \ 
   \sqrt{N}
   \norm{\delta}_\infty
   \sum_{k=1}^{N} 
     \sup_{z\in\R}
   F_{Y(1)}(z|X_k)
-  \\
+  \ 
   \le
+  \ 
   N^{3/2}
   \norm{\delta}_\infty
-\end{gather}
-But it holds
-\begin{gather}
+  \,.
+\end{gather*}
+Since $\delta\in \R^N$, however, it holds
+\begin{gather*}
   \sqrt{N}\norm{\delta}_1
+  \ 
   \le
+  \ 
   N\norm{\delta}_2
+  \ 
   \le
+  \ 
   N^{3/2}\norm{\delta}_\infty
-\end{gather}
-Furthermore, the first occurence of $\delta$ is also covered.
-\begin{gather}
+  \,.
+\end{gather*}
+With hindsight, the assumption 
+  $\sqrt{N}\norm{\delta}_1\to 0$ for $N\to \infty$ 
+  also 
+  suffices 
+  to control the second (or first) occurrence of a term, that we control by assumptions on $\delta$.
+This is the \textbf{second term} of \eqref{c:1}, where we estimate
+\begin{gather*}
   \inner{\delta}{\left| \Delta \right|}
+  \ 
   =
+  \ 
   \sum_{k=1}^{N} 
   \delta_k
   \left| \Delta_k \right|
+  \ 
   \le
+  \ 
   \norm{\delta}_1
   \norm{\Delta}_\infty
+  \ 
   \le
+  \ 
   \norm{\delta}_1
   \norm{\Delta}_2
+  \ 
   \le
+  \ 
   \norm{\delta}_1
   \varepsilon
+  \ 
+  \to
+  \ 
+  0
+  \quad
+  \text{for}\ 
+  N\to \infty
+  \,.
+\end{gather*}
+\subsection*{Analysis of $R_2$}
+In the original paper \cite{Wang2019} the authors derive concrete learning rates for the weights and employ them in bounding this term. They obtain a multiplied learning rate, which is sufficiently fast. Their approach, however, calls for concrete learning rates of the weights. Arguably, the process of deriving such rates is the most complicated part of the paper. 
+I found out, that we don't need concrete rates for the weights. 
+Consistency of the weights is enough and gives us an (arbitrarily slow but sufficient) learning rate to establish the results.
+We don't even need rates for the weights to control $R_2$.
+They only play a role in bounding $R_3$.
+Nevertheless, we use the 
+second constraint of Problem~\eqref{bw:1:primal} 
+\begin{gather}
+  1
+  \ 
+  =
+  \ 
+\frac{1}{N}\sum_{i=1}^{n}w_i^\dagger
+  \ 
+  =
+  \ 
+\frac{1}{N}\sum_{i=1}^{n}w(X_i)
+  \ 
+=
+  \ 
+\frac{1}{N}\sum_{i=1}^{N}T_iw(X_i)
+\,.
+\end{gather}
+To this end, we note that
+\begin{align*}
+&
+  \sup_{z\in\R}
+  \left| 
+  F_{Y(1)}(z|X_i)
+  -
+  \sum_{k=1}^{N} 
+  B_k(X_i)
+  \cdot
+  F_{Y(1)}(z|X_k)
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \sum_{k=1}^{N} 
+  \frac{\mathbf{1}_{\left\{ X_k\in A_N(X_i) \right\}}}
+  {
+    \sum_{j=1}^{N} 
+\mathbf{1}_{\left\{ X_j\in A_N(X_i) \right\}}
+  }
+  \sup_{z\in\R}
+  \left| 
+  F_{Y(1)}(z|X_i)
+  -
+  F_{Y(1)}(z|X_k)
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \sup_{z\in\R}
+  \omega
+  \left( 
+    F_{Y(1)}(z|\cdot)
+    ,h_N
+  \right)
+  \,,
+\end{align*}
+where $\omega$ is the modulus of continuity and $h_N$ is the width of
+the partition $\mathcal{P}_N=\left\{A_{1,N},A_{2,N},\ldots  \right\}$.
+There are many (more concrete, yet stronger) assumptions on the regularity of
+$F_{Y(1)}$ and the width of the partition $h_N$ that give us
+\begin{gather}
+  \sqrt{N}
+  \sup_{z\in\R}
+  \omega
+  \left( 
+    F_{Y(1)}(z|\cdot)
+    ,h_N
+  \right)
+  \to
+  0
+  \qquad
+  \text{for}\ 
+  N\to \infty
   \,.
 \end{gather}
+But we shall keep this more general (and abstract) assumption.
+We conclude
+\begin{align*}
+&
+  \sup_{z\in\R}
+  \left| 
+  R_2(z)
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \sqrt{N}
+    \sum_{i=1}^{N} 
+    \left[ 
+  \frac{
+    T_i\cdot w(X_i) -1 }{N}
+  \sup_{z\in\R}
+    \left| 
+  F_{Y(1)}(z|X_i)
+    \ 
+    -
+    \ 
+    \sum_{k=1}^{N} 
+    B_k(X_i)
+    \cdot
+  F_{Y(1)}(z|X_k)
+    \right|
+    \right]
+    \\
+    &
+  \ 
+    \le
+  \ 
+    \sqrt{N}
+  \sup_{z\in\R}
+  \omega
+  \left( 
+    F_{Y(1)}(z|\cdot)
+    ,h_N
+  \right)
+  \sum_{i=1}^{N} 
+  \frac{
+    T_i\cdot w(X_i) +1 }{N}
+    \\
+    &
+  \ 
+    =
+  \ 
+    2
+    \sqrt{N}
+  \sup_{z\in\R}
+  \omega
+  \left( 
+    F_{Y(1)}(z|\cdot)
+    ,h_N
+  \right)
+  \ 
+  \to 
+  \ 
+  0\,.
+\end{align*}
+\subsection*{Analysis of R_3}
 \end{proof}
+
