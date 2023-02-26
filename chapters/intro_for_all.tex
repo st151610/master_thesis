@@ -1,104 +1,137 @@
+We know this question:
+How does action change outcome?
+I hope, some of us know this one too: 
+How should I guide my actions towards a better outcome?
+The first question is about causality, the second about ethics.
 
-%randomized trials versus observational studies
+What's the role of statistical analysis in this?
+It's a tool, a theory. Best known to the analyst. And feared by the rest?
+If you have not spent much time thinking about study design, this is a good way to start: 
+For an analyst: Ask yourself - Who acted? Who assigned treatments?
+For a researcher: Plan your study accurately. Ask yourself - How do we act? How do we assign treatment? Can we act?
 
-Is study design more important then statistical analysis?
+Let's say, we gather a sample from a study population, assign treatment (and forget about the process). Some units get the drug, others don't. Then the statistical analysis shows a strong correlation of treatment and outcome. We enjoy the thrill of discovering something and hurry to a supervisor. “How was treatment assigned", asks she. “I forgot", says you.
+“How do you know your analysis is correct?"“Why shouldn't it be?"
+“Why should it?!"
+Confused, you show her the data and you soon find out, that all units that received the drug are significantly taller than the rest of the sample.
+After all, is the drug or the height responsible for the outcome?
+You realise, that the data is worthless for answering your question.
+But you are lucky: It is just grass and fertiliser you were studying.
 
-I think, they are at least equal. 
+Now, you are assigned to a greater task. There is a new medication that needs testing before admitting it to the market. 
+A company shall recruit patients for the study, but beforehand you need to detail your design to the board. You carefully explain what measures you take to minimize risks for the participants.
+You do other things required in human research.
+In the process, you have to decide how to assign treatment.
+No hand waving will go unnoticed by the board. You talk to your supervisor.
+“Remember that this was a problem in your grass experiment?"
+“I wish, the distribution of the treatment was more random then. There were too many tall blades that got fertiliser."
+You decide to employ a random mechanism that fairly assigns treatment. The board waives your design. “Why didn't we write, that we are throwing a coin?" “Maybe, because research uses only sophisticated language?"
 
-But a bad analysis can be undone,
-whereas a bad design can not.
-
-You have to stick with the data.
-
-If you are not familiar with study design the distinction between randomized and observational study is helpful.
-
-If you read the literature and are unsure about the design of a study, ask for this terms.
-
-You are likely to find an answer.
-
-
-It is all about how we collect the data.
-
-Say, we want to test the effect of a drug in a study population.
-
-There usually are differences among the units of the study population.
-
-Some are more healthy than others.
-
-We form a treatment and control group, that is, one group takes the drug and the other doesn't.
-
-Then we compare the groups by their health. 
-
-Then a critcal review comes in. What do you mean by healthy.
-
-We mean this and that.
-
-It seems you did not consider this factor.
-
-Maybe the drug is not effective, but the effect we see in your analysis comes from something else.
-
-What do we answer to this?
-
-
-A good method to avoid this awkward situation is to randomize.
-
-For every unit of the population we toss a fair coin that decides if they get the drug.
-
-Now comes the critic.
-
-From the tables it seems there is an effect. But what about unknown influence?
-
-We answer: Does the coin now of them?
-
-It is not ideal, but this way you can prevent systematic damage to your analysis.
-
-
-What if we can't decide who gets treatment?
-
-Don't think treatment has to be something good, it should not carry any label of good or bad.
-
-But what about smoking?
-
-Would you smoke if a coin tells you to?
-
-So this is unethical.
-
-But it is also unethical not to investigate the effects of smoking on the health.
-
-Let's accept, that we sometimes (often?) can not control who gets treatment.
-
-Some smoke, some don't, and we mearly observe.
-
-This is typical example for an observational study.
-
-Honestly, this is an oversimplification, but I hope you get the point.
-
-Who still is insulted by the tone will maybe like\cite{Rubin2007}.
-
-%propensity score
-
-In \cite{Rubin2007} you will find the propensity score.
-
-The propensity score is the individual probability to receive treatment, that is,
-\begin{gather}
-  \P
-  [T=1|X]
-\end{gather}
-if $T$ is the random variable that decides abuot treatment and $X$ is the vector that carries your individual information.
-
-This concept goes back to \cite{Rosenbaum1983}.
-
-It is maybe worth to stop here and think about this definition and its connection to the two study designs.
-
-Discover it for yourself.
-
-\begin{reflection*}
-What is the propensity score in the above example.
-How does the propensity score behave in rs and os?
-\end{reflection*}
+The research term for this is randomization.
 
 
 
-
-
-
+%
+%%randomized trials versus observational studies
+%
+%Is study design more important then statistical analysis?
+%
+%I think, they are at least equal. 
+%
+%But a bad analysis can be undone,
+%whereas a bad design can not.
+%
+%You have to stick with the data.
+%
+%If you are not familiar with study design the distinction between randomized and observational study is helpful.
+%
+%If you read the literature and are unsure about the design of a study, ask for this terms.
+%
+%You are likely to find an answer.
+%
+%
+%It is all about how we collect the data.
+%
+%Say, we want to test the effect of a drug in a study population.
+%
+%There usually are differences among the units of the study population.
+%
+%Some are more healthy than others.
+%
+%We form a treatment and control group, that is, one group takes the drug and the other doesn't.
+%
+%Then we compare the groups by their health. 
+%
+%Then a critcal review comes in. What do you mean by healthy.
+%
+%We mean this and that.
+%
+%It seems you did not consider this factor.
+%
+%Maybe the drug is not effective, but the effect we see in your analysis comes from something else.
+%
+%What do we answer to this?
+%
+%
+%A good method to avoid this awkward situation is to randomize.
+%
+%For every unit of the population we toss a fair coin that decides if they get the drug.
+%
+%Now comes the critic.
+%
+%From the tables it seems there is an effect. But what about unknown influence?
+%
+%We answer: Does the coin now of them?
+%
+%It is not ideal, but this way you can prevent systematic damage to your analysis.
+%
+%
+%What if we can't decide who gets treatment?
+%
+%Don't think treatment has to be something good, it should not carry any label of good or bad.
+%
+%But what about smoking?
+%
+%Would you smoke if a coin tells you to?
+%
+%So this is unethical.
+%
+%But it is also unethical not to investigate the effects of smoking on the health.
+%
+%Let's accept, that we sometimes (often?) can not control who gets treatment.
+%
+%Some smoke, some don't, and we mearly observe.
+%
+%This is typical example for an observational study.
+%
+%Honestly, this is an oversimplification, but I hope you get the point.
+%
+%Who still is insulted by the tone will maybe like\cite{Rubin2007}.
+%
+%%propensity score
+%
+%In \cite{Rubin2007} you will find the propensity score.
+%
+%The propensity score is the individual probability to receive treatment, that is,
+%\begin{gather}
+%  \P
+%  [T=1|X]
+%\end{gather}
+%if $T$ is the random variable that decides abuot treatment and $X$ is the vector that carries your individual information.
+%
+%This concept goes back to \cite{Rosenbaum1983}.
+%
+%It is maybe worth to stop here and think about this definition and its connection to the two study designs.
+%
+%Discover it for yourself.
+%
+%\begin{reflection*}
+%What is the propensity score in the above example.
+%How does the propensity score behave in rs and os?
+%\end{reflection*}
+%
+%
+%
+%
+%
+%
