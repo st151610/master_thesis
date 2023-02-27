@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1677392261 "main.aux" "main.bbl" "main" 1677431776
+["bibtex main"] 1677478790 "main.aux" "main.bbl" "main" 1677478863
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1677148368 67595 3592a738195ce3c729dedb41dd0307a8 ""
-  "main.aux" 1677431775 11749 3e8c7d82f63339afe4f50476d2554043 "pdflatex"
+  "main.aux" 1677478863 11791 53e67e5a949286ace7ead1610f6dfac2 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1677431773 "main.tex" "main.pdf" "main" 1677431776
+["pdflatex"] 1677478860 "main.tex" "main.pdf" "main" 1677478863
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -215,7 +215,7 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1668447558 4278762 af3ac1370db81a450c1118eabf1fe718 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1668447517 2927666 1f051fb934722d94e995cdec3e18511c ""
-  "chapters/balancing_weights/an_new.tex" 1677323428 17241 0db6259ea6a01527c5a4e88ef5f38626 ""
+  "chapters/balancing_weights/an_new.tex" 1677478858 19795 c1a6c41cb786d3103bd6402b758bbbc8 ""
   "chapters/balancing_weights/intro_new.tex" 1677323919 19163 02805e33d369b246dde61343e98d9286 ""
   "chapters/balancing_weights/plug_in_est.tex" 1676120983 453 d28512e85af812d73659dc2328fd16f1 ""
   "chapters/convex_analysis/conjugate_calculus.tex" 1676045180 11850 a713624bef60ee862308fd524ef73662 ""
@@ -226,12 +226,12 @@
   "final_chapters/aa:dual.tex" 1677334668 16186 3d5496e4bd32f61868f3b97c68b36718 ""
   "final_chapters/aa:weights.tex" 1677335295 1446 6f20894e9e02ead395f77894e40a959f ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1677431775 11749 3e8c7d82f63339afe4f50476d2554043 "pdflatex"
-  "main.bbl" 1677392261 3668 aa560437c6571153ac46c8d99ba1f702 "bibtex main"
+  "main.aux" 1677478863 11791 53e67e5a949286ace7ead1610f6dfac2 "pdflatex"
+  "main.bbl" 1677478790 3668 aa560437c6571153ac46c8d99ba1f702 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
   "main.tdo" 0 -1 0 "pdflatex"
   "main.tex" 1677326536 9978 755cd02f04d07932a78b702decd2c9de ""
-  "main.toc" 1677431775 1104 52a65afb8113ca13875d492c56c093ce "pdflatex"
+  "main.toc" 1677478863 1104 7b55e6e99aae655fbdfede876fb0f09b "pdflatex"
   (generated)
   "main.aux"
   "main.log"
