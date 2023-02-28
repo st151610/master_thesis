@@ -49,7 +49,14 @@ The weights should satisfy (in a broader sense)
 One class of such weights has been recently analyzed in \cite{Wang2019}.
 We take ideas and extend.
 
-\subsection*{The algorithm}
+\subsection*{My Contribution}
+I analyse the full optimization problem. In \cite{Wang2019} only the box constraints are considered.
+To eliminate the constraints on the dual variable of the first constraint in the primal optimization problem I need $f^*$ to be strictly non-decreasing. This excludes the sample variance as an objective function, but the negative entropy still works.
+For technical reasons I change the box constraints. I discussed this change with the authors of \cite{Wang2019}. They approve it, because the method remains in tact.
+I consider a different regression basis. In \cite{Wang2019} they use sieve estimator \cite{Newey1997a}, whereas I chose the simpler partitioning estimate of \cite{Gyorfi2002}.
+The benefit of my method is, that I can work with a concrete oracle parameter.
+Also the basis of partitioning estimates forms a convex combination and is bounded. Thus I can avoid the use of matrix concentration inequalities as in \cite{Wang2019}.
+
 \begin{fproblem}
   \label{bw:1:primal}
 \begin{align*}
@@ -649,6 +656,8 @@ The euclidian norm of the basis functions is bounded above by $1$.
 %
 In the sequel we mainly work with the dual problem.
 
+\subsection*{My Contribution}
+I found important errors in the proof of a similar theorem in \cite{Wang2019}. After talking to the authors, I came up with a corrected proof. The Theorem has to be changed, but it becomes simpler. The key is to find the right matrix notation of the primal optimization problem. I adapted tools from convex analysis to make the proof work.
 \section*{Dual Problem}
 \begin{ftheorem}
   \label{dual_solution_th}

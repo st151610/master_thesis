@@ -1176,6 +1176,8 @@ INPUT chapters/intro_for_all.tex
 INPUT ./chapters/intro_for_all.tex
 INPUT chapters/intro_for_all.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
 INPUT ./chapters/true_intro.tex
 INPUT chapters/true_intro.tex
@@ -1185,13 +1187,15 @@ INPUT ./chapters/balancing_weights/intro_new.tex
 INPUT chapters/balancing_weights/intro_new.tex
 INPUT ./chapters/balancing_weights/intro_new.tex
 INPUT chapters/balancing_weights/intro_new.tex
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT ./final_chapters/ebw:dual_formulation.tex
+INPUT final_chapters/ebw:dual_formulation.tex
+INPUT ./final_chapters/ebw:dual_formulation.tex
+INPUT final_chapters/ebw:dual_formulation.tex
 INPUT ./final_chapters/aa:dual.tex
 INPUT final_chapters/aa:dual.tex
 INPUT ./final_chapters/aa:dual.tex
