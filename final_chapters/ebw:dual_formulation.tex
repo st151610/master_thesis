@@ -1,3 +1,699 @@
+We consider a study population in which we want to test the effect of a treatment.
+We introduce the \textbf{indicator of treatment} $T\in \left\{ 0,1 \right\}$.
+For each treatment level there exist the \textbf{marginal potential outcomes}
+$(Y(0),Y(1))$. We would like to estimate $\E[Y(1)]$. If we succeed the same technique
+shall yield an estimate of $\E[Y(0)]$. We shall compare $\E[Y(1)]$ and $\E[Y(0)]$ and 
+find out something about the effect of the treatment in the population.
+
+The data we acquire is independent and identically distributed. But usually
+\begin{gather}
+  Y(1)|T=1 \nsim Y(1) 
+  \,,
+\end{gather}
+that is, $T=1$ carries more information than observing the outcome under treatment.
+We say that $Y(1)|T=1$ is \textbf{confounded}. To extract that plus of information from $T=1$ and put it where it belongs by collecting more data.
+We gather it in $X\in \R^d$ and assume
+\begin{gather}
+  (Y(0),Y(1))
+  \perp
+  T
+  \ 
+  |
+  \ 
+  X
+  \,,
+\end{gather}
+that is, \textbf{conditional unconfoundedness}.
+Thus, we end up collecting $N\in \mathbb{N}$ independent and identically distributed copies of 
+$(T,X,Y(T))$. For convenience, we assume that the first $n\in \mathbb{N}$ copies have $T=1$.
+
+A natural estimator for $\E[Y(1)]$ is the weighted mean
+\begin{gather}
+  \frac{1}{n}
+  \sum_{i=1}^{n} 
+  w_i Y_i
+  \,.
+\end{gather}
+The weights should satisfy (in a broader sense)
+\begin{gather}
+  w_i\cdot Y_i \to Y(1)
+  \qquad 
+  \text{for}\ 
+  N
+  \ 
+  \to
+  \ 
+  \infty
+  \,.
+\end{gather}
+One class of such weights has been recently analyzed in \cite{Wang2019}.
+We take ideas and extend.
+
+\subsection*{My Contribution}
+I analyse the full optimization problem. In \cite{Wang2019} only the box constraints are considered.
+To eliminate the constraints on the dual variable of the first constraint in the primal optimization problem I need $f^*$ to be strictly non-decreasing. This excludes the sample variance as an objective function, but the negative entropy still works.
+For technical reasons I change the box constraints. I discussed this change with the authors of \cite{Wang2019}. They approve it, because the method remains in tact.
+I consider a different regression basis. In \cite{Wang2019} they use sieve estimator \cite{Newey1997a}, whereas I chose the simpler partitioning estimate of \cite{Gyorfi2002}.
+The benefit of my method is, that I can work with a concrete oracle parameter.
+Also the basis of partitioning estimates forms a convex combination and is bounded. Thus I can avoid the use of matrix concentration inequalities as in \cite{Wang2019}.
+
+\begin{fproblem}
+  \label{bw:1:primal}
+\begin{align*}
+  %%%% objective %%%%
+    &\underset{w_1, \ldots, w_n \in \R}
+    {\text{minimize}}
+    &&\qquad\qquad
+    \sum_{i = 1}^{n} 
+    f(w_i)
+    &&&
+    \\
+    %%%% w_i T_i >= 0 %%%%
+    &\text{subject to}
+    &&\qquad\qquad
+    w_i 
+    \ge
+    0
+    &&&
+    \qquad
+    \text{for all}\ 
+    i \in \left\{ 1, \ldots, n \right\}
+    \,,
+    \\
+    %%%% 1/n sum w = 1 %%%%
+    & 
+    &&\qquad\qquad
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    =1
+    \\
+    %%%% box constraints %%%%
+    & 
+    &&\qquad
+    \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{n} 
+      w_i
+      B_k(X_i)
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    &&&
+    \qquad
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, N \right\}
+    \,.
+\end{align*}
+\end{fproblem}
+This is a (convex) optimization problem. We will talk about the \textbf{objective function} $f$ and
+the \textbf{equality} and \textbf{inequality constraints}, especially about the 
+\textbf{regression basis} $B$.
+
+\section*{Objective Function}
+Strictly speaking, we consider the sum
+\begin{gather}
+  [w_1,\ldots,w_n]^\top
+  \ 
+  \mapsto
+  \ 
+  \sum_{i=1}^{n} 
+  f(w_i)
+\end{gather}
+as the objective function. It is natural to consider the dual formulation of the optimization problem. This involves the \textbf{convex conjugate}(cf.Definition~?) of the original objective function. We show in Example that for the sum this is
+\begin{gather}
+  [\lambda_1,\ldots,\lambda_n]^\top
+  \ 
+  \mapsto
+  \ 
+  \sum_{i=1}^{n} 
+  f^*(\lambda_i)
+\end{gather}
+where $f^*$ is the Legendre transformation of $f$.
+
+In the sequel we need $f$ to be strictly convex and its convex conjugate (or Legendre transformation) to be continuously differentiable and strictly non-decreasing.
+Two popular choices of $f$ are the \textbf{negative entropy} and the \textbf{sample variance}.
+\subsection*{Negative Entropy}
+We define the negative entropy to be
+\begin{gather}
+  f
+  \colon
+  [0,\infty)
+  \to
+  \R
+  ,\quad
+  w
+  \mapsto
+  \begin{cases}
+    0\quad\text{if}\ w=0,\\
+    w\log w\quad
+    \text{else}.
+  \end{cases}
+\end{gather}
+It is strictly convex. To compute its Legendre transformation we note, that
+\begin{gather}
+  (f^{'})^{-1}
+  =
+  \lambda\mapsto
+  e^{\lambda-1}
+\end{gather}
+Thus
+  \begin{align*}
+  f^*
+  (\lambda)
+  &
+  \ 
+  =
+  \ 
+  \lambda
+    \cdot
+    (f^{'})^{-1}(\lambda)
+  \ 
+    -
+  \ 
+    f
+    \left( 
+      (f^{'})^{-1}(\lambda)
+    \right)
+    \\
+  &
+  \ 
+  =
+  \ 
+  \lambda
+    \cdot
+  e^{\lambda-1}
+  \ 
+    -
+  \ 
+  e^{\lambda-1}
+  \log
+  \left( 
+  e^{\lambda-1}
+  \right)
+  \\
+  &
+  \ 
+  =
+  \ 
+  e^{\lambda-1}
+  \,.
+  \end{align*}
+  Thus $f^*$ is smooth and strictly non-decreasing.
+
+
+  \subsection*{Sample Variance}
+We define the sample variance to be
+\begin{gather}
+  f
+  \colon
+  \R
+  \to
+  \R
+  ,\quad
+  w
+  \mapsto
+  (w-1/n)^2
+\end{gather}
+It is strictly convex. To compute its Legendre transformation we note, that
+\begin{gather}
+  (f^{'})^{-1}
+  =
+  \lambda\mapsto
+  \frac{\lambda}{2}
+  +
+  \frac{1}{n}
+\end{gather}
+Thus
+  \begin{align*}
+  f^*
+  (\lambda)
+  &
+  \ 
+  =
+  \ 
+  \lambda
+    \cdot
+    \left( 
+  \frac{\lambda}{2}
+  +
+  \frac{1}{n}
+    \right)
+  \ 
+    -
+  \ 
+    \left( 
+    \left( 
+  \frac{\lambda}{2}
+  +
+  \frac{1}{n}
+    \right)
+    -
+    \frac{1}{n}
+    \right)
+    ^2
+    \\
+  &
+  \ 
+  =
+  \ 
+  \frac{\lambda^2}{4}
+  +
+  \frac{\lambda}{n}
+  \,.
+  \end{align*}
+  Thus $f^*$ is smooth.
+  To eliminate some variables in the optimization problem,
+  we need $f^*$ also to be
+  strictly non-decreasing. But the sample variance violates this assumption.
+
+\section*{Constraints}
+Let's turn our attention to the constraints.
+The first constraint makes sure we do not extrapolate from the poputation.
+The second constraint norms the weights. 
+The third constraint controls the bias of the resulting estimator.
+\section*{Regression Basis}
+We adopt partitioning estimates from\cite{Gyorfi2002}. Another angle would be sieve estimates\cite{Newey1997a} where the number of basis functions can grow slower than $N$.
+%Their notion of (weak) consistency~\cite[Definitien~1.1]{Gyorfi2002} for noiseless estimands
+%is
+%\begin{gather}
+%  \E
+%  \left[ 
+%    \int_\mathcal{X}
+%    \left| 
+%    \sum_{k=1}^{N} 
+%    B_k(x)
+%    \cdot
+%    m(X_k)
+%    -
+%    m(x)
+%    \right|
+%    ^2
+%    \P_X(dx)
+%  \right]
+%  \to
+%  0
+%  \qquad
+%  \text{as}
+%  \ 
+%  n\to \infty
+%  \,.
+%\end{gather}
+%Universal consistency in this sense holds, if this is true for all distributions with
+%$\E[m(X)^2]<\infty$(cf.\cite[Definition~1.3]{Gyorfi2002}).
+%
+%We adopt a slightly different notion of consistency. The next theorem dose the translation work. 
+%\begin{theorem}
+%  Assume
+%  $\E[m(X)^2]<\infty$
+%  and the basis function are 
+%(weak) universal consistency in the sense of 
+%\cite[Definitien~1.3]{Gyorfi2002}.
+%Then it holds for all $\varepsilon>0$
+%\begin{gather}
+%  \P
+%  \left[ 
+%    \left| 
+%    \sum_{k=1}^{N} 
+%    B_k(X)
+%    \cdot
+%    m(X_k)
+%    -
+%    m(X)
+%    \right|
+%    \ge
+%    \varepsilon
+%  \right]
+%  \to
+%  0
+%  \qquad
+%  \text{as}
+%  \ 
+%  n\to \infty
+%  \,.
+%\end{gather}
+%\end{theorem}
+%\begin{proof}
+%  By Markov's inequality it holds
+%  \begin{align*}
+%    &
+%  \P
+%  \left[ 
+%    \left| 
+%    \sum_{k=1}^{N} 
+%    B_k(X)
+%    \cdot
+%    m(X_k)
+%    -
+%    m(X)
+%    \right|
+%    \ge
+%    \varepsilon
+%  \right]
+%  \\
+%  &
+%  \ 
+%  \le
+%  \ 
+%  \frac
+%  {
+%  \E
+%  \left[ 
+%    \left| 
+%    \sum_{k=1}^{N} 
+%    B_k(X)
+%    \cdot
+%    m(X_k)
+%    -
+%    m(X)
+%    \right|
+%    ^2
+%  \right]
+%  }
+%  {\varepsilon^2}
+%  \\
+%  &
+%  \ 
+%  =
+%  \ 
+%  \frac
+%  {
+%  \E
+%  \left[ 
+%    \E
+%    \left[ 
+%    \left| 
+%    \sum_{k=1}^{N} 
+%    B_k(X)
+%    \cdot
+%    m(X_k)
+%    -
+%    m(X)
+%    \right|
+%    ^2
+%    |
+%    X_1,
+%    \ldots,
+%    X_N
+%    \right]
+%  \right]
+%  }
+%  {\varepsilon^2}
+%  \\
+%  &
+%  \ 
+%  =
+%  \ 
+%  \frac
+%  {
+%  \E
+%  \left[ 
+%    \int_\mathcal{X}
+%    \left| 
+%    \sum_{k=1}^{N} 
+%    B_k(x)
+%    \cdot
+%    m(X_k)
+%    -
+%    m(x)
+%    \right|
+%    ^2
+%    \P_X(dx)
+%  \right]
+%  }
+%  {\varepsilon^2}
+%  \,.
+%  \end{align*}
+%  The last equality is due to \cite[(1.2)]{Gyorfi2002}.
+%  By the weak universal consistency of $B$
+%  the last expression goes to $0$ as $N\to \infty$.
+%\end{proof}
+%
+%Classical choices of the basis functions are \textbf{partitioning estimates} and 
+%\textbf{kernel estimates}(cf.\cite[§4,§5]{Gyorfi2002}).
+%
+\subsection*{Partitioning Estimates}
+We consider a partition
+$
+  \mathcal{P}_N
+  =
+  \left\{ 
+    A_{N,1}
+    ,
+    A_{N,2}
+    ,
+    \ldots
+  \right\}
+$
+of $ \R^d $
+and define
+$ A_N(x) $ to be the cell of $ \mathcal{P}_N $ containing $x$.
+We define $N$ basis functions $B_k$ of the covariates by
+\begin{gather*}
+  B_k(x)
+  :=
+  \frac{
+  \mathbf{1}_{X_k \in A_N(x)}
+  }{
+  \sum_{j=1}^{N} 
+  \mathbf{1}_{X_j \in A_N(x)}
+  }
+  \,,
+  \qquad
+  k=
+  1,\ldots,N
+  \,.
+\end{gather*}
+The euclidian norm of the basis functions is bounded above by $1$.
+\begin{gather*}
+  \norm{B(x)}^2
+  =
+  \sum_{k=1}^{n} 
+  \left( 
+  \frac{
+  \mathbf{1}_{X_k \in A_n(x)}
+  }{
+  \sum_{j=1}^{n} 
+  \mathbf{1}_{X_j \in A_n(x)}
+  }
+  \right)
+  ^2
+  \le
+  \sum_{k=1}^{n} 
+  \frac{
+  \mathbf{1}_{X_k \in A_n(x)}
+  }{
+  \sum_{j=1}^{n} 
+  \mathbf{1}_{X_j \in A_n(x)}
+  }
+  =1
+  \,.
+\end{gather*}
+%Under mild conditions, the basis functions are universally consistent.
+%\begin{theorem}
+%  \label{bw:i:bf:pe:th:c}
+%  If for each sphere $S$ centered at the origin 
+%  \begin{gather}
+%    \max
+%    _
+%    {
+%      j\colon
+%      A_{N,j} 
+%      \cap
+%      S
+%      \neq
+%      \emptyset
+%    }
+%    \mathrm{diam}
+%    \ 
+%      A_{N,j} 
+%      \ 
+%      \to
+%      \ 
+%      0
+%      \qquad
+%      \text{for}\ 
+%      N\to \infty 
+%  \end{gather}
+%  and
+%  \begin{gather}
+%    \frac
+%    {
+%    \#
+%    \left\{  
+%      j\colon
+%      A_{N,j} 
+%      \cap
+%      S
+%      \neq
+%      \emptyset
+%    \right\}
+%    }
+%    {N}
+%      \ 
+%      \to
+%      \ 
+%      0
+%      \qquad
+%      \text{for}\ 
+%      N\to \infty 
+%  \end{gather}
+%  then the partitioning regression function estimate 
+%  (definition)
+%  is
+%  universally consistent (definition).
+%\end{theorem}
+%\begin{proof}
+%  \cite[Theorem~4.2.]{Gyorfi2002}
+%\end{proof}
+%\begin{corollary}
+%Assume
+%  $\E[m(X)^2]<\infty$
+%  and the basis functions $B$ belong to a partitioning estimate.
+%  Furthermore assume that the conditions of 
+%  Theorem~\ref{bw:i:bf:pe:th:c} are met.
+%Then it holds for all $\varepsilon>0$
+%\begin{gather}
+%  \P
+%  \left[ 
+%    \left| 
+%    \sum_{k=1}^{N} 
+%    B_k(X)
+%    \cdot
+%    m(X_k)
+%    -
+%    m(X)
+%    \right|
+%    \ge
+%    \varepsilon
+%  \right]
+%  \to
+%  0
+%  \qquad
+%  \text{as}
+%  \ 
+%  n\to \infty
+%  \,.
+%\end{gather}
+%\end{corollary}
+%\subsection*{Kernel Estimates}
+%Let $K\colon \R^d\to [0,1]$ (bounded kernel) and $h_n>0$ (bandwith).
+%For examples see \cite[§5.1.]{Gyorfi2002}.
+%We define
+%\begin{gather}
+%  B_k(x)
+%  :=
+%  \frac
+%  {
+%    K \left( \frac{x-X_k}{h_n} \right)
+%  }
+%  {
+%    \sum_{i=1}^{N} 
+%    K \left( \frac{x-X_i}{h_n} \right)
+%  }
+%  \,.
+%\end{gather}
+%By the boundedness of the kernel it follows
+%$\norm{B(x)}\le 1$.
+%\begin{theorem}
+%  \label{bw:i:bf:ke:th:c}
+%  Assume that there are 
+%  balls
+%  $S_{0,r}$ of radius $r$ 
+%  and
+%  balls
+%  $S_{0,R}$ of radius $R$ 
+%  centered at the origin with $0<r\le R$, and a constant $b>0$ such that
+%  \begin{gather}
+%    \mathbf{1}_{\left\{ x\in S_{0,R} \right\}}
+%    \ge
+%    K(x)
+%    \ge
+%    b
+%    \cdot
+%    \mathbf{1}_{\left\{ x\in S_{0,r} \right\}}
+%  \end{gather}
+%\end{theorem}
+%(boxed kernel). Then for bandwiths with $h_n\to0$ and
+%$n\cdot h_n^d\to\infty$ as $n\to \infty$ the kernel estimate is weakly universally consistent.
+%\begin{corollary}
+%Assume
+%  $\E[m(X)^2]<\infty$
+%  and the basis functions $B$ belong to a kernel estimate.
+%  Furthermore assume that the conditions of 
+%  Theorem~\ref{bw:i:bf:ke:th:c} are met.
+%Then it holds for all $\varepsilon>0$
+%\begin{gather}
+%  \P
+%  \left[ 
+%    \left| 
+%    \sum_{k=1}^{N} 
+%    B_k(X)
+%    \cdot
+%    m(X_k)
+%    -
+%    m(X)
+%    \right|
+%    \ge
+%    \varepsilon
+%  \right]
+%  \to
+%  0
+%  \qquad
+%  \text{as}
+%  \ 
+%  n\to \infty
+%  \,.
+%\end{gather}
+%\end{corollary}
+%
+In the sequel we mainly work with the dual problem.
+
+\subsection*{My Contribution}
+I found important errors in the proof of a similar theorem in \cite{Wang2019}. After talking to the authors, I came up with a corrected proof. The Theorem has to be changed, but it becomes simpler. The key is to find the right matrix notation of the primal optimization problem. I adapted tools from convex analysis to make the proof work.
+
+We introduce some more notation. Let $\mathbf{I}_n$ be the $n$-dimensional unit matrix, $\mathrm{0}_n$ and $\mathrm{1}_n$ the $n$-dimensional vectors containing only zeros or ones.
+Also we define the vector of basis functions of the covariates of unit 
+$i\in \left\{ 1,\ldots,N \right\}$ to be
+\begin{gather*}
+     B(X_i)
+    \ 
+    :=
+    \ 
+    \left[ 
+      B_1(X_i)
+      ,
+      \ldots
+      ,
+      B_N(X_i)
+    \right]
+    ^\top
+    \in
+    \R^N
+    \,.
+\end{gather*}
+Let $\delta:=[\delta_1,\ldots,\delta_N]^\top\in \R^N$ be the vector of upper bounds in the box constraints of Problem~\ref{bw:1:primal}.
+Furthermore, we define the matrix of basis functions \textbf{for the treated} to be
+\begin{gather*}
+    \mathbf{B}(\mathbf{X})
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      B(X_1), \ldots, B(X_n)
+    \end{bmatrix}
+    \in\R^{N\times n}
+    \,.
+\end{gather*}
+Note, that these are random quantities and that the size of $\mathbf{B}(\mathbf{X})$ depends on the random size $n\in\mathbb{N}$ of the treatment group in the sample.
+
 \begin{ftheorem}
   \label{dual_solution_th}
   The dual of 
@@ -134,41 +830,6 @@
     \,.
   \end{gather*}
 \end{ftheorem}
-
-\newpage
-We introduce some more notation. Let $\mathbf{I}_n$ be the $n$-dimensional unit matrix, $\mathrm{0}_n$ and $\mathrm{1}_n$ the $n$-dimensional vectors containing only zeros or ones.
-Also we define the vector of basis functions of the covariates of unit 
-$i\in \left\{ 1,\ldots,N \right\}$ to be
-\begin{gather*}
-     B(X_i)
-    \ 
-    :=
-    \ 
-    \left[ 
-      B_1(X_i)
-      ,
-      \ldots
-      ,
-      B_N(X_i)
-    \right]
-    ^\top
-    \in
-    \R^N
-    \,.
-\end{gather*}
-Furthermore, we define the matrix of basis functions \textbf{for the treated} to be
-\begin{gather*}
-    \mathbf{B}(\mathbf{X})
-    \ 
-    :=
-    \ 
-    \begin{bmatrix}
-      B(X_1), \ldots, B(X_n)
-    \end{bmatrix}
-    \in\R^{N\times n}
-    \,.
-\end{gather*}
-Note, that these are random quantities and that the size of $\mathbf{B}(\mathbf{X})$ depends on the random size $n\in\mathbb{N}$ of the treatment group in the sample.
 \begin{lemma}
   \label{matrix_notation}
   A matrix formulation of Problem~\ref{bw:1:primal} is 
@@ -273,8 +934,64 @@ d
     \,.
 \end{alignat*}
 \end{lemma}
+
 \begin{proof}
-  A simple calculation yields the result. We omit the details.
+  Recall the box constraints of Problem~\ref{bw:1:primal}.
+  \begin{gather*}
+        \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{n} 
+      w_i
+      B_k(X_i)
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    \qquad
+    \text{for all}\ 
+    k\in \left\{ 1,\ldots,N \right\}
+    \,.
+  \end{gather*}
+  A different notation is
+  \begin{align*}
+      \sum_{i = 1}^{n} 
+      w_i
+      B_k(X_i)
+      &
+    \ 
+    \le 
+    \ 
+    N
+    \delta_k
+      +
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+    \intertext{and}
+      \sum_{i = 1}^{n} 
+      w_i
+      B_k(X_i)
+      &
+    \ 
+    \ge 
+    \ 
+    -
+    N
+    \delta_k
+      +
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+  \end{align*}
+  for all 
+  $
+    k\in \left\{ 1,\ldots,N \right\}
+  $. But this is $\pm\mathbf{B}(\mathbf{X})w\ge d$.
+  Proving the rest of the statements is easy. We omit the details.
 \end{proof}
 \begin{remark}
   The inequality constraints of
@@ -285,4 +1002,402 @@ d
   \cite[Proof of Lemma~1]{Wang2019} leads to a mistake on page 21.
   The mistake is most obvious in the second display, where the first implication follows from dividing by 0. I discussed this with the authors and proposed a version of Lemma\ref{matrix_notation} to solve the problem. I think it's best not to transform variables, because the mistake comes from (wrongly) calculating the convex conjugate of the (more complicated) transformed version of the objective function. The subsequent analysis even simplifies with my version.
 \end{remark}
+\begin{lemma}
+  \label{lemma_dual_app}
+  Let 
+  $
+    \rho\in\R^n
+  $
+  and
+  $
+    \lambda^+,\lambda^-\in\R^N
+  $
+  . For 
+  \begin{gather}
+    \lambda_d
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      \rho\\
+      \lambda^+\\
+      \lambda^-
+    \end{bmatrix}
+    \qquad
+    \text{and}\ 
+    \qquad
+    \lambda_a\ :=\ \lambda_0\in\R
+  \end{gather}
+  the dual optimization problem in the spirit of Theorem~\ref{cv:ts:th} of the matrix formulation in 
+  Lemma~\ref{matrix_notation}
+  is
+  \begin{alignat*}{2}
+    \label{cv:ts:dual}
+  %%%% objective %%%%
+    &\underset{
+    \rho,\lambda^+,\lambda^-,\lambda_0
+  }
+    {\mathrm{maximize}}
+    &&\qquad
+  G(\rho,\lambda^+,\lambda^-,\lambda_0)
+    \quad
+    \\
+    %%%% Ax >= b %%%%
+    \nonumber
+    &\mathrm{subject}\ \mathrm{to} 
+    &&\qquad\qquad
+    \rho,\lambda^+,\lambda^-
+    \ 
+    \ge
+    \ 
+    0
+    \,,
+\end{alignat*}
+where
+\begin{align*}
+  G(\rho,\lambda^+,\lambda^-,\lambda_0)
+  &
+  \ 
+  :=
+  \ 
+    -
+    \sum_{i=1}^{n} 
+    f^*
+    \left( 
+      \rho_i
+      \ 
+      +
+      \ 
+      \inner{B(X_i)}{\lambda^+-\lambda^-}
+      \ 
+      +
+      \ 
+      \lambda_0
+    \right)
+    \\
+    &
+    \qquad 
+    +
+    \ 
+    \sum_{i=1}^{N} 
+    \left( 
+      \inner{B(X_i)}{\lambda^+-\lambda^-}
+      \ 
+      +
+      \ 
+      \lambda_0
+    \right)
+    \\
+    &
+    \qquad 
+    -
+    \ 
+    N
+    \inner{\delta}{\lambda^++\lambda^-}
+    \,.
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+  We show in Example? the convex conjugate relationship
+\begin{align*}
+  \varphi
+  &
+  \ 
+  :
+  \ 
+  \R^n
+  \to
+  \ 
+  \overline{\R}
+  \,
+  ,
+  \qquad
+  [w_1,\ldots,w_n]^\top
+  \ 
+  \mapsto
+  \ 
+  \sum_{i=1}^n f(w_i)
+  \,,
+  \\
+  \varphi^*
+  &
+  \ 
+  :
+  \ 
+  \R^n
+  \to
+  \ 
+  \overline{\R}
+  \,
+  ,
+  \qquad
+  [w^*_1,\ldots,w^*_n]^\top
+  \ 
+  \mapsto
+  \ 
+  \sum_{i=1}^n f^*(w^*_i)
+  \,.
+\end{align*}
+  The rest of the proof consists of elementary computations. We omit the details.
+\end{proof}
+\begin{proof}\emph{(Theorem~\ref{dual_solution_th})}
+  We eliminate the constraints in the dual problem of 
+  Lemma~\ref{lemma_dual_app}.
+  Since we assume $f^*$ to be strictly non-decreasing and $\rho\ge0$, it follows that $\rho=\mathrm{0}_n$ is optimal.
+  Thus, we consider the updated objective function $G$, that is,
+\begin{align*}
+  G(\lambda^+,\lambda^-,\lambda_0)
+  &
+  \ 
+  :=
+  \ 
+    -
+    \sum_{i=1}^{n} 
+    f^*
+    \left( 
+      \inner{B(X_i)}{\lambda^+-\lambda^-}
+      \ 
+      +
+      \ 
+      \lambda_0
+    \right)
+    \\
+    &
+    \qquad 
+    +
+    \ 
+    \sum_{i=1}^{N} 
+    \left( 
+      \inner{B(X_i)}{\lambda^+-\lambda^-}
+      \ 
+      +
+      \ 
+      \lambda_0
+    \right)
+    \\
+    &
+    \qquad 
+    -
+    \ 
+    N
+    \inner{\delta}{\lambda^++\lambda^-}
+    \,.
+\end{align*}
+  To eliminate the remaining constraints, 
+  we paraphrase \cite[pages~19-20]{Wang2019}.
+  We show 
+  for all $i \in \left\{ 1,\ldots,N \right\}$
+\begin{alignat*}{2}
+  \text{either}
+  &
+  &&
+  \qquad
+      \lambda_i^+ > 0
+  \\
+  \text{or}
+  &
+  &&
+  \qquad
+      \lambda_i^- > 0
+  \,.
+\end{alignat*}
+Assume towards a contradiction that 
+there exists
+$i \in \left\{ 1,\ldots,N \right\}$
+such that
+$
+      \lambda_i^+ > 0
+$
+and
+$
+      \lambda_i^- > 0
+$ 
+and that 
+$\lambda^\pm$ is optimal.
+Consider
+  \begin{gather}
+    \tilde{\lambda}
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      \ 
+      \lambda_1^+,
+      \ldots,
+      \ 
+      \lambda_i^+
+      \!
+      -
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      )\,,
+      \ 
+      \ldots,
+      \lambda_N^+,
+      \ 
+      \lambda_1^-,
+      \ldots,
+      \lambda_i^-
+      \!
+      -
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      )\,,
+      \ 
+      \ldots,
+      \lambda_N^-
+      \,,
+      \lambda_0
+    \end{bmatrix}
+    ^\top
+    \,.
+  \end{gather}
+  Since 
+  $
+      \lambda_i^\pm
+      -
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      )
+      \ge 
+      0
+  $,
+  the perturbed vector $\tilde{\lambda}$ is in the domain of the 
+  optimization problem.
+  But 
+  \begin{align}
+  G(\tilde{\lambda},\lambda_0)
+  -
+  G(\lambda,\lambda_0)
+  \ 
+  =
+  \ 
+  2
+  N
+  \cdot
+  \delta_i
+  \cdot
+      (
+      \lambda_i^+
+      \!
+      \land
+      \lambda_i^-
+      )
+  \ 
+  >
+  \ 
+  0
+  \,,
+  \end{align}
+  which contradicts the optimality of $\lambda^\pm$.
+But then 
+$
+\lambda^\pm_i
+\ge 0
+$
+collapses to
+$
+\lambda_i\in \R
+$ 
+for all
+$i\in \left\{ 0,\ldots,N \right\}$, that is,
+$ \lambda_i=\lambda_i^+\!-\lambda_i^- $.
+Note that
+$ |\lambda_i|=\lambda_i^+\!+\lambda_i^- $.
+We update the objective function one more time to get
+\begin{align*}
+  G(\lambda,\lambda_0)
+  &
+  \ 
+  :=
+  \ 
+    -
+    \sum_{i=1}^{n} 
+    f^*
+    \left( 
+      \inner{B(X_i)}{\lambda}
+      \ 
+      +
+      \ 
+      \lambda_0
+    \right)
+    \\
+    &
+    \qquad 
+    +
+    \ 
+    \sum_{i=1}^{N} 
+    \left( 
+      \inner{B(X_i)}{\lambda^+}
+      \ 
+      +
+      \ 
+      \lambda_0
+    \right)
+    \\
+    &
+    \qquad 
+    -
+    \ 
+    N
+    \inner{\delta}{|\lambda|}
+    \,.
+\end{align*}
+Multiplying $G$ with $-1/N$ and introducing the indicator of
+treatment $T$ to fill up the entries for $i>n$, the final (unconstrained) optimization problem reads
+\begin{gather*}
+  \underset
+  {\lambda_0,\ldots,\lambda_{N}\in \R}
+  {
+    \mathrm{minimize}
+  }
+  \quad
+  \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left[ 
+    \,
+  T_i
+  \cdot
+  f^*
+  \!
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \ 
+-
+\ 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{\lambda}
+  \right)
+  \,
+  \right]
+  \ 
++
+\ 
+\inner
+{\delta}
+{|\lambda|}
+  \,.
+\end{gather*}
+Connecting Problem~\ref{bw:1:primal} via Lemma~\ref{matrix_notation} to Lemma~\ref{lemma_dual_app} and applying Theorem~\ref{cv:ts:th} we derive the last statement of Theorem~\ref{dual_solution_th}. This finishes the proof.
+\end{proof}
 
