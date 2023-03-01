@@ -23,36 +23,51 @@ No hand waving this time. You talk to your supervisor.
 You decide to determine treatment status by the flip a fair coin.
 You call the procedure 'randomization'.
 
-Randomization does not work in important situations. Would you smoke if a coin tells you to? If you say yes - you are likely to be a smoker. The point is that forcing someone to smoke is unethical. But so is not investigating the risks of smoking.
+%Randomization does not work in important situations. 
+Would you smoke if a coin tells you to? If you say yes - you are likely smoke anyway. The point is that forcing someone to smoke is unethical. But so is not studying the risks of smoking.
 
-Say, a professor is curious if the smoking habits of his students affect their grades. 
-At a beginning break he observes the backyard through his field glasses.
-His assistant gets to know his plans. He warns him. “Many students attend parties the night before exams. Maybe they are also more likely to smoke." “I shall see this for myself..." says the professor. He puts away the glasses. After a while, he visits the local club.
+A professor is curious if the smoking habits of his students affect their grades. 
+He observes the smoking area through his field glasses.
+His assistant gets to know his plans. He warns him. “Many students attend parties the night before exams. Maybe they are also more likely to smoke." “I shall see this for myself..." says the professor. He puts away the field glasses. After a while, he visits the local club.
 He talks to a few of his students. Some smoke, some don't. The chats are enjoyable. He thinks: “Some of best students celebrate \textbf{before} the exam."
 
-I hope, by now it's clear that sometimes it's all about how treatment was assigned.
+I hope, by now it's clear that sometimes it's all about how treatment was assigned. 
 The probability of treatment given individual characteristics 
 was introduced as the \textbf{propensity score}\cite{Rosenbaum1983}.
-In the second example it is $1/2$. In the other examples it is not know, but we can see tendencies. 
-It is a simple concept that works well together with potential outcomes.
-In the potential outcomes model we assume that there simultaneously exist distribution of outcome with and without treatment.
-By treating we try to observe the potential outcome with treatment.
-Naturally we can not observe the other outcome.
-So we treat and observe. It treatment assignment is random we actually observe the potential outcome under treatment.
-This is because treatment assignment carries no more information. It is random.
-But we saw, that assignment often contains more information.
-And then it is not clear, if the effect on the outcome comes from this additional information or the treatment.
-In this situations, we don't even observe the potential outcome with treatment, but a confounded version.
-A simple idea to obtain the unconfounded potential outcome is to weight with the inverse probability of treatment, that is, 1 divided by the propensity score.
-Let's introduce some notation to be more precise.
+In the second example, where you flip a fair coin to decide treatment status, the propensity score is $1/2$.
+The coin ignores everything.
+What is the propensity score in the other examples?
+I admit, I don't know.
+It may vary.
+But we can see tendencies. 
 
-Let $T\in \left\{ 0,1 \right\}$ be the indicator of treatment. This is a random variable.
+The propensity score is a simple concept that works well with potential outcomes.
+They are potential, because you only get the chance to observe on of them. If you treat, it's the potential outcome under treatment. 
+On a high-level: If you act, you can't observe at the same time the effect of no action.
+Thus one of the potential outcomes always remains potential.
+Of course there are tricks. You can  wait for the effect of an action to vanish and then observe the outcome again.
+This works well when the effect of an action is short term.
+
+If treatment assignment is random we actually observe the potential outcome under treatment.
+This is because treatment assignment carries no more information.
+The coin ignores it.
+But we saw, that assignment often contains more information.
+Then it is not clear, if the effect on the outcome comes from the new information or the treatment.
+Then we don't even observe the potential outcome under treatment, but a confounded version.
+A simple idea to obtain information about the true potential outcome is to weight with the inverse probability of treatment, that is, 1 divided by the propensity score. Let's introduce some notation to be more precise.
+
+Let $T\in \left\{ 0,1 \right\}$ be the \textbf{indicator of treatment}. This is a random variable.
 Let $X\in\mathcal{X}$ be a vector with individual characteristics. We call this the \textbf{covariate vector}. It is also a random variable.
 Last, let $(Y(0),Y(1))$ be the potential outcomes, that is, $Y(0)$ is the potential outcome without treatment and $Y(1)$ the potential outcome with treatment. They are random variables.
 We define the propensity score with individual characteristics $x$ to be
-$\pi(x):=\P[T=1|X=x]$. We observe one of 
+$\pi(x):=\P[T=1|X=x]$. We observe  
 \begin{gather}
-  (Y(0)|T=0,Y(1)|T=1)
+  \text{either}
+  \qquad
+  Y(0)|T=0
+  \qquad
+  \text{or}\qquad
+  Y(1)|T=1
   \,.
 \end{gather}
 We saw, that 
@@ -63,6 +78,7 @@ We can show, that if
 \end{gather}
 holds we get 
 \begin{gather}
+  \label{ipw}
   \E
   \left[ 
     \frac{T}{\pi(X)}Y(T)
@@ -74,14 +90,14 @@ holds we get
 \end{gather}
 That is, by weighting the observed outcome under treatment with the inverse propensity score we recover (in expectation) the potential outcome with treatment. 
 
-If the propensity score is unknown, estimates of it are used.
-We hope to recover from the estimate of the propensity score the good theoretical properties of the true Propensity score.
+If the propensity score is unknown, one method is to use estimates of it.
+We hope to recover \eqref{ipw} from the estimate.
+But we have to be careful.
+After all, we want to extract informations on the potential outcomes and the propensity score is just a tool.
 
-This has led to over emphasis of estimating the ps.
-After all, we want to extract informations on the potential outcomes and the ps is just a tool.
+This is, why people started thinking about alternative ways to generate weights.
 
-This is, why alternative weighting methods were proposed.
-We solve an optimization problem in which constraints should minimize the bias of the weighted estimators.
+One way is to solve a constrained optimization problem.
 
 
 
