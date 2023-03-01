@@ -70,8 +70,6 @@ $\pi(x):=\P[T=1|X=x]$. We observe
   Y(1)|T=1
   \,.
 \end{gather}
-We saw, that 
-$Y(t)|T=t$ does not have the same distribution as $Y(t)$ for $t\in \left\{ 0,1 \right\}$.
 We can show, that if 
 \begin{gather}
   (Y(0),Y(1))\perp T |X
@@ -89,6 +87,8 @@ holds we get
   \,.
 \end{gather}
 That is, by weighting the observed outcome under treatment with the inverse propensity score we recover (in expectation) the potential outcome with treatment. 
+This is relevant, because 
+$Y(t)|T=t$ does not have the same distribution as $Y(t)$ for $t\in \left\{ 0,1 \right\}$.
 
 If the propensity score is unknown, one method is to use estimates of it.
 We hope to recover \eqref{ipw} from the estimate.

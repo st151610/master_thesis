@@ -1,0 +1,1470 @@
+We adapt the error decomposition in \cite[page 27]{Wang2019} 
+to estimates of the distribution function $F_{Y(1)}$ of $Y(1)$, 
+that is,
+\begin{gather}
+  F_{Y(1)}
+  \ 
+  \colon
+  \ 
+  \R
+  \ 
+  \to
+  \ 
+  [0,1]
+  \, 
+  , 
+  \qquad
+  z
+  \ 
+  \mapsto
+  \ 
+  \P
+  [
+  Y(1)
+  \le
+  z
+  ]
+  \,.
+\end{gather}
+\begin{ftheorem}
+  \label{aa:mean:th}
+  Under conditions 
+the stochastic process
+\begin{gather}
+    \sqrt{N}
+    \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i^\dagger
+    \mathbf{1}
+    _{\left\{ Y_i\le z \right\}}
+    -
+    \P[Y(1)\le z]
+    \right)
+    _{z\in\R}
+    \,
+  \end{gather}
+  converges in
+  $l^\infty(\R)$
+  to a Gaussian process with mean 0 and covariance ??.
+\end{ftheorem}
+
+\begin{lemma}
+  \label{aa:mean:lemma_decomp}
+  It holds
+  \begin{gather}
+  \sqrt{N}
+\left( 
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w(X_i)
+    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    \ 
+    -
+    \ 
+    F_{Y(1)}(z)
+    \right)
+    _{z\in\R}
+    \ 
+    =
+    \ 
+    R_1
+    \ 
+    +
+    \ 
+    R_2
+    \ 
+    +
+    \ 
+    R_3
+    \ 
+    +
+    \ 
+    R_4
+  \end{gather}
+  with
+\begin{align*}
+  R_1
+  &
+  \ 
+  :=
+  \ 
+  \sqrt{N}
+  \sum_{k=1}^{N} 
+  \left[ 
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w(X_i)
+    B_k(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B_k(X_i)
+  \right)
+  F_{Y(1)}(z|X_k)
+  \right]
+  _{z\in\R}
+  \,,
+  %%%% 1 %%%%
+  \\
+  R_2
+  &
+  \
+  :=
+  \ 
+  \sqrt{N}
+    \sum_{i=1}^{N} 
+    \left[ 
+  \frac{
+    T_i\cdot w(X_i) -1 }{N}
+    \left( 
+  F_{Y(1)}(z|X_i)
+    \ 
+    -
+    \ 
+    \sum_{k=1}^{N} 
+    B_k(X_i)
+    \cdot
+  F_{Y(1)}(z|X_k)
+    \right)
+    \right]
+  _{z\in\R}
+  \,,
+  %%%% 2 %%%%
+  \\
+  R_3
+  &
+  \
+  :=
+  \ 
+  \sqrt{N}
+  \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left[ 
+    T_i
+    \left( 
+    w(X_i) 
+    -
+    \frac{1}{\pi(X_i)}
+    \right)
+    \left( 
+    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    -
+  F_{Y(1)}(z|X_i)
+    \right)
+    \right]
+  \right)
+  _{z\in\R}
+  \,,
+  %%%% 3 %%%%
+  \\
+  R_4
+  &
+  \
+  :=
+  \ 
+  \sqrt{N}
+  \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \frac{T_i}{\pi(X_i)}
+    \left( 
+    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    -
+  F_{Y(1)}(z|X_i)
+    \right)
+    \ 
+    +
+    \ 
+    \left( 
+  F_{Y(1)}(z|X_i)
+    -
+  F_{Y(1)}(z)
+    \right)
+  \right)
+  _{z\in\R}
+  \,.
+  \end{align*}
+
+\end{lemma}
+\begin{proof}
+  An elementary but long calculation yields the result. We omit the details.
+\end{proof}
+
+Let $F_{Y(1)}(z|x):=\P[Y(1)\le z|X=x]$ denote a conditional version of the distribution function of $Y(1)$ at $x\in\mathcal{X}$.
+We also need the propensity score
+$
+  \pi(x):=\P[T=1|X=x]
+$
+and the weights function
+$
+  w(x)
+  :=
+  (
+  f^{'}
+  )^{-1}
+  \left( 
+    \inner{B(x)}{\lambda^\dagger}
+    +
+    \lambda_0^\dagger
+  \right)
+$.
+\begin{lemma}
+  \label{aa:mean:l:r1}
+Let the weights function $w$ satisfy the box constraints in 
+Problem~\ref{bw:1:primal} and 
+$\sqrt{N}\norm{\delta}_1\overset{\P}{\to}0$.
+Then it holds
+$\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
+  \end{lemma}
+\begin{proof}
+%  By Theorem~\ref{dual_solution_th}
+%  it holds $w_i^\dagger=w(X_i)$ for $i\in \left\{ 1,\ldots,n \right\}$, that is, for $i\le n$ we can identify $w(X_i)$ with the optimal
+%  solution to 
+%  problem~\ref{bw:1:primal}. 
+%  Thus the constraints of the problem apply.
+%   Let's bound $R_1$.
+It holds
+  \begin{align}
+    \label{R_1:1}
+    \begin{split}
+    \sup_{z\in\R}
+    \left| 
+    R_1(z)
+    \right|
+    &
+    \ 
+    =
+    \ 
+    \sup_{z\in\R}
+    \left| 
+  \sqrt{N}
+  \sum_{k=1}^{N} 
+  \left[ 
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w(X_i)
+    B_k(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B_k(X_i)
+  \right)
+  F_{Y(1)}(z|X_k)
+  \right]
+    \right|
+    \\
+    &
+    \ 
+    \le
+    \ 
+  \sqrt{N}
+  \sum_{k=1}^{N} 
+  \left| 
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n} 
+    w(X_i)
+    B_k(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B_k(X_i)
+  \right)
+  \right|
+    \sup_{z\in\R}
+  F_{Y(1)}(z|X_k)
+  \\
+    &
+    \ 
+    \le
+    \ 
+  \sqrt{N}
+  \norm{\delta}_1
+    \end{split}
+  \end{align}
+  The last inequality is due to $F_{Y(1)}\in[0,1]$ and the assumption that $(w(X_i))$ satisfies the box constraints of Problem~\ref{bw:1:primal}.
+  Since we assume 
+$\sqrt{N}\norm{\delta}_1\overset{\P}{\to}0$
+it holds
+$\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
+\end{proof}
+\begin{remark}
+  We want to comment on the box constraints of Problem~\ref{bw:1:primal}, that is,
+ \begin{gather*}
+      \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{n} 
+      w(X_i)
+      B_k(X_i)
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    \qquad
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, N \right\}
+    \,.
+  \end{gather*}
+  Note, that the first sum goes over $\left\{ 1,\ldots,n \right\}$ while the second sum goes over $\left\{ 1,\ldots,N \right\}$.
+  A second, equivalent version of the constraints is
+  \begin{gather*}
+      \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{N} 
+      T_i
+      w(X_i)
+      B_k(X_i)
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    \qquad
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, N \right\}
+    \,.
+  \end{gather*}
+  Now both sums go over $\left\{ 1,\ldots,N \right\}$ and the
+  indicator of treatment $T_i$ takes care that in the first sum only the terms with $i\le n$ are effective. 
+  Having this flexibility with the versions helps. I regard the first version as suitable for non-probabilistic computations, although $n$ is of course a random variable. On the other hand, the second version is more honest, exactly telling the dependence on the indicator of treatment. This version is useful in probabilistic computations. 
+
+  Also we want to comment on the assumption on $\norm{\delta}$.
+  Playing around with norm equivalences we discover that 
+  $\sqrt{N}\norm{\delta}_1\overset{\P}{\to}0$ for $N\to \infty$ is the weakest
+  (natural) assumption to
+  control $R_1$.
+  Indeed, other ways to continue the second row in \eqref{R_1:1} are
+  \begin{gather*}
+    (\,\cdots)
+    \ 
+  \le
+    \ 
+  \sqrt{N}
+  \norm{\delta}_2
+  \left( 
+  \sum_{k=1}^{N} 
+  \left( 
+    \sup_{z\in\R}
+  F_{Y(1)}(z|X_k)
+  \right)^2
+\right)^{1/2}
+\ 
+\le
+\ 
+N
+  \norm{\delta}_2\,,
+  \end{gather*}
+  by the Cauchy-Schwarz inequality and
+  $
+  F_{Y(1)}\in [0,1]
+  $,
+or
+\begin{gather*}
+  (\,\cdots)
+  \ 
+  \le
+  \ 
+  \sqrt{N}
+  \norm{\delta}_\infty
+  \sum_{k=1}^{N} 
+    \sup_{z\in\R}
+  F_{Y(1)}(z|X_k)
+  \ 
+  \le
+  \ 
+  N^{3/2}
+  \norm{\delta}_\infty
+  \,.
+\end{gather*}
+Since $\delta\in \R^N$, however, it holds
+\begin{gather*}
+  \sqrt{N}\norm{\delta}_1
+  \ 
+  \le
+  \ 
+  N\norm{\delta}_2
+  \ 
+  \le
+  \ 
+  N^{3/2}\norm{\delta}_\infty
+  \,.
+\end{gather*}
+With hindsight, the assumption 
+$\sqrt{N}\norm{\delta}_1\overset{\P}{\to}0$ for $N\to \infty$ 
+  also 
+  suffices 
+  to control the second (or first) occurrence of a term, that we control by assumptions on $\norm{\delta}$.
+This is the \textbf{second term} of \eqref{c:1}, where we estimate
+\begin{gather*}
+  \inner{\delta}{\left| \Delta \right|}
+  \ 
+  =
+  \ 
+  \sum_{k=1}^{N} 
+  \delta_k
+  \left| \Delta_k \right|
+  \ 
+  \le
+  \ 
+  \norm{\delta}_1
+  \norm{\Delta}_\infty
+  \ 
+  \le
+  \ 
+  \norm{\delta}_1
+  \norm{\Delta}_2
+  \ 
+  \le
+  \ 
+  \norm{\delta}_1
+  \varepsilon
+  \ 
+  \overset{\P}{\to}
+  \ 
+  0
+  \quad
+  \text{for}\ 
+  N\to \infty
+  \,.
+\end{gather*}
+
+\end{remark}
+  \begin{lemma}
+    \label{aa:mean:l:r2}
+    Let the conditions of Theorem~\ref{aa:weights:th} hold true.
+    Furthermore assume, that the width of the partitioning estimate $h_N$ and a conditional version of the distribution function of $Y(1)$ satisfy
+\begin{gather*}
+  \sqrt{N}
+  \sup_{z\in\R}
+  \omega
+  \left( 
+    F_{Y(1)}(z|\cdot)
+    ,h_N
+  \right)
+  \to
+  0
+  \qquad
+  \text{for}\ 
+  N\to \infty
+  \,,
+\end{gather*}
+where $\omega$ is the modulus of continuity.
+Then it holds
+$\sup_{z\in\R}|R_2(z)|\overset{\P}{\to}0$.
+  \end{lemma}
+\begin{proof}
+\begin{align*}
+&
+  \sup_{z\in\R}
+  \left| 
+  R_2(z)
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \sqrt{N}
+    \sum_{i=1}^{N} 
+    \left[ 
+  \frac{
+    T_i\cdot w(X_i) -1 }{N}
+  \sup_{z\in\R}
+    \left| 
+  F_{Y(1)}(z|X_i)
+    \ 
+    -
+    \ 
+    \sum_{k=1}^{N} 
+    B_k(X_i)
+    \cdot
+  F_{Y(1)}(z|X_k)
+    \right|
+    \right]
+    \\
+    &
+  \ 
+    \le
+  \ 
+    \sqrt{N}
+  \sup_{z\in\R}
+  \omega
+  \left( 
+    F_{Y(1)}(z|\cdot)
+    ,h_N
+  \right)
+  \sum_{i=1}^{N} 
+  \frac{
+    T_i\cdot w(X_i) +1 }{N}
+    \\
+    &
+  \ 
+    =
+  \ 
+    2
+    \sqrt{N}
+  \sup_{z\in\R}
+  \omega
+  \left( 
+    F_{Y(1)}(z|\cdot)
+    ,h_N
+  \right)
+  \,.
+\end{align*}
+The equality is due to 
+\begin{gather}
+  1
+  \ 
+  =
+  \ 
+\frac{1}{N}\sum_{i=1}^{n}w_i^\dagger
+  \ 
+  =
+  \ 
+\frac{1}{N}\sum_{i=1}^{n}w(X_i)
+  \ 
+=
+  \ 
+\frac{1}{N}\sum_{i=1}^{N}T_iw(X_i)
+\,,
+\end{gather}
+that is, $w(X_i)$ satisfy the second constraint of Problem~\ref{bw:1:primal}.
+The second inequality follows from 
+$\sum_{k=1}^{N}B_k(X)=1$ and the convexity of the absolute value. 
+Indeed,
+\begin{align*}
+&
+  \sup_{z\in\R}
+  \left| 
+  F_{Y(1)}(z|X_i)
+  -
+  \sum_{k=1}^{N} 
+  B_k(X_i)
+  \cdot
+  F_{Y(1)}(z|X_k)
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \sum_{k=1}^{N} 
+  \frac{\mathbf{1}_{\left\{ X_k\in A_N(X_i) \right\}}}
+  {
+    \sum_{j=1}^{N} 
+\mathbf{1}_{\left\{ X_j\in A_N(X_i) \right\}}
+  }
+  \sup_{z\in\R}
+  \left| 
+  F_{Y(1)}(z|X_i)
+  -
+  F_{Y(1)}(z|X_k)
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \sup_{z\in\R}
+  \omega
+  \left( 
+    F_{Y(1)}(z|\cdot)
+    ,h_N
+  \right)
+  \,.
+\end{align*}
+
+Since we assume
+\begin{gather*}
+  \sqrt{N}
+  \sup_{z\in\R}
+  \omega
+  \left( 
+    F_{Y(1)}(z|\cdot)
+    ,h_N
+  \right)
+  \to
+  0
+  \qquad
+  \text{for}\ 
+  N\to \infty
+  \,,
+\end{gather*}
+it follows
+$\sup_{z\in\R}|R_2(z)|\overset{\P}{\to}0$.
+\end{proof}
+\begin{remark}
+In the original paper \cite{Wang2019} the authors derive concrete learning rates for the weights and employ them in bounding this term. They obtain a multiplied learning rate, which is sufficiently fast. Their approach, however, calls for concrete learning rates of the weights. Arguably, the process of deriving such rates is the most complicated part of the paper. 
+I found out, that we don't need concrete rates for the weights. 
+Consistency of the weights is enough and gives us an (arbitrarily slow but sufficient) learning rate to establish the results.
+We don't even need rates for the weights to control $R_2$.
+They only play a role in bounding $R_3$.
+
+We also want to comment on the assumption
+\begin{gather*}
+  \sqrt{N}
+  \sup_{z\in\R}
+  \omega
+  \left( 
+    F_{Y(1)}(z|\cdot)
+    ,h_N
+  \right)
+  \to
+  0
+  \qquad
+  \text{for}\ 
+  N\to \infty
+  \,,
+\end{gather*}
+I decided to keep this more general (and abstract) assumption, althogh
+there are many (more concrete, yet stronger) assumptions on the regularity of
+$
+    F_{Y(1)}(z|\cdot)
+$
+and the convergence speed of $h_N$.
+If for example 
+$
+    F_{Y(1)}(z|\cdot)
+$
+is $\alpha$-Hölder continuous with $\alpha\in(0,1]$ for all $z\in\R$, it suffices $\sqrt{N}h_N^\alpha\to0$ to control $R_2$.
+\end{remark}
+
+To control the remaining terms $R_3$ and $R_4$ we use empirical processes. We introduce the concept and the results we need in the next paragraphs. 
+For an introduction to empirical processes see \cite{Vaart2000}. More advanced techniques are in \cite{vaart2013}.
+
+Let 
+$
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+$
+be a probability space,
+$
+  \left( 
+    \mathcal{Z},
+    \Sigma
+  \right)
+$
+a measurable space, and 
+$
+  \xi_1,\ldots,\xi_N
+  :
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+  \to
+  \left( 
+    \mathcal{Z},
+    \Sigma
+  \right)
+$
+a sample 
+of independent and identically-distributed
+random variables
+with probability distribution $\P_{\!\xi}$.
+A family $\mathcal{F}$ of measurable functions 
+$
+  f:
+  \left( 
+    \mathcal{Z},
+    \Sigma
+  \right)
+    \to
+  \left( 
+    \R,
+    \mathcal{B}(\R)
+  \right)
+$
+induces a stochastic process by
+\begin{gather}
+  f
+  \ 
+  \mapsto
+  \ 
+  \G_N f 
+  \ 
+  :=
+  \ 
+  \frac{1}{\sqrt{n}}
+  \sum_{i=1}^{N} 
+  (
+    f(\xi_i)
+    -
+    \E_\xi[f]
+  \,.
+\end{gather}
+We call this the  \textbf{empirical process} $\G_N$ indexed by $\mathcal{F}$.
+We define the (random) norm
+\begin{gather}
+  \norm{\G_n}_\mathcal{F}
+  :=
+  \sup_
+        { f \in \mathcal{F}}
+        \left|
+          \G_N f
+        \right|
+        .
+\end{gather}
+\begin{remark}
+We stress that 
+$
+  \norm{\G_n}_\mathcal{F}
+$
+often ceases to be measurable, even in simple situations~\cite[page 3]{vaart2013}.
+To deal with this, we introduce the notion of \textbf{outer expectation} $\E^*$, that is,
+\begin{gather}
+  \E^*[Z]
+  \ 
+  :=
+  \ 
+    \inf
+  \left\{ 
+    \E[U]
+  \ 
+  \lvert
+  \ 
+    U\ge Z,
+    \ 
+    U:
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+  \to 
+  \left( 
+    \overline{\R},
+    \mathcal{B}(\overline{\R})
+  \right)
+  \text{measurable and}
+  \ 
+  \E[U]<\infty
+  \right\}
+  \,.
+\end{gather}
+In our application the technical difficulties halt at this point, because we only consider $Z$ with $\E^*[Z]<\infty$. Then there exists a smallest measurable function $Z^*$ dominating $Z$ with
+$\E^*[Z]=\E[Z^*]$. Thus, we may assume $Z$ to be measurable in this regard.
+
+
+\end{remark}
+In our application we need concentration inequalities for 
+$
+  \norm{\G_n}_\mathcal{F}
+$.
+One easy way is to use maximal inequalities for the expectation together with Markov's inequality. There are also Bernstein-like inequalities for empirical processes. We need to introduce more concepts.
+
+Given two functions $\underline{f}$ and $\overline{f}$, the bracket
+$[\underline{f},\overline{f}]$ 
+is the set of all functions $f$ with 
+$\underline{f}\le f \le \overline{f}$.
+We define a
+$(\varepsilon,\mathrm{L}_{r}(\P))$-bracket
+to be a bracket
+$[\underline{f},\overline{f}]$ with
+$\norm{\overline{f}-\underline{f}}_{\mathrm{L}_r(\P)}< \varepsilon$.
+The bracketing number 
+$
+N_{[\,]}(\varepsilon, \mathcal{F},\mathrm{L}_r(\P))
+$
+is 
+the minimum number of 
+$(\varepsilon,\mathrm{L}_{r}(\P))$-brackets needed to cover $\mathcal{F}$.
+For most classes $\mathcal{F}$ the bracketing number grows to infinity for $\varepsilon\to 0$.
+To measure the speed of convergence we introduce the bracketing integral
+\begin{gather}
+     J
+    _{[]}
+    (
+    \delta
+    ,
+    \mathcal{F}
+    ,
+    L_r(\P)
+    )
+    =
+  \int_0^{\delta}
+      \sqrt{
+        \log 
+      N_{[\,]}
+\left( \varepsilon, \mathcal{F}_N,\mathrm{L}_r(\P) \right)
+    }
+    \,
+    d\varepsilon
+    \,.
+\end{gather}
+An envelope function $F$ of a class $\mathcal{F}$ satisfies 
+$|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
+\begin{theorem}
+  \emph{(Maximal inequality)}
+  For any class $\mathcal{F}$ of measurable functions with envelope function $F,$
+  \begin{gather}
+    \E^*
+    _\P
+    [
+    \norm{
+      \G
+      _n
+      }
+      _\mathcal{F}
+    ]
+    \lesssim
+    J
+    _{[]}
+    (
+    \norm{
+      F
+    }
+    _{\mathrm{L}_2(\P)}
+    ,
+    \mathcal{F}
+    ,
+    L_2(\P)
+    )
+    .
+  \end{gather}
+\end{theorem}
+\begin{proof}
+  \cite[Corollary~19.35]{Vaart2000}
+\end{proof}
+\begin{lemma}
+  \label{lemma_max_ineq}
+  Consider a function class $\mathcal{F}$ with unit ball
+  $
+  B_{\mathcal{F}}
+  :=
+  \left\{ 
+    f\in \mathcal{F}
+    \colon
+    \norm{f}_\infty
+    \le
+    1
+  \right\}
+  $.
+  Let $(\varepsilon_N)$ be a sequence converging to 0
+  and let 
+  $
+  \left( 
+    \mathcal{F}_N
+  \right)
+    :=
+    \left( 
+      C\cdot
+    \varepsilon_N\cdot B_\mathcal{F}
+    \right)
+  $
+  denote the sequence of scaled unit balls in $\mathcal{F}$.
+  Assume that 
+  there exists
+  $k<2$ such that 
+  the covering number of the unit ball in $\mathcal{F}$
+  satisfies
+  \begin{gather}
+        \log 
+      N_{[\,]}
+\left( \varepsilon, B_\mathcal{F},\mathrm{L}_2(\P) \right)
+\ 
+\lesssim
+\ 
+\left( \frac{1}{\varepsilon} \right)^k
+\qquad
+\text{for all}\ 
+\varepsilon>0
+\,.
+  \end{gather}
+  Then it holds
+  $
+      \norm{G_N}^*_{\mathcal{F}_N}
+    \ 
+    \overset{\P}
+    {\to}
+    \ 
+    0
+  $
+  for $N\to \infty$. 
+\end{lemma}
+\begin{proof}
+  By maximal inequalities it holds
+  \begin{align*}
+    \E^*
+    \left[ 
+      \norm{G_N}_{\mathcal{F}_N}
+    \right]
+    &
+      \ 
+      \lesssim
+      \ 
+      J_{[\,]}\left( \varepsilon_N, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
+      \\
+    &
+      \ 
+      =
+      \ 
+      \int_0^{\varepsilon_N}
+      \sqrt{
+        \log 
+      N_{[\,]}
+\left( \varepsilon, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
+    }
+    \,
+    d\varepsilon
+    \\
+    &
+    \ 
+    =
+    \ 
+      \int_0^{\varepsilon_N}
+      \sqrt{\log 
+      N_{[\,]}
+\left( \varepsilon/(C\cdot \varepsilon_N), B_\mathcal{F},\mathrm{L}_2(\P) \right)
+    }
+    \,
+    d\varepsilon
+    \\
+    &
+    \ 
+    \lesssim
+    \ 
+      \int_0^{\varepsilon_N}
+      \left( 
+      \frac{\varepsilon_N}{\varepsilon}
+    \right)^{k/2}
+    \,
+    d\varepsilon
+    \\
+    &
+    \ 
+    =
+    \ 
+  \varepsilon_N^{k/2}
+  \frac{1}{1-k/2}
+  \varepsilon_N^{1-k/2}
+  \\
+    &
+    \ 
+  \lesssim
+    \ 
+  \varepsilon_N
+  \\
+    &
+    \ 
+  \to
+  \ 
+  0
+  \qquad
+  \text{for}\ 
+  N\to
+  \infty
+  \,.
+  \end{align*}
+  Note, that $k<2$.
+  By the boundedness of $\E^*$ there is no measurability problem.
+  By Markov's Inequality it holds
+  \begin{align*}
+    \P
+    \left[ 
+      \norm{G_N}^*_{\mathcal{F}_N}\ge \varepsilon
+    \right]
+    \le
+    \varepsilon^{-1}
+    \,
+    \E^*
+    \left[ 
+      \norm{G_N}_{\mathcal{F}_N}
+    \right]
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}\ 
+    N\to\infty
+    \,.
+  \end{align*}
+\end{proof}
+The next two lemmas connect $R_3$ to the theory of empirical processes.
+\begin{lemma}
+  \label{aa:mean:l:fz}
+  Consider 
+  the (random) function
+  $
+  f_D^z
+  $ given by
+  \begin{gather}
+    f_{D}^z(T,X,Y(T))
+    :=
+    T
+    \left( 
+    w(D,X)- \frac{1}{\pi(X)}
+    \right)
+    \left( 
+    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+    \right)
+    \,.
+  \end{gather}
+  Assume that 
+  there exists a function class $\mathcal{F}$ satisfying the requirements of Lemma~\ref{lemma_max_ineq} and that
+  $
+  f_D^z
+  \in \mathcal{F}
+  $
+  for all $z\in\R$ almost surely.
+  It then holds
+  $
+  \sup_{z\in\R} \left| G_Nf_D^z \right|
+  \overset{\P}{\to}0$ for 
+  $N\to\infty$.
+\end{lemma}
+\begin{proof}
+  By the consistency of the weights there exists a learning rate $(\varepsilon_N)$ such that
+  \begin{gather}
+    \P
+    \left[ 
+      \left| 
+      w(X,D)
+      -
+      \frac{1}{\pi(X)}
+      \right|
+      \le
+      \varepsilon_N
+    \right]
+    \to 1 
+    \qquad
+    \text{for}\ 
+    N\to \infty
+    \,.
+  \end{gather}
+  Let
+  $\mathcal{F}_N:=\varepsilon_NB_\mathcal{F}$ as in 
+  Lemma~\ref{lemma_max_ineq}.
+  It holds
+\begin{gather}
+      \sup_{z\in\R}
+      \left| 
+    f_D^z
+      \right|
+      \lesssim
+      \left| 
+      w(X,D)
+      -
+      \frac{1}{\pi(X)}
+      \right|
+      \le
+      \varepsilon_N
+\end{gather}
+with probability going to 1 as $N\to\infty$.
+Thus
+ \begin{gather}
+    \P
+    \left[ 
+    f_D^z
+    \in
+  \mathcal{F}_N
+  \ \forall\,z\in\R
+    \right]
+    =
+    \P
+    \left[ 
+      \sup_{z\in\R}
+      \left| 
+    f_D^z
+      \right|
+      \lesssim
+      \varepsilon_N
+    \right]
+    \to 1
+    \qquad
+    \text{as}
+    \ 
+    N\to\infty
+    \,.
+  \end{gather}
+  Then it holds
+  for all $\varepsilon>0$ 
+  \begin{align*}
+    \P
+    \left[ 
+      \sup_{z\in\R}
+  \left| G_Nf_D^z \right|
+  \le
+  \varepsilon
+    \right]
+    &
+    \ 
+    \ge
+    \ 
+    \P
+    \left[ 
+      \sup_{z\in\R}
+  \left| G_Nf_D^z \right|
+  \le
+  \norm{G_N}^*_{\mathcal{F}_N}
+  \le
+  \varepsilon
+    \right]
+    \\
+    &
+    \ 
+    \ge
+    \ 
+    \P
+    \left[ 
+    f_D^z
+    \in
+  \mathcal{F}_N
+  \ \forall\,z\in\R
+      \ 
+      \text{and}\ 
+  \norm{G_N}^*_{\mathcal{F}_N}
+  \le
+  \varepsilon
+    \right]
+    \\
+    &
+    \ 
+    \ge
+    \ 
+    \P
+    \left[ 
+    f_D^z
+    \in
+  \mathcal{F}_N
+  \ \forall\,z\in\R
+    \right]
+    -
+    \P
+    \left[ 
+  \norm{G_N}^*_{\mathcal{F}_N}
+    \ 
+  \ge
+    \ 
+  \varepsilon
+    \right]
+    \\
+    &
+    \ 
+    \to
+    \ 
+    1
+    \,.
+  \end{align*}
+  The convergence of the second term is due to Lemma~\ref{lemma_max_ineq}.
+
+\end{proof}
+
+\begin{lemma}
+  \label{aa:mean:l:r3}
+  Assume conditional unconfoundedness, that is,
+  \begin{gather}
+  (Y(0),Y(1))\perp T \ |\ X
+  \,.
+  \end{gather}
+  Then for all
+  $z\in\R$
+  it holds
+  $
+  G_Nf_D^z=R_3(z)
+  $.
+\end{lemma}
+\begin{proof}
+  A standard computation shows
+  \begin{gather}
+    \E
+    \left[ 
+    \frac{T}{\pi(X)}
+    \left( 
+    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+    \right)
+    \right]
+    =0
+    \,.
+  \end{gather}
+  Furthermore
+  \begin{align*}
+    &
+    \E
+    \left[ 
+      Tw(X,D)
+    \left( 
+    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+    \right)
+    \right]
+    \\
+    &
+    \ 
+    =
+    \ 
+    \E
+    \left[ 
+      \E
+      \left[ 
+      w(X,D)
+      \left( 
+    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+      \right)
+  |T=1,X,D
+      \right]
+    \right]
+    \\
+    &
+    \ 
+    =
+    \ 
+    \E
+    \left[ 
+      w(X,D)
+      \E
+      \left[ 
+    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+  |X,D
+      \right]
+    \right]
+    \\
+    &
+    \ 
+    =
+    \ 
+    \E
+    \left[ 
+      w(X,D)
+      \E
+      \left[ 
+    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+    -
+  F_{Y(1)}(z|X)
+  |X
+      \right]
+    \right]
+    \\
+    &
+    \ 
+    =
+    \ 
+    0
+  \end{align*}
+  The second equality is due to the assumption of 
+  $(Y(0),Y(1))\perp T |X$.
+  The third equality is due to $X\perp D$.
+  Thus
+  $
+    \E
+    f_D^z
+    =
+    0
+  $
+\end{proof}
+
+Until now, all parts of the error decomposition converge to 0.
+The last term $R_4$ will decide the profile of the limiting process.
+To this end we need the following concept.
+\begin{definition}
+  We call a class 
+  $\mathcal{F}$ of measurable functions 
+$\P$-Donsker
+if the sequence of processes 
+$\left\{ G_N f \colon f\in\mathcal{F}\right\}$
+converges in
+$l^\infty(\mathcal{F})$
+to a tight limit process.
+\end{definition}
+
+\begin{theorem}
+  Every class $\mathcal{F}$ of measurable functions 
+  with
+  $
+    J
+    _{[]}
+    (
+    1
+    ,
+    \mathcal{F}
+    ,
+    L_2(\P)
+    )
+    <\infty
+  $
+  is
+
+  $\P$-Donsker, that is,
+  the sequence of processes 
+$\left\{ G_N f \colon f\in\mathcal{F}\right\}$
+  converges 
+  in
+$l^\infty(\mathcal{F})$
+to a Gaussian process with mean 0 and covariance function given by
+\begin{gather}
+  \mathrm{Cov}(f,g)
+  :=
+  \E[fg]-\E[f]\E[g]
+  \,.
+\end{gather}
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~19.5]{Vaart2000}
+\end{proof}
+
+
+
+\begin{lemma}
+  \label{aa:mean:l:r4}
+  Let
+  $1/\pi(X)\in\mathrm{L}_2(\P)$.
+  $R_4$ converges to a gaussian process.
+\end{lemma}
+\begin{proof}
+  To bound this term we adapt \cite[Example~19.6]{Vaart2000}.
+  To this end, let $\varepsilon>0$ and $m\in\mathbb{N}$. We can choose
+  \begin{gather}
+  -\infty=z_0\ <\ z_1\ <\ \cdots\ <\ z_{m-1}\ <\ z_m=\infty
+  \,
+  \end{gather}
+  such that
+  \begin{gather}
+    \P
+    \left[ 
+      Y(1)\in \left[ z_{l-1},z_l \right]
+    \right]
+    \ 
+    \le
+    \ 
+    \varepsilon
+    \qquad
+    \text{for all}\ 
+    l\in \left\{ 1,\ldots,m \right\}
+  \end{gather}
+  and $m \le 2/\varepsilon$.
+  We define brackets by
+  \begin{align}
+    \underline{f_l}(T,X,Y(T))
+    :=
+    \frac{T}{\pi(X)}
+    \left( 
+      \mathbf{1}_{\left\{ Y(T)\le z_{l-1} \right\}}
+      -
+      F_{Y(1)}(z_l|X)
+    \right)
+    +
+    F_{Y(1)}(z_{l-1}|X)
+-
+      F_{Y(1)}(z_l)
+      \\
+    \overline{f_l}(T,X,Y(T))
+    :=
+    \frac{T}{\pi(X)}
+    \left( 
+      \mathbf{1}_{\left\{ Y(T)\le z_{l} \right\}}
+      -
+      F_{Y(1)}(z_{l-1}|X)
+    \right)
+    +
+    F_{Y(1)}(z_{l}|X)
+-
+F_{Y(1)}(z_{l-1})
+  \end{align}
+  Let $\mathcal{G}$ be the space covered by these brackets. 
+  An elementary but lengthy calculation shows
+  \begin{gather}
+      \norm{
+    \overline{f_l}
+-
+    \underline{f_l}
+    }_{\mathrm{L}_2(\P)}
+    \ 
+    \le
+    \ 
+    2
+    \,
+    \varepsilon^{1/4}
+    \sqrt{
+      \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}
+      +
+      2
+    }
+  \end{gather}
+  Thus we need 
+  $1/\pi(X)\in\mathrm{L}_2(\P)$
+  . By this assumption it 
+  follows, that
+  \begin{gather}
+    N_{[\,]}(C\varepsilon^{1/4}, \mathcal{G},\mathrm{L}_2(\P))
+    \ 
+    \le
+    \ 
+    \frac{2}{\varepsilon}
+  \end{gather}
+  and thus
+\begin{gather}
+    N_{[\,]}(\varepsilon, \mathcal{G},\mathrm{L}_2(\P))
+    \ 
+    \lesssim
+    \ 
+    \frac{1}{\varepsilon^4}  
+    \,.
+\end{gather}
+This covering number is of polynomial order. Thus
+\begin{gather}
+    \log N_{[\,]}(\varepsilon, \mathcal{G},\mathrm{L}_2(\P))
+    \lesssim
+    \log(1/\varepsilon)
+    \,.
+\end{gather}
+But then $\mathcal{G}$ is $\P$-Donsker.
+Define
+\begin{gather}
+  g^z(T,X,Y(T))
+    :=
+    \frac{T}{\pi(X)}
+    \left( 
+      \mathbf{1}_{\left\{ Y(T)\le z \right\}}
+      -
+      F_{Y(1)}(z|X)
+    \right)
+    +
+    F_{Y(1)}(z|X)
+-
+      F_{Y(1)}(z)
+\end{gather}
+Then $g^z\in\mathcal{G}$ for all $z\in \R$.
+Since $\E[g^z]=0$ it holds
+\begin{gather}
+  R_4(z)=G_N g^z
+\end{gather}
+By the Donsker Theorem \cite[Theorem~19.5]{Vaart2000}
+the process $R_4$ converges in $l^\infty(\R)$ to a Gaussian process, called $\P$-Brownian bridge, with mean 0 and covariance?
+\end{proof}
+We have gathered all the results to prove Theorem~\ref{aa:mean:th}.
+\begin{proof}
+  \emph{(Theorem~\ref{aa:mean:th})}
+  We connect the statement of the theorem to the error decomposition by Lemma~\ref{aa:mean:lemma_decomp}.
+  By Lemma~\ref{aa:mean:l:r1}, Lemma~\ref{aa:mean:l:r2},
+   Lemma~\ref{aa:mean:l:fz} and Lemma~\ref{aa:mean:l:r3}
+   it follows 
+   $\sup_{z\in\R}|R_i(z)|\overset{\P}{\to}0$ for $i=1,2,3$.
+   Thus, by Slutzky's theorem (cf.\cite[Theorem~13.8]{Klenke2020})
+   the behaviour of the limiting process is the one of Lemma~\ref{aa:mean:l:r4}.
+\end{proof}

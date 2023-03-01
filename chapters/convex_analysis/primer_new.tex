@@ -1,3 +1,7 @@
+\subsection*{My Contribution}
+I present the relevant facts from Convex analysis.
+I prove some results that I did not find in the literature, but likely are folklore.
+
 Throughout this section let $n\in\mathbb{N}$.
 \subsection*{Sets}
 A subset $C\subseteq \R^n$ is called \textbf{convex set}, 
@@ -463,45 +467,425 @@ and thus
   f(\overline{x})
   \,.
 \end{gather}
-We call a differentiable function $f$ \textbf{strongly convex} with parameter
-$m>0$ if for all
-$x,y\in\mathrm{dom}\,f$ it holds
-\begin{gather}
-  f(y)-f(x)
+%We call a differentiable function $f$ \textbf{strongly convex} with parameter
+%$m>0$ if for all
+%$x,y\in\mathrm{dom}\,f$ it holds
+%\begin{gather}
+%  f(y)-f(x)
+%  \ 
+%  \ge
+%  \ 
+%  \inner
+%  {
+%  \nabla
+%  f(x)
+%  }
+%  {y-x}
+%  \ 
+%  +
+%  \ 
+%  \frac{m}{2}
+%  \norm{y-x}^2
+%  \,.
+%\end{gather}
+%If $f$ is twice continuously differentiable, then it is strongly 
+%convex with parameter $m>0$ if and only if the matrix
+%\begin{gather}
+%\nabla^2f(x)
+%-m\cdot\mathbf{I}
+%\qquad
+%\text{
+%is positive semi-definite for all
+%}\ 
+%x\in\mathrm{dom}\,f
+%\,,
+%\end{gather}
+% where 
+%$
+%\nabla^2f
+%$
+%is the Hessian Matrix.
+%
+
+\begin{definition*}
+  Given a nonempty subset 
+  $\Omega \subseteq \R^n$,
+  we define
+  the \textbf{support function} 
+  $
+  $
+  of $\Omega$
+  to be
+  \begin{gather*}
+  \sigma_\Omega 
+  \,
+  :
+  \,
+  \R^n \to\  \overline{\R}
+  \,,
+  \qquad
+  x^*
+  \ 
+  \mapsto
+  \ 
+    \sup_{x \in \Omega}
+    \ 
+    \inner{x^*\!}{x}
+    \,.
+  \end{gather*}
+\end{definition*}
+
+
+\begin{definition}
+  Given functions
+  $
+    f_i\,:\,
+    \R^n \to\  \overline{\R}
+  $
+  for $ i = 1, \ldots, m $,
+  we define the \textbf{infimal convolution} of these functions to be
+  \begin{gather*}
+    f_1 \square \cdots \square f_m
+    \ 
+    \colon
+    \ 
+    \R^n
+    \to
+    \ 
+    \overline{\R}
+    \,,
+    \quad
+    x
+    \ 
+    \mapsto
+    \ 
+    \inf
+    \left\{ 
+    \sum_{i = 1}^{m}
+      f_i(x_i)
+      \ 
+      \colon
+      \ 
+      x_i \in \R^n 
+      \ 
+      \mathrm{and}\ 
+      \sum_{i = 1}^{m} 
+        x_i
+      =
+      x
+    \right\}
+    \,.
+  \end{gather*}
+\end{definition}
+ 
+The next result establishes a connection between the support function of the intersection of two convex sets and the infimal convolution of the support functions of the sets taken by themselfes.
+The proof translates the geometric concept of convex separation to the world of convex functions.
+
+\begin{lemma}
+  \label{cv:primer:lem}
+  Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$.
+  For any
+  $ x^* \in \mathrm{dom}\, \sigma_{C_1\cap C_2} $
+  the sets
+  \begin{align*}
+    \Theta_1
+    &
+    \ :=\ 
+    C_1 \times [\,0,\infty)
+    \,,
+    \\
+    \Theta_2
+    (x^*)
+    &
+    \ :=\ 
+    \left\{ 
+      (x,\lambda)\in \R^n
+      \ 
+      \colon
+      \ 
+      x \in C_2
+      \ 
+      \text{and}
+      \ 
+      \lambda
+      \,
+      \le
+      \,
+      \inner{x^*\!}{x} 
+      \ 
+      -
+      \ 
+      \sigma_{C_1\cap C_2}(x^*)
+    \right\}
+  \end{align*}
+  can by properly separated.
+\end{lemma}
+\begin{proof}
+  We fix 
+  $ x^* \in \mathrm{dom}\, \sigma_{C_1\cap C_2} $
+  and write
+  $ 
+  \alpha
+  \ 
+  :=
+  \ 
+  \sigma_{C_1\cap C_2}(x^*)
+  $.
+  In order to apply convex separation in finite dimension 
+  (Theorem~\ref{cv:primer:sep})
+  to
+  the sets
+  $ \Theta_1 $ and $ \Theta_2(x^*) $,
+  it suffics to show
+  their convexity and
+  $
+    \mathrm{ri}\, 
+    \Theta_1
+    \cap
+    \mathrm{ri}\, 
+    \Theta_2(x^*)
+    =
+    \emptyset
+  $.
+  \subsubsection*{Convexity of 
+  $ \Theta_1 $ and $ \Theta_2(x^*) $
+  }
+  Clearly, 
+  $ \Theta_1 $ is convex by the convexity of 
+  $ C_1 $ and $ [0,\infty) $.
+ To see that $\Theta_2(x^*)$ is convex consider the linear function
+ \begin{gather*}
+    L
+    \,
+    :
+    \,
+    \R^n\times\,  \R 
+    \ 
+    \to
+    \ 
+    \R
+    \,,
+    \qquad 
+    (x,\lambda)
+    \ 
+    \mapsto
+    \ 
+    \inner{x^*\!}{x} - \lambda
+    \,.
+ \end{gather*}
+ From the definitions of $L$ and $\Theta_2(x^*)$ we get 
+  \begin{gather*}
+ \Theta_2
+ (x^*)
+    \ 
+    =
+    \ 
+    (
+    C_2\!\times\R
+    )
+    \ 
+    \cap
+    \ 
+    L^{\!-1}
+    [\,\alpha,\infty)
+    \,
+    .
+  \end{gather*}
+  Thus,
+  by
+  Proposition~\ref{cv:primer:prop}~(v)
+  and the convexity of $C_2$ we get the convexity of
+  $
+    L^{\!-1}
+    [\,\alpha,\infty)
+  $ and with it that of $\Theta_2(x^*)$.
+
+  \subsubsection*{Relative interiors of
+  $ \Theta_1 $ and $ \Theta_2(x^*) $
+  are disjoint}
+  We start by calculating the relative interiors. It holds
+  \begin{alignat*}{3}
+    \mathrm{ri}\,
+    \Theta_1
+    &
+    \ 
+    =
+    \ 
+    \mathrm{ri}
+    ( C_1\times [0,\infty) )
+    &&
+    \ 
+    =
+    \ 
+    \mathrm{ri}\,
+    C_1
+    \!
+    \times
+    \mathrm{ri}\,
+    [0,\infty)
+    \ 
+    =
+    \ 
+    \mathrm{ri}\,
+    C_1
+    \!
+    \times
+    (0,\infty)
+    \,,
+    %%%%%%%%%%%%%%%%%
+    \\
+    \mathrm{ri}\,
+    \Theta_2(x^*)
+    & 
+    \ 
+    =
+    \ 
+    \mathrm{ri}
+    (
+    L^{\!-1}
+    [\,\alpha,\infty)
+    )
+    &&
+    \ 
+    =
+    \ 
+    L^{\!-1}
+    (
+    \mathrm{ri}\,
+    [\,\alpha,\infty)
+    )
+    \ 
+    \ 
+    =
+    \ 
+    L^{\!-1}
+    (\alpha,\infty)
+    \,.
+  \end{alignat*}
+  Suppose there exists
+  $ (\lambda,x) \in
+    \mathrm{ri}\, 
+    \Theta_1
+    \cap
+    \,
+    \mathrm{ri}\, 
+    \Theta_2(x^*)
+  $.
+  Then it holds 
+  $ x \in C_1\!\times C_2 $
+  and 
+  $ \lambda >0 $.
+  We also note, that
+  \begin{gather*}
+  \alpha
+  \ 
+  =
+  \ 
+  \sigma_{C_1\cap\, C_2}(x^*)
+    \ 
+  =
+    \ 
+  \sup_{z \in C_1\cap\, C_2}
+  \inner
+  {x^*}
+  {z}
   \ 
   \ge
   \ 
   \inner
-  {
-  \nabla
-  f(x)
-  }
-  {y-x}
-  \ 
-  +
-  \ 
-  \frac{m}{2}
-  \norm{y-x}^2
+  {x^*}
+  {x}
   \,.
-\end{gather}
-If $f$ is twice continuously differentiable, then it is strongly 
-convex with parameter $m>0$ if and only if the matrix
-\begin{gather}
-\nabla^2f(x)
--m\cdot\mathbf{I}
-\qquad
-\text{
-is positive semi-definite for all
-}\ 
-x\in\mathrm{dom}\,f
-\,,
-\end{gather}
- where 
-$
-\nabla^2f
-$
-is the Hessian Matrix.
+  \end{gather*}
+  Then it follows
+  \begin{gather*}
+    \alpha
+    \ 
+    <
+    \ 
+  \inner
+  {x^*}
+  {x}
+  - \lambda
+    \ 
+  \le
+    \ 
+  \alpha\,,
+  \end{gather*}
+  a contradiction.
+  Thus, the relative interiors of
+  $ \Theta_1 $ and $ \Theta_2(x^*) $
+  are disjoint.
 
+  Applying Theorem~\ref{cv:primer:sep} finishes the proof.
+\end{proof}
+
+
+\begin{theorem*}
+  Let $C_1$ and $C_2$ be two non-empty convex sets in $\R^n$ with
+  $\mathrm{ri}\,C_1\cap\mathrm{ri}\,C_2\neq\emptyset.$
+  Then the support function of the intersection 
+  $
+    C_1\! \cap C_2
+  $
+  is represented as
+  \begin{gather}
+    (\sigma_{
+    C_1 \cap\, C_2
+    })
+    (x^*)
+    =
+    (\sigma_{C_1}\square \,\sigma_{C_2})
+    (x^*)
+    \qquad
+    \text{for all}\ 
+    x^* \in \R^n.
+  \end{gather}
+  Furthermore, for any
+  $
+  x^*\in \mathrm{dom}
+    (\sigma_{
+    C_1 \cap\, C_2
+    })
+  $
+  there exist dual elements 
+  $
+    x_1^*
+    ,
+    x_2^*
+    \in \R^n
+  $ 
+  such that 
+  $
+    x^*
+    =
+    x_1^*
+    +
+    x_2^*.
+  $
+  and
+  \begin{gather}
+    (\sigma_{
+    C_1 \cap\, C_2
+    })
+    (x^*)
+    =
+    \sigma_{C_1}(x_1^*)
+    +
+    \sigma_{C_2}(x_2^*).
+  \end{gather}
+\end{theorem*}
+\begin{proof}
+  Using Lemma~\ref{cv:primer:lem}
+  the rest of the proof is as that of
+  \emph{\cite[Theorem~4.23(b)]{Mordukhovich2022}}.
+\end{proof}
+
+\begin{takeaways}
+  The support function intersection rule connects the geometric 
+  property of convex separation to an identity of support functions
+  This result is central to the analysis of convex conjugates.
+\end{takeaways}
 One important application of convex functions is in optimization.
 There we often analyse a dual problem instead, which relies on the notion of \textbf{convex conjugate} 
 $
@@ -518,5 +902,460 @@ $
     - f(x)
     \,.
   \end{gather}
-  Even for arbitrary functions, the convex conjugate is convex(cf.).
+  Even for arbitrary functions, the convex conjugate is convex(cf.
+  \cite[Proposition~4.2]{Mordukhovich2022}
+  ).
   Like in differential calculus, there exist sum and chain rule for computing the convex conjugate.
+\begin{theorem}
+  Let
+  $
+    f,g:
+    \R^n \to (-\infty, \infty]
+  $
+  be proper convex functions 
+  and
+  $
+  \text{ri}\left( \text{dom}(f) \right)
+  \cap
+  \text{ri}\left( \text{dom}(g) \right)
+  \neq 
+  \emptyset
+  .
+  $
+  Then we have the 
+  \textbf{
+  conjugate sum rule
+  }
+  \begin{gather}
+    ( f + g )^*(x^*)
+    =
+    ( f^* \square g^*)(x^*)
+  \end{gather}
+  for all $x^* \in \R^n$.
+  Moreover, the infimum in 
+  $
+    ( f^* \square g^*)(x^*)
+  $
+  is attained, i.e., for any
+  $
+    x^* \in \text{dom}(f+g)^*
+  $
+  there exists vectors $x_1^*, x_2^*$
+  for which
+  \begin{gather}
+    (f+g)^*(x^*)
+    =
+    f^*(x_1^*)
+    +
+    g^*(x_2^*),
+    \quad
+    x^* = x_1^* + x_2^*.
+  \end{gather}
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~4.27(c)]{Mordukhovich2022}
+\end{proof}
+
+
+
+% conjugate chain rule %
+ %%%%%%%%%%%%%%%%%%%%%%
+\begin{theorem}
+  \label{cvxa_conjugate_chain_rule}
+  Let 
+  $
+    A:
+      \R^m \to \R^n
+  $
+  be a linear map (matrix)
+  and
+  $
+    g:
+      \R^n \to (-\infty, \infty]
+  $
+  a proper convex function. If
+  $
+    \text{Im}(A) \cap \text{ri}(\text{dom}(g))
+    \neq
+    \emptyset
+  $
+  it follows
+  the 
+  \textbf{conjugate chain rule}
+  \begin{gather}
+    ( g \circ A )^* ( x^* )
+    =
+    \inf_
+          { y^* \in ( A^* )^{ -1 } ( x^* )}
+                                          g^*( y^* )
+                                          .
+  \end{gather}
+  Furthermore, 
+    for any 
+      $
+        x^* \in \text{dom}( g \circ A)^*
+      $
+        there exists
+          $
+            y^* \in ( A^* )^{ -1 } ( x^* )
+          $
+            such that
+              $
+                ( g \circ A)^* ( x^* )
+                =
+                g^*( y^* )
+              $.
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~4.28(c)]{Mordukhovich2022}
+\end{proof}
+%%%%%%%%%%%%%%%%%
+%%%% EXAMPLE %%%%
+%%%%%%%%%%%%%%%%%
+\begin{example}
+  \label{cv:cc:ex}
+  Let 
+  $
+    f:\R\to \overline{\R}
+  $
+  be a proper convex function, that is, 
+  $
+    \mathrm{dom}\,f
+    \neq
+    \emptyset
+  $
+  and $f$ is convex.
+  In steps we apply the conjugate chain and sum rule, together with mathematical induction,
+  to prove the conjugate relationship 
+  \begin{align*}
+    &S_{f,n}:\R^n \to \overline{\R},
+    \qquad
+    (x_1,\ldots,x_n)
+    \mapsto
+    \sum_{i=1}^{n} 
+    f(x_i)
+    ,
+    \\
+    &S_{f,n}^*:\R^n \to \overline{\R},
+    \qquad
+    (x^*_1,\ldots,x^*_n)
+    \mapsto
+    \sum_{i=1}^{n} 
+    f^*(x^*_i)
+    \,.
+  \end{align*}
+  This relationship is very natural and the ensuing calculations serve to confirm our intuition.
+
+  First, we work in the projections on the coordinates. 
+  For the $i$-th coordinate, where $i=1,\ldots,n$, this is 
+  \begin{gather}
+    p_i:\R^n\to \R
+    ,
+    \quad
+    (x_1,\ldots,x_n)
+    \mapsto
+    x_i\,.
+  \end{gather}
+  All projections 
+  $p_i$
+  are linear function with matrix representation
+  $
+    e_i^\top
+  $,
+  where $e_i$ is $i$-the coordinate vector.
+  The adjoint of $p_i$ is therefore
+  \begin{gather}
+    p^*_i:\R\to \R^n
+    ,
+    \quad
+    x
+    \mapsto
+    e_i\cdot x
+    \,.
+  \end{gather}
+  For the inverse image of the adjoint of $p_i$ it holds
+  \begin{gather}
+    (p_i^*)^{-1}
+    \left\{ 
+    (x_1^*,\ldots,x_n^*)
+    \right\}
+    \ 
+    =
+    \ 
+    \begin{cases}
+      \left\{ x_i^* \right\},
+      \quad
+      &\text{if}\ 
+      x_j^*=0\ \text{for all}\ j\neq i\,,
+      \\
+      \ \ \emptyset
+      \quad
+      &\text{else.}
+    \end{cases}
+  \end{gather}
+  Throughout this example we use the asterisk character $^*$ somewhat inconsistently. 
+  Note that $f^*$ is the convex conjugate 
+  of the function $f$ and $p_i^*$ is the adjoint linear function of the projection on the $i$-th coordinate. Likewise, we denote dual variables, that is, the arguments of convex conjugates, as $x^*$.
+
+  Next, we employ the conjugate chain rule to establish the conjugate relationship 
+  \begin{align*}
+    f_i&:\R^n\to \overline{\R}
+    ,
+    \quad
+    (x_1,\ldots,x_n)
+    \mapsto x_i \mapsto f(x_i)
+    \,,
+    \\
+    f^*_i&:\R^n\to \overline{\R}
+    ,
+    \quad
+    (x^*_1,\ldots,x^*_n)\mapsto 
+    \begin{cases}
+      f^*(x_i^*),
+      \quad
+      &\text{if}\ 
+      x_j^*=0\ \text{for all}\ j\neq i\,,
+      \\
+      \infty
+      \quad
+      &\text{else.}
+    \end{cases}
+  \end{align*}
+  Note, that 
+  $
+    f_i
+    =
+    (f\circ p_i)
+  $
+  and
+  $
+    f^*_i
+    =
+    (f\circ p_i)^*
+  $.
+  Since 
+  $
+    \mathrm{Im}\,p_i=\R
+  $
+  and 
+  $
+    \mathrm{dom}\, f
+    \neq
+    \emptyset
+  $,
+  it holds
+  $
+    \mathrm{Im}\, p_i
+    \cap
+    \mathrm{ri}(
+    \mathrm{dom}\, f
+    )
+    \neq
+    \emptyset
+  $.
+  Then $f$ and $p_i$ conform with the demands of the conjugate chain rule.
+  It follows
+  \begin{align*}
+    &f_i^*
+    (x^*_1,\ldots,x^*_n) 
+    \ 
+    =
+    \ 
+    (f\circ p_i)^*
+    (x^*_1,\ldots,x^*_n) 
+    \ =
+    \ 
+    \inf
+    \left\{ 
+    f^*(y)
+    \ 
+    |
+    \ 
+    y\in 
+    (p_i^*)^{-1}
+    \left\{ 
+    (x_1^*,\ldots,x_n^*)
+    \right\}
+    \right\}
+    \\
+    &\quad=
+    \ 
+    \begin{cases}
+      f^*(x_i^*),
+      \quad
+      &\text{if}\ 
+      x_j^*=0\ \text{for all}\ j\neq i\,,
+      \\
+      \infty
+      \quad
+      &\text{else,}
+    \end{cases}
+  \end{align*}
+  where we keep to the convention $\inf\emptyset=\infty$.
+  In the same way it follows
+  \begin{gather}
+    \left( 
+      S_{f,n}
+      \circ
+      p_{\left\{ 1,\ldots,n \right\}}
+    \right)^*
+    (x^*_1,\ldots,x^*_{n+1})
+    =
+    \begin{cases}
+      S_{f,n}^*
+    (x^*_1,\ldots,x^*_{n})
+      \quad
+      &\text{if}\ 
+      x_{n+1}^*=0\,,
+      \\
+      \infty
+      \quad
+      &\text{else,}
+    \end{cases}
+  \end{gather}
+
+  Next, note that for $n=1$ we arrive at the result. Thus, for some $n\in \mathbb{N}$ it holds
+  $
+  \left( 
+    S_{f,n}
+  \right)
+  ^*
+  =
+    S_{f,n}^*
+  $.
+  In order to apply the conjugate sum rule to 
+  $
+    S_{f,n}
+  $
+  and
+  $
+    f_{n+1}
+  $
+  we note that
+  \begin{align*}
+    \mathrm{dom}\, f_i
+    &
+    \ =\ 
+    \left\{ 
+      (x_1,\ldots,x_{n+1})
+      \in \R^{n+1}
+      :
+      x_i\in \mathrm{dom}\,f
+    \right\}
+    \ 
+    \neq 
+    \ 
+    \emptyset
+    \qquad
+    \text{for all}
+    \ 
+    i=1,\ldots,n+1
+    \,,
+    \\
+    \bigcap_{i=1}^{n+1}
+    \mathrm{dom}\, f_i
+    &
+    \ =\ 
+    \left\{ 
+      (x_1,\ldots,x_{n+1})
+      \in \R^{n+1}
+      :
+      x_i\in \mathrm{dom}\,f
+      \ 
+    \text{for all}
+    \ 
+    i=1,\ldots,n+1
+    \right\}
+    \ 
+    \neq 
+    \ 
+    \emptyset
+    \,,
+  \end{align*}
+  and
+\begin{align*}
+  &
+  \mathrm{ri}\left( 
+    \mathrm{dom}
+    \left( 
+    S_{f,n}
+    \circ
+    p_{\left\{ 1,\ldots,n \right\}}
+    \right)
+  \right)
+  \ 
+  \cap
+  \ 
+  \mathrm{ri}\left( 
+    \mathrm{dom}\,f_{n+1}
+  \right)
+  \\
+  &
+  \hspace{25mm}
+  =
+  \ 
+  \mathrm{ri}\left( 
+    \mathrm{dom}
+    \left( 
+    S_{f,n}
+    \circ
+    p_{\left\{ 1,\ldots,n \right\}}
+    \right)
+  \ 
+  \cap
+  \ 
+    \mathrm{dom}\,f_{n+1}
+  \right)
+  \ 
+  =
+  \ 
+  \mathrm{ri}
+  \left( 
+    \bigcap_{i=1}^{n+1}
+    \mathrm{dom}\, f_i
+  \right)
+  \ 
+  \neq
+  \ 
+  \emptyset
+  \,.
+\end{align*}
+By the conjugate sum rule it follows
+\begin{align*}
+  (
+  S_{f,n+1}
+  )^*
+  =
+  (
+    S_{f,n}
+    \circ
+    p_{\left\{ 1,\ldots,n \right\}}
+  +
+  f_{n+1}
+  )^*
+  =
+  (
+    S_{f,n}
+    \circ
+    p_{\left\{ 1,\ldots,n \right\}}
+  )
+  ^*
+  \square
+  f_{n+1}^*
+  \\
+  =
+    S_{f,n}^*
+    \circ
+    p_{\left\{ 1,\ldots,n \right\}}
+    +
+  f_{n+1}^*
+  =
+  S^*_{f,n+1}
+  \,.
+\end{align*}
+\end{example}
+
+
+
+
+
