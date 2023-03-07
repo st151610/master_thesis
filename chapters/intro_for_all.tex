@@ -92,12 +92,79 @@ $Y(t)|T=t$ does not have the same distribution as $Y(t)$ for $t\in \left\{ 0,1 \
 
 If the propensity score is unknown, one method is to use estimates of it.
 We hope to recover \eqref{ipw} from the estimate.
-But we have to be careful.
-After all, we want to extract informations on the potential outcomes and the propensity score is just a tool.
+In practice, estimating the propensity score is a difficult task.
+Researchers often compare different estimates and select the best. 
+They employ metrics called covariate balance.
+The high level idea is, that the weighted treatment group should be similar to the unweighted control group. 
+Rather than estimating the propensity score and then checking for covariate balance,
+the method of \cite{Imai2014a} tries to solve both tasks simultaneously.
+Therefore it is called the Covariate Balancing Propensity Score.
 
-This is, why people started thinking about alternative ways to generate weights.
+We will consider a third method, which only balances covariates but does not (explicitly) model treatment or outcome.
+This method was introduced in \cite{Hainmueller2012}. 
+It is a convex optimization problem with constraints on the balance of moments of the covariates.
+The method gained popularity by the observation of \cite{Zhao2017a}
+that it is doubly robust.
+Graphic?
 
-One way is to solve a constrained optimization problem.
+Let's be more specific what we mean by covariate balance.
+We consider a class of functions $B$ of the covariates, which we call regression basis.
+A simple example are the (known) moments of the covariats.
+We will extend the view, but for now this is sufficient.
+Our measure of balance is
+\begin{gather}
+  \label{cov_bal}
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n}
+    w_i
+    B(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B(X_i)
+  \right)
+\end{gather}
+where $(w_i)$ are the (estimated) weights for a (sub-)population of size $n\le N$ and $B$ are (basis-)functions of the covariates.
+We consider \eqref{cov_bal} for all basis functions is the regression basis.
+It is a non-trivial question, which basis to choose in practice.
+How strictly to enforce covariate balance is another question.
+It is relevant, because very strict assumptions can render the problem infeasible, whereas loosening can result in bias of the estimator.
+In \cite{Hainmueller2012} they choose the (known) moments of the covariate as basis and enforce strict balance, that is, the quantity in \eqref{cov_bal} has to vanish.
+In \cite{Wang2019} they consider the regression basis of sieve estimators\cite{Newey1997a}, where the number of basis functions grows with the sample size.
+Also they loosen the strict constraints on the covariate balance as to vanish only for $N\to\infty$. This takes the for
+\begin{gather}
+  \left| 
+  \label{cov_bal}
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n}
+    w_i
+    B(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B(X_i)
+  \right)
+  \right|
+  \le \delta_B
+\end{gather}
+for some $\delta_B > 0 $ with $\delta_B\to 0$ for $N\to\infty$.
+The paper \cite{Wang2019} also contains theoretical analysis.
+It shows a surprising connection to propensity score estimation.
+They show that with the regression basis of sieve estimators their method (implicitly) models the inverse propensity score.
+Their analysis is in part motivated by the observation, that entropy balancing is doubly robust \cite{Zhao2017a}.
+That is, if the basis functions estimate one of outcome or treatment well, the weighted mean is consistent.
+One novelty, introduced in this thesis, is, to choose universally consistent regression basis, such as partitioning estimates \cite{Gyorfi2002} and recover the results of \cite{Wang2019}.
+By the universal consistency we would expect, that both outcome and treatment are estimated well with sufficiently large samples.
+
+A second novelty introduced in this thesis is,
+to use these weights and the weighted mean to estimate tho distribution function of potential outcomes.
+
+We show, that (under mild assumptions) with the regression basis of partitioning estimates, the weighted mean is asymptotically well behaved in estimating distribution functions.
+This result is both new by regression basis and estimand.
+By the functional delta method
+\cite{Vaart2000} we immediately get access to a large class of plug-in estimators.
+
+With my thesis I contribute to one of the main purposes in causal inference, that is, reinforcing classical methods of statistical analysis for use in observational studies.
 
 
 

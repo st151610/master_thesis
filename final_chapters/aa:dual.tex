@@ -19,49 +19,42 @@ We define the oracle parameter $\lambda^*\in\R^N$ to be the vector with coordina
   \left( 
     \frac{1}{\pi(X_k)}
   \right)
-  \ 
-  -
-  \ 
-  \lambda^\dagger_0
   \qquad
   \text{for all}\ 
   k\in \left\{ 1,\ldots,N \right\}
   \,,
 \end{gather}
-where $\pi(x)=\P[T=1|X=x]$ is the \textbf{propensity score} at $x\in\mathcal{X}$. Why this choice? First, the $\lambda_0^\dagger$ part is unimportant. We need it to eliminate the same factor in
-\begin{gather}
-  w(x):=
-  (
-  f^{'}
-  )^{-1}
-  \left( \inner{B(x)}{\lambda^\dagger}+\lambda_0^\dagger \right)
-\end{gather}
-that is 
-\begin{gather}
-  \inner{B(x)}{\lambda^*}+\lambda_0^\dagger 
-  =
-\sum_{k=1}^{N} 
-B_k(x)
-  f^{'}
-  \left( 
-    \frac{1}{\pi(X_k)}
-  \right)
-  \,.
-\end{gather}
-The other part is the foundation of why everything works.
-We will show
+where $\pi(x)=\P[T=1|X=x]$ is the \textbf{propensity score} at $x\in\mathcal{X}$. Why this choice? 
+%First, the $\lambda_0^\dagger$ part is unimportant. We need it to eliminate the same factor in
+%\begin{gather}
+%  w(x):=
+%  (
+%  f^{'}
+%  )^{-1}
+%  \left( \inner{B(x)}{\lambda^\dagger}+\lambda_0^\dagger \right)
+%\end{gather}
+%that is 
+%\begin{gather}
+%  \inner{B(x)}{\lambda^*}+\lambda_0^\dagger 
+%  =
+%\sum_{k=1}^{N} 
+%B_k(x)
+%  f^{'}
+%  \left( 
+%    \frac{1}{\pi(X_k)}
+%  \right)
+%  \,.
+%\end{gather}
+With hindsight, we need
+for all $i\in \left\{ 1,\ldots,N \right\}$
 \begin{gather}
 \left| 
-\sum_{k=1}^{N} 
-B_k(X_i)
-  f^{'}
-  \left( 
-    \frac{1}{\pi(X_k)}
-  \right)
+\inner{B(X_i)}
+{\lambda^*}
   -
   f^{'}
   \left( 
-    \frac{1}{\pi(X_k)}
+    \frac{1}{\pi(X_i)}
   \right)
 \right|
 \ 
@@ -74,7 +67,7 @@ B_k(X_i)
 Consequently, if $\pi$ is continuous and positive (not 0) on $\mathcal{X}$ and the width of the partition $h_N$ converges to 0, we get 
 \begin{gather}
  \left| 
-  \inner{B(X_i)}{\lambda^*}+\lambda_0^\dagger 
+  \inner{B(X_i)}{\lambda^*}
   -
   f^{'}
   \left( 
@@ -88,8 +81,9 @@ Consequently, if $\pi$ is continuous and positive (not 0) on $\mathcal{X}$ and t
  \qquad
  \text{almost surely.}
 \end{gather}
-This helps proving 
-\begin{ftheorem}
+We need this to bound the term $M_N$ in \eqref{c:first:1}.
+The first big goal is to prove the following proposition.
+\begin{proposition}
   \label{bw:cd:th}
   Let 
 $(\lambda_0^\dagger,\lambda^\dagger)$
@@ -110,18 +104,10 @@ $
     0
 $
 for $N\to\infty$.
-\end{ftheorem}
-\begin{proof}
+\end{proposition}
+
 We use a hint from the last display of~\cite[p.22]{Wang2019}.
-The high-level idea is that the connection of
-optimality of  
-$(\lambda_0^\dagger,\lambda^\dagger)$
-to proximity to (any) oracle parameter $\lambda^*$
-is due to
-convexity and differentiability of (parts of) the 
-the objective function of Problem.
-We deliver the omitted technical details.
-I proved the following lemma by myself.
+The high-level idea is that the existence of the optimal solution and its proximity to the oracle parameter can be analysed by the objective function.
 \begin{lemma}
   \label{bw:cd:lem}
   Let $m\in\mathbb{N}$ and
@@ -277,6 +263,19 @@ I proved the following lemma by myself.
     is also a global minimum.
     %It follows the right-hand side of \eqref{7060_0}.
 \end{proof}
+\begin{remark}
+  The hint from \cite[page 22]{Wang2019}
+  states
+  \eqref{7060_0}
+  with strict inequality.
+  They base their subsequent analysis on a quadratic Taylor expansion and aim to prove \eqref{7060_0} with strict inequality.
+  I show, that this approach is inefficient.  
+  To do that, I need Lemma~\ref{bw:cd:lem} exactly as stated - with $\ge$ in \eqref{7060_0}.
+\end{remark}
+Lemma~\ref{bw:cd:lem} motivates the following lemma.
+\begin{proof}
+We deliver the omitted technical details.
+I proved the following lemma by myself.
 Since 
 $
 (\lambda_0^\dagger,\lambda^\dagger)
@@ -324,57 +323,6 @@ objective function $G$ of Problem?, that is,
 {|\lambda|}
 \,.
 \end{gather*}
-an immediate consequence of Lemma~\ref{bw:cd:lem} is
-\begin{gather*}
-   \P
-   \left[ 
-     \norm
-     {
-      \lambda ^ \dagger
-      -
-      \lambda^*
-     }_2
-     \le
-     \varepsilon
-   \right]
-   \
-   \ge
-   \ 
-   \P
-   \left[ 
-     \inf _ { 
-       \norm{
-         (
-     \Delta
-     ,
-     \Delta_0
-         )
- } 
-= \varepsilon }
-     G
-     (
-     \lambda^*
-      +
-      \Delta
-      ,
-      \lambda^\dagger_0
-      +
-     \Delta_0
-     )
-     -
-     G
-     (
-     \lambda^*,
-      \lambda^\dagger_0
-     )
-     \ge 
-     0
-   \right]
-   \,.
- \end{gather*}
-
- To prove Theorem~\ref{bw:cd:th}
- it thus suffices to prove
  \begin{lemma}
    Under the conditions of Theorem~\ref{bw:cd:th} it holds
    for all $\varepsilon>0$
@@ -396,15 +344,13 @@ an immediate consequence of Lemma~\ref{bw:cd:lem} is
       +
       \Delta
       ,
-      \lambda^\dagger_0
-      +
      \Delta_0
      )
      -
      G
      (
      \lambda^*,
-      \lambda^\dagger_0
+     0
      )
      \ge 
      0
@@ -422,10 +368,11 @@ an immediate consequence of Lemma~\ref{bw:cd:lem} is
  \end{lemma}
  \begin{proof}
   Recall the objective function $G$ of Problem? 
-\begin{gather*}
+\begin{align*}
   G(\lambda,\lambda_0)
+  &
   \ 
-  :=
+  =
   \ 
     \frac{1}{N}
 \sum_{i=1} 
@@ -461,28 +408,31 @@ an immediate consequence of Lemma~\ref{bw:cd:lem} is
 \inner
 {\delta}
 {|\lambda|}
-\,.
-\end{gather*}
-   Since we assume the convex conjugate $f^*$ to be differentiable
-   (it always convex),
-without the last term, $G$ would be a differentiable convex function.
-
-It is well know that a differentiable convex functions $g$ satisfies
+\,
+\\
+  &
+\ 
+=
+\ 
+g(\lambda,\lambda_0)
+\ 
++
+\ 
+\inner
+{\delta}
+{|\lambda|}
+\,
+\end{align*}
+with
   \begin{gather}
-    g(x)-g(y)
-    \ge
-    \nabla
-    g(y)^\top
-    (x-y)
-    \qquad 
-    \text{for all}\ 
-    x,y\,.
-  \end{gather}
-  The gradient of
-  \begin{gather}
-    g := 
+    g
+    \ 
+    := 
+    \ 
     (\lambda,\lambda_0)
+    \ 
     \mapsto
+    \ 
     \frac{1}{N}
 \sum_{i=1} 
   ^N
@@ -511,15 +461,21 @@ It is well know that a differentiable convex functions $g$ satisfies
   \right)
   \,
   \right]
+  \,.
   \end{gather}
-  is 
-
-  \begin{gather}
+   Since we assume the convex conjugate $f^*$ of $f$ to be differentiable
+   (it always convex),
+   $g$ is differentiable convex function with gradient 
+  \begin{gather*}
     \nabla
     g
+    \ 
     =
+    \ 
     (\lambda,\lambda_0)
+    \ 
     \mapsto
+    \ 
 \frac{1}{N}
 \sum_{i=1} 
   ^N
@@ -546,8 +502,26 @@ It is well know that a differentiable convex functions $g$ satisfies
   ,
   1
   ]^\top
-  \end{gather}
-  Thus
+  \,.
+  \end{gather*}
+It is well know that a differentiable convex functions $g$ satisfies
+  \begin{gather*}
+    g(x)
+    \ 
+    -
+    \ 
+    g(y)
+    \ 
+    \ge
+    \ 
+    \nabla
+    g(y)^\top
+    (x-y)
+    \qquad 
+    \text{for all}\ 
+    x,y\,.
+  \end{gather*}
+Thus 
 \begin{align}
   \label{c:1}
   \begin{split}
@@ -558,8 +532,6 @@ It is well know that a differentiable convex functions $g$ satisfies
       +
       \Delta
       ,
-      \lambda^\dagger_0
-      +
      \Delta_0
      )
      \ 
@@ -568,7 +540,7 @@ It is well know that a differentiable convex functions $g$ satisfies
      G
      (
      \lambda^*,
-      \lambda^\dagger_0
+     0
      )
          %%%%%%%%%%%%% 1 %%%%%%%%%%%%%%
      \\
@@ -599,8 +571,6 @@ It is well know that a differentiable convex functions $g$ satisfies
        \inner
        {B(X_i)}
        {\lambda^*}
-       +
-      \lambda^\dagger_0
      \right)
      \right)
      \\
@@ -618,6 +588,7 @@ It is well know that a differentiable convex functions $g$ satisfies
      \,.
    \end{split}
 \end{align}
+
 Next, we fix $
 \tilde{\varepsilon}
 >0
@@ -637,8 +608,6 @@ G
       +
       \Delta
       ,
-      \lambda^\dagger_0
-      +
      \Delta_0
      )
      \ 
@@ -647,13 +616,13 @@ G
      G
      (
      \lambda^*,
-      \lambda^\dagger_0
+     0
      )
 $
 will give us the lower bound 0 in \eqref{c:1} with probability going to $1$.
 
-In \eqref{c:1} we control the \textbf{first term} by (what?) 
-and the \textbf{second term} by $\norm{\delta}_1$.
+In \eqref{c:1} we control the \textbf{first term} by the law of large numbers 
+and the \textbf{second term} by $\norm{\delta}_1\to 0$.
 \subsection*{First Term}
 We note, that by $\norm{B(x)}_2\le 1$ for all $x\in\mathcal{X}$ and the Cauchy-Schwarz inequality
 it holds
@@ -694,8 +663,6 @@ Next, we see that
        \inner
        {B(X_i)}
        {\lambda^*}
-       +
-      \lambda^\dagger_0
      \right)
      \right)
      \\
@@ -719,8 +686,6 @@ Next, we see that
         \inner
        {B(X_i)}
        {\lambda^*}
-       +
-      \lambda^\dagger_0
       \ 
         -
         \ 
@@ -1110,5 +1075,57 @@ with probability going to $1$ as $N\to \infty$.
 We see, that this holds for all $\varepsilon>0$. This finish the proof.
  \end{proof}
 
+
+an immediate consequence of Lemma~\ref{bw:cd:lem} is
+\begin{gather*}
+   \P
+   \left[ 
+     \norm
+     {
+      \lambda ^ \dagger
+      -
+      \lambda^*
+     }_2
+     \le
+     \varepsilon
+   \right]
+   \
+   \ge
+   \ 
+   \P
+   \left[ 
+     \inf _ { 
+       \norm{
+         (
+     \Delta
+     ,
+     \Delta_0
+         )
+ } 
+= \varepsilon }
+     G
+     (
+     \lambda^*
+      +
+      \Delta
+      ,
+      \lambda^\dagger_0
+      +
+     \Delta_0
+     )
+     -
+     G
+     (
+     \lambda^*,
+      \lambda^\dagger_0
+     )
+     \ge 
+     0
+   \right]
+   \,.
+ \end{gather*}
+
+ To prove Theorem~\ref{bw:cd:th}
+ it thus suffices to prove
 \end{proof}
 
