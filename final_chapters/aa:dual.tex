@@ -85,26 +85,30 @@ We need this to bound the term $M_N$ in \eqref{c:first:1}.
 The first big goal is to prove the following proposition.
 \begin{proposition}
   \label{bw:cd:th}
-  Let 
-$(\lambda_0^\dagger,\lambda^\dagger)$
-be an optimal solution 
-to Problem?
-and define the oracle parameter $\lambda^*$ as in \eqref{oracle_1}.
+Define the oracle parameter $\lambda^*$ as in \eqref{oracle_1}.
 Furthermore, assume that the propensity score function is continuous and positive on $\mathcal{X}$.
-Then 
-$
-    \norm{
-      \lambda^\dagger
+Then for all $\varepsilon>0$ with probability going to 1 there exists an optimal solution
+     $(\lambda^\dagger,\lambda_0^\dagger)$
+     to Problem ? with
+     $
+     \norm
+     {
+       (\lambda^\dagger,\lambda_0^\dagger)
       -
-      \lambda^*
-    }_2
-    \ 
-    \overset{\P}{\to}
-    \ 
-    0
-$
-for $N\to\infty$.
+      (\lambda^*,0)
+     }_2
+     \le
+     \varepsilon
+     $.
 \end{proposition}
+\begin{remark}
+  In the analysis of the next sections will assume existence of an optimal solution to Problem?
+  The purpose of Proposition~\ref{bw:cd:th} is therefore twofold. 
+  First, it ensures the existence of an optimal solution with probability going to 1 as $N\to\infty$.
+  This shows that the assumption of existence is (at least for large $N$) likely met.
+  Nevertheless, it is beyond the scope of my thesis to investigate feasibility of Problem ? in more detail. 
+  Second, if a solution exists it converges to the oracle parameter $\lambda^*$ in probability. This ensures the consistency of the weights for the inverse propensity score.
+\end{remark}
 
 We use a hint from the last display of~\cite[p.22]{Wang2019}.
 The high-level idea is that the existence of the optimal solution and its proximity to the oracle parameter can be analysed by the objective function.
@@ -273,57 +277,8 @@ The high-level idea is that the existence of the optimal solution and its proxim
   To do that, I need Lemma~\ref{bw:cd:lem} exactly as stated - with $\ge$ in \eqref{7060_0}.
 \end{remark}
 Lemma~\ref{bw:cd:lem} motivates the following lemma.
-\begin{proof}
-We deliver the omitted technical details.
-I proved the following lemma by myself.
-Since 
-$
-(\lambda_0^\dagger,\lambda^\dagger)
-$
-is a global minimum (in $\R^{N+1}$) of the 
-objective function $G$ of Problem?, that is,
-\begin{gather*}
-  G(\lambda,\lambda_0)
-  \ 
-  :=
-  \ 
-    \frac{1}{N}
-\sum_{i=1} 
-  ^N
-  \left[ 
-    \,
-  T_i
-  \cdot
-  f^*
-  \!
-  \left( 
-\lambda_0
-+
-\inner
-{B(X_i)}
-{\lambda}
-  \right)
-  \ 
--
-\ 
-  \left( 
-\lambda_0
-+
-\inner
-{B(X_i)}
-{\lambda}
-  \right)
-  \,
-  \right]
-  \ 
-+
-\ 
-\inner
-{\delta}
-{|\lambda|}
-\,.
-\end{gather*}
  \begin{lemma}
+   \label{bw:cd:lem2}
    Under the conditions of Theorem~\ref{bw:cd:th} it holds
    for all $\varepsilon>0$
 \begin{gather}
@@ -764,6 +719,7 @@ $S_N \le
 (4\varepsilon)
 $
 with probability going to 1.
+
 Next, we bound $M_N$.
 Recall that $\sum_{k=1}^{N}B_k(x)=1$ for all $x\in\mathcal{X}$. Thus
 \begin{align*}
@@ -772,11 +728,7 @@ Recall that $\sum_{k=1}^{N}B_k(x)=1$ for all $x\in\mathcal{X}$. Thus
         \inner
        {B(X_i)}
        {\lambda^*}
-      \ 
-       +
-      \ 
-      \lambda^\dagger_0
-      \ 
+       \ 
         -
         \ 
         f^{'}
@@ -792,20 +744,14 @@ Recall that $\sum_{k=1}^{N}B_k(x)=1$ for all $x\in\mathcal{X}$. Thus
       \left| 
       \sum_{k=1}^{N} 
       B_k(X_i)
-      \left( 
+      \cdot
         f^{'}
         \left( 
           \frac{1}{\pi(X_k)}
-     \right)
-  -
-  \ 
-  \lambda_0^\dagger
-      \right)
+          \right)
       \ 
-      +
-      \ 
-      \lambda_0^\dagger
       -
+      \ 
         f^{'}
         \left( 
           \frac{1}{\pi(X_i)}
@@ -843,7 +789,6 @@ Recall that $\sum_{k=1}^{N}B_k(x)=1$ for all $x\in\mathcal{X}$. Thus
 1_{\left\{ X_j\in A_N(X_i) \right\}}
       }
       \left| 
-      \left( 
         f^{'}
         \left( 
           \frac{1}{\pi(X_k)}
@@ -853,7 +798,6 @@ Recall that $\sum_{k=1}^{N}B_k(x)=1$ for all $x\in\mathcal{X}$. Thus
         \left( 
           \frac{1}{\pi(X_i)}
      \right)
-      \right)
       \right|
       \\
       &
@@ -862,23 +806,14 @@ Recall that $\sum_{k=1}^{N}B_k(x)=1$ for all $x\in\mathcal{X}$. Thus
       \ 
       \omega
       \left( f^{'}\circ (x\mapsto1/x)\circ \pi,h_N \right)
+      \ 
       \to
+      \ 
       0
-      \qquad
-      \text{almost surely}
       \,,
 \end{align*}
 where $\omega$ is the modulus of continuity.
-The convergence to 0 is due to $f^{'}$ being continuous, $\pi(x)\in(0,1)$ for all $x\in\mathcal{X}$ and the (assumed) continuity of $\pi$.
-Indeed, by $h_N\to 0$ for $N\to\infty$ it follows
-$
-      \omega
-      \left( f^{'}\circ (x\mapsto1/x)\circ \pi,h_N \right)
-      \to
-      0
-$
-.
-Note, that this works because of the partitioning.
+The convergence to 0 is due to the $f^{'}$ being continuous, $\pi(x)\in(0,1)$ for all $x\in\mathcal{X}$, the (assumed) continuity of $\pi$ and $h_N\to 0$ for $N\to\infty$.
 We conclude, that $
 M_N\le
 \tilde{\varepsilon}
@@ -909,7 +844,7 @@ It holds
   -|y|
   \qquad
   \text{for all}\ 
-  x,y
+  x,y\in\R
   \,.
 \end{gather*}
 Since
@@ -963,14 +898,13 @@ The convergence is due to $\norm{\delta}_1$ converging to $0$ in probability.
 With the analysis of the \textbf{first} and \textbf{second term} in
 \eqref{c:1} we conclude
 \begin{gather}
+  \label{c:7}
   G
      (
      \lambda^*
       +
       \Delta
       ,
-      \lambda^\dagger_0
-      +
      \Delta_0
      )
      \ 
@@ -979,14 +913,15 @@ With the analysis of the \textbf{first} and \textbf{second term} in
      G
      (
      \lambda^*,
-      \lambda^\dagger_0
+     0
      )
      \ge
      -
      \tilde{\varepsilon}
 \end{gather}
 with probability going to $1$ as $N\to \infty$.
-A closer look reveils the measurability of 
+But this holds for all $\tilde{\varepsilon}>0$.
+A closer look reveals that
 $
   G
      (
@@ -994,8 +929,6 @@ $
       +
       \Delta
       ,
-      \lambda^\dagger_0
-      +
      \Delta_0
      )
      \ 
@@ -1004,10 +937,12 @@ $
      G
      (
      \lambda^*,
-      \lambda^\dagger_0
+     0
      )
-$.
-Since this holds true for all $\tilde{\varepsilon}>0$ we get
+$ 
+is measurable.
+Indeed, this holds because $X$,$T$,$B(X)$ and $\lambda^*$ are measurable and $f^*$ is continuous.
+Since \eqref{c:7} holds true for all $\tilde{\varepsilon}>0$, it thus follows 
 \begin{gather}
   G
      (
@@ -1015,8 +950,6 @@ Since this holds true for all $\tilde{\varepsilon}>0$ we get
       +
       \Delta
       ,
-      \lambda^\dagger_0
-      +
      \Delta_0
      )
      \ 
@@ -1025,7 +958,7 @@ Since this holds true for all $\tilde{\varepsilon}>0$ we get
      G
      (
      \lambda^*,
-      \lambda^\dagger_0
+     0
      )
      \ge
      0
@@ -1058,37 +991,40 @@ $. Thus
       +
       \Delta
       ,
-      \lambda^\dagger_0
-      +
      \Delta_0
      )
      -
      G
      (
      \lambda^*,
-      \lambda^\dagger_0
+     0
      )
      \ge 
      0
 \end{gather}
 with probability going to $1$ as $N\to \infty$.
-We see, that this holds for all $\varepsilon>0$. This finish the proof.
+Finally, we see, that this holds for all $\varepsilon>0$. This finish the proof.
  \end{proof}
 
-
-an immediate consequence of Lemma~\ref{bw:cd:lem} is
+\begin{proof}
+  \emph{(Proposition~\ref{bw:cd:th})}
+An immediate consequence of Lemma~\ref{bw:cd:lem} is
+that for all $\varepsilon>0$ it holds
 \begin{gather*}
    \P
    \left[ 
+     \text{There exists an optimal solution $(\lambda^\dagger,\lambda_0^\dagger)$ to Problem? with}
+     \ 
      \norm
      {
-      \lambda ^ \dagger
+       (\lambda^\dagger,\lambda_0^\dagger)
       -
-      \lambda^*
+      (\lambda^*,0)
      }_2
      \le
      \varepsilon
    \right]
+   \\
    \
    \ge
    \ 
@@ -1109,23 +1045,19 @@ an immediate consequence of Lemma~\ref{bw:cd:lem} is
       +
       \Delta
       ,
-      \lambda^\dagger_0
-      +
      \Delta_0
      )
      -
      G
      (
      \lambda^*,
-      \lambda^\dagger_0
+     0
      )
      \ge 
      0
    \right]
    \,.
  \end{gather*}
-
- To prove Theorem~\ref{bw:cd:th}
- it thus suffices to prove
+ Applying Lemma~\ref{bw:cd:lem2} finishes the proof.
 \end{proof}
 
