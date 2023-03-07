@@ -1,6 +1,8 @@
 The following theorem is an easy consequence of Theorem~\ref{bw:cd:th}.
 \begin{ftheorem}
   \label{aa:weights:th}
+  Assume that for all $N\in\mathbb{N}$ there exists the (unique) solution $(\lambda^\dagger,\lambda_0^\dagger)$
+  to Problem?.
   Consider the weights function defined by
   \begin{gather}
     w(x)
@@ -18,7 +20,7 @@ The following theorem is an easy consequence of Theorem~\ref{bw:cd:th}.
     x\in\mathcal{X}
     \,.
   \end{gather}
-  Under the conditions of Theorem~\ref{bw:cd:th} 
+  Under the conditions of Proposition~\ref{bw:cd:th} 
   it holds
   $w(X)\ 
   \overset{\P}{\to}
@@ -56,16 +58,19 @@ The following theorem is an easy consequence of Theorem~\ref{bw:cd:th}.
   \lesssim
   \ 
   \left| 
-  \inner
-  {B(X)}
-  {\lambda^\dagger-\lambda^*}
+    \inner{(B(X),1)}
+    {
+      (\lambda^\dagger,\lambda_0^\dagger)
+      -
+      (\lambda^*,0)
+    }
   \right|
   +
   \left| 
     \inner{B(X)}
-    {\lambda^\dagger}
-    +
-    \lambda_0^\dagger
+    {
+      \lambda^*
+      }
     -
     f^{'}
     \left( 
@@ -77,7 +82,11 @@ The following theorem is an easy consequence of Theorem~\ref{bw:cd:th}.
   \ 
   \lesssim
   \ 
-  \norm{\lambda^\dagger-\lambda^*}_2
+  \norm{
+      (\lambda^\dagger,\lambda_0^\dagger)
+      -
+      (\lambda^*,0)
+}_2
   +
   \left| 
   \sum_{i=1}^{N} 
@@ -85,7 +94,7 @@ The following theorem is an easy consequence of Theorem~\ref{bw:cd:th}.
   \cdot
     f^{'}
     \left( 
-  \frac{1}{\pi_k}
+  \frac{1}{\pi(X_k)}
     \right)
     -
     f^{'}
@@ -107,4 +116,5 @@ The following theorem is an easy consequence of Theorem~\ref{bw:cd:th}.
 \end{split}
 \end{align}
 with probability going to $1$ as $N\to\infty$.
+The convergence of the first term follows from Proposition~\ref{bw:cd:th} and that of the second term from \eqref{part_trick}.
 \end{proof}
