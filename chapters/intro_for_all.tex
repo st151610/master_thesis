@@ -4,7 +4,7 @@ The first question is about causality, the second about ethics.
 
 How do causality and ethics reflect on statistics?
 If you have not spent much time thinking about study design, this is a good way to start: 
-As an analyst, ask yourself “Who acted? Who assigned treatments?"
+As an analyst, ask yourself “Who acted? Who assigned treatment?"
 As researcher -- plan your study accurately. You can ask yourself “How do we act? How do we assign treatment? Can we act?"
 
 Let's say, you gather a sample from a study population, assign treatment (but forget how you did it). Some units get the drug, others don't. Then the statistical analysis shows a strong correlation of treatment and outcome. You hurry to your supervisor. “How was treatment assigned", asks she. “I forgot", says you.
@@ -20,61 +20,87 @@ You carefully  explain steps to minimize risks for participants. You include pla
 Then you have to decide how to assign treatment.
 No hand waving this time. You talk to your supervisor.
 “Last time, too many tall blades received fertiliser. The distribution of treatment was not really random..."
-You decide to determine treatment status by the flip a fair coin.
+You decide to determine treatment status by the flip of a fair coin.
 You call the procedure 'randomization'.
 
 %Randomization does not work in important situations. 
-Would you smoke if a coin tells you to? If you say yes - you are likely smoke anyway. The point is that forcing someone to smoke is unethical. But so is not studying the risks of smoking.
+Would you smoke if a coin tells you to? If you say yes - you likely smoke anyway. The point is that forcing someone to smoke is unethical. But so is not studying the risks of smoking.
 
 A professor is curious if the smoking habits of his students affect their grades. 
 He observes the smoking area through his field glasses.
 His assistant gets to know his plans. He warns him. “Many students attend parties the night before exams. Maybe they are also more likely to smoke." “I shall see this for myself..." says the professor. He puts away the field glasses. After a while, he visits the local club.
-He talks to a few of his students. Some smoke, some don't. The chats are enjoyable. He thinks: “Some of best students celebrate \textbf{before} the exam."
+He talks to a few of his students. Some smoke, some don't. The chats are enjoyable. He thinks: “Some of my best students celebrate before the exams."
 
-I hope, by now it's clear that sometimes it's all about how treatment was assigned. 
-The probability of treatment given individual characteristics 
-was introduced as the \textbf{propensity score}\cite{Rosenbaum1983}.
-In the second example, where you flip a fair coin to decide treatment status, the propensity score is $1/2$.
+I hope, by now it's clear that sometimes it's all about treatment assignment. 
+The propensity score\cite{Rosenbaum1983} captures all relevant informations.
+It's the probability of treatment given individual characteristics. 
+
+In the second example, where you flip a fair coin to assign treatment, the propensity score is $1/2$, despite variation across individual characteristics.
 The coin ignores everything.
 What is the propensity score in the other examples?
 I admit, I don't know.
-It may vary.
-But we can see tendencies. 
+It varies, but we can see trends. 
+In the first example, tall blades had a large propensity score.
+In the third example, the assistant thinks that students attending parties have a larger propensity score. This is not true, after all, but somehow the best students have a large propensity to celebrate before exams. 
 
 The propensity score is a simple concept that works well with potential outcomes.
-They are potential, because you only get the chance to observe on of them. If you treat, it's the potential outcome under treatment. 
+They are potential, because they exist (or we assume they exist) independent of our observation. They live in parallel universes.
+If we have a binary treatment, that is, you either treat or don't, there are two potential outcomes. One under treatment and one under no treatment.
+Ideally we would like to compare (for one unit) those two potential outcomes.
+But that is impossible. 
+Instead people keep asking:
+“Had it been better if (20 years ago) I made a different decision?"
+You know what happened but don't know what would have happened.
 On a high-level: If you act, you can't observe at the same time the effect of no action.
 Thus one of the potential outcomes always remains potential.
-Of course there are tricks. You can  wait for the effect of an action to vanish and then observe the outcome again.
+Of course there are tricks. You can  wait for the effect of an action to vanish and then observe the outcome (under similar conditions) again.
 This works well when the effect of an action is short term.
 
-If treatment assignment is random we actually observe the potential outcome under treatment.
+If treatment assignment is random we actually observe one of the potential outcomes.
 This is because treatment assignment carries no more information.
 The coin ignores it.
 But we saw, that assignment often contains more information.
-Then it is not clear, if the effect on the outcome comes from the new information or the treatment.
-Then we don't even observe the potential outcome under treatment, but a confounded version.
-A simple idea to obtain information about the true potential outcome is to weight with the inverse probability of treatment, that is, 1 divided by the propensity score. Let's introduce some notation to be more precise.
+Then it is not clear, if the effect on the outcome comes from the individual characteristics or the treatment.
+Then we observe neither of the two potential outcomes, but a biased version.
+Why then bother?
 
-Let $T\in \left\{ 0,1 \right\}$ be the \textbf{indicator of treatment}. This is a random variable.
-Let $X\in\mathcal{X}$ be a vector with individual characteristics. We call this the \textbf{covariate vector}. It is also a random variable.
-Last, let $(Y(0),Y(1))$ be the potential outcomes, that is, $Y(0)$ is the potential outcome without treatment and $Y(1)$ the potential outcome with treatment. They are random variables.
-We define the propensity score with individual characteristics $x$ to be
-$\pi(x):=\P[T=1|X=x]$. We observe  
+A simple idea to obtain information about the true potential outcome from its biased version (we also say confounded version) is, to weight it with the inverse probability of treatment, that is, 1 divided by the propensity score. Let's introduce some notation to be more precise.
+Let $T\in \left\{ 0,1 \right\}$ be the \textbf{indicator of treatment}. 
+Let $X\in\mathcal{X}$ be a vector with individual characteristics. We call this the \textbf{covariate vector}. 
+
+Furthermore, let $(Y(0),Y(1))$ be the \textbf{potential outcomes}, that is, $Y(0)$ is the potential outcome under no treatment and $Y(1)$ the potential outcome under treatment.
+All the quantities we introduce are random variables.
+
+We define the propensity score $\pi$ with individual characteristics $x$ to be
+\begin{gather}
+\pi(x)
+\ 
+:=
+\ 
+\P[T=1|X=x]
+\end{gather}
+We observe  
 \begin{gather}
   \text{either}
   \qquad
-  Y(0)|T=0
+  Y(0)\,|\,T=0
   \qquad
   \text{or}\qquad
-  Y(1)|T=1
+  Y(1)\,|\,T=1
   \,.
 \end{gather}
-We can show, that if 
+We can show, that if treatment assignment is \textbf{strongly ignorable}\cite[(1.3)]{Rosenbaum1983}
 \begin{gather}
-  (Y(0),Y(1))\perp T |X
+  (Y(0),Y(1))\ \perp \ T \,|\,X
+  \quad
+  \text{and}
+  \quad
+  0<\pi(X)<1
+  \,,
 \end{gather}
-holds we get 
+that is, 
+potential outcomes are independent of treatment given covariates and every possible set of characteristic has a chance to receive treatment,
+we get 
 \begin{gather}
   \label{ipw}
   \E
@@ -86,7 +112,7 @@ holds we get
   \left[ Y(1) \right]
   \,.
 \end{gather}
-That is, by weighting the observed outcome under treatment with the inverse propensity score we recover (in expectation) the potential outcome with treatment. 
+That is, by weighting the observed outcome under treatment with the inverse propensity score we recover (in expectation) the potential outcome under treatment. 
 This is relevant, because 
 $Y(t)|T=t$ does not have the same distribution as $Y(t)$ for $t\in \left\{ 0,1 \right\}$.
 
