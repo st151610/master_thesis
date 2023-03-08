@@ -47,6 +47,11 @@ Paul~R. Rosenbaum and Donald~B. Rubin.
   Studies}} for {{Causal Effects}}.
 \newblock {\em Biometrika}, 70(1):41--55, 1983.
 
+\bibitem[SC08]{Steinwart2008}
+Ingo Steinwart and Andreas Christmann.
+\newblock {\em Support {{Vector Machines}}}.
+\newblock {Springer Science \& Business Media}, September 2008.
+
 \bibitem[TB91]{Tseng1991}
 Paul Tseng and Dimitri~P. Bertsekas.
 \newblock Relaxation {{Methods}} for {{Problems}} with {{Strictly Convex

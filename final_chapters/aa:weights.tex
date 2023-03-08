@@ -27,6 +27,29 @@ The following theorem is an easy consequence of Theorem~\ref{bw:cd:th}.
   \ 
   1/\pi(X)
   $
+  .
+  Furthmore, there exists a decreasing sequence $(\varepsilon_N)\subset(0,1]$ such that $\varepsilon_N\to 0$ and 
+  \begin{gather}
+    \P
+    \left[ 
+  \left| 
+  w(X)
+  -
+  \frac{1}{\pi(X)}
+  \right|
+    \le
+    \varepsilon_N
+    \right]
+  \  
+  \to
+  \  
+  0
+  \qquad
+  \text{for}
+  \ 
+  N\to\infty
+  \,.
+  \end{gather}
 \end{ftheorem}
 \begin{proof}
   For all $\varepsilon>0$ it holds
@@ -117,4 +140,6 @@ The following theorem is an easy consequence of Theorem~\ref{bw:cd:th}.
 \end{align}
 with probability going to $1$ as $N\to\infty$.
 The convergence of the first term follows from Proposition~\ref{bw:cd:th} and that of the second term from \eqref{part_trick}.
+The second statement of the theorem follows from the Selection lemma
+\cite[A.1.4.]{Steinwart2008}.
 \end{proof}

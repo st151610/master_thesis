@@ -842,6 +842,86 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 \begin{proof}
   \cite[Corollary~19.35]{Vaart2000}
 \end{proof}
+
+
+\begin{lemma}
+  Let
+  $(\varepsilon_N)\subset(0,1]$ be a decreasing sequence with 
+  $\varepsilon_N\to 0$ as $N\to\infty$. Consider the sequence of function classes 
+  \begin{gather*}
+    \mathcal{F}_N
+    \ 
+    :=
+    \ 
+    \left\{ 
+      (T,X,Y(T))
+      \ 
+      \mapsto
+      \ 
+      g(X)
+      \cdot
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{ Y(T)\le z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+      \ 
+      |
+      \ 
+      z\in\R\ 
+      \text{and}
+      \ 
+      0\le g\le \varepsilon_N
+    \right\}
+    \,.
+  \end{gather*}
+  It holds
+  \begin{gather}
+    N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+    \le
+    ??
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \ 
+    \text{and for all}
+    \ 
+    N\in\mathbb{N}
+    \,.
+  \end{gather}
+  Furthermore, assume $1/\pi(X)\in \mathrm{L}_2(\P)$
+  and consider the function class
+  \begin{gather*}
+    \mathcal{G}
+    :=
+    \left\{ 
+      (T,X,Y(T))
+      \ 
+      \mapsto
+      \ 
+      \frac{T}{\pi{X}}
+      \left( 
+        \mathbf{1}
+        _{\left\{ Y(T)\le z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+      +
+      \left( 
+        F_{Y(1)}(z|X)
+        -
+        F_{Y(1)}(z)
+      \right)
+      \ 
+      |
+      \ 
+      z\in\R
+    \right\}
+  \end{gather*}
+\end{lemma}
 \begin{lemma}
   \label{lemma_max_ineq}
   Consider a function class $\mathcal{F}$ with unit ball
