@@ -843,22 +843,56 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
   \cite[Corollary~19.35]{Vaart2000}
 \end{proof}
 
-
+The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
 \begin{lemma}
   Let
-  $(\varepsilon_N)\subset(0,1]$ be a decreasing sequence with 
-  $\varepsilon_N\to 0$ as $N\to\infty$. Consider the sequence of function classes 
-  \begin{gather*}
-    \mathcal{F}_N
+  $(\varepsilon_N)\subset(0,1]$ be 
+  a decreasing sequence
+  with
+  $\varepsilon_N\to 0$ as $N\to\infty$ 
+  and let
+  $
+  g_N
+  :
+  (\mathcal{X},\Sigma_\mathcal{X})\to ([0,\varepsilon_N],\mathcal{B}([0,\varepsilon_N]))
+  $
+  define a sequence of measurable (non-negative) functions bounded by 
+  $(\varepsilon_N)$.
+  Consider for $z\in\R$ the function
+  \begin{align*}
+    f_{g_N}^z
     \ 
-    :=
+    :
     \ 
-    \left\{ 
+    &
+    \left( 
+      \left\{ 0,1 \right\}
+      \times
+      \mathcal{X}
+      \times
+      \mathcal{Y}
+      ,
+      \ 
+      2^{\left\{ 0,1 \right\}}
+      \times
+      \Sigma_\mathcal{X}
+      \times
+      \Sigma_\mathcal{Y}
+    \right)
+    \ 
+    \to
+    \ 
+    \left( 
+      \R,
+      \mathcal{B}(\R)
+    \right)
+    \\
+    &
       (T,X,Y(T))
       \ 
       \mapsto
       \ 
-      g(X)
+      g_N(X)
       \cdot
       T
       \left( 
@@ -867,17 +901,31 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
         -
         F_{Y(1)}(z|X)
       \right)
+      \,,
+  \end{align*}
+  and define 
+  a sequence of function classes by
+  \begin{gather*}
+    \mathcal{F}_N
+    \ 
+    :=
+    \ 
+    \left\{ 
+      f_{g_N}^z
       \ 
       |
       \ 
       z\in\R\ 
-      \text{and}
-      \ 
-      0\le g\le \varepsilon_N
     \right\}
+    \qquad
+    \text{for all}
+    \ 
+    N\in\mathbb{N}
     \,.
   \end{gather*}
-  It holds
+  Then $\mathcal{F}_N$ is a class of measurable functions for all
+  $N\in\mathbb{N}$
+  and it holds
   \begin{gather}
     N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
     \le
@@ -892,13 +940,97 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
     N\in\mathbb{N}
     \,.
   \end{gather}
-  Furthermore, assume $1/\pi(X)\in \mathrm{L}_2(\P)$
-  and consider the function class
-  \begin{gather*}
-    \mathcal{G}
-    :=
-    \left\{ 
-      (T,X,Y(T))
+%  Furthermore, 
+%  consider the function class
+%  \begin{gather*}
+%    \mathcal{G}
+%    :=
+%    \left\{ 
+%      f_{1/\pi}^z
+%      +
+%        F_{Y(1)}(z|\cdot)
+%        -
+%        F_{Y(1)}(z)
+%      \ 
+%      |
+%      \ 
+%      z\in\R
+%    \right\}
+%    \,.
+%  \end{gather*}
+%  If $1/\pi(X)\in \mathrm{L}_2(\P)$
+%  it holds
+%  \begin{gather}
+%    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_2(\P))
+%    \le
+%    ??
+%    \qquad
+%    \text{for all}
+%    \ 
+%    \varepsilon>0
+%    \,.
+%  \end{gather}
+\end{lemma}
+\begin{proof}
+  As in \cite[Example~19.6]{Vaart2000}
+  we choose for
+  $\varepsilon>0$ and $m\in\mathbb{N}$
+  \begin{gather}
+  -\infty=z_0\ <\ z_1\ <\ \cdots\ <\ z_{m-1}\ <\ z_m=\infty
+  \,
+  \end{gather}
+  such that
+  \begin{gather}
+    \P
+    \left[ 
+      Y(1)\in \left[ z_{l-1},z_l \right]
+    \right]
+    \ 
+    \le
+    \ 
+    \varepsilon
+    \qquad
+    \text{for all}\ 
+    l\in \left\{ 1,\ldots,m \right\}
+  \end{gather}
+  and $m \le 2/\varepsilon$.
+
+\end{proof}
+\begin{lemma}
+  Define for
+  $z\in\R$
+ \begin{align*}
+    f_z
+    \ 
+    :
+    \ 
+    &
+    \left( 
+      \left\{ 0,1 \right\}
+      \times
+      \mathcal{X}
+      \times
+      \mathcal{Y}
+      ,
+      \ 
+      2^{\left\{ 0,1 \right\}}
+      \times
+      \Sigma_\mathcal{X}
+      \times
+      \Sigma_\mathcal{Y}
+    \right)
+    \ 
+    \to
+    \ 
+    \left( 
+      \R,
+      \mathcal{B}(\R)
+    \right)
+    \\
+    &
+    \left(
+      T,X,Y(T)
+    \right)
       \ 
       \mapsto
       \ 
@@ -909,20 +1041,33 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
         -
         F_{Y(1)}(z|X)
       \right)
+      \ 
       +
+      \ 
       \left( 
         F_{Y(1)}(z|X)
         -
         F_{Y(1)}(z)
       \right)
-      \ 
-      |
-      \ 
-      z\in\R
-    \right\}
+      \,,
+  \end{align*}
+and consider the function class
+\begin{gather}
+  \mathcal{G}
+  \ 
+  :=
+  \ 
+  \left\{ 
+    f_z
+  \ 
+    |
+  \ 
+    z\in\R
+  \right\}
     \,.
-  \end{gather*}
-  It holds
+\end{gather}
+  Then $\mathcal{G}$ is a class of measurable functions 
+  and it holds
   \begin{gather}
     N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_2(\P))
     \le
