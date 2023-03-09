@@ -844,55 +844,38 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 \end{proof}
 
 The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
+\newpage
 \begin{lemma}
   Let
-  $(\varepsilon_N)\subset(0,1]$ be 
-  a decreasing sequence
-  with
-  $\varepsilon_N\to 0$ as $N\to\infty$ 
-  and let
   $
-  g_N
+  g
   :
-  (\mathcal{X},\Sigma_\mathcal{X})\to ([0,\varepsilon_N],\mathcal{B}([0,\varepsilon_N]))
+  \mathcal{X}\to [0,\infty)
   $
-  define a sequence of measurable (non-negative) functions bounded by 
-  $(\varepsilon_N)$.
+  be a measurable, non-negative function.
   Consider for $z\in\R$ the function
   \begin{align*}
-    f_{g_N}^z
+    f_{g}^z
     \ 
     :
     \ 
-    &
-    \left( 
       \left\{ 0,1 \right\}
       \times
       \mathcal{X}
       \times
       \mathcal{Y}
-      ,
-      \ 
-      2^{\left\{ 0,1 \right\}}
-      \times
-      \Sigma_\mathcal{X}
-      \times
-      \Sigma_\mathcal{Y}
-    \right)
+    &
     \ 
     \to
     \ 
-    \left( 
-      \R,
-      \mathcal{B}(\R)
-    \right)
+    \R
     \\
-    &
       (T,X,Y(T))
+    &
       \ 
       \mapsto
       \ 
-      g_N(X)
+      g(X)
       \cdot
       T
       \left( 
@@ -903,43 +886,62 @@ The next lemma provides bracketing numbers for specific function classes needed 
       \right)
       \,,
   \end{align*}
-  and define 
-  a sequence of function classes by
-  \begin{gather*}
-    \mathcal{F}_N
+  and define a function class by
+  $
+    \mathcal{F}
     \ 
     :=
     \ 
     \left\{ 
-      f_{g_N}^z
+      f_{g}^z
       \ 
       |
       \ 
       z\in\R\ 
     \right\}
-    \qquad
-    \text{for all}
-    \ 
-    N\in\mathbb{N}
-    \,.
-  \end{gather*}
-  Then $\mathcal{F}_N$ is a class of measurable functions for all
-  $N\in\mathbb{N}$
-  and it holds
-  \begin{gather}
-    N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+  $.
+  Then $\mathcal{F}$ is a class of measurable functions. 
+  Furthermore, if $g(X)\in\mathrm{L}_\infty(\P)$, it holds 
+  \begin{gather*}
+    N_{[\,]}(\varepsilon,\mathcal{F},\mathrm{L}_2(\P))
     \le
     ??
     \qquad
     \text{for all}
     \ 
     \varepsilon>0
-    \ 
-    \text{and for all}
-    \ 
-    N\in\mathbb{N}
     \,.
-  \end{gather}
+  \end{gather*}
+  Now choose $g:=1/\pi$ and define the function class
+  \begin{gather*}
+    \mathcal{G}
+    \ 
+    :=
+    \ 
+    \left\{ 
+      f_{1/\pi}^z
+      +
+      F_{Y(1)}(z|\cdot)
+      -
+      F_{Y(1)}(z)
+      \ 
+      |
+      \ 
+      z\in\R\ 
+    \right\}
+  \end{gather*}
+  Then $\mathcal{G}$ is a class of measurable functions. 
+  Furthermore, if $1/\pi(X)\in\mathrm{L}_2(\P)$, it holds 
+  \begin{gather*}
+    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_2(\P))
+    \le
+    ??
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \,.
+  \end{gather*}
 %  Furthermore, 
 %  consider the function class
 %  \begin{gather*}
@@ -994,7 +996,15 @@ The next lemma provides bracketing numbers for specific function classes needed 
     l\in \left\{ 1,\ldots,m \right\}
   \end{gather}
   and $m \le 2/\varepsilon$.
-
+  Consider for
+$
+    l\in \left\{ 1,\ldots,m \right\}
+$
+\begin{align}
+  \underline{f_N^l}
+  (T,X,Y(T))
+  :=
+\end{align}
 \end{proof}
 \begin{lemma}
   Define for
@@ -1004,33 +1014,21 @@ The next lemma provides bracketing numbers for specific function classes needed 
     \ 
     :
     \ 
-    &
-    \left( 
       \left\{ 0,1 \right\}
       \times
       \mathcal{X}
       \times
       \mathcal{Y}
-      ,
-      \ 
-      2^{\left\{ 0,1 \right\}}
-      \times
-      \Sigma_\mathcal{X}
-      \times
-      \Sigma_\mathcal{Y}
-    \right)
+&
     \ 
     \to
     \ 
-    \left( 
-      \R,
-      \mathcal{B}(\R)
-    \right)
+      \R
     \\
-    &
     \left(
       T,X,Y(T)
     \right)
+    &
       \ 
       \mapsto
       \ 
@@ -1052,7 +1050,7 @@ The next lemma provides bracketing numbers for specific function classes needed 
       \,,
   \end{align*}
 and consider the function class
-\begin{gather}
+$
   \mathcal{G}
   \ 
   :=
@@ -1064,6 +1062,8 @@ and consider the function class
   \ 
     z\in\R
   \right\}
+$
+\begin{gather}
     \,.
 \end{gather}
   Then $\mathcal{G}$ is a class of measurable functions 
