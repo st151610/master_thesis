@@ -1454,6 +1454,7 @@ As before, it follows
 \end{proof}
 
 \begin{lemma}
+  \label{markov_max_lemma}
   Let $(\mathcal{F}_N)$ be a sequence of measurable function classes with envelope functions $(F_N)$.
   If
   \begin{gather}
@@ -1530,9 +1531,11 @@ As before, it follows
 \end{proof}
 
 \begin{lemma}
+  \label{bounded_f_lemma}
   Let 
   $(\varepsilon_N)\subset(0,1]$ be a decreasing sequence with 
-  $\varepsilon_N\to 0$ as $N\to\infty$. Consider for
+  $\varepsilon_N\to 0$ as $N\to\infty$.
+  Consider for
   $N\in\mathbb{N}$ and $z\in\R$ the function
  \begin{align*}
     f_{N,\pm}^z
@@ -1737,9 +1740,47 @@ N\to\infty
 \,.
     \end{align*}
 \end{proof}
+In the next lemma we get rid of the $\varepsilon_N$ bound
 \begin{lemma}
-  Define for
-  $z\in\R$
+  \label{lemma_fpm}
+ Consider for $z\in\R$ the function
+ \begin{align*}
+    f_{\pm}^z
+    \ 
+    :
+    \ 
+      \left\{ 0,1 \right\}
+      \times
+      \mathcal{X}
+      \times
+      \mathcal{Y}
+    &
+    \ 
+    \to
+    \ 
+    \R
+    \\
+      (T,X,Y(T))
+    &
+      \ 
+      \mapsto
+      \ 
+      \left( 
+      w(X)-\frac{1}{\pi(X)}
+      \right)
+      ^{\pm}
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{ Y(T)\le z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+      \,.
+  \end{align*}
+  It holds
+  $\sup_{z\in\R}\left| \G_N f^z_\pm \right|\overset{\P}{\to}0$.
+  Furthermore, for
  \begin{align*}
     f_z
     \ 
@@ -1750,393 +1791,564 @@ N\to\infty
       \mathcal{X}
       \times
       \mathcal{Y}
-&
+    &
     \ 
     \to
     \ 
-      \R
+    \R
     \\
-    \left(
-      T,X,Y(T)
-    \right)
+      (T,X,Y(T))
     &
       \ 
       \mapsto
       \ 
-      \frac{T}{\pi(X)}
+      \left( 
+      w(X)-\frac{1}{\pi(X)}
+      \right)
+      T
       \left( 
         \mathbf{1}
         _{\left\{ Y(T)\le z \right\}}
         -
         F_{Y(1)}(z|X)
       \right)
-      \ 
-      +
-      \ 
-      \left( 
-        F_{Y(1)}(z|X)
-        -
-        F_{Y(1)}(z)
-      \right)
-      \,,
+      \,.
   \end{align*}
-and consider the function class
-$
-  \mathcal{G}
-  \ 
-  :=
-  \ 
-  \left\{ 
-    f_z
-  \ 
-    |
-  \ 
-    z\in\R
-  \right\}
-$
-\begin{gather}
-    \,.
-\end{gather}
-  Then $\mathcal{G}$ is a class of measurable functions 
-  and it holds
-  \begin{gather}
-    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_2(\P))
-    \le
-    ??
-    \qquad
-    \text{for all}
-    \ 
-    \varepsilon>0
-    \,.
-  \end{gather}
-\end{lemma}
-\begin{lemma}
-  \label{lemma_max_ineq}
-  Consider a function class $\mathcal{F}$ with unit ball
-  $
-  B_{\mathcal{F}}
-  :=
-  \left\{ 
-    f\in \mathcal{F}
-    \colon
-    \norm{f}_\infty
-    \le
-    1
-  \right\}
-  $.
-  Let $(\varepsilon_N)$ be a sequence converging to 0
-  and let 
-  $
-  \left( 
-    \mathcal{F}_N
-  \right)
-    :=
-    \left( 
-      C\cdot
-    \varepsilon_N\cdot B_\mathcal{F}
-    \right)
-  $
-  denote the sequence of scaled unit balls in $\mathcal{F}$.
-  Assume that 
-  there exists
-  $k<2$ such that 
-  the covering number of the unit ball in $\mathcal{F}$
-  satisfies
-  \begin{gather}
-        \log 
-      N_{[\,]}
-\left( \varepsilon, B_\mathcal{F},\mathrm{L}_2(\P) \right)
-\ 
-\lesssim
-\ 
-\left( \frac{1}{\varepsilon} \right)^k
-\qquad
-\text{for all}\ 
-\varepsilon>0
-\,.
-  \end{gather}
-  Then it holds
-  $
-      \norm{G_N}^*_{\mathcal{F}_N}
-    \ 
-    \overset{\P}
-    {\to}
-    \ 
-    0
-  $
-  for $N\to \infty$. 
+  it holds
+  $\sup_{z\in\R}\left| \G_N f_z \right|\overset{\P}{\to}0$.
 \end{lemma}
 \begin{proof}
-  By maximal inequalities it holds
-  \begin{align*}
-    \E^*
-    \left[ 
-      \norm{G_N}_{\mathcal{F}_N}
-    \right]
-    &
+  It holds for all $z\in\R$
+  $
+  $
+  \begin{gather*}
+  f^z_\pm
+      (T,X,Y(T))
       \ 
       \lesssim
       \ 
-      J_{[\,]}\left( \varepsilon_N, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
-      \\
-    &
-      \ 
-      =
-      \ 
-      \int_0^{\varepsilon_N}
-      \sqrt{
-        \log 
-      N_{[\,]}
-\left( \varepsilon, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
-    }
-    \,
-    d\varepsilon
-    \\
-    &
-    \ 
+     \left(
+      w(X)- \frac{1}{\pi(X)}
+      \right)
+      ^\pm
+      \,.
+  \end{gather*}
+  By Theorem~\ref{aa:weights:th}
+  there exists a decreasing sequence 
+  $(\varepsilon_N)\subset(0,1]$
+  with $\varepsilon_N\to 0$
+  and
+  $
+  \P[
+\left| 
+      w(X)- 1/\pi(X)
+\right|
+\le
+\varepsilon_N/2
+  ]
+  \to 1
+  $
+  for $N\to\infty$.
+  Therefore
+  \begin{gather*}
+  \P
+  \left[
+  f^z_\pm
+  \in
+  \mathcal{F}_N^\pm
+  \
+  \forall
+  z\in\R
+  \right]
     =
-    \ 
-      \int_0^{\varepsilon_N}
-      \sqrt{\log 
-      N_{[\,]}
-\left( \varepsilon/(C\cdot \varepsilon_N), B_\mathcal{F},\mathrm{L}_2(\P) \right)
-    }
-    \,
-    d\varepsilon
-    \\
-    &
-    \ 
-    \lesssim
-    \ 
-      \int_0^{\varepsilon_N}
-      \left( 
-      \frac{\varepsilon_N}{\varepsilon}
-    \right)^{k/2}
-    \,
-    d\varepsilon
-    \\
-    &
-    \ 
-    =
-    \ 
-  \varepsilon_N^{k/2}
-  \frac{1}{1-k/2}
-  \varepsilon_N^{1-k/2}
+  \P[
+\left| 
+      w(X)- 1/\pi(X)
+\right|
+\le
+\varepsilon_N/2
+  ]
+  \to 1
+  \,.
+  \end{gather*}
+Then, for all $\varepsilon>0$ it holds
+\begin{align*}
+  \P
+  \left[
+  \sup_{z\in\R}
+  \left| 
+  \G_N
+  f^z_\pm
+  \right|
+  \le \varepsilon
+  \right]
+  &
+  \ 
+  \ge
+  \ 
+  \P
+  \left[
+  f^z_\pm
+  \in
+  \mathcal{F}_N^\pm
+  \
+  \forall
+  z\in\R
+  \,,
+  \ 
+  \norm{\G_N}^*_{\mathcal{F}_N^\pm}
+  \le \varepsilon
+  \right]
   \\
-    &
-    \ 
-  \lesssim
-    \ 
-  \varepsilon_N
+  &
+  \ 
+  \ge
+  \ 
+  \P
+  \left[
+  f^z_\pm
+  \in
+  \mathcal{F}_N^\pm
+  \
+  \forall
+  z\in\R
+  \right]
+  \ 
+  -
+  \ 
+  \P
+  \left[
+  \norm{\G_N}^*_{\mathcal{F}_N^\pm}
+  \le \varepsilon
+  \right]
   \\
-    &
-    \ 
+  &
+  \ 
   \to
   \ 
-  0
-  \qquad
-  \text{for}\ 
-  N\to
-  \infty
+  1
   \,.
-  \end{align*}
-  Note, that $k<2$.
-  By the boundedness of $\E^*$ there is no measurability problem.
-  By Markov's Inequality it holds
-  \begin{align*}
-    \P
-    \left[ 
-      \norm{G_N}^*_{\mathcal{F}_N}\ge \varepsilon
-    \right]
-    \le
-    \varepsilon^{-1}
-    \,
-    \E^*
-    \left[ 
-      \norm{G_N}_{\mathcal{F}_N}
-    \right]
-    \ 
-    \to
-    \ 
-    0
-    \qquad
-    \text{for}\ 
-    N\to\infty
-    \,.
-  \end{align*}
-\end{proof}
-The next two lemmas connect $R_3$ to the theory of empirical processes.
-\begin{lemma}
-  \label{aa:mean:l:fz}
-  Consider 
-  the (random) function
-  $
-  f_D^z
-  $ given by
-  \begin{gather}
-    f_{D}^z(T,X,Y(T))
-    :=
-    T
-    \left( 
-    w(D,X)- \frac{1}{\pi(X)}
-    \right)
-    \left( 
-    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
-    -
-  F_{Y(1)}(z|X)
-    \right)
-    \,.
-  \end{gather}
-  Assume that 
-  there exists a function class $\mathcal{F}$ satisfying the requirements of Lemma~\ref{lemma_max_ineq} and that
-  $
-  f_D^z
-  \in \mathcal{F}
-  $
-  for all $z\in\R$ almost surely.
-  It then holds
-  $
-  \sup_{z\in\R} \left| G_Nf_D^z \right|
-  \overset{\P}{\to}0$ for 
-  $N\to\infty$.
-\end{lemma}
-\begin{proof}
-  By the consistency of the weights there exists a learning rate $(\varepsilon_N)$ such that
-  \begin{gather}
-    \P
-    \left[ 
-      \left| 
-      w(X,D)
-      -
-      \frac{1}{\pi(X)}
-      \right|
-      \le
-      \varepsilon_N
-    \right]
-    \to 1 
-    \qquad
-    \text{for}\ 
-    N\to \infty
-    \,.
-  \end{gather}
-  Let
-  $\mathcal{F}_N:=\varepsilon_NB_\mathcal{F}$ as in 
-  Lemma~\ref{lemma_max_ineq}.
-  It holds
-\begin{gather}
-      \sup_{z\in\R}
-      \left| 
-    f_D^z
-      \right|
-      \lesssim
-      \left| 
-      w(X,D)
-      -
-      \frac{1}{\pi(X)}
-      \right|
-      \le
-      \varepsilon_N
-\end{gather}
-with probability going to 1 as $N\to\infty$.
+\end{align*}
+The convergence of the last term to 0 is due to 
+Lemma~\ref{bounded_f_lemma} and Lemma~\ref{markov_max_lemma}.
 Thus
- \begin{gather}
-    \P
-    \left[ 
-    f_D^z
-    \in
-  \mathcal{F}_N
-  \ \forall\,z\in\R
-    \right]
-    =
-    \P
-    \left[ 
-      \sup_{z\in\R}
-      \left| 
-    f_D^z
-      \right|
-      \lesssim
-      \varepsilon_N
-    \right]
-    \to 1
-    \qquad
-    \text{as}
-    \ 
-    N\to\infty
-    \,.
-  \end{gather}
-  Then it holds
-  for all $\varepsilon>0$ 
-  \begin{align*}
-    \P
-    \left[ 
-      \sup_{z\in\R}
-  \left| G_Nf_D^z \right|
-  \le
-  \varepsilon
-    \right]
-    &
-    \ 
-    \ge
-    \ 
-    \P
-    \left[ 
-      \sup_{z\in\R}
-  \left| G_Nf_D^z \right|
-  \le
-  \norm{G_N}^*_{\mathcal{F}_N}
-  \le
-  \varepsilon
-    \right]
-    \\
-    &
-    \ 
-    \ge
-    \ 
-    \P
-    \left[ 
-    f_D^z
-    \in
-  \mathcal{F}_N
-  \ \forall\,z\in\R
-      \ 
-      \text{and}\ 
-  \norm{G_N}^*_{\mathcal{F}_N}
-  \le
-  \varepsilon
-    \right]
-    \\
-    &
-    \ 
-    \ge
-    \ 
-    \P
-    \left[ 
-    f_D^z
-    \in
-  \mathcal{F}_N
-  \ \forall\,z\in\R
-    \right]
-    -
-    \P
-    \left[ 
-  \norm{G_N}^*_{\mathcal{F}_N}
-    \ 
-  \ge
-    \ 
-  \varepsilon
-    \right]
-    \\
-    &
-    \ 
-    \to
-    \ 
-    1
-    \,.
-  \end{align*}
-  The convergence of the second term is due to Lemma~\ref{lemma_max_ineq}.
-
+  $\sup_{z\in\R}\left| \G_N f^z_\pm \right|\overset{\P}{\to}0$.
+  Note, that 
+  \begin{gather*}
+\G_N f_z 
+=
+\G_N f^z_+
+-
+\G_N f^z_-
+\qquad
+\text{for all}\ 
+z\in\R
+\,.
+  \end{gather*}
+  Thus by Slutzky's Theorem\cite[Theorem~13.18]{Klenke2020}
+  it holds
+  $\sup_{z\in\R}\left| \G_N f_z \right|\overset{\P}{\to}0$.
 \end{proof}
-
+%\begin{lemma}
+%  Define for
+%  $z\in\R$
+% \begin{align*}
+%    f_z
+%    \ 
+%    :
+%    \ 
+%      \left\{ 0,1 \right\}
+%      \times
+%      \mathcal{X}
+%      \times
+%      \mathcal{Y}
+%&
+%    \ 
+%    \to
+%    \ 
+%      \R
+%    \\
+%    \left(
+%      T,X,Y(T)
+%    \right)
+%    &
+%      \ 
+%      \mapsto
+%      \ 
+%      \frac{T}{\pi(X)}
+%      \left( 
+%        \mathbf{1}
+%        _{\left\{ Y(T)\le z \right\}}
+%        -
+%        F_{Y(1)}(z|X)
+%      \right)
+%      \ 
+%      +
+%      \ 
+%      \left( 
+%        F_{Y(1)}(z|X)
+%        -
+%        F_{Y(1)}(z)
+%      \right)
+%      \,,
+%  \end{align*}
+%and consider the function class
+%$
+%  \mathcal{G}
+%  \ 
+%  :=
+%  \ 
+%  \left\{ 
+%    f_z
+%  \ 
+%    |
+%  \ 
+%    z\in\R
+%  \right\}
+%$
+%\begin{gather}
+%    \,.
+%\end{gather}
+%  Then $\mathcal{G}$ is a class of measurable functions 
+%  and it holds
+%  \begin{gather}
+%    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_2(\P))
+%    \le
+%    ??
+%    \qquad
+%    \text{for all}
+%    \ 
+%    \varepsilon>0
+%    \,.
+%  \end{gather}
+%\end{lemma}
+%\begin{lemma}
+%  \label{lemma_max_ineq}
+%  Consider a function class $\mathcal{F}$ with unit ball
+%  $
+%  B_{\mathcal{F}}
+%  :=
+%  \left\{ 
+%    f\in \mathcal{F}
+%    \colon
+%    \norm{f}_\infty
+%    \le
+%    1
+%  \right\}
+%  $.
+%  Let $(\varepsilon_N)$ be a sequence converging to 0
+%  and let 
+%  $
+%  \left( 
+%    \mathcal{F}_N
+%  \right)
+%    :=
+%    \left( 
+%      C\cdot
+%    \varepsilon_N\cdot B_\mathcal{F}
+%    \right)
+%  $
+%  denote the sequence of scaled unit balls in $\mathcal{F}$.
+%  Assume that 
+%  there exists
+%  $k<2$ such that 
+%  the covering number of the unit ball in $\mathcal{F}$
+%  satisfies
+%  \begin{gather}
+%        \log 
+%      N_{[\,]}
+%\left( \varepsilon, B_\mathcal{F},\mathrm{L}_2(\P) \right)
+%\ 
+%\lesssim
+%\ 
+%\left( \frac{1}{\varepsilon} \right)^k
+%\qquad
+%\text{for all}\ 
+%\varepsilon>0
+%\,.
+%  \end{gather}
+%  Then it holds
+%  $
+%      \norm{G_N}^*_{\mathcal{F}_N}
+%    \ 
+%    \overset{\P}
+%    {\to}
+%    \ 
+%    0
+%  $
+%  for $N\to \infty$. 
+%\end{lemma}
+%\begin{proof}
+%  By maximal inequalities it holds
+%  \begin{align*}
+%    \E^*
+%    \left[ 
+%      \norm{G_N}_{\mathcal{F}_N}
+%    \right]
+%    &
+%      \ 
+%      \lesssim
+%      \ 
+%      J_{[\,]}\left( \varepsilon_N, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
+%      \\
+%    &
+%      \ 
+%      =
+%      \ 
+%      \int_0^{\varepsilon_N}
+%      \sqrt{
+%        \log 
+%      N_{[\,]}
+%\left( \varepsilon, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
+%    }
+%    \,
+%    d\varepsilon
+%    \\
+%    &
+%    \ 
+%    =
+%    \ 
+%      \int_0^{\varepsilon_N}
+%      \sqrt{\log 
+%      N_{[\,]}
+%\left( \varepsilon/(C\cdot \varepsilon_N), B_\mathcal{F},\mathrm{L}_2(\P) \right)
+%    }
+%    \,
+%    d\varepsilon
+%    \\
+%    &
+%    \ 
+%    \lesssim
+%    \ 
+%      \int_0^{\varepsilon_N}
+%      \left( 
+%      \frac{\varepsilon_N}{\varepsilon}
+%    \right)^{k/2}
+%    \,
+%    d\varepsilon
+%    \\
+%    &
+%    \ 
+%    =
+%    \ 
+%  \varepsilon_N^{k/2}
+%  \frac{1}{1-k/2}
+%  \varepsilon_N^{1-k/2}
+%  \\
+%    &
+%    \ 
+%  \lesssim
+%    \ 
+%  \varepsilon_N
+%  \\
+%    &
+%    \ 
+%  \to
+%  \ 
+%  0
+%  \qquad
+%  \text{for}\ 
+%  N\to
+%  \infty
+%  \,.
+%  \end{align*}
+%  Note, that $k<2$.
+%  By the boundedness of $\E^*$ there is no measurability problem.
+%  By Markov's Inequality it holds
+%  \begin{align*}
+%    \P
+%    \left[ 
+%      \norm{G_N}^*_{\mathcal{F}_N}\ge \varepsilon
+%    \right]
+%    \le
+%    \varepsilon^{-1}
+%    \,
+%    \E^*
+%    \left[ 
+%      \norm{G_N}_{\mathcal{F}_N}
+%    \right]
+%    \ 
+%    \to
+%    \ 
+%    0
+%    \qquad
+%    \text{for}\ 
+%    N\to\infty
+%    \,.
+%  \end{align*}
+%\end{proof}
+%The next two lemmas connect $R_3$ to the theory of empirical processes.
+%\begin{lemma}
+%  \label{aa:mean:l:fz}
+%  Consider 
+%  the (random) function
+%  $
+%  f_D^z
+%  $ given by
+%  \begin{gather}
+%    f_{D}^z(T,X,Y(T))
+%    :=
+%    T
+%    \left( 
+%    w(D,X)- \frac{1}{\pi(X)}
+%    \right)
+%    \left( 
+%    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+%    -
+%  F_{Y(1)}(z|X)
+%    \right)
+%    \,.
+%  \end{gather}
+%  Assume that 
+%  there exists a function class $\mathcal{F}$ satisfying the requirements of Lemma~\ref{lemma_max_ineq} and that
+%  $
+%  f_D^z
+%  \in \mathcal{F}
+%  $
+%  for all $z\in\R$ almost surely.
+%  It then holds
+%  $
+%  \sup_{z\in\R} \left| G_Nf_D^z \right|
+%  \overset{\P}{\to}0$ for 
+%  $N\to\infty$.
+%\end{lemma}
+%\begin{proof}
+%  By the consistency of the weights there exists a learning rate $(\varepsilon_N)$ such that
+%  \begin{gather}
+%    \P
+%    \left[ 
+%      \left| 
+%      w(X,D)
+%      -
+%      \frac{1}{\pi(X)}
+%      \right|
+%      \le
+%      \varepsilon_N
+%    \right]
+%    \to 1 
+%    \qquad
+%    \text{for}\ 
+%    N\to \infty
+%    \,.
+%  \end{gather}
+%  Let
+%  $\mathcal{F}_N:=\varepsilon_NB_\mathcal{F}$ as in 
+%  Lemma~\ref{lemma_max_ineq}.
+%  It holds
+%\begin{gather}
+%      \sup_{z\in\R}
+%      \left| 
+%    f_D^z
+%      \right|
+%      \lesssim
+%      \left| 
+%      w(X,D)
+%      -
+%      \frac{1}{\pi(X)}
+%      \right|
+%      \le
+%      \varepsilon_N
+%\end{gather}
+%with probability going to 1 as $N\to\infty$.
+%Thus
+% \begin{gather}
+%    \P
+%    \left[ 
+%    f_D^z
+%    \in
+%  \mathcal{F}_N
+%  \ \forall\,z\in\R
+%    \right]
+%    =
+%    \P
+%    \left[ 
+%      \sup_{z\in\R}
+%      \left| 
+%    f_D^z
+%      \right|
+%      \lesssim
+%      \varepsilon_N
+%    \right]
+%    \to 1
+%    \qquad
+%    \text{as}
+%    \ 
+%    N\to\infty
+%    \,.
+%  \end{gather}
+%  Then it holds
+%  for all $\varepsilon>0$ 
+%  \begin{align*}
+%    \P
+%    \left[ 
+%      \sup_{z\in\R}
+%  \left| G_Nf_D^z \right|
+%  \le
+%  \varepsilon
+%    \right]
+%    &
+%    \ 
+%    \ge
+%    \ 
+%    \P
+%    \left[ 
+%      \sup_{z\in\R}
+%  \left| G_Nf_D^z \right|
+%  \le
+%  \norm{G_N}^*_{\mathcal{F}_N}
+%  \le
+%  \varepsilon
+%    \right]
+%    \\
+%    &
+%    \ 
+%    \ge
+%    \ 
+%    \P
+%    \left[ 
+%    f_D^z
+%    \in
+%  \mathcal{F}_N
+%  \ \forall\,z\in\R
+%      \ 
+%      \text{and}\ 
+%  \norm{G_N}^*_{\mathcal{F}_N}
+%  \le
+%  \varepsilon
+%    \right]
+%    \\
+%    &
+%    \ 
+%    \ge
+%    \ 
+%    \P
+%    \left[ 
+%    f_D^z
+%    \in
+%  \mathcal{F}_N
+%  \ \forall\,z\in\R
+%    \right]
+%    -
+%    \P
+%    \left[ 
+%  \norm{G_N}^*_{\mathcal{F}_N}
+%    \ 
+%  \ge
+%    \ 
+%  \varepsilon
+%    \right]
+%    \\
+%    &
+%    \ 
+%    \to
+%    \ 
+%    1
+%    \,.
+%  \end{align*}
+%  The convergence of the second term is due to Lemma~\ref{lemma_max_ineq}.
+%
+%\end{proof}
+%
 \begin{lemma}
   \label{aa:mean:l:r3}
   Assume conditional unconfoundedness, that is,
@@ -2148,8 +2360,10 @@ Thus
   $z\in\R$
   it holds
   $
-  G_Nf_D^z=R_3(z)
+  G_Nf_z=R_3(z)
   $.
+  Furthermore, under conditions it holds
+  $\sup_{z\in\R}\left| R_3(z) \right|\overset{\P}{\to}0$.
 \end{lemma}
 \begin{proof}
   A standard computation shows
