@@ -903,9 +903,17 @@ The next lemma provides bracketing numbers for specific function classes needed 
   Then $\mathcal{F}$ is a class of measurable functions. 
   Furthermore, if $g(X)\in\mathrm{L}_\infty(\P)$, it holds 
   \begin{gather*}
-    N_{[\,]}(\varepsilon,\mathcal{F},\mathrm{L}_2(\P))
-    \le
-    ??
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F},\mathrm{L}_2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+    \frac{\norm{g(X)}_{\mathrm{L}_\infty(\P)}}{\varepsilon}
+    \right)^2
     \qquad
     \text{for all}
     \ 
@@ -983,6 +991,7 @@ The next lemma provides bracketing numbers for specific function classes needed 
   \end{gather}
   such that
   \begin{gather}
+    \label{size_z}
     \P
     \left[ 
       Y(1)\in \left[ z_{l-1},z_l \right]
@@ -996,15 +1005,247 @@ The next lemma provides bracketing numbers for specific function classes needed 
     l\in \left\{ 1,\ldots,m \right\}
   \end{gather}
   and $m \le 2/\varepsilon$.
-  Consider for
-$
-    l\in \left\{ 1,\ldots,m \right\}
-$
-\begin{align}
-  \underline{f_N^l}
+  Next, we define $m$ brackets by
+\begin{align*}
+  \overline{f_g^l}
   (T,X,Y(T))
+  &
+  \ 
   :=
-\end{align}
+  \ 
+      g(X)
+      \cdot
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{ Y(T)\le z_{l} \right\}}
+        -
+        F_{Y(1)}(z_{l-1}|X)
+      \right)
+      \\
+  \underline{f_g^l}
+  (T,X,Y(T))
+  &
+  \ 
+  :=
+  \ 
+      g(X)
+      \cdot
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{ Y(T)\le z_{l-1} \right\}}
+        -
+        F_{Y(1)}(z_l|X)
+      \right)
+      \,,
+\end{align*}
+for $l\in \left\{ 1,\ldots,m \right\}$.
+These brackets cover $\mathcal{F}$.
+Indeed,
+for all $z\in\R$ there exists
+$l\in \left\{ 1,\ldots,m \right\}$ such that 
+$z_{l-1}\le z\le z_l$.
+By the monotonicity of 
+$
+        \mathbf{1}
+      _{\left\{ Y(T)\le (\cdot) \right\}}
+$
+and
+$
+        F_{Y(1)}(\cdot|X)
+$
+and the non-negativity of $g(X)\cdot T$ it follows
+$
+  \underline{f_g^l}
+  \le
+  f_g^z
+  \le
+  \overline{f_g^l}
+$. 
+Thus, the $m$ brackets 
+$
+[
+  \underline{f_g^l}
+  ,
+  \overline{f_g^l}
+]
+$
+cover $\mathcal{F}$.
+Let's calculate the size of the brackets.
+It holds
+\begin{align*}
+  &
+\E
+\left[ 
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{ Y(T)\le z_{l} \right\}}
+        -
+        F_{Y(1)}(z_{l-1}|X)
+        \ 
+        -
+        \ 
+        \mathbf{1}
+        _{\left\{ Y(T)\le z_{l-1} \right\}}
+        +
+        F_{Y(1)}(z_{l}|X)
+      \right)
+\right]
+\\
+  &
+  \ 
+=
+  \ 
+\E
+\left[ 
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{
+        Y(T)
+        \,
+        \in 
+        \,
+    [z_{l-1},z_l]
+\right\}}
+\ 
+        +
+\ 
+        \P
+        \left[ 
+          Y(1)
+          \in
+    [z_{l-1},z_l]
+        \,
+    |
+        \,
+    X
+        \right]
+      \right)
+\right]
+\\
+  &
+  \ 
+\le
+  \ 
+\E
+\left[ 
+  \pi(X)
+  \cdot
+        \P
+        \left[ 
+          Y(1)
+          \in
+    [z_{l-1},z_l]
+          \,
+    |
+          \,
+    X
+        \right]
+          \,
+\right]
+\ 
++
+\ 
+\varepsilon
+\\
+  &
+  \ 
+\le
+  \ 
+2
+\varepsilon
+\,.
+\end{align*}
+We used \eqref{size_z}, $0\le T,\pi(X)\le 1$ and the properties of conditional expectation.
+It follows
+\begin{align*}
+  &
+  \norm{
+  \overline{f_g^l}
+-
+  \underline{f_g^l}
+}_
+{\mathrm{L}_2(\P)}
+\\
+&
+\ 
+\lesssim
+\ 
+\norm{g(X)}_
+{\mathrm{L}_\infty(\P)}
+\ 
+\cdot
+\ 
+\E
+\left[ 
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{
+        Y(T)
+        \,
+        \in 
+        \,
+    [z_{l-1},z_l]
+\right\}}
+\ 
+        +
+\ 
+        \P
+        \left[ 
+          Y(1)
+          \in
+    [z_{l-1},z_l]
+        \,
+    |
+        \,
+    X
+        \right]
+      \right)
+   \right]^{1/2}
+   \\
+&
+\ 
+\lesssim
+\ 
+\norm{g(X)}_
+{\mathrm{L}_\infty(\P)}
+\sqrt{\varepsilon}
+\,.
+\end{align*}
+Since $m\le 2/\varepsilon$ it holds
+  \begin{align*}
+    N_{[\,]}
+    (
+\norm{g(X)}_
+{\mathrm{L}_\infty(\P)}
+\sqrt{\varepsilon}
+    ,
+    \mathcal{F},\mathrm{L}_2(\P))
+    &
+    \ 
+    \lesssim
+    \ 
+    \frac{1}{\varepsilon}
+    \intertext{and thus}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F},\mathrm{L}_2(\P))
+    &
+    \ 
+    \lesssim
+    \ 
+    \left( 
+    \frac{\norm{g(X)}_{\mathrm{L}_\infty(\P)}}{\varepsilon}
+    \right)^2
+    \,.
+  \end{align*}
+
 \end{proof}
 \begin{lemma}
   Define for
