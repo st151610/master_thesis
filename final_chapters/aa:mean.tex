@@ -941,9 +941,21 @@ The next lemma provides bracketing numbers for specific function classes needed 
   Then $\mathcal{G}$ is a class of measurable functions. 
   Furthermore, if $1/\pi(X)\in\mathrm{L}_2(\P)$, it holds 
   \begin{gather*}
-    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_2(\P))
-    \le
-    ??
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{G},\mathrm{L}_2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+    \frac{
+      1+
+    \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}
+    }
+    {\varepsilon}
+    \right)^4
     \qquad
     \text{for all}
     \ 
@@ -1245,7 +1257,198 @@ Since $m\le 2/\varepsilon$ it holds
     \right)^2
     \,.
   \end{align*}
-
+  Next, we look at $\mathcal{G}$. To this end, we define 
+  $m$ brackets by
+ \begin{align}
+    \overline{f_l}(T,X,Y(T))
+    :=
+    \frac{T}{\pi(X)}
+    \left( 
+      \mathbf{1}_{\left\{ Y(T)\le z_{l} \right\}}
+      -
+      F_{Y(1)}(z_{l-1}|X)
+    \right)
+    +
+    F_{Y(1)}(z_{l}|X)
+-
+F_{Y(1)}(z_{l-1})
+\\
+    \underline{f_l}(T,X,Y(T))
+    :=
+    \frac{T}{\pi(X)}
+    \left( 
+      \mathbf{1}_{\left\{ Y(T)\le z_{l-1} \right\}}
+      -
+      F_{Y(1)}(z_l|X)
+    \right)
+    +
+    F_{Y(1)}(z_{l-1}|X)
+-
+      F_{Y(1)}(z_l)
+      \\
+  \end{align}
+  for $l\in \left\{ 1,\ldots,m \right\}$.
+  With the same arguments as before, we see that these brackets cover $\mathcal{G}$.
+  Let's calculate the size.
+  It holds
+  \begin{align*}
+    &
+    \norm{
+      \frac{T}{\pi(X)}
+      \left( 
+      \mathbf{1}_{
+      \left\{ 
+      Y(T)\in [z_{l-1},z_l] 
+    \right\}
+    }
+      +
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
+      \right]
+      \right)
+    }_{\mathrm{L}_2(\P)}
+    \\
+    &
+    \
+    \lesssim
+    \
+    \left( 
+      \E
+      \left[ 
+        \frac{1}{\pi(X)}
+        \frac{T}{\pi(X)}
+      \left( 
+      \mathbf{1}_{
+      \left\{ 
+      Y(T)\in [z_{l-1},z_l] 
+    \right\}
+    }
+      +
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
+      \right]
+      \right)
+      \right]
+    \right)
+    ^{1/2}
+    \\
+    &
+    \
+    \lesssim
+    \
+    \left( 
+      \E
+      \left[ 
+        \frac{1}{\pi(X)}
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
+      \right]
+      \right]
+    \right)
+    ^{1/2}
+    \\
+    &
+    \ 
+    \lesssim
+    \ 
+    \left( 
+      \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}
+      \sqrt{\varepsilon}
+    \right)
+    ^{1/2}
+    \ 
+    =
+    \ 
+    \varepsilon^{1/4}
+    \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}^{1/2}
+  \end{align*}
+  and
+  \begin{align*}
+     \norm{
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
+      \right]
+      \ 
+     + 
+      \ 
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] \,
+      \right]
+    }_{\mathrm{L}_2(\P)}
+    \ 
+    \lesssim
+    \ 
+    \sqrt{\varepsilon}
+    \,.
+  \end{align*}
+  Thus
+  \begin{gather}
+  \norm{
+  \overline{f_l}
+-
+  \underline{f_l}
+}_
+{\mathrm{L}_2(\P)}
+\ 
+\lesssim
+\ 
+\varepsilon^{1/4}
+\left( 
+  1
+  +
+    \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}^{1/2}
+\right)
+\ 
+\lesssim
+\ 
+\varepsilon^{1/4}
+\left( 
+  1
+  +
+    \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}
+\right)
+\,.
+  \end{gather}
+As before, it follows
+\begin{gather}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{G},\mathrm{L}_2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+    \frac{
+      1+
+    \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}
+    }
+    {\varepsilon}
+    \right)^4
+    \,.
+\end{gather}
 \end{proof}
 \begin{lemma}
   Define for
