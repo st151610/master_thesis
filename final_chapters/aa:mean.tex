@@ -811,6 +811,7 @@ To measure the speed of convergence we introduce the bracketing integral
 An envelope function $F$ of a class $\mathcal{F}$ satisfies 
 $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 \begin{theorem}
+  \label{th:max_ineq}
   \emph{(Maximal inequality)}
   For any class $\mathcal{F}$ of measurable functions with envelope function $F,$
   \begin{gather}
@@ -846,6 +847,7 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
 \newpage
 \begin{lemma}
+    \label{lem:brack_n}
   Let
   $
   g
@@ -1449,6 +1451,291 @@ As before, it follows
     \right)^4
     \,.
 \end{gather}
+\end{proof}
+
+\begin{lemma}
+  Let $(\mathcal{F}_N)$ be a sequence of measurable function classes with envelope functions $(F_N)$.
+  If
+  \begin{gather}
+    J_{[\, ]}
+    \left( 
+    \norm{F_N}_{\mathrm{L}_2(\P)}
+    ,
+    \mathcal{F}_N
+    ,
+    \mathrm{L}_2(\P)
+    \right)
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}
+    \ 
+    N
+    \to
+    \infty
+  \end{gather}
+  it holds 
+  $
+  \norm{\G_N}^*_{\mathcal{F}_N}\overset{\P}{\to}0
+  $.
+\end{lemma}
+\begin{proof}
+  By Markov's inequality and Theorem~\ref{th:max_ineq} it holds for all $\varepsilon>0$
+  \begin{align*}
+    &
+    \P
+    [
+  \norm{\G_N}^*_{\mathcal{F}_N}
+  \ge
+  \varepsilon
+    ]
+    \\
+    &
+    \ 
+    \le
+    \ 
+    \varepsilon^{-1}
+    \E
+    [
+  \norm{\G_N}^*_{\mathcal{F}_N}
+    ]
+    \ 
+    =
+    \ 
+    \varepsilon^{-1}
+    \E^*
+    [
+  \norm{\G_N}_{\mathcal{F}_N}
+    ]
+    \ 
+    \lesssim
+    \ 
+    \varepsilon^{-1}
+    J_{[\, ]}
+    \left( 
+    \norm{F_N}_{\mathrm{L}_2(\P)}
+    ,
+    \mathcal{F}_N
+    ,
+    \mathrm{L}_2(\P)
+    \right)
+    \ 
+    \to
+    \ 
+    0
+  \end{align*}
+  for $N\to\infty$. 
+\end{proof}
+
+\begin{lemma}
+  Let 
+  $(\varepsilon_N)\subset(0,1]$ be a decreasing sequence with 
+  $\varepsilon_N\to 0$ as $N\to\infty$. Consider for
+  $N\in\mathbb{N}$ and $z\in\R$ the function
+ \begin{align*}
+    f_{N,\pm}^z
+    \ 
+    :
+    \ 
+      \left\{ 0,1 \right\}
+      \times
+      \mathcal{X}
+      \times
+      \mathcal{Y}
+    &
+    \ 
+    \to
+    \ 
+    \R
+    \\
+      (T,X,Y(T))
+    &
+      \ 
+      \mapsto
+      \ 
+      \mathbf{1}
+      _
+      {\left\{ 
+          \left|
+      w(X)-\frac{1}{\pi(X)}
+          \right|
+          \le
+          \frac{\varepsilon_N}{2}
+      \right\}}
+      \left( 
+      w(X)-\frac{1}{\pi(X)}
+      \right)
+      ^{\pm}
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{ Y(T)\le z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+      \,,
+  \end{align*}
+  and define 
+  \begin{gather*}
+    \mathcal{F}_N^\pm
+    :=
+    \left\{ 
+    f_{N,\pm}^z
+    |
+    z\in\R
+    \right\}
+    \,.
+  \end{gather*}
+  If the optimal solution $(\lambda^\dagger,\lambda_0^\dagger)$ to Problem? exists and is measurable for all $N\in\mathbb{N}$ 
+  the function class
+  $
+    \mathcal{F}_N^\pm
+  $
+    is measurable for all $N\in\mathbb{N}$.
+    Furthermore, $\mathcal{F}_N^\pm$ is bounded above by $\varepsilon_N$ and
+    \begin{gather*}
+     J_{[\, ]}
+    \left( 
+      \varepsilon_N
+    ,
+    \mathcal{F}_N^\pm
+    ,
+    \mathrm{L}_2(\P)
+    \right)
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}
+    \ 
+    N
+    \to
+    \infty
+\,. 
+    \end{gather*}
+\end{lemma}
+\begin{proof}
+  If the optimal solution $(\lambda^\dagger,\lambda_0^\dagger)$ to Problem? exists and is measurable for all $N\in\mathbb{N}$ 
+  then the weights function $w$ is measurable. Indeed,
+  this follows from
+  \begin{gather*}
+    w(X)=
+    (
+    f^{'}
+    )
+    ^{-1}
+    \left( \inner{B(X)}{\lambda^\dagger}+\lambda^\dagger_0 \right)
+    \,,
+  \end{gather*}
+  the measurability of the basis functions $B$ and the continuity of $
+    (
+    f^{'}
+    )
+    ^{-1}
+    $. Thus $f_{N,\pm}^z$ are measurable for all $N\in\mathbb{N}$ and all $z\in\R$. Clearly, 
+    $\mathcal{F}_N^\pm$ is bounded above by $\varepsilon_N$.
+    Since 
+    \begin{gather*}
+       \mathbf{1}
+      _
+      {\left\{ 
+          \left|
+      w(X)-\frac{1}{\pi(X)}
+          \right|
+          \le
+          \frac{\varepsilon_N}{2}
+      \right\}}
+      \left( 
+      w(X)-\frac{1}{\pi(X)}
+      \right)
+      ^{\pm}
+    \end{gather*}
+    is non-negative and bounded above by $\varepsilon_N$
+    it follows from Lemma~\ref
+    {lem:brack_n}
+  \begin{gather*}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}_N^\pm,\mathrm{L}_2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+    \frac
+    {\varepsilon_N}
+    {\varepsilon}
+    \right)^2
+    \ 
+    \lesssim
+    \ 
+    \left( 
+    \frac
+    {1}
+    {\varepsilon}
+    \right)^2
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \,.
+  \end{gather*}
+Thus
+    \begin{align*}
+     J_{[\, ]}
+    \left( 
+      \varepsilon_N
+    ,
+    \mathcal{F}_N^\pm
+    ,
+    \mathrm{L}_2(\P)
+    \right)
+    &
+    \ 
+=
+\  
+\int^{\varepsilon_N}_0
+\sqrt{
+\log
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}_N^\pm,\mathrm{L}_2(\P))
+}
+\, 
+d\varepsilon
+\\
+&
+\ 
+\lesssim
+\ 
+\int^{\varepsilon_N}_0
+\log
+\left( 
+  \frac{1}{\varepsilon}
+\right)
+\, 
+d\varepsilon
+\ 
+=
+\ 
+\varepsilon_N
+-
+\varepsilon_N \log(\varepsilon_N)
+\ 
+\to
+\ 
+0 
+\qquad
+\text{for}\ 
+N\to\infty
+\,.
+    \end{align*}
 \end{proof}
 \begin{lemma}
   Define for
