@@ -804,17 +804,17 @@ $[\underline{f},\overline{f}]$
 is the set of all functions $f$ with 
 $\underline{f}\le f \le \overline{f}$.
 We define a
-$(\varepsilon,\mathrm{L}_{r}(\P))$-bracket
+$(\varepsilon, L^{r}(\P))$-bracket
 to be a bracket
 $[\underline{f},\overline{f}]$ with
-$\norm{\overline{f}-\underline{f}}_{\mathrm{L}_r(\P)}< \varepsilon$.
+$\norm{\overline{f}-\underline{f}}_{ L^r(\P)}< \varepsilon$.
 The bracketing number 
 $
-N_{[\,]}(\varepsilon, \mathcal{F},\mathrm{L}_r(\P))
+N_{[\,]}(\varepsilon, \mathcal{F}, L^r(\P))
 $
 is 
 the minimum number of 
-$(\varepsilon,\mathrm{L}_{r}(\P))$-brackets needed to cover $\mathcal{F}$.
+$(\varepsilon, L^{r}(\P))$-brackets needed to cover $\mathcal{F}$.
 For most classes $\mathcal{F}$ the bracketing number grows to infinity for $\varepsilon\to 0$.
 To measure the speed of convergence we introduce the bracketing integral
 \begin{gather}
@@ -832,7 +832,7 @@ To measure the speed of convergence we introduce the bracketing integral
       \sqrt{
         \log 
       N_{[\,]}
-\left( \varepsilon, \mathcal{F}_N,\mathrm{L}_r(\P) \right)
+\left( \varepsilon, \mathcal{F}_N, L^r(\P) \right)
     }
     \,
     d\varepsilon
@@ -861,7 +861,7 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
     \norm{
       F
     }
-    _{\mathrm{L}_2(\P)}
+    _{ L^2(\P)}
     ,
     \mathcal{F}
     ,
@@ -874,18 +874,15 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
   \cite[Corollary~19.35]{Vaart2000}
 \end{proof}
 
-The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
-\newpage
-\begin{lemma}
-    \label{lem:brack_n}
-  Let
+Next, we define some auxiliary functions.
+Let
   $
   g
   :
   \mathcal{X}\to [0,\infty)
   $
   be a measurable, non-negative function.
-  Consider for $z\in\R$ the function
+  For $g$ and $z\in\R$ we define the function
   \begin{align*}
     f_{g}^z
     \ 
@@ -912,15 +909,16 @@ The next lemma provides bracketing numbers for specific function classes needed 
       T
       \left( 
         \mathbf{1}
-        _{\left\{ Y(T)\le z \right\}}
+        _{\left\{  Y(T)\,\le\,z \right\}}
         -
         F_{Y(1)}(z|X)
       \right)
       \,,
   \end{align*}
-  and define a function class by
-  $
-    \mathcal{F}
+  and the function class 
+  \begin{gather}
+    \label{F_g}
+    \mathcal{F}_g
     \ 
     :=
     \ 
@@ -931,20 +929,30 @@ The next lemma provides bracketing numbers for specific function classes needed 
       \ 
       z\in\R\ 
     \right\}
-  $.
-  Then $\mathcal{F}$ is a class of measurable functions. 
-  Furthermore, if $g(X)\in\mathrm{L}_\infty(\P)$, it holds 
+    \,.
+  \end{gather}
+The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
+\newpage
+\begin{lemma}
+Let
+  $
+  g
+  :
+  \mathcal{X}\to [0,\infty)
+  $. 
+  Then the function class $\mathcal{F}_g$ defined in \eqref{F_g} is measurable.
+  Furthermore, if $g(X)\in L^\infty(\P)$, it holds 
   \begin{gather*}
     N_{[\,]}
     (
     \varepsilon
     ,
-    \mathcal{F},\mathrm{L}_2(\P))
+    \mathcal{F}_g, L^2(\P))
     \ 
     \lesssim
     \ 
     \left( 
-    \frac{\norm{g(X)}_{\mathrm{L}_\infty(\P)}}{\varepsilon}
+    \frac{\norm{g(X)}_{ L^\infty(\P)}}{\varepsilon}
     \right)^2
     \qquad
     \text{for all}
@@ -971,20 +979,20 @@ The next lemma provides bracketing numbers for specific function classes needed 
     \right\}
   \end{gather*}
   Then $\mathcal{G}$ is a class of measurable functions. 
-  Furthermore, if $1/\pi(X)\in\mathrm{L}_2(\P)$, it holds 
+  Furthermore, if $1/\pi(X)\in L^2(\P)$, it holds 
   \begin{gather*}
     N_{[\,]}
     (
     \varepsilon
     ,
-    \mathcal{G},\mathrm{L}_2(\P))
+    \mathcal{G}, L^2(\P))
     \ 
     \lesssim
     \ 
     \left( 
     \frac{
       1+
-    \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}
+    \norm{1/\pi(X)}_{ L^2(\P)}
     }
     {\varepsilon}
     \right)^4
@@ -1012,10 +1020,10 @@ The next lemma provides bracketing numbers for specific function classes needed 
 %    \right\}
 %    \,.
 %  \end{gather*}
-%  If $1/\pi(X)\in \mathrm{L}_2(\P)$
+%  If $1/\pi(X)\in  L^2(\P)$
 %  it holds
 %  \begin{gather}
-%    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_2(\P))
+%    N_{[\,]}(\varepsilon,\mathcal{G}, L^2(\P))
 %    \le
 %    ??
 %    \qquad
@@ -1029,16 +1037,16 @@ The next lemma provides bracketing numbers for specific function classes needed 
   As in \cite[Example~19.6]{Vaart2000}
   we choose for
   $\varepsilon>0$ and $m\in\mathbb{N}$
-  \begin{gather}
+  \begin{gather*}
   -\infty=z_0\ <\ z_1\ <\ \cdots\ <\ z_{m-1}\ <\ z_m=\infty
   \,
-  \end{gather}
+  \end{gather*}
   such that
   \begin{gather}
     \label{size_z}
     \P
     \left[ 
-      Y(1)\in \left[ z_{l-1},z_l \right]
+      Y(1)\in \left[ z_{l-1},z_l \right]\,
     \right]
     \ 
     \le
@@ -1062,10 +1070,11 @@ The next lemma provides bracketing numbers for specific function classes needed 
       T
       \left( 
         \mathbf{1}
-        _{\left\{ Y(T)\le z_{l} \right\}}
+        _{\left\{  Y(T)\,\le\,z_{l} \right\}}
         -
         F_{Y(1)}(z_{l-1}|X)
       \right)
+      \,,
       \\
   \underline{f_g^l}
   (T,X,Y(T))
@@ -1078,7 +1087,7 @@ The next lemma provides bracketing numbers for specific function classes needed 
       T
       \left( 
         \mathbf{1}
-        _{\left\{ Y(T)\le z_{l-1} \right\}}
+        _{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
         -
         F_{Y(1)}(z_l|X)
       \right)
@@ -1087,26 +1096,54 @@ The next lemma provides bracketing numbers for specific function classes needed 
 for $l\in \left\{ 1,\ldots,m \right\}$.
 These brackets cover $\mathcal{F}$.
 Indeed,
-for all $z\in\R$ there exists
-$l\in \left\{ 1,\ldots,m \right\}$ such that 
-$z_{l-1}\le z\le z_l$.
+\begin{gather*}
+  \text{for all}\ 
+  z\in\R
+  \ 
+  \text{there exists} \ 
+l\in \left\{ 1,\ldots,m \right\}
+\qquad 
+\text{such that}\qquad
+z_{l-1}
+\ 
+\le
+\ 
+z
+\ 
+\le
+\ 
+z_l
+\,.
+\end{gather*}
 By the monotonicity of 
 $
         \mathbf{1}
-      _{\left\{ Y(T)\le (\cdot) \right\}}
+      _{\left\{  Y(T)\,\le\,(\cdot) \right\}}
 $
 and
 $
         F_{Y(1)}(\cdot|X)
 $
 and the non-negativity of $g(X)\cdot T$ it follows
-$
+\begin{gather*}
+  \text{for all}\ 
+  z\in\R
+  \ 
+  \text{there exists} \ 
+l\in \left\{ 1,\ldots,m \right\}
+\qquad 
+\text{such that}\qquad
   \underline{f_g^l}
+  \ 
   \le
+  \ 
   f_g^z
+  \ 
   \le
+  \ 
   \overline{f_g^l}
-$. 
+  \,.
+\end{gather*}
 Thus, the $m$ brackets 
 $
 [
@@ -1115,7 +1152,8 @@ $
   \overline{f_g^l}
 ]
 $
-cover $\mathcal{F}$.
+cover $\mathcal{F}_g$.
+
 Let's calculate the size of the brackets.
 It holds
 \begin{align*}
@@ -1123,19 +1161,21 @@ It holds
 \E
 \left[ 
       T
+      \cdot
       \left( 
         \mathbf{1}
-        _{\left\{ Y(T)\le z_{l} \right\}}
+        _{\left\{  Y(T)\,\le\,z_{l} \right\}}
         -
         F_{Y(1)}(z_{l-1}|X)
         \ 
         -
         \ 
         \mathbf{1}
-        _{\left\{ Y(T)\le z_{l-1} \right\}}
+        _{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
         +
         F_{Y(1)}(z_{l}|X)
       \right)
+      \,
 \right]
 \\
   &
@@ -1145,6 +1185,7 @@ It holds
 \E
 \left[ 
       T
+      \cdot
       \left( 
         \mathbf{1}
         _{\left\{
@@ -1168,6 +1209,7 @@ It holds
     X
         \right]
       \right)
+      \,
 \right]
 \\
   &
@@ -1176,6 +1218,7 @@ It holds
   \ 
 \E
 \left[ 
+  \,
   \pi(X)
   \cdot
         \P
@@ -1188,7 +1231,7 @@ It holds
           \,
     X
         \right]
-          \,
+          \ 
 \right]
 \ 
 +
@@ -1200,6 +1243,7 @@ It holds
 \le
   \ 
 2
+\,
 \varepsilon
 \,.
 \end{align*}
@@ -1212,20 +1256,22 @@ It follows
 -
   \underline{f_g^l}
 }_
-{\mathrm{L}_2(\P)}
+{ L^2(\P)}
 \\
 &
 \ 
 \lesssim
 \ 
 \norm{g(X)}_
-{\mathrm{L}_\infty(\P)}
+{ L^\infty(\P)}
 \ 
 \cdot
 \ 
 \E
 \left[ 
+  \,
       T
+      \cdot
       \left( 
         \mathbf{1}
         _{\left\{
@@ -1249,6 +1295,7 @@ It follows
     X
         \right]
       \right)
+      \,
    \right]^{1/2}
    \\
 &
@@ -1256,19 +1303,21 @@ It follows
 \lesssim
 \ 
 \norm{g(X)}_
-{\mathrm{L}_\infty(\P)}
-\sqrt{\varepsilon}
+{ L^\infty(\P)}
+\varepsilon^{1/2}
 \,.
 \end{align*}
 Since $m\le 2/\varepsilon$ it holds
   \begin{align*}
     N_{[\,]}
-    (
+    \left(
 \norm{g(X)}_
-{\mathrm{L}_\infty(\P)}
-\sqrt{\varepsilon}
+{ L^\infty(\P)}
+\varepsilon^{1/2}
     ,
-    \mathcal{F},\mathrm{L}_2(\P))
+    \,
+    \mathcal{F}_g\,,\, L^2(\P)
+    \right)
     &
     \ 
     \lesssim
@@ -1279,46 +1328,55 @@ Since $m\le 2/\varepsilon$ it holds
     (
     \varepsilon
     ,
-    \mathcal{F},\mathrm{L}_2(\P))
+    \mathcal{F}_g, L^2(\P))
     &
     \ 
     \lesssim
     \ 
     \left( 
-    \frac{\norm{g(X)}_{\mathrm{L}_\infty(\P)}}{\varepsilon}
+    \frac{\norm{g(X)}_{ L^\infty(\P)}}{\varepsilon}
     \right)^2
     \,.
   \end{align*}
   Next, we look at $\mathcal{G}$. To this end, we define 
   $m$ brackets by
- \begin{align}
+ \begin{align*}
     \overline{f_l}(T,X,Y(T))
+    \ 
     :=
+    \ 
     \frac{T}{\pi(X)}
     \left( 
-      \mathbf{1}_{\left\{ Y(T)\le z_{l} \right\}}
+      \mathbf{1}_{\left\{  Y(T)\,\le\,z_{l} \right\}}
       -
       F_{Y(1)}(z_{l-1}|X)
     \right)
+    \ 
     +
+    \ 
     F_{Y(1)}(z_{l}|X)
 -
 F_{Y(1)}(z_{l-1})
+\,,
 \\
     \underline{f_l}(T,X,Y(T))
+    \ 
     :=
+    \ 
     \frac{T}{\pi(X)}
     \left( 
-      \mathbf{1}_{\left\{ Y(T)\le z_{l-1} \right\}}
+      \mathbf{1}_{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
       -
       F_{Y(1)}(z_l|X)
     \right)
+    \ 
     +
+    \ 
     F_{Y(1)}(z_{l-1}|X)
 -
       F_{Y(1)}(z_l)
-      \\
-  \end{align}
+\,,
+  \end{align*}
   for $l\in \left\{ 1,\ldots,m \right\}$.
   With the same arguments as before, we see that these brackets cover $\mathcal{G}$.
   Let's calculate the size.
@@ -1343,7 +1401,7 @@ F_{Y(1)}(z_{l-1})
       X
       \right]
       \right)
-    }_{\mathrm{L}_2(\P)}
+    }_{ L^2(\P)}
     \\
     &
     \
@@ -1399,7 +1457,7 @@ F_{Y(1)}(z_{l-1})
     \lesssim
     \ 
     \left( 
-      \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}
+      \norm{1/\pi(X)}_{ L^2(\P)}
       \sqrt{\varepsilon}
     \right)
     ^{1/2}
@@ -1407,7 +1465,7 @@ F_{Y(1)}(z_{l-1})
     =
     \ 
     \varepsilon^{1/4}
-    \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}^{1/2}
+    \norm{1/\pi(X)}_{ L^2(\P)}^{1/2}
   \end{align*}
   and
   \begin{align*}
@@ -1427,21 +1485,21 @@ F_{Y(1)}(z_{l-1})
       \left[ 
       Y(1)\in [z_{l-1},z_l] \,
       \right]
-    }_{\mathrm{L}_2(\P)}
+    }_{ L^2(\P)}
     \ 
     \lesssim
     \ 
-    \sqrt{\varepsilon}
+    \varepsilon^{1/2}
     \,.
   \end{align*}
   Thus
-  \begin{gather}
+  \begin{gather*}
   \norm{
   \overline{f_l}
 -
   \underline{f_l}
 }_
-{\mathrm{L}_2(\P)}
+{ L^2(\P)}
 \ 
 \lesssim
 \ 
@@ -1449,7 +1507,7 @@ F_{Y(1)}(z_{l-1})
 \left( 
   1
   +
-    \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}^{1/2}
+    \norm{1/\pi(X)}_{ L^2(\P)}^{1/2}
 \right)
 \ 
 \lesssim
@@ -1458,29 +1516,29 @@ F_{Y(1)}(z_{l-1})
 \left( 
   1
   +
-    \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}
+    \norm{1/\pi(X)}_{ L^2(\P)}
 \right)
 \,.
-  \end{gather}
+  \end{gather*}
 As before, it follows
-\begin{gather}
+\begin{gather*}
     N_{[\,]}
     (
     \varepsilon
     ,
-    \mathcal{G},\mathrm{L}_2(\P))
+    \mathcal{G}, L^2(\P))
     \ 
     \lesssim
     \ 
     \left( 
     \frac{
       1+
-    \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}
+    \norm{1/\pi(X)}_{ L^2(\P)}
     }
     {\varepsilon}
     \right)^4
     \,.
-\end{gather}
+\end{gather*}
 \end{proof}
 
 \begin{lemma}
@@ -1490,11 +1548,11 @@ As before, it follows
   \begin{gather}
     J_{[\, ]}
     \left( 
-    \norm{F_N}_{\mathrm{L}_2(\P)}
+    \norm{F_N}_{ L^2(\P)}
     ,
     \mathcal{F}_N
     ,
-    \mathrm{L}_2(\P)
+     L^2(\P)
     \right)
     \ 
     \to
@@ -1546,11 +1604,11 @@ As before, it follows
     \varepsilon^{-1}
     J_{[\, ]}
     \left( 
-    \norm{F_N}_{\mathrm{L}_2(\P)}
+    \norm{F_N}_{ L^2(\P)}
     ,
     \mathcal{F}_N
     ,
-    \mathrm{L}_2(\P)
+     L^2(\P)
     \right)
     \ 
     \to
@@ -1559,32 +1617,28 @@ As before, it follows
   \end{align*}
   for $N\to\infty$. 
 \end{proof}
-
-\begin{lemma}
-  \label{bounded_f_lemma}
-  Let 
+Let 
   $(\varepsilon_N)\subset(0,1]$ be a decreasing sequence with 
-  $\varepsilon_N\to 0$ as $N\to\infty$.
-  Consider for
+  $\varepsilon_N\to 0$ as $N\to\infty$ and define for
   $N\in\mathbb{N}$ and $z\in\R$ the function
  \begin{align*}
-    f_{N,\pm}^z
+    f_{\varepsilon_N,\pm}^z
     \ 
     :
     \ 
+    &
       \left\{ 0,1 \right\}
       \times
       \mathcal{X}
       \times
       \mathcal{Y}
-    &
     \ 
     \to
     \ 
     \R
     \\
-      (T,X,Y(T))
     &
+      (T,X,Y(T))
       \ 
       \mapsto
       \ 
@@ -1594,8 +1648,10 @@ As before, it follows
           \left|
       w(X)-\frac{1}{\pi(X)}
           \right|
+          \,
           \le
-          \frac{\varepsilon_N}{2}
+          \,
+          \varepsilon_N/2
       \right\}}
       \left( 
       w(X)-\frac{1}{\pi(X)}
@@ -1604,7 +1660,7 @@ As before, it follows
       T
       \left( 
         \mathbf{1}
-        _{\left\{ Y(T)\le z \right\}}
+        _{\left\{  Y(T)\,\le\,z \right\}}
         -
         F_{Y(1)}(z|X)
       \right)
@@ -1615,13 +1671,58 @@ As before, it follows
     \mathcal{F}_N^\pm
     :=
     \left\{ 
-    f_{N,\pm}^z
+    f_{\varepsilon_N,\pm}^z
     |
     z\in\R
     \right\}
     \,.
   \end{gather*}
-  If the optimal solution $(\lambda^\dagger,\lambda_0^\dagger)$ to Problem? exists and is measurable for all $N\in\mathbb{N}$ 
+\begin{lemma}
+  Consider the weights function
+  \begin{align*}
+    w
+    \colon
+    \mathcal{X}
+    \times
+    \R^{N+1}
+    \ 
+    \to
+    \ 
+    \R
+    \,,
+    \quad
+    (X,(\lambda,\lambda_0))
+    \ 
+    \mapsto
+    \ 
+    (
+    f^{'}
+    )^{-1}
+    \left( 
+      \inner{B(X)}{\lambda}
+      +
+      \lambda_0
+    \right)
+    \,.
+  \end{align*}
+    If the optimal solution 
+    $
+    (\lambda^\dagger,\lambda_0^\dagger)
+    $ to Problem? exists and is measurable for all $N\in\mathbb{N}$ 
+    then $
+    w
+    \circ
+    (
+    X
+    ,
+    (\lambda^\dagger,\lambda_0^\dagger)
+    )
+    $
+    is measurable.
+\end{lemma}
+\begin{lemma}
+  \label{bounded_f_lemma}
+    If the optimal solution $(\lambda^\dagger,\lambda_0^\dagger)$ to Problem? exists and is measurable for all $N\in\mathbb{N}$ 
   the function class
   $
     \mathcal{F}_N^\pm
@@ -1635,7 +1736,7 @@ As before, it follows
     ,
     \mathcal{F}_N^\pm
     ,
-    \mathrm{L}_2(\P)
+     L^2(\P)
     \right)
     \ 
     \to
@@ -1668,7 +1769,7 @@ As before, it follows
     f^{'}
     )
     ^{-1}
-    $. Thus $f_{N,\pm}^z$ are measurable for all $N\in\mathbb{N}$ and all $z\in\R$. Clearly, 
+    $. Thus $f_{\varepsilon_N,\pm}^z$ are measurable for all $N\in\mathbb{N}$ and all $z\in\R$. Clearly, 
     $\mathcal{F}_N^\pm$ is bounded above by $\varepsilon_N$.
     Since 
     \begin{gather*}
@@ -1678,8 +1779,10 @@ As before, it follows
           \left|
       w(X)-\frac{1}{\pi(X)}
           \right|
+          \,
           \le
-          \frac{\varepsilon_N}{2}
+          \,
+          \varepsilon_N/2
       \right\}}
       \left( 
       w(X)-\frac{1}{\pi(X)}
@@ -1694,7 +1797,7 @@ As before, it follows
     (
     \varepsilon
     ,
-    \mathcal{F}_N^\pm,\mathrm{L}_2(\P))
+    \mathcal{F}_N^\pm, L^2(\P))
     \ 
     \lesssim
     \ 
@@ -1725,7 +1828,7 @@ Thus
     ,
     \mathcal{F}_N^\pm
     ,
-    \mathrm{L}_2(\P)
+     L^2(\P)
     \right)
     &
     \ 
@@ -1738,7 +1841,7 @@ Thus
     (
     \varepsilon
     ,
-    \mathcal{F}_N^\pm,\mathrm{L}_2(\P))
+    \mathcal{F}_N^\pm, L^2(\P))
 }
 \, 
 d\varepsilon
@@ -1772,6 +1875,7 @@ N\to\infty
 \end{proof}
 In the next lemma we get rid of the $\varepsilon_N$ bound
 \begin{lemma}
+
   \label{lemma_fpm}
  Consider for $z\in\R$ the function
  \begin{align*}
@@ -1802,7 +1906,7 @@ In the next lemma we get rid of the $\varepsilon_N$ bound
       T
       \left( 
         \mathbf{1}
-        _{\left\{ Y(T)\le z \right\}}
+        _{\left\{  Y(T)\,\le\,z \right\}}
         -
         F_{Y(1)}(z|X)
       \right)
@@ -1838,7 +1942,7 @@ In the next lemma we get rid of the $\varepsilon_N$ bound
       T
       \left( 
         \mathbf{1}
-        _{\left\{ Y(T)\le z \right\}}
+        _{\left\{  Y(T)\,\le\,z \right\}}
         -
         F_{Y(1)}(z|X)
       \right)
@@ -2008,7 +2112,7 @@ z\in\R
 %      \frac{T}{\pi(X)}
 %      \left( 
 %        \mathbf{1}
-%        _{\left\{ Y(T)\le z \right\}}
+%        _{\left\{  Y(T)\,\le\,z \right\}}
 %        -
 %        F_{Y(1)}(z|X)
 %      \right)
@@ -2042,7 +2146,7 @@ z\in\R
 %  Then $\mathcal{G}$ is a class of measurable functions 
 %  and it holds
 %  \begin{gather}
-%    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_2(\P))
+%    N_{[\,]}(\varepsilon,\mathcal{G}, L^2(\P))
 %    \le
 %    ??
 %    \qquad
@@ -2087,7 +2191,7 @@ z\in\R
 %  \begin{gather}
 %        \log 
 %      N_{[\,]}
-%\left( \varepsilon, B_\mathcal{F},\mathrm{L}_2(\P) \right)
+%\left( \varepsilon, B_\mathcal{F}, L^2(\P) \right)
 %\ 
 %\lesssim
 %\ 
@@ -2119,7 +2223,7 @@ z\in\R
 %      \ 
 %      \lesssim
 %      \ 
-%      J_{[\,]}\left( \varepsilon_N, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
+%      J_{[\,]}\left( \varepsilon_N, \mathcal{F}_N, L^2(\P) \right)
 %      \\
 %    &
 %      \ 
@@ -2129,7 +2233,7 @@ z\in\R
 %      \sqrt{
 %        \log 
 %      N_{[\,]}
-%\left( \varepsilon, \mathcal{F}_N,\mathrm{L}_2(\P) \right)
+%\left( \varepsilon, \mathcal{F}_N, L^2(\P) \right)
 %    }
 %    \,
 %    d\varepsilon
@@ -2141,7 +2245,7 @@ z\in\R
 %      \int_0^{\varepsilon_N}
 %      \sqrt{\log 
 %      N_{[\,]}
-%\left( \varepsilon/(C\cdot \varepsilon_N), B_\mathcal{F},\mathrm{L}_2(\P) \right)
+%\left( \varepsilon/(C\cdot \varepsilon_N), B_\mathcal{F}, L^2(\P) \right)
 %    }
 %    \,
 %    d\varepsilon
@@ -2545,7 +2649,7 @@ to a Gaussian process with mean 0 and covariance function given by
 \begin{lemma}
   \label{aa:mean:l:r4}
   Let
-  $1/\pi(X)\in\mathrm{L}_2(\P)$.
+  $1/\pi(X)\in L^2(\P)$.
   $R_4$ converges to a gaussian process.
 \end{lemma}
 \begin{proof}
