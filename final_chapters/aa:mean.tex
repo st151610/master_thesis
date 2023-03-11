@@ -37,16 +37,45 @@ the stochastic process
     \sum_{i=1}^{n} 
     w_i^\dagger
     \mathbf{1}
-    _{\left\{ Y_i\le z \right\}}
+    _{\left\{ Y_i\,\le\, z \right\}}
+    \ 
     -
-    \P[Y(1)\le z]
+    \ 
+    F_{Y(1)}(z)
     \right)
     _{z\in\R}
     \,
   \end{gather}
   converges in
   $l^\infty(\R)$
-  to a Gaussian process with mean 0 and covariance ??.
+  to a Gaussian process with mean 0 and covariance
+\begin{align*}
+  &
+  \mathbf{Cov}
+  (z_1,z_2)
+  \\
+  &
+  =\ 
+  \E
+  \left[ 
+ \frac{
+ F_{Y(1)}(z_1 \land z_2\,|\,X)
+}{\pi(X)}
+\ 
+-
+\ 
+ \frac{1-\pi(X)}{\pi(X)}
+ F_{Y(1)}(z_1|X)
+ \cdot
+ F_{Y(1)}(z_2|X)
+  \right]
+  \ 
+ -
+ \ 
+ F_{Y(1)}(z_1)
+ \cdot
+ F_{Y(1)}(z_2)
+\end{align*}
 \end{ftheorem}
 
 \begin{lemma}
@@ -2519,125 +2548,10 @@ to a Gaussian process with mean 0 and covariance function given by
   $R_4$ converges to a gaussian process.
 \end{lemma}
 \begin{proof}
-  To bound this term we adapt \cite[Example~19.6]{Vaart2000}.
-  To this end, let $\varepsilon>0$ and $m\in\mathbb{N}$. We can choose
-  \begin{gather}
-  -\infty=z_0\ <\ z_1\ <\ \cdots\ <\ z_{m-1}\ <\ z_m=\infty
-  \,
-  \end{gather}
-  such that
-  \begin{gather}
-    \P
-    \left[ 
-      Y(1)\in \left[ z_{l-1},z_l \right]
-    \right]
-    \ 
-    \le
-    \ 
-    \varepsilon
-    \qquad
-    \text{for all}\ 
-    l\in \left\{ 1,\ldots,m \right\}
-  \end{gather}
-  and $m \le 2/\varepsilon$.
-  We define brackets by
-  \begin{align}
-    \underline{f_l}(T,X,Y(T))
-    :=
-    \frac{T}{\pi(X)}
-    \left( 
-      \mathbf{1}_{\left\{ Y(T)\le z_{l-1} \right\}}
-      -
-      F_{Y(1)}(z_l|X)
-    \right)
-    +
-    F_{Y(1)}(z_{l-1}|X)
--
-      F_{Y(1)}(z_l)
-      \\
-    \overline{f_l}(T,X,Y(T))
-    :=
-    \frac{T}{\pi(X)}
-    \left( 
-      \mathbf{1}_{\left\{ Y(T)\le z_{l} \right\}}
-      -
-      F_{Y(1)}(z_{l-1}|X)
-    \right)
-    +
-    F_{Y(1)}(z_{l}|X)
--
-F_{Y(1)}(z_{l-1})
-  \end{align}
-  Let $\mathcal{G}$ be the space covered by these brackets. 
-  An elementary but lengthy calculation shows
-  \begin{gather}
-      \norm{
-    \overline{f_l}
--
-    \underline{f_l}
-    }_{\mathrm{L}_2(\P)}
-    \ 
-    \le
-    \ 
-    2
-    \,
-    \varepsilon^{1/4}
-    \sqrt{
-      \norm{1/\pi(X)}_{\mathrm{L}_2(\P)}
-      +
-      2
-    }
-  \end{gather}
-  Thus we need 
-  $1/\pi(X)\in\mathrm{L}_2(\P)$
-  . By this assumption it 
-  follows, that
-  \begin{gather}
-    N_{[\,]}(C\varepsilon^{1/4}, \mathcal{G},\mathrm{L}_2(\P))
-    \ 
-    \le
-    \ 
-    \frac{2}{\varepsilon}
-  \end{gather}
-  and thus
-\begin{gather}
-    N_{[\,]}(\varepsilon, \mathcal{G},\mathrm{L}_2(\P))
-    \ 
-    \lesssim
-    \ 
-    \frac{1}{\varepsilon^4}  
-    \,.
-\end{gather}
-This covering number is of polynomial order. Thus
-\begin{gather}
-    \log N_{[\,]}(\varepsilon, \mathcal{G},\mathrm{L}_2(\P))
-    \lesssim
-    \log(1/\varepsilon)
-    \,.
-\end{gather}
 But then $\mathcal{G}$ is $\P$-Donsker.
-Define
-\begin{gather}
-  g^z(T,X,Y(T))
-    :=
-    \frac{T}{\pi(X)}
-    \left( 
-      \mathbf{1}_{\left\{ Y(T)\le z \right\}}
-      -
-      F_{Y(1)}(z|X)
-    \right)
-    +
-    F_{Y(1)}(z|X)
--
-      F_{Y(1)}(z)
-\end{gather}
-Then $g^z\in\mathcal{G}$ for all $z\in \R$.
-Since $\E[g^z]=0$ it holds
-\begin{gather}
-  R_4(z)=G_N g^z
-\end{gather}
 By the Donsker Theorem \cite[Theorem~19.5]{Vaart2000}
 the process $R_4$ converges in $l^\infty(\R)$ to a Gaussian process, called $\P$-Brownian bridge, with mean 0 and covariance?
+\subsubsection*{Covariance}
 \end{proof}
 We have gathered all the results to prove Theorem~\ref{aa:mean:th}.
 \begin{proof}
