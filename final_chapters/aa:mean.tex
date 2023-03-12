@@ -875,16 +875,9 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 \end{proof}
 
 Next, we define some auxiliary functions.
-Let
-  $
-  g
-  :
-  \mathcal{X}\to [0,\infty)
-  $
-  be a measurable, non-negative function.
-  For $g$ and $z\in\R$ we define the function
+  For $z\in\R$ we define the function
   \begin{align*}
-    f_{g}^z
+    f_z
     \ 
     :
     \ 
@@ -904,8 +897,6 @@ Let
       \ 
       \mapsto
       \ 
-      g(X)
-      \cdot
       T
       \left( 
         \mathbf{1}
@@ -915,44 +906,58 @@ Let
       \right)
       \,,
   \end{align*}
-  and the function class 
+  and the function classes
   \begin{gather}
     \label{F_g}
-    \mathcal{F}_g
+    \begin{split}
+    \mathcal{F}
+    &
     \ 
     :=
     \ 
     \left\{ 
-      f_{g}^z
+      f_z
       \ 
       |
       \ 
       z\in\R\ 
     \right\}
+    \\
+    \mathcal{G}
+    &
+    \ 
+    :=
+    \ 
+    \left\{ 
+      \frac{f_z}{\pi(\cdot)}
+      +
+      F_{Y(1)}(z|\cdot)
+      -
+      F_{Y(1)}(z)
+      \ 
+      \colon
+      \ 
+      z\in\R\ 
+    \right\}
     \,.
+    \end{split}
   \end{gather}
 The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
 \newpage
 \begin{lemma}
-Let
-  $
-  g
-  :
-  \mathcal{X}\to [0,\infty)
-  $. 
-  Then the function class $\mathcal{F}_g$ defined in \eqref{F_g} is measurable.
-  Furthermore, if $g(X)\in L^\infty(\P)$, it holds 
+  The function class $\mathcal{F}$ and $\mathcal{G}$ defined in \eqref{F_g} are measurable.
+  Furthermore, 
   \begin{gather*}
     N_{[\,]}
     (
     \varepsilon
     ,
-    \mathcal{F}_g, L^2(\P))
+    \mathcal{F}, L^2(\P))
     \ 
     \lesssim
     \ 
     \left( 
-    \frac{\norm{g(X)}_{ L^\infty(\P)}}{\varepsilon}
+      \frac{1}{\varepsilon}
     \right)^2
     \qquad
     \text{for all}
@@ -960,26 +965,7 @@ Let
     \varepsilon>0
     \,.
   \end{gather*}
-  Now choose $g:=1/\pi$ and define the function class
-  \begin{gather*}
-    \mathcal{G}
-    \ 
-    :=
-    \ 
-    \left\{ 
-      f_{1/\pi}^z
-      +
-      F_{Y(1)}(z|\cdot)
-      -
-      F_{Y(1)}(z)
-      \ 
-      |
-      \ 
-      z\in\R\ 
-    \right\}
-  \end{gather*}
-  Then $\mathcal{G}$ is a class of measurable functions. 
-  Furthermore, if $1/\pi(X)\in L^2(\P)$, it holds 
+  If $1/\pi(X)\in L^2(\P)$, it also holds 
   \begin{gather*}
     N_{[\,]}
     (
@@ -1059,14 +1045,12 @@ Let
   and $m \le 2/\varepsilon$.
   Next, we define $m$ brackets by
 \begin{align*}
-  \overline{f_g^l}
+  \overline{f^l}
   (T,X,Y(T))
   &
   \ 
   :=
   \ 
-      g(X)
-      \cdot
       T
       \left( 
         \mathbf{1}
@@ -1076,14 +1060,12 @@ Let
       \right)
       \,,
       \\
-  \underline{f_g^l}
+  \underline{f^l}
   (T,X,Y(T))
   &
   \ 
   :=
   \ 
-      g(X)
-      \cdot
       T
       \left( 
         \mathbf{1}
@@ -1124,7 +1106,7 @@ and
 $
         F_{Y(1)}(\cdot|X)
 $
-and the non-negativity of $g(X)\cdot T$ it follows
+and the non-negativity of $T$ it follows
 \begin{gather*}
   \text{for all}\ 
   z\in\R
@@ -1133,26 +1115,26 @@ and the non-negativity of $g(X)\cdot T$ it follows
 l\in \left\{ 1,\ldots,m \right\}
 \qquad 
 \text{such that}\qquad
-  \underline{f_g^l}
+  \underline{f^l}
   \ 
   \le
   \ 
-  f_g^z
+  f_z
   \ 
   \le
   \ 
-  \overline{f_g^l}
+  \overline{f^l}
   \,.
 \end{gather*}
 Thus, the $m$ brackets 
 $
 [
-  \underline{f_g^l}
+  \underline{f^l}
   ,
-  \overline{f_g^l}
+  \overline{f^l}
 ]
 $
-cover $\mathcal{F}_g$.
+cover $\mathcal{F}$.
 
 Let's calculate the size of the brackets.
 It holds
@@ -1250,22 +1232,14 @@ It holds
 We used \eqref{size_z}, $0\le T,\pi(X)\le 1$ and the properties of conditional expectation.
 It follows
 \begin{align*}
-  &
   \norm{
-  \overline{f_g^l}
+  \overline{f^l}
 -
-  \underline{f_g^l}
+  \underline{f^l}
 }_
 { L^2(\P)}
-\\
-&
 \ 
 \lesssim
-\ 
-\norm{g(X)}_
-{ L^\infty(\P)}
-\ 
-\cdot
 \ 
 \E
 \left[ 
@@ -1297,13 +1271,9 @@ It follows
       \right)
       \,
    \right]^{1/2}
-   \\
-&
 \ 
 \lesssim
 \ 
-\norm{g(X)}_
-{ L^\infty(\P)}
 \varepsilon^{1/2}
 \,.
 \end{align*}
@@ -1311,12 +1281,10 @@ Since $m\le 2/\varepsilon$ it holds
   \begin{align*}
     N_{[\,]}
     \left(
-\norm{g(X)}_
-{ L^\infty(\P)}
 \varepsilon^{1/2}
     ,
     \,
-    \mathcal{F}_g\,,\, L^2(\P)
+    \mathcal{F}\,,\, L^2(\P)
     \right)
     &
     \ 
@@ -1328,20 +1296,20 @@ Since $m\le 2/\varepsilon$ it holds
     (
     \varepsilon
     ,
-    \mathcal{F}_g, L^2(\P))
+    \mathcal{F}, L^2(\P))
     &
     \ 
     \lesssim
     \ 
     \left( 
-    \frac{\norm{g(X)}_{ L^\infty(\P)}}{\varepsilon}
+      \frac{1}{\varepsilon}
     \right)^2
     \,.
   \end{align*}
   Next, we look at $\mathcal{G}$. To this end, we define 
   $m$ brackets by
  \begin{align*}
-    \overline{f_l}(T,X,Y(T))
+    \overline{g^l}(T,X,Y(T))
     \ 
     :=
     \ 
@@ -1359,7 +1327,7 @@ Since $m\le 2/\varepsilon$ it holds
 F_{Y(1)}(z_{l-1})
 \,,
 \\
-    \underline{f_l}(T,X,Y(T))
+    \underline{g^l}(T,X,Y(T))
     \ 
     :=
     \ 
@@ -1495,9 +1463,9 @@ F_{Y(1)}(z_{l-1})
   Thus
   \begin{gather*}
   \norm{
-  \overline{f_l}
+  \overline{g^l}
 -
-  \underline{f_l}
+  \underline{g^l}
 }_
 { L^2(\P)}
 \ 
