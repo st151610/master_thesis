@@ -26,6 +26,90 @@ that is,
   ]
   \,.
 \end{gather}
+The following assumption is crucial.
+Let $\alpha>d/2$, where $d$ is the dimension of the covariate vector $X$, 
+and write $V:=d/\alpha <2$.
+For all 
+$
+(j,N)\in\mathbb{N}^2
+$
+there exists 
+$M_{N,j}\ge \varepsilon_N$ such that 
+\begin{gather*}
+  \frac{1}{\pi(\cdot)}
+  \in C^\alpha_{M_{N,j}}(A_{N,j})
+  \qquad
+  \text{for all}\ 
+(j,N)\in\mathbb{N}^2
+\,,
+\end{gather*}
+and
+\begin{gather*}
+  \sum_{j=1}^{\infty} 
+  M_{N,j}^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  < C
+\end{gather*}
+uniformly in $N$.
+Confer \cite[§2.7]{vaart2013} for definitions.
+
+Weaker assumption:
+Consider the function
+\begin{gather*}
+  f^{\mathcal{P_N}}_{\varepsilon_N}
+  \colon
+  \mathcal{X}
+  \to
+  \R
+  \,,
+  \qquad
+  \mathbf{1}_{
+    \left\{ 
+      \sup_{y\in A_N(x)}
+      \left| 
+      w(y)
+      -
+      \frac{1}{\pi(y)}
+      \right|
+      \le
+      \varepsilon_N
+    \right\}
+  }
+  \left( 
+      w(x)
+      -
+      \frac{1}{\pi(x)}
+  \right)
+  \,.
+\end{gather*}
+There exists a sequence of function classes
+$(\mathcal{F}_N)$
+with envelope functions
+$(F_N)$
+, that contain 
+$
+  f^{\mathcal{P_N}}_{\varepsilon_N}
+$
+for each $N$,
+and satisfy
+$\norm{F_N}_{L^2(\P)}\le\varepsilon_N$
+and
+\begin{gather*}
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+\end{gather*}
+for some $k<2$.
+The first assumption implies the second 
+by \cite[Corollary~2.7.4]{vaart2013}
 \begin{ftheorem}
   \label{aa:mean:th}
   Under conditions 
