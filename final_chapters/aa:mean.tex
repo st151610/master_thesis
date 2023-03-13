@@ -110,6 +110,94 @@ and
 for some $k<2$.
 The first assumption implies the second 
 by \cite[Corollary~2.7.4]{vaart2013}
+\begin{lemma}
+  Let
+$(\mathcal{F}_N)$
+be a sequence of (measurable) function classes with 
+envelope functions
+$(F_N)$
+such that for a decreasing sequence
+$(\varepsilon_N)\subset(0,1]$ with $\varepsilon_N\to 0$ for $N\to\infty$ and some $k\in(0,2)$ it holds
+$
+\norm{F_N}_{L^2(\P)}
+\le\varepsilon_N$
+and
+\begin{gather*}
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \,.
+\end{gather*}
+Then 
+\begin{gather*}
+  J_{[\,]}(
+\norm{F_N}_{L^2(\P)}
+  ,\mathcal{F}_N,\mathrm{L}_2(\P))
+  \to 0
+  \qquad
+  \text{for}\ 
+  N\to\infty
+  \,.
+\end{gather*}
+Furthermore, it holds
+$\norm{\G_N}^*_{\mathcal{F}_N}\overset{\P}{\to}0$.
+\end{lemma}
+\begin{proof}
+  Since 
+  $k/2\in(0,1)$
+  it holds
+\begin{align*}
+  J_{[\,]}(
+\norm{F_N}_{L^2(\P)}
+  ,\mathcal{F}_N,\mathrm{L}_2(\P))
+  &
+  \ 
+=
+  \ 
+\int_0^{
+\norm{F_N}_{L^2(\P)}
+}
+\sqrt{
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+}
+\,d\varepsilon
+\\
+&
+\ 
+\lesssim
+\ 
+\int_0^{
+  \varepsilon_N
+}
+  \left( 
+  \frac{1}{\varepsilon}
+\right)^{k/2}
+\,d\varepsilon
+\\
+&
+\ 
+=
+\ 
+\frac{
+\varepsilon_N^{1-k/2}
+}{1-k/2}
+\ 
+\to 0
+\ 
+\qquad
+\text{for}
+\ 
+N\to\infty
+\,.
+\end{align*}
+The second statement follows from Lemma~\ref{markov_max_lemma}.
+\end{proof}
 \begin{ftheorem}
   \label{aa:mean:th}
   Under conditions 
