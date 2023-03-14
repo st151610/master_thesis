@@ -349,11 +349,59 @@ Define the product of two function classes
   bracket, containing $f\cdot g$, by
 \end{proof}
 \begin{lemma}
+  \label{ps_weights_lemma}
+  Let
+  $
+  g_1\colon
+  \mathcal{X}\to\R
+  $
+  and
+  $
+  g_2\colon
+  \mathcal{Y}\to\R
+  $
+  be a measurable functions.
+  It holds
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_1(X)
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    g_1(X)
+    \right]
+    \,.
+  \end{gather*}
+  If Assumption~\ref{aa:assumption:treatment_str_ign} holds true, then
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_2(Y(T))
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    f(Y(1))
+    \right]
+    \,.
+  \end{gather*}
+\end{lemma}
+\begin{lemma}
   Under conditions it holds
   $\sup_{z\in\R}\left| R_3(z) \right|\overset{\P}{\to}0$.
 \end{lemma}
 \begin{proof}
-  Let $N\ge\underline{N}$ and 
+  Let $N\ge\underline{N}$,
+  $z\in\R$,
+  and 
   let
   $g^\dagger$ 
   denote the function \eqref{ghost_function} with 
@@ -375,7 +423,7 @@ Define the product of two function classes
     g^\dagger
     (X)
     \cdot
-    f^z
+    f_z
     (T,X,Y(T))
     \ 
     =
@@ -444,6 +492,14 @@ Define the product of two function classes
     \E
     \left[
       \frac{T}{\pi(X)}
+      f_z(T,X,Y(T))
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+      \frac{T}{\pi(X)}
       \left( 
         \mathbf{1}
         _{\left\{  Y(T)\,\le\,z \right\}}
@@ -456,6 +512,7 @@ Define the product of two function classes
     \ 
     0
   \end{gather*}
+  by Lemma~\ref{ps_weights_lemma},
   it follows
   \begin{align*}
     &
@@ -476,7 +533,7 @@ Define the product of two function classes
       f_z(T,X,Y(T))
     \right]
     \ 
-    +
+    -
     \ 
     \E
     \left[
@@ -514,8 +571,6 @@ Define the product of two function classes
   F_{Y(1)}(z|X_i)
     \right)
     \right]
-\\
-&
     \ 
     =
     \ 
@@ -525,9 +580,6 @@ Define the product of two function classes
       \cdot
       f_z
     \right)
-    \quad
-    \text{for all}\ 
-    z\in\R
     \,.
   \end{align*}
   It follows
@@ -724,7 +776,25 @@ Next, we define some auxiliary functions.
     \end{gather*}
   \end{lemma}
   \begin{proof}
-    It holds
+    Since $f_z$ is bounded by 1,
+    it holds
+    $f_z(T,X,Y(T))\in L^1(\P)$.
+    Since
+    \begin{gather*}
+    (T,X,Y(T))
+    \ 
+    \perp 
+    \ 
+    D_N
+    \ 
+    =
+    \ 
+    (T_i,X_i)_{i\in \left\{ 1,\ldots,N \right\}}
+    \end{gather*}
+    it holds
+    $f_z(T,X,Y(T))\perp D_N$
+    for all $z\in\R$.
+    For the third statement, note that
     \begin{align*}
       \E
       \left[
@@ -804,9 +874,9 @@ Next, we define some auxiliary functions.
       \ 
       0
       \qquad
+      \text{almost surely.}
     \end{align*}
-    almost surely.
-    We use the assumption to get the third equality.
+    The third equality is due to Assumption~\ref{aa:assumption:treatment_str_ign}.
   \end{proof}
 The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
 \newpage

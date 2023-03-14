@@ -460,42 +460,77 @@ We define $N$ basis functions $B_k$ of the covariates by
   B_k(x)
   :=
   \frac{
-  \mathbf{1}_{X_k \in A_N(x)}
+  \mathbf{1}_{\left\{ X_k \in A_N(x) \right\}}
   }{
   \sum_{j=1}^{N} 
-  \mathbf{1}_{X_j \in A_N(x)}
+  \mathbf{1}_{\left\{ X_j \in A_N(x) \right\}}
   }
   \,,
   \qquad
   k=
   1,\ldots,N
-  \,.
+  \,,
 \end{gather*}
-The euclidian norm of the basis functions is bounded above by $1$.
-\begin{gather*}
-  \norm{B(x)}^2
+where we keep to the convention $"0/0=0"$.
+It holds
+\begin{gather}
+  \label{basis_conv_comb}
+  \sum_{k=1}^{N}B_k(X_i)
+  \ 
   =
-  \sum_{k=1}^{n} 
+  \ 
+  1
+  \qquad
+  \text{for all}\ 
+  i\in \left\{ 1,\ldots,N \right\}
+  \,.
+\end{gather}
+Since 
+$
+B_k(x)\in [0,1]
+$ 
+for all
+$x\in\R^d$
+and all $k\in \left\{ 1,\ldots,N \right\}$,
+it holds
+\begin{gather}
+  \label{basis_l2_bdd}
+  \norm{B(x)}_2^2
+  \ 
+  =
+  \ 
+  \sum_{k=1}^{N} 
   \left( 
   \frac{
-  \mathbf{1}_{X_k \in A_n(x)}
+  \mathbf{1}_{X_k \in A_N(x)}
   }{
-  \sum_{j=1}^{n} 
-  \mathbf{1}_{X_j \in A_n(x)}
+  \sum_{j=1}^{N} 
+  \mathbf{1}_{X_j \in A_N(x)}
   }
   \right)
   ^2
+  \ 
   \le
-  \sum_{k=1}^{n} 
+  \ 
+  \sum_{k=1}^{N} 
   \frac{
-  \mathbf{1}_{X_k \in A_n(x)}
+  \mathbf{1}_{X_k \in A_N(x)}
   }{
-  \sum_{j=1}^{n} 
-  \mathbf{1}_{X_j \in A_n(x)}
+  \sum_{j=1}^{N} 
+  \mathbf{1}_{X_j \in A_N(x)}
   }
-  =1
-  \,.
-\end{gather*}
+  \ 
+  =
+  \ 
+  1
+  \quad
+  \text{
+    for all
+  }
+x\in\R^d
+\,
+\,.
+\end{gather}
 %Under mild conditions, the basis functions are universally consistent.
 %\begin{theorem}
 %  \label{bw:i:bf:pe:th:c}

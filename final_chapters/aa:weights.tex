@@ -74,14 +74,16 @@ If
 \end{lemma}
 \begin{proof}
   Let $N\ge \underline{N}$.
+  By \eqref{basis_l2_bdd} it holds 
   $
-    \text{For all}\ 
+    \text{for all}\ 
     x\in\mathcal{X}
     \
     \text{and for all}\ 
     (\lambda,\lambda_0)\in \R^{N+1}
   $ it holds
-  \begin{gather*}
+  \begin{gather}
+    \label{7963}
     \left| 
     \inner{B(x)}{\lambda}
     +
@@ -98,17 +100,17 @@ If
     2
     \norm{(\lambda,\lambda_0)}_2
     \,.
-  \end{gather*}
+  \end{gather}
   By Assumption~\ref{aa:assumption:2}, 
   there exists a (compact) parameter space
   $\Theta_N$ around the origin, with $\mathrm{diam}\,  \Theta_N<\infty$, 
   such that for all data sets $D_N$ it holds  $(\lambda^\dagger,\lambda_0^\dagger)\in\Theta_N$.
   By Assumption~\ref{aa:assumption:3}, $(f^{'})^{-1}$ is non-decreasing and continuous. Thus
+    by \eqref{7963} it holds
   \begin{align*}
     \left| 
     w^\dagger(x)
     \right|
-    &
     \ 
     \le
     \ 
@@ -116,45 +118,22 @@ If
     (f^{'})^{-1}
     \left( 
       -2
-      \norm{(\lambda^\dagger,\lambda^\dagger_0)}_2
+      \,
+      \mathrm{diam}\,\Theta_N
     \right)
     \right|
-    +
-    \left| 
-    (f^{'})^{-1}
-    \left( 
-      2
-      \norm{(\lambda^\dagger,\lambda^\dagger_0)}_2
-    \right)
-    \right|
-    \\
-    &
     \ 
-    \le
+    +
     \ 
     \left| 
     (f^{'})^{-1}
     \left( 
-      -2
-      \mathrm{diam}\,\Theta_N
-    \right)
-    \right|
-    +
-    \left| 
-    (f^{'})^{-1}
-    \left( 
       2
+      \,
       \mathrm{diam}\,\Theta_N
     \right)
     \right|
-    +
-    2
-    \left| 
-    (f^{'})^{-1}
-    \left( 
-      0
-    \right)
-    \right|
+    \ 
     \ 
     <
     \ 
@@ -201,14 +180,18 @@ If
   it holds
   \begin{gather}
     \label{6879}
-  \E
-  \left|
+    \norm{
   w^\dagger(X)\cdot Z
-  \right|
+    }_{L^1(\P)}
+    \ 
   \le
+    \ 
   \norm{w^\dagger(X)}_{L^\infty(\P)}
   \norm{Z}_{L^1(\P)}
-  <\infty
+  \ 
+  <
+  \ 
+  \infty
   \,.
   \end{gather}
   By 
@@ -228,7 +211,7 @@ If
   $
   almost surely
   it holds 
-  \begin{gather*}
+  \begin{align*}
     \E
   \left[
   w^\dagger(X)
@@ -239,6 +222,7 @@ If
   \,
   D_N,X
   \right]
+  &
   \ 
   =
   \ 
@@ -252,6 +236,8 @@ If
   \,
   D_N,X
   \right]
+  \\
+  &
   \ 
   =
   \ 
@@ -269,8 +255,9 @@ If
   =
   \ 
   0
-  \end{gather*}
-  almost surely.
+  \qquad
+  \text{almost surely.}
+  \end{align*}
   Thus
   \begin{gather*}
     \E
