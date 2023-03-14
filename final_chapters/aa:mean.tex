@@ -26,6 +26,130 @@ that is,
   ]
   \,.
 \end{gather}
+\begin{assumption}
+  \label{F_N_br_n}
+  For any decreasing sequence
+  $(\varepsilon_N)$ with $\varepsilon_N\to 0$ for $N\to\infty$,
+there exists a sequence of function classes
+$(\mathcal{F}_N)$
+with envelope functions
+$(F_N)$,
+satisfying 
+for some $k<2$
+\begin{gather*}
+\norm{F_N}_{L^2(\P)}
+\ 
+\le
+\ 
+\varepsilon_N
+\quad
+\text{and}
+\quad
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}
+  \ 
+  N\in\mathbb{N}
+  \,,
+\end{gather*}
+such that for all $(\lambda,\lambda_0)\in\R^{N+1}$ and for all $N\in\mathbb{N}$ the function
+\begin{gather}
+  \label{ghost_function}
+  \mathcal{X}
+  \ 
+  \to
+  \ 
+  \R
+  \,,
+  \qquad
+  x
+  \ 
+  \mapsto
+  \ 
+  \mathbf{1}_{
+    \left\{ 
+      \sup_{y\in A_N(x)}
+      \left| 
+      w(y,\lambda,\lambda_0)
+      -
+      \frac{1}{\pi(y)}
+      \right|
+      \,
+      \le
+      \,
+      \varepsilon_N
+    \right\}
+  }
+  \left( 
+      w(x,\lambda,\lambda_0)
+      -
+      \frac{1}{\pi(x)}
+  \right)
+\end{gather}
+is contained in $\mathcal{F}_N$.
+\end{assumption}
+\begin{remark}
+  We can derive Assumption~\ref{F_N_br_n} from regularity assumptions on the inverse propensity score 
+  $1/\pi(\cdot)$ and the distribution of $X$.
+  To this end, we want to employ \cite[Corollary~2.7.4]{vaart2013}.
+  To do this, the crucial observation is, that
+  \begin{gather*}
+    w(\cdot,\lambda,\lambda_0)
+    \quad
+    \text{is constant on each cell}\ 
+    A_N\in\mathcal{P}_N
+    \,.
+  \end{gather*}
+  Thus, the regularity of the function \eqref{ghost_function}
+  on each cell $A_N\in\mathcal{P}_N$ is decided by 
+  $1/\pi(\cdot)$.
+  Thus, we assume that there exists
+  $\alpha>d/2$, where $\mathcal{X}\subseteq \R^d$, such
+  that for 
+  $V:=d/\alpha$.
+ and for all 
+$
+(j,N)\in\mathbb{N}^2
+$
+there exists 
+$M_{N,j}\ge \varepsilon_N$ such that 
+\begin{gather*}
+  \frac{1}{\pi(\cdot)}
+  \in C^\alpha_{M_{N,j}}(A_{N,j})
+  \quad
+  \text{and}
+  \quad
+  \sum_{j=1}^{\infty} 
+  M_{N,j}^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{gather*}
+Then the function \ref{ghost_function}, restricted to $A_{N,j}$, is in 
+$
+  C^\alpha_{M_{N,j}}(A_{N,j})
+$
+for all 
+$
+(j,N)\in\mathbb{N}^2
+$.
+Then \cite[Corollary~2.7.4]{vaart2013} gives us the statement 
+in
+Assumption~\ref{F_N_br_n}.
+\end{remark}
 The following assumption is crucial.
 Let $\alpha>d/2$, where $d$ is the dimension of the covariate vector $X$, 
 and write $V:=d/\alpha <2$.
