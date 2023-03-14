@@ -30,7 +30,7 @@ that is,
   \label{F_N_br_n}
   For any decreasing sequence
   $(\varepsilon_N)$ with $\varepsilon_N\to 0$ for $N\to\infty$,
-there exists a sequence of function classes
+there exists a sequence of (measurable) function classes
 $(\mathcal{F}_N)$
 with envelope functions
 $(F_N)$,
@@ -150,135 +150,107 @@ Then \cite[Corollary~2.7.4]{vaart2013} gives us the statement
 in
 Assumption~\ref{F_N_br_n}.
 \end{remark}
-The following assumption is crucial.
-Let $\alpha>d/2$, where $d$ is the dimension of the covariate vector $X$, 
-and write $V:=d/\alpha <2$.
-For all 
-$
-(j,N)\in\mathbb{N}^2
-$
-there exists 
-$M_{N,j}\ge \varepsilon_N$ such that 
-\begin{gather*}
-  \frac{1}{\pi(\cdot)}
-  \in C^\alpha_{M_{N,j}}(A_{N,j})
-  \qquad
-  \text{for all}\ 
-(j,N)\in\mathbb{N}^2
-\,,
-\end{gather*}
-and
-\begin{gather*}
-  \sum_{j=1}^{\infty} 
-  M_{N,j}^{2V/(V+2)}
-  \P
-  [
-  X\in A_{N,j}
-  ]^{V/(V+2)}
-  < C
-\end{gather*}
-uniformly in $N$.
-Confer \cite[§2.7]{vaart2013} for definitions.
-
-Weaker assumption:
-Consider the function
-\begin{gather*}
-  f^{\mathcal{P_N}}_{\varepsilon_N}
-  \colon
-  \mathcal{X}
-  \to
-  \R
-  \,,
-  \qquad
-  \mathbf{1}_{
-    \left\{ 
-      \sup_{y\in A_N(x)}
-      \left| 
-      w(y)
-      -
-      \frac{1}{\pi(y)}
-      \right|
-      \le
-      \varepsilon_N
-    \right\}
-  }
-  \left( 
-      w(x)
-      -
-      \frac{1}{\pi(x)}
-  \right)
-  \,.
-\end{gather*}
-There exists a sequence of function classes
-$(\mathcal{F}_N)$
-with envelope functions
-$(F_N)$
-, that contain 
-$
-  f^{\mathcal{P_N}}_{\varepsilon_N}
-$
-for each $N$,
-and satisfy
-$\norm{F_N}_{L^2(\P)}\le\varepsilon_N$
-and
-\begin{gather*}
-  \log
-  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
-  \ 
-  \lesssim
-  \ 
-  \left( 
-  \frac{1}{\varepsilon}
-  \right)^k
-\end{gather*}
-for some $k<2$.
-The first assumption implies the second 
-by \cite[Corollary~2.7.4]{vaart2013}
 \begin{lemma}
   Let
-$(\mathcal{F}_N)$
-be a sequence of (measurable) function classes with 
-envelope functions
-$(F_N)$
-such that for a decreasing sequence
-$(\varepsilon_N)\subset(0,1]$ with $\varepsilon_N\to 0$ for $N\to\infty$ and some $k\in(0,2)$ it holds
-$
-\norm{F_N}_{L^2(\P)}
-\le\varepsilon_N$
-and
-\begin{gather*}
-  \log
-  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
-  \ 
-  \lesssim
-  \ 
-  \left( 
-  \frac{1}{\varepsilon}
-  \right)^k
-  \,.
-\end{gather*}
-Then 
+$(\varepsilon_N)\subset(0,1]$
+be 
+a decreasing sequence
+with $\varepsilon_N\to 0$ for $N\to\infty$ 
+and let Assumption~\ref{F_N_br_n} hold true
+for a sequence of function classes $\mathcal{F}_N$.
+Then
 \begin{gather*}
   J_{[\,]}(
 \norm{F_N}_{L^2(\P)}
-  ,\mathcal{F}_N,\mathrm{L}_2(\P))
+,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
   \to 0
+  \quad
+  \text{and}
+  \quad
+  \norm{\G_N}^*_{\mathcal{F}_N\cdot\mathcal{F}}\overset{\P}{\to}0
   \qquad
   \text{for}\ 
   N\to\infty
   \,.
 \end{gather*}
-Furthermore, it holds
-$\norm{\G_N}^*_{\mathcal{F}_N}\overset{\P}{\to}0$.
 \end{lemma}
 \begin{proof}
+  By Assumption~\ref{F_N_br_n}
+  and Lemma~\ref{bracketing_number_lem} it holds
+for some $k<2$
+\begin{gather*}
+\norm{F_N}_{L^2(\P)}
+\ 
+\le
+\ 
+\varepsilon_N
+\quad
+\text{and}
+\quad
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}
+  \ 
+  N\in\mathbb{N}
+  \,,
+\end{gather*}
+and
+  \begin{gather*}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}, L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+      \frac{1}{\varepsilon}
+    \right)^2
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \,.
+  \end{gather*}
+  Since $\mathcal{F}_N$ and $\mathcal{F}$ have envelope function smaller 1, we can apply Lemma~\ref{lem_prod_br} to get
+  \begin{gather*}
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  +
+  \log
+  (1/\varepsilon)
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}\ 
+  \varepsilon>0
+  \,.
+  \end{gather*}
   Since 
   $k/2\in(0,1)$
   it holds
 \begin{align*}
   J_{[\,]}(
 \norm{F_N}_{L^2(\P)}
-  ,\mathcal{F}_N,\mathrm{L}_2(\P))
+,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
   &
   \ 
 =
@@ -288,7 +260,7 @@ $\norm{\G_N}^*_{\mathcal{F}_N}\overset{\P}{\to}0$.
 }
 \sqrt{
   \log
-  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+  N_{[\,]}(\varepsilon,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
 }
 \,d\varepsilon
 \\
@@ -320,7 +292,8 @@ $\norm{\G_N}^*_{\mathcal{F}_N}\overset{\P}{\to}0$.
 N\to\infty
 \,.
 \end{align*}
-The second statement follows from Lemma~\ref{markov_max_lemma}.
+The second statement follows from Lemma~\ref{markov_max_lemma}
+since $F_N$ is also an envelope function of $\mathcal{F}_N\cdot\mathcal{F}$.
 \end{proof}
 
 A technical lemma for products of function classes.
@@ -337,6 +310,7 @@ Define the product of two function classes
   \right\}\,.
 \end{gather*}
 \begin{lemma}
+  \label{lem_prod_br}
   Let
   $\mathcal{F}$ and $\mathcal{G}$ be two function classes 
   with envelope functions $F$ and $G$ satisfying
@@ -370,6 +344,830 @@ Define the product of two function classes
   $[\underline{h},\overline{h}]$
   bracket, containing $f\cdot g$, by
 \end{proof}
+Next, we define some auxiliary functions.
+  For $z\in\R$ we define the function
+  \begin{align*}
+    f_z
+    \ 
+    :
+    \ 
+      \left\{ 0,1 \right\}
+      \times
+      \mathcal{X}
+      \times
+      \mathcal{Y}
+    &
+    \ 
+    \to
+    \ 
+    \R
+    \\
+      (T,X,Y(T))
+    &
+      \ 
+      \mapsto
+      \ 
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+      \,,
+  \end{align*}
+  and the function classes
+  \begin{gather}
+    \label{F_g}
+    \begin{split}
+    \mathcal{F}
+    &
+    \ 
+    :=
+    \ 
+    \left\{ 
+      f_z
+      \ 
+      |
+      \ 
+      z\in\R\ 
+    \right\}
+    \\
+    \mathcal{G}
+    &
+    \ 
+    :=
+    \ 
+    \left\{ 
+      \frac{f_z}{\pi(\cdot)}
+      +
+      F_{Y(1)}(z|\cdot)
+      -
+      F_{Y(1)}(z)
+      \ 
+      \colon
+      \ 
+      z\in\R\ 
+    \right\}
+    \,.
+    \end{split}
+  \end{gather}
+  \begin{lemma}
+    Assume that treatment assignment is strongly ignorable.
+    It holds
+    for all $z\in\R$
+    \begin{gather*}
+      \E
+      \left[
+        f_z
+        \left( 
+          T,
+          X,
+          Y(T)
+        \right)
+        \,
+        |
+        \,
+        X
+      \right]
+      \ 
+      =
+      \ 
+      0
+      \qquad
+      \text{almost surely.}
+    \end{gather*}
+  \end{lemma}
+  \begin{proof}
+    It holds
+    \begin{align*}
+      \E
+      \left[
+        f_z
+        \left( 
+          T,
+          X,
+          Y(T)
+        \right)
+        \,
+        |
+        \,
+        X
+      \right]
+      &
+      \ 
+      =
+      \ 
+      \E
+      \left[
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+        \,
+        |
+        \,
+        X
+      \right]
+      \\
+      &
+      \ 
+      =
+      \ 
+      \E
+      \left[
+        \mathbf{1}
+        _{\left\{  Y(1)\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|X)
+        \,
+        |
+        \,
+        X
+        ,
+        T=1
+      \right]
+      \pi(X)
+      \\
+      &
+      \ 
+      =
+      \ 
+      \left( 
+      \E
+      \left[
+        \mathbf{1}
+        _{\left\{  Y(1)\,\le\,z \right\}}
+        \,
+        |
+        \,
+        X
+      \right]
+      \ 
+        -
+      \ 
+        F_{Y(1)}(z|X)
+      \right)
+      \pi(X)
+      \\
+      &
+      \ 
+      =
+      \ 
+      0
+      \qquad
+    \end{align*}
+    almost surely.
+    We use the assumption to get the third equality.
+  \end{proof}
+The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
+\newpage
+\begin{lemma}
+  \label{bracketing_number_lem}
+  The function class $\mathcal{F}$ and $\mathcal{G}$ defined in \eqref{F_g} are measurable.
+  Furthermore, 
+  \begin{gather*}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}, L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+      \frac{1}{\varepsilon}
+    \right)^2
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \,.
+  \end{gather*}
+  If $1/\pi(X)\in L^2(\P)$, it also holds 
+  \begin{gather*}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{G}, L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+    \frac{
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
+    }
+    {\varepsilon}
+    \right)^4
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \,.
+  \end{gather*}
+%  Furthermore, 
+%  consider the function class
+%  \begin{gather*}
+%    \mathcal{G}
+%    :=
+%    \left\{ 
+%      f_{1/\pi}^z
+%      +
+%        F_{Y(1)}(z|\cdot)
+%        -
+%        F_{Y(1)}(z)
+%      \ 
+%      |
+%      \ 
+%      z\in\R
+%    \right\}
+%    \,.
+%  \end{gather*}
+%  If $1/\pi(X)\in  L^2(\P)$
+%  it holds
+%  \begin{gather}
+%    N_{[\,]}(\varepsilon,\mathcal{G}, L^2(\P))
+%    \le
+%    ??
+%    \qquad
+%    \text{for all}
+%    \ 
+%    \varepsilon>0
+%    \,.
+%  \end{gather}
+\end{lemma}
+\begin{proof}
+  As in \cite[Example~19.6]{Vaart2000}
+  we choose for
+  $\varepsilon>0$ and $m\in\mathbb{N}$
+  \begin{gather*}
+  -\infty=z_0\ <\ z_1\ <\ \cdots\ <\ z_{m-1}\ <\ z_m=\infty
+  \,
+  \end{gather*}
+  such that
+  \begin{gather}
+    \label{size_z}
+    \P
+    \left[ 
+      Y(1)\in \left[ z_{l-1},z_l \right]\,
+    \right]
+    \ 
+    \le
+    \ 
+    \varepsilon
+    \qquad
+    \text{for all}\ 
+    l\in \left\{ 1,\ldots,m \right\}
+  \end{gather}
+  and $m \le 2/\varepsilon$.
+  Next, we define $m$ brackets by
+\begin{align*}
+  \overline{f^l}
+  (T,X,Y(T))
+  &
+  \ 
+  :=
+  \ 
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z_{l} \right\}}
+        -
+        F_{Y(1)}(z_{l-1}|X)
+      \right)
+      \,,
+      \\
+  \underline{f^l}
+  (T,X,Y(T))
+  &
+  \ 
+  :=
+  \ 
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
+        -
+        F_{Y(1)}(z_l|X)
+      \right)
+      \,,
+\end{align*}
+for $l\in \left\{ 1,\ldots,m \right\}$.
+These brackets cover $\mathcal{F}$.
+Indeed,
+\begin{gather*}
+  \text{for all}\ 
+  z\in\R
+  \ 
+  \text{there exists} \ 
+l\in \left\{ 1,\ldots,m \right\}
+\qquad 
+\text{such that}\qquad
+z_{l-1}
+\ 
+\le
+\ 
+z
+\ 
+\le
+\ 
+z_l
+\,.
+\end{gather*}
+By the monotonicity of 
+$
+        \mathbf{1}
+      _{\left\{  Y(T)\,\le\,(\cdot) \right\}}
+$
+and
+$
+        F_{Y(1)}(\cdot|X)
+$
+and the non-negativity of $T$ it follows
+\begin{gather*}
+  \text{for all}\ 
+  z\in\R
+  \ 
+  \text{there exists} \ 
+l\in \left\{ 1,\ldots,m \right\}
+\qquad 
+\text{such that}\qquad
+  \underline{f^l}
+  \ 
+  \le
+  \ 
+  f_z
+  \ 
+  \le
+  \ 
+  \overline{f^l}
+  \,.
+\end{gather*}
+Thus, the $m$ brackets 
+$
+[
+  \underline{f^l}
+  ,
+  \overline{f^l}
+]
+$
+cover $\mathcal{F}$.
+
+Let's calculate the size of the brackets.
+It holds
+\begin{align*}
+  &
+\E
+\left[ 
+      T
+      \cdot
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z_{l} \right\}}
+        -
+        F_{Y(1)}(z_{l-1}|X)
+        \ 
+        -
+        \ 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
+        +
+        F_{Y(1)}(z_{l}|X)
+      \right)
+      \,
+\right]
+\\
+  &
+  \ 
+=
+  \ 
+\E
+\left[ 
+      T
+      \cdot
+      \left( 
+        \mathbf{1}
+        _{\left\{
+        Y(T)
+        \,
+        \in 
+        \,
+    [z_{l-1},z_l]
+\right\}}
+\ 
+        +
+\ 
+        \P
+        \left[ 
+          Y(1)
+          \in
+    [z_{l-1},z_l]
+        \,
+    |
+        \,
+    X
+        \right]
+      \right)
+      \,
+\right]
+\\
+  &
+  \ 
+\le
+  \ 
+\E
+\left[ 
+  \,
+  \pi(X)
+  \cdot
+        \P
+        \left[ 
+          Y(1)
+          \in
+    [z_{l-1},z_l]
+          \,
+    |
+          \,
+    X
+        \right]
+          \ 
+\right]
+\ 
++
+\ 
+\varepsilon
+\\
+  &
+  \ 
+\le
+  \ 
+2
+\,
+\varepsilon
+\,.
+\end{align*}
+We used \eqref{size_z}, $0\le T,\pi(X)\le 1$ and the properties of conditional expectation.
+It follows
+\begin{align*}
+  \norm{
+  \overline{f^l}
+-
+  \underline{f^l}
+}_
+{ L^2(\P)}
+\ 
+\lesssim
+\ 
+\E
+\left[ 
+  \,
+      T
+      \cdot
+      \left( 
+        \mathbf{1}
+        _{\left\{
+        Y(T)
+        \,
+        \in 
+        \,
+    [z_{l-1},z_l]
+\right\}}
+\ 
+        +
+\ 
+        \P
+        \left[ 
+          Y(1)
+          \in
+    [z_{l-1},z_l]
+        \,
+    |
+        \,
+    X
+        \right]
+      \right)
+      \,
+   \right]^{1/2}
+\ 
+\lesssim
+\ 
+\varepsilon^{1/2}
+\,.
+\end{align*}
+Since $m\le 2/\varepsilon$ it holds
+  \begin{align*}
+    N_{[\,]}
+    \left(
+\varepsilon^{1/2}
+    ,
+    \,
+    \mathcal{F}\,,\, L^2(\P)
+    \right)
+    &
+    \ 
+    \lesssim
+    \ 
+    \frac{1}{\varepsilon}
+    \intertext{and thus}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}, L^2(\P))
+    &
+    \ 
+    \lesssim
+    \ 
+    \left( 
+      \frac{1}{\varepsilon}
+    \right)^2
+    \,.
+  \end{align*}
+  Next, we look at $\mathcal{G}$. To this end, we define 
+  $m$ brackets by
+ \begin{align*}
+    \overline{g^l}(T,X,Y(T))
+    \ 
+    :=
+    \ 
+    \frac{T}{\pi(X)}
+    \left( 
+      \mathbf{1}_{\left\{  Y(T)\,\le\,z_{l} \right\}}
+      -
+      F_{Y(1)}(z_{l-1}|X)
+    \right)
+    \ 
+    +
+    \ 
+    F_{Y(1)}(z_{l}|X)
+-
+F_{Y(1)}(z_{l-1})
+\,,
+\\
+    \underline{g^l}(T,X,Y(T))
+    \ 
+    :=
+    \ 
+    \frac{T}{\pi(X)}
+    \left( 
+      \mathbf{1}_{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
+      -
+      F_{Y(1)}(z_l|X)
+    \right)
+    \ 
+    +
+    \ 
+    F_{Y(1)}(z_{l-1}|X)
+-
+      F_{Y(1)}(z_l)
+\,,
+  \end{align*}
+  for $l\in \left\{ 1,\ldots,m \right\}$.
+  With the same arguments as before, we see that these brackets cover $\mathcal{G}$.
+  Let's calculate the size.
+  It holds
+  \begin{align*}
+    &
+    \norm{
+      \frac{T}{\pi(X)}
+      \left( 
+      \mathbf{1}_{
+      \left\{ 
+      Y(T)\in [z_{l-1},z_l] 
+    \right\}
+    }
+      +
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
+      \right]
+      \right)
+    }_{ L^2(\P)}
+    \\
+    &
+    \
+    \lesssim
+    \
+    \left( 
+      \E
+      \left[ 
+        \frac{1}{\pi(X)}
+        \frac{T}{\pi(X)}
+      \left( 
+      \mathbf{1}_{
+      \left\{ 
+      Y(T)\in [z_{l-1},z_l] 
+    \right\}
+    }
+      +
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
+      \right]
+      \right)
+      \right]
+    \right)
+    ^{1/2}
+    \\
+    &
+    \
+    \lesssim
+    \
+    \left( 
+      \E
+      \left[ 
+        \frac{1}{\pi(X)}
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
+      \right]
+      \right]
+    \right)
+    ^{1/2}
+    \\
+    &
+    \ 
+    \lesssim
+    \ 
+    \left( 
+      \norm{1/\pi(X)}_{ L^2(\P)}
+      \sqrt{\varepsilon}
+    \right)
+    ^{1/2}
+    \ 
+    =
+    \ 
+    \varepsilon^{1/4}
+    \norm{1/\pi(X)}_{ L^2(\P)}^{1/2}
+  \end{align*}
+  and
+  \begin{align*}
+     \norm{
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
+      \right]
+      \ 
+     + 
+      \ 
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] \,
+      \right]
+    }_{ L^2(\P)}
+    \ 
+    \lesssim
+    \ 
+    \varepsilon^{1/2}
+    \,.
+  \end{align*}
+  Thus
+  \begin{gather*}
+  \norm{
+  \overline{g^l}
+-
+  \underline{g^l}
+}_
+{ L^2(\P)}
+\ 
+\lesssim
+\ 
+\varepsilon^{1/4}
+\left( 
+  1
+  +
+    \norm{1/\pi(X)}_{ L^2(\P)}^{1/2}
+\right)
+\ 
+\lesssim
+\ 
+\varepsilon^{1/4}
+\left( 
+  1
+  +
+    \norm{1/\pi(X)}_{ L^2(\P)}
+\right)
+\,.
+  \end{gather*}
+As before, it follows
+\begin{gather*}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{G}, L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+    \frac{
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
+    }
+    {\varepsilon}
+    \right)^4
+    \,.
+\end{gather*}
+\end{proof}
+
+\begin{lemma}
+  \label{markov_max_lemma}
+  Let $(\mathcal{F}_N)$ be a sequence of measurable function classes with envelope functions $(F_N)$.
+  If
+  \begin{gather}
+    J_{[\, ]}
+    \left( 
+    \norm{F_N}_{ L^2(\P)}
+    ,
+    \mathcal{F}_N
+    ,
+     L^2(\P)
+    \right)
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}
+    \ 
+    N
+    \to
+    \infty
+  \end{gather}
+  it holds 
+  $
+  \norm{\G_N}^*_{\mathcal{F}_N}\overset{\P}{\to}0
+  $.
+\end{lemma}
+\begin{proof}
+  By Markov's inequality and Theorem~\ref{th:max_ineq} it holds for all $\varepsilon>0$
+  \begin{align*}
+    &
+    \P
+    [
+  \norm{\G_N}^*_{\mathcal{F}_N}
+  \ge
+  \varepsilon
+    ]
+    \\
+    &
+    \ 
+    \le
+    \ 
+    \varepsilon^{-1}
+    \E
+    [
+  \norm{\G_N}^*_{\mathcal{F}_N}
+    ]
+    \ 
+    =
+    \ 
+    \varepsilon^{-1}
+    \E^*
+    [
+  \norm{\G_N}_{\mathcal{F}_N}
+    ]
+    \ 
+    \lesssim
+    \ 
+    \varepsilon^{-1}
+    J_{[\, ]}
+    \left( 
+    \norm{F_N}_{ L^2(\P)}
+    ,
+    \mathcal{F}_N
+    ,
+     L^2(\P)
+    \right)
+    \ 
+    \to
+    \ 
+    0
+  \end{align*}
+  for $N\to\infty$. 
+\end{proof}
+L
 \begin{ftheorem}
   \label{aa:mean:th}
   Under conditions 
@@ -1218,829 +2016,7 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
   \cite[Corollary~19.35]{Vaart2000}
 \end{proof}
 
-Next, we define some auxiliary functions.
-  For $z\in\R$ we define the function
-  \begin{align*}
-    f_z
-    \ 
-    :
-    \ 
-      \left\{ 0,1 \right\}
-      \times
-      \mathcal{X}
-      \times
-      \mathcal{Y}
-    &
-    \ 
-    \to
-    \ 
-    \R
-    \\
-      (T,X,Y(T))
-    &
-      \ 
-      \mapsto
-      \ 
-      T
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z \right\}}
-        -
-        F_{Y(1)}(z|X)
-      \right)
-      \,,
-  \end{align*}
-  and the function classes
-  \begin{gather}
-    \label{F_g}
-    \begin{split}
-    \mathcal{F}
-    &
-    \ 
-    :=
-    \ 
-    \left\{ 
-      f_z
-      \ 
-      |
-      \ 
-      z\in\R\ 
-    \right\}
-    \\
-    \mathcal{G}
-    &
-    \ 
-    :=
-    \ 
-    \left\{ 
-      \frac{f_z}{\pi(\cdot)}
-      +
-      F_{Y(1)}(z|\cdot)
-      -
-      F_{Y(1)}(z)
-      \ 
-      \colon
-      \ 
-      z\in\R\ 
-    \right\}
-    \,.
-    \end{split}
-  \end{gather}
-  \begin{lemma}
-    Assume that treatment assignment is strongly ignorable.
-    It holds
-    for all $z\in\R$
-    \begin{gather*}
-      \E
-      \left[
-        f_z
-        \left( 
-          T,
-          X,
-          Y(T)
-        \right)
-        \,
-        |
-        \,
-        X
-      \right]
-      \ 
-      =
-      \ 
-      0
-      \qquad
-      \text{almost surely.}
-    \end{gather*}
-  \end{lemma}
-  \begin{proof}
-    It holds
-    \begin{align*}
-      \E
-      \left[
-        f_z
-        \left( 
-          T,
-          X,
-          Y(T)
-        \right)
-        \,
-        |
-        \,
-        X
-      \right]
-      &
-      \ 
-      =
-      \ 
-      \E
-      \left[
-      T
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z \right\}}
-        -
-        F_{Y(1)}(z|X)
-      \right)
-        \,
-        |
-        \,
-        X
-      \right]
-      \\
-      &
-      \ 
-      =
-      \ 
-      \E
-      \left[
-        \mathbf{1}
-        _{\left\{  Y(1)\,\le\,z \right\}}
-        -
-        F_{Y(1)}(z|X)
-        \,
-        |
-        \,
-        X
-        ,
-        T=1
-      \right]
-      \pi(X)
-      \\
-      &
-      \ 
-      =
-      \ 
-      \left( 
-      \E
-      \left[
-        \mathbf{1}
-        _{\left\{  Y(1)\,\le\,z \right\}}
-        \,
-        |
-        \,
-        X
-      \right]
-      \ 
-        -
-      \ 
-        F_{Y(1)}(z|X)
-      \right)
-      \pi(X)
-      \\
-      &
-      \ 
-      =
-      \ 
-      0
-      \qquad
-    \end{align*}
-    almost surely.
-    We use the assumption to get the third equality.
-  \end{proof}
-The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
-\newpage
-\begin{lemma}
-  The function class $\mathcal{F}$ and $\mathcal{G}$ defined in \eqref{F_g} are measurable.
-  Furthermore, 
-  \begin{gather*}
-    N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{F}, L^2(\P))
-    \ 
-    \lesssim
-    \ 
-    \left( 
-      \frac{1}{\varepsilon}
-    \right)^2
-    \qquad
-    \text{for all}
-    \ 
-    \varepsilon>0
-    \,.
-  \end{gather*}
-  If $1/\pi(X)\in L^2(\P)$, it also holds 
-  \begin{gather*}
-    N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{G}, L^2(\P))
-    \ 
-    \lesssim
-    \ 
-    \left( 
-    \frac{
-      1+
-    \norm{1/\pi(X)}_{ L^2(\P)}
-    }
-    {\varepsilon}
-    \right)^4
-    \qquad
-    \text{for all}
-    \ 
-    \varepsilon>0
-    \,.
-  \end{gather*}
-%  Furthermore, 
-%  consider the function class
-%  \begin{gather*}
-%    \mathcal{G}
-%    :=
-%    \left\{ 
-%      f_{1/\pi}^z
-%      +
-%        F_{Y(1)}(z|\cdot)
-%        -
-%        F_{Y(1)}(z)
-%      \ 
-%      |
-%      \ 
-%      z\in\R
-%    \right\}
-%    \,.
-%  \end{gather*}
-%  If $1/\pi(X)\in  L^2(\P)$
-%  it holds
-%  \begin{gather}
-%    N_{[\,]}(\varepsilon,\mathcal{G}, L^2(\P))
-%    \le
-%    ??
-%    \qquad
-%    \text{for all}
-%    \ 
-%    \varepsilon>0
-%    \,.
-%  \end{gather}
-\end{lemma}
-\begin{proof}
-  As in \cite[Example~19.6]{Vaart2000}
-  we choose for
-  $\varepsilon>0$ and $m\in\mathbb{N}$
-  \begin{gather*}
-  -\infty=z_0\ <\ z_1\ <\ \cdots\ <\ z_{m-1}\ <\ z_m=\infty
-  \,
-  \end{gather*}
-  such that
-  \begin{gather}
-    \label{size_z}
-    \P
-    \left[ 
-      Y(1)\in \left[ z_{l-1},z_l \right]\,
-    \right]
-    \ 
-    \le
-    \ 
-    \varepsilon
-    \qquad
-    \text{for all}\ 
-    l\in \left\{ 1,\ldots,m \right\}
-  \end{gather}
-  and $m \le 2/\varepsilon$.
-  Next, we define $m$ brackets by
-\begin{align*}
-  \overline{f^l}
-  (T,X,Y(T))
-  &
-  \ 
-  :=
-  \ 
-      T
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z_{l} \right\}}
-        -
-        F_{Y(1)}(z_{l-1}|X)
-      \right)
-      \,,
-      \\
-  \underline{f^l}
-  (T,X,Y(T))
-  &
-  \ 
-  :=
-  \ 
-      T
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
-        -
-        F_{Y(1)}(z_l|X)
-      \right)
-      \,,
-\end{align*}
-for $l\in \left\{ 1,\ldots,m \right\}$.
-These brackets cover $\mathcal{F}$.
-Indeed,
-\begin{gather*}
-  \text{for all}\ 
-  z\in\R
-  \ 
-  \text{there exists} \ 
-l\in \left\{ 1,\ldots,m \right\}
-\qquad 
-\text{such that}\qquad
-z_{l-1}
-\ 
-\le
-\ 
-z
-\ 
-\le
-\ 
-z_l
-\,.
-\end{gather*}
-By the monotonicity of 
-$
-        \mathbf{1}
-      _{\left\{  Y(T)\,\le\,(\cdot) \right\}}
-$
-and
-$
-        F_{Y(1)}(\cdot|X)
-$
-and the non-negativity of $T$ it follows
-\begin{gather*}
-  \text{for all}\ 
-  z\in\R
-  \ 
-  \text{there exists} \ 
-l\in \left\{ 1,\ldots,m \right\}
-\qquad 
-\text{such that}\qquad
-  \underline{f^l}
-  \ 
-  \le
-  \ 
-  f_z
-  \ 
-  \le
-  \ 
-  \overline{f^l}
-  \,.
-\end{gather*}
-Thus, the $m$ brackets 
-$
-[
-  \underline{f^l}
-  ,
-  \overline{f^l}
-]
-$
-cover $\mathcal{F}$.
-
-Let's calculate the size of the brackets.
-It holds
-\begin{align*}
-  &
-\E
-\left[ 
-      T
-      \cdot
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z_{l} \right\}}
-        -
-        F_{Y(1)}(z_{l-1}|X)
-        \ 
-        -
-        \ 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
-        +
-        F_{Y(1)}(z_{l}|X)
-      \right)
-      \,
-\right]
-\\
-  &
-  \ 
-=
-  \ 
-\E
-\left[ 
-      T
-      \cdot
-      \left( 
-        \mathbf{1}
-        _{\left\{
-        Y(T)
-        \,
-        \in 
-        \,
-    [z_{l-1},z_l]
-\right\}}
-\ 
-        +
-\ 
-        \P
-        \left[ 
-          Y(1)
-          \in
-    [z_{l-1},z_l]
-        \,
-    |
-        \,
-    X
-        \right]
-      \right)
-      \,
-\right]
-\\
-  &
-  \ 
-\le
-  \ 
-\E
-\left[ 
-  \,
-  \pi(X)
-  \cdot
-        \P
-        \left[ 
-          Y(1)
-          \in
-    [z_{l-1},z_l]
-          \,
-    |
-          \,
-    X
-        \right]
-          \ 
-\right]
-\ 
-+
-\ 
-\varepsilon
-\\
-  &
-  \ 
-\le
-  \ 
-2
-\,
-\varepsilon
-\,.
-\end{align*}
-We used \eqref{size_z}, $0\le T,\pi(X)\le 1$ and the properties of conditional expectation.
-It follows
-\begin{align*}
-  \norm{
-  \overline{f^l}
--
-  \underline{f^l}
-}_
-{ L^2(\P)}
-\ 
-\lesssim
-\ 
-\E
-\left[ 
-  \,
-      T
-      \cdot
-      \left( 
-        \mathbf{1}
-        _{\left\{
-        Y(T)
-        \,
-        \in 
-        \,
-    [z_{l-1},z_l]
-\right\}}
-\ 
-        +
-\ 
-        \P
-        \left[ 
-          Y(1)
-          \in
-    [z_{l-1},z_l]
-        \,
-    |
-        \,
-    X
-        \right]
-      \right)
-      \,
-   \right]^{1/2}
-\ 
-\lesssim
-\ 
-\varepsilon^{1/2}
-\,.
-\end{align*}
-Since $m\le 2/\varepsilon$ it holds
-  \begin{align*}
-    N_{[\,]}
-    \left(
-\varepsilon^{1/2}
-    ,
-    \,
-    \mathcal{F}\,,\, L^2(\P)
-    \right)
-    &
-    \ 
-    \lesssim
-    \ 
-    \frac{1}{\varepsilon}
-    \intertext{and thus}
-    N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{F}, L^2(\P))
-    &
-    \ 
-    \lesssim
-    \ 
-    \left( 
-      \frac{1}{\varepsilon}
-    \right)^2
-    \,.
-  \end{align*}
-  Next, we look at $\mathcal{G}$. To this end, we define 
-  $m$ brackets by
- \begin{align*}
-    \overline{g^l}(T,X,Y(T))
-    \ 
-    :=
-    \ 
-    \frac{T}{\pi(X)}
-    \left( 
-      \mathbf{1}_{\left\{  Y(T)\,\le\,z_{l} \right\}}
-      -
-      F_{Y(1)}(z_{l-1}|X)
-    \right)
-    \ 
-    +
-    \ 
-    F_{Y(1)}(z_{l}|X)
--
-F_{Y(1)}(z_{l-1})
-\,,
-\\
-    \underline{g^l}(T,X,Y(T))
-    \ 
-    :=
-    \ 
-    \frac{T}{\pi(X)}
-    \left( 
-      \mathbf{1}_{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
-      -
-      F_{Y(1)}(z_l|X)
-    \right)
-    \ 
-    +
-    \ 
-    F_{Y(1)}(z_{l-1}|X)
--
-      F_{Y(1)}(z_l)
-\,,
-  \end{align*}
-  for $l\in \left\{ 1,\ldots,m \right\}$.
-  With the same arguments as before, we see that these brackets cover $\mathcal{G}$.
-  Let's calculate the size.
-  It holds
-  \begin{align*}
-    &
-    \norm{
-      \frac{T}{\pi(X)}
-      \left( 
-      \mathbf{1}_{
-      \left\{ 
-      Y(T)\in [z_{l-1},z_l] 
-    \right\}
-    }
-      +
-      \P
-      \left[ 
-      Y(1)\in [z_{l-1},z_l] 
-      \,
-      |
-      \,
-      X
-      \right]
-      \right)
-    }_{ L^2(\P)}
-    \\
-    &
-    \
-    \lesssim
-    \
-    \left( 
-      \E
-      \left[ 
-        \frac{1}{\pi(X)}
-        \frac{T}{\pi(X)}
-      \left( 
-      \mathbf{1}_{
-      \left\{ 
-      Y(T)\in [z_{l-1},z_l] 
-    \right\}
-    }
-      +
-      \P
-      \left[ 
-      Y(1)\in [z_{l-1},z_l] 
-      \,
-      |
-      \,
-      X
-      \right]
-      \right)
-      \right]
-    \right)
-    ^{1/2}
-    \\
-    &
-    \
-    \lesssim
-    \
-    \left( 
-      \E
-      \left[ 
-        \frac{1}{\pi(X)}
-      \P
-      \left[ 
-      Y(1)\in [z_{l-1},z_l] 
-      \,
-      |
-      \,
-      X
-      \right]
-      \right]
-    \right)
-    ^{1/2}
-    \\
-    &
-    \ 
-    \lesssim
-    \ 
-    \left( 
-      \norm{1/\pi(X)}_{ L^2(\P)}
-      \sqrt{\varepsilon}
-    \right)
-    ^{1/2}
-    \ 
-    =
-    \ 
-    \varepsilon^{1/4}
-    \norm{1/\pi(X)}_{ L^2(\P)}^{1/2}
-  \end{align*}
-  and
-  \begin{align*}
-     \norm{
-      \P
-      \left[ 
-      Y(1)\in [z_{l-1},z_l] 
-      \,
-      |
-      \,
-      X
-      \right]
-      \ 
-     + 
-      \ 
-      \P
-      \left[ 
-      Y(1)\in [z_{l-1},z_l] \,
-      \right]
-    }_{ L^2(\P)}
-    \ 
-    \lesssim
-    \ 
-    \varepsilon^{1/2}
-    \,.
-  \end{align*}
-  Thus
-  \begin{gather*}
-  \norm{
-  \overline{g^l}
--
-  \underline{g^l}
-}_
-{ L^2(\P)}
-\ 
-\lesssim
-\ 
-\varepsilon^{1/4}
-\left( 
-  1
-  +
-    \norm{1/\pi(X)}_{ L^2(\P)}^{1/2}
-\right)
-\ 
-\lesssim
-\ 
-\varepsilon^{1/4}
-\left( 
-  1
-  +
-    \norm{1/\pi(X)}_{ L^2(\P)}
-\right)
-\,.
-  \end{gather*}
-As before, it follows
-\begin{gather*}
-    N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{G}, L^2(\P))
-    \ 
-    \lesssim
-    \ 
-    \left( 
-    \frac{
-      1+
-    \norm{1/\pi(X)}_{ L^2(\P)}
-    }
-    {\varepsilon}
-    \right)^4
-    \,.
-\end{gather*}
-\end{proof}
-
-\begin{lemma}
-  \label{markov_max_lemma}
-  Let $(\mathcal{F}_N)$ be a sequence of measurable function classes with envelope functions $(F_N)$.
-  If
-  \begin{gather}
-    J_{[\, ]}
-    \left( 
-    \norm{F_N}_{ L^2(\P)}
-    ,
-    \mathcal{F}_N
-    ,
-     L^2(\P)
-    \right)
-    \ 
-    \to
-    \ 
-    0
-    \qquad
-    \text{for}
-    \ 
-    N
-    \to
-    \infty
-  \end{gather}
-  it holds 
-  $
-  \norm{\G_N}^*_{\mathcal{F}_N}\overset{\P}{\to}0
-  $.
-\end{lemma}
-\begin{proof}
-  By Markov's inequality and Theorem~\ref{th:max_ineq} it holds for all $\varepsilon>0$
-  \begin{align*}
-    &
-    \P
-    [
-  \norm{\G_N}^*_{\mathcal{F}_N}
-  \ge
-  \varepsilon
-    ]
-    \\
-    &
-    \ 
-    \le
-    \ 
-    \varepsilon^{-1}
-    \E
-    [
-  \norm{\G_N}^*_{\mathcal{F}_N}
-    ]
-    \ 
-    =
-    \ 
-    \varepsilon^{-1}
-    \E^*
-    [
-  \norm{\G_N}_{\mathcal{F}_N}
-    ]
-    \ 
-    \lesssim
-    \ 
-    \varepsilon^{-1}
-    J_{[\, ]}
-    \left( 
-    \norm{F_N}_{ L^2(\P)}
-    ,
-    \mathcal{F}_N
-    ,
-     L^2(\P)
-    \right)
-    \ 
-    \to
-    \ 
-    0
-  \end{align*}
-  for $N\to\infty$. 
-\end{proof}
-Let 
+et 
   $(\varepsilon_N)\subset(0,1]$ be a decreasing sequence with 
   $\varepsilon_N\to 0$ as $N\to\infty$ and define for
   $N\in\mathbb{N}$ and $z\in\R$ the function

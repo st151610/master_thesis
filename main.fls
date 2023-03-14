@@ -1200,11 +1200,11 @@ INPUT ./final_chapters/aa:mean.tex
 INPUT final_chapters/aa:mean.tex
 INPUT ./final_chapters/aa:mean.tex
 INPUT final_chapters/aa:mean.tex
+INPUT ./chapters/balancing_weights/plug_in_est.tex
+INPUT chapters/balancing_weights/plug_in_est.tex
+INPUT ./chapters/balancing_weights/plug_in_est.tex
+INPUT chapters/balancing_weights/plug_in_est.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm
-INPUT ./chapters/balancing_weights/plug_in_est.tex
-INPUT chapters/balancing_weights/plug_in_est.tex
-INPUT ./chapters/balancing_weights/plug_in_est.tex
-INPUT chapters/balancing_weights/plug_in_est.tex
 INPUT ./chapters/convex_analysis/primer_new.tex
 INPUT chapters/convex_analysis/primer_new.tex
 INPUT ./chapters/convex_analysis/primer_new.tex
