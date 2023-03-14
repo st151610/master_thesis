@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  14 MAR 2023 13:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.14)  14 MAR 2023 15:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -867,12 +867,12 @@ chapter 3.
 
 
 ] [18] [19] [20]
-Overfull \hbox (3.4822pt too wide) in paragraph at lines 968--981
+Overfull \hbox (3.4822pt too wide) in paragraph at lines 977--990
 \OT1/cmr/m/n/10.95 with prob-a-bil-ity go-ing to $1$ as $\OML/cmm/m/it/10.95 N \OMS/cmsy/m/n/10.95 ! 1$\OT1/cmr/m/n/10.95 . But this holds for all $(^^A\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 ^^A[])$ with $[] =
  []
 
 
-Overfull \hbox (10.1447pt too wide) detected at line 1063
+Overfull \hbox (10.1447pt too wide) detected at line 1072
 []
  []
 
@@ -883,7 +883,7 @@ Overfull \hbox (10.16353pt too wide) in paragraph at lines 62--66
 
 
 Overfull \hbox (0.60736pt too wide) in paragraph at lines 69--74
-[][]\OT1/cmr/bx/n/10.95 Lemma 3.3. []\OT1/cmr/m/it/10.95 Let As-sump-tion []3.1[] and As-sump-tion []3.2[] hold true. Then it holds $\OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2
+[][]\OT1/cmr/bx/n/10.95 Lemma 3.3. []\OT1/cmr/m/it/10.95 Let As-sump-tion []3.3[] and As-sump-tion []3.4[] hold true. Then it holds $\OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2
  []
 
 [22]
@@ -892,37 +892,37 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 306.
 ) (./final_chapters/aa:mean.tex [23] [24] [25] [26] [27] [28] [29]
-Package mdframed Info: mdframed works in twoside mode on input line 1358.
+Package mdframed Info: mdframed works in twoside mode on input line 1456.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1358.
+(mdframed)              on input line 1456.
 
-Overfull \hbox (36.57275pt too wide) detected at line 1408
+Overfull \hbox (36.57275pt too wide) detected at line 1506
 []
  []
 
 
-Overfull \hbox (0.89084pt too wide) detected at line 1547
+Overfull \hbox (0.89084pt too wide) detected at line 1645
 []
  []
 
 [30]
-Overfull \hbox (1.04326pt too wide) in paragraph at lines 1673--1676
+Overfull \hbox (1.04326pt too wide) in paragraph at lines 1771--1774
 \OT1/cmr/m/n/10.95 Note, that the first sum goes over $[]$ while the sec-ond sum goes over $[]$.
  []
 
 [31] [32] [33]
-Overfull \hbox (43.72816pt too wide) detected at line 2254
+Overfull \hbox (43.72816pt too wide) detected at line 2352
 []
  []
 
 [34]
 
-LaTeX Warning: Reference `lem:brack_n' on page 35 undefined on input line 2380.
+LaTeX Warning: Reference `lem:brack_n' on page 35 undefined on input line 2478.
 
 [35] [36] [37]
 
-LaTeX Warning: Reference `aa:mean:l:fz' on page 38 undefined on input line 3516.
+LaTeX Warning: Reference `aa:mean:l:fz' on page 38 undefined on input line 3614.
 
 ) (./chapters/balancing_weights/plug_in_est.tex) [38]
 chapter 4.
@@ -968,18 +968,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27197 strings out of 478238
- 523553 string characters out of 5850455
+ 27203 strings out of 478238
+ 523707 string characters out of 5850455
  1027170 words of memory out of 5000000
- 44701 multiletter control sequences out of 15000+600000
+ 44704 multiletter control sequences out of 15000+600000
  481970 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,106p,10616b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (52 pages, 509457 bytes).
+Output written on main.pdf (52 pages, 511221 bytes).
 PDF statistics:
- 818 PDF objects out of 1000 (max. 8388607)
- 711 compressed objects within 8 object streams
- 241 named destinations out of 1000 (max. 500000)
+ 823 PDF objects out of 1000 (max. 8388607)
+ 716 compressed objects within 8 object streams
+ 244 named destinations out of 1000 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

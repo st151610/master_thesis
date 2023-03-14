@@ -1,3 +1,12 @@
+\begin{assumption}
+  \label{aa:assumption:overlap}
+  The propensity score function satisfies
+  $\pi(x)\in(0,1)$ for all $x\in\mathcal{X}$.
+\end{assumption}
+\begin{assumption}
+  \label{aa:assumption:ps_continuous}
+  The propensity score function is continuous in $\mathcal{X}$.
+\end{assumption}
 \subsection*{My Contribution}
 I found out, that consistency for the dual variable is enough to prove later results. This simplifies the proof. 
 In \cite{Wang2019} they use a quadratic Taylor expansion to obtain learning rates. I found out, that a simpler mean value result for differentiable convex functions is sufficient to proof consistency. 

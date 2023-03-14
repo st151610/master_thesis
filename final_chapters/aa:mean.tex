@@ -30,7 +30,7 @@ that is,
   \,.
 \end{gather}
 \begin{assumption}
-  \label{F_N_br_n}
+  \label{aa:assumption:1}
   For any decreasing sequence
   $(\varepsilon_N)$ with $\varepsilon_N\to 0$ for $N\to\infty$,
 there exists a sequence of (measurable) function classes
@@ -99,7 +99,7 @@ such that for all $(\lambda,\lambda_0)\in\R^{N+1}$ and for all $N\in\mathbb{N}$ 
 is contained in $\mathcal{F}_N$.
 \end{assumption}
 \begin{remark}
-  We can derive Assumption~\ref{F_N_br_n} from regularity assumptions on the inverse propensity score 
+  We can derive Assumption~\ref{aa:assumption:1} from regularity assumptions on the inverse propensity score 
   $1/\pi(\cdot)$ and the distribution of $X$.
   To this end, we want to employ \cite[Corollary~2.7.4]{vaart2013}.
   To do this, the crucial observation is, that
@@ -151,16 +151,16 @@ $
 $.
 Then \cite[Corollary~2.7.4]{vaart2013} gives us the statement 
 in
-Assumption~\ref{F_N_br_n}.
+Assumption~\ref{aa:assumption:1}.
 \end{remark}
 \begin{lemma}
-  \label{lem_conv_G}
+  \label{aa:r3:lemma:1}
   Let
 $(\varepsilon_N)\subset(0,1]$
 be 
 a decreasing sequence
 with $\varepsilon_N\to 0$ for $N\to\infty$ 
-and let Assumption~\ref{F_N_br_n} hold true
+and let Assumption~\ref{aa:assumption:1} hold true
 for a sequence of function classes $\mathcal{F}_N$.
 Then
 \begin{gather*}
@@ -179,7 +179,7 @@ Then
 \end{gather*}
 \end{lemma}
 \begin{proof}
-  By Assumption~\ref{F_N_br_n}
+  By Assumption~\ref{aa:assumption:1}
   and Lemma~\ref{bracketing_number_lem} it holds
 for some $k<2$
 \begin{gather*}
@@ -353,13 +353,15 @@ Define the product of two function classes
   $\sup_{z\in\R}\left| R_3(z) \right|\overset{\P}{\to}0$.
 \end{lemma}
 \begin{proof}
-  Let
-  $g^\dagger$ is the function \eqref{ghost_function} with 
+  Let $N\ge\underline{N}$ and 
+  let
+  $g^\dagger$ 
+  denote the function \eqref{ghost_function} with 
   $
 (\lambda^\dagger,\lambda_0^\dagger)
   $.
-  Let $N\ge\underline{N}$. If
-  $
+  If
+  \begin{gather*}
     \left| 
     w^\dagger(X)- \frac{1}{\pi(X)} 
     \right|
@@ -367,14 +369,17 @@ Define the product of two function classes
     \le
     \ 
     \varepsilon_N
-  $
+  \end{gather*}
   it holds
   \begin{gather*}
-    g^\dagger\cdot
+    g^\dagger
+    (X)
+    \cdot
     f^z
-    =
     (T,X,Y(T))
-    \mapsto
+    \ 
+    =
+    \ 
   \left( 
       w^\dagger(X)
       -
@@ -389,27 +394,52 @@ Define the product of two function classes
       \right)
       \,.
   \end{gather*}
-  Since $f_z\in L^1(\P)$ and $\E
-  \left[
-    f_z
+  By Lemma~\ref{aa:mean:r3:lem:fz_E}
+  it holds 
+  \begin{align*}
+    &
+  f_z(T,X,Y(T))
+  \ 
+  \in
+  \ 
+  L^1(\P)\,, 
+  \\
+  &
+  f_z(T,X,Y(T))
+  \ 
+  \perp
+  \ 
+  D_N
+  \,,
+  \\
+  \E
+  [
+  &
+  f_z(T,X,Y(T))
     |X
-  \right]
+  ]
+  \ 
   =
+  \ 
   0
-  $
-  by Lemma~\ref{fz_E0}
-  and
-  $f_z\perp D_N$ it follows from Lemma~\ref{w.Z=0}
+  \,.
+  \end{align*}
+  Thus, 
+  it follows from Lemma~\ref{w.Z=0}
   \begin{gather*}
     \E
     \left[
       w^\dagger(X)
+      \cdot
       f_z(T,X,Y(T))
     \right]
-    =0
+    \ 
+    =
+    \ 
+    0
     \,.
   \end{gather*}
-  But since
+  Since
   \begin{gather*}
     \E
     \left[
@@ -421,16 +451,71 @@ Define the product of two function classes
         F_{Y(1)}(z|X)
       \right)
     \right]
-    =0
+    \  
+    =
+    \ 
+    0
   \end{gather*}
   it follows
-  $\E
+  \begin{align*}
+    &
+  \E
   \left[
-    g^\dagger f_z
-  \right]=0$.
+    g^\dagger(X)
+    f_z(T,X,Y(T))
+  \right]
+  \\
+    &
+  \ 
+  =
+  \ 
+    \E
+    \left[
+      w^\dagger(X)
+      \cdot
+      f_z(T,X,Y(T))
+    \right]
+    \ 
+    +
+    \ 
+    \E
+    \left[
+      \frac{T}{\pi(X)}
+      f_z(T,X,Y(T))
+    \right]
+    \ 
+    =
+    \ 
+  0
+  \,.
+  \end{align*}
   But then 
-  \begin{gather*}
+  \begin{align*}
     R_3(z)
+    &
+    \ 
+    =
+    \ 
+  \frac{1}
+  {
+\sqrt{N}
+  }
+    \sum_{i=1}^{N} 
+    \left[ 
+    \left( 
+    w(X_i) 
+    -
+    \frac{1}{\pi(X_i)}
+    \right)
+    T_i
+    \left( 
+    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    -
+  F_{Y(1)}(z|X_i)
+    \right)
+    \right]
+\\
+&
     \ 
     =
     \ 
@@ -444,8 +529,8 @@ Define the product of two function classes
     \text{for all}\ 
     z\in\R
     \,.
-  \end{gather*}
-  it follows from Lemma~\ref{lem_conv_G}
+  \end{align*}
+  It follows
 \begin{align*}
     \P
     \left[ 
@@ -525,8 +610,12 @@ Define the product of two function classes
     \to
     \ 
     0
+    \,.
 \end{align*}
-
+The convergence of the first term follows from
+Lemma~\ref{aa:r3:lemma:1}.
+The convergence of the second term follows from
+Theorem~\ref{aa:weights:th}.
 
 \end{proof}
 
@@ -598,10 +687,19 @@ Next, we define some auxiliary functions.
     \,.
     \end{split}
   \end{gather}
+  \begin{assumption}
+    \label{aa:assumption:treatment_str_ign}
+    It holds $(Y(0),Y(1))\perp T | X$.
+  \end{assumption}
   \begin{lemma}
-    \label{fz_E0}
-    Assume that treatment assignment is strongly ignorable.
+    \label{aa:mean:r3:lem:fz_E}
     It holds
+    $f_z(T,X,Y(T))\in L^1(\P)$
+    and 
+    $f_z(T,X,Y(T))\perp D_N$
+    for all $z\in\R$.
+    If also Assumption~\ref{aa:assumption:treatment_str_ign} holds,
+    then 
     for all $z\in\R$
     \begin{gather*}
       \E

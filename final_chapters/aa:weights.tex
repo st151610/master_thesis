@@ -2,7 +2,7 @@ Before we proof the theorem, we proof some lemmas that are useful in the next se
 
 
 \begin{assumption}
-  \label{sol_theta}
+  \label{aa:assumption:2}
   There exists $\underline{N}\in\mathbb{N}$ such that 
   for all $N\ge \underline{N}$ and for all data sets $D_N$
   the optimal solution
@@ -13,7 +13,7 @@ Before we proof the theorem, we proof some lemmas that are useful in the next se
 \end{assumption}
 
 \begin{assumption}
-  \label{objective_function}
+  \label{aa:assumption:3}
   The objective function $f$ to Problem? is strictly convex, with strictly convex and continuously differentiable convex conjugate $f^*$. 
 \end{assumption}
 \begin{definition}
@@ -66,7 +66,7 @@ If
 \end{remark}
 \begin{lemma}
   \label{weights_bounded}
-  Let Assumption~\ref{sol_theta} and Assumption~\ref{objective_function} hold true.
+  Let Assumption~\ref{aa:assumption:2} and Assumption~\ref{aa:assumption:3} hold true.
   Then it holds 
   $
   w^\dagger(X)\in L^\infty(\P)
@@ -99,11 +99,11 @@ If
     \norm{(\lambda,\lambda_0)}_2
     \,.
   \end{gather*}
-  By Assumption~\ref{sol_theta}, 
+  By Assumption~\ref{aa:assumption:2}, 
   there exists a (compact) parameter space
   $\Theta_N$ around the origin, with $\mathrm{diam}\,  \Theta_N<\infty$, 
   such that for all data sets $D_N$ it holds  $(\lambda^\dagger,\lambda_0^\dagger)\in\Theta_N$.
-  By Assumption~\ref{objective_function}, $(f^{'})^{-1}$ is non-decreasing and continuous. Thus
+  By Assumption~\ref{aa:assumption:3}, $(f^{'})^{-1}$ is non-decreasing and continuous. Thus
   \begin{align*}
     \left| 
     w^\dagger(x)
@@ -164,7 +164,7 @@ If
 \end{proof}
 \begin{lemma}
   \label{w.Z=0}
-  Let Assumption~\ref{sol_theta} and Assumption~\ref{objective_function} hold true.
+  Let Assumption~\ref{aa:assumption:2} and Assumption~\ref{aa:assumption:3} hold true.
   Furthermore, 
   let
   $N\ge\underline{N}$, and
@@ -305,7 +305,7 @@ If
 \end{proof}
 \begin{ftheorem}
   \label{aa:weights:th}
-  Let Assumption~\ref{sol_theta} hold true.
+  Let Assumption~\ref{aa:assumption:2} hold true.
   Under the conditions of Proposition~\ref{bw:cd:th} 
   it holds
   $w^\dagger(X)\ 
