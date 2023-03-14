@@ -1,3 +1,6 @@
+$
+(\lambda^\dagger,\lambda_0^\dagger)
+$
 We adapt the error decomposition in \cite[page 27]{Wang2019} 
 to estimates of the distribution function $F_{Y(1)}$ of $Y(1)$, 
 that is,
@@ -151,6 +154,7 @@ in
 Assumption~\ref{F_N_br_n}.
 \end{remark}
 \begin{lemma}
+  \label{lem_conv_G}
   Let
 $(\varepsilon_N)\subset(0,1]$
 be 
@@ -344,6 +348,188 @@ Define the product of two function classes
   $[\underline{h},\overline{h}]$
   bracket, containing $f\cdot g$, by
 \end{proof}
+\begin{lemma}
+  Under conditions it holds
+  $\sup_{z\in\R}\left| R_3(z) \right|\overset{\P}{\to}0$.
+\end{lemma}
+\begin{proof}
+  Let
+  $g^\dagger$ is the function \eqref{ghost_function} with 
+  $
+(\lambda^\dagger,\lambda_0^\dagger)
+  $.
+  Let $N\ge\underline{N}$. If
+  $
+    \left| 
+    w^\dagger(X)- \frac{1}{\pi(X)} 
+    \right|
+    \ 
+    \le
+    \ 
+    \varepsilon_N
+  $
+  it holds
+  \begin{gather*}
+    g^\dagger\cdot
+    f^z
+    =
+    (T,X,Y(T))
+    \mapsto
+  \left( 
+      w^\dagger(X)
+      -
+      \frac{1}{\pi(X)}
+  \right)
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+      \,.
+  \end{gather*}
+  Since $f_z\in L^1(\P)$ and $\E
+  \left[
+    f_z
+    |X
+  \right]
+  =
+  0
+  $
+  by Lemma~\ref{fz_E0}
+  and
+  $f_z\perp D_N$ it follows from Lemma~\ref{w.Z=0}
+  \begin{gather*}
+    \E
+    \left[
+      w^\dagger(X)
+      f_z(T,X,Y(T))
+    \right]
+    =0
+    \,.
+  \end{gather*}
+  But since
+  \begin{gather*}
+    \E
+    \left[
+      \frac{T}{\pi(X)}
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+    \right]
+    =0
+  \end{gather*}
+  it follows
+  $\E
+  \left[
+    g^\dagger f_z
+  \right]=0$.
+  But then 
+  \begin{gather*}
+    R_3(z)
+    \ 
+    =
+    \ 
+    \G_N
+    \left( 
+      g^\dagger
+      \cdot
+      f_z
+    \right)
+    \quad
+    \text{for all}\ 
+    z\in\R
+    \,.
+  \end{gather*}
+  it follows from Lemma~\ref{lem_conv_G}
+\begin{align*}
+    \P
+    \left[ 
+      \sup_{z\in\R}
+     | 
+    R_3(z)
+    |
+      \ge
+      \varepsilon
+    \right]
+    &
+    \ 
+    \le
+    \ 
+    \P
+    \left[ 
+      \sup_{z\in\R}
+     | 
+    R_3(z)
+    |
+      \ge
+      \varepsilon
+      \ 
+      \text{and}
+      \ 
+    | 
+    w^\dagger(X)- 1/\pi(X)
+    |
+    \ 
+    \le
+    \ 
+    \varepsilon_N
+    \right]
+    \\
+    &
+    \quad
+    +
+    \ 
+    \P
+    \left[ 
+    | 
+    w^\dagger(X)- 1/\pi(X)
+    |
+    \ 
+    >
+    \ 
+    \varepsilon_N
+    \right]
+    \\
+    &
+    \ 
+    \le
+    \ 
+    \P
+    \left[ 
+      \norm{\G_N}^*_{\mathcal{F}_N\cdot\mathcal{F}}
+      \ge
+      \varepsilon
+    \right]
+    \ 
+    +
+    \ 
+    \ 
+    \P
+    \left[ 
+    | 
+    w^\dagger(X)- 1/\pi(X)
+    |
+    \ 
+    >
+    \ 
+    \varepsilon_N
+    \right]
+    \\
+    &
+    \ 
+    \to
+    \ 
+    0
+\end{align*}
+
+
+\end{proof}
+
 Next, we define some auxiliary functions.
   For $z\in\R$ we define the function
   \begin{align*}
@@ -413,6 +599,7 @@ Next, we define some auxiliary functions.
     \end{split}
   \end{gather}
   \begin{lemma}
+    \label{fz_E0}
     Assume that treatment assignment is strongly ignorable.
     It holds
     for all $z\in\R$
