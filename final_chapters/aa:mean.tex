@@ -198,6 +198,54 @@ N\to\infty
 \end{align*}
 The second statement follows from Lemma~\ref{markov_max_lemma}.
 \end{proof}
+
+A technical lemma for products of function classes.
+
+Define the product of two function classes
+\begin{gather*}
+  \mathcal{F}\cdot \mathcal{G}
+  :=
+  \left\{ 
+    f\cdot g
+    \colon
+    f\in\mathcal{F},
+    g\in\mathcal{G}
+  \right\}\,.
+\end{gather*}
+\begin{lemma}
+  Let
+  $\mathcal{F}$ and $\mathcal{G}$ be two function classes 
+  with envelope functions $F$ and $G$ satisfying
+  $\norm{F}_\infty,\norm{G}_\infty\le 1$.
+  For all $\varepsilon>0$ and all $r\in [1,\infty)$ it holds
+  \begin{gather*}
+    N_{[\,]}(2\varepsilon,\mathcal{F}\cdot\mathcal{G},\mathrm{L}_r(\P))
+    \
+    \le
+    \ 
+    N_{[\,]}(\varepsilon,\mathcal{F},\mathrm{L}_r(\P))
+    \cdot
+    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_r(\P))
+    \,.
+  \end{gather*}
+\end{lemma}
+\begin{proof}
+  Let $f\in\mathcal{F}$ and $g\in\mathcal{G}$.
+  We can choose two 
+  $(\varepsilon,L^r(\P))$
+  brackets
+  $[\underline{f},\overline{f}]$
+  and
+  $[\underline{g},\overline{g}]$
+  containing $f$ and $g$ with 
+  $\norm{\underline{f}}_\infty,\norm{\overline{f}}_\infty\le\norm{F}_\infty\le 1$
+  and
+  $\norm{\underline{g}}_\infty,\norm{\overline{g}}_\infty\le\norm{G}_\infty\le 1$.
+  We the get an 
+  $(2\varepsilon,L^r(\P))$
+  $[\underline{h},\overline{h}]$
+  bracket, containing $f\cdot g$, by
+\end{proof}
 \begin{ftheorem}
   \label{aa:mean:th}
   Under conditions 
@@ -1114,6 +1162,117 @@ Next, we define some auxiliary functions.
     \,.
     \end{split}
   \end{gather}
+  \begin{lemma}
+    Assume that treatment assignment is strongly ignorable.
+    It holds
+    for all $z\in\R$
+    \begin{gather*}
+      \E
+      \left[
+        f_z
+        \left( 
+          T,
+          X,
+          Y(T)
+        \right)
+        \,
+        |
+        \,
+        X
+      \right]
+      \ 
+      =
+      \ 
+      0
+      \qquad
+      \text{almost surely.}
+    \end{gather*}
+  \end{lemma}
+  \begin{proof}
+    It holds
+    \begin{align*}
+      \E
+      \left[
+        f_z
+        \left( 
+          T,
+          X,
+          Y(T)
+        \right)
+        \,
+        |
+        \,
+        X
+      \right]
+      &
+      \ 
+      =
+      \ 
+      \E
+      \left[
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+        \,
+        |
+        \,
+        X
+      \right]
+      \\
+      &
+      \ 
+      =
+      \ 
+      \E
+      \left[
+        \mathbf{1}
+        _{\left\{  Y(1)\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|X)
+        \,
+        |
+        \,
+        X
+        ,
+        T=1
+      \right]
+      \pi(X)
+      \\
+      &
+      \ 
+      =
+      \ 
+      \left( 
+      \E
+      \left[
+        \mathbf{1}
+        _{\left\{  Y(1)\,\le\,z \right\}}
+        \,
+        |
+        \,
+        X
+      \right]
+      \ 
+        -
+      \ 
+        F_{Y(1)}(z|X)
+      \right)
+      \pi(X)
+      \\
+      &
+      \ 
+      =
+      \ 
+      0
+      \qquad
+    \end{align*}
+    almost surely.
+    We use the assumption to get the third equality.
+  \end{proof}
 The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
 \newpage
 \begin{lemma}
