@@ -1,54 +1,54 @@
-We consider a study population in which we want to test the effect of a treatment.
-We introduce the \textbf{indicator of treatment} $T\in \left\{ 0,1 \right\}$.
-For each treatment level there exist the \textbf{marginal potential outcomes}
-$(Y(0),Y(1))$. We would like to estimate $\E[Y(1)]$. If we succeed the same technique
-shall yield an estimate of $\E[Y(0)]$. We shall compare $\E[Y(1)]$ and $\E[Y(0)]$ and 
-find out something about the effect of the treatment in the population.
-
-The data we acquire is independent and identically distributed. But usually
-\begin{gather}
-  Y(1)|T=1 \nsim Y(1) 
-  \,,
-\end{gather}
-that is, $T=1$ carries more information than observing the outcome under treatment.
-We say that $Y(1)|T=1$ is \textbf{confounded}. To extract that plus of information from $T=1$ and put it where it belongs by collecting more data.
-We gather it in $X\in \R^d$ and assume
-\begin{gather}
-  (Y(0),Y(1))
-  \perp
-  T
-  \ 
-  |
-  \ 
-  X
-  \,,
-\end{gather}
-that is, \textbf{conditional unconfoundedness}.
-Thus, we end up collecting $N\in \mathbb{N}$ independent and identically distributed copies of 
-$(T,X,Y(T))$. For convenience, we assume that the first $n\in \mathbb{N}$ copies have $T=1$.
-
-A natural estimator for $\E[Y(1)]$ is the weighted mean
-\begin{gather}
-  \frac{1}{n}
-  \sum_{i=1}^{n} 
-  w_i Y_i
-  \,.
-\end{gather}
-The weights should satisfy (in a broader sense)
-\begin{gather}
-  w_i\cdot Y_i \to Y(1)
-  \qquad 
-  \text{for}\ 
-  N
-  \ 
-  \to
-  \ 
-  \infty
-  \,.
-\end{gather}
-One class of such weights has been recently analyzed in \cite{Wang2019}.
-We take ideas and extend.
-
+%We consider a study population in which we want to test the effect of a treatment.
+%We introduce the \textbf{indicator of treatment} $T\in \left\{ 0,1 \right\}$.
+%For each treatment level there exist the \textbf{marginal potential outcomes}
+%$(Y(0),Y(1))$. We would like to estimate $\E[Y(1)]$. If we succeed the same technique
+%shall yield an estimate of $\E[Y(0)]$. We shall compare $\E[Y(1)]$ and $\E[Y(0)]$ and 
+%find out something about the effect of the treatment in the population.
+%
+%The data we acquire is independent and identically distributed. But usually
+%\begin{gather}
+%  Y(1)|T=1 \nsim Y(1) 
+%  \,,
+%\end{gather}
+%that is, $T=1$ carries more information than observing the outcome under treatment.
+%We say that $Y(1)|T=1$ is \textbf{confounded}. To extract that plus of information from $T=1$ and put it where it belongs by collecting more data.
+%We gather it in $X\in \R^d$ and assume
+%\begin{gather}
+%  (Y(0),Y(1))
+%  \perp
+%  T
+%  \ 
+%  |
+%  \ 
+%  X
+%  \,,
+%\end{gather}
+%that is, \textbf{conditional unconfoundedness}.
+%Thus, we end up collecting $N\in \mathbb{N}$ independent and identically distributed copies of 
+%$(T,X,Y(T))$. For convenience, we assume that the first $n\in \mathbb{N}$ copies have $T=1$.
+%
+%A natural estimator for $\E[Y(1)]$ is the weighted mean
+%\begin{gather}
+%  \frac{1}{n}
+%  \sum_{i=1}^{n} 
+%  w_i Y_i
+%  \,.
+%\end{gather}
+%The weights should satisfy (in a broader sense)
+%\begin{gather}
+%  w_i\cdot Y_i \to Y(1)
+%  \qquad 
+%  \text{for}\ 
+%  N
+%  \ 
+%  \to
+%  \ 
+%  \infty
+%  \,.
+%\end{gather}
+%One class of such weights has been recently analyzed in \cite{Wang2019}.
+%We take ideas and extend.
+%
 \subsection*{My Contribution}
 I analyse the full optimization problem. In \cite{Wang2019} only the box constraints are considered.
 To eliminate the constraints on the dual variable of the first constraint in the primal optimization problem I need $f^*$ to be strictly non-decreasing. This excludes the sample variance as an objective function, but the negative entropy still works.

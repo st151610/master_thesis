@@ -31,9 +31,19 @@ He observes the smoking area through his field glasses.
 His assistant gets to know his plans. He warns him. “Many students attend parties the night before exams. Maybe they are also more likely to smoke." “I shall see this for myself..." says the professor. He puts away the field glasses. After a while, he visits the local club.
 He talks to a few of his students. Some smoke, some don't. The chats are enjoyable. He thinks: “Some of my best students celebrate before the exams."
 
-I hope, by now it's clear that sometimes it's all about treatment assignment. 
-The propensity score\cite{Rosenbaum1983} captures all relevant informations.
-It's the probability of treatment given individual characteristics. 
+
+I hope, by now it's clear that 
+we should focus on treatment assignment.
+The propensity score\cite{Rosenbaum1983}, that is,
+the probability of treatment given (observed) individual characteristics,
+helps with that.
+\begin{theorem*}
+  \emph{\cite[Theorem~1]{Rosenbaum1983}}
+Observed individual characteristics are independent 
+of treatment assignment given the propensity score.
+\end{theorem*}
+
+
 
 In the second example, where you flip a fair coin to assign treatment, the propensity score is $1/2$, despite variation across individual characteristics.
 The coin ignores everything.
@@ -56,11 +66,11 @@ Thus one of the potential outcomes always remains potential.
 Of course there are tricks. You can  wait for the effect of an action to vanish and then observe the outcome (under similar conditions) again.
 This works well when the effect of an action is short term.
 
-If treatment assignment is random we actually observe one of the potential outcomes.
+If the propensity score is known we actually observe one of the potential outcomes.
 This is because treatment assignment carries no more information.
 The coin ignores it.
 But we saw, that assignment often contains more information.
-Then it is not clear, if the effect on the outcome comes from the individual characteristics or the treatment.
+Then it is not clear, if the effect on the outcome comes from observed or unobserved individual characteristics or the treatment.
 Then we observe neither of the two potential outcomes, but a biased version.
 Why then bother?
 
@@ -89,7 +99,7 @@ We observe
   Y(1)\,|\,T=1
   \,.
 \end{gather}
-We can show, that if treatment assignment is \textbf{strongly ignorable}\cite[(1.3)]{Rosenbaum1983}
+We show in Lemma~\ref{ps_weights_lemma}, that if treatment assignment is \textbf{strongly ignorable}\cite[(1.3)]{Rosenbaum1983}
 \begin{gather}
   (Y(0),Y(1))\ \perp \ T \,|\,X
   \quad
@@ -116,22 +126,13 @@ That is, by weighting the observed outcome under treatment with the inverse prop
 This is relevant, because 
 $Y(t)|T=t$ does not have the same distribution as $Y(t)$ for $t\in \left\{ 0,1 \right\}$.
 
-If the propensity score is unknown, one method is to use estimates of it.
+In observational studie, the propensity score is unknown.
+A very popular method is to use estimates of it to create weights.
 We hope to recover \eqref{ipw} from the estimate.
 In practice, estimating the propensity score is a difficult task.
-Researchers often compare different estimates and select the best. 
+Researchers often compare estimates from different models. 
 They employ metrics called covariate balance.
 The high level idea is, that the weighted treatment group should be similar to the unweighted control group. 
-Rather than estimating the propensity score and then checking for covariate balance,
-the method of \cite{Imai2014a} tries to solve both tasks simultaneously.
-Therefore it is called the Covariate Balancing Propensity Score.
-
-We will consider a third method, which only balances covariates but does not (explicitly) model treatment or outcome.
-This method was introduced in \cite{Hainmueller2012}. 
-It is a convex optimization problem with constraints on the balance of moments of the covariates.
-The method gained popularity by the observation of \cite{Zhao2017a}
-that it is doubly robust.
-Graphic?
 
 Let's be more specific what we mean by covariate balance.
 We consider a class of functions $B$ of the covariates, which we call regression basis.
@@ -151,6 +152,17 @@ Our measure of balance is
   \right)
 \end{gather}
 where $(w_i)$ are the (estimated) weights for a (sub-)population of size $n\le N$ and $B$ are (basis-)functions of the covariates.
+Rather than estimating the propensity score and then checking for covariate balance,
+the method of \cite{Imai2014a} tries to solve both tasks simultaneously.
+Therefore it is called the Covariate Balancing Propensity Score.
+
+We will consider a third method, which only balances covariates but does not (explicitly) model treatment or outcome.
+This method was introduced in \cite{Hainmueller2012}. 
+It is a convex optimization problem with constraints on the balance of moments of the covariates.
+The method gained popularity by the observation of \cite{Zhao2017a}
+that it is doubly robust.
+Graphic?
+
 We consider \eqref{cov_bal} for all basis functions is the regression basis.
 It is a non-trivial question, which basis to choose in practice.
 How strictly to enforce covariate balance is another question.
