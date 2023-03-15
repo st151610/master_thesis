@@ -6,7 +6,7 @@
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{enumitem}
-\usepackage{mdframed}
+%\usepackage{mdframed}
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{mathtools}
@@ -21,8 +21,12 @@
 \makenomenclature
 \renewcommand{\nomname}{Notation Index}
 \mathsurround=2pt
-
-
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfsetup{%
+   middlelinecolor=black,
+   middlelinewidth=.5pt,
+   backgroundcolor=gray!2,
+   roundcorner=5pt}
 \newsavebox{\selvestebox}
 \newenvironment{takeaways}
   {
@@ -38,19 +42,29 @@
 % Theorem handle
 
 
-\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{gtheorem}{Theorem}[chapter]
+\newenvironment{theorem}
+  {\begin{mdframed}\begin{gtheorem}}
+  {\end{gtheorem}\end{mdframed}}
 \newtheorem*{theorem*}{Theorem}
 \newtheorem*{definition*}{Definition}
 \newtheorem*{lemma*}{Lemma}
 \newenvironment{ftheorem}
-  {\begin{mdframed}\begin{theorem}}
-  {\end{theorem}\end{mdframed}}
+  {\begin{mdframed}\begin{gtheorem}}
+  {\end{gtheorem}\end{mdframed}}
 \newenvironment{ftheorem*}
   {\begin{mdframed}\begin{theorem*}}
   {\end{theorem*}\end{mdframed}}
-\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{fassumption}{Assumption}
+\newenvironment{assumption}
+{\begin{mdframed}[
+   backgroundcolor=red!2,
+    ]
+    \begin{fassumption}}
+  {\end{fassumption}\end{mdframed}}
+
 \newtheorem*{assumptions*}{Assumptions}
-\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{corollary}{Corollary}[gtheorem]
 \newtheorem{definition}{Definition}[chapter]
 
 \theoremstyle{definition}
@@ -81,10 +95,13 @@
   {\end{problem}\end{mdframed}}
   %%%% plain %%%%
 \theoremstyle{plain}
-\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{flemma}{Lemma}[chapter]
+\newenvironment{lemma}
+{\begin{mdframed}\begin{flemma}}
+  {\end{flemma}\end{mdframed}}
 \newtheorem{proposition}{Proposition}[chapter]
 \newtheorem*{proposition*}{Proposition}
-\newtheorem{subassumption}{}[assumption]
+%\newtheorem{subassumption}{}[assumption]
 
 \renewcommand{\proofname}{\textbf{Proof}}
 % definition of constants
@@ -104,7 +121,7 @@
 
 \title{
   {
-    Title?
+    Causal Inference in Observational Studies
   }
   \\
   {\large Universität Stuttgart}

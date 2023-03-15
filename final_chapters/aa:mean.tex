@@ -210,6 +210,7 @@ the stochastic process
 \end{align}
 \end{ftheorem}
 
+\pagebreak
 \begin{lemma}
   \label{aa:mean:lemma_decomp}
   It holds
@@ -347,12 +348,260 @@ the stochastic process
   _{z\in\R}
   \,.
   \end{align*}
-
 \end{lemma}
+\nopagebreak
 \begin{proof}
-  An elementary but long calculation yields the result. We omit the details.
+  We fix $z\in\R$.
+  It holds
+  \begin{align*}
+    &
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    w^\dagger(X_i)
+    \cdot
+    T_i
+    \cdot
+    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    \\
+    &
+    \ 
+    =
+    \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left( 
+    w^\dagger(X_i)
+    -
+    \frac{1}{\pi(X_i)}
+    \right)
+    T_i
+    \cdot
+    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    \\
+    &
+    \quad 
+    +
+    \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \frac{T_i}{\pi(X_i)}
+    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    \\
+    &
+    \ 
+    =
+    \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left( 
+    w^\dagger(X_i)
+    -
+    \frac{1}{\pi(X_i)}
+    \right)
+    T_i
+    \left( 
+    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    -
+    F_{Y(1)}(z|X_i)
+    \right)
+    \\
+    &
+    \quad 
+    +
+    \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \frac{T_i}{\pi(X_i)}
+    \left( 
+    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    -
+    F_{Y(1)}(z|X_i)
+    \right)
+    \\
+    &
+    \qquad 
+    +
+    \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    w^\dagger(X_i)\cdot T_i\cdot
+    F_{Y(1)}(z|X_i)
+    \\
+    &
+    \ 
+    =
+    \ 
+    R_3(z)/\sqrt{N}
+    \\
+    &
+    \quad 
+    +
+    \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \frac{T_i}{\pi(X_i)}
+    \left( 
+    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    -
+    F_{Y(1)}(z|X_i)
+    \right)
+    +
+    \left( 
+    F_{Y(1)}(z|X_i)
+    -
+    F_{Y(1)}(z)
+    \right)
+    \\
+    &
+    \qquad
+    +
+    \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left( 
+    w^\dagger(X_i)\cdot T_i
+    \ 
+    -
+    \ 
+    1
+    \right)
+    F_{Y(1)}(z|X_i)
+    \\
+    &
+    \quad\qquad
+    +
+    \ 
+    F_{Y(1)}(z)
+    \\
+    &
+    \ 
+    =
+    \ 
+    R_3(z)/\sqrt{N}
+    \\
+    &
+    \quad
+    +
+    \ 
+    R_4(z)/\sqrt{N}
+    \\
+    &
+    \qquad
+    +
+    \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left( 
+    w^\dagger(X_i)\cdot T_i
+    \ 
+    -
+    \ 
+    1
+    \right)
+    \left( 
+    F_{Y(1)}(z|X_i)
+    -
+    \sum_{k=1}^{N} 
+    B_k(X_i)
+    \cdot
+  F_{Y(1)}(z|X_k)
+    \right)
+    \\
+    &
+    \quad\qquad
+    +
+    \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left( 
+    w^\dagger(X_i)\cdot T_i
+    \ 
+    -
+    \ 
+    1
+    \right)
+    \sum_{k=1}^{N} 
+    B_k(X_i)
+    \cdot
+  F_{Y(1)}(z|X_k)
+    \\
+    &
+    \qquad\qquad
+    +
+    \ 
+    F_{Y(1)}(z)
+\\
+    &
+    \ 
+    =
+    \ 
+    R_3(z)/\sqrt{N}
+    \\
+    &
+    \quad
+    +
+    \ 
+    R_4(z)/\sqrt{N}
+    \\
+    &
+    \qquad
+    +
+    \ 
+    R_2(z)/\sqrt{N}
+    \\
+    &
+    \quad\qquad
+    +
+    \ 
+    \sum_{k=1}^{N} 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left( 
+    w^\dagger(X_i)\cdot T_i
+    B_k(X_i)
+    \ 
+    -
+    \ 
+    B_k(X_i)
+    \right)
+    \cdot
+  F_{Y(1)}(z|X_k)
+    \\
+    &
+    \qquad\qquad
+    +
+    \ 
+    F_{Y(1)}(z)
+    \\
+    &
+    \ 
+    =
+    \ 
+    \left( 
+R_3(z)
+    \ 
+    +
+    \ 
+    R_4(z)
+    \ 
+    +
+    \ 
+    R_2(z)
+    \ 
+    +
+    \ 
+    R_1(z)
+    \right)
+    /\sqrt{N}
+    \ 
+    +
+    \ 
+    F_{Y(1)}(z)
+    \,.
+  \end{align*}
+  This holds for all $z\in\R$.
+  Multiplying with $\sqrt{N}$ yields the result.
 \end{proof}
-
 Let $F_{Y(1)}(z|x):=\P[Y(1)\le z|X=x]$ denote a conditional version of the distribution function of $Y(1)$ at $x\in\mathcal{X}$.
 We also need the propensity score
 $
@@ -2054,7 +2303,26 @@ Next, we define some auxiliary functions.
   \end{gather}
   \begin{assumption}
     \label{aa:assumption:treatment_str_ign}
-    It holds $(Y(0),Y(1))\perp T | X$.
+    It holds 
+    \begin{gather*}
+    (Y(0),Y(1))\, \perp\,  T \ |\  X
+    \qquad
+    \text{and}
+    \qquad
+      0
+      \ 
+      <
+      \ 
+      \pi(x)
+      \ 
+      <
+      \ 
+      1
+      \quad
+      \text{for all}\ 
+      x\in\mathcal{X}
+      \,.
+    \end{gather*}
   \end{assumption}
   \begin{lemma}
     \label{aa:mean:r3:lem:fz_E}
