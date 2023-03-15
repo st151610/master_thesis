@@ -153,1376 +153,6 @@ Then \cite[Corollary~2.7.4]{vaart2013} gives us the statement
 in
 Assumption~\ref{aa:assumption:1}.
 \end{remark}
-\begin{lemma}
-  \label{aa:r3:lemma:1}
-  Let
-$(\varepsilon_N)\subset(0,1]$
-be 
-a decreasing sequence
-with $\varepsilon_N\to 0$ for $N\to\infty$ 
-and let Assumption~\ref{aa:assumption:1} hold true
-for a sequence of function classes $\mathcal{F}_N$.
-Then
-\begin{gather*}
-  J_{[\,]}(
-\norm{F_N}_{L^2(\P)}
-,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
-  \to 0
-  \quad
-  \text{and}
-  \quad
-  \norm{\G_N}^*_{\mathcal{F}_N\cdot\mathcal{F}}\overset{\P}{\to}0
-  \qquad
-  \text{for}\ 
-  N\to\infty
-  \,.
-\end{gather*}
-\end{lemma}
-\begin{proof}
-  By Assumption~\ref{aa:assumption:1}
-  and Lemma~\ref{bracketing_number_lem} it holds
-for some $k<2$
-\begin{gather*}
-\norm{F_N}_{L^2(\P)}
-\ 
-\le
-\ 
-\varepsilon_N
-\quad
-\text{and}
-\quad
-  \log
-  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
-  \ 
-  \lesssim
-  \ 
-  \left( 
-  \frac{1}{\varepsilon}
-  \right)^k
-  \quad
-  \text{for all}
-  \ 
-  N\in\mathbb{N}
-  \,,
-\end{gather*}
-and
-  \begin{gather*}
-    N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{F}, L^2(\P))
-    \ 
-    \lesssim
-    \ 
-    \left( 
-      \frac{1}{\varepsilon}
-    \right)^2
-    \qquad
-    \text{for all}
-    \ 
-    \varepsilon>0
-    \,.
-  \end{gather*}
-  Since $\mathcal{F}_N$ and $\mathcal{F}$ have envelope function smaller 1, we can apply Lemma~\ref{lem_prod_br} to get
-  \begin{gather*}
-  \log
-  N_{[\,]}(\varepsilon,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
-  \ 
-  \lesssim
-  \ 
-  \left( 
-  \frac{1}{\varepsilon}
-  \right)^k
-  +
-  \log
-  (1/\varepsilon)
-  \ 
-  \lesssim
-  \ 
-  \left( 
-  \frac{1}{\varepsilon}
-  \right)^k
-  \quad
-  \text{for all}\ 
-  \varepsilon>0
-  \,.
-  \end{gather*}
-  Since 
-  $k/2\in(0,1)$
-  it holds
-\begin{align*}
-  J_{[\,]}(
-\norm{F_N}_{L^2(\P)}
-,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
-  &
-  \ 
-=
-  \ 
-\int_0^{
-\norm{F_N}_{L^2(\P)}
-}
-\sqrt{
-  \log
-  N_{[\,]}(\varepsilon,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
-}
-\,d\varepsilon
-\\
-&
-\ 
-\lesssim
-\ 
-\int_0^{
-  \varepsilon_N
-}
-  \left( 
-  \frac{1}{\varepsilon}
-\right)^{k/2}
-\,d\varepsilon
-\\
-&
-\ 
-=
-\ 
-\frac{
-\varepsilon_N^{1-k/2}
-}{1-k/2}
-\ 
-\to 0
-\ 
-\qquad
-\text{for}
-\ 
-N\to\infty
-\,.
-\end{align*}
-The second statement follows from Lemma~\ref{markov_max_lemma}
-since $F_N$ is also an envelope function of $\mathcal{F}_N\cdot\mathcal{F}$.
-\end{proof}
-
-A technical lemma for products of function classes.
-
-Define the product of two function classes
-\begin{gather*}
-  \mathcal{F}\cdot \mathcal{G}
-  :=
-  \left\{ 
-    f\cdot g
-    \colon
-    f\in\mathcal{F},
-    g\in\mathcal{G}
-  \right\}\,.
-\end{gather*}
-\begin{lemma}
-  \label{lem_prod_br}
-  Let
-  $\mathcal{F}$ and $\mathcal{G}$ be two function classes 
-  with envelope functions $F$ and $G$ satisfying
-  $\norm{F}_\infty,\norm{G}_\infty\le 1$.
-  For all $\varepsilon>0$ and all $r\in [1,\infty)$ it holds
-  \begin{gather*}
-    N_{[\,]}(2\varepsilon,\mathcal{F}\cdot\mathcal{G},\mathrm{L}_r(\P))
-    \
-    \le
-    \ 
-    N_{[\,]}(\varepsilon,\mathcal{F},\mathrm{L}_r(\P))
-    \cdot
-    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_r(\P))
-    \,.
-  \end{gather*}
-\end{lemma}
-\begin{proof}
-  Let $f\in\mathcal{F}$ and $g\in\mathcal{G}$.
-  We can choose two 
-  $(\varepsilon,L^r(\P))$
-  brackets
-  $[\underline{f},\overline{f}]$
-  and
-  $[\underline{g},\overline{g}]$
-  containing $f$ and $g$ with 
-  $\norm{\underline{f}}_\infty,\norm{\overline{f}}_\infty\le\norm{F}_\infty\le 1$
-  and
-  $\norm{\underline{g}}_\infty,\norm{\overline{g}}_\infty\le\norm{G}_\infty\le 1$.
-  We the get an 
-  $(2\varepsilon,L^r(\P))$
-  $[\underline{h},\overline{h}]$
-  bracket, containing $f\cdot g$, by
-\end{proof}
-\begin{lemma}
-  \label{ps_weights_lemma}
-  Let
-  $
-  g_1\colon
-  \mathcal{X}\to\R
-  $
-  and
-  $
-  g_2\colon
-  \mathcal{Y}\to\R
-  $
-  be a measurable functions.
-  It holds
-  \begin{gather*}
-    \E
-    \left[
-    \frac{T}{\pi(X)}
-    g_1(X)
-    \right]
-    \ 
-    =
-    \ 
-    \E
-    \left[
-    g_1(X)
-    \right]
-    \,.
-  \end{gather*}
-  If Assumption~\ref{aa:assumption:treatment_str_ign} holds true, then
-  \begin{gather*}
-    \E
-    \left[
-    \frac{T}{\pi(X)}
-    g_2(Y(T))
-    \right]
-    \ 
-    =
-    \ 
-    \E
-    \left[
-    f(Y(1))
-    \right]
-    \,.
-  \end{gather*}
-\end{lemma}
-\begin{lemma}
-  Under conditions it holds
-  $\sup_{z\in\R}\left| R_3(z) \right|\overset{\P}{\to}0$.
-\end{lemma}
-\begin{proof}
-  Let $N\ge\underline{N}$,
-  $z\in\R$,
-  and 
-  let
-  $g^\dagger$ 
-  denote the function \eqref{ghost_function} with 
-  $
-(\lambda^\dagger,\lambda_0^\dagger)
-  $.
-  If
-  \begin{gather*}
-    \left| 
-    w^\dagger(X)- \frac{1}{\pi(X)} 
-    \right|
-    \ 
-    \le
-    \ 
-    \varepsilon_N
-  \end{gather*}
-  it holds
-  \begin{gather*}
-    g^\dagger
-    (X)
-    \cdot
-    f_z
-    (T,X,Y(T))
-    \ 
-    =
-    \ 
-  \left( 
-      w^\dagger(X)
-      -
-      \frac{1}{\pi(X)}
-  \right)
-      T
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z \right\}}
-        -
-        F_{Y(1)}(z|X)
-      \right)
-      \,.
-  \end{gather*}
-  By Lemma~\ref{aa:mean:r3:lem:fz_E}
-  it holds 
-  \begin{align*}
-    &
-  f_z(T,X,Y(T))
-  \ 
-  \in
-  \ 
-  L^1(\P)\,, 
-  \\
-  &
-  f_z(T,X,Y(T))
-  \ 
-  \perp
-  \ 
-  D_N
-  \,,
-  \\
-  \E
-  [
-  &
-  f_z(T,X,Y(T))
-    |X
-  ]
-  \ 
-  =
-  \ 
-  0
-  \,.
-  \end{align*}
-  Thus, 
-  it follows from Lemma~\ref{w.Z=0}
-  \begin{gather*}
-    \E
-    \left[
-      w^\dagger(X)
-      \cdot
-      f_z(T,X,Y(T))
-    \right]
-    \ 
-    =
-    \ 
-    0
-    \,.
-  \end{gather*}
-  Since
-  \begin{gather*}
-    \E
-    \left[
-      \frac{T}{\pi(X)}
-      f_z(T,X,Y(T))
-    \right]
-    \ 
-    =
-    \ 
-    \E
-    \left[
-      \frac{T}{\pi(X)}
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z \right\}}
-        -
-        F_{Y(1)}(z|X)
-      \right)
-    \right]
-    \  
-    =
-    \ 
-    0
-  \end{gather*}
-  by Lemma~\ref{ps_weights_lemma},
-  it follows
-  \begin{align*}
-    &
-  \E
-  \left[
-    g^\dagger(X)
-    f_z(T,X,Y(T))
-  \right]
-  \\
-    &
-  \ 
-  =
-  \ 
-    \E
-    \left[
-      w^\dagger(X)
-      \cdot
-      f_z(T,X,Y(T))
-    \right]
-    \ 
-    -
-    \ 
-    \E
-    \left[
-      \frac{T}{\pi(X)}
-      f_z(T,X,Y(T))
-    \right]
-    \ 
-    =
-    \ 
-  0
-  \,.
-  \end{align*}
-  But then 
-  \begin{align*}
-    R_3(z)
-    &
-    \ 
-    =
-    \ 
-  \frac{1}
-  {
-\sqrt{N}
-  }
-    \sum_{i=1}^{N} 
-    \left[ 
-    \left( 
-    w(X_i) 
-    -
-    \frac{1}{\pi(X_i)}
-    \right)
-    T_i
-    \left( 
-    \mathbf{1}_{\left\{ Y_i \le z \right\}}
-    -
-  F_{Y(1)}(z|X_i)
-    \right)
-    \right]
-    \ 
-    =
-    \ 
-    \G_N
-    \left( 
-      g^\dagger
-      \cdot
-      f_z
-    \right)
-    \,.
-  \end{align*}
-  It follows
-\begin{align*}
-    \P
-    \left[ 
-      \sup_{z\in\R}
-     | 
-    R_3(z)
-    |
-      \ge
-      \varepsilon
-    \right]
-    &
-    \ 
-    \le
-    \ 
-    \P
-    \left[ 
-      \sup_{z\in\R}
-     | 
-    R_3(z)
-    |
-      \ge
-      \varepsilon
-      \ 
-      \text{and}
-      \ 
-    | 
-    w^\dagger(X)- 1/\pi(X)
-    |
-    \ 
-    \le
-    \ 
-    \varepsilon_N
-    \right]
-    \\
-    &
-    \quad
-    +
-    \ 
-    \P
-    \left[ 
-    | 
-    w^\dagger(X)- 1/\pi(X)
-    |
-    \ 
-    >
-    \ 
-    \varepsilon_N
-    \right]
-    \\
-    &
-    \ 
-    \le
-    \ 
-    \P
-    \left[ 
-      \norm{\G_N}^*_{\mathcal{F}_N\cdot\mathcal{F}}
-      \ge
-      \varepsilon
-    \right]
-    \ 
-    +
-    \ 
-    \ 
-    \P
-    \left[ 
-    | 
-    w^\dagger(X)- 1/\pi(X)
-    |
-    \ 
-    >
-    \ 
-    \varepsilon_N
-    \right]
-    \\
-    &
-    \ 
-    \to
-    \ 
-    0
-    \,.
-\end{align*}
-The convergence of the first term follows from
-Lemma~\ref{aa:r3:lemma:1}.
-The convergence of the second term follows from
-Theorem~\ref{aa:weights:th}.
-
-\end{proof}
-
-Next, we define some auxiliary functions.
-  For $z\in\R$ we define the function
-  \begin{align*}
-    f_z
-    \ 
-    :
-    \ 
-      \left\{ 0,1 \right\}
-      \times
-      \mathcal{X}
-      \times
-      \mathcal{Y}
-    &
-    \ 
-    \to
-    \ 
-    \R
-    \\
-      (T,X,Y(T))
-    &
-      \ 
-      \mapsto
-      \ 
-      T
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z \right\}}
-        -
-        F_{Y(1)}(z|X)
-      \right)
-      \,,
-  \end{align*}
-  and the function classes
-  \begin{gather}
-    \label{F_g}
-    \begin{split}
-    \mathcal{F}
-    &
-    \ 
-    :=
-    \ 
-    \left\{ 
-      f_z
-      \ 
-      |
-      \ 
-      z\in\R\ 
-    \right\}
-    \\
-    \mathcal{G}
-    &
-    \ 
-    :=
-    \ 
-    \left\{ 
-      \frac{f_z}{\pi(\cdot)}
-      +
-      F_{Y(1)}(z|\cdot)
-      -
-      F_{Y(1)}(z)
-      \ 
-      \colon
-      \ 
-      z\in\R\ 
-    \right\}
-    \,.
-    \end{split}
-  \end{gather}
-  \begin{assumption}
-    \label{aa:assumption:treatment_str_ign}
-    It holds $(Y(0),Y(1))\perp T | X$.
-  \end{assumption}
-  \begin{lemma}
-    \label{aa:mean:r3:lem:fz_E}
-    It holds
-    $f_z(T,X,Y(T))\in L^1(\P)$
-    and 
-    $f_z(T,X,Y(T))\perp D_N$
-    for all $z\in\R$.
-    If also Assumption~\ref{aa:assumption:treatment_str_ign} holds,
-    then 
-    for all $z\in\R$
-    \begin{gather*}
-      \E
-      \left[
-        f_z
-        \left( 
-          T,
-          X,
-          Y(T)
-        \right)
-        \,
-        |
-        \,
-        X
-      \right]
-      \ 
-      =
-      \ 
-      0
-      \qquad
-      \text{almost surely.}
-    \end{gather*}
-  \end{lemma}
-  \begin{proof}
-    Since $f_z$ is bounded by 1,
-    it holds
-    $f_z(T,X,Y(T))\in L^1(\P)$.
-    Since
-    \begin{gather*}
-    (T,X,Y(T))
-    \ 
-    \perp 
-    \ 
-    D_N
-    \ 
-    =
-    \ 
-    (T_i,X_i)_{i\in \left\{ 1,\ldots,N \right\}}
-    \end{gather*}
-    it holds
-    $f_z(T,X,Y(T))\perp D_N$
-    for all $z\in\R$.
-    For the third statement, note that
-    \begin{align*}
-      \E
-      \left[
-        f_z
-        \left( 
-          T,
-          X,
-          Y(T)
-        \right)
-        \,
-        |
-        \,
-        X
-      \right]
-      &
-      \ 
-      =
-      \ 
-      \E
-      \left[
-      T
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z \right\}}
-        -
-        F_{Y(1)}(z|X)
-      \right)
-        \,
-        |
-        \,
-        X
-      \right]
-      \\
-      &
-      \ 
-      =
-      \ 
-      \E
-      \left[
-        \mathbf{1}
-        _{\left\{  Y(1)\,\le\,z \right\}}
-        -
-        F_{Y(1)}(z|X)
-        \,
-        |
-        \,
-        X
-        ,
-        T=1
-      \right]
-      \pi(X)
-      \\
-      &
-      \ 
-      =
-      \ 
-      \left( 
-      \E
-      \left[
-        \mathbf{1}
-        _{\left\{  Y(1)\,\le\,z \right\}}
-        \,
-        |
-        \,
-        X
-      \right]
-      \ 
-        -
-      \ 
-        F_{Y(1)}(z|X)
-      \right)
-      \pi(X)
-      \\
-      &
-      \ 
-      =
-      \ 
-      0
-      \qquad
-      \text{almost surely.}
-    \end{align*}
-    The third equality is due to Assumption~\ref{aa:assumption:treatment_str_ign}.
-  \end{proof}
-The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
-\newpage
-\begin{lemma}
-  \label{bracketing_number_lem}
-  The function class $\mathcal{F}$ and $\mathcal{G}$ defined in \eqref{F_g} are measurable.
-  Furthermore, 
-  \begin{gather*}
-    N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{F}, L^2(\P))
-    \ 
-    \lesssim
-    \ 
-    \left( 
-      \frac{1}{\varepsilon}
-    \right)^2
-    \qquad
-    \text{for all}
-    \ 
-    \varepsilon>0
-    \,.
-  \end{gather*}
-  If $1/\pi(X)\in L^2(\P)$, it also holds 
-  \begin{gather*}
-    N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{G}, L^2(\P))
-    \ 
-    \lesssim
-    \ 
-    \left( 
-    \frac{
-      1+
-    \norm{1/\pi(X)}_{ L^2(\P)}
-    }
-    {\varepsilon}
-    \right)^4
-    \qquad
-    \text{for all}
-    \ 
-    \varepsilon>0
-    \,.
-  \end{gather*}
-%  Furthermore, 
-%  consider the function class
-%  \begin{gather*}
-%    \mathcal{G}
-%    :=
-%    \left\{ 
-%      f_{1/\pi}^z
-%      +
-%        F_{Y(1)}(z|\cdot)
-%        -
-%        F_{Y(1)}(z)
-%      \ 
-%      |
-%      \ 
-%      z\in\R
-%    \right\}
-%    \,.
-%  \end{gather*}
-%  If $1/\pi(X)\in  L^2(\P)$
-%  it holds
-%  \begin{gather}
-%    N_{[\,]}(\varepsilon,\mathcal{G}, L^2(\P))
-%    \le
-%    ??
-%    \qquad
-%    \text{for all}
-%    \ 
-%    \varepsilon>0
-%    \,.
-%  \end{gather}
-\end{lemma}
-\begin{proof}
-  As in \cite[Example~19.6]{Vaart2000}
-  we choose for
-  $\varepsilon>0$ and $m\in\mathbb{N}$
-  \begin{gather*}
-  -\infty=z_0\ <\ z_1\ <\ \cdots\ <\ z_{m-1}\ <\ z_m=\infty
-  \,
-  \end{gather*}
-  such that
-  \begin{gather}
-    \label{size_z}
-    \P
-    \left[ 
-      Y(1)\in \left[ z_{l-1},z_l \right]\,
-    \right]
-    \ 
-    \le
-    \ 
-    \varepsilon
-    \qquad
-    \text{for all}\ 
-    l\in \left\{ 1,\ldots,m \right\}
-  \end{gather}
-  and $m \le 2/\varepsilon$.
-  Next, we define $m$ brackets by
-\begin{align*}
-  \overline{f^l}
-  (T,X,Y(T))
-  &
-  \ 
-  :=
-  \ 
-      T
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z_{l} \right\}}
-        -
-        F_{Y(1)}(z_{l-1}|X)
-      \right)
-      \,,
-      \\
-  \underline{f^l}
-  (T,X,Y(T))
-  &
-  \ 
-  :=
-  \ 
-      T
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
-        -
-        F_{Y(1)}(z_l|X)
-      \right)
-      \,,
-\end{align*}
-for $l\in \left\{ 1,\ldots,m \right\}$.
-These brackets cover $\mathcal{F}$.
-Indeed,
-\begin{gather*}
-  \text{for all}\ 
-  z\in\R
-  \ 
-  \text{there exists} \ 
-l\in \left\{ 1,\ldots,m \right\}
-\qquad 
-\text{such that}\qquad
-z_{l-1}
-\ 
-\le
-\ 
-z
-\ 
-\le
-\ 
-z_l
-\,.
-\end{gather*}
-By the monotonicity of 
-$
-        \mathbf{1}
-      _{\left\{  Y(T)\,\le\,(\cdot) \right\}}
-$
-and
-$
-        F_{Y(1)}(\cdot|X)
-$
-and the non-negativity of $T$ it follows
-\begin{gather*}
-  \text{for all}\ 
-  z\in\R
-  \ 
-  \text{there exists} \ 
-l\in \left\{ 1,\ldots,m \right\}
-\qquad 
-\text{such that}\qquad
-  \underline{f^l}
-  \ 
-  \le
-  \ 
-  f_z
-  \ 
-  \le
-  \ 
-  \overline{f^l}
-  \,.
-\end{gather*}
-Thus, the $m$ brackets 
-$
-[
-  \underline{f^l}
-  ,
-  \overline{f^l}
-]
-$
-cover $\mathcal{F}$.
-
-Let's calculate the size of the brackets.
-It holds
-\begin{align*}
-  &
-\E
-\left[ 
-      T
-      \cdot
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z_{l} \right\}}
-        -
-        F_{Y(1)}(z_{l-1}|X)
-        \ 
-        -
-        \ 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
-        +
-        F_{Y(1)}(z_{l}|X)
-      \right)
-      \,
-\right]
-\\
-  &
-  \ 
-=
-  \ 
-\E
-\left[ 
-      T
-      \cdot
-      \left( 
-        \mathbf{1}
-        _{\left\{
-        Y(T)
-        \,
-        \in 
-        \,
-    [z_{l-1},z_l]
-\right\}}
-\ 
-        +
-\ 
-        \P
-        \left[ 
-          Y(1)
-          \in
-    [z_{l-1},z_l]
-        \,
-    |
-        \,
-    X
-        \right]
-      \right)
-      \,
-\right]
-\\
-  &
-  \ 
-\le
-  \ 
-\E
-\left[ 
-  \,
-  \pi(X)
-  \cdot
-        \P
-        \left[ 
-          Y(1)
-          \in
-    [z_{l-1},z_l]
-          \,
-    |
-          \,
-    X
-        \right]
-          \ 
-\right]
-\ 
-+
-\ 
-\varepsilon
-\\
-  &
-  \ 
-\le
-  \ 
-2
-\,
-\varepsilon
-\,.
-\end{align*}
-We used \eqref{size_z}, $0\le T,\pi(X)\le 1$ and the properties of conditional expectation.
-It follows
-\begin{align*}
-  \norm{
-  \overline{f^l}
--
-  \underline{f^l}
-}_
-{ L^2(\P)}
-\ 
-\lesssim
-\ 
-\E
-\left[ 
-  \,
-      T
-      \cdot
-      \left( 
-        \mathbf{1}
-        _{\left\{
-        Y(T)
-        \,
-        \in 
-        \,
-    [z_{l-1},z_l]
-\right\}}
-\ 
-        +
-\ 
-        \P
-        \left[ 
-          Y(1)
-          \in
-    [z_{l-1},z_l]
-        \,
-    |
-        \,
-    X
-        \right]
-      \right)
-      \,
-   \right]^{1/2}
-\ 
-\lesssim
-\ 
-\varepsilon^{1/2}
-\,.
-\end{align*}
-Since $m\le 2/\varepsilon$ it holds
-  \begin{align*}
-    N_{[\,]}
-    \left(
-\varepsilon^{1/2}
-    ,
-    \,
-    \mathcal{F}\,,\, L^2(\P)
-    \right)
-    &
-    \ 
-    \lesssim
-    \ 
-    \frac{1}{\varepsilon}
-    \intertext{and thus}
-    N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{F}, L^2(\P))
-    &
-    \ 
-    \lesssim
-    \ 
-    \left( 
-      \frac{1}{\varepsilon}
-    \right)^2
-    \,.
-  \end{align*}
-  Next, we look at $\mathcal{G}$. To this end, we define 
-  $m$ brackets by
- \begin{align*}
-    \overline{g^l}(T,X,Y(T))
-    \ 
-    :=
-    \ 
-    \frac{T}{\pi(X)}
-    \left( 
-      \mathbf{1}_{\left\{  Y(T)\,\le\,z_{l} \right\}}
-      -
-      F_{Y(1)}(z_{l-1}|X)
-    \right)
-    \ 
-    +
-    \ 
-    F_{Y(1)}(z_{l}|X)
--
-F_{Y(1)}(z_{l-1})
-\,,
-\\
-    \underline{g^l}(T,X,Y(T))
-    \ 
-    :=
-    \ 
-    \frac{T}{\pi(X)}
-    \left( 
-      \mathbf{1}_{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
-      -
-      F_{Y(1)}(z_l|X)
-    \right)
-    \ 
-    +
-    \ 
-    F_{Y(1)}(z_{l-1}|X)
--
-      F_{Y(1)}(z_l)
-\,,
-  \end{align*}
-  for $l\in \left\{ 1,\ldots,m \right\}$.
-  With the same arguments as before, we see that these brackets cover $\mathcal{G}$.
-  Let's calculate the size.
-  It holds
-  \begin{align*}
-    &
-    \norm{
-      \frac{T}{\pi(X)}
-      \left( 
-      \mathbf{1}_{
-      \left\{ 
-      Y(T)\in [z_{l-1},z_l] 
-    \right\}
-    }
-      +
-      \P
-      \left[ 
-      Y(1)\in [z_{l-1},z_l] 
-      \,
-      |
-      \,
-      X
-      \right]
-      \right)
-    }_{ L^2(\P)}
-    \\
-    &
-    \
-    \lesssim
-    \
-    \left( 
-      \E
-      \left[ 
-        \frac{1}{\pi(X)}
-        \frac{T}{\pi(X)}
-      \left( 
-      \mathbf{1}_{
-      \left\{ 
-      Y(T)\in [z_{l-1},z_l] 
-    \right\}
-    }
-      +
-      \P
-      \left[ 
-      Y(1)\in [z_{l-1},z_l] 
-      \,
-      |
-      \,
-      X
-      \right]
-      \right)
-      \right]
-    \right)
-    ^{1/2}
-    \\
-    &
-    \
-    \lesssim
-    \
-    \left( 
-      \E
-      \left[ 
-        \frac{1}{\pi(X)}
-      \P
-      \left[ 
-      Y(1)\in [z_{l-1},z_l] 
-      \,
-      |
-      \,
-      X
-      \right]
-      \right]
-    \right)
-    ^{1/2}
-    \\
-    &
-    \ 
-    \lesssim
-    \ 
-    \left( 
-      \norm{1/\pi(X)}_{ L^2(\P)}
-      \sqrt{\varepsilon}
-    \right)
-    ^{1/2}
-    \ 
-    =
-    \ 
-    \varepsilon^{1/4}
-    \norm{1/\pi(X)}_{ L^2(\P)}^{1/2}
-  \end{align*}
-  and
-  \begin{align*}
-     \norm{
-      \P
-      \left[ 
-      Y(1)\in [z_{l-1},z_l] 
-      \,
-      |
-      \,
-      X
-      \right]
-      \ 
-     + 
-      \ 
-      \P
-      \left[ 
-      Y(1)\in [z_{l-1},z_l] \,
-      \right]
-    }_{ L^2(\P)}
-    \ 
-    \lesssim
-    \ 
-    \varepsilon^{1/2}
-    \,.
-  \end{align*}
-  Thus
-  \begin{gather*}
-  \norm{
-  \overline{g^l}
--
-  \underline{g^l}
-}_
-{ L^2(\P)}
-\ 
-\lesssim
-\ 
-\varepsilon^{1/4}
-\left( 
-  1
-  +
-    \norm{1/\pi(X)}_{ L^2(\P)}^{1/2}
-\right)
-\ 
-\lesssim
-\ 
-\varepsilon^{1/4}
-\left( 
-  1
-  +
-    \norm{1/\pi(X)}_{ L^2(\P)}
-\right)
-\,.
-  \end{gather*}
-As before, it follows
-\begin{gather*}
-    N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{G}, L^2(\P))
-    \ 
-    \lesssim
-    \ 
-    \left( 
-    \frac{
-      1+
-    \norm{1/\pi(X)}_{ L^2(\P)}
-    }
-    {\varepsilon}
-    \right)^4
-    \,.
-\end{gather*}
-\end{proof}
-
-\begin{lemma}
-  \label{markov_max_lemma}
-  Let $(\mathcal{F}_N)$ be a sequence of measurable function classes with envelope functions $(F_N)$.
-  If
-  \begin{gather}
-    J_{[\, ]}
-    \left( 
-    \norm{F_N}_{ L^2(\P)}
-    ,
-    \mathcal{F}_N
-    ,
-     L^2(\P)
-    \right)
-    \ 
-    \to
-    \ 
-    0
-    \qquad
-    \text{for}
-    \ 
-    N
-    \to
-    \infty
-  \end{gather}
-  it holds 
-  $
-  \norm{\G_N}^*_{\mathcal{F}_N}\overset{\P}{\to}0
-  $.
-\end{lemma}
-\begin{proof}
-  By Markov's inequality and Theorem~\ref{th:max_ineq} it holds for all $\varepsilon>0$
-  \begin{align*}
-    &
-    \P
-    [
-  \norm{\G_N}^*_{\mathcal{F}_N}
-  \ge
-  \varepsilon
-    ]
-    \\
-    &
-    \ 
-    \le
-    \ 
-    \varepsilon^{-1}
-    \E
-    [
-  \norm{\G_N}^*_{\mathcal{F}_N}
-    ]
-    \ 
-    =
-    \ 
-    \varepsilon^{-1}
-    \E^*
-    [
-  \norm{\G_N}_{\mathcal{F}_N}
-    ]
-    \ 
-    \lesssim
-    \ 
-    \varepsilon^{-1}
-    J_{[\, ]}
-    \left( 
-    \norm{F_N}_{ L^2(\P)}
-    ,
-    \mathcal{F}_N
-    ,
-     L^2(\P)
-    \right)
-    \ 
-    \to
-    \ 
-    0
-  \end{align*}
-  for $N\to\infty$. 
-\end{proof}
-L
 \begin{ftheorem}
   \label{aa:mean:th}
   Under conditions 
@@ -1548,6 +178,7 @@ the stochastic process
   to a Gaussian process with mean 0 and covariance
 \begin{align}
   \label{cov:lp}
+ \begin{split}
   &
   \mathbf{Cov}
   (z_1,z_2)
@@ -1567,12 +198,15 @@ the stochastic process
  \cdot
  F_{Y(1)}(z_2|X)
   \right]
-  \ 
+  \\
+  &
+  \qquad 
  -
  \ 
  F_{Y(1)}(z_1)
  \cdot
  F_{Y(1)}(z_2)
+ \end{split}
 \end{align}
 \end{ftheorem}
 
@@ -2370,306 +1004,989 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 \begin{proof}
   \cite[Corollary~19.35]{Vaart2000}
 \end{proof}
+%
+%et 
+%  $(\varepsilon_N)\subset(0,1]$ be a decreasing sequence with 
+%  $\varepsilon_N\to 0$ as $N\to\infty$ and define for
+%  $N\in\mathbb{N}$ and $z\in\R$ the function
+% \begin{align*}
+%    f_{\varepsilon_N,\pm}^z
+%    \ 
+%    :
+%    \ 
+%    &
+%      \left\{ 0,1 \right\}
+%      \times
+%      \mathcal{X}
+%      \times
+%      \mathcal{Y}
+%    \ 
+%    \to
+%    \ 
+%    \R
+%    \\
+%    &
+%      (T,X,Y(T))
+%      \ 
+%      \mapsto
+%      \ 
+%      \mathbf{1}
+%      _
+%      {\left\{ 
+%          \left|
+%      w(X)-\frac{1}{\pi(X)}
+%          \right|
+%          \,
+%          \le
+%          \,
+%          \varepsilon_N/2
+%      \right\}}
+%      \left( 
+%      w(X)-\frac{1}{\pi(X)}
+%      \right)
+%      ^{\pm}
+%      T
+%      \left( 
+%        \mathbf{1}
+%        _{\left\{  Y(T)\,\le\,z \right\}}
+%        -
+%        F_{Y(1)}(z|X)
+%      \right)
+%      \,,
+%  \end{align*}
+%  and define 
+%  \begin{gather*}
+%    \mathcal{F}_N^\pm
+%    :=
+%    \left\{ 
+%    f_{\varepsilon_N,\pm}^z
+%    |
+%    z\in\R
+%    \right\}
+%    \,.
+%  \end{gather*}
+%\begin{lemma}
+%  Consider the weights function
+%  \begin{align*}
+%    w
+%    \colon
+%    \mathcal{X}
+%    \times
+%    \R^{N+1}
+%    \ 
+%    \to
+%    \ 
+%    \R
+%    \,,
+%    \quad
+%    (X,(\lambda,\lambda_0))
+%    \ 
+%    \mapsto
+%    \ 
+%    (
+%    f^{'}
+%    )^{-1}
+%    \left( 
+%      \inner{B(X)}{\lambda}
+%      +
+%      \lambda_0
+%    \right)
+%    \,.
+%  \end{align*}
+%    If the optimal solution 
+%    $
+%    (\lambda^\dagger,\lambda_0^\dagger)
+%    $ to Problem? exists and is measurable for all $N\in\mathbb{N}$ 
+%    then $
+%    w
+%    \circ
+%    (
+%    X
+%    ,
+%    (\lambda^\dagger,\lambda_0^\dagger)
+%    )
+%    $
+%    is measurable.
+%\end{lemma}
+%\begin{lemma}
+%  \label{bounded_f_lemma}
+%    If the optimal solution $(\lambda^\dagger,\lambda_0^\dagger)$ to Problem? exists and is measurable for all $N\in\mathbb{N}$ 
+%  the function class
+%  $
+%    \mathcal{F}_N^\pm
+%  $
+%    is measurable for all $N\in\mathbb{N}$.
+%    Furthermore, $\mathcal{F}_N^\pm$ is bounded above by $\varepsilon_N$ and
+%    \begin{gather*}
+%     J_{[\, ]}
+%    \left( 
+%      \varepsilon_N
+%    ,
+%    \mathcal{F}_N^\pm
+%    ,
+%     L^2(\P)
+%    \right)
+%    \ 
+%    \to
+%    \ 
+%    0
+%    \qquad
+%    \text{for}
+%    \ 
+%    N
+%    \to
+%    \infty
+%\,. 
+%    \end{gather*}
+%\end{lemma}
+%\begin{proof}
+%  If the optimal solution $(\lambda^\dagger,\lambda_0^\dagger)$ to Problem? exists and is measurable for all $N\in\mathbb{N}$ 
+%  then the weights function $w$ is measurable. Indeed,
+%  this follows from
+%  \begin{gather*}
+%    w(X)=
+%    (
+%    f^{'}
+%    )
+%    ^{-1}
+%    \left( \inner{B(X)}{\lambda^\dagger}+\lambda^\dagger_0 \right)
+%    \,,
+%  \end{gather*}
+%  the measurability of the basis functions $B$ and the continuity of $
+%    (
+%    f^{'}
+%    )
+%    ^{-1}
+%    $. Thus $f_{\varepsilon_N,\pm}^z$ are measurable for all $N\in\mathbb{N}$ and all $z\in\R$. Clearly, 
+%    $\mathcal{F}_N^\pm$ is bounded above by $\varepsilon_N$.
+%    Since 
+%    \begin{gather*}
+%       \mathbf{1}
+%      _
+%      {\left\{ 
+%          \left|
+%      w(X)-\frac{1}{\pi(X)}
+%          \right|
+%          \,
+%          \le
+%          \,
+%          \varepsilon_N/2
+%      \right\}}
+%      \left( 
+%      w(X)-\frac{1}{\pi(X)}
+%      \right)
+%      ^{\pm}
+%    \end{gather*}
+%    is non-negative and bounded above by $\varepsilon_N$
+%    it follows from Lemma~\ref
+%    {lem:brack_n}
+%  \begin{gather*}
+%    N_{[\,]}
+%    (
+%    \varepsilon
+%    ,
+%    \mathcal{F}_N^\pm, L^2(\P))
+%    \ 
+%    \lesssim
+%    \ 
+%    \left( 
+%    \frac
+%    {\varepsilon_N}
+%    {\varepsilon}
+%    \right)^2
+%    \ 
+%    \lesssim
+%    \ 
+%    \left( 
+%    \frac
+%    {1}
+%    {\varepsilon}
+%    \right)^2
+%    \qquad
+%    \text{for all}
+%    \ 
+%    \varepsilon>0
+%    \,.
+%  \end{gather*}
+%Thus
+%    \begin{align*}
+%     J_{[\, ]}
+%    \left( 
+%      \varepsilon_N
+%    ,
+%    \mathcal{F}_N^\pm
+%    ,
+%     L^2(\P)
+%    \right)
+%    &
+%    \ 
+%=
+%\  
+%\int^{\varepsilon_N}_0
+%\sqrt{
+%\log
+%    N_{[\,]}
+%    (
+%    \varepsilon
+%    ,
+%    \mathcal{F}_N^\pm, L^2(\P))
+%}
+%\, 
+%d\varepsilon
+%\\
+%&
+%\ 
+%\lesssim
+%\ 
+%\int^{\varepsilon_N}_0
+%\log
+%\left( 
+%  \frac{1}{\varepsilon}
+%\right)
+%\, 
+%d\varepsilon
+%\ 
+%=
+%\ 
+%\varepsilon_N
+%-
+%\varepsilon_N \log(\varepsilon_N)
+%\ 
+%\to
+%\ 
+%0 
+%\qquad
+%\text{for}\ 
+%N\to\infty
+%\,.
+%    \end{align*}
+%\end{proof}
+%In the next lemma we get rid of the $\varepsilon_N$ bound
+%\begin{lemma}
+%
+%  \label{lemma_fpm}
+% Consider for $z\in\R$ the function
+% \begin{align*}
+%    f_{\pm}^z
+%    \ 
+%    :
+%    \ 
+%      \left\{ 0,1 \right\}
+%      \times
+%      \mathcal{X}
+%      \times
+%      \mathcal{Y}
+%    &
+%    \ 
+%    \to
+%    \ 
+%    \R
+%    \\
+%      (T,X,Y(T))
+%    &
+%      \ 
+%      \mapsto
+%      \ 
+%      \left( 
+%      w(X)-\frac{1}{\pi(X)}
+%      \right)
+%      ^{\pm}
+%      T
+%      \left( 
+%        \mathbf{1}
+%        _{\left\{  Y(T)\,\le\,z \right\}}
+%        -
+%        F_{Y(1)}(z|X)
+%      \right)
+%      \,.
+%  \end{align*}
+%  It holds
+%  $\sup_{z\in\R}\left| \G_N f^z_\pm \right|\overset{\P}{\to}0$.
+%  Furthermore, for
+% \begin{align*}
+%    f_z
+%    \ 
+%    :
+%    \ 
+%      \left\{ 0,1 \right\}
+%      \times
+%      \mathcal{X}
+%      \times
+%      \mathcal{Y}
+%    &
+%    \ 
+%    \to
+%    \ 
+%    \R
+%    \\
+%      (T,X,Y(T))
+%    &
+%      \ 
+%      \mapsto
+%      \ 
+%      \left( 
+%      w(X)-\frac{1}{\pi(X)}
+%      \right)
+%      T
+%      \left( 
+%        \mathbf{1}
+%        _{\left\{  Y(T)\,\le\,z \right\}}
+%        -
+%        F_{Y(1)}(z|X)
+%      \right)
+%      \,.
+%  \end{align*}
+%  it holds
+%  $\sup_{z\in\R}\left| \G_N f_z \right|\overset{\P}{\to}0$.
+%\end{lemma}
+%\begin{proof}
+%  It holds for all $z\in\R$
+%  $
+%  $
+%  \begin{gather*}
+%  f^z_\pm
+%      (T,X,Y(T))
+%      \ 
+%      \lesssim
+%      \ 
+%     \left(
+%      w(X)- \frac{1}{\pi(X)}
+%      \right)
+%      ^\pm
+%      \,.
+%  \end{gather*}
+%  By Theorem~\ref{aa:weights:th}
+%  there exists a decreasing sequence 
+%  $(\varepsilon_N)\subset(0,1]$
+%  with $\varepsilon_N\to 0$
+%  and
+%  $
+%  \P[
+%\left| 
+%      w(X)- 1/\pi(X)
+%\right|
+%\le
+%\varepsilon_N/2
+%  ]
+%  \to 1
+%  $
+%  for $N\to\infty$.
+%  Therefore
+%  \begin{gather*}
+%  \P
+%  \left[
+%  f^z_\pm
+%  \in
+%  \mathcal{F}_N^\pm
+%  \
+%  \forall
+%  z\in\R
+%  \right]
+%    =
+%  \P[
+%\left| 
+%      w(X)- 1/\pi(X)
+%\right|
+%\le
+%\varepsilon_N/2
+%  ]
+%  \to 1
+%  \,.
+%  \end{gather*}
+%Then, for all $\varepsilon>0$ it holds
+%\begin{align*}
+%  \P
+%  \left[
+%  \sup_{z\in\R}
+%  \left| 
+%  \G_N
+%  f^z_\pm
+%  \right|
+%  \le \varepsilon
+%  \right]
+%  &
+%  \ 
+%  \ge
+%  \ 
+%  \P
+%  \left[
+%  f^z_\pm
+%  \in
+%  \mathcal{F}_N^\pm
+%  \
+%  \forall
+%  z\in\R
+%  \,,
+%  \ 
+%  \norm{\G_N}^*_{\mathcal{F}_N^\pm}
+%  \le \varepsilon
+%  \right]
+%  \\
+%  &
+%  \ 
+%  \ge
+%  \ 
+%  \P
+%  \left[
+%  f^z_\pm
+%  \in
+%  \mathcal{F}_N^\pm
+%  \
+%  \forall
+%  z\in\R
+%  \right]
+%  \ 
+%  -
+%  \ 
+%  \P
+%  \left[
+%  \norm{\G_N}^*_{\mathcal{F}_N^\pm}
+%  \le \varepsilon
+%  \right]
+%  \\
+%  &
+%  \ 
+%  \to
+%  \ 
+%  1
+%  \,.
+%\end{align*}
+%The convergence of the last term to 0 is due to 
+%Lemma~\ref{bounded_f_lemma} and Lemma~\ref{markov_max_lemma}.
+%Thus
+%  $\sup_{z\in\R}\left| \G_N f^z_\pm \right|\overset{\P}{\to}0$.
+%  Note, that 
+%  \begin{gather*}
+%\G_N f_z 
+%=
+%\G_N f^z_+
+%-
+%\G_N f^z_-
+%\qquad
+%\text{for all}\ 
+%z\in\R
+%\,.
+%  \end{gather*}
+%  Thus by Slutzky's Theorem\cite[Theorem~13.18]{Klenke2020}
+%  it holds
+%  $\sup_{z\in\R}\left| \G_N f_z \right|\overset{\P}{\to}0$.
+%\end{proof}
+%%\begin{lemma}
+%%  Define for
+%%  $z\in\R$
+%% \begin{align*}
+%%    f_z
+%%    \ 
+%%    :
+%%    \ 
+%%      \left\{ 0,1 \right\}
+%%      \times
+%%      \mathcal{X}
+%%      \times
+%%      \mathcal{Y}
+%%&
+%%    \ 
+%%    \to
+%%    \ 
+%%      \R
+%%    \\
+%%    \left(
+%%      T,X,Y(T)
+%%    \right)
+%%    &
+%%      \ 
+%%      \mapsto
+%%      \ 
+%%      \frac{T}{\pi(X)}
+%%      \left( 
+%%        \mathbf{1}
+%%        _{\left\{  Y(T)\,\le\,z \right\}}
+%%        -
+%%        F_{Y(1)}(z|X)
+%%      \right)
+%%      \ 
+%%      +
+%%      \ 
+%%      \left( 
+%%        F_{Y(1)}(z|X)
+%%        -
+%%        F_{Y(1)}(z)
+%%      \right)
+%%      \,,
+%%  \end{align*}
+%%and consider the function class
+%%$
+%%  \mathcal{G}
+%%  \ 
+%%  :=
+%%  \ 
+%%  \left\{ 
+%%    f_z
+%%  \ 
+%%    |
+%%  \ 
+%%    z\in\R
+%%  \right\}
+%%$
+%%\begin{gather}
+%%    \,.
+%%\end{gather}
+%%  Then $\mathcal{G}$ is a class of measurable functions 
+%%  and it holds
+%%  \begin{gather}
+%%    N_{[\,]}(\varepsilon,\mathcal{G}, L^2(\P))
+%%    \le
+%%    ??
+%%    \qquad
+%%    \text{for all}
+%%    \ 
+%%    \varepsilon>0
+%%    \,.
+%%  \end{gather}
+%%\end{lemma}
+%%\begin{lemma}
+%%  \label{lemma_max_ineq}
+%%  Consider a function class $\mathcal{F}$ with unit ball
+%%  $
+%%  B_{\mathcal{F}}
+%%  :=
+%%  \left\{ 
+%%    f\in \mathcal{F}
+%%    \colon
+%%    \norm{f}_\infty
+%%    \le
+%%    1
+%%  \right\}
+%%  $.
+%%  Let $(\varepsilon_N)$ be a sequence converging to 0
+%%  and let 
+%%  $
+%%  \left( 
+%%    \mathcal{F}_N
+%%  \right)
+%%    :=
+%%    \left( 
+%%      C\cdot
+%%    \varepsilon_N\cdot B_\mathcal{F}
+%%    \right)
+%%  $
+%%  denote the sequence of scaled unit balls in $\mathcal{F}$.
+%%  Assume that 
+%%  there exists
+%%  $k<2$ such that 
+%%  the covering number of the unit ball in $\mathcal{F}$
+%%  satisfies
+%%  \begin{gather}
+%%        \log 
+%%      N_{[\,]}
+%%\left( \varepsilon, B_\mathcal{F}, L^2(\P) \right)
+%%\ 
+%%\lesssim
+%%\ 
+%%\left( \frac{1}{\varepsilon} \right)^k
+%%\qquad
+%%\text{for all}\ 
+%%\varepsilon>0
+%%\,.
+%%  \end{gather}
+%%  Then it holds
+%%  $
+%%      \norm{G_N}^*_{\mathcal{F}_N}
+%%    \ 
+%%    \overset{\P}
+%%    {\to}
+%%    \ 
+%%    0
+%%  $
+%%  for $N\to \infty$. 
+%%\end{lemma}
+%%\begin{proof}
+%%  By maximal inequalities it holds
+%%  \begin{align*}
+%%    \E^*
+%%    \left[ 
+%%      \norm{G_N}_{\mathcal{F}_N}
+%%    \right]
+%%    &
+%%      \ 
+%%      \lesssim
+%%      \ 
+%%      J_{[\,]}\left( \varepsilon_N, \mathcal{F}_N, L^2(\P) \right)
+%%      \\
+%%    &
+%%      \ 
+%%      =
+%%      \ 
+%%      \int_0^{\varepsilon_N}
+%%      \sqrt{
+%%        \log 
+%%      N_{[\,]}
+%%\left( \varepsilon, \mathcal{F}_N, L^2(\P) \right)
+%%    }
+%%    \,
+%%    d\varepsilon
+%%    \\
+%%    &
+%%    \ 
+%%    =
+%%    \ 
+%%      \int_0^{\varepsilon_N}
+%%      \sqrt{\log 
+%%      N_{[\,]}
+%%\left( \varepsilon/(C\cdot \varepsilon_N), B_\mathcal{F}, L^2(\P) \right)
+%%    }
+%%    \,
+%%    d\varepsilon
+%%    \\
+%%    &
+%%    \ 
+%%    \lesssim
+%%    \ 
+%%      \int_0^{\varepsilon_N}
+%%      \left( 
+%%      \frac{\varepsilon_N}{\varepsilon}
+%%    \right)^{k/2}
+%%    \,
+%%    d\varepsilon
+%%    \\
+%%    &
+%%    \ 
+%%    =
+%%    \ 
+%%  \varepsilon_N^{k/2}
+%%  \frac{1}{1-k/2}
+%%  \varepsilon_N^{1-k/2}
+%%  \\
+%%    &
+%%    \ 
+%%  \lesssim
+%%    \ 
+%%  \varepsilon_N
+%%  \\
+%%    &
+%%    \ 
+%%  \to
+%%  \ 
+%%  0
+%%  \qquad
+%%  \text{for}\ 
+%%  N\to
+%%  \infty
+%%  \,.
+%%  \end{align*}
+%%  Note, that $k<2$.
+%%  By the boundedness of $\E^*$ there is no measurability problem.
+%%  By Markov's Inequality it holds
+%%  \begin{align*}
+%%    \P
+%%    \left[ 
+%%      \norm{G_N}^*_{\mathcal{F}_N}\ge \varepsilon
+%%    \right]
+%%    \le
+%%    \varepsilon^{-1}
+%%    \,
+%%    \E^*
+%%    \left[ 
+%%      \norm{G_N}_{\mathcal{F}_N}
+%%    \right]
+%%    \ 
+%%    \to
+%%    \ 
+%%    0
+%%    \qquad
+%%    \text{for}\ 
+%%    N\to\infty
+%%    \,.
+%%  \end{align*}
+%%\end{proof}
+%%The next two lemmas connect $R_3$ to the theory of empirical processes.
+%%\begin{lemma}
+%%  \label{aa:mean:l:fz}
+%%  Consider 
+%%  the (random) function
+%%  $
+%%  f_D^z
+%%  $ given by
+%%  \begin{gather}
+%%    f_{D}^z(T,X,Y(T))
+%%    :=
+%%    T
+%%    \left( 
+%%    w(D,X)- \frac{1}{\pi(X)}
+%%    \right)
+%%    \left( 
+%%    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+%%    -
+%%  F_{Y(1)}(z|X)
+%%    \right)
+%%    \,.
+%%  \end{gather}
+%%  Assume that 
+%%  there exists a function class $\mathcal{F}$ satisfying the requirements of Lemma~\ref{lemma_max_ineq} and that
+%%  $
+%%  f_D^z
+%%  \in \mathcal{F}
+%%  $
+%%  for all $z\in\R$ almost surely.
+%%  It then holds
+%%  $
+%%  \sup_{z\in\R} \left| G_Nf_D^z \right|
+%%  \overset{\P}{\to}0$ for 
+%%  $N\to\infty$.
+%%\end{lemma}
+%%\begin{proof}
+%%  By the consistency of the weights there exists a learning rate $(\varepsilon_N)$ such that
+%%  \begin{gather}
+%%    \P
+%%    \left[ 
+%%      \left| 
+%%      w(X,D)
+%%      -
+%%      \frac{1}{\pi(X)}
+%%      \right|
+%%      \le
+%%      \varepsilon_N
+%%    \right]
+%%    \to 1 
+%%    \qquad
+%%    \text{for}\ 
+%%    N\to \infty
+%%    \,.
+%%  \end{gather}
+%%  Let
+%%  $\mathcal{F}_N:=\varepsilon_NB_\mathcal{F}$ as in 
+%%  Lemma~\ref{lemma_max_ineq}.
+%%  It holds
+%%\begin{gather}
+%%      \sup_{z\in\R}
+%%      \left| 
+%%    f_D^z
+%%      \right|
+%%      \lesssim
+%%      \left| 
+%%      w(X,D)
+%%      -
+%%      \frac{1}{\pi(X)}
+%%      \right|
+%%      \le
+%%      \varepsilon_N
+%%\end{gather}
+%%with probability going to 1 as $N\to\infty$.
+%%Thus
+%% \begin{gather}
+%%    \P
+%%    \left[ 
+%%    f_D^z
+%%    \in
+%%  \mathcal{F}_N
+%%  \ \forall\,z\in\R
+%%    \right]
+%%    =
+%%    \P
+%%    \left[ 
+%%      \sup_{z\in\R}
+%%      \left| 
+%%    f_D^z
+%%      \right|
+%%      \lesssim
+%%      \varepsilon_N
+%%    \right]
+%%    \to 1
+%%    \qquad
+%%    \text{as}
+%%    \ 
+%%    N\to\infty
+%%    \,.
+%%  \end{gather}
+%%  Then it holds
+%%  for all $\varepsilon>0$ 
+%%  \begin{align*}
+%%    \P
+%%    \left[ 
+%%      \sup_{z\in\R}
+%%  \left| G_Nf_D^z \right|
+%%  \le
+%%  \varepsilon
+%%    \right]
+%%    &
+%%    \ 
+%%    \ge
+%%    \ 
+%%    \P
+%%    \left[ 
+%%      \sup_{z\in\R}
+%%  \left| G_Nf_D^z \right|
+%%  \le
+%%  \norm{G_N}^*_{\mathcal{F}_N}
+%%  \le
+%%  \varepsilon
+%%    \right]
+%%    \\
+%%    &
+%%    \ 
+%%    \ge
+%%    \ 
+%%    \P
+%%    \left[ 
+%%    f_D^z
+%%    \in
+%%  \mathcal{F}_N
+%%  \ \forall\,z\in\R
+%%      \ 
+%%      \text{and}\ 
+%%  \norm{G_N}^*_{\mathcal{F}_N}
+%%  \le
+%%  \varepsilon
+%%    \right]
+%%    \\
+%%    &
+%%    \ 
+%%    \ge
+%%    \ 
+%%    \P
+%%    \left[ 
+%%    f_D^z
+%%    \in
+%%  \mathcal{F}_N
+%%  \ \forall\,z\in\R
+%%    \right]
+%%    -
+%%    \P
+%%    \left[ 
+%%  \norm{G_N}^*_{\mathcal{F}_N}
+%%    \ 
+%%  \ge
+%%    \ 
+%%  \varepsilon
+%%    \right]
+%%    \\
+%%    &
+%%    \ 
+%%    \to
+%%    \ 
+%%    1
+%%    \,.
+%%  \end{align*}
+%%  The convergence of the second term is due to Lemma~\ref{lemma_max_ineq}.
+%%
+%%\end{proof}
+%%
+%\begin{lemma}
+%  \label{aa:mean:l:r3}
+%  Assume conditional unconfoundedness, that is,
+%  \begin{gather}
+%  (Y(0),Y(1))\perp T \ |\ X
+%  \,.
+%  \end{gather}
+%  Then for all
+%  $z\in\R$
+%  it holds
+%  $
+%  G_Nf_z=R_3(z)
+%  $.
+%  Furthermore, under conditions it holds
+%  $\sup_{z\in\R}\left| R_3(z) \right|\overset{\P}{\to}0$.
+%\end{lemma}
+%\begin{proof}
+%  A standard computation shows
+%  \begin{gather}
+%    \E
+%    \left[ 
+%    \frac{T}{\pi(X)}
+%    \left( 
+%    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+%    -
+%  F_{Y(1)}(z|X)
+%    \right)
+%    \right]
+%    =0
+%    \,.
+%  \end{gather}
+%  Furthermore
+%  \begin{align*}
+%    &
+%    \E
+%    \left[ 
+%      Tw(X,D)
+%    \left( 
+%    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+%    -
+%  F_{Y(1)}(z|X)
+%    \right)
+%    \right]
+%    \\
+%    &
+%    \ 
+%    =
+%    \ 
+%    \E
+%    \left[ 
+%      \E
+%      \left[ 
+%      w(X,D)
+%      \left( 
+%    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+%    -
+%  F_{Y(1)}(z|X)
+%      \right)
+%  |T=1,X,D
+%      \right]
+%    \right]
+%    \\
+%    &
+%    \ 
+%    =
+%    \ 
+%    \E
+%    \left[ 
+%      w(X,D)
+%      \E
+%      \left[ 
+%    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+%    -
+%  F_{Y(1)}(z|X)
+%  |X,D
+%      \right]
+%    \right]
+%    \\
+%    &
+%    \ 
+%    =
+%    \ 
+%    \E
+%    \left[ 
+%      w(X,D)
+%      \E
+%      \left[ 
+%    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+%    -
+%  F_{Y(1)}(z|X)
+%  |X
+%      \right]
+%    \right]
+%    \\
+%    &
+%    \ 
+%    =
+%    \ 
+%    0
+%  \end{align*}
+%  The second equality is due to the assumption of 
+%  $(Y(0),Y(1))\perp T |X$.
+%  The third equality is due to $X\perp D$.
+%  Thus
+%  $
+%    \E
+%    f_D^z
+%    =
+%    0
+%  $
+%\end{proof}
+%
 
-et 
-  $(\varepsilon_N)\subset(0,1]$ be a decreasing sequence with 
-  $\varepsilon_N\to 0$ as $N\to\infty$ and define for
-  $N\in\mathbb{N}$ and $z\in\R$ the function
- \begin{align*}
-    f_{\varepsilon_N,\pm}^z
-    \ 
-    :
-    \ 
-    &
-      \left\{ 0,1 \right\}
-      \times
-      \mathcal{X}
-      \times
-      \mathcal{Y}
-    \ 
-    \to
-    \ 
-    \R
-    \\
-    &
-      (T,X,Y(T))
-      \ 
-      \mapsto
-      \ 
-      \mathbf{1}
-      _
-      {\left\{ 
-          \left|
-      w(X)-\frac{1}{\pi(X)}
-          \right|
-          \,
-          \le
-          \,
-          \varepsilon_N/2
-      \right\}}
-      \left( 
-      w(X)-\frac{1}{\pi(X)}
-      \right)
-      ^{\pm}
-      T
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z \right\}}
-        -
-        F_{Y(1)}(z|X)
-      \right)
-      \,,
-  \end{align*}
-  and define 
-  \begin{gather*}
-    \mathcal{F}_N^\pm
-    :=
-    \left\{ 
-    f_{\varepsilon_N,\pm}^z
-    |
-    z\in\R
-    \right\}
-    \,.
-  \end{gather*}
-\begin{lemma}
-  Consider the weights function
+Next, we define some auxiliary functions.
+  For $z\in\R$ we define the function
   \begin{align*}
-    w
-    \colon
-    \mathcal{X}
-    \times
-    \R^{N+1}
-    \ 
-    \to
-    \ 
-    \R
-    \,,
-    \quad
-    (X,(\lambda,\lambda_0))
-    \ 
-    \mapsto
-    \ 
-    (
-    f^{'}
-    )^{-1}
-    \left( 
-      \inner{B(X)}{\lambda}
-      +
-      \lambda_0
-    \right)
-    \,.
-  \end{align*}
-    If the optimal solution 
-    $
-    (\lambda^\dagger,\lambda_0^\dagger)
-    $ to Problem? exists and is measurable for all $N\in\mathbb{N}$ 
-    then $
-    w
-    \circ
-    (
-    X
-    ,
-    (\lambda^\dagger,\lambda_0^\dagger)
-    )
-    $
-    is measurable.
-\end{lemma}
-\begin{lemma}
-  \label{bounded_f_lemma}
-    If the optimal solution $(\lambda^\dagger,\lambda_0^\dagger)$ to Problem? exists and is measurable for all $N\in\mathbb{N}$ 
-  the function class
-  $
-    \mathcal{F}_N^\pm
-  $
-    is measurable for all $N\in\mathbb{N}$.
-    Furthermore, $\mathcal{F}_N^\pm$ is bounded above by $\varepsilon_N$ and
-    \begin{gather*}
-     J_{[\, ]}
-    \left( 
-      \varepsilon_N
-    ,
-    \mathcal{F}_N^\pm
-    ,
-     L^2(\P)
-    \right)
-    \ 
-    \to
-    \ 
-    0
-    \qquad
-    \text{for}
-    \ 
-    N
-    \to
-    \infty
-\,. 
-    \end{gather*}
-\end{lemma}
-\begin{proof}
-  If the optimal solution $(\lambda^\dagger,\lambda_0^\dagger)$ to Problem? exists and is measurable for all $N\in\mathbb{N}$ 
-  then the weights function $w$ is measurable. Indeed,
-  this follows from
-  \begin{gather*}
-    w(X)=
-    (
-    f^{'}
-    )
-    ^{-1}
-    \left( \inner{B(X)}{\lambda^\dagger}+\lambda^\dagger_0 \right)
-    \,,
-  \end{gather*}
-  the measurability of the basis functions $B$ and the continuity of $
-    (
-    f^{'}
-    )
-    ^{-1}
-    $. Thus $f_{\varepsilon_N,\pm}^z$ are measurable for all $N\in\mathbb{N}$ and all $z\in\R$. Clearly, 
-    $\mathcal{F}_N^\pm$ is bounded above by $\varepsilon_N$.
-    Since 
-    \begin{gather*}
-       \mathbf{1}
-      _
-      {\left\{ 
-          \left|
-      w(X)-\frac{1}{\pi(X)}
-          \right|
-          \,
-          \le
-          \,
-          \varepsilon_N/2
-      \right\}}
-      \left( 
-      w(X)-\frac{1}{\pi(X)}
-      \right)
-      ^{\pm}
-    \end{gather*}
-    is non-negative and bounded above by $\varepsilon_N$
-    it follows from Lemma~\ref
-    {lem:brack_n}
-  \begin{gather*}
-    N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{F}_N^\pm, L^2(\P))
-    \ 
-    \lesssim
-    \ 
-    \left( 
-    \frac
-    {\varepsilon_N}
-    {\varepsilon}
-    \right)^2
-    \ 
-    \lesssim
-    \ 
-    \left( 
-    \frac
-    {1}
-    {\varepsilon}
-    \right)^2
-    \qquad
-    \text{for all}
-    \ 
-    \varepsilon>0
-    \,.
-  \end{gather*}
-Thus
-    \begin{align*}
-     J_{[\, ]}
-    \left( 
-      \varepsilon_N
-    ,
-    \mathcal{F}_N^\pm
-    ,
-     L^2(\P)
-    \right)
-    &
-    \ 
-=
-\  
-\int^{\varepsilon_N}_0
-\sqrt{
-\log
-    N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{F}_N^\pm, L^2(\P))
-}
-\, 
-d\varepsilon
-\\
-&
-\ 
-\lesssim
-\ 
-\int^{\varepsilon_N}_0
-\log
-\left( 
-  \frac{1}{\varepsilon}
-\right)
-\, 
-d\varepsilon
-\ 
-=
-\ 
-\varepsilon_N
--
-\varepsilon_N \log(\varepsilon_N)
-\ 
-\to
-\ 
-0 
-\qquad
-\text{for}\ 
-N\to\infty
-\,.
-    \end{align*}
-\end{proof}
-In the next lemma we get rid of the $\varepsilon_N$ bound
-\begin{lemma}
-
-  \label{lemma_fpm}
- Consider for $z\in\R$ the function
- \begin{align*}
-    f_{\pm}^z
-    \ 
-    :
-    \ 
-      \left\{ 0,1 \right\}
-      \times
-      \mathcal{X}
-      \times
-      \mathcal{Y}
-    &
-    \ 
-    \to
-    \ 
-    \R
-    \\
-      (T,X,Y(T))
-    &
-      \ 
-      \mapsto
-      \ 
-      \left( 
-      w(X)-\frac{1}{\pi(X)}
-      \right)
-      ^{\pm}
-      T
-      \left( 
-        \mathbf{1}
-        _{\left\{  Y(T)\,\le\,z \right\}}
-        -
-        F_{Y(1)}(z|X)
-      \right)
-      \,.
-  \end{align*}
-  It holds
-  $\sup_{z\in\R}\left| \G_N f^z_\pm \right|\overset{\P}{\to}0$.
-  Furthermore, for
- \begin{align*}
     f_z
     \ 
     :
@@ -2685,14 +2002,132 @@ In the next lemma we get rid of the $\varepsilon_N$ bound
     \ 
     \R
     \\
-      (T,X,Y(T))
+      (t,x,y)
     &
       \ 
       \mapsto
       \ 
+      t
       \left( 
-      w(X)-\frac{1}{\pi(X)}
+        \mathbf{1}
+        _{\left\{  y\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|x)
       \right)
+      \,,
+  \end{align*}
+  and the function classes
+  \begin{gather}
+    \label{F_g}
+    \begin{split}
+    \mathcal{F}
+    &
+    \ 
+    :=
+    \ 
+    \left\{ 
+      f_z
+      \ 
+      |
+      \ 
+      z\in\R\ 
+    \right\}
+    \\
+    \mathcal{G}
+    &
+    \ 
+    :=
+    \ 
+    \left\{ 
+      \frac{f_z}{\pi(\cdot)}
+      +
+      F_{Y(1)}(z|\cdot)
+      -
+      F_{Y(1)}(z)
+      \ 
+      \colon
+      \ 
+      z\in\R\ 
+    \right\}
+    \,.
+    \end{split}
+  \end{gather}
+  \begin{assumption}
+    \label{aa:assumption:treatment_str_ign}
+    It holds $(Y(0),Y(1))\perp T | X$.
+  \end{assumption}
+  \begin{lemma}
+    \label{aa:mean:r3:lem:fz_E}
+    It holds
+    $f_z(T,X,Y(T))\in L^1(\P)$
+    and 
+    $f_z(T,X,Y(T))\perp D_N$
+    for all $z\in\R$.
+    If also Assumption~\ref{aa:assumption:treatment_str_ign} holds,
+    then 
+    for all $z\in\R$
+    \begin{gather*}
+      \E
+      \left[
+        f_z
+        \left( 
+          T,
+          X,
+          Y(T)
+        \right)
+        \,
+        |
+        \,
+        X
+      \right]
+      \ 
+      =
+      \ 
+      0
+      \qquad
+      \text{almost surely.}
+    \end{gather*}
+  \end{lemma}
+  \begin{proof}
+    Since $f_z$ is bounded by 1,
+    it holds
+    $f_z(T,X,Y(T))\in L^1(\P)$.
+    Since
+    \begin{gather*}
+    (T,X,Y(T))
+    \ 
+    \perp 
+    \ 
+    D_N
+    \ 
+    =
+    \ 
+    (T_i,X_i)_{i\in \left\{ 1,\ldots,N \right\}}
+    \end{gather*}
+    it holds
+    $f_z(T,X,Y(T))\perp D_N$
+    for all $z\in\R$.
+    For the third statement, note that
+    \begin{align*}
+      \E
+      \left[
+        f_z
+        \left( 
+          T,
+          X,
+          Y(T)
+        \right)
+        \,
+        |
+        \,
+        X
+      \right]
+      &
+      \ 
+      =
+      \ 
+      \E
+      \left[
       T
       \left( 
         \mathbf{1}
@@ -2700,205 +2135,129 @@ In the next lemma we get rid of the $\varepsilon_N$ bound
         -
         F_{Y(1)}(z|X)
       \right)
-      \,.
-  \end{align*}
-  it holds
-  $\sup_{z\in\R}\left| \G_N f_z \right|\overset{\P}{\to}0$.
-\end{lemma}
-\begin{proof}
-  It holds for all $z\in\R$
-  $
-  $
-  \begin{gather*}
-  f^z_\pm
-      (T,X,Y(T))
+        \,
+        |
+        \,
+        X
+      \right]
+      \\
+      &
       \ 
-      \lesssim
+      =
       \ 
-     \left(
-      w(X)- \frac{1}{\pi(X)}
+      \E
+      \left[
+        \mathbf{1}
+        _{\left\{  Y(1)\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|X)
+        \,
+        |
+        \,
+        X
+        ,
+        T=1
+      \right]
+      \pi(X)
+      \\
+      &
+      \ 
+      =
+      \ 
+      \left( 
+      \E
+      \left[
+        \mathbf{1}
+        _{\left\{  Y(1)\,\le\,z \right\}}
+        \,
+        |
+        \,
+        X
+      \right]
+      \ 
+        -
+      \ 
+        F_{Y(1)}(z|X)
       \right)
-      ^\pm
-      \,.
-  \end{gather*}
-  By Theorem~\ref{aa:weights:th}
-  there exists a decreasing sequence 
-  $(\varepsilon_N)\subset(0,1]$
-  with $\varepsilon_N\to 0$
-  and
-  $
-  \P[
-\left| 
-      w(X)- 1/\pi(X)
-\right|
-\le
-\varepsilon_N/2
-  ]
-  \to 1
-  $
-  for $N\to\infty$.
-  Therefore
+      \pi(X)
+      \\
+      &
+      \ 
+      =
+      \ 
+      0
+      \qquad
+      \text{almost surely.}
+    \end{align*}
+    The third equality is due to Assumption~\ref{aa:assumption:treatment_str_ign}.
+  \end{proof}
+The next lemma provides bracketing numbers for specific function classes needed to control $R_3$ and $R_4$.
+\newpage
+\begin{lemma}
+  \label{aa:mean:l:br}
+  The function class $\mathcal{F}$ and $\mathcal{G}$ defined in \eqref{F_g} are measurable.
+  Furthermore, 
   \begin{gather*}
-  \P
-  \left[
-  f^z_\pm
-  \in
-  \mathcal{F}_N^\pm
-  \
-  \forall
-  z\in\R
-  \right]
-    =
-  \P[
-\left| 
-      w(X)- 1/\pi(X)
-\right|
-\le
-\varepsilon_N/2
-  ]
-  \to 1
-  \,.
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}, L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+      \frac{1}{\varepsilon}
+    \right)^2
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \,.
   \end{gather*}
-Then, for all $\varepsilon>0$ it holds
-\begin{align*}
-  \P
-  \left[
-  \sup_{z\in\R}
-  \left| 
-  \G_N
-  f^z_\pm
-  \right|
-  \le \varepsilon
-  \right]
-  &
-  \ 
-  \ge
-  \ 
-  \P
-  \left[
-  f^z_\pm
-  \in
-  \mathcal{F}_N^\pm
-  \
-  \forall
-  z\in\R
-  \,,
-  \ 
-  \norm{\G_N}^*_{\mathcal{F}_N^\pm}
-  \le \varepsilon
-  \right]
-  \\
-  &
-  \ 
-  \ge
-  \ 
-  \P
-  \left[
-  f^z_\pm
-  \in
-  \mathcal{F}_N^\pm
-  \
-  \forall
-  z\in\R
-  \right]
-  \ 
-  -
-  \ 
-  \P
-  \left[
-  \norm{\G_N}^*_{\mathcal{F}_N^\pm}
-  \le \varepsilon
-  \right]
-  \\
-  &
-  \ 
-  \to
-  \ 
-  1
-  \,.
-\end{align*}
-The convergence of the last term to 0 is due to 
-Lemma~\ref{bounded_f_lemma} and Lemma~\ref{markov_max_lemma}.
-Thus
-  $\sup_{z\in\R}\left| \G_N f^z_\pm \right|\overset{\P}{\to}0$.
-  Note, that 
+  If $1/\pi(X)\in L^2(\P)$, it also holds 
   \begin{gather*}
-\G_N f_z 
-=
-\G_N f^z_+
--
-\G_N f^z_-
-\qquad
-\text{for all}\ 
-z\in\R
-\,.
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{G}, L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+    \frac{
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
+    }
+    {\varepsilon}
+    \right)^4
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \,.
   \end{gather*}
-  Thus by Slutzky's Theorem\cite[Theorem~13.18]{Klenke2020}
-  it holds
-  $\sup_{z\in\R}\left| \G_N f_z \right|\overset{\P}{\to}0$.
-\end{proof}
-%\begin{lemma}
-%  Define for
-%  $z\in\R$
-% \begin{align*}
-%    f_z
-%    \ 
-%    :
-%    \ 
-%      \left\{ 0,1 \right\}
-%      \times
-%      \mathcal{X}
-%      \times
-%      \mathcal{Y}
-%&
-%    \ 
-%    \to
-%    \ 
-%      \R
-%    \\
-%    \left(
-%      T,X,Y(T)
-%    \right)
-%    &
-%      \ 
-%      \mapsto
-%      \ 
-%      \frac{T}{\pi(X)}
-%      \left( 
-%        \mathbf{1}
-%        _{\left\{  Y(T)\,\le\,z \right\}}
-%        -
-%        F_{Y(1)}(z|X)
-%      \right)
-%      \ 
+%  Furthermore, 
+%  consider the function class
+%  \begin{gather*}
+%    \mathcal{G}
+%    :=
+%    \left\{ 
+%      f_{1/\pi}^z
 %      +
-%      \ 
-%      \left( 
-%        F_{Y(1)}(z|X)
+%        F_{Y(1)}(z|\cdot)
 %        -
 %        F_{Y(1)}(z)
-%      \right)
-%      \,,
-%  \end{align*}
-%and consider the function class
-%$
-%  \mathcal{G}
-%  \ 
-%  :=
-%  \ 
-%  \left\{ 
-%    f_z
-%  \ 
-%    |
-%  \ 
-%    z\in\R
-%  \right\}
-%$
-%\begin{gather}
+%      \ 
+%      |
+%      \ 
+%      z\in\R
+%    \right\}
 %    \,.
-%\end{gather}
-%  Then $\mathcal{G}$ is a class of measurable functions 
-%  and it holds
+%  \end{gather*}
+%  If $1/\pi(X)\in  L^2(\P)$
+%  it holds
 %  \begin{gather}
 %    N_{[\,]}(\varepsilon,\mathcal{G}, L^2(\P))
 %    \le
@@ -2909,445 +2268,1109 @@ z\in\R
 %    \varepsilon>0
 %    \,.
 %  \end{gather}
-%\end{lemma}
-%\begin{lemma}
-%  \label{lemma_max_ineq}
-%  Consider a function class $\mathcal{F}$ with unit ball
-%  $
-%  B_{\mathcal{F}}
-%  :=
-%  \left\{ 
-%    f\in \mathcal{F}
-%    \colon
-%    \norm{f}_\infty
-%    \le
-%    1
-%  \right\}
-%  $.
-%  Let $(\varepsilon_N)$ be a sequence converging to 0
-%  and let 
-%  $
-%  \left( 
-%    \mathcal{F}_N
-%  \right)
-%    :=
-%    \left( 
-%      C\cdot
-%    \varepsilon_N\cdot B_\mathcal{F}
-%    \right)
-%  $
-%  denote the sequence of scaled unit balls in $\mathcal{F}$.
-%  Assume that 
-%  there exists
-%  $k<2$ such that 
-%  the covering number of the unit ball in $\mathcal{F}$
-%  satisfies
-%  \begin{gather}
-%        \log 
-%      N_{[\,]}
-%\left( \varepsilon, B_\mathcal{F}, L^2(\P) \right)
-%\ 
-%\lesssim
-%\ 
-%\left( \frac{1}{\varepsilon} \right)^k
-%\qquad
-%\text{for all}\ 
-%\varepsilon>0
-%\,.
-%  \end{gather}
-%  Then it holds
-%  $
-%      \norm{G_N}^*_{\mathcal{F}_N}
-%    \ 
-%    \overset{\P}
-%    {\to}
-%    \ 
-%    0
-%  $
-%  for $N\to \infty$. 
-%\end{lemma}
-%\begin{proof}
-%  By maximal inequalities it holds
-%  \begin{align*}
-%    \E^*
-%    \left[ 
-%      \norm{G_N}_{\mathcal{F}_N}
-%    \right]
-%    &
-%      \ 
-%      \lesssim
-%      \ 
-%      J_{[\,]}\left( \varepsilon_N, \mathcal{F}_N, L^2(\P) \right)
-%      \\
-%    &
-%      \ 
-%      =
-%      \ 
-%      \int_0^{\varepsilon_N}
-%      \sqrt{
-%        \log 
-%      N_{[\,]}
-%\left( \varepsilon, \mathcal{F}_N, L^2(\P) \right)
-%    }
-%    \,
-%    d\varepsilon
-%    \\
-%    &
-%    \ 
-%    =
-%    \ 
-%      \int_0^{\varepsilon_N}
-%      \sqrt{\log 
-%      N_{[\,]}
-%\left( \varepsilon/(C\cdot \varepsilon_N), B_\mathcal{F}, L^2(\P) \right)
-%    }
-%    \,
-%    d\varepsilon
-%    \\
-%    &
-%    \ 
-%    \lesssim
-%    \ 
-%      \int_0^{\varepsilon_N}
-%      \left( 
-%      \frac{\varepsilon_N}{\varepsilon}
-%    \right)^{k/2}
-%    \,
-%    d\varepsilon
-%    \\
-%    &
-%    \ 
-%    =
-%    \ 
-%  \varepsilon_N^{k/2}
-%  \frac{1}{1-k/2}
-%  \varepsilon_N^{1-k/2}
-%  \\
-%    &
-%    \ 
-%  \lesssim
-%    \ 
-%  \varepsilon_N
-%  \\
-%    &
-%    \ 
-%  \to
-%  \ 
-%  0
-%  \qquad
-%  \text{for}\ 
-%  N\to
-%  \infty
-%  \,.
-%  \end{align*}
-%  Note, that $k<2$.
-%  By the boundedness of $\E^*$ there is no measurability problem.
-%  By Markov's Inequality it holds
-%  \begin{align*}
-%    \P
-%    \left[ 
-%      \norm{G_N}^*_{\mathcal{F}_N}\ge \varepsilon
-%    \right]
-%    \le
-%    \varepsilon^{-1}
-%    \,
-%    \E^*
-%    \left[ 
-%      \norm{G_N}_{\mathcal{F}_N}
-%    \right]
-%    \ 
-%    \to
-%    \ 
-%    0
-%    \qquad
-%    \text{for}\ 
-%    N\to\infty
-%    \,.
-%  \end{align*}
-%\end{proof}
-%The next two lemmas connect $R_3$ to the theory of empirical processes.
-%\begin{lemma}
-%  \label{aa:mean:l:fz}
-%  Consider 
-%  the (random) function
-%  $
-%  f_D^z
-%  $ given by
-%  \begin{gather}
-%    f_{D}^z(T,X,Y(T))
-%    :=
-%    T
-%    \left( 
-%    w(D,X)- \frac{1}{\pi(X)}
-%    \right)
-%    \left( 
-%    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
-%    -
-%  F_{Y(1)}(z|X)
-%    \right)
-%    \,.
-%  \end{gather}
-%  Assume that 
-%  there exists a function class $\mathcal{F}$ satisfying the requirements of Lemma~\ref{lemma_max_ineq} and that
-%  $
-%  f_D^z
-%  \in \mathcal{F}
-%  $
-%  for all $z\in\R$ almost surely.
-%  It then holds
-%  $
-%  \sup_{z\in\R} \left| G_Nf_D^z \right|
-%  \overset{\P}{\to}0$ for 
-%  $N\to\infty$.
-%\end{lemma}
-%\begin{proof}
-%  By the consistency of the weights there exists a learning rate $(\varepsilon_N)$ such that
-%  \begin{gather}
-%    \P
-%    \left[ 
-%      \left| 
-%      w(X,D)
-%      -
-%      \frac{1}{\pi(X)}
-%      \right|
-%      \le
-%      \varepsilon_N
-%    \right]
-%    \to 1 
-%    \qquad
-%    \text{for}\ 
-%    N\to \infty
-%    \,.
-%  \end{gather}
-%  Let
-%  $\mathcal{F}_N:=\varepsilon_NB_\mathcal{F}$ as in 
-%  Lemma~\ref{lemma_max_ineq}.
-%  It holds
-%\begin{gather}
-%      \sup_{z\in\R}
-%      \left| 
-%    f_D^z
-%      \right|
-%      \lesssim
-%      \left| 
-%      w(X,D)
-%      -
-%      \frac{1}{\pi(X)}
-%      \right|
-%      \le
-%      \varepsilon_N
-%\end{gather}
-%with probability going to 1 as $N\to\infty$.
-%Thus
-% \begin{gather}
-%    \P
-%    \left[ 
-%    f_D^z
-%    \in
-%  \mathcal{F}_N
-%  \ \forall\,z\in\R
-%    \right]
-%    =
-%    \P
-%    \left[ 
-%      \sup_{z\in\R}
-%      \left| 
-%    f_D^z
-%      \right|
-%      \lesssim
-%      \varepsilon_N
-%    \right]
-%    \to 1
-%    \qquad
-%    \text{as}
-%    \ 
-%    N\to\infty
-%    \,.
-%  \end{gather}
-%  Then it holds
-%  for all $\varepsilon>0$ 
-%  \begin{align*}
-%    \P
-%    \left[ 
-%      \sup_{z\in\R}
-%  \left| G_Nf_D^z \right|
-%  \le
-%  \varepsilon
-%    \right]
-%    &
-%    \ 
-%    \ge
-%    \ 
-%    \P
-%    \left[ 
-%      \sup_{z\in\R}
-%  \left| G_Nf_D^z \right|
-%  \le
-%  \norm{G_N}^*_{\mathcal{F}_N}
-%  \le
-%  \varepsilon
-%    \right]
-%    \\
-%    &
-%    \ 
-%    \ge
-%    \ 
-%    \P
-%    \left[ 
-%    f_D^z
-%    \in
-%  \mathcal{F}_N
-%  \ \forall\,z\in\R
-%      \ 
-%      \text{and}\ 
-%  \norm{G_N}^*_{\mathcal{F}_N}
-%  \le
-%  \varepsilon
-%    \right]
-%    \\
-%    &
-%    \ 
-%    \ge
-%    \ 
-%    \P
-%    \left[ 
-%    f_D^z
-%    \in
-%  \mathcal{F}_N
-%  \ \forall\,z\in\R
-%    \right]
-%    -
-%    \P
-%    \left[ 
-%  \norm{G_N}^*_{\mathcal{F}_N}
-%    \ 
-%  \ge
-%    \ 
-%  \varepsilon
-%    \right]
-%    \\
-%    &
-%    \ 
-%    \to
-%    \ 
-%    1
-%    \,.
-%  \end{align*}
-%  The convergence of the second term is due to Lemma~\ref{lemma_max_ineq}.
-%
-%\end{proof}
-%
-\begin{lemma}
-  \label{aa:mean:l:r3}
-  Assume conditional unconfoundedness, that is,
-  \begin{gather}
-  (Y(0),Y(1))\perp T \ |\ X
-  \,.
-  \end{gather}
-  Then for all
-  $z\in\R$
-  it holds
-  $
-  G_Nf_z=R_3(z)
-  $.
-  Furthermore, under conditions it holds
-  $\sup_{z\in\R}\left| R_3(z) \right|\overset{\P}{\to}0$.
 \end{lemma}
 \begin{proof}
-  A standard computation shows
+  As in \cite[Example~19.6]{Vaart2000}
+  we choose for
+  $\varepsilon>0$ and $m\in\mathbb{N}$
+  \begin{gather*}
+  -\infty=z_0\ <\ z_1\ <\ \cdots\ <\ z_{m-1}\ <\ z_m=\infty
+  \,
+  \end{gather*}
+  such that
   \begin{gather}
-    \E
+    \label{size_z}
+    \P
     \left[ 
-    \frac{T}{\pi(X)}
-    \left( 
-    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
-    -
-  F_{Y(1)}(z|X)
-    \right)
+      Y(1)\in \left[ z_{l-1},z_l \right]\,
     \right]
-    =0
-    \,.
+    \ 
+    \le
+    \ 
+    \varepsilon
+    \qquad
+    \text{for all}\ 
+    l\in \left\{ 1,\ldots,m \right\}
   \end{gather}
-  Furthermore
+  and $m \le 2/\varepsilon$.
+  Next, we define $m$ brackets by
+\begin{align*}
+  \overline{f_l}
+  (t,x,y)
+  &
+  \ 
+  :=
+  \ 
+      t
+      \left( 
+        \mathbf{1}
+        _{\left\{  y\,\le\,z_{l} \right\}}
+        -
+        F_{Y(1)}(z_{l-1}|x)
+      \right)
+      \,,
+      \\
+  \underline{f_l}
+  (t,x,y)
+  &
+  \ 
+  :=
+  \ 
+      t
+      \left( 
+        \mathbf{1}
+        _{\left\{  y\,\le\,z_{l-1} \right\}}
+        -
+        F_{Y(1)}(z_l|x)
+      \right)
+      \,,
+\end{align*}
+for $l\in \left\{ 1,\ldots,m \right\}$.
+These brackets cover $\mathcal{F}$.
+Indeed,
+\begin{gather*}
+  \text{for all}\ 
+  z\in\R
+  \ 
+  \text{there exists} \ 
+l\in \left\{ 1,\ldots,m \right\}
+\qquad 
+\text{such that}\qquad
+z_{l-1}
+\ 
+\le
+\ 
+z
+\ 
+\le
+\ 
+z_l
+\,.
+\end{gather*}
+By the monotonicity of 
+$
+        \mathbf{1}
+      _{\left\{  y\,\le\,(\cdot) \right\}}
+$
+and
+$
+        F_{Y(1)}(\cdot|x)
+$
+and the non-negativity of $T$ it follows
+\begin{gather*}
+  \text{for all}\ 
+  z\in\R
+  \ 
+  \text{there exists} \ 
+l\in \left\{ 1,\ldots,m \right\}
+\qquad 
+\text{such that}\qquad
+  \underline{f_l}
+  \ 
+  \le
+  \ 
+  f_z
+  \ 
+  \le
+  \ 
+  \overline{f_l}
+  \,.
+\end{gather*}
+Thus, the $m$ brackets 
+$
+[
+  \underline{f_l}
+  ,
+  \overline{f_l}
+]
+$
+cover $\mathcal{F}$.
+
+Let's calculate the size of the brackets.
+It holds
+\begin{align*}
+  &
+\E
+\left[ 
+      T
+      \cdot
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z_{l} \right\}}
+        -
+        F_{Y(1)}(z_{l-1}|X)
+        \ 
+        -
+        \ 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z_{l-1} \right\}}
+        +
+        F_{Y(1)}(z_{l}|X)
+      \right)
+      \,
+\right]
+\\
+  &
+  \ 
+=
+  \ 
+\E
+\left[ 
+      T
+      \cdot
+      \left( 
+        \mathbf{1}
+        _{\left\{
+        Y(T)
+        \,
+        \in 
+        \,
+    [z_{l-1},z_l]
+\right\}}
+\ 
+        +
+\ 
+        \P
+        \left[ 
+          Y(1)
+          \in
+    [z_{l-1},z_l]
+        \,
+    |
+        \,
+    X
+        \right]
+      \right)
+      \,
+\right]
+\\
+  &
+  \ 
+\le
+  \ 
+\E
+\left[ 
+  \,
+  \pi(X)
+  \cdot
+        \P
+        \left[ 
+          Y(1)
+          \in
+    [z_{l-1},z_l]
+          \,
+    |
+          \,
+    X
+        \right]
+          \ 
+\right]
+\ 
++
+\ 
+\varepsilon
+\\
+  &
+  \ 
+\le
+  \ 
+2
+\,
+\varepsilon
+\,.
+\end{align*}
+We used \eqref{size_z}, $0\le T,\pi(X)\le 1$ and Lemma~\ref{ps_weights_lemma}.
+It follows
+\begin{align*}
+  &
+  \norm{
+    \left( 
+  \overline{f_l}
+-
+  \underline{f_l}
+    \right)
+  (T,X,Y(T))
+}_
+{ L^2(\P)}
+\\
+&
+\ 
+\lesssim
+\ 
+\E
+\left[ 
+  \,
+      T
+      \cdot
+      \left( 
+        \mathbf{1}
+        _{\left\{
+        Y(T)
+        \,
+        \in 
+        \,
+    [z_{l-1},z_l]
+\right\}}
+\ 
+        +
+\ 
+        \P
+        \left[ 
+          Y(1)
+          \in
+    [z_{l-1},z_l]
+        \,
+    |
+        \,
+    X
+        \right]
+      \right)
+      \,
+   \right]^{1/2}
+\ 
+\lesssim
+\ 
+\varepsilon^{1/2}
+\,.
+\end{align*}
+Since $m\le 2/\varepsilon$ it holds
+  \begin{align*}
+    N_{[\,]}
+    \left(
+\varepsilon^{1/2}
+    ,
+    \,
+    \mathcal{F}\,,\, L^2(\P)
+    \right)
+    &
+    \ 
+    \lesssim
+    \ 
+    \frac{1}{\varepsilon}
+    \intertext{and thus}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}, L^2(\P))
+    &
+    \ 
+    \lesssim
+    \ 
+    \left( 
+      \frac{1}{\varepsilon}
+    \right)^2
+    \,.
+  \end{align*}
+  Next, we look at $\mathcal{G}$. To this end, we define 
+  $m$ brackets by
+ \begin{align*}
+    \overline{g_l}
+    (t,x,y)
+    \ 
+    :=
+    \ 
+    \frac{t}{\pi(x)}
+    \left( 
+      \mathbf{1}_{\left\{  y\,\le\,z_{l} \right\}}
+      -
+      F_{Y(1)}(z_{l-1}|x)
+    \right)
+    \ 
+    +
+    \ 
+    F_{Y(1)}(z_{l}|x)
+-
+F_{Y(1)}(z_{l-1})
+\,,
+\\
+    \underline{g_l}
+    (t,x,y)
+    \ 
+    :=
+    \ 
+    \frac{t}{\pi(x)}
+    \left( 
+      \mathbf{1}_{\left\{  y\,\le\,z_{l-1} \right\}}
+      -
+      F_{Y(1)}(z_l|x)
+    \right)
+    \ 
+    +
+    \ 
+    F_{Y(1)}(z_{l-1}|x)
+-
+      F_{Y(1)}(z_l)
+\,,
+  \end{align*}
+  for $l\in \left\{ 1,\ldots,m \right\}$.
+  With the same arguments as before, we see that these brackets cover $\mathcal{G}$.
+  Let's calculate the size.
+  It holds
   \begin{align*}
     &
-    \E
-    \left[ 
-      Tw(X,D)
-    \left( 
-    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
-    -
-  F_{Y(1)}(z|X)
-    \right)
-    \right]
-    \\
-    &
-    \ 
-    =
-    \ 
-    \E
-    \left[ 
-      \E
-      \left[ 
-      w(X,D)
+    \norm{
+      \frac{T}{\pi(X)}
       \left( 
-    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
-    -
-  F_{Y(1)}(z|X)
+      \mathbf{1}_{
+      \left\{ 
+      Y(T)\in [z_{l-1},z_l] 
+    \right\}
+    }
+      +
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
+      \right]
       \right)
-  |T=1,X,D
-      \right]
-    \right]
+    }_{ L^2(\P)}
     \\
     &
-    \ 
-    =
-    \ 
-    \E
-    \left[ 
-      w(X,D)
+    \
+    \lesssim
+    \
+    \left( 
       \E
       \left[ 
-    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
-    -
-  F_{Y(1)}(z|X)
-  |X,D
+        \frac{1}{\pi(X)}
+        \frac{T}{\pi(X)}
+      \left( 
+      \mathbf{1}_{
+      \left\{ 
+      Y(T)\in [z_{l-1},z_l] 
+    \right\}
+    }
+      +
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
       \right]
-    \right]
+      \right)
+      \right]
+    \right)
+    ^{1/2}
     \\
     &
-    \ 
-    =
-    \ 
-    \E
-    \left[ 
-      w(X,D)
+    \
+    \lesssim
+    \
+    \left( 
       \E
       \left[ 
-    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
-    -
-  F_{Y(1)}(z|X)
-  |X
+        \frac{1}{\pi(X)}
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
       \right]
-    \right]
+      \right]
+    \right)
+    ^{1/2}
     \\
     &
     \ 
+    \lesssim
+    \ 
+    \left( 
+      \norm{1/\pi(X)}_{ L^2(\P)}
+      \sqrt{\varepsilon}
+    \right)
+    ^{1/2}
+    \ 
     =
+    \ 
+    \varepsilon^{1/4}
+    \norm{1/\pi(X)}_{ L^2(\P)}^{1/2}
+  \end{align*}
+  and
+  \begin{align*}
+     \norm{
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] 
+      \,
+      |
+      \,
+      X
+      \right]
+      \ 
+     + 
+      \ 
+      \P
+      \left[ 
+      Y(1)\in [z_{l-1},z_l] \,
+      \right]
+    }_{ L^2(\P)}
+    \ 
+    \lesssim
+    \ 
+    \varepsilon^{1/2}
+    \,.
+  \end{align*}
+  Thus
+  \begin{align*}
+  \norm{
+    \left( 
+  \overline{g_l}
+-
+  \underline{g_l}
+    \right)
+  (T,X,Y(T))
+}_
+{ L^2(\P)}
+    &
+\ 
+\lesssim
+\ 
+\varepsilon^{1/4}
+\left( 
+  1
+  +
+    \norm{1/\pi(X)}_{ L^2(\P)}^{1/2}
+\right)
+\\
+    &
+\ 
+\lesssim
+\ 
+\varepsilon^{1/4}
+\left( 
+  1
+  +
+    \norm{1/\pi(X)}_{ L^2(\P)}
+\right)
+\,.
+  \end{align*}
+As before, it follows
+\begin{gather*}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{G}, L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+    \frac{
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
+    }
+    {\varepsilon}
+    \right)^4
+    \,.
+\end{gather*}
+\end{proof}
+
+\begin{lemma}
+  \label{markov_max_lemma}
+  Let $(\mathcal{H}_N)$ be a sequence of measurable function classes with envelope functions $(H_N)$.
+  If
+  \begin{gather}
+    J_{[\, ]}
+    \left( 
+    \norm{F_N}_{ L^2(\P)}
+    ,
+    \mathcal{H}_N
+    ,
+     L^2(\P)
+    \right)
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}
+    \ 
+    N
+    \to
+    \infty
+  \end{gather}
+  it holds 
+  $
+  \norm{\G_N}^*_{\mathcal{H}_N}\overset{\P}{\to}0
+  $.
+\end{lemma}
+\begin{proof}
+  By Markov's inequality and Theorem~\ref{th:max_ineq} it holds for all $\varepsilon>0$
+  \begin{align*}
+    &
+    \P
+    [
+  \norm{\G_N}^*_{\mathcal{H}_N}
+  \ge
+  \varepsilon
+    ]
+    \\
+    &
+    \ 
+    \le
+    \ 
+    \varepsilon^{-1}
+    \E
+    [
+  \norm{\G_N}^*_{\mathcal{H}_N}
+    ]
+    \ 
+    =
+    \ 
+    \varepsilon^{-1}
+    \E^*
+    [
+  \norm{\G_N}_{\mathcal{H}_N}
+    ]
+    \ 
+    \lesssim
+    \ 
+    \varepsilon^{-1}
+    J_{[\, ]}
+    \left( 
+    \norm{H_N}_{ L^2(\P)}
+    ,
+    \mathcal{H}_N
+    ,
+     L^2(\P)
+    \right)
+    \ 
+    \to
     \ 
     0
   \end{align*}
-  The second equality is due to the assumption of 
-  $(Y(0),Y(1))\perp T |X$.
-  The third equality is due to $X\perp D$.
-  Thus
-  $
-    \E
-    f_D^z
-    =
-    0
-  $
+  for $N\to\infty$. 
 \end{proof}
+A technical lemma for products of function classes.
+
+Define the product of two function classes
+\begin{gather*}
+  \mathcal{F}\cdot \mathcal{G}
+  :=
+  \left\{ 
+    f\cdot g
+    \colon
+    f\in\mathcal{F},
+    g\in\mathcal{G}
+  \right\}\,.
+\end{gather*}
+\begin{lemma}
+  \label{lem_prod_br}
+  Let
+  $\mathcal{F}$ and $\mathcal{G}$ be two function classes 
+  with envelope functions $F$ and $G$ satisfying
+  $\norm{F}_\infty,\norm{G}_\infty\le 1$.
+  For all $\varepsilon>0$ and all $r\in [1,\infty)$ it holds
+  \begin{gather*}
+    N_{[\,]}(2\varepsilon,\mathcal{F}\cdot\mathcal{G},\mathrm{L}_r(\P))
+    \
+    \le
+    \ 
+    N_{[\,]}(\varepsilon,\mathcal{F},\mathrm{L}_r(\P))
+    \cdot
+    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_r(\P))
+    \,.
+  \end{gather*}
+\end{lemma}
+\begin{proof}
+  Let $f\in\mathcal{F}$ and $g\in\mathcal{G}$.
+  We can choose two 
+  $(\varepsilon,L^r(\P))$
+  brackets
+  $[\underline{f},\overline{f}]$
+  and
+  $[\underline{g},\overline{g}]$
+  containing $f$ and $g$ with 
+  $\norm{\underline{f}}_\infty,\norm{\overline{f}}_\infty\le\norm{F}_\infty\le 1$
+  and
+  $\norm{\underline{g}}_\infty,\norm{\overline{g}}_\infty\le\norm{G}_\infty\le 1$.
+  We the get an 
+  $(2\varepsilon,L^r(\P))$
+  $[\underline{h},\overline{h}]$
+  bracket, containing $f\cdot g$, by
+\end{proof}
+
+\begin{lemma}
+  \label{aa:r3:lemma:1}
+  Let
+$(\varepsilon_N)\subset(0,1]$
+be 
+a decreasing sequence
+with $\varepsilon_N\to 0$ for $N\to\infty$ 
+and let Assumption~\ref{aa:assumption:1} hold true
+for a sequence of function classes $\mathcal{F}_N$.
+Then
+\begin{gather*}
+  J_{[\,]}(
+\norm{F_N}_{L^2(\P)}
+,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+  \to 0
+  \quad
+  \text{and}
+  \quad
+  \norm{\G_N}^*_{\mathcal{F}_N\cdot\mathcal{F}}\overset{\P}{\to}0
+  \qquad
+  \text{for}\ 
+  N\to\infty
+  \,.
+\end{gather*}
+\end{lemma}
+\begin{proof}
+  By Assumption~\ref{aa:assumption:1}
+  and Lemma~\ref{aa:mean:l:br} it holds
+for some $k<2$
+\begin{gather*}
+\norm{F_N}_{L^2(\P)}
+\ 
+\le
+\ 
+\varepsilon_N
+\quad
+\text{and}
+\quad
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}
+  \ 
+  N\in\mathbb{N}
+  \,,
+\end{gather*}
+and
+  \begin{gather*}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}, L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+      \frac{1}{\varepsilon}
+    \right)^2
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \,.
+  \end{gather*}
+  Since $\mathcal{F}_N$ and $\mathcal{F}$ have envelope function smaller 1, we can apply Lemma~\ref{lem_prod_br} to get
+  \begin{gather*}
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  +
+  \log
+  (1/\varepsilon)
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}\ 
+  \varepsilon>0
+  \,.
+  \end{gather*}
+  Since 
+  $k/2\in(0,1)$
+  it holds
+\begin{align*}
+  J_{[\,]}(
+\norm{F_N}_{L^2(\P)}
+,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+  &
+  \ 
+=
+  \ 
+\int_0^{
+\norm{F_N}_{L^2(\P)}
+}
+\sqrt{
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+}
+\,d\varepsilon
+\\
+&
+\ 
+\lesssim
+\ 
+\int_0^{
+  \varepsilon_N
+}
+  \left( 
+  \frac{1}{\varepsilon}
+\right)^{k/2}
+\,d\varepsilon
+\\
+&
+\ 
+=
+\ 
+\frac{
+\varepsilon_N^{1-k/2}
+}{1-k/2}
+\ 
+\to 0
+\ 
+\qquad
+\text{for}
+\ 
+N\to\infty
+\,.
+\end{align*}
+The second statement follows from Lemma~\ref{markov_max_lemma}
+for 
+$\mathcal{H}_N:=\mathcal{F}_N\cdot\mathcal{F}$ and
+$H_N:=F_N$.
+\end{proof}
+
+\begin{lemma}
+  \label{ps_weights_lemma}
+  Let
+  $
+  g_1\colon
+  \mathcal{X}\to\R
+  $
+  and
+  $
+  g_2\colon
+  \mathcal{Y}\to\R
+  $
+  be a measurable functions.
+  It holds
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_1(X)
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    g_1(X)
+    \right]
+    \,.
+  \end{gather*}
+  If Assumption~\ref{aa:assumption:treatment_str_ign} holds true, then
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_2(Y(T))
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    f(Y(1))
+    \right]
+    \,.
+  \end{gather*}
+\end{lemma}
+\begin{lemma}
+  \label{aa:mean:r3:lem:conv}
+  Under conditions it holds
+  $\sup_{z\in\R}\left| R_3(z) \right|\overset{\P}{\to}0$.
+\end{lemma}
+\begin{proof}
+  Let $N\ge\underline{N}$,
+  $z\in\R$,
+  and 
+  let
+  $g^\dagger$ 
+  denote the function \eqref{ghost_function} with 
+  $
+(\lambda^\dagger,\lambda_0^\dagger)
+  $.
+  If
+  \begin{gather*}
+    \left| 
+    w^\dagger(X)- \frac{1}{\pi(X)} 
+    \right|
+    \ 
+    \le
+    \ 
+    \varepsilon_N
+  \end{gather*}
+  it holds
+  \begin{gather*}
+    g^\dagger
+    (X)
+    \cdot
+    f_z
+    (T,X,Y(T))
+    \ 
+    =
+    \ 
+  \left( 
+      w^\dagger(X)
+      -
+      \frac{1}{\pi(X)}
+  \right)
+      T
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+      \,.
+  \end{gather*}
+  By Lemma~\ref{aa:mean:r3:lem:fz_E}
+  it holds 
+  \begin{align*}
+    &
+  f_z(T,X,Y(T))
+  \ 
+  \in
+  \ 
+  L^1(\P)\,, 
+  \\
+  &
+  f_z(T,X,Y(T))
+  \ 
+  \perp
+  \ 
+  D_N
+  \,,
+  \\
+  \E
+  [
+  &
+  f_z(T,X,Y(T))
+    |X
+  ]
+  \ 
+  =
+  \ 
+  0
+  \,.
+  \end{align*}
+  Thus, 
+  it follows from Lemma~\ref{w.Z=0}
+  \begin{gather*}
+    \E
+    \left[
+      w^\dagger(X)
+      \cdot
+      f_z(T,X,Y(T))
+    \right]
+    \ 
+    =
+    \ 
+    0
+    \,.
+  \end{gather*}
+  Since
+  \begin{gather*}
+    \E
+    \left[
+      \frac{T}{\pi(X)}
+      f_z(T,X,Y(T))
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+      \frac{T}{\pi(X)}
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+    \right]
+    \  
+    =
+    \ 
+    0
+  \end{gather*}
+  by Lemma~\ref{ps_weights_lemma},
+  it follows
+  \begin{align*}
+    &
+  \E
+  \left[
+    g^\dagger(X)
+    f_z(T,X,Y(T))
+  \right]
+  \\
+    &
+  \ 
+  =
+  \ 
+    \E
+    \left[
+      w^\dagger(X)
+      \cdot
+      f_z(T,X,Y(T))
+    \right]
+    \ 
+    -
+    \ 
+    \E
+    \left[
+      \frac{T}{\pi(X)}
+      f_z(T,X,Y(T))
+    \right]
+    \ 
+    =
+    \ 
+  0
+  \,.
+  \end{align*}
+  But then 
+  \begin{align*}
+    R_3(z)
+    &
+    \ 
+    =
+    \ 
+  \frac{1}
+  {
+\sqrt{N}
+  }
+    \sum_{i=1}^{N} 
+    \left[ 
+    \left( 
+    w(X_i) 
+    -
+    \frac{1}{\pi(X_i)}
+    \right)
+    T_i
+    \left( 
+    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    -
+  F_{Y(1)}(z|X_i)
+    \right)
+    \right]
+    \ 
+    =
+    \ 
+    \G_N
+    \left( 
+      g^\dagger
+      \cdot
+      f_z
+    \right)
+    \,.
+  \end{align*}
+  It follows
+\begin{align*}
+    \P
+    \left[ 
+      \sup_{z\in\R}
+     | 
+    R_3(z)
+    |
+      \ge
+      \varepsilon
+    \right]
+    &
+    \ 
+    \le
+    \ 
+    \P
+    \left[ 
+      \sup_{z\in\R}
+     | 
+    R_3(z)
+    |
+      \ge
+      \varepsilon
+      \ 
+      \text{and}
+      \ 
+    | 
+    w^\dagger(X)- 1/\pi(X)
+    |
+    \ 
+    \le
+    \ 
+    \varepsilon_N
+    \right]
+    \\
+    &
+    \quad
+    +
+    \ 
+    \P
+    \left[ 
+    | 
+    w^\dagger(X)- 1/\pi(X)
+    |
+    \ 
+    >
+    \ 
+    \varepsilon_N
+    \right]
+    \\
+    &
+    \ 
+    \le
+    \ 
+    \P
+    \left[ 
+      \norm{\G_N}^*_{\mathcal{F}_N\cdot\mathcal{F}}
+      \ge
+      \varepsilon
+    \right]
+    \ 
+    +
+    \ 
+    \ 
+    \P
+    \left[ 
+    | 
+    w^\dagger(X)- 1/\pi(X)
+    |
+    \ 
+    >
+    \ 
+    \varepsilon_N
+    \right]
+    \\
+    &
+    \ 
+    \to
+    \ 
+    0
+    \,.
+\end{align*}
+The convergence of the first term follows from
+Lemma~\ref{aa:r3:lemma:1}.
+The convergence of the second term follows from
+Theorem~\ref{aa:weights:th}.
+
+\end{proof}
+
 
 Until now, all parts of the error decomposition converge to 0.
 The last term $R_4$ will decide the profile of the limiting process.
@@ -3404,12 +3427,196 @@ to a Gaussian process with mean 0 and covariance function given by
   \label{aa:mean:l:r4}
   Let
   $1/\pi(X)\in L^2(\P)$.
-  $R_4$ converges to a gaussian process.
+  $R_4$ converges
+  converges in
+  $l^\infty(\R)$
+  to a Gaussian process with mean 0 and covariance
+\begin{align*}
+  &
+  \mathbf{Cov}
+  (z_1,z_2)
+  \\
+  &
+  =\ 
+  \E
+  \left[ 
+ \frac{
+ F_{Y(1)}(z_1 \land z_2\,|\,X)
+}{\pi(X)}
+\ 
+-
+\ 
+ \frac{1-\pi(X)}{\pi(X)}
+ F_{Y(1)}(z_1|X)
+ \cdot
+ F_{Y(1)}(z_2|X)
+  \right]
+  \ 
+ -
+ \ 
+ F_{Y(1)}(z_1)
+ \cdot
+ F_{Y(1)}(z_2)
+\end{align*}
+
 \end{lemma}
 \begin{proof}
+  By Lemma~\ref{aa:mean:r3:lem:fz_E} it follows
+  \begin{align*}
+    \E
+    \left[
+      \frac{f_z(T,X,Y(T))}{\pi(X)}
+      +
+      F_{Y(1)}(z|X)
+      -
+      F_{Y(1)}(z)
+      \right]
+      \ 
+      =
+      \ 
+      \E
+      \left[
+      \frac{1}{\pi(X)}
+      \E
+      \left[
+        f_z(T,X,Y(T))
+        |X
+      \right]
+      \right]
+      \ 
+      =
+      \ 
+      0
+      \,.
+  \end{align*}
+  Thus
+  \begin{align*}
+    R_4(z)
+    &
+  \
+  =
+  \ 
+  \frac{1}{
+  \sqrt{N}
+  }
+    \sum_{i=1}^{N} 
+    \frac{T_i}{\pi(X_i)}
+    \left( 
+    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    -
+  F_{Y(1)}(z|X_i)
+    \right)
+    \ 
+    +
+    \ 
+    \left( 
+  F_{Y(1)}(z|X_i)
+    -
+  F_{Y(1)}(z)
+    \right)
+    \\
+    &
+    \ 
+  =
+    \ 
+  \frac{1}{
+  \sqrt{N}
+  }
+    \sum_{i=1}^{N} 
+      \frac{f_z(T_i,X_i,Y_i)}{\pi(X_i)}
+      +
+      \left( 
+      F_{Y(1)}(z|X_i)
+      -
+      F_{Y(1)}(z)
+      \right)
+      \\
+      &
+      \ 
+      =
+      \ 
+      \G_N 
+      \left(
+       \frac{f_z}{\pi(\cdot)}
+      +
+      F_{Y(1)}(z|\cdot)
+      -
+      F_{Y(1)}(z)
+      \right)
+      \,.
+  \end{align*}
+  By Lemma~\ref{aa:mean:l:br}
+  it holds
+  \begin{align*}
+    &
+  \log
+  N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{G}, L^2(\P))
+    \\
+    &
+    \ 
+    \lesssim
+    \ 
+    \log
+    \left(
+      \frac
+      {
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
+      }
+      {\varepsilon}
+    \right)
+    \ 
+    \lesssim
+    \ 
+      \frac
+      {
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
+      }
+      {\varepsilon}
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon\in (0,1)
+    \,.
+  \end{align*}
+  Thus
+  \begin{gather*}
+    J_{[\,]}(1,\mathcal{G},L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \int_0^1
+    \sqrt
+    {
+      \frac
+      {
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
+      }
+      {\varepsilon}
+    }
+    \,
+    d\varepsilon
+    \ 
+    \lesssim
+    \ 
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
+    \ 
+    <
+    \ 
+    \infty
+    \,.
+  \end{gather*}
 But then $\mathcal{G}$ is $\P$-Donsker.
 By the Donsker Theorem \cite[Theorem~19.5]{Vaart2000}
-the process $R_4$ converges in $l^\infty(\R)$ to a Gaussian process, called $\P$-Brownian bridge, with mean 0 and covariance?
+the process $R_4$ converges in $l^\infty(\R)$ to a Gaussian process, called $\P$-Brownian bridge, with mean 0.
+We now calculate the covariance of the limiting process.
 \subsubsection*{Covariance}
 \begin{align*}
   &
@@ -3681,9 +3888,9 @@ We have gathered all the results to prove Theorem~\ref{aa:mean:th}.
   \emph{(Theorem~\ref{aa:mean:th})}
   We connect the statement of the theorem to the error decomposition by Lemma~\ref{aa:mean:lemma_decomp}.
   By Lemma~\ref{aa:mean:l:r1}, Lemma~\ref{aa:mean:l:r2},
-   Lemma~\ref{aa:mean:l:fz} and Lemma~\ref{aa:mean:l:r3}
+  Lemma~\ref{aa:mean:r3:lem:conv}
    it follows 
    $\sup_{z\in\R}|R_i(z)|\overset{\P}{\to}0$ for $i=1,2,3$.
-   Thus, by Slutzky's theorem (cf.\cite[Theorem~13.8]{Klenke2020})
+   Thus, by Slutzky's theorem (cf.\cite[Theorem~13.18]{Klenke2020})
    the behaviour of the limiting process is the one of Lemma~\ref{aa:mean:l:r4}.
 \end{proof}
