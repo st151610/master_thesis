@@ -1189,11 +1189,11 @@ INPUT ./final_chapters/aa:mean.tex
 INPUT final_chapters/aa:mean.tex
 INPUT ./final_chapters/aa:mean.tex
 INPUT final_chapters/aa:mean.tex
-INPUT ./chapters/balancing_weights/plug_in_est.tex
-INPUT chapters/balancing_weights/plug_in_est.tex
-INPUT ./chapters/balancing_weights/plug_in_est.tex
-INPUT chapters/balancing_weights/plug_in_est.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm
+INPUT ./chapters/balancing_weights/plug_in_est.tex
+INPUT chapters/balancing_weights/plug_in_est.tex
+INPUT ./chapters/balancing_weights/plug_in_est.tex
+INPUT chapters/balancing_weights/plug_in_est.tex
 INPUT ./chapters/convex_analysis/primer_new.tex
 INPUT chapters/convex_analysis/primer_new.tex
 INPUT ./chapters/convex_analysis/primer_new.tex
@@ -1215,7 +1215,6 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb

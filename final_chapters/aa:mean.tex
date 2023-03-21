@@ -1,10 +1,7 @@
-$
-(\lambda^\dagger,\lambda_0^\dagger)
-$
-We adapt the error decomposition in \cite[page 27]{Wang2019} 
-to estimates of the distribution function $F_{Y(1)}$ of $Y(1)$, 
-that is,
-\begin{gather}
+\subsection*{Notation}
+Throughout this section we use the following notation.
+Let $F_{Y(1)}$ denote the distribution function of $Y(1)$, that is,
+\begin{gather*}
   F_{Y(1)}
   \ 
   \colon
@@ -28,7 +25,125 @@ that is,
   z
   ]
   \,.
-\end{gather}
+\end{gather*}
+Let $F_{Y(1)}(\cdot|x)$ denote the distribution function of $Y(1)$ conditional on $X=x\in\mathcal{X}$, that is,
+\begin{gather*}
+  F_{Y(1)}
+  (z|x)
+\ 
+  =
+\ 
+  \P
+  [
+  Y(1)
+  \le
+  z
+  \,
+  |
+  \,
+  X=x
+  ]
+  \qquad
+  \text{for all}\ 
+  (z,x)\in\R\times\mathcal{X}
+  \,.
+\end{gather*}
+We recall from Definition~\ref{def:weights_function} the weight function 
+\begin{gather*}
+  w
+  \colon
+  \mathcal{X}
+  \times
+  \R^{N+1}
+  \to
+  \R
+  \,,\qquad
+  \left( 
+  x
+  ,
+  \lambda
+  ,
+  \lambda_0
+  \right)
+  \mapsto
+    (
+    f^{'}
+    )^{-1}
+    \left( 
+      \inner{B(x)}{\lambda^\dagger}
+      +
+      \lambda_0^\dagger
+    \right)
+    \,,
+\end{gather*}
+and that, if 
+  the optimal solution
+  $(\lambda^\dagger,\lambda_0^\dagger)$
+  to Problem ? exists, we write
+  \begin{gather*}
+    w^\dagger(x)
+    =
+    w(x,\lambda^\dagger,\lambda^\dagger_0)
+    \qquad
+    \text{for all}\ 
+    x\in\mathcal{X}\,.
+  \end{gather*}
+We introduced the basis functions $(B_k)$ in ?. 
+Let $\pi(\cdot)$ denote the propensity score function, that is,
+\begin{gather*}
+  \pi
+  \colon
+  \mathcal{X}
+  \to
+  [0,1]
+  \,,
+  \qquad
+  x\mapsto
+  \P[T=1\,|\,X=x]
+  \,.
+\end{gather*}
+Let the symbol
+$\lesssim$ denote the lesser-equal order multiplied by a generic constant $C>1$ that is independent of $N$ or any other quantitative assumption. We always take $C$ large enough.
+For example
+\begin{gather*}
+  17\cdot f(x)\ \lesssim\  f(x)
+  \,.
+\end{gather*}
+This helps keeping the complexity of notation at a (necessary) minimum.
+
+\subsection*{Goal of this section}
+We illustrate the flexibility of 
+the weighted mean estimator by 
+extending the method of \cite{Wang2019} to
+estimates of 
+the distribution function of $Y(1)$, that is, $F_{Y(1)}$.
+For the asymptotic analysis of estimating the mean $\E[Y(1)]$ see \cite[Proof of Theorem~3]{Wang2019}.
+To make this extension, the central observation is, that we can adapt the error decomposition in \cite[page 27]{Wang2019} 
+to estimates of the distribution function $F_{Y(1)}$ of $Y(1)$.
+We do this in Lemma~\ref{aa:mean:lemma_decomp}.
+With this modification, we aim at proving
+the convergence of
+\begin{gather}
+    \sqrt{N}
+    \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w^\dagger(X_i)
+    \mathbf{1}\left\{ Y_i(T_i)\,\le\, z \right\}
+    \ 
+    -
+    \ 
+    F_{Y(1)}(z)
+    \right)
+    _{z\in\R}
+    \,
+  \end{gather}
+  in
+  $l^\infty(\R)$
+  to a Gaussian process with mean 0 and covariance specified in Theorem~\ref{aa:mean:th}.
+  We show, that this is possible under mild assumptions.
+  We discuss this in the next section.
+\subsection{Tools and Assumptions}
 \begin{assumption}
   \label{aa:assumption:1}
   For any decreasing sequence
@@ -76,7 +191,7 @@ such that for all $(\lambda,\lambda_0)\in\R^{N+1}$ and for all $N\in\mathbb{N}$ 
   \ 
   \mapsto
   \ 
-  \mathbf{1}_{
+  \mathbf{1}{
     \left\{ 
       \sup_{y\in A_N(x)}
       \left| 
@@ -98,6 +213,132 @@ such that for all $(\lambda,\lambda_0)\in\R^{N+1}$ and for all $N\in\mathbb{N}$ 
 \end{gather}
 is contained in $\mathcal{F}_N$.
 \end{assumption}
+The next Lemma shows that mild assumptions on the regularity of the inverse propensity score implies Assumption~\ref{aa:assumption:1}.
+To this end, we need notation from \cite[§2.7.1]{vaart2013}.
+To this end, let for any vector $k\in\mathbb{N}_0^d \ (d\in\R)$
+\begin{gather*}
+  D^k
+  \ :=\ 
+  \frac
+  {\partial^{\norm{k}_1}}
+  {
+    \partial^{k_1}x_1
+    \cdots
+    \partial^{k_d}x_d
+  }
+  \,,
+\end{gather*}
+and let $\lfloor a \rfloor$ be the greatest integer smaller than $a>0$.
+For $\alpha>0$, a bounded set 
+$\mathcal{X}\subset\R^d\ (d\in\mathbb{N})$
+and
+$M>0$, we define $C^\alpha_M(\mathcal{X})$ to be the space of all continuous functions $f\colon \mathcal{X}\to\R$ with
+\begin{gather*}
+  \max_{\norm{k}_1\le \alpha}\sup_{x\in\mathcal{X}}
+  \left| D^k f(x) \right|
+  \ 
+  +
+  \ 
+  \max_{\norm{k}_1=\lfloor \alpha \rfloor}\sup_{x,y}
+  \frac
+  {
+  \left|
+  D^k f(x) 
+  -
+  D^k f(y) 
+  \right|
+  }
+  {
+    \norm{x-y}_2^{\alpha-\lfloor \alpha \rfloor}
+  }
+  \
+  \le
+  \ 
+  M
+  \,.
+\end{gather*}
+where the suprema in the second term are taken over all $x,y$ in the interior of $\mathcal{X}$ with $x\neq y$.
+Furthermore, let
+\begin{gather*}
+  \mathcal{X}^1
+  :=
+  \left\{ 
+    y\in\R^d
+    \colon
+    \norm{x-y}_2 <1
+    \ 
+    \text{for some}\ x\in\mathcal{X}
+  \right\}
+  \,.
+\end{gather*}
+We will employ the following result.
+\begin{lemma}
+  Let $\mathcal{P}=\left\{ A_1,A_2,\ldots \right\}$ be a partition of $\R^d$ into bounded, convex sets with non-empty interior, and let $\mathcal{F}$ be a class of functions $f\colon\R^d\to\R$ such that the restrictions $\mathcal{F}_{|A_j}$ belong to $C^\alpha_{M_j}(A_j)$
+  for all $j\in\mathbb{N}$.
+  Then there exists a constant $K$, depending only on $\alpha$, $V$, $r$ and $d$
+  such that
+  \begin{gather*}
+    \log
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}
+    ,
+    L^r(\mathbf{Q})
+    )
+    \le
+    K
+    \left( \frac{1}{\varepsilon} \right)^V
+    \left( 
+      \sum_{j=1}^{\infty}
+      \lambda(A_j^1)^{r/(V+r)}
+      M_j^{Vr/(V+r)}
+      \mathbf{Q}(A_j)^{V/(V+r)}
+    \right)
+    ^{(V+r)/r}
+  \end{gather*}
+  for every $\varepsilon>0$, $V\ge d/\alpha$, and probability measure $\mathbf{Q}$.
+\end{lemma}
+\begin{proof}
+  \emph{\cite[Corollary~2.7.4]{vaart2013}}
+\end{proof}
+\pagebreak
+\begin{lemma}
+  Let $(\mathcal{P}_N)$ denote a sequence of qubic partitions
+  $\mathcal{P}_N=\left\{ A_{N,1},A_{N,2},\ldots \right\}$ 
+  of $\R^d$ 
+  with decreasing width $(h_N)\subset(0,1]$ such that $h_N\to 0$ for $N\to\infty$.
+  Furthermore, assume that there exists
+  $\alpha>d/2$, where $\mathcal{X}\subseteq \R^d$, such
+  that for 
+  $V:=d/\alpha$
+ and for all 
+$
+(j,N)\in\mathbb{N}^2
+$
+there exists 
+$M_{N,j}\ge 1$ such that 
+\begin{gather*}
+  \frac{1}{\pi(\cdot)}
+  \in C^\alpha_{M_{N,j}}(A_{N,j})
+  \quad
+  \text{and}
+  \quad
+  \sum_{j=1}^{\infty} 
+  M_{N,j}^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{gather*}
+It then holds the statement of Assumption~\ref{aa:assumption:1}.
+\end{lemma}
 \begin{remark}
   We can derive Assumption~\ref{aa:assumption:1} from regularity assumptions on the inverse propensity score 
   $1/\pi(\cdot)$ and the distribution of $X$.
@@ -220,7 +461,7 @@ the stochastic process
     \frac{1}{N}
     \sum_{i=1}^{n} 
     w(X_i)
-    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    \mathbf{1}{\left\{ Y_i \le z \right\}}
     \ 
     -
     \ 
@@ -311,7 +552,7 @@ the stochastic process
     \frac{1}{\pi(X_i)}
     \right)
     \left( 
-    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    \mathbf{1}{\left\{ Y_i \le z \right\}}
     -
   F_{Y(1)}(z|X_i)
     \right)
@@ -332,7 +573,7 @@ the stochastic process
     \sum_{i=1}^{N} 
     \frac{T_i}{\pi(X_i)}
     \left( 
-    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    \mathbf{1}{\left\{ Y_i \le z \right\}}
     -
   F_{Y(1)}(z|X_i)
     \right)
@@ -361,7 +602,7 @@ the stochastic process
     \cdot
     T_i
     \cdot
-    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    \mathbf{1}{\left\{ Y_i(T_i)\, \le\, z \right\}}
     \\
     &
     \ 
@@ -376,7 +617,7 @@ the stochastic process
     \right)
     T_i
     \cdot
-    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    \mathbf{1}{\left\{ Y_i(T_i)\, \le\, z \right\}}
     \\
     &
     \quad 
@@ -385,7 +626,7 @@ the stochastic process
     \frac{1}{N}
     \sum_{i=1}^{N} 
     \frac{T_i}{\pi(X_i)}
-    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    \mathbf{1}{\left\{ Y_i(T_i)\, \le\, z \right\}}
     \\
     &
     \ 
@@ -400,7 +641,7 @@ the stochastic process
     \right)
     T_i
     \left( 
-    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    \mathbf{1}{\left\{ Y_i(T_i)\, \le\, z \right\}}
     -
     F_{Y(1)}(z|X_i)
     \right)
@@ -413,7 +654,7 @@ the stochastic process
     \sum_{i=1}^{N} 
     \frac{T_i}{\pi(X_i)}
     \left( 
-    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    \mathbf{1}{\left\{ Y_i(T_i)\, \le\, z \right\}}
     -
     F_{Y(1)}(z|X_i)
     \right)
@@ -441,7 +682,7 @@ the stochastic process
     \sum_{i=1}^{N} 
     \frac{T_i}{\pi(X_i)}
     \left( 
-    \mathbf{1}_{\left\{ Y_i(T_i)\, \le\, z \right\}}
+    \mathbf{1}{\left\{ Y_i(T_i)\, \le\, z \right\}}
     -
     F_{Y(1)}(z|X_i)
     \right)
@@ -971,10 +1212,10 @@ Indeed,
   \le
   \ 
   \sum_{k=1}^{N} 
-  \frac{\mathbf{1}_{\left\{ X_k\in A_N(X_i) \right\}}}
+  \frac{\mathbf{1}{\left\{ X_k\in A_N(X_i) \right\}}}
   {
     \sum_{j=1}^{N} 
-\mathbf{1}_{\left\{ X_j\in A_N(X_i) \right\}}
+\mathbf{1}{\left\{ X_j\in A_N(X_i) \right\}}
   }
   \sup_{z\in\R}
   \left| 
@@ -1964,7 +2205,7 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 %%    w(D,X)- \frac{1}{\pi(X)}
 %%    \right)
 %%    \left( 
-%%    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+%%    \mathbf{1}{\left\{ Y(T) \le z \right\}}
 %%    -
 %%  F_{Y(1)}(z|X)
 %%    \right)
@@ -2143,7 +2384,7 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 %    \left[ 
 %    \frac{T}{\pi(X)}
 %    \left( 
-%    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+%    \mathbf{1}{\left\{ Y(T) \le z \right\}}
 %    -
 %  F_{Y(1)}(z|X)
 %    \right)
@@ -2158,7 +2399,7 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 %    \left[ 
 %      Tw(X,D)
 %    \left( 
-%    \mathbf{1}_{\left\{ Y(T) \le z \right\}}
+%    \mathbf{1}{\left\{ Y(T) \le z \right\}}
 %    -
 %  F_{Y(1)}(z|X)
 %    \right)
@@ -2174,7 +2415,7 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 %      \left[ 
 %      w(X,D)
 %      \left( 
-%    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+%    \mathbf{1}{\left\{ Y(1) \le z \right\}}
 %    -
 %  F_{Y(1)}(z|X)
 %      \right)
@@ -2191,7 +2432,7 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 %      w(X,D)
 %      \E
 %      \left[ 
-%    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+%    \mathbf{1}{\left\{ Y(1) \le z \right\}}
 %    -
 %  F_{Y(1)}(z|X)
 %  |X,D
@@ -2207,7 +2448,7 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 %      w(X,D)
 %      \E
 %      \left[ 
-%    \mathbf{1}_{\left\{ Y(1) \le z \right\}}
+%    \mathbf{1}{\left\{ Y(1) \le z \right\}}
 %    -
 %  F_{Y(1)}(z|X)
 %  |X
@@ -2840,7 +3081,7 @@ Since $m\le 2/\varepsilon$ it holds
     \ 
     \frac{t}{\pi(x)}
     \left( 
-      \mathbf{1}_{\left\{  y\,\le\,z_{l} \right\}}
+      \mathbf{1}{\left\{  y\,\le\,z_{l} \right\}}
       -
       F_{Y(1)}(z_{l-1}|x)
     \right)
@@ -2859,7 +3100,7 @@ F_{Y(1)}(z_{l-1})
     \ 
     \frac{t}{\pi(x)}
     \left( 
-      \mathbf{1}_{\left\{  y\,\le\,z_{l-1} \right\}}
+      \mathbf{1}{\left\{  y\,\le\,z_{l-1} \right\}}
       -
       F_{Y(1)}(z_l|x)
     \right)
@@ -2880,7 +3121,7 @@ F_{Y(1)}(z_{l-1})
     \norm{
       \frac{T}{\pi(X)}
       \left( 
-      \mathbf{1}_{
+      \mathbf{1}{
       \left\{ 
       Y(T)\in [z_{l-1},z_l] 
     \right\}
@@ -2907,7 +3148,7 @@ F_{Y(1)}(z_{l-1})
         \frac{1}{\pi(X)}
         \frac{T}{\pi(X)}
       \left( 
-      \mathbf{1}_{
+      \mathbf{1}{
       \left\{ 
       Y(T)\in [z_{l-1},z_l] 
     \right\}
@@ -3534,7 +3775,7 @@ $H_N:=F_N$.
     \right)
     T_i
     \left( 
-    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    \mathbf{1}{\left\{ Y_i \le z \right\}}
     -
   F_{Y(1)}(z|X_i)
     \right)
@@ -3770,7 +4011,7 @@ to a Gaussian process with mean 0 and covariance function given by
     \sum_{i=1}^{N} 
     \frac{T_i}{\pi(X_i)}
     \left( 
-    \mathbf{1}_{\left\{ Y_i \le z \right\}}
+    \mathbf{1}{\left\{ Y_i \le z \right\}}
     -
   F_{Y(1)}(z|X_i)
     \right)
@@ -4001,12 +4242,12 @@ It holds
 \frac{1}{\pi(X)}
 \frac{T}{\pi(X)}
 \left( 
-\mathbf{1}_{\left\{ Y(T)\,\le\, z_1 \right\}}
+\mathbf{1}{\left\{ Y(T)\,\le\, z_1 \right\}}
 -
 F_{Y(1)}(z_1|X)
 \right)
 \left( 
-\mathbf{1}_{\left\{ Y(T)\,\le\, z_2 \right\}}
+\mathbf{1}{\left\{ Y(T)\,\le\, z_2 \right\}}
 -
 F_{Y(1)}(z_2|X)
 \right)
@@ -4020,12 +4261,12 @@ F_{Y(1)}(z_2|X)
 \left[
 \frac{1}{\pi(X)}
 \left( 
-\mathbf{1}_{\left\{ Y(1)\,\le\, z_1 \right\}}
+\mathbf{1}{\left\{ Y(1)\,\le\, z_1 \right\}}
 -
 F_{Y(1)}(z_1|X)
 \right)
 \left( 
-\mathbf{1}_{\left\{ Y(1)\,\le\, z_2 \right\}}
+\mathbf{1}{\left\{ Y(1)\,\le\, z_2 \right\}}
 -
 F_{Y(1)}(z_2|X)
 \right)
@@ -4074,7 +4315,7 @@ F_{Y(1)}(z_2)
   \left[
 \frac{T}{\pi(X)}
 \left( 
-\mathbf{1}_{\left\{ Y(T)\,\le\, z_1 \right\}}
+\mathbf{1}{\left\{ Y(T)\,\le\, z_1 \right\}}
 -
 F_{Y(1)}(z_1|X)
 \right)
@@ -4092,7 +4333,7 @@ F_{Y(1)}(z_2)
  \E
   \left[
 \left( 
-\mathbf{1}_{\left\{ Y(1)\,\le\, z_1 \right\}}
+\mathbf{1}{\left\{ Y(1)\,\le\, z_1 \right\}}
 -
 F_{Y(1)}(z_1|X)
 \right)
