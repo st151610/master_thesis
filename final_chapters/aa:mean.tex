@@ -642,7 +642,7 @@ Then
   \end{align*}
 
 \end{example}
-In the next example we show, that for $d=1$
+In the next example we show, that 
 \begin{gather*}
   \sum_{j=1}^\infty
   \P
@@ -653,9 +653,80 @@ In the next example we show, that for $d=1$
   \infty
 \end{gather*}
 for all continuous distributions of $X$.
-\begin{expample}
-  Assume (the simplest case) $d=1$.
-\end{expample}
+\begin{example}
+  Let $f_X$ be the probability density of $X$. 
+  Then there exists a compact set $K\subset\mathcal{X}\subset \R^d$, such that
+  $
+  \inf_{x\in K}f_X(x)
+  >0
+  $. Since $\mathcal{P}_N$ are cubic partitions, it holds for 
+  \begin{gather*}
+    I_N
+    :=
+    \left\{ 
+      i\in\mathbb{N}\colon
+      A_{N,i}\subset K
+    \right\}
+    \qquad
+    \text{that}
+    \qquad
+    \bigcup_{i\in I_N}A_{N,i}\nearrow K
+    \,.
+  \end{gather*}
+\end{example}
+Thus
+\begin{align*}
+  \sum_{i=1}^\infty
+  \P
+  [
+  X\in A_{N,i}
+  ]^{V/(V+2)}
+  &
+  \ 
+  \ge
+  \ 
+  \sum_{i\in I_N}
+  \P
+  [
+  X\in A_{N,i}
+  ]^{V/(V+2)}
+  \\
+  &
+  \ 
+  \ge
+  \ 
+  \inf_{x\in K}f_X(x)
+  ^{V/(V+2)}
+  \cdot 
+  h_N^{d\cdot(V/(V+2)-1)}
+  \sum_{i\in I_N}
+  \lambda
+  \left( 
+  A_{N,i}
+  \right)
+  \\
+  &
+  \ 
+  \to
+  \ 
+  \infty
+  \,.
+\end{align*}
+This follows from
+$
+  \sum_{i\in I_N}
+  \lambda
+  \left( 
+  A_{N,i}
+  \right)
+  \to 
+  \lambda(K)>0
+$,
+  $
+  \inf_{x\in K}f_X(x)
+  >0
+  $,
+  $V/(V+2)-1<0$ and $h_N\to 0$.
 \begin{ftheorem}
   \label{aa:mean:th}
   Under conditions 
