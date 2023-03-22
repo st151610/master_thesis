@@ -273,11 +273,13 @@ Furthermore, let
 \end{gather*}
 We will employ the following result.
 \begin{lemma}
+  \label{vdv_coro}
   Let $\mathcal{P}=\left\{ A_1,A_2,\ldots \right\}$ be a partition of $\R^d$ into bounded, convex sets with non-empty interior, and let $\mathcal{F}$ be a class of functions $f\colon\R^d\to\R$ such that the restrictions $\mathcal{F}_{|A_j}$ belong to $C^\alpha_{M_j}(A_j)$
   for all $j\in\mathbb{N}$.
   Then there exists a constant $K$, depending only on $\alpha$, $V$, $r$ and $d$
   such that
-  \begin{gather*}
+  \begin{gather}
+    \label{667}
     \log
     N_{[\,]}
     (
@@ -297,7 +299,7 @@ We will employ the following result.
       \mathbf{Q}(A_j)^{V/(V+r)}
     \right)
     ^{(V+r)/r}
-  \end{gather*}
+  \end{gather}
   for every $\varepsilon>0$, $V\ge d/\alpha$, and probability measure $\mathbf{Q}$.
 \end{lemma}
 \begin{proof}
@@ -319,7 +321,8 @@ $
 $
 there exists 
 $M_{N,j}\ge 1$ such that 
-\begin{gather*}
+\begin{gather}
+  \label{897}
   \frac{1}{\pi(\cdot)}
   \in C^\alpha_{M_{N,j}}(A_{N,j})
   \quad
@@ -336,13 +339,11 @@ $M_{N,j}\ge 1$ such that
   \ 
   1
   \,.
-\end{gather*}
+\end{gather}
 It then holds the statement of Assumption~\ref{aa:assumption:1}.
 \end{lemma}
-\begin{remark}
-  We can derive Assumption~\ref{aa:assumption:1} from regularity assumptions on the inverse propensity score 
-  $1/\pi(\cdot)$ and the distribution of $X$.
-  To this end, we want to employ \cite[Corollary~2.7.4]{vaart2013}.
+\begin{proof}
+  We want to employ Lemma~\ref{vdv_coro}. 
   To do this, the crucial observation is, that
   \begin{gather*}
     w(\cdot,\lambda,\lambda_0)
@@ -354,18 +355,12 @@ It then holds the statement of Assumption~\ref{aa:assumption:1}.
   Thus, the regularity of the function \eqref{ghost_function}
   on each cell $A_N\in\mathcal{P}_N$ is decided by 
   $1/\pi(\cdot)$.
-  Thus, we assume that there exists
-  $\alpha>d/2$, where $\mathcal{X}\subseteq \R^d$, such
-  that for 
-  $V:=d/\alpha$.
- and for all 
-$
-(j,N)\in\mathbb{N}^2
-$
-there exists 
-$M_{N,j}\ge \varepsilon_N$ such that 
-\begin{gather*}
-  \frac{1}{\pi(\cdot)}
+  Indeed, \eqref{ghost_function} is either 0 if the threshold of $\varepsilon_N$ is exceeded somewhere in the cell, or has the form constant-minus-smooth-function.
+In any case, it is continuous and bounded by $\varepsilon_N$.
+All its derivatives are 0 (if the threshold is exceeded) or are governed by $1/\pi(\cdot)$.
+Thus, it follows from \eqref{897}
+\begin{gather}
+  \eqref{ghost_function}
   \in C^\alpha_{M_{N,j}}(A_{N,j})
   \quad
   \text{and}
@@ -381,19 +376,286 @@ $M_{N,j}\ge \varepsilon_N$ such that
   \ 
   1
   \,.
+\end{gather}
+To bound the right-hand-side in \eqref{667} we note
+that 
+$
+\lambda(A_{N,j})=h^d_N
+$ 
+and thus
+$
+\lambda(A_{N,j}^1)\lesssim 1
+$
+for all $(j,N)\in\mathbb{N}^2$.
+Thus
+\begin{gather*}
+  \sum_{j=1}^{\infty} 
+  \lambda(A_{N,j}^1)^{2/(V+2)}
+  M_{N,j}^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
 \end{gather*}
-Then the function \ref{ghost_function}, restricted to $A_{N,j}$, is in 
+We get $\eqref{ghost_function}\in\mathcal{F}_N$, where 
+$
+\mathcal{F}_N
+$
+restricted to $A_{N,j}$ is 
 $
   C^\alpha_{M_{N,j}}(A_{N,j})
 $
-for all 
+and satisfies the requirements of Lemma~\ref{vdv_coro}.
+Since $V=d/\alpha \in (0,2)$ by $\alpha>d/2$, 
+applying Lemma~\ref{vdv_coro} finishes the proof.
+\end{proof}
+In the next examples we show the concrete applications of this Lemma.
+\begin{example}
+Let $d\in\R$ and assume $\pi(\cdot)$ follows a logistic regression model. Then there exist $(\beta_0,\beta)\in\R^{d+1}$ such that
+\begin{gather*}
+  \pi(x)
+  \ 
+  =
+  \ 
+  \frac{1}
+  {
+    1
+    +
+    \exp
+    \left( 
+      -
+        \beta_0
+        -
+        \inner{\beta}{x}
+    \right)
+  }
+  \quad
+  \text{and}
+  \quad
+  \frac
+  {1}
+  {
+  \pi(x)
+  }
+  \ 
+  =
+  \ 
+    1
+    +
+    \exp
+    \left( 
+      -
+        \beta_0
+        -
+        \inner{\beta}{x}
+    \right)
+    \quad
+    \text{for all}\ 
+    x\in\R^d
+    \,.
+\end{gather*}
+Clearly, by the smoothness of the exponential function, for all 
+$\alpha>0$ there exist $(M_{N,j})\ge 1$ such that
 $
-(j,N)\in\mathbb{N}^2
+  1/\pi(\cdot)\in C^\alpha_{M_{N,j}}(A_{N,j})
 $.
-Then \cite[Corollary~2.7.4]{vaart2013} gives us the statement 
-in
-Assumption~\ref{aa:assumption:1}.
-\end{remark}
+Assume $\#\mathcal{X}<\infty$, that is, $X$ can take only finitely many values with positive probability.
+We write
+\begin{gather*}
+  J_N
+  :=
+  \left\{ 
+    j\in\mathbb{N}
+    \colon
+    \P[X\in A_{N,j}]>0
+  \right\}
+  \,.
+\end{gather*}
+It holds
+$\#J_N\le \# \mathcal{X}<\infty$.
+Thus, the following maximum is attained
+\begin{gather*}
+  \max_{j\in J_N} M_{N,j}
+  =:M^*_N
+  \,.
+\end{gather*}
+But the partitions increasingly better fit the support of $X$. Thus
+$M^*_N$ is decreasing in $N$, that is,  $\infty>M^*_1\ge M^*_N$.
+It follows
+\begin{align*}
+  \sum_{j=1}^{\infty} 
+  M_{N,j}
+  ^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \le
+  \ 
+  \left( 
+  M^*_1
+  \right)
+  ^{2V/(V+2)}
+  \cdot
+  \# J_N
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{align*}
+\end{example}
+The next question is if we can extend this to countable sets
+$\mathcal{X}$. To focus our attention, we assume (the best case)
+$M_{N,j}=1$.
+\begin{example}
+  We give three examples. Let $\propto$ denote the equal-up-to-a-constant order.
+  Without loss of generality we assume $\mathcal{X}=\mathbb{N}$.
+  First consider
+  for some $\varepsilon\in(0,1)$
+  \begin{gather*}
+    \P[X=k]
+    \propto
+    k^{-(1+\varepsilon)}
+    \,.
+  \end{gather*}
+  This (barely) is a distribution. But scaling with $V/(V+2)\in(0,1)$ we cause trouble. Indeed, by $V<2$ it holds
+  \begin{gather*}
+    (
+    1+\varepsilon
+    )
+    \cdot
+    \frac{V}{V+2}
+    <1
+    \,,
+  \end{gather*}
+  and thus
+  \begin{align*}
+  \sum_{j=1}^\infty
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  &
+  \ 
+  =
+  \ 
+  \lim_{N\to\infty}
+  \sum_{j\in J_N}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \\
+  &
+  \ 
+  =
+  \ 
+  \sum_{k=1}^{\infty} 
+  \P
+  [
+  X=k
+  ]^{V/(V+2)}
+  \\
+  &
+  \ 
+  \propto
+  \ 
+  \sum_{k=1}^{\infty} 
+  \left( 
+  \frac{1}{k}
+  \right)
+  ^{(1+\varepsilon)\cdot V/(V+2)}
+  =\infty
+  \,.
+  \end{align*}
+  On the other hand, the same arguments applied for
+  \begin{gather*}
+    \P[X=k]
+    \propto
+    k^{-((V+2)/V+\varepsilon)}
+    \,,
+  \end{gather*}
+  with $\varepsilon>0$ yield
+\begin{gather*}
+  \sum_{j=1}^\infty
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \lesssim 1
+  \,.
+\end{gather*}
+Finally, let $X$ be Poisson distributed with parameter $\lambda\in(0,1)$.
+Then
+\begin{align*}
+  \sum_{j=1}^\infty
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  &
+  \ 
+  =
+  \ 
+  \sum_{k=0}^{\infty} 
+  \P
+  [
+  X=k
+  ]^{V/(V+2)}
+  \\
+  &
+  \ 
+  =
+  \ 
+  e^{-\lambda\cdot V/(V+2)}
+  \sum_{k=0}^{\infty} 
+  \left( 
+    \frac{\lambda^k}{k\text{!}}
+  \right)
+  ^{V/(V+2)}
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \sum_{k=0}^{\infty} 
+\left( 
+    \lambda
+  ^{V/(V+2)}
+\right)^k
+  =
+  \frac{1}
+  {
+    1-
+    \lambda
+  ^{V/(V+2)}
+  }
+  \lesssim 1
+  \,.
+  \end{align*}
+
+\end{example}
+In the next example we show, that for $d=1$
+\begin{gather*}
+  \sum_{j=1}^\infty
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \to
+  \infty
+\end{gather*}
+for all continuous distributions of $X$.
+\begin{expample}
+  Assume (the simplest case) $d=1$.
+\end{expample}
 \begin{ftheorem}
   \label{aa:mean:th}
   Under conditions 

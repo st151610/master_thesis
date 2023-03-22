@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1679394009 "main.aux" "main.bbl" "main" 1679394015
+["bibtex main"] 1679484968 "main.aux" "main.bbl" "main" 1679485036
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1678181364 68686 85eff8eff8e0431206c74f8001d760d4 ""
-  "main.aux" 1679394014 18566 21f938a6b48916d5457f7b16f5e2dcc7 "pdflatex"
+  "main.aux" 1679485004 18667 ebee1ceaeae33be9e60cc0de18f20f03 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1679394009 "main.tex" "main.pdf" "main" 1679394015
+["pdflatex"] 1679485036 "main.tex" "main.pdf" "main" 1679485036
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -222,15 +222,15 @@
   "chapters/convex_analysis/ts_3.tex" 1677576183 12813 d9dc0ae1ffbd8f5a604e95ee25ac86e2 ""
   "chapters/intro_for_all.tex" 1678871653 15174 e5e77944eadc906f84b43855b2de29f1 ""
   "final_chapters/aa:dual.tex" 1678806710 17300 1bfc22217da14429eea36eb7d07efa2c ""
-  "final_chapters/aa:mean.tex" 1679394002 68641 639d593b7ef952b95d1f39486495313b ""
+  "final_chapters/aa:mean.tex" 1679485034 72753 4957687c45011f98e62eb4179862a090 ""
   "final_chapters/aa:weights.tex" 1679386332 6322 20febbf23936a9a4361144dda77c5bfe ""
   "final_chapters/ebw:dual_formulation.tex" 1678871870 25368 b4c234a00cd82f6d4a7c86c43abc93ce ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1679394014 18566 21f938a6b48916d5457f7b16f5e2dcc7 "pdflatex"
-  "main.bbl" 1679394009 3109 7b09657a83bc57cb61dd622f789e9612 "bibtex main"
+  "main.aux" 1679485004 18667 ebee1ceaeae33be9e60cc0de18f20f03 "pdflatex"
+  "main.bbl" 1679484969 3109 7b09657a83bc57cb61dd622f789e9612 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1678901873 10553 5c43eba7735062fe8bfac1bf8d7ed37b ""
-  "main.toc" 1679394014 1056 b2e02b7e574ce3f81a90348282674232 "pdflatex"
+  "main.toc" 1679485004 1056 25345ed1f81b502edfdf24286efa9f65 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
