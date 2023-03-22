@@ -1,7 +1,6 @@
 \subsection{Tools and Assumptions}
-
-To control the remaining terms $R_3$ and $R_4$ we use empirical processes. We introduce the concept and the results we need in the next paragraphs. 
-For an introduction to empirical processes see \cite{Vaart2000}. More advanced techniques are in \cite{vaart2013}.
+For the subsequent analysis we need the theory of empirical processes.
+For an introduction to empirical processes see \cite[§19]{Vaart2000}. For a thorough treatment see \cite[§2]{vaart2013}. Next, we introduce the tools we need.
 
 Let 
 $
@@ -19,7 +18,7 @@ $
   \right)
 $
 a measurable space, and 
-$
+\begin{gather*}
   \xi_1,\ldots,\xi_N
   :
   \left( 
@@ -32,12 +31,13 @@ $
     \mathcal{Z},
     \Sigma
   \right)
-$
-a sample 
-of independent and identically-distributed
+  \quad
+  \text{independent and identically-distributed
+  }
+\end{gather*}
 random variables
 with probability distribution $\P_{\!\xi}$.
-A family $\mathcal{F}$ of measurable functions 
+Let $\mathcal{F}$ be a class of measurable functions 
 $
   f:
   \left( 
@@ -49,7 +49,12 @@ $
     \R,
     \mathcal{B}(\R)
   \right)
+$, where
 $
+    \mathcal{B}(\R)
+$
+is the Borel-$\sigma$-algebra on $\R$.
+Then $\mathcal{F}$
 induces a stochastic process by
 \begin{gather}
   f
@@ -62,14 +67,26 @@ induces a stochastic process by
   \ 
   \frac{1}{\sqrt{n}}
   \sum_{i=1}^{N} 
-  (
+  \left(
     f(\xi_i)
     -
     \E_\xi[f]
-  \,.
+  \right)
+  \,,
 \end{gather}
-We call this the  \textbf{empirical process} $\G_N$ indexed by $\mathcal{F}$.
-We define the (random) norm
+where
+$
+    \E_\xi[f]
+    :=
+    \int_\mathcal{Z}
+    f
+    \,
+    d\P_\xi
+$.
+We call
+$\G_N$ the  \textbf{empirical process} indexed by $\mathcal{F}$.
+Often, the purpose of this construction is, to study the behaviour of a centered, scaled arithmetic mean uniformly over $\mathcal{F}$.
+To this end, we define the (random) norm
 \begin{gather}
   \norm{\G_n}_\mathcal{F}
   :=
@@ -80,14 +97,13 @@ We define the (random) norm
         \right|
         .
 \end{gather}
-\begin{remark}
 We stress that 
 $
   \norm{\G_n}_\mathcal{F}
 $
 often ceases to be measurable, even in simple situations~\cite[page 3]{vaart2013}.
-To deal with this, we introduce the notion of \textbf{outer expectation} $\E^*$, that is,
-\begin{gather}
+To deal with this, we introduce the notion of \textbf{outer expectation} $\E^*$ (see \cite[page~6]{vaart2013})
+\begin{gather*}
   \E^*[Z]
   \ 
   :=
@@ -116,85 +132,58 @@ To deal with this, we introduce the notion of \textbf{outer expectation} $\E^*$,
   \E[U]<\infty
   \right\}
   \,.
-\end{gather}
+\end{gather*}
 In our application the technical difficulties halt at this point, because we only consider $Z$ with $\E^*[Z]<\infty$. Then there exists a smallest measurable function $Z^*$ dominating $Z$ with
-$\E^*[Z]=\E[Z^*]$. Thus, we may assume $Z$ to be measurable in this regard.
-\begin{definition}
-  We call a class 
-  $\mathcal{F}$ of measurable functions 
-$\P$-Donsker
-if the sequence of processes 
-$\left\{ G_N f \colon f\in\mathcal{F}\right\}$
-converges in
-$l^\infty(\mathcal{F})$
-to a tight limit process.
-\end{definition}
+$\E^*[Z]=\E[Z^*]$ (see \cite[Lemma~1.2.1]{vaart2013}).
 
-\begin{theorem}
-  Every class $\mathcal{F}$ of measurable functions 
-  with
-  $
-    J
-    _{[]}
-    (
-    1
-    ,
-    \mathcal{F}
-    ,
-    L_2(\P)
-    )
-    <\infty
-  $
-  is
-
-  $\P$-Donsker, that is,
-  the sequence of processes 
-$\left\{ G_N f \colon f\in\mathcal{F}\right\}$
-  converges 
-  in
-$l^\infty(\mathcal{F})$
-to a Gaussian process with mean 0 and covariance function given by
-\begin{gather}
-  \mathrm{Cov}(f,g)
-  :=
-  \E[fg]-\E[f]\E[g]
-  \,.
-\end{gather}
-\end{theorem}
-\begin{proof}
-  \cite[Theorem~19.5]{Vaart2000}
-\end{proof}
-
-
-
-\end{remark}
-In our application we need concentration inequalities for 
-$
-  \norm{\G_n}_\mathcal{F}
-$.
-One easy way is to use maximal inequalities for the expectation together with Markov's inequality. There are also Bernstein-like inequalities for empirical processes. We need to introduce more concepts.
-
-Given two functions $\underline{f}$ and $\overline{f}$, the bracket
-$[\underline{f},\overline{f}]$ 
+To control empirical processes - apart from strong theorems - we need the notion of bracketing number and integral (see \cite[page 270]{Vaart2000}). 
+Given two functions $\underline{f}\le \overline{f}$,
+\begin{gather*}
+  \text{
+the bracket
+  }\quad
+[\underline{f},\overline{f}]
+\quad 
+\text{
 is the set of all functions $f$ with 
-$\underline{f}\le f \le \overline{f}$.
-We define a
-$(\varepsilon, L^{r}(\P))$-bracket
+}\quad 
+\underline{f}\ \le\ f \ \le\  \overline{f}
+\,.
+\end{gather*}
+For $\varepsilon>0$
+we define a
+\begin{gather*}
+  \text{
+$(\varepsilon, L^{r}(\P))$ -bracket
 to be a bracket
-$[\underline{f},\overline{f}]$ with
-$\norm{\overline{f}-\underline{f}}_{ L^r(\P)}< \varepsilon$.
-The bracketing number 
+  }
+  \quad
+[\underline{f},\overline{f}]
+\quad
+\text{with}
+\quad
+\norm{\overline{f}-\underline{f}}_{ L^r(\P)}
+\ <\  \varepsilon
+\,.
+\end{gather*}
+The \textbf{
+bracketing number
+} 
 $
 N_{[\,]}(\varepsilon, \mathcal{F}, L^r(\P))
 $
 is 
 the minimum number of 
 $(\varepsilon, L^{r}(\P))$-brackets needed to cover $\mathcal{F}$.
+
 For most classes $\mathcal{F}$ the bracketing number grows to infinity for $\varepsilon\to 0$.
-To measure the speed of convergence we introduce the bracketing integral
-\begin{gather}
+To measure the speed of growth we introduce 
+for $\delta>0$
+the
+\textbf{bracketing integral}
+\begin{gather*}
      J
-    _{[]}
+    _{[\,]}
     (
     \delta
     ,
@@ -202,7 +191,9 @@ To measure the speed of convergence we introduce the bracketing integral
     ,
     L_r(\P)
     )
+    \ 
     =
+    \ 
   \int_0^{\delta}
       \sqrt{
         \log 
@@ -212,26 +203,88 @@ To measure the speed of convergence we introduce the bracketing integral
     \,
     d\varepsilon
     \,.
-\end{gather}
+\end{gather*}
+Before we give some results, we introduce the notion of envelope function.
 An envelope function $F$ of a class $\mathcal{F}$ satisfies 
-$|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
+$|f(z)|\le F(z)< \infty$ for all $f\in\mathcal{F}$ and all $z\in\mathcal{Z}$.
+\newpage
+There is a powerful theorem - a central limit theorem for $\G_N$ uniform in $\mathcal{F}$ - that we now introduce.
+\begin{definition}
+  We call a class 
+  $\mathcal{F}$ of measurable functions 
+$\P$-Donsker
+if the sequence of processes 
+$\left\{ \G_N f \colon f\in\mathcal{F}\right\}$
+converges in
+$l^\infty(\mathcal{F})$
+to a tight limit process.
+\end{definition}
+
+\begin{theorem}
+  Every class $\mathcal{F}$ of measurable functions 
+  with
+  \begin{gather*}
+    J
+    _{[\,]}
+    (
+    1
+    ,
+    \mathcal{F}
+    ,
+    L_2(\P)
+    )
+    <\infty
+  \end{gather*}
+  is
+  $\P$-Donsker.
+  Furthermore,
+  the sequence of processes 
+$\left\{ G_N f \colon f\in\mathcal{F}\right\}$
+  converges 
+  in
+$l^\infty(\mathcal{F})$
+to a Gaussian process with mean 0 and covariance function given by
+\begin{gather*}
+  \mathbf{Cov}(f,g)
+  \ 
+  :=
+  \ 
+  \E[fg]
+  \ 
+  -
+  \ 
+  \E[f]\E[g]
+  \,.
+\end{gather*}
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~19.5]{Vaart2000}
+\end{proof}
+
+
+
+In our application we need concentration inequalities for 
+$
+  \norm{\G_n}^*_\mathcal{F}
+$.
+One easy way to obtain this is, to use a maximal inequality (see Theorem~\ref{th:max_ineq}) to control the expectation,
+together with Markov's inequality. There are also Bernstein-like inequalities for empirical processes (see \cite[§2.14.2]{vaart2013}). 
 \begin{theorem}
   \label{th:max_ineq}
   \emph{(Maximal inequality)}
   For any class $\mathcal{F}$ of measurable functions with envelope function $F,$
-  \begin{gather}
+  \begin{gather*}
     \E^*
-    _\P
-    [
     \norm{
       \G
       _n
       }
       _\mathcal{F}
-    ]
+    \ 
     \lesssim
+    \ 
     J
-    _{[]}
+    _{[\,]}
     (
     \norm{
       F
@@ -240,10 +293,11 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
     ,
     \mathcal{F}
     ,
-    L_2(\P)
+    L^2(\P)
     )
+    \, 
     .
-  \end{gather}
+  \end{gather*}
 \end{theorem}
 \begin{proof}
   \cite[Corollary~19.35]{Vaart2000}
@@ -253,10 +307,10 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
   \label{markov_max_lemma}
   Let $(\mathcal{H}_N)$ be a sequence of measurable function classes with envelope functions $(H_N)$.
   If
-  \begin{gather}
+  \begin{gather*}
     J_{[\, ]}
     \left( 
-    \norm{F_N}_{ L^2(\P)}
+    \norm{H_N}_{ L^2(\P)}
     ,
     \mathcal{H}_N
     ,
@@ -272,7 +326,8 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
     N
     \to
     \infty
-  \end{gather}
+    \,,
+  \end{gather*}
   it holds 
   $
   \norm{\G_N}^*_{\mathcal{H}_N}\overset{\P}{\to}0
@@ -281,14 +336,12 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
 \begin{proof}
   By Markov's inequality and Theorem~\ref{th:max_ineq} it holds for all $\varepsilon>0$
   \begin{align*}
-    &
     \P
     [
   \norm{\G_N}^*_{\mathcal{H}_N}
   \ge
   \varepsilon
     ]
-    \\
     &
     \ 
     \le
@@ -306,6 +359,8 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
     [
   \norm{\G_N}_{\mathcal{H}_N}
     ]
+    \\
+    &
     \ 
     \lesssim
     \ 
@@ -318,22 +373,31 @@ $|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
     ,
      L^2(\P)
     \right)
+    \\
+    &
     \ 
     \to
     \ 
     0
+    \qquad
+    \text{for}
+    \ 
+    N\to\infty
+    \,.
   \end{align*}
-  for $N\to\infty$. 
 \end{proof}
-A technical lemma for products of function classes.
-
-Define the product of two function classes
+Next we give a technical lemma to 
+bound the bracketing numbers of products of two function classes, that is,
 \begin{gather*}
   \mathcal{F}\cdot \mathcal{G}
+  \ 
   :=
+  \ 
   \left\{ 
     f\cdot g
+    \ 
     \colon
+  \ 
     f\in\mathcal{F},
     g\in\mathcal{G}
   \right\}\,.
@@ -373,6 +437,55 @@ Define the product of two function classes
   $[\underline{h},\overline{h}]$
   bracket, containing $f\cdot g$, by
 \end{proof}
+This is as much theory of empirical processes as we need for the moment. The next lemma shows what effect the weights
+$T/\pi(X)$ have on other functions.
+\begin{lemma}
+  \label{ps_weights_lemma}
+  Let
+  $
+  g_1\colon
+  \mathcal{X}\to\R
+  $
+  and
+  $
+  g_2\colon
+  \mathcal{Y}\to\R
+  $
+  be a measurable functions.
+  It holds
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_1(X)
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    g_1(X)
+    \right]
+    \,.
+  \end{gather*}
+  If Assumption~\ref{aa:assumption:treatment_str_ign} holds true, then
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_2(Y(T))
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    f(Y(1))
+    \right]
+    \,.
+  \end{gather*}
+\end{lemma}
+
 
 \begin{lemma}
   \label{aa:r3:lemma:1}
@@ -523,53 +636,6 @@ $\mathcal{H}_N:=\mathcal{F}_N\cdot\mathcal{F}$ and
 $H_N:=F_N$.
 \end{proof}
 
-\begin{lemma}
-  \label{ps_weights_lemma}
-  Let
-  $
-  g_1\colon
-  \mathcal{X}\to\R
-  $
-  and
-  $
-  g_2\colon
-  \mathcal{Y}\to\R
-  $
-  be a measurable functions.
-  It holds
-  \begin{gather*}
-    \E
-    \left[
-    \frac{T}{\pi(X)}
-    g_1(X)
-    \right]
-    \ 
-    =
-    \ 
-    \E
-    \left[
-    g_1(X)
-    \right]
-    \,.
-  \end{gather*}
-  If Assumption~\ref{aa:assumption:treatment_str_ign} holds true, then
-  \begin{gather*}
-    \E
-    \left[
-    \frac{T}{\pi(X)}
-    g_2(Y(T))
-    \right]
-    \ 
-    =
-    \ 
-    \E
-    \left[
-    f(Y(1))
-    \right]
-    \,.
-  \end{gather*}
-\end{lemma}
-
 \begin{assumption}
   \label{aa:assumption:1}
   For any decreasing sequence
@@ -639,7 +705,7 @@ such that for all $(\lambda,\lambda_0)\in\R^{N+1}$ and for all $N\in\mathbb{N}$ 
 \end{gather}
 is contained in $\mathcal{F}_N$.
 \end{assumption}
-The next Lemma shows that mild assumptions on the regularity of the inverse propensity score implies Assumption~\ref{aa:assumption:1}.
+The next Lemma and the ensuing examples show, what assumptions on the regularity of the inverse propensity score and the distribution of $X$ imply Assumption~\ref{aa:assumption:1}.
 To this end, we need notation from \cite[§2.7.1]{vaart2013}.
 To this end, let for any vector $k\in\mathbb{N}_0^d \ (d\in\R)$
 \begin{gather*}
@@ -697,7 +763,6 @@ Furthermore, let
   \right\}
   \,.
 \end{gather*}
-We will employ the following result.
 \begin{lemma}
   \label{vdv_coro}
   Let $\mathcal{P}=\left\{ A_1,A_2,\ldots \right\}$ be a partition of $\R^d$ into bounded, convex sets with non-empty interior, and let $\mathcal{F}$ be a class of functions $f\colon\R^d\to\R$ such that the restrictions $\mathcal{F}_{|A_j}$ belong to $C^\alpha_{M_j}(A_j)$

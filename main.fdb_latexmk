@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1679489819 "main.aux" "main.bbl" "main" 1679489825
+["bibtex main"] 1679497845 "main.aux" "main.bbl" "main" 1679497850
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1678181364 68686 85eff8eff8e0431206c74f8001d760d4 ""
-  "main.aux" 1679489824 18794 113e3027495948562fa23d6a7a14b740 "pdflatex"
+  "main.aux" 1679497850 18876 c17d2cff8a4d3f6f39bcd184fcb8c86a "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1679489819 "main.tex" "main.pdf" "main" 1679489825
+["pdflatex"] 1679497845 "main.tex" "main.pdf" "main" 1679497850
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -223,15 +223,15 @@
   "chapters/intro_for_all.tex" 1678871653 15174 e5e77944eadc906f84b43855b2de29f1 ""
   "final_chapters/aa:dual.tex" 1678806710 17300 1bfc22217da14429eea36eb7d07efa2c ""
   "final_chapters/aa:mean.tex" 1679489813 37402 5a176fb16ed955d13aefb61a474dc9c4 ""
-  "final_chapters/aa:tools.tex" 1679489728 20388 392889d786ee59ba2d2cfb79234be488 ""
+  "final_chapters/aa:tools.tex" 1679497839 21654 0b834579fce5891843f1048eb4e5df79 ""
   "final_chapters/aa:weights.tex" 1679386332 6322 20febbf23936a9a4361144dda77c5bfe ""
   "final_chapters/ebw:dual_formulation.tex" 1678871870 25368 b4c234a00cd82f6d4a7c86c43abc93ce ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1679489824 18794 113e3027495948562fa23d6a7a14b740 "pdflatex"
-  "main.bbl" 1679489819 3109 7b09657a83bc57cb61dd622f789e9612 "bibtex main"
+  "main.aux" 1679497850 18876 c17d2cff8a4d3f6f39bcd184fcb8c86a "pdflatex"
+  "main.bbl" 1679497845 3109 7b09657a83bc57cb61dd622f789e9612 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1679489762 10591 5aa161977b1267ef8841fcdf681a9503 ""
-  "main.toc" 1679489824 1056 64c45d400066a232cf10c5e4ed287762 "pdflatex"
+  "main.toc" 1679497850 1056 64c45d400066a232cf10c5e4ed287762 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
