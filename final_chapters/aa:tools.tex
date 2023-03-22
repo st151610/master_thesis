@@ -1,0 +1,1157 @@
+\subsection{Tools and Assumptions}
+
+To control the remaining terms $R_3$ and $R_4$ we use empirical processes. We introduce the concept and the results we need in the next paragraphs. 
+For an introduction to empirical processes see \cite{Vaart2000}. More advanced techniques are in \cite{vaart2013}.
+
+Let 
+$
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+$
+be a probability space,
+$
+  \left( 
+    \mathcal{Z},
+    \Sigma
+  \right)
+$
+a measurable space, and 
+$
+  \xi_1,\ldots,\xi_N
+  :
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+  \to
+  \left( 
+    \mathcal{Z},
+    \Sigma
+  \right)
+$
+a sample 
+of independent and identically-distributed
+random variables
+with probability distribution $\P_{\!\xi}$.
+A family $\mathcal{F}$ of measurable functions 
+$
+  f:
+  \left( 
+    \mathcal{Z},
+    \Sigma
+  \right)
+    \to
+  \left( 
+    \R,
+    \mathcal{B}(\R)
+  \right)
+$
+induces a stochastic process by
+\begin{gather}
+  f
+  \ 
+  \mapsto
+  \ 
+  \G_N f 
+  \ 
+  :=
+  \ 
+  \frac{1}{\sqrt{n}}
+  \sum_{i=1}^{N} 
+  (
+    f(\xi_i)
+    -
+    \E_\xi[f]
+  \,.
+\end{gather}
+We call this the  \textbf{empirical process} $\G_N$ indexed by $\mathcal{F}$.
+We define the (random) norm
+\begin{gather}
+  \norm{\G_n}_\mathcal{F}
+  :=
+  \sup_
+        { f \in \mathcal{F}}
+        \left|
+          \G_N f
+        \right|
+        .
+\end{gather}
+\begin{remark}
+We stress that 
+$
+  \norm{\G_n}_\mathcal{F}
+$
+often ceases to be measurable, even in simple situations~\cite[page 3]{vaart2013}.
+To deal with this, we introduce the notion of \textbf{outer expectation} $\E^*$, that is,
+\begin{gather}
+  \E^*[Z]
+  \ 
+  :=
+  \ 
+    \inf
+  \left\{ 
+    \E[U]
+  \ 
+  \lvert
+  \ 
+    U\ge Z,
+    \ 
+    U:
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+  \to 
+  \left( 
+    \overline{\R},
+    \mathcal{B}(\overline{\R})
+  \right)
+  \text{measurable and}
+  \ 
+  \E[U]<\infty
+  \right\}
+  \,.
+\end{gather}
+In our application the technical difficulties halt at this point, because we only consider $Z$ with $\E^*[Z]<\infty$. Then there exists a smallest measurable function $Z^*$ dominating $Z$ with
+$\E^*[Z]=\E[Z^*]$. Thus, we may assume $Z$ to be measurable in this regard.
+\begin{definition}
+  We call a class 
+  $\mathcal{F}$ of measurable functions 
+$\P$-Donsker
+if the sequence of processes 
+$\left\{ G_N f \colon f\in\mathcal{F}\right\}$
+converges in
+$l^\infty(\mathcal{F})$
+to a tight limit process.
+\end{definition}
+
+\begin{theorem}
+  Every class $\mathcal{F}$ of measurable functions 
+  with
+  $
+    J
+    _{[]}
+    (
+    1
+    ,
+    \mathcal{F}
+    ,
+    L_2(\P)
+    )
+    <\infty
+  $
+  is
+
+  $\P$-Donsker, that is,
+  the sequence of processes 
+$\left\{ G_N f \colon f\in\mathcal{F}\right\}$
+  converges 
+  in
+$l^\infty(\mathcal{F})$
+to a Gaussian process with mean 0 and covariance function given by
+\begin{gather}
+  \mathrm{Cov}(f,g)
+  :=
+  \E[fg]-\E[f]\E[g]
+  \,.
+\end{gather}
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~19.5]{Vaart2000}
+\end{proof}
+
+
+
+\end{remark}
+In our application we need concentration inequalities for 
+$
+  \norm{\G_n}_\mathcal{F}
+$.
+One easy way is to use maximal inequalities for the expectation together with Markov's inequality. There are also Bernstein-like inequalities for empirical processes. We need to introduce more concepts.
+
+Given two functions $\underline{f}$ and $\overline{f}$, the bracket
+$[\underline{f},\overline{f}]$ 
+is the set of all functions $f$ with 
+$\underline{f}\le f \le \overline{f}$.
+We define a
+$(\varepsilon, L^{r}(\P))$-bracket
+to be a bracket
+$[\underline{f},\overline{f}]$ with
+$\norm{\overline{f}-\underline{f}}_{ L^r(\P)}< \varepsilon$.
+The bracketing number 
+$
+N_{[\,]}(\varepsilon, \mathcal{F}, L^r(\P))
+$
+is 
+the minimum number of 
+$(\varepsilon, L^{r}(\P))$-brackets needed to cover $\mathcal{F}$.
+For most classes $\mathcal{F}$ the bracketing number grows to infinity for $\varepsilon\to 0$.
+To measure the speed of convergence we introduce the bracketing integral
+\begin{gather}
+     J
+    _{[]}
+    (
+    \delta
+    ,
+    \mathcal{F}
+    ,
+    L_r(\P)
+    )
+    =
+  \int_0^{\delta}
+      \sqrt{
+        \log 
+      N_{[\,]}
+\left( \varepsilon, \mathcal{F}_N, L^r(\P) \right)
+    }
+    \,
+    d\varepsilon
+    \,.
+\end{gather}
+An envelope function $F$ of a class $\mathcal{F}$ satisfies 
+$|f(x)|\le F(x)< \infty$ for all $f\in\mathcal{F}$ and all $x$.
+\begin{theorem}
+  \label{th:max_ineq}
+  \emph{(Maximal inequality)}
+  For any class $\mathcal{F}$ of measurable functions with envelope function $F,$
+  \begin{gather}
+    \E^*
+    _\P
+    [
+    \norm{
+      \G
+      _n
+      }
+      _\mathcal{F}
+    ]
+    \lesssim
+    J
+    _{[]}
+    (
+    \norm{
+      F
+    }
+    _{ L^2(\P)}
+    ,
+    \mathcal{F}
+    ,
+    L_2(\P)
+    )
+    .
+  \end{gather}
+\end{theorem}
+\begin{proof}
+  \cite[Corollary~19.35]{Vaart2000}
+\end{proof}
+
+\begin{lemma}
+  \label{markov_max_lemma}
+  Let $(\mathcal{H}_N)$ be a sequence of measurable function classes with envelope functions $(H_N)$.
+  If
+  \begin{gather}
+    J_{[\, ]}
+    \left( 
+    \norm{F_N}_{ L^2(\P)}
+    ,
+    \mathcal{H}_N
+    ,
+     L^2(\P)
+    \right)
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}
+    \ 
+    N
+    \to
+    \infty
+  \end{gather}
+  it holds 
+  $
+  \norm{\G_N}^*_{\mathcal{H}_N}\overset{\P}{\to}0
+  $.
+\end{lemma}
+\begin{proof}
+  By Markov's inequality and Theorem~\ref{th:max_ineq} it holds for all $\varepsilon>0$
+  \begin{align*}
+    &
+    \P
+    [
+  \norm{\G_N}^*_{\mathcal{H}_N}
+  \ge
+  \varepsilon
+    ]
+    \\
+    &
+    \ 
+    \le
+    \ 
+    \varepsilon^{-1}
+    \E
+    [
+  \norm{\G_N}^*_{\mathcal{H}_N}
+    ]
+    \ 
+    =
+    \ 
+    \varepsilon^{-1}
+    \E^*
+    [
+  \norm{\G_N}_{\mathcal{H}_N}
+    ]
+    \ 
+    \lesssim
+    \ 
+    \varepsilon^{-1}
+    J_{[\, ]}
+    \left( 
+    \norm{H_N}_{ L^2(\P)}
+    ,
+    \mathcal{H}_N
+    ,
+     L^2(\P)
+    \right)
+    \ 
+    \to
+    \ 
+    0
+  \end{align*}
+  for $N\to\infty$. 
+\end{proof}
+A technical lemma for products of function classes.
+
+Define the product of two function classes
+\begin{gather*}
+  \mathcal{F}\cdot \mathcal{G}
+  :=
+  \left\{ 
+    f\cdot g
+    \colon
+    f\in\mathcal{F},
+    g\in\mathcal{G}
+  \right\}\,.
+\end{gather*}
+\begin{lemma}
+  \label{lem_prod_br}
+  Let
+  $\mathcal{F}$ and $\mathcal{G}$ be two function classes 
+  with envelope functions $F$ and $G$ satisfying
+  $\norm{F}_\infty,\norm{G}_\infty\le 1$.
+  For all $\varepsilon>0$ and all $r\in [1,\infty)$ it holds
+  \begin{gather*}
+    N_{[\,]}(2\varepsilon,\mathcal{F}\cdot\mathcal{G},\mathrm{L}_r(\P))
+    \
+    \le
+    \ 
+    N_{[\,]}(\varepsilon,\mathcal{F},\mathrm{L}_r(\P))
+    \cdot
+    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_r(\P))
+    \,.
+  \end{gather*}
+\end{lemma}
+\begin{proof}
+  Let $f\in\mathcal{F}$ and $g\in\mathcal{G}$.
+  We can choose two 
+  $(\varepsilon,L^r(\P))$
+  brackets
+  $[\underline{f},\overline{f}]$
+  and
+  $[\underline{g},\overline{g}]$
+  containing $f$ and $g$ with 
+  $\norm{\underline{f}}_\infty,\norm{\overline{f}}_\infty\le\norm{F}_\infty\le 1$
+  and
+  $\norm{\underline{g}}_\infty,\norm{\overline{g}}_\infty\le\norm{G}_\infty\le 1$.
+  We the get an 
+  $(2\varepsilon,L^r(\P))$
+  $[\underline{h},\overline{h}]$
+  bracket, containing $f\cdot g$, by
+\end{proof}
+
+\begin{lemma}
+  \label{aa:r3:lemma:1}
+  Let
+$(\varepsilon_N)\subset(0,1]$
+be 
+a decreasing sequence
+with $\varepsilon_N\to 0$ for $N\to\infty$ 
+and let Assumption~\ref{aa:assumption:1} hold true
+for a sequence of function classes $\mathcal{F}_N$.
+Then
+\begin{gather*}
+  J_{[\,]}(
+\norm{F_N}_{L^2(\P)}
+,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+  \to 0
+  \quad
+  \text{and}
+  \quad
+  \norm{\G_N}^*_{\mathcal{F}_N\cdot\mathcal{F}}\overset{\P}{\to}0
+  \qquad
+  \text{for}\ 
+  N\to\infty
+  \,.
+\end{gather*}
+\end{lemma}
+\begin{proof}
+  By Assumption~\ref{aa:assumption:1}
+  and Lemma~\ref{aa:mean:l:br} it holds
+for some $k<2$
+\begin{gather*}
+\norm{F_N}_{L^2(\P)}
+\ 
+\le
+\ 
+\varepsilon_N
+\quad
+\text{and}
+\quad
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}
+  \ 
+  N\in\mathbb{N}
+  \,,
+\end{gather*}
+and
+  \begin{gather*}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}, L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+      \frac{1}{\varepsilon}
+    \right)^2
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \,.
+  \end{gather*}
+  Since $\mathcal{F}_N$ and $\mathcal{F}$ have envelope function smaller 1, we can apply Lemma~\ref{lem_prod_br} to get
+  \begin{gather*}
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  +
+  \log
+  (1/\varepsilon)
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}\ 
+  \varepsilon>0
+  \,.
+  \end{gather*}
+  Since 
+  $k/2\in(0,1)$
+  it holds
+\begin{align*}
+  J_{[\,]}(
+\norm{F_N}_{L^2(\P)}
+,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+  &
+  \ 
+=
+  \ 
+\int_0^{
+\norm{F_N}_{L^2(\P)}
+}
+\sqrt{
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+}
+\,d\varepsilon
+\\
+&
+\ 
+\lesssim
+\ 
+\int_0^{
+  \varepsilon_N
+}
+  \left( 
+  \frac{1}{\varepsilon}
+\right)^{k/2}
+\,d\varepsilon
+\\
+&
+\ 
+=
+\ 
+\frac{
+\varepsilon_N^{1-k/2}
+}{1-k/2}
+\ 
+\to 0
+\ 
+\qquad
+\text{for}
+\ 
+N\to\infty
+\,.
+\end{align*}
+The second statement follows from Lemma~\ref{markov_max_lemma}
+for 
+$\mathcal{H}_N:=\mathcal{F}_N\cdot\mathcal{F}$ and
+$H_N:=F_N$.
+\end{proof}
+
+\begin{lemma}
+  \label{ps_weights_lemma}
+  Let
+  $
+  g_1\colon
+  \mathcal{X}\to\R
+  $
+  and
+  $
+  g_2\colon
+  \mathcal{Y}\to\R
+  $
+  be a measurable functions.
+  It holds
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_1(X)
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    g_1(X)
+    \right]
+    \,.
+  \end{gather*}
+  If Assumption~\ref{aa:assumption:treatment_str_ign} holds true, then
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_2(Y(T))
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    f(Y(1))
+    \right]
+    \,.
+  \end{gather*}
+\end{lemma}
+
+\begin{assumption}
+  \label{aa:assumption:1}
+  For any decreasing sequence
+  $(\varepsilon_N)$ with $\varepsilon_N\to 0$ for $N\to\infty$,
+there exists a sequence of (measurable) function classes
+$(\mathcal{F}_N)$
+with envelope functions
+$(F_N)$,
+satisfying 
+for some $k<2$
+\begin{gather*}
+\norm{F_N}_{L^2(\P)}
+\ 
+\le
+\ 
+\varepsilon_N
+\quad
+\text{and}
+\quad
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}
+  \ 
+  N\in\mathbb{N}
+  \,,
+\end{gather*}
+such that for all $(\lambda,\lambda_0)\in\R^{N+1}$ and for all $N\in\mathbb{N}$ the function
+\begin{gather}
+  \label{ghost_function}
+  \mathcal{X}
+  \ 
+  \to
+  \ 
+  \R
+  \,,
+  \qquad
+  x
+  \ 
+  \mapsto
+  \ 
+  \mathbf{1}{
+    \left\{ 
+      \sup_{y\in A_N(x)}
+      \left| 
+      w(y,\lambda,\lambda_0)
+      -
+      \frac{1}{\pi(y)}
+      \right|
+      \,
+      \le
+      \,
+      \varepsilon_N
+    \right\}
+  }
+  \left( 
+      w(x,\lambda,\lambda_0)
+      -
+      \frac{1}{\pi(x)}
+  \right)
+\end{gather}
+is contained in $\mathcal{F}_N$.
+\end{assumption}
+The next Lemma shows that mild assumptions on the regularity of the inverse propensity score implies Assumption~\ref{aa:assumption:1}.
+To this end, we need notation from \cite[§2.7.1]{vaart2013}.
+To this end, let for any vector $k\in\mathbb{N}_0^d \ (d\in\R)$
+\begin{gather*}
+  D^k
+  \ :=\ 
+  \frac
+  {\partial^{\norm{k}_1}}
+  {
+    \partial^{k_1}x_1
+    \cdots
+    \partial^{k_d}x_d
+  }
+  \,,
+\end{gather*}
+and let $\lfloor a \rfloor$ be the greatest integer smaller than $a>0$.
+For $\alpha>0$, a bounded set 
+$\mathcal{X}\subset\R^d\ (d\in\mathbb{N})$
+and
+$M>0$, we define $C^\alpha_M(\mathcal{X})$ to be the space of all continuous functions $f\colon \mathcal{X}\to\R$ with
+\begin{gather*}
+  \max_{\norm{k}_1\le \alpha}\sup_{x\in\mathcal{X}}
+  \left| D^k f(x) \right|
+  \ 
+  +
+  \ 
+  \max_{\norm{k}_1=\lfloor \alpha \rfloor}\sup_{x,y}
+  \frac
+  {
+  \left|
+  D^k f(x) 
+  -
+  D^k f(y) 
+  \right|
+  }
+  {
+    \norm{x-y}_2^{\alpha-\lfloor \alpha \rfloor}
+  }
+  \
+  \le
+  \ 
+  M
+  \,.
+\end{gather*}
+where the suprema in the second term are taken over all $x,y$ in the interior of $\mathcal{X}$ with $x\neq y$.
+Furthermore, let
+\begin{gather*}
+  \mathcal{X}^1
+  :=
+  \left\{ 
+    y\in\R^d
+    \colon
+    \norm{x-y}_2 <1
+    \ 
+    \text{for some}\ x\in\mathcal{X}
+  \right\}
+  \,.
+\end{gather*}
+We will employ the following result.
+\begin{lemma}
+  \label{vdv_coro}
+  Let $\mathcal{P}=\left\{ A_1,A_2,\ldots \right\}$ be a partition of $\R^d$ into bounded, convex sets with non-empty interior, and let $\mathcal{F}$ be a class of functions $f\colon\R^d\to\R$ such that the restrictions $\mathcal{F}_{|A_j}$ belong to $C^\alpha_{M_j}(A_j)$
+  for all $j\in\mathbb{N}$.
+  Then there exists a constant $K$, depending only on $\alpha$, $V$, $r$ and $d$
+  such that
+  \begin{gather}
+    \label{667}
+    \log
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}
+    ,
+    L^r(\mathbf{Q})
+    )
+    \le
+    K
+    \left( \frac{1}{\varepsilon} \right)^V
+    \left( 
+      \sum_{j=1}^{\infty}
+      \lambda(A_j^1)^{r/(V+r)}
+      M_j^{Vr/(V+r)}
+      \mathbf{Q}(A_j)^{V/(V+r)}
+    \right)
+    ^{(V+r)/r}
+  \end{gather}
+  for every $\varepsilon>0$, $V\ge d/\alpha$, and probability measure $\mathbf{Q}$.
+\end{lemma}
+\begin{proof}
+  \emph{\cite[Corollary~2.7.4]{vaart2013}}
+\end{proof}
+\pagebreak
+\begin{lemma}
+  Let $(\mathcal{P}_N)$ denote a sequence of qubic partitions
+  $\mathcal{P}_N=\left\{ A_{N,1},A_{N,2},\ldots \right\}$ 
+  of $\R^d$ 
+  with decreasing width $(h_N)\subset(0,1]$ such that $h_N\to 0$ for $N\to\infty$.
+  Furthermore, assume that there exists
+  $\alpha>d/2$, where $\mathcal{X}\subseteq \R^d$, such
+  that for 
+  $V:=d/\alpha$
+ and for all 
+$
+(j,N)\in\mathbb{N}^2
+$
+there exists 
+$M_{N,j}\ge 1$ such that 
+\begin{gather}
+  \label{897}
+  \frac{1}{\pi(\cdot)}
+  \in C^\alpha_{M_{N,j}}(A_{N,j})
+  \quad
+  \text{and}
+  \quad
+  \sum_{j=1}^{\infty} 
+  M_{N,j}^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{gather}
+It then holds the statement of Assumption~\ref{aa:assumption:1}.
+\end{lemma}
+\begin{proof}
+  We want to employ Lemma~\ref{vdv_coro}. 
+  To do this, the crucial observation is, that
+  \begin{gather*}
+    w(\cdot,\lambda,\lambda_0)
+    \quad
+    \text{is constant on each cell}\ 
+    A_N\in\mathcal{P}_N
+    \,.
+  \end{gather*}
+  Thus, the regularity of the function \eqref{ghost_function}
+  on each cell $A_N\in\mathcal{P}_N$ is decided by 
+  $1/\pi(\cdot)$.
+  Indeed, \eqref{ghost_function} is either 0 if the threshold of $\varepsilon_N$ is exceeded somewhere in the cell, or has the form constant-minus-smooth-function.
+In any case, it is continuous and bounded by $\varepsilon_N$.
+All its derivatives are 0 (if the threshold is exceeded) or are governed by $1/\pi(\cdot)$.
+Thus, it follows from \eqref{897}
+\begin{gather}
+  \eqref{ghost_function}
+  \in C^\alpha_{M_{N,j}}(A_{N,j})
+  \quad
+  \text{and}
+  \quad
+  \sum_{j=1}^{\infty} 
+  M_{N,j}^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{gather}
+To bound the right-hand-side in \eqref{667} we note
+that 
+$
+\lambda(A_{N,j})=h^d_N
+$ 
+and thus
+$
+\lambda(A_{N,j}^1)\lesssim 1
+$
+for all $(j,N)\in\mathbb{N}^2$.
+Thus
+\begin{gather*}
+  \sum_{j=1}^{\infty} 
+  \lambda(A_{N,j}^1)^{2/(V+2)}
+  M_{N,j}^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{gather*}
+We get $\eqref{ghost_function}\in\mathcal{F}_N$, where 
+$
+\mathcal{F}_N
+$
+restricted to $A_{N,j}$ is 
+$
+  C^\alpha_{M_{N,j}}(A_{N,j})
+$
+and satisfies the requirements of Lemma~\ref{vdv_coro}.
+Since $V=d/\alpha \in (0,2)$ by $\alpha>d/2$, 
+applying Lemma~\ref{vdv_coro} finishes the proof.
+\end{proof}
+In the next examples we show the concrete applications of this Lemma.
+\begin{example}
+Let $d\in\R$ and assume $\pi(\cdot)$ follows a logistic regression model. Then there exist $(\beta_0,\beta)\in\R^{d+1}$ such that
+\begin{gather*}
+  \pi(x)
+  \ 
+  =
+  \ 
+  \frac{1}
+  {
+    1
+    +
+    \exp
+    \left( 
+      -
+        \beta_0
+        -
+        \inner{\beta}{x}
+    \right)
+  }
+  \quad
+  \text{and}
+  \quad
+  \frac
+  {1}
+  {
+  \pi(x)
+  }
+  \ 
+  =
+  \ 
+    1
+    +
+    \exp
+    \left( 
+      -
+        \beta_0
+        -
+        \inner{\beta}{x}
+    \right)
+    \quad
+    \text{for all}\ 
+    x\in\R^d
+    \,.
+\end{gather*}
+Clearly, by the smoothness of the exponential function, for all 
+$\alpha>0$ there exist $(M_{N,j})\ge 1$ such that
+$
+  1/\pi(\cdot)\in C^\alpha_{M_{N,j}}(A_{N,j})
+$.
+Assume $\#\mathcal{X}<\infty$, that is, $X$ can take only finitely many values with positive probability.
+We write
+\begin{gather*}
+  J_N
+  :=
+  \left\{ 
+    j\in\mathbb{N}
+    \colon
+    \P[X\in A_{N,j}]>0
+  \right\}
+  \,.
+\end{gather*}
+It holds
+$\#J_N\le \# \mathcal{X}<\infty$.
+Thus, the following maximum is attained
+\begin{gather*}
+  \max_{j\in J_N} M_{N,j}
+  =:M^*_N
+  \,.
+\end{gather*}
+But the partitions increasingly better fit the support of $X$. Thus
+$M^*_N$ is decreasing in $N$, that is,  $\infty>M^*_1\ge M^*_N$.
+It follows
+\begin{align*}
+  \sum_{j=1}^{\infty} 
+  M_{N,j}
+  ^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \le
+  \ 
+  \left( 
+  M^*_1
+  \right)
+  ^{2V/(V+2)}
+  \cdot
+  \# J_N
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{align*}
+\end{example}
+The next question is if we can extend this to countable sets
+$\mathcal{X}$. To focus our attention, we assume (the best case)
+$M_{N,j}=1$.
+\begin{example}
+  We give three examples. Let $\propto$ denote the equal-up-to-a-constant order.
+  Without loss of generality we assume $\mathcal{X}=\mathbb{N}$.
+  First consider
+  for some $\varepsilon\in(0,1)$
+  \begin{gather*}
+    \P[X=k]
+    \propto
+    k^{-(1+\varepsilon)}
+    \,.
+  \end{gather*}
+  This (barely) is a distribution. But scaling with $V/(V+2)\in(0,1)$ we cause trouble. Indeed, by $V<2$ it holds
+  \begin{gather*}
+    (
+    1+\varepsilon
+    )
+    \cdot
+    \frac{V}{V+2}
+    <1
+    \,,
+  \end{gather*}
+  and thus
+  \begin{align*}
+  \sum_{j=1}^\infty
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  &
+  \ 
+  =
+  \ 
+  \lim_{N\to\infty}
+  \sum_{j\in J_N}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \\
+  &
+  \ 
+  =
+  \ 
+  \sum_{k=1}^{\infty} 
+  \P
+  [
+  X=k
+  ]^{V/(V+2)}
+  \\
+  &
+  \ 
+  \propto
+  \ 
+  \sum_{k=1}^{\infty} 
+  \left( 
+  \frac{1}{k}
+  \right)
+  ^{(1+\varepsilon)\cdot V/(V+2)}
+  =\infty
+  \,.
+  \end{align*}
+  On the other hand, the same arguments applied for
+  \begin{gather*}
+    \P[X=k]
+    \propto
+    k^{-((V+2)/V+\varepsilon)}
+    \,,
+  \end{gather*}
+  with $\varepsilon>0$ yield
+\begin{gather*}
+  \sum_{j=1}^\infty
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \lesssim 1
+  \,.
+\end{gather*}
+Finally, let $X$ be Poisson distributed with parameter $\lambda\in(0,1)$.
+Then
+\begin{align*}
+  \sum_{j=1}^\infty
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  &
+  \ 
+  =
+  \ 
+  \sum_{k=0}^{\infty} 
+  \P
+  [
+  X=k
+  ]^{V/(V+2)}
+  \\
+  &
+  \ 
+  =
+  \ 
+  e^{-\lambda\cdot V/(V+2)}
+  \sum_{k=0}^{\infty} 
+  \left( 
+    \frac{\lambda^k}{k\text{!}}
+  \right)
+  ^{V/(V+2)}
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \sum_{k=0}^{\infty} 
+\left( 
+    \lambda
+  ^{V/(V+2)}
+\right)^k
+  =
+  \frac{1}
+  {
+    1-
+    \lambda
+  ^{V/(V+2)}
+  }
+  \lesssim 1
+  \,.
+  \end{align*}
+
+\end{example}
+In the next example we show, that 
+\begin{gather*}
+  \sum_{j=1}^\infty
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \to
+  \infty
+\end{gather*}
+for all continuous distributions of $X$.
+\begin{example}
+  Let $f_X$ be the probability density of $X$. 
+  Then there exists a compact set $K\subset\mathcal{X}\subset \R^d$, such that
+  $
+  \inf_{x\in K}f_X(x)
+  >0
+  $. Since $\mathcal{P}_N$ are cubic partitions, it holds for 
+  \begin{gather*}
+    I_N
+    :=
+    \left\{ 
+      i\in\mathbb{N}\colon
+      A_{N,i}\subset K
+    \right\}
+    \qquad
+    \text{that}
+    \qquad
+    \bigcup_{i\in I_N}A_{N,i}\nearrow K
+    \,.
+  \end{gather*}
+Thus
+\begin{align*}
+  \sum_{i=1}^\infty
+  \P
+  [
+  X\in A_{N,i}
+  ]^{V/(V+2)}
+  &
+  \ 
+  \ge
+  \ 
+  \sum_{i\in I_N}
+  \P
+  [
+  X\in A_{N,i}
+  ]^{V/(V+2)}
+  \\
+  &
+  \ 
+  \ge
+  \ 
+  \inf_{x\in K}f_X(x)
+  ^{V/(V+2)}
+  \cdot 
+  h_N^{d\cdot(V/(V+2)-1)}
+  \sum_{i\in I_N}
+  \lambda
+  \left( 
+  A_{N,i}
+  \right)
+  \\
+  &
+  \ 
+  \to
+  \ 
+  \infty
+  \,.
+\end{align*}
+This follows from
+$
+  \sum_{i\in I_N}
+  \lambda
+  \left( 
+  A_{N,i}
+  \right)
+  \to 
+  \lambda(K)>0
+$,
+  $
+  \inf_{x\in K}f_X(x)
+  >0
+  $,
+  $V/(V+2)-1<0$ and $h_N\to 0$.
+
+\end{example}
+
