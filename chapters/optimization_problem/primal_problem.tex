@@ -1,0 +1,156 @@
+Let
+$\# A\in\mathbb{N}_0$ be the number of elements of a finite set $A$, let
+$\overline{\R}:=\R\cup \left\{ \infty \right\}$ 
+be the extended real numbers, 
+$\Sigma_\mathcal{X}$ be a $\sigma$-algebra on the covariate space $\mathcal{X}$,
+and let $\mathcal{B}(\R)$ denote the Borel-$\sigma$-algebra on the real numbers.
+
+For a convex function $\varphi\colon \R\to\overline{\R}$,
+a finite set of measurable (basis-)functions on the covariate space
+\begin{gather*}
+  \mathfrak{B}
+  :
+  =
+  \left\{ 
+B_k\colon (\mathcal{X},\Sigma_\mathcal{X})\to(\R,\mathcal{B}(\R))
+\ 
+|
+\ 
+k\in \left\{ 1,\ldots,\# \mathfrak{B} \right\}
+  \right\}
+\end{gather*}
+and a constraints vector $\delta=[\delta_1,\ldots,\delta_{\# \mathfrak{B}}]^\top>0$
+we consider the following (random) convex optimization problem.
+\begin{fproblem}
+  \label{bw:1:primal}
+\begin{align*}
+  %%%% objective %%%%
+    &\underset{w_1, \ldots, w_n \in \R}
+    {\text{minimize}}
+    &&\qquad\qquad
+    \sum_{i = 1}^{n} 
+    \varphi(w_i)
+    &&&
+    \\
+    %%%% w_i T_i >= 0 %%%%
+    &\text{subject to}
+    &&\qquad\qquad
+    w_i 
+    \ge
+    0
+    &&&
+    \qquad
+    \text{for all}\ 
+    i \in \left\{ 1, \ldots, n \right\}
+    \,,
+    \\
+    %%%% 1/n sum w = 1 %%%%
+    & 
+    &&\qquad\qquad
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    =1
+    \\
+    %%%% box constraints %%%%
+    & 
+    &&\qquad
+    \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{n} 
+      w_i
+      B_k(X_i)
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    &&&
+    \qquad
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, \# \mathfrak{B} \right\}
+    \,.
+\end{align*}
+\end{fproblem}
+What is random in Problem~\ref{bw:1:primal}?
+First, the dimension of the search space $(w\in\R^n)$ depends on the random variable $n$. 
+Thus, we only compute weights for the treated units (the ones with $T_i=1$).
+Next consider the \textbf{objective function}
+\begin{gather*}
+    \sum_{i = 1}^{n} 
+    \varphi(w_i)
+    \,.
+\end{gather*}
+The number of summands is random (again $n$). We sometimes use the equivalent notation
+\begin{gather*}
+    \sum_{i = 1}^{N} 
+    T_i
+    \cdot
+    \varphi(w_i)
+    \,,
+\end{gather*}
+where we set the weights of the untreated (the ones with $T_i=0$) to some arbitrary value in the domain of $\varphi$.
+Let's consider the constraints. There is no randomness in the first two constraints.
+\begin{gather*}
+    w_i 
+    \ge
+    0
+    \qquad
+    \text{for all}\ 
+    i \in \left\{ 1, \ldots, n \right\}
+    \quad
+    \text{and}
+    \quad
+    \frac{1}{N}
+    \sum_{i=1}^{n} 
+    w_i
+    =1
+    \,.
+\end{gather*}
+They only make sure, that the weights (divided by $N$) form a probability distribution.
+This is motivated by practical considerations.
+There remain the box constraints
+\begin{gather*}
+    \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{n} 
+      w_i
+      B_k(X_i)
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    \qquad
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, \# \mathfrak{B} \right\}
+    \,.
+\end{gather*}
+Here the number of summands in
+\begin{gather*}
+      \sum_{i = 1}^{n} 
+      w_i
+      B_k(X_i)
+\end{gather*}
+is again random, and we sometimes use the equivalent
+\begin{gather*}
+      \sum_{i = 1}^{N} 
+      T_i
+      \cdot
+      w_i
+      \cdot
+      B_k(X_i)
+      \,.
+\end{gather*}
+The (basis-)functions in $\mathfrak{B}$ can be random function, for example, if they depend on the data.
+Also the constraint vector $\delta$ can depend on the data (see \cite[Algorithm~1 on page 11]{Wang2019}) 

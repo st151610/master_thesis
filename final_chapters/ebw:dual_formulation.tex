@@ -57,62 +57,6 @@ I consider a different regression basis. In \cite{Wang2019} they use sieve estim
 The benefit of my method is, that I can work with a concrete oracle parameter.
 Also the basis of partitioning estimates forms a convex combination and is bounded. Thus I can avoid the use of matrix concentration inequalities as in \cite{Wang2019}.
 
-\begin{fproblem}
-  \label{bw:1:primal}
-\begin{align*}
-  %%%% objective %%%%
-    &\underset{w_1, \ldots, w_n \in \R}
-    {\text{minimize}}
-    &&\qquad\qquad
-    \sum_{i = 1}^{n} 
-    \varphi(w_i)
-    &&&
-    \\
-    %%%% w_i T_i >= 0 %%%%
-    &\text{subject to}
-    &&\qquad\qquad
-    w_i 
-    \ge
-    0
-    &&&
-    \qquad
-    \text{for all}\ 
-    i \in \left\{ 1, \ldots, n \right\}
-    \,,
-    \\
-    %%%% 1/n sum w = 1 %%%%
-    & 
-    &&\qquad\qquad
-    \frac{1}{N}
-    \sum_{i=1}^{n} 
-    w_i
-    =1
-    \\
-    %%%% box constraints %%%%
-    & 
-    &&\qquad
-    \left| 
-      \frac{1}{N} 
-      \left( 
-      \sum_{i = 1}^{n} 
-      w_i
-      B_k(X_i)
-      -
-      \sum_{i=1}^{N} 
-      B_k(X_i)
-      \right)
-    \right|
-    \ 
-    \le 
-    \ 
-    \delta_k
-    &&&
-    \qquad
-    \text{for all}\ 
-    k \in \left\{ 1, \ldots, N \right\}
-    \,.
-\end{align*}
-\end{fproblem}
 \newpage
 \begin{assumption}
   \label{asu:objective_f}
@@ -619,7 +563,12 @@ d
 }
   \,.
 \end{align*}
-If Assumption~\ref{asu:objective_f} holds true and there exists an optimal solution $(\rho^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger},\lambda_0^\dagger)$ then the unique optimal solutions to Problem~\ref{bw:1:primal} are 
+If Assumption~\ref{asu:objective_f} holds true 
+and there exists an optimal solution 
+$
+(\rho^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger},\lambda_0^\dagger)
+$
+then the unique optimal solutions to Problem~\ref{bw:1:primal} are 
 \begin{gather*}
   w^\dagger_i
   \ 
@@ -932,8 +881,11 @@ where
   The rest of the proof consists of elementary computations. We omit the details.
 \end{proof}
 \begin{proof}\emph{(Theorem~\ref{dual_solution_th})}
-  We eliminate the constraints in the dual problem of 
-  Lemma~\ref{lemma_dual_app}.
+  Let 
+  $
+(\rho^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger},\lambda_0^\dagger)
+  $
+  be an optimal solution.
   Since we assume $f^*$ to be strictly non-decreasing and $\rho\ge0$, it follows that $\rho=\mathrm{0}_n$ is optimal.
   Thus, we consider the updated objective function $G$, that is,
 \begin{align*}
