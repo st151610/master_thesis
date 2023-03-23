@@ -1,0 +1,332 @@
+\begin{assumption}
+  \label{asu:objective_f}
+  The objective function $\varphi\colon \R\to\overline{\R}$ of Problem~\ref{bw:1:primal} 
+  satisfies the following conditions
+  \begin{itemize}
+    \item
+      $\varphi(0)=0$ and $\varphi(x)=\infty$ for all $x<0$
+    \item
+      $\varphi$ is strictly convex and continuously differentiable on $(0,\infty)$ with derivative $\varphi^{'}$
+    \item
+      $\varphi^{'}(0,\infty)=\R$
+    \item
+      the inverse of the derivative $(\varphi^{'})^{-1}$ is Lipschitz continuous and continuously differentiable on $\R$.
+  \end{itemize}
+\end{assumption}
+The next lemma provides a link to the assumptions on the objective function in Theorem~\ref{cv:ts:th}.
+\newpage
+\begin{lemma}
+  \label{1065}
+  Let Assumption\ref{asu:objective_f} hold true. Then the convex conjugate of $\varphi$ (see \eqref{def:convex_conjugate}) is
+  \begin{gather*}
+    \varphi^*
+    \colon
+    \R
+    \ 
+    \to
+    \ 
+    \R
+    \,,
+    \quad
+    x^*
+    \ 
+    \mapsto
+    \ 
+    x^*
+    \!
+    \cdot
+    (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \ 
+    -
+    \ 
+    \varphi
+    \left( 
+      (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \right)
+    \,.
+  \end{gather*}
+  Furthermore, $\varphi^*$ is strictly convex and continuously differentiable on $\R$.
+\end{lemma}
+\begin{proof}
+We define
+\begin{gather*}
+ \phi
+ \ 
+ \colon
+ [0,\infty)
+ \times
+ \R
+ \ 
+ \to
+ \ 
+ \R
+ \,,
+ \quad
+ (x,x^*)
+ \ 
+ \mapsto
+ \ 
+ x\cdot x^*
+ \ 
+ -
+ \ 
+ \varphi(x)
+ \,.
+\end{gather*}
+Let $x^*\in\R$.
+Since
+(by assumption)
+      $\varphi$ is continuously differentiable on $(0,\infty)$ with derivative $\varphi^{'}$,
+      so is $\phi(\cdot,x^*)$ with derivative
+      satisfying 
+      \begin{gather*}
+        \frac{\partial}{\partial x}
+        \phi(x,x^*)
+        \ 
+        =
+ \ 
+        x^*
+        -
+        \varphi^{'}(x)
+        \qquad
+        \text{for all}\ 
+        x\in(0,\infty)
+        \,.
+      \end{gather*}
+  It follows that 
+  \begin{gather*}
+    z
+    \ 
+    :=
+    \ 
+      (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+  \end{gather*}
+  is an extreme value of $\phi(\cdot,x^*)$.
+  Note, that $x^*\in\R$ is in the domain of 
+  $
+      (
+    \varphi^{'}
+    )^{-1}
+  $
+  by the assumption $\varphi^{'}(0,\infty)=\R$.
+  Since $\varphi$ is strictly convex, $\phi(\cdot,x^*)$ is strictly concave. 
+  Thus,
+  $z>0$ is the unique maximum in $(0,1)$.
+  By the continuity of $\phi(\cdot,x^*)$ on $[0,\infty)$ it follows, that $z$ is the unique maximum on $[0,\infty)$.
+  Thus
+  \begin{align*}
+    \varphi^*(x^*)
+    &
+    \ 
+    =
+    \ 
+    \sup_{x\in\R}
+    x\cdot x^* - \varphi(x)
+    \ 
+    =
+    \ 
+    \sup_{x\in [0,\infty)}
+    x\cdot x^* - \varphi(x)
+    \ 
+    =
+    \ 
+    \sup_{x\in [0,\infty)}
+    \phi(x,x^*)
+    \\
+    &
+    \ 
+    =
+    \ 
+    \phi(z,x^*)
+    \\
+    &
+    \ 
+    =
+    \ 
+    x^*
+    \!
+    \cdot
+    (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \ 
+    -
+    \ 
+    \varphi
+    \left( 
+      (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \right)
+    \qquad 
+    \text{for all}\ 
+    x^*\in\R
+    \,.
+  \end{align*}
+  Now we proof the second statement.
+  Since
+  $
+      (
+    \varphi^{'}
+    )^{-1}
+  $
+  is (by assumption) continuously differentiable, it holds
+  \begin{align}
+    \label{0098}
+    \begin{split}
+    \frac{\partial}{\partial x^*}
+     \varphi^*(x^*)
+    &
+    \ 
+    =
+    \ 
+    (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \ 
+    +
+    \ 
+    x^*
+    \!
+    \cdot
+    \frac{\partial}{\partial x^*}
+    (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \ 
+    -
+    \ 
+    \varphi^{'}
+    \left( 
+      (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \right)
+    \cdot
+    \frac{\partial}{\partial x^*}
+    (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \\
+    &
+    \ 
+    =
+    \ 
+    (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \ 
+    +
+    \ 
+    x^*
+    \!
+    \cdot
+    \frac{\partial}{\partial x^*}
+    (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \ 
+    -
+    \ 
+    x^*
+    \cdot
+    \frac{\partial}{\partial x^*}
+    (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \\
+    &
+    \ 
+    =
+    \ 
+    (
+    \varphi^{'}
+    )^{-1}
+    (x^*)
+    \qquad
+    \text{for all}\ 
+    x^*\in\R
+    \,.
+    \end{split}
+  \end{align}
+  Since $\varphi$ is strictly convex and continuously differentiable, 
+  $\varphi^{'}$ is continuous and strictly non-decreasing.
+  Thus 
+  $
+    (
+    \varphi^{'}
+    )^{-1}
+  $
+  is continuous and strictly non-decreasing.
+  It follows from \eqref{0098} that $\varphi^*$ is strictly convex and continuously differentiable.
+\end{proof}
+The next lemma completes the link.
+\begin{lemma}
+  Let Assumption~\ref{asu:objective_f} hold true. Then 
+\begin{gather*}
+  \Phi
+  \ 
+  :
+  \ 
+  \R^n
+  \to
+  \ 
+  \overline{\R}
+  \,
+  ,
+  \qquad
+  [w_1,\ldots,w_n]^\top
+  \ 
+  \mapsto
+  \ 
+  \sum_{i=1}^n \varphi(w_i)
+  \,,
+\end{gather*}
+satisfies Assumption~\ref{cv:ts:asu}.
+\end{lemma}
+\begin{proof}
+  By Example~\ref{cv:cc:ex}
+  the convex conjugate of $\Phi$ is 
+\begin{gather*}
+  \Phi^*
+  \ 
+  :
+  \ 
+  \R^n
+  \to
+  \ 
+  \overline{\R}
+  \,
+  ,
+  \qquad
+  [\lambda_1,\ldots,\lambda_n]^\top
+  \ 
+  \mapsto
+  \ 
+  \sum_{i=1}^n \varphi^*(\lambda_i)
+  \,,
+\end{gather*}
+where $\varphi^*$ is the convex conjugate of $\varphi$.
+By Assumption~\ref{asu:objective_f} $\varphi$ is strictly convex. Thus,
+$\Phi$ is strictly convex. By Lemma~\ref{1065}, $\varphi^*$ continuously differentiable on $\R$. Thus,
+$\Phi$ is continuously differentiable on $\R^n$.
+It follows the statement of Assumption~\ref{cv:ts:asu} for $\Phi$.
+\end{proof}
