@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1679565590 "main.aux" "main.bbl" "main" 1679565721
+["bibtex main"] 1679570512 "main.aux" "main.bbl" "main" 1679570519
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1678181364 68686 85eff8eff8e0431206c74f8001d760d4 ""
-  "main.aux" 1679565721 19579 df397b03cd322662e7456d2447e25784 "pdflatex"
+  "main.aux" 1679570518 19584 3eb7d795063130349f8be148306099e4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1679565716 "main.tex" "main.pdf" "main" 1679565721
+["pdflatex"] 1679570513 "main.tex" "main.pdf" "main" 1679570519
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -225,13 +225,13 @@
   "final_chapters/aa:mean.tex" 1679489813 37402 5a176fb16ed955d13aefb61a474dc9c4 ""
   "final_chapters/aa:tools.tex" 1679497839 21654 0b834579fce5891843f1048eb4e5df79 ""
   "final_chapters/aa:weights.tex" 1679386332 6322 20febbf23936a9a4361144dda77c5bfe ""
-  "final_chapters/ebw:dual_formulation.tex" 1679565714 29634 6b8b8ba651026fff48c81348688077ae ""
+  "final_chapters/ebw:dual_formulation.tex" 1679570505 31087 3b6ecc1bee36d97299cfcdd780a09e3f ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1679565721 19579 df397b03cd322662e7456d2447e25784 "pdflatex"
-  "main.bbl" 1679565590 3109 7b09657a83bc57cb61dd622f789e9612 "bibtex main"
+  "main.aux" 1679570518 19584 3eb7d795063130349f8be148306099e4 "pdflatex"
+  "main.bbl" 1679570513 3109 7b09657a83bc57cb61dd622f789e9612 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1679489762 10591 5aa161977b1267ef8841fcdf681a9503 ""
-  "main.toc" 1679565721 1056 e6a5584796a1d8352a07f70a636141f7 "pdflatex"
+  "main.toc" 1679570518 1056 e6a5584796a1d8352a07f70a636141f7 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
