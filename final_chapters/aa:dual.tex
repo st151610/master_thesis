@@ -122,6 +122,383 @@ Then for all $\varepsilon>0$ with probability going to 1 there exists an optimal
 We use a hint from the last display of~\cite[p.22]{Wang2019}.
 The high-level idea is that the existence of the optimal solution and its proximity to the oracle parameter can be analysed by the objective function.
 \begin{lemma}
+  Let $m$,$n\in\mathbb{N}$ and let 
+  $
+  g \,:\, \R^m\times \R^n_{\ge 0} \to \overline{\R}
+  $ 
+  be a continuous and proper convex function.
+  Consider 
+  \begin{gather*}
+    \tilde{S}(\varepsilon)
+    :=
+    \left\{ 
+      (
+      \Delta,
+      \Delta_\rho
+      )
+      \in
+      \R^m \times \R^n_{\ge 0}
+      \ 
+      \colon
+      \ 
+      \norm{
+      (
+      \Delta,
+      \Delta_\rho
+      )
+      }_2
+      =
+      \varepsilon
+    \right\}
+    \qquad
+    \text{for}
+    \ 
+    \varepsilon>0
+    \,.
+  \end{gather*}
+Then 
+  for all $y \in \R^m$ and $\varepsilon>0$ 
+    \begin{gather}
+      \label{696}
+      \inf 
+      \left\{ 
+        g(y+
+        \Delta,\Delta_\rho)
+        -
+        g(y,0)
+      \ 
+        \colon
+      \ 
+      (
+      \Delta,
+      \Delta_\rho
+      )
+      \in
+    \tilde{S}(\varepsilon)
+      \right\}
+      \ 
+      \ge
+      \ 
+      0
+    \end{gather}
+    implies
+    the existence of  
+    a global minimum
+    \begin{gather*}
+    (
+    y^*
+    ,
+    y^*_\rho
+    )
+    \in \,\R^m\times\R^n_{\ge 0}
+    \quad
+    \text{of $g$ such that}\quad
+      \norm{
+    (
+    y^*
+    ,
+    y^*_\rho
+    )
+      - (y,0)}_2 \le \varepsilon
+      \,.
+    \end{gather*}
+\end{lemma}
+\begin{proof}
+  We start by defining the convex set
+  \begin{gather*}
+    \tilde{B}(\varepsilon)
+    \ 
+    :=
+    \ 
+    \left\{ 
+      (
+      \Delta,
+      \Delta_\rho
+      )
+      \in
+      \R^m \times \R^n_{\ge 0}
+      \ 
+      \colon
+      \ 
+      \norm{
+      (
+      \Delta,
+      \Delta_\rho
+      )
+      }_2
+      \le
+      \varepsilon
+    \right\}
+    \qquad
+    \text{for}
+    \ 
+    \varepsilon>0
+    \,.
+  \end{gather*}
+  Then the translation 
+  $
+  (y,0)
+  +
+    \tilde{B}(\varepsilon)
+  $
+  is also convex.
+  Assume towards a contradiction that it holds \eqref{696}
+  and that there exists 
+  \begin{gather}
+    \label{698}
+  (
+x^*,x^*_\rho
+  )
+  \ 
+\in
+  \ 
+\R^m\times\R^m_{\ge 0}\setminus 
+\left(
+  (y,0)
+  +
+    \tilde{B}(\varepsilon)
+\right)
+\quad
+\text{such that}\quad
+g
+  (
+x^*,x^*_\rho
+  )
+  \ 
+  <
+  \ 
+  g(y,0)
+  \,.
+  \end{gather}
+  Since 
+  $
+  (y,0)
+  +
+    \tilde{B}(\varepsilon)
+  $
+  is bounded, the line segment between 
+  $
+  (
+x^*,x^*_\rho
+  )
+  $
+  and
+  $
+  (y,0)
+  $
+  crosses its boundary. The boundary consists of two disjoint sets
+  \begin{gather*}
+    S_0(\varepsilon)
+    :=
+    \left\{ 
+      (y+\Delta,0)
+      \ 
+      \colon
+      \ 
+      \Delta\in\R^m\ 
+      \text{and}\ 
+      \norm{\Delta}_2<\varepsilon
+    \right\}
+    \qquad
+    \text{and}
+    \qquad
+    \tilde{S}(\varepsilon)
+    \,.
+  \end{gather*}
+  Clearly, if the line segment does not cross $\tilde{S}(\varepsilon)$ it leaves $\R^m\times\R^n_{\ge 0}$.
+  But this is not possible.
+  Thus, there exists $(\Delta,\Delta_\rho)\in \tilde{S}(\varepsilon)$ and $\theta\in(0,1)$ such that 
+  \begin{gather}
+    \label{697}
+    \theta 
+    \cdot
+  (
+x^*,x^*_\rho
+  )
+  \ 
+  +
+  \ 
+  (
+  1
+  -
+\theta
+  )
+  \cdot
+  (y,0)
+  \ 
+  =
+  \ 
+  (y+\Delta,\Delta_\rho)
+  \,.
+  \end{gather}
+  It follows
+ \begin{align*}
+      \begin{split}
+      g(y,0)
+      \ 
+      \le
+      \ 
+      g
+  (y+\Delta,\Delta_\rho)
+&
+      \ 
+      =
+      \ 
+      g
+      \left( 
+    \theta 
+    \cdot
+  (
+x^*,x^*_\rho
+  )
+  \ 
+  +
+  \ 
+  (
+  1
+  -
+\theta
+  )
+  \cdot
+  (y,0)
+      \right)
+      \\
+&
+      \ 
+      \le
+      \ 
+    \theta 
+    \cdot
+      g
+  (
+x^*,x^*_\rho
+  )
+  \ 
+  +
+  \ 
+  (
+  1
+  -
+\theta
+  )
+  \cdot
+  g
+  (y,0)
+  \ 
+      <
+  \ 
+      g(y,0)
+  \,    ,
+      \end{split}
+    \end{align*}
+    which is a contradiction.
+    The first inequality is due to \eqref{696}, the equality is due to \eqref{697}, the second inequality is due to the convexity of $g$,
+    and the strict inequality is due to assumption \eqref{698}.
+    Thus, all values outside 
+    $(y,0)+\tilde{B}(\varepsilon)$
+    are greater or equal $(y,0)$.
+    Since 
+    $(y,0)+\tilde{B}(\varepsilon)$
+    is also compact, the continuous function $g$ has a local minimum
+    \begin{gather*}
+      (y^*,y^*_\rho)\in
+    (y,0)+\tilde{B}(\varepsilon)
+    \,.
+    \end{gather*}
+    But then it holds
+    \begin{gather*}
+      g
+      (y^*,y^*_\rho)
+      \ 
+      \le
+      \ 
+      g(y,0)
+      \ 
+      \le
+      \ 
+      g
+      (x,x_\rho)
+      \qquad
+      \text{for all}
+      \qquad 
+      (x,x_\rho)
+      \in
+\R^m\times\R^m_{\ge 0}\setminus 
+\left(
+  (y,0)
+  +
+    \tilde{B}(\varepsilon)
+\right)
+    \end{gather*}
+    and
+    \begin{gather*}
+      g
+      (y^*,y^*_\rho)
+      \ 
+      \le
+      \ 
+      g
+      (z,z_\rho)
+      \qquad
+      \text{for all}
+      \qquad 
+      (z,z_\rho)
+      \in
+  (y,0)
+  +
+    \tilde{B}(\varepsilon)
+    \,.
+    \end{gather*}
+    Thus,
+    $
+      (y^*,y^*_\rho)
+    $
+    is also a global minimum in
+    $
+\R^m\times\R^m_{\ge 0}
+    $.
+Since
+    $
+      (y^*,y^*_\rho)
+      \in
+  (y,0)
+  +
+    \tilde{B}(\varepsilon)
+    $
+    there exists
+    $
+    (\Delta,\Delta_\rho)\in
+    \tilde{B}(\varepsilon)
+    $
+    such that 
+    \begin{gather*}
+      (y^*,y^*_\rho)
+      =
+      (y+\Delta,\Delta_\rho)
+      \qquad
+      \text{for some}\ 
+      (\Delta,\Delta_\rho)
+      \in
+      \tilde{B}(\varepsilon)
+      \,.
+    \end{gather*}
+  Thus
+  \begin{gather*}
+    \norm{
+      (y^*,y^*_\rho)
+      -
+      (y,0)
+    }_2
+    =
+    \norm{
+      (\Delta,\Delta_\rho)
+    }_2
+    \le \varepsilon
+    \,.
+  \end{gather*}
+  This finish the proof.
+\end{proof}
+\begin{lemma}
   \label{bw:cd:lem}
   Let $m\in\mathbb{N}$ and
   $g \,:\, \R^m \to \overline{\R}$ 

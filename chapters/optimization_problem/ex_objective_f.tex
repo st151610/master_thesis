@@ -1,0 +1,103 @@
+\begin{example}
+  For two discrete distributions
+  \begin{gather*}
+    p:=[p_1,\ldots,p_N]
+    \qquad
+    \text{and}
+    \qquad
+    q:=[q_1,\ldots,p_N]
+  \end{gather*}
+  we consider the following distance measure
+  \begin{gather*}
+   D(p|q)
+   \ 
+   :=
+   \ 
+   \sum_{i=1}^{N} 
+   p_i
+   \cdot
+   \log
+   \left( 
+     \frac{p_i}{q_i}
+   \right)
+   \,.
+  \end{gather*}
+  This is known as the Kullback-Leibler-Entropy.
+  In \cite[§3.1]{Hainmueller2012} the author connects this concept to a convex optimization problem.
+  The idea is, to optimize the Kullback-Leibler-Entropy of the distribution induced by the weights and some base weights.
+  For example, if we choose
+  \begin{gather*}
+    w:=
+    \frac{1}{N}[w_1\cdot T_1,\ldots,w_N\cdot T_N]
+    \qquad
+    \text{and}
+    \qquad
+    q:=\frac{1}{N}[1,\ldots,1]
+  \end{gather*}
+  we get
+  \begin{align}
+    \label{8926}
+   D(w|q)
+   \ 
+   =
+   \ 
+   \frac{1}{N}
+   \sum_{i=1}^{N} 
+w_i\cdot T_i
+   \cdot
+   \log
+   \left( 
+     \frac{w_i\cdot T_i}{N}\cdot N
+   \right)
+   \ 
+   =
+   \ 
+   \frac{1}{N}
+   \sum_{i=1}^{n} 
+w_i
+   \cdot
+   \log
+   \left( 
+     w_i
+   \right)
+   \,,
+  \end{align}
+  where we set $"0\cdot \log(0)"=0$. Thus, the optimization problem
+  \begin{gather*}
+    \underset{w_1, \ldots, w_n \in \R}
+    {\text{minimize}}
+    \qquad\qquad
+    \sum_{i = 1}^{n} 
+w_i
+   \cdot
+   \log
+   \left( 
+     w_i
+   \right)
+  \end{gather*}
+  produces the same optimal solutions as minimizing the Kullback-Leibler-Entropy \eqref{8926} with respect to $w$.
+Thus, we consider 
+\begin{gather*}
+  \varphi
+  \ 
+  \colon
+  \R
+  \ 
+  \to
+  \ 
+  \overline{\R}
+  \,,
+  \qquad
+  x
+  \ 
+  \mapsto
+  \ 
+  \begin{cases}
+    x\cdot \log x\ &\text{if}\ x>0\,, \\
+    0 \ &\text{if}\, x=0\,,\\
+    \infty\ &\text{if}\ x<0\,.
+  \end{cases}
+\end{gather*}
+We show, that this choices satisfies Assumption~\ref{asu:objective_f}.
+The first point is met by definition.
+\end{example}
