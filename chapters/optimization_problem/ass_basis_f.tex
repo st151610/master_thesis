@@ -1,4 +1,5 @@
 \begin{assumption}
+  \label{asu:basis}
   The set of (measurable) basis functions 
 \begin{gather*}
   \mathfrak{B}
@@ -37,9 +38,10 @@ k\in \left\{ 1,\ldots,\# \mathfrak{B} \right\}
       for all $x\in\mathcal{X}$.
     \item
       $
-      \norm{X_k - X_i}_2
-      \cdot
+   \sum_{k=1}^{\# \mathfrak{B}} 
       B_k(X_i)
+      \cdot
+      \norm{X_k - X_i}_2
       \to
       0
       \ 
@@ -56,6 +58,195 @@ k\in \left\{ 1,\ldots,\# \mathfrak{B} \right\}
       $N\to\infty$
   \end{itemize}
 \end{assumption}
+
+
+The next lemma connects objective function $\varphi$, the set of basis functions $\mathfrak{B}$ and the propensity score.
+
+\begin{lemma}
+  Let Assumptions~\ref{asu:objective_f}, \ref{asu:ps} and \ref{asu:basis} hold true.
+  Then for all
+  $i\in \left\{ 1,\ldots,N \right\}$ it holds
+  \begin{gather*}
+   \left| 
+   \sum_{k=1}^{\# \mathfrak{B}} 
+   B_k(X_i)
+   \cdot
+   \varphi^{'}
+   \left( 
+     \frac{1}{\pi(X_k)}
+   \right)
+   \ 
+   -
+   \ 
+   \varphi^{'}
+   \left( 
+     \frac{1}{\pi(X_i)}
+   \right)
+   \right| 
+   \ 
+   \to
+   \ 
+   0
+   \qquad
+   \text{for}
+   \ 
+   N\to\infty
+   \,.
+  \end{gather*}
+\end{lemma}
+
+\begin{proof}
+  Consider the function 
+  \begin{gather*}
+  g
+  \ 
+  :=
+  \ 
+  \varphi^{'}
+  \ 
+  \circ 
+  \ 
+  (x\mapsto 1/x) 
+  \ 
+  \circ
+  \ 
+  \pi
+  \,.
+  \end{gather*}
+  Then $g$ is continuously differentiable.
+  This follows from the assumption that
+  $\varphi$ is twice continuously differentiable on $(0,\infty)$, $\pi\in (0,1)$ and that $\pi$ is continuously differentiable on 
+  $\R^d$.
+  Thus, by the chain rule we get
+  \begin{gather*}
+   \nabla
+   g
+   \ 
+   =
+   \ 
+   x
+   \ 
+   \mapsto
+   \ 
+   \frac{\nabla \pi(x)}{\pi^2(x)}
+   \cdot
+   \varphi^{''}\left( \frac{1}{\pi(x)} \right)
+   \,.
+  \end{gather*}
+  Note, that $\nabla g$ is well defined, continuous on $\R^d$
+  and does not depend on $N$.
+  Since we assume
+      $
+      \sum_{k=1}^{\# B} 
+      B_k(X_i)
+      \ 
+      =
+      \ 
+      1
+      $
+      for all 
+      $i\in \left\{ 1,\ldots ,N \right\}$
+      it holds
+      \begin{align*}
+   &
+   \left| 
+   \sum_{k=1}^{\# \mathfrak{B}} 
+   B_k(X_i)
+   \cdot
+   \varphi^{'}
+   \left( 
+     \frac{1}{\pi(X_k)}
+   \right)
+   \ 
+   -
+   \ 
+   \varphi^{'}
+   \left( 
+     \frac{1}{\pi(X_i)}
+   \right)
+   \right| 
+   \\
+   &
+   \ 
+   =
+   \ 
+   \left| 
+   \sum_{k=1}^{\# \mathfrak{B}} 
+   B_k(X_i)
+   \left( 
+   \varphi^{'}
+   \left( 
+     \frac{1}{\pi(X_k)}
+   \right)
+   \ 
+   -
+   \ 
+   \varphi^{'}
+   \left( 
+     \frac{1}{\pi(X_i)}
+   \right)
+   \right)
+   \right| 
+\\
+   &
+   \ 
+   \le
+   \ 
+   \sum_{k=1}^{\# \mathfrak{B}} 
+   B_k(X_i)
+   \left| 
+   \left( 
+   \varphi^{'}
+   \left( 
+     \frac{1}{\pi(X_k)}
+   \right)
+   \ 
+   -
+   \ 
+   \varphi^{'}
+   \left( 
+     \frac{1}{\pi(X_i)}
+   \right)
+   \right)
+   \right| 
+\\
+   &
+   \ 
+   \le
+   \ 
+   \sum_{k=1}^{\# \mathfrak{B}} 
+   B_k(X_i)
+   \sup_{\theta\in[0,1]}
+   \norm{
+     \nabla g
+     (
+     \theta X_k
+     +
+     (1-\theta)
+     X_i
+     )
+   }_2
+   \norm{X_k-X_i}_2
+\\
+   &
+   \ 
+   \lesssim
+   \ 
+   \sum_{k=1}^{\# \mathfrak{B}} 
+   B_k(X_i)
+   \norm{X_k-X_i}_2
+   \ 
+   \to
+   \ 
+   0
+   \qquad
+   \text{for}
+   \ 
+   N\to\infty
+   \,.
+      \end{align*}
+\end{proof}
+
 Next, we give some examples. 
 We begin with a histogram basis \cite[§4]{Gyorfi2002}
 \begin{example}

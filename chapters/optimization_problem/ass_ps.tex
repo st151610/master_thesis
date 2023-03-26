@@ -1,0 +1,48 @@
+\begin{definition}
+  We define the \textbf{propensity score function} by
+  \begin{gather*}
+    \pi
+    \ 
+    \colon
+    \R^d
+    \ 
+    \to
+    \ 
+    [0,1]
+    \,,
+    \qquad
+    x
+    \ 
+    \mapsto
+    \ 
+    \P
+    [
+    T=1
+    |
+    X=x
+    ]
+    \,,
+  \end{gather*}
+  that is, 
+  as the conditional probability of treatment given individual characteristics $x\in\R^d$.
+\end{definition}
+\begin{remark}
+  We define $\pi$ on the whole $\R^d$, although $\mathcal{X}\subset \R^d$ may be a much smaller (possibly finite or countable) subset.
+  The reason is that we want to assume continuity.
+\end{remark}
+\begin{assumption}
+  \label{asu:ps}
+  The propensity score function $\pi$ satisfies
+  \begin{itemize}
+    \item
+      $\pi(x)\in (0,1)$ for all $x\in\R^d$
+    \item
+      $\pi$ is continuously differentiable on $\R^d$
+  \end{itemize}
+\end{assumption}
+
+Next we give a standard example for a propensity score model
+
+\begin{example}
+  Logistic regression
+\end{example}
