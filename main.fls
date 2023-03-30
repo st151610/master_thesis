@@ -1200,6 +1200,11 @@ INPUT ./chapters/optimization_problem/ass_basis_f.tex
 INPUT chapters/optimization_problem/ass_basis_f.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
 INPUT ./final_chapters/ebw:dual_formulation.tex
 INPUT final_chapters/ebw:dual_formulation.tex
 INPUT ./final_chapters/ebw:dual_formulation.tex
@@ -1209,11 +1214,6 @@ INPUT ./final_chapters/aa:dual.tex
 INPUT final_chapters/aa:dual.tex
 INPUT ./final_chapters/aa:dual.tex
 INPUT final_chapters/aa:dual.tex
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
 INPUT ./final_chapters/aa:weights.tex
 INPUT final_chapters/aa:weights.tex
 INPUT ./final_chapters/aa:weights.tex

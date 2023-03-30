@@ -1,6 +1,4 @@
-\begin{assumption}
-  \label{asu:basis}
-  The set of (measurable) basis functions 
+We consider a set of (measurable) basis functions 
 \begin{gather*}
   \mathfrak{B}
   :
@@ -12,245 +10,289 @@ B_k\colon (\mathcal{X},\Sigma_\mathcal{X})\to(\R,\mathcal{B}(\R))
 \ 
 k\in \left\{ 1,\ldots,\# \mathfrak{B} \right\}
   \right\}
+  \,,
 \end{gather*}
+and write
+\begin{gather*}
+  B(x)
+  :=
+  [B_1(x),\ldots,B_{\# \mathfrak{B}}(x)]^\top
+  \,.
+\end{gather*}
+\begin{assumption}
+  \label{asu:basis}
+  The set of (measurable) basis functions 
+  $
+  \mathfrak{B}
+  $
   satisfies
   \begin{itemize}
     \item
-      $
-      \sum_{k=1}^{\# B} 
-      B_k(X_i)
-      \ 
-      =
-      \ 
-      1
-      $
-      for all 
-      $i\in \left\{ 1,\ldots ,N \right\}$
+      $\norm{B(x)}_2\lesssim 1$ for all $x\in \mathcal{X}$.
     \item
-      $
-      \sum_{k=1}^{\# B} 
-      B_k^2(x)
-      \ 
-      \lesssim
-      \ 
-      1
-      $
-      for all $x\in\mathcal{X}$.
-    \item
-      $
-   \sum_{k=1}^{\# \mathfrak{B}} 
-      B_k(X_i)
-      \cdot
-      \norm{X_k - X_i}_2
-      \to
-      0
-      \ 
-      $
-      for all 
-      $
-      (i,k)
-      \in
-      \left\{ 1,\ldots, N \right\}
-      \times
-      \left\{ 1,\ldots,\# B \right\}
-      $
-      and
-      $N\to\infty$
+      For all continuous functions $f\colon \R^d\to \R$ there exists a random vector
+      $\lambda^*_{f}\in\R^{\#\mathfrak{B}}$ such that
+      for all $i\in \left\{ 1,\ldots, N \right\}$ it holds
+      \begin{gather*}
+        \left| 
+        \inner{B(X_i)}{\lambda^*_f}
+        -
+        f(X_i)
+        \right|
+        \to 
+        0
+        \qquad
+        \text{for}
+        \ 
+        N\to\infty
+        \,.
+      \end{gather*}
   \end{itemize}
 \end{assumption}
-
-
-The next lemma connects objective function $\varphi$, the set of basis functions $\mathfrak{B}$ and the propensity score.
-
-\begin{lemma}
-  Let Assumptions~\ref{asu:objective_f}, \ref{asu:ps} and \ref{asu:basis} hold true.
-  Then for all
-  $i\in \left\{ 1,\ldots,N \right\}$ it holds
-  \begin{gather*}
-   \left| 
-   \sum_{k=1}^{\# \mathfrak{B}} 
-   B_k(X_i)
-   \cdot
-   \varphi^{'}
-   \left( 
-     \frac{1}{\pi(X_k)}
-   \right)
-   \ 
-   -
-   \ 
-   \varphi^{'}
-   \left( 
-     \frac{1}{\pi(X_i)}
-   \right)
-   \right| 
-   \ 
-   \to
-   \ 
-   0
-   \qquad
-   \text{for}
-   \ 
-   N\to\infty
-   \,.
-  \end{gather*}
-\end{lemma}
-
-\begin{proof}
-  Consider the function 
-  \begin{gather*}
-  g
-  \ 
-  :=
-  \ 
-  \varphi^{'}
-  \ 
-  \circ 
-  \ 
-  (x\mapsto 1/x) 
-  \ 
-  \circ
-  \ 
-  \pi
-  \,.
-  \end{gather*}
-  Then $g$ is continuously differentiable.
-  This follows from the assumption that
-  $\varphi$ is twice continuously differentiable on $(0,\infty)$, $\pi\in (0,1)$ and that $\pi$ is continuously differentiable on 
-  $\R^d$.
-  Thus, by the chain rule we get
-  \begin{gather*}
-   \nabla
-   g
-   \ 
-   =
-   \ 
-   x
-   \ 
-   \mapsto
-   \ 
-   \frac{\nabla \pi(x)}{\pi^2(x)}
-   \cdot
-   \varphi^{''}\left( \frac{1}{\pi(x)} \right)
-   \,.
-  \end{gather*}
-  Note, that $\nabla g$ is well defined, continuous on $\R^d$
-  and does not depend on $N$.
-  Since we assume
-      $
-      \sum_{k=1}^{\# B} 
-      B_k(X_i)
-      \ 
-      =
-      \ 
-      1
-      $
-      for all 
-      $i\in \left\{ 1,\ldots ,N \right\}$
-      it holds
-      \begin{align*}
-   &
-   \left| 
-   \sum_{k=1}^{\# \mathfrak{B}} 
-   B_k(X_i)
-   \cdot
-   \varphi^{'}
-   \left( 
-     \frac{1}{\pi(X_k)}
-   \right)
-   \ 
-   -
-   \ 
-   \varphi^{'}
-   \left( 
-     \frac{1}{\pi(X_i)}
-   \right)
-   \right| 
-   \\
-   &
-   \ 
-   =
-   \ 
-   \left| 
-   \sum_{k=1}^{\# \mathfrak{B}} 
-   B_k(X_i)
-   \left( 
-   \varphi^{'}
-   \left( 
-     \frac{1}{\pi(X_k)}
-   \right)
-   \ 
-   -
-   \ 
-   \varphi^{'}
-   \left( 
-     \frac{1}{\pi(X_i)}
-   \right)
-   \right)
-   \right| 
-\\
-   &
-   \ 
-   \le
-   \ 
-   \sum_{k=1}^{\# \mathfrak{B}} 
-   B_k(X_i)
-   \left| 
-   \left( 
-   \varphi^{'}
-   \left( 
-     \frac{1}{\pi(X_k)}
-   \right)
-   \ 
-   -
-   \ 
-   \varphi^{'}
-   \left( 
-     \frac{1}{\pi(X_i)}
-   \right)
-   \right)
-   \right| 
-\\
-   &
-   \ 
-   \le
-   \ 
-   \sum_{k=1}^{\# \mathfrak{B}} 
-   B_k(X_i)
-   \sup_{\theta\in[0,1]}
-   \norm{
-     \nabla g
-     (
-     \theta X_k
-     +
-     (1-\theta)
-     X_i
-     )
-   }_2
-   \norm{X_k-X_i}_2
-\\
-   &
-   \ 
-   \lesssim
-   \ 
-   \sum_{k=1}^{\# \mathfrak{B}} 
-   B_k(X_i)
-   \norm{X_k-X_i}_2
-   \ 
-   \to
-   \ 
-   0
-   \qquad
-   \text{for}
-   \ 
-   N\to\infty
-   \,.
-      \end{align*}
-\end{proof}
 
 Next, we give some examples. 
 We begin with a histogram basis \cite[§4]{Gyorfi2002}
 \begin{example}
-
+We consider a sequence of partitions
+$
+\left( 
+  \mathcal{P}_N
+  =
+  \left\{ 
+    A_{N,1}
+    ,
+    A_{N,2}
+    ,
+    \ldots
+  \right\}
+\right)
+$
+of $ \R^d $
+and define
+$ A_N(x) $ to be the cell of $ \mathcal{P}_N $ containing $x$.
+We also assume
+uniform partition width that decreases to 0, that is,
+\begin{gather}
+  \label{8881}
+  \text{
+for all $j\in\mathbb{N}$
+it holds
+  }
+  \qquad
+  \lambda^d(A_{N,j})
+  \ 
+  =
+  \ 
+  h_N^d
+  \ 
+  \to
+  \ 
+  0
+  \qquad
+  \text{for}
+  \ 
+  N\to\infty
+  \,.
+\end{gather}
+We define $N$ basis functions $B_k$ of the covariates by
+\begin{gather*}
+  B_k(x)
+  \ 
+  :=
+  \ 
+  \frac{
+  \mathbf{1}{\left\{ X_k \in A_N(x) \right\}}
+  }{
+  \sum_{j=1}^{N} 
+  \mathbf{1}{\left\{ X_j \in A_N(x) \right\}}
+  }
+  \qquad
+  \text{for}
+  \,
+  k\in
+  \left\{ 
+  1,\ldots,N
+  \right\}
+  \,,
+\end{gather*}
+where we keep to the convention $"0/0=0"$.
+If at least one $B_k(x)>0$, the basis functions sum to 1. If $B_k(x)=0$ for all basis functions, the sum is 0.
+Thus
+\begin{align}
+  \label{8882}
+  \sum_{k=1}^{N}
+  B_k(x)
+  &
+  \ 
+  \in
+  \ 
+  \left\{ 0,1 \right\}
+  \qquad
+  \text{for all}
+  \ 
+  x\in\R^d
+  \,.
+  \notag
+  \intertext{
+Since $B_i(X_i)>0$, it holds
+  }
+  \sum_{k=1}^{N}
+  B_k(X_i)
+  &
+  \ 
+  =
+ \  
+  1
+  \qquad
+  \text{for all}\ 
+  i\in
+  \left\{ 1,\ldots,N \right\}
+  \,.
+\end{align}
+We check the first condition of Assumption~\ref{asu:basis}. 
+Since 
+\begin{gather*}
+B_k(x)
+\ 
+\in
+\ 
+[0,1]
+\qquad
+\text{for all}\ 
+x\in\R^d
+\ 
+\text{and for all}\ 
+k\in \left\{ 1,\ldots,N \right\}
+\,,
+\end{gather*}
+it holds
+\begin{gather*}
+  \label{basis_l2_bdd}
+  \norm{B(x)}_2^2
+  \ 
+  =
+  \ 
+  \sum_{k=1}^{N} 
+  B_k(x)
+  ^2
+  \ 
+  \le
+  \ 
+  \sum_{k=1}^{N} 
+  B_k(x)
+  \ 
+  \in
+  \ 
+  \left\{ 0,1 \right\}
+  \quad
+  \text{
+    for all
+  }
+x\in\R^d
+\,
+\,.
+\end{gather*}
+To verify the second condition of Assumption~\ref{asu:basis} 
+let
+$f$ be a continuous function
+and consider
+\begin{gather*}
+  \lambda^*_f
+  \ 
+  :=
+  \ 
+  [f(X_1),\ldots,f(X_N)]^\top
+  \,.
+\end{gather*}
+Since $f$ is continuous and the $X_k$ are random vectors,
+$\lambda^*_f$ is also a random vector.
+It follows 
+\begin{align*}
+  &
+        \left| 
+        \inner{B(X_i)}{\lambda^*_f}
+        -
+        f(X_i)
+        \right|
+        \\
+  &
+  \ 
+        =
+  \ 
+        \left| 
+        \sum_{k=1}^{N} 
+        B_k(X_i)
+        \cdot
+        f(X_k)
+        -
+        f(X_i)
+        \right|
+        \ 
+        =
+        \ 
+        \left| 
+        \sum_{k=1}^{N} 
+        B_k(X_i)
+        \cdot
+        \left( 
+        f(X_k)
+        -
+        f(X_i)
+        \right)
+        \right|
+\\
+  &
+  \ 
+        =
+  \ 
+        \left| 
+        \sum_{k=1}^{N} 
+        B_k(X_i)
+        \cdot
+        \mathbf{1}
+        \left\{ X_k\in A_N(X_i) \right\}
+        \cdot
+        \left( 
+        f(X_k)
+        -
+        f(X_i)
+        \right)
+        \right|
+        \\
+  &
+  \ 
+        \le
+  \ 
+        \sum_{k=1}^{N} 
+        B_k(X_i)
+        \cdot
+        \omega
+        ( 
+        f,
+        \lambda^d(A_N(X_i))
+        )
+        \\
+  &
+  \ 
+        =
+  \ 
+        \omega
+        ( 
+        f,
+        h_N^d
+        )
+        \to
+        0
+        \qquad
+        \text{for}
+        \ 
+        N\to\infty
+        \,,
+\end{align*}
+where $\omega$ is the modulus of continuity.
+The second equality is due to \eqref{8881}, the third equality follows from the definition of the basis functions, and 
+the inequality follows from \eqref{8881}, the convexity of the absolute value and the continuity of $f$.
+The convergence in due to \eqref{8882}.
 \end{example}
 
 Next, we consider kernel bases \cite[§5]{Gyorfi2002}
