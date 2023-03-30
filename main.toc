@@ -1,12 +1,13 @@
 \contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
 \contentsline {chapter}{\numberline {2}The Optimization Problem behind the Weights}{9}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Asymptotic Analysis}{25}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Consistency of Optimal Solutions}{25}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Estimate of an Oracle Parameter by the Dual}{25}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Estimate of the Inverse Propensitiy Score by the Weights}{32}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Tools and Assumptions}{34}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Application to Plug In Estimators}{56}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Convex Analysis}{57}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A Convex Analysis Primer}{57}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Duality of Optimal Solutions}{64}{section.4.2}%
+\contentsline {subsection}{\numberline {2.0.1}Basis Functions}{14}{subsection.2.0.1}%
+\contentsline {chapter}{\numberline {3}Asymptotic Analysis}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Consistency of Optimal Solutions}{27}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Estimate of an Oracle Parameter by the Dual}{27}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Estimate of the Inverse Propensitiy Score by the Weights}{34}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Tools and Assumptions}{36}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Application to Plug In Estimators}{58}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Convex Analysis}{59}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A Convex Analysis Primer}{59}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Duality of Optimal Solutions}{66}{section.4.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

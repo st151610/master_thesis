@@ -295,7 +295,223 @@ the inequality follows from \eqref{8881}, the convexity of the absolute value an
 The convergence in due to \eqref{8882}.
 \end{example}
 
-Next, we consider kernel bases \cite[§5]{Gyorfi2002}
+We continue with kernel bases \cite[§5]{Gyorfi2002}.
 \begin{example}
-
+Let
+$
+  K
+  \colon
+  \R^d
+  \to
+  [0,\infty)
+$
+be a measurable function with $K(0)>0$. 
+We call $K$ a kernel function.
+We assume that there exists
+$R>0$ such that 
+\begin{gather}
+  \label{8884}
+  K(x)
+  \ 
+  \le
+  \ 
+  \mathbf{1}\left\{ \norm{x}_2\le R\right\}
+  \,,
+\end{gather}
+that is, the kernel function has compact support.
+For a decreasing sequence (the bandwith of the kernel) $(h_N)\in (0,\infty)$ with $h_N\to 0$ for $N\to\infty$,
+we define $N$ basis functions $B_k$ of the covariates by
+\begin{gather*}
+  B_k(x)
+  \ 
+  :=
+  \ 
+  \frac{
+    K \left( \frac{\norm{x-X_k}_2}{h_N} \right)
+  }{
+  \sum_{j=1}^{N} 
+    K \left( \frac{\norm{x-X_j}_2}{h_N} \right)
+  }
+  \qquad
+  \text{for}
+  \,
+  k\in
+  \left\{ 
+  1,\ldots,N
+  \right\}
+  \,,
+\end{gather*}
+where (again) we keep to the convention $"0/0=0"$.
+Since $K(0)>0$, as in the previous example, it follows
+\begin{align}
+  \label{8883}
+  \sum_{k=1}^{N}
+  B_k(x)
+  &
+  \ 
+  \in
+  \ 
+  \left\{ 0,1 \right\}
+  \qquad
+  \text{for all}
+  \ 
+  x\in\R^d
+  \,,
+  \notag
+  \\
+  \sum_{k=1}^{N}
+  B_k(X_i)
+  &
+  \ 
+  =
+ \  
+  1
+  \qquad
+  \text{for all}\ 
+  i\in
+  \left\{ 1,\ldots,N \right\}
+  \intertext{and}
+  \notag
+  \norm{B(x)}_2^2
+  &
+  \ 
+  \in
+  \ 
+  \left\{ 0,1 \right\}
+  \qquad
+  \text{for all}
+  \ 
+  x\in\R^d
+  \,.
+\end{align}
+This verifies the first condition of Assumption~\ref{asu:basis}.
+To verify the second condition, note, that
+\begin{align}
+  \label{8885}
+  \notag
+  K(x)
+  &
+  \ 
+  =
+  \ 
+  \mathbf{1}\left\{ \norm{x}_2\le R \right\} 
+  K(x)
+  \qquad
+  \text{for all}
+  \ 
+  x\in\R^d
+  \intertext{and thus}
+  B_k(x)
+  &
+  \ 
+  =
+  \ 
+  B_k(x)
+  \cdot
+  \mathbf{1}\left\{ \norm{x-X_k}_2\le R\cdot h_N \right\} 
+  \qquad
+  \text{for all}
+  \ 
+  x\in\R^d
+  \ 
+  \text{and for all}
+  \ 
+  k\in \left\{ 1,\ldots,N \right\}
+  \,.
+\end{align}
+Let 
+$f$ be a continuous function
+and consider (as in the previous example)
+\begin{gather*}
+  \lambda^*_f
+  \ 
+  :=
+  \ 
+  [f(X_1),\ldots,f(X_N)]^\top
+  \,.
+\end{gather*}
+It follows
+\begin{align*}
+  &
+        \left| 
+        \inner{B(X_i)}{\lambda^*_f}
+        -
+        f(X_i)
+        \right|
+        \\
+  &
+  \ 
+        =
+  \ 
+        \left| 
+        \sum_{k=1}^{N} 
+        B_k(X_i)
+        \cdot
+        f(X_k)
+        -
+        f(X_i)
+        \right|
+        \ 
+        =
+        \ 
+        \left| 
+        \sum_{k=1}^{N} 
+        B_k(X_i)
+        \cdot
+        \left( 
+        f(X_k)
+        -
+        f(X_i)
+        \right)
+        \right|
+\\
+  &
+  \ 
+        =
+  \ 
+        \left| 
+        \sum_{k=1}^{N} 
+        B_k(X_i)
+        \cdot
+  \mathbf{1}\left\{ \norm{x-X_k}_2\le R\cdot h_N \right\} 
+        \cdot
+        \left( 
+        f(X_k)
+        -
+        f(X_i)
+        \right)
+        \right|
+        \\
+  &
+  \ 
+        \le
+  \ 
+        \sum_{k=1}^{N} 
+        B_k(X_i)
+        \cdot
+        \omega
+        ( 
+        f,
+        R\cdot h_N
+        )
+        \\
+  &
+  \ 
+        =
+  \ 
+        \omega
+        ( 
+        f,
+        R\cdot h_N
+        )
+        \to
+        0
+        \qquad
+        \text{for}
+        \ 
+        N\to\infty
+        \,,
+\end{align*}
+The convergence in due to $h_N\to 0$ for $N\to \infty$. 
 \end{example}
+We now have a large class of possible basis function. We may proceed.
