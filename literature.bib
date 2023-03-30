@@ -6,6 +6,7 @@
   publisher = {{Springer US}},
   address = {{New York, NY}},
   doi = {10.1007/978-1-4612-4348-9},
+  urldate = {2022-11-20},
   isbn = {978-0-387-94519-4 978-1-4612-4348-9},
   keywords = {censoring,estimator,likelihood,survival analysis},
   file = {/home/ioan/Zotero/storage/AU2XP7CP/Andersen, P.K. - Statistical Models Based on Counting Processes.pdf;/home/ioan/Zotero/storage/V7HUR8HL/Andersen et al. - 1993 - Statistical Models Based on Counting Processes.pdf}
@@ -34,6 +35,7 @@
   author = {Bertsekas, Dimitri P. and Tsitsiklis, John N.},
   year = {2003},
   month = nov,
+  urldate = {2022-12-02},
   langid = {american},
   annotation = {Accepted: 2003-11-21T16:47:39Z},
   file = {/home/ioan/Zotero/storage/T372YX9H/part8-end.pdf;/home/ioan/Zotero/storage/ZABQICFS/3719.html}
@@ -58,6 +60,7 @@
   publisher = {{Springer}},
   address = {{New York, NY}},
   doi = {10.1007/978-1-4612-0653-8},
+  urldate = {2022-12-16},
   isbn = {978-1-4612-6857-4 978-1-4612-0653-8},
   keywords = {algebra,approximation,calculus,Eigenvalue,exponential function,inequality,linear algebra,matrices,matrix,numerical analysis,operator,operator theory,perturbation,polynomial,Smooth function},
   file = {/home/ioan/Zotero/storage/THNYY5IC/Bhatia - Matrix Analysis.pdf}
@@ -75,6 +78,7 @@
   pages = {159--159},
   issn = {03067734},
   doi = {10.1111/insr.12170},
+  urldate = {2022-11-23},
   langid = {english},
   file = {/home/ioan/Zotero/storage/WHVECFKD/Blumberg - 2016 - Causal Inference for Statistics, Social, and Biome.pdf}
 }
@@ -106,8 +110,26 @@
   pages = {19--42},
   publisher = {{Institute of Mathematical Statistics}},
   issn = {0091-1798},
+  urldate = {2022-11-29},
   abstract = {This is a guide to some recent work in the theory of martingale inequalities. Methods are simplified; some new proofs are given. A number of new results are also included.},
   file = {/home/ioan/Zotero/storage/RIJX6VYJ/Burkholder - 1973 - Distribution Function Inequalities for Martingales.pdf}
+}
+
+@article{Chan2016,
+  title = {Globally {{Efficient Non-Parametric Inference}} of {{Average Treatment Effects}} by {{Empirical Balancing Calibration Weighting}}},
+  author = {Chan, Kwun Chuen Gary and Yam, Sheung Chi Phillip and Zhang, Zheng},
+  year = {2016},
+  month = jun,
+  journal = {Journal of the Royal Statistical Society Series B: Statistical Methodology},
+  volume = {78},
+  number = {3},
+  pages = {673--700},
+  issn = {1369-7412, 1467-9868},
+  doi = {10.1111/rssb.12129},
+  urldate = {2023-03-30},
+  abstract = {The estimation of average treatment effects based on observational data is extremely important in practice and has been studied by generations of statisticians under different frameworks. Existing globally efficient estimators require non-parametric estimation of a propensity score function, an outcome regression function or both, but their performance can be poor in practical sample sizes. Without explicitly estimating either functions, we consider a wide class calibration weights constructed to attain an exact three-way balance of the moments of observed covariates among the treated, the control, and the combined group. The wide class includes exponential tilting, empirical likelihood and generalized regression as important special cases, and extends survey calibration estimators to different statistical problems and with important distinctions. Global semiparametric efficiency for the estimation of average treatment effects is established for this general class of calibration estimators. The results show that efficiency can be achieved by solely balancing the covariate distributions without resorting to direct estimation of propensity score or outcome regression function. We also propose a consistent estimator for the efficient asymptotic variance, which does not involve additional functional estimation of either the propensity score or the outcome regression functions. The proposed variance estimator outperforms existing estimators that require a direct approximation of the efficient influence function.},
+  langid = {english},
+  file = {/home/ioan/Zotero/storage/VG5AZK9Q/Chan et al. - 2016 - Globally Efficient Non-Parametric Inference of Ave.pdf}
 }
 
 @misc{Chen2012,
@@ -120,6 +142,7 @@
   eprint = {arXiv:1109.1637},
   publisher = {{arXiv}},
   doi = {10.48550/arXiv.1109.1637},
+  urldate = {2022-11-08},
   abstract = {Covariance estimation becomes challenging in the regime where the number p of variables outstrips the number n of samples available to construct the estimate. One way to circumvent this problem is to assume that the covariance matrix is nearly sparse and to focus on estimating only the significant entries. To analyze this approach, Levina and Vershynin (2011) introduce a formalism called masked covariance estimation, where each entry of the sample covariance estimator is reweighted to reflect an a priori assessment of its importance. This paper provides a short analysis of the masked sample covariance estimator by means of a matrix concentration inequality. The main result applies to general distributions with at least four moments. Specialized to the case of a Gaussian distribution, the theory offers qualitative improvements over earlier work. For example, the new results show that n = O(B log\^2 p) samples suffice to estimate a banded covariance matrix with bandwidth B up to a relative spectral-norm error, in contrast to the sample complexity n = O(B log\^5 p) obtained by Levina and Vershynin.},
   archiveprefix = {arxiv},
   keywords = {Mathematics - Probability,Mathematics - Statistics Theory,Primary: 60B20},
@@ -135,6 +158,7 @@
   eprint = {arXiv:2004.03036},
   publisher = {{arXiv}},
   doi = {10.48550/arXiv.2004.03036},
+  urldate = {2022-12-22},
   abstract = {We propose a nonparametric inference method for causal effects of continuous treatment variables, under unconfoundedness and nonparametric or high-dimensional nuisance parameters. Our double debiased machine learning (DML) estimators for the average dose-response function (or the average structural function) and the partial effects are asymptotically normal with nonparametric convergence rates. The nuisance estimators for the conditional expectation function and the conditional density can be nonparametric or ML methods. Utilizing a kernel-based doubly robust moment function and cross-fitting, we give high-level conditions under which the nuisance estimators do not affect the first-order large sample distribution of the DML estimators. We further provide sufficient low-level conditions for kernel, series, and deep neural networks. We propose a data-driven bandwidth to consistently estimate the optimal bandwidth that minimizes the asymptotic mean squared error. We justify the use of kernel to localize the continuous treatment at a given value by the Gateaux derivative. We implement various ML methods in Monte Carlo simulations and an empirical application on a job training program evaluation.},
   archiveprefix = {arxiv},
   keywords = {Economics - Econometrics},
@@ -153,6 +177,7 @@
   pages = {157--161},
   publisher = {{Institute of Mathematical Statistics}},
   issn = {0091-1798},
+  urldate = {2022-11-29},
   abstract = {Analogues of the Marcinkiewicz-Zygmund and Rosenthal inequalities for Banach space valued random vectors are proved. As an application some results on the strong law of large numbers are obtained. It is proved that the Marcinkiewicz SLLN holds for every \$p\$-integrable, mean zero \$B\$-valued \$\textbackslash mathrm\{rv\}\$ if and only if \$B\$ is of Rademacher type \$p(1 \textbackslash leq p {$<$} 2)\$.},
   file = {/home/ioan/Zotero/storage/DXVZSWYZ/De Acosta - 1981 - Inequalities for $B$-Valued Random Vectors with Ap.pdf}
 }
@@ -170,6 +195,7 @@
   publisher = {{Institute of Mathematical Statistics}},
   issn = {1932-6157, 1941-7330},
   doi = {10.1214/17-AOAS1101},
+  urldate = {2022-10-28},
   abstract = {Propensity score matching and weighting are popular methods when estimating causal effects in observational studies. Beyond the assumption of unconfoundedness, however, these methods also require the model for the propensity score to be correctly specified. The recently proposed covariate balancing propensity score (CBPS) methodology increases the robustness to model misspecification by directly optimizing sample covariate balance between the treatment and control groups. In this paper, we extend the CBPS to a continuous treatment. We propose the covariate balancing generalized propensity score (CBGPS) methodology, which minimizes the association between covariates and the treatment. We develop both parametric and nonparametric approaches and show their superior performance over the standard maximum likelihood estimation in a simulation study. The CBGPS methodology is applied to an observational study, whose goal is to estimate the causal effects of political advertisements on campaign contributions. We also provide open-source software that implements the proposed methods.},
   keywords = {Causal inference,covariate balance,generalized propensity score,inverse-probability weighting,treatment effect},
   file = {/home/ioan/Zotero/storage/ETHSLHAR/Fong et al. - 2018 - Covariate balancing propensity score for a continu.pdf;/home/ioan/Zotero/storage/R82C7W48/17-AOAS1101.html}
@@ -183,6 +209,7 @@
   publisher = {{Springer}},
   address = {{New York, NY}},
   doi = {10.1007/b97848},
+  urldate = {2023-01-21},
   isbn = {978-0-387-95441-7 978-0-387-22442-8},
   keywords = {Kernel,Martingal,neural networks,probability,probability theory},
   file = {/home/ioan/Zotero/storage/CLQVENQE/Györfi et al. - 2002 - A Distribution-Free Theory of Nonparametric Regres.pdf}
@@ -201,6 +228,7 @@
   pages = {315},
   issn = {00129682},
   doi = {10.2307/2998560},
+  urldate = {2022-12-23},
   abstract = {The role of propensity score in the efficient estimation of the average treatment effects is examined. If the treatment is ignorable given some observed characteristics, it is shown that the propensity score is ancillary for estimation of the average treatment effects but not for estimation of average treatment effects on the treated. Efficient semiparametric estimators take the form of relevant sample averages of the data completed by the nonparametric imputation method. Projection on the propensity score is not necessary for efficient semiparametric estimation of the average treatment effects on the treated even if the propensity score is known.},
   file = {/home/ioan/Zotero/storage/QWCN5AD3/Hahn - 1998 - On the Role of the Propensity Score in Efficient S.pdf}
 }
@@ -216,6 +244,7 @@
   pages = {25--46},
   issn = {1047-1987, 1476-4989},
   doi = {10.1093/pan/mpr025},
+  urldate = {2022-10-28},
   abstract = {This paper proposes entropy balancing, a data preprocessing method to achieve covariate balance in observational studies with binary treatments. Entropy balancing relies on a maximum entropy reweighting scheme that calibrates unit weights so that the reweighted treatment and control group satisfy a potentially large set of prespecified balance conditions that incorporate information about known sample moments. Entropy balancing thereby exactly adjusts inequalities in representation with respect to the first, second, and possibly higher moments of the covariate distributions. These balance improvements can reduce model dependence for the subsequent estimation of treatment effects. The method assures that balance improves on all covariate moments included in the reweighting. It also obviates the need for continual balance checking and iterative searching over propensity score models that may stochastically balance the covariate moments. We demonstrate the use of entropy balancing with Monte Carlo simulations and empirical applications.},
   langid = {english},
   file = {/home/ioan/Zotero/storage/Z5ENHQYD/Hainmueller - 2012 - Entropy Balancing for Causal Effects A Multivaria.pdf}
@@ -232,6 +261,7 @@
   pages = {38},
   issn = {1471-2288},
   doi = {10.1186/s12874-016-0135-1},
+  urldate = {2023-01-31},
   abstract = {Observational post-marketing assessment studies often involve evaluating the effect of a rare treatment on a time-to-event outcome, through the estimation of a marginal hazard ratio. Propensity score (PS) methods are the most used methods to estimate marginal effect of an exposure in observational studies. However there is paucity of data concerning their performance in a context of low prevalence of exposure.},
   keywords = {Hazard ratio,Monte Carlo simulations,Observational studies,Pharmacoepidemiology,Propensity scores,Rare exposure},
   file = {/home/ioan/Zotero/storage/Z36TEP33/Hajage et al. - 2016 - On the use of propensity scores in case of rare ex.pdf;/home/ioan/Zotero/storage/R2RCEL7E/s12874-016-0135-1.html}
@@ -248,6 +278,7 @@
   publisher = {{John Wiley \& Sons, Ltd}},
   address = {{Chichester, UK}},
   doi = {10.1002/0470090456.ch7},
+  urldate = {2022-10-28},
   isbn = {978-0-470-09045-9 978-0-470-09043-5},
   langid = {english},
   file = {/home/ioan/Zotero/storage/ARALBRYZ/Hirano and Imbens - 2005 - The Propensity Score with Continuous Treatments.pdf}
@@ -262,6 +293,7 @@
   eprint = {arXiv:2107.07086},
   publisher = {{arXiv}},
   doi = {10.48550/arXiv.2107.07086},
+  urldate = {2022-10-31},
   abstract = {Studying causal effects of continuous exposures is important for gaining a deeper understanding of many interventions, policies, or medications, yet researchers are often left with observational studies for doing so. In the observational setting, confounding is a barrier to estimation of causal effects. Weighting approaches seek to control for confounding by reweighting samples so that confounders are comparable across different values of the exposure, yet for continuous exposures, weighting methods are highly sensitive to model misspecification. In this paper we elucidate the key property that makes weights effective in estimating causal quantities involving continuous exposures. We show that to eliminate confounding, weights should make exposure and confounders independent on the weighted scale. We develop a measure that characterizes the degree to which a set of weights induces such independence. Further, we propose a new model-free method for weight estimation by optimizing our measure. We study the theoretical properties of our measure and our weights, and prove that our weights can explicitly mitigate exposure-confounder dependence. The empirical effectiveness of our approach is demonstrated in a suite of challenging numerical experiments, where we find that our weights are quite robust and work well under a broad range of settings.},
   archiveprefix = {arxiv},
   keywords = {Statistics - Methodology},
@@ -296,6 +328,7 @@
   publisher = {{Society for Industrial and Applied Mathematics}},
   issn = {0040-585X},
   doi = {10.1137/1119012},
+  urldate = {2022-11-29},
   file = {/home/ioan/Zotero/storage/ECNCYVRZ/Jurinskii - 1974 - Exponential Bounds for Large Deviations.pdf}
 }
 
@@ -309,6 +342,7 @@
   eprint = {arXiv:1910.11972},
   publisher = {{arXiv}},
   doi = {10.48550/arXiv.1910.11972},
+  urldate = {2022-10-31},
   abstract = {Many scientific questions require estimating the effects of continuous treatments. Outcome modeling and weighted regression based on the generalized propensity score are the most commonly used methods to evaluate continuous effects. However, these techniques may be sensitive to model misspecification, extreme weights or both. In this paper, we propose Kernel Optimal Orthogonality Weighting (KOOW), a convex optimization-based method, for estimating the effects of continuous treatments. KOOW finds weights that minimize the worst-case penalized functional covariance between the continuous treatment and the confounders. By minimizing this quantity, KOOW successfully provides weights that orthogonalize confounders and the continuous treatment, thus providing optimal covariate balance, while controlling for extreme weights. We valuate its comparative performance in a simulation study. Using data from the Women's Health Initiative observational study, we apply KOOW to evaluate the effect of red meat consumption on blood pressure.},
   archiveprefix = {arxiv},
   keywords = {Statistics - Applications,Statistics - Machine Learning,Statistics - Methodology},
@@ -328,6 +362,7 @@
   publisher = {{Institute of Mathematical Statistics}},
   issn = {0883-4237, 2168-8745},
   doi = {10.1214/07-STS227},
+  urldate = {2022-10-28},
   abstract = {When outcomes are missing for reasons beyond an investigator's control, there are two different ways to adjust a parameter estimate for covariates that may be related both to the outcome and to missingness. One approach is to model the relationships between the covariates and the outcome and use those relationships to predict the missing values. Another is to model the probabilities of missingness given the covariates and incorporate them into a weighted or stratified estimate. Doubly robust (DR) procedures apply both types of model simultaneously and produce a consistent estimate of the parameter if either of the two models has been correctly specified. In this article, we show that DR estimates can be constructed in many ways. We compare the performance of various DR and non-DR estimates of a population mean in a simulated example where both models are incorrect but neither is grossly misspecified. Methods that use inverse-probabilities as weights, whether they are DR or not, are sensitive to misspecification of the propensity model when some estimated propensities are small. Many DR methods perform better than simple inverse-probability weighting. None of the DR methods we tried, however, improved upon the performance of simple regression-based prediction of the missing values. This study does not represent every missing-data problem that will arise in practice. But it does demonstrate that, in at least some settings, two wrong models are not better than one.},
   keywords = {Causal inference,missing data,model-assisted survey estimation,propensity score,weighted estimating equations},
   file = {/home/ioan/Zotero/storage/E6G6EG89/Kang and Schafer - 2007 - Demystifying Double Robustness A Comparison of Al.pdf;/home/ioan/Zotero/storage/7A9R2XDH/07-STS227.html}
@@ -346,6 +381,7 @@
   pages = {1229--1245},
   issn = {1369-7412, 1467-9868},
   doi = {10.1111/rssb.12212},
+  urldate = {2022-12-22},
   abstract = {Continuous treatments (e.g., doses) arise often in practice, but many available causal effect estimators are limited by either requiring parametric models for the effect curve, or by not allowing doubly robust covariate adjustment. We develop a novel kernel smoothing approach that requires only mild smoothness assumptions on the effect curve, and still allows for misspecification of either the treatment density or outcome regression. We derive asymptotic properties and give a procedure for data-driven bandwidth selection. The methods are illustrated via simulation and in a study of the effect of nurse staffing on hospital readmissions penalties.},
   archiveprefix = {arxiv},
   keywords = {Statistics - Methodology},
@@ -361,6 +397,7 @@
   publisher = {{Springer International Publishing}},
   address = {{Cham}},
   doi = {10.1007/978-3-030-56402-5},
+  urldate = {2022-11-24},
   isbn = {978-3-030-56401-8 978-3-030-56402-5},
   langid = {english},
   keywords = {Brownian Motion,Central Limit Theorem,Integration Theory,Markov Chain,Martingales,Measure Theory,Percolation,Poisson Point Process,Statistical Physics,Stochastic Differential Equations,Stochastic Integration,Stochastic Processes},
@@ -379,6 +416,7 @@
   primaryclass = {math},
   issn = {0091-1798},
   doi = {10.1214/13-AOP892},
+  urldate = {2022-11-29},
   abstract = {This paper derives exponential concentration inequalities and polynomial moment inequalities for the spectral norm of a random matrix. The analysis requires a matrix extension of the scalar concentration theory developed by Sourav Chatterjee using Stein's method of exchangeable pairs. When applied to a sum of independent random matrices, this approach yields matrix generalizations of the classical inequalities due to Hoeffding, Bernstein, Khintchine and Rosenthal. The same technique delivers bounds for sums of dependent random matrices and more general matrix-valued functions of dependent random variables.},
   archiveprefix = {arxiv},
   keywords = {Mathematics - Probability},
@@ -391,6 +429,7 @@
   year = {2020},
   month = feb,
   journal = {arXiv e-prints},
+  urldate = {2022-10-31},
   abstract = {In observational studies, weighting methods that directly optimize the balance between treatment and covariates have received much attention lately; however these have mainly focused on binary treatments. Inspired by domain adaptation, we show that such methods can be actually reformulated as specific implementations of a discrepancy minimization problem aimed at tackling a shift of distribution from observational to interventional data. More precisely, we introduce a new framework, Covariate Balance via Discrepancy Minimization (CBDM), that provably encompasses most of the existing balancing weight methods and formally extends them to treatments of arbitrary types (e.g., continuous or multivariate). We establish theoretical guarantees for our framework that both offer generalizations of properties known when the treatment is binary, and give a better grasp on what hyperparameters to choose in non-binary settings. Based on such insights, we propose a particular implementation of CBDM for estimating dose-response curves and demonstrate through experiments its competitive performance relative to other existing approaches for continuous treatments.},
   keywords = {Mathematics - Statistics Theory,Statistics - Methodology},
   annotation = {ADS Bibcode: 2020arXiv200211276M},
@@ -406,6 +445,7 @@
   publisher = {{Springer International Publishing}},
   address = {{Cham}},
   doi = {10.1007/978-3-030-94785-9},
+  urldate = {2022-10-28},
   isbn = {978-3-030-94784-2 978-3-030-94785-9},
   langid = {english},
   keywords = {Convex Analysis,Convex Functions,Convex Sets,Generalized Differentiation,Locally Convex Topological Vector Spaces,Topological Vector Spaces,Variational Analysis,Variational Methods of Nonlinear Analysis},
@@ -423,6 +463,7 @@
   pages = {147--168},
   issn = {0304-4076},
   doi = {10.1016/S0304-4076(97)00011-0},
+  urldate = {2022-10-28},
   abstract = {This paper gives general conditions for convergence rates and asymptotic normality of series estimators of conditional expectations, and specializes these conditions to polynomial regression and regression splines. Both mean-square and uniform convergence rates are derived. Asymptotic normality is shown for nonlinear functionals of series estimators, covering many cases not previously treated. Also, a simple condition for n-consitency of a functional of a series estimator is given. The regularity conditions are straightforward to understand, and several examples are given to illustrate their application.},
   langid = {english},
   keywords = {Asymptotic normality,Convergence rates,Nonparametric estimation,Series estimation},
@@ -448,6 +489,7 @@
   pages = {287--298},
   issn = {0137-6934, 1730-6299},
   doi = {10.4064/-30-1-287-298},
+  urldate = {2022-12-19},
   abstract = {This paper concerns inequalities like TrA {$\leq$} TrB, where A and B are certain Hermitian complex matrices and Tr stands for the trace. In most cases A and B will be exponential or logarithmic expressions of some other matrices. Due to the interest of the author in quantum statistical mechanics, the possible applications of the trace inequalities will be commented from time to time. Several inequalities treated below have been established in the context of Hilbert space operators or operator algebras. Notwithstanding these extensions our discussion will be limited to matrices.},
   langid = {english},
   file = {/home/ioan/Zotero/storage/A62CFYP9/Petz - 1994 - A survey of certain trace inequalities.pdf}
@@ -460,6 +502,7 @@
   eprint = {j.ctt14bs1ff},
   eprinttype = {jstor},
   publisher = {{Princeton University Press}},
+  urldate = {2022-12-06},
   abstract = {Available for the first time in paperback, R. Tyrrell Rockafellar's classic study presents readers with a coherent branch of nonlinear mathematical analysis that is especially suited to the study of optimization problems. Rockafellar's theory differs from classical analysis in that differentiability assumptions are replaced by convexity assumptions. The topics treated in this volume include: systems of inequalities, the minimum or maximum of a convex function over a convex set, Lagrange multipliers, minimax theorems and duality, as well as basic results about the structure of convex sets and the continuity and differentiability of convex functions and saddle- functions.  This book has firmly established a new and vital area not only for pure mathematics but also for applications to economics and engineering. A sound knowledge of linear algebra and introductory real analysis should provide readers with sufficient background for this book. There is also a guide for the reader who may be using the book as an introduction, indicating which parts are essential and which may be skipped on a first reading.},
   isbn = {978-0-691-01586-6},
   file = {/home/ioan/Zotero/storage/2AIKSFLU/Rockafellar - 1970 - Convex Analysis.pdf}
@@ -478,6 +521,7 @@
   publisher = {{[Oxford University Press, Biometrika Trust]}},
   issn = {0006-3444},
   doi = {10.2307/2335942},
+  urldate = {2022-10-28},
   abstract = {The propensity score is the conditional probability of assignment to a particular treatment given a vector of observed covariates. Both large and small sample theory show that adjustment for the scalar propensity score is sufficient to remove bias due to all observed covariates. Applications include: (i) matched sampling on the univariate propensity score, which is a generalization of discriminant matching, (ii) multivariate adjustment by subclassification on the propensity score where the same subclasses are used to estimate treatment effects for all outcome variables and in all subpopulations, and (iii) visual representation of multivariate covariance adjustment by a two-dimensional plot.},
   file = {/home/ioan/Zotero/storage/4CHPRN4I/Rosenbaum and Rubin - 1983 - The Central Role of the Propensity Score in Observ.pdf;/home/ioan/Zotero/storage/H6FYUCVL/rosenbaum_1983.pdf}
 }
@@ -495,6 +539,7 @@
   publisher = {{Institute of Mathematical Statistics}},
   issn = {0090-5364, 2168-8966},
   doi = {10.1214/aos/1176344064},
+  urldate = {2022-11-24},
   abstract = {Causal effects are comparisons among values that would have been observed under all possible assignments of treatments to experimental units. In an experiment, one assignment of treatments is chosen and only the values under that assignment can be observed. Bayesian inference for causal effects follows from finding the predictive distribution of the values under the other assignments of treatments. This perspective makes clear the role of mechanisms that sample experimental units, assign treatments and record data. Unless these mechanisms are ignorable (known probabilistic functions of recorded values), the Bayesian must model them in the data analysis and, consequently, confront inferences for causal effects that are sensitive to the specification of the prior distribution of the data. Moreover, not all ignorable mechanisms can yield data from which inferences for causal effects are insensitive to prior specifications. Classical randomized designs stand out as especially appealing assignment mechanisms designed to make inference for causal effects straightforward by limiting the sensitivity of a valid Bayesian analysis.},
   keywords = {62A15,62B15,62C10,62F15,62K99,Bayesian,causality,experimentation,inference,missing data,Randomization},
   file = {/home/ioan/Zotero/storage/2IG93LT3/Rubin - 1978 - Bayesian Inference for Causal Effects The Role of.pdf;/home/ioan/Zotero/storage/QBFH5K5A/1176344064.html}
@@ -530,6 +575,7 @@
   pages = {343--354},
   issn = {1572-9125},
   doi = {10.1007/BF01934203},
+  urldate = {2022-12-20},
   abstract = {When a matrix is close to a matrix with a multiple eigenvalue, the arithmetic mean of a group of eigenvalues is a good approximation to this multiple eigenvalue. A theorem of Gershgorin type for means of eigenvalues is proved and applied as a perturbation theorem for a degenerate matrix.},
   langid = {english},
   keywords = {Assure,Computational Mathematic,Compute Base,Invariant Subspace,Singular Vector},
@@ -545,6 +591,7 @@
   volume = {6.2},
   pages = {583--603},
   publisher = {{University of California Press}},
+  urldate = {2022-12-21},
   file = {/home/ioan/Zotero/storage/5HRR6F5P/Stein - 1972 - A bound for the error in the normal approximation .pdf}
 }
 
@@ -570,6 +617,7 @@
   number = {arXiv:1501.01571},
   eprint = {arXiv:1501.01571},
   publisher = {{arXiv}},
+  urldate = {2022-10-28},
   abstract = {In recent years, random matrices have come to play a major role in computational mathematics, but most of the classical areas of random matrix theory remain the province of experts. Over the last decade, with the advent of matrix concentration inequalities, research has advanced to the point where we can conquer many (formerly) challenging problems with a page or two of arithmetic. The aim of this monograph is to describe the most successful methods from this area along with some interesting examples that these techniques can illuminate.},
   archiveprefix = {arxiv},
   langid = {english},
@@ -586,6 +634,7 @@
   number = {3},
   pages = {462--481},
   publisher = {{INFORMS}},
+  urldate = {2022-12-02},
   abstract = {Consider the problem of minimizing a strictly convex (possibly nondifferentiable and nonseparable) cost subject to linear constraints. We propose a dual coordinate ascent method for this problem that uses inexact line search and either essentially cyclic or Gauss-Southwell order of coordinate relaxation. We show, under very weak conditions, that this method generates a sequence of primal vectors converging to the optimal primal solution. Under an additional regularity assumption, and assuming that the effective domain of the cost function is polyhedral, we show that a related sequence of dual vectors converges in cost to the optimal cost. If the constraint set has an interior point in the effective domain of the cost function, then this sequence of dual vectors is bounded and each of its limit point(s) is an optimal dual solution. When the cost function is strongly convex, we show that the order of coordinate relaxation can become progressively more chaotic. These results significantly improve upon those obtained previously.},
   langid = {english},
   keywords = {convex program,coordinate ascent,dual functional,strict convexity},
@@ -601,6 +650,7 @@
   eprint = {arXiv:2001.06281},
   publisher = {{arXiv}},
   doi = {10.48550/arXiv.2001.06281},
+  urldate = {2022-10-29},
   abstract = {This paper introduces entropy balancing for continuous treatments (EBCT) by extending the original entropy balancing methodology of Hainm\textbackslash "uller (2012). In order to estimate balancing weights, the proposed approach solves a globally convex constrained optimization problem. EBCT weights reliably eradicate Pearson correlations between covariates and the continuous treatment variable. This is the case even when other methods based on the generalized propensity score tend to yield insufficient balance due to strong selection into different treatment intensities. Moreover, the optimization procedure is more successful in avoiding extreme weights attached to a single unit. Extensive Monte-Carlo simulations show that treatment effect estimates using EBCT display similar or lower bias and uniformly lower root mean squared error. These properties make EBCT an attractive method for the evaluation of continuous treatments.},
   archiveprefix = {arxiv},
   keywords = {Economics - Econometrics,Statistics - Methodology},
@@ -645,6 +695,7 @@
   eprint = {arXiv:2003.02938},
   publisher = {{arXiv}},
   doi = {10.48550/arXiv.2003.02938},
+  urldate = {2022-10-29},
   abstract = {Weighted estimators are commonly used for estimating exposure effects in observational settings to establish causal relations. These estimators have a long history of development when the exposure of interest is binary and where the weights are typically functions of an estimated propensity score. Recent developments in optimization-based estimators for constructing weights in binary exposure settings, such as those based on entropy balancing, have shown more promise in estimating treatment effects than those methods that focus on the direct estimation of the propensity score using likelihood-based methods. This paper explores recent developments of entropy balancing methods to continuous exposure settings and the estimation of population dose-response curves using nonparametric estimation combined with entropy balancing weights, focusing on factors that would be important to applied researchers in medical or health services research. The methods developed here are applied to data from a study assessing the effect of non-randomized components of an evidence-based substance use treatment program on emotional and substance use clinical outcomes.},
   archiveprefix = {arxiv},
   keywords = {Statistics - Methodology},
@@ -664,6 +715,7 @@
   publisher = {{[American Statistical Association, Taylor \& Francis, Ltd.]}},
   issn = {0003-1305},
   doi = {10.2307/2684093},
+  urldate = {2023-01-07},
   file = {/home/ioan/Zotero/storage/PN2TUDXL/Wagner - 1982 - Simpson's Paradox in Real Life.pdf}
 }
 
@@ -679,6 +731,7 @@
   pages = {asz050},
   issn = {0006-3444, 1464-3510},
   doi = {10.1093/biomet/asz050},
+  urldate = {2022-10-28},
   abstract = {Weighting methods are widely used to adjust for covariates in observational studies, sample surveys, and regression settings. In this paper, we study a class of recently proposed weighting methods which find the weights of minimum dispersion that approximately balance the covariates. We call these weights "minimal weights" and study them under a common optimization framework. The key observation is the connection between approximate covariate balance and shrinkage estimation of the propensity score. This connection leads to both theoretical and practical developments. From a theoretical standpoint, we characterize the asymptotic properties of minimal weights and show that, under standard smoothness conditions on the propensity score function, minimal weights are consistent estimates of the true inverse probability weights. Also, we show that the resulting weighting estimator is consistent, asymptotically normal, and semiparametrically efficient. From a practical standpoint, we present a finite sample oracle inequality that bounds the loss incurred by balancing more functions of the covariates than strictly needed. This inequality shows that minimal weights implicitly bound the number of active covariate balance constraints. We finally provide a tuning algorithm for choosing the degree of approximate balance in minimal weights. We conclude the paper with four empirical studies that suggest approximate balance is preferable to exact balance, especially when there is limited overlap in covariate distributions. In these studies, we show that the root mean squared error of the weighting estimator can be reduced by as much as a half with approximate balance.},
   archiveprefix = {arxiv},
   langid = {english},
@@ -695,6 +748,7 @@
   primaryclass = {math, stat},
   issn = {10170405},
   doi = {10.5705/ss.202020.0343},
+  urldate = {2022-10-28},
   abstract = {Matching methods are widely used for causal inference in observational studies. Among them, nearest neighbor matching is arguably the most popular. However, nearest neighbor matching does not generally yield an average treatment effect estimator that is \$\textbackslash sqrt\{n\}\$-consistent (Abadie and Imbens, 2006). Are matching methods not \$\textbackslash sqrt\{n\}\$-consistent in general? In this paper, we study a recent class of matching methods that use integer programming to directly target aggregate covariate balance as opposed to finding close neighbor matches. We show that under suitable conditions these methods can yield simple estimators that are \$\textbackslash sqrt\{n\}\$-consistent and asymptotically optimal.},
   archiveprefix = {arxiv},
   langid = {english},
@@ -714,6 +768,7 @@
   primaryclass = {physics, stat},
   issn = {0090-5364},
   doi = {10.1214/12-AOS1036},
+  urldate = {2022-12-23},
   abstract = {Community detection is a fundamental problem in network analysis, with applications in many diverse areas. The stochastic block model is a common tool for model-based community detection, and asymptotic tools for checking consistency of community detection under the block model have been recently developed. However, the block model is limited by its assumption that all nodes within a community are stochastically equivalent, and provides a poor fit to networks with hubs or highly varying node degrees within communities, which are common in practice. The degree-corrected stochastic block model was proposed to address this shortcoming and allows variation in node degrees within a community while preserving the overall block community structure. In this paper we establish general theory for checking consistency of community detection under the degree-corrected stochastic block model and compare several community detection criteria under both the standard and the degree-corrected models. We show which criteria are consistent under which models and constraints, as well as compare their relative performance in practice. We find that methods based on the degree-corrected block model, which includes the standard block model as a special case, are consistent under a wider class of models and that modularity-type methods require parameter constraints for consistency, whereas likelihood-based methods do not. On the other hand, in practice, the degree correction involves estimating many more parameters, and empirically we find it is only worth doing if the node degrees within communities are indeed highly variable. We illustrate the methods on simulated networks and on a network of political blogs.},
   archiveprefix = {arxiv},
   keywords = {Computer Science - Social and Information Networks,Mathematics - Statistics Theory,Physics - Physics and Society},
@@ -733,6 +788,7 @@
   pages = {20160010},
   issn = {2193-3685, 2193-3677},
   doi = {10.1515/jci-2016-0010},
+  urldate = {2022-12-23},
   abstract = {Covariate balance is a conventional key diagnostic for methods used estimating causal effects from observational studies. Recently, there is an emerging interest in directly incorporating covariate balance in the estimation. We study a recently proposed entropy maximization method called Entropy Balancing (EB), which exactly matches the covariate moments for the different experimental groups in its optimization problem. We show EB is doubly robust with respect to linear outcome regression and logistic propensity score regression, and it reaches the asymptotic semiparametric variance bound when both regressions are correctly specified. This is surprising to us because there is no attempt to model the outcome or the treatment assignment in the original proposal of EB. Our theoretical results and simulations suggest that EB is a very appealing alternative to the conventional weighting estimators that estimate the propensity score by maximum likelihood.},
   archiveprefix = {arxiv},
   keywords = {Statistics - Applications,Statistics - Methodology},
@@ -741,6 +797,7 @@
 
 @misc{zotero-327,
   title = {Definition of {{CONFOUND}}},
+  urldate = {2023-01-09},
   abstract = {to throw (a person) into confusion or perplexity; refute; to put to shame : discomfit\ldots{} See the full definition},
   howpublished = {https://www.merriam-webster.com/dictionary/confound},
   langid = {english},
@@ -765,6 +822,7 @@
   pages = {910--922},
   issn = {0162-1459, 1537-274X},
   doi = {10.1080/01621459.2015.1023805},
+  urldate = {2022-10-28},
   abstract = {Weighting methods that adjust for observed covariates, such as inverse probability weighting, are widely used for causal inference and estimation with incomplete outcome data. Part of the appeal of such methods is that one set of weights can be used to estimate a range of treatment effects based on different outcomes, or a variety of population means for several variables. However, this appeal can be diminished in practice by the instability of the estimated weights and by the difficulty of adequately adjusting for observed covariates in some settings. To address these limitations, this paper presents a new weighting method that finds the weights of minimum variance that adjust or balance the empirical distribution of the observed covariates up to levels prespecified by the researcher. This method allows the researcher to balance very precisely the means of the observed covariates and other features of their marginal and joint distributions, such as variances and correlations and also, for example, the quantiles of interactions of pairs and triples of observed covariates, thus balancing entire two- and three-way marginals. Since the weighting method is based on a well-defined convex optimization problem, duality theory provides insight into the behavior of the variance of the optimal weights in relation to the level of covariate balance adjustment, answering the question, how much does tightening a balance constraint increases the variance of the weights? Also, the weighting method runs in polynomial time so relatively large data sets can be handled quickly. An implementation of the method is provided in the new package sbw for R. This paper shows some theoretical properties of the resulting weights and illustrates their use by analyzing both a data set from the 2010 Chilean earthquake and a simulated example.},
   langid = {english},
   file = {/home/ioan/Zotero/storage/EI2GZH6U/Zubizarreta - 2015 - Stable Weights that Balance Covariates for Estimat.pdf}

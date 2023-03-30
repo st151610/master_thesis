@@ -235,7 +235,19 @@ d
   We don't transform the variable $w$, but shift to $d$ what prevents us from keeping $w$.
   Note, that the choice of
   \cite[Proof of Lemma~1]{Wang2019} leads to a mistake on page 21.
-  The mistake is most obvious in the second display, where the first implication follows from dividing by 0. I discussed this with the authors and proposed a version of Lemma\ref{matrix_notation} to solve the problem. I think it's best not to transform variables, because the mistake comes from (wrongly) calculating the convex conjugate of the (more complicated) transformed version of the objective function. The subsequent analysis even simplifies with my version.
+  The mistake is most obvious in the second display, where the first implication follows from dividing by 0.
+  I discussed this with the authors and proposed a version of Lemma\ref{matrix_notation} to solve the problem. I think it's best not to transform variables, because the mistake comes from (wrongly) calculating the convex conjugate of the (more complicated) transformed version of the objective function. The subsequent analysis even simplifies with my version.
+
+  I was surprised to find the (exact) same mistake in the earlier paper 
+  \cite[page 35 second display]{Chan2016}. 
+  There is no reference in
+  \cite[Proof of Lemma~1]{Wang2019} 
+  to
+  \cite{Chan2016}. Yet the formulation and the mistake are the same.
+  Did the authors of \cite{Wang2019} (inadvertently?) plagiarize
+  the mathematical analysis of 
+  \cite{Chan2016}
+  ?
 \end{remark}
 
 \begin{lemma}

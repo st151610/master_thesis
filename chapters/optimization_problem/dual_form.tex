@@ -1,0 +1,673 @@
+We connect Problem~\ref{bw:1:primal} to the theory of convex analysis by the following lemma.
+\begin{lemma}
+  \label{matrix_notation}
+  A matrix formulation of Problem~\ref{bw:1:primal} is 
+\begin{align}
+  \label{cv:ts:primal}
+  %%%% objective %%%%
+    &\underset{w \in \R^n}
+    {\mathrm{minimize}}
+    &&\qquad\qquad
+    \Phi(w)
+    &&&
+    \\
+    %%%% Ax >= b %%%%
+    \nonumber
+    &\mathrm{subject}\ \mathrm{to} 
+    &&\qquad\qquad
+    \mathbf{U}w
+    \ 
+    \ge
+    \ 
+    d
+    \,,
+    \\
+    \nonumber
+    &
+    &&\qquad\qquad
+    \mathbf{A}w
+    \ 
+    =
+    \ 
+    a
+    \,,
+\end{align}
+with objective function
+\begin{gather*}
+  \Phi
+  \ 
+  :
+  \ 
+  \R^n
+  \to
+  \ 
+  \overline{\R}
+  \,
+  ,
+  \qquad
+  [w_1,\ldots,w_n]^\top
+  \ 
+  \mapsto
+  \ 
+  \sum_{i=1}^n \varphi(w_i)
+  \,,
+\end{gather*}
+inequality matrix and vector
+\begin{alignat*}{2}
+    \mathbf{U}
+    &
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      \mathbf{I}_n
+      \\
+      \pm\,\mathbf{B}(\mathbf{X})
+    \end{bmatrix}
+    \in
+    \R^{(n+2\cdot\#B)\times n}
+        \qquad
+    &&
+d
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      0_n
+      \\
+      -N\cdot\delta 
+      \ 
+      \pm\ 
+      \sum_{i = 1}^{N} B(X_i)
+    \end{bmatrix}
+    \in
+    \R^{n+2\cdot\# B}
+    \,,
+    \intertext{and equality matrix and vector}
+    \mathbf{A}
+    &
+    \ 
+    :=
+    \ 
+      \mathrm{1}_n
+      ^\top
+      \in\R^{1\times n}
+      \qquad
+    &&
+    a
+  \ 
+    :=
+    \ 
+    N
+    \in\mathbb{N}
+    \,.
+\end{alignat*}
+\end{lemma}
+
+\begin{proof}
+  Recall that the box constraints of Problem~\ref{bw:1:primal} are
+  \begin{gather*}
+        \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{n} 
+      w_i
+      B_k(X_i)
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    \qquad
+    \text{for all}\ 
+    k\in \left\{ 1,\ldots,\# B \right\}
+    \,.
+  \end{gather*}
+  Put differently, it holds both
+  \begin{align*}
+    -
+      \sum_{i = 1}^{n} 
+      w_i
+      B_k(X_i)
+    \ge 
+    -
+    N
+    \delta_k
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \quad 
+    \text{and}
+      \quad
+      \sum_{i = 1}^{n} 
+      w_i
+      B_k(X_i)
+    \ge 
+    -
+    N
+    \delta_k
+      +
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+  \end{align*}
+  for all 
+  $
+    k\in \left\{ 1,\ldots,\# B \right\}
+  $. In matrix notation this is 
+  \begin{gather*}
+    \pm\mathbf{B}(\mathbf{X})w
+    \ 
+    \ge
+    \ 
+    [d_{n+1},\ldots, d_{n+2\cdot\# B}]^\top
+    \,.
+  \end{gather*}
+  Proving the rest of the statements is straightforward. We omit the details.
+\end{proof}
+\begin{remark}
+  The inequality constraints of
+  Lemma~\ref{matrix_notation} differ from its counterpart
+  \cite[Proof of Lemma~1]{Wang2019}.
+  We don't transform the variable $w$, but shift to $d$ what prevents us from keeping $w$.
+  Note, that the choice of
+  \cite[Proof of Lemma~1]{Wang2019} leads to a mistake on page 21.
+  The mistake is most obvious in the second display, where the first implication follows from dividing by 0.
+  I discussed this with the authors and proposed a version of Lemma\ref{matrix_notation} to solve the problem. I think it's best not to transform variables, because the mistake comes from (wrongly) calculating the convex conjugate of the (more complicated) transformed version of the objective function. The subsequent analysis even simplifies with my version.
+
+  I was surprised to find the (exact) same mistake in the earlier paper 
+  \cite[page 35 second display]{Chan2016}. 
+  There is no reference in
+  \cite[Proof of Lemma~1]{Wang2019} 
+  to
+  \cite{Chan2016}. Yet the formulation and the mistake are the same.
+  Did the authors of \cite{Wang2019} (inadvertently?) plagiarize
+  the mathematical analysis of 
+  \cite{Chan2016}
+  ?
+\end{remark}
+
+We are now ready 
+to apply Theorem~\ref{cv:ts:th}
+to Problem~\ref{bw:1:primal}. 
+\begin{lemma}
+  Consider the optimization problem
+\begin{align}
+  \label{9993}
+  \begin{split}
+  \underset
+  {\begin{smallmatrix}
+\rho\,,\, \lambda^+,\,\lambda^-\ge 0 \\
+\lambda_0\in\R
+  \end{smallmatrix}}
+  {
+    \mathrm{maximize}
+  }
+  \quad
+  &
+  -
+\sum_{i=1} 
+  ^n
+    \,
+  \varphi^*
+  \!
+  \left( 
+    \rho_i
+    +
+\lambda_0
++
+\inner
+{B(X_i)}
+{
+\lambda^+
+-
+\lambda^-
+}
+  \right)
+  \\
+  &
++
+\ 
+\sum_{i=1}^{N} 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{
+\lambda^+
+-
+\lambda^-
+}
+  \right)
+  \,
+  \ 
+-
+\ 
+\inner
+{\delta}
+{
+\lambda^+
++
+\lambda^-
+}
+  \,.
+  \end{split}
+\end{align}
+If Assumption~\ref{asu:objective_f} holds true 
+and there exists an optimal solution 
+$
+(\rho^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger},\lambda_0^\dagger)
+$
+then the unique optimal solutions to Problem~\ref{bw:1:primal} are 
+\begin{gather*}
+  w^\dagger_i
+  \ 
+  :=
+  \ 
+  (
+  \varphi^{'}
+  )^{-1}
+  \left(
+    \rho^\dagger_i
+  \ 
+    +
+  \ 
+\lambda_0^\dagger
+  \ 
++
+  \ 
+\inner
+{B(X_i)}
+{
+  \lambda^{+,\dagger}
+-
+\lambda^{-,\dagger}
+}
+  \right)
+  \qquad
+  \text{for all}\ 
+  i\in
+  \left\{ 1,\ldots,N \right\}
+  \,.
+\end{gather*}
+\end{lemma}
+\begin{proof}
+  By Lemma~\ref{matrix_notation},
+  Problem~\ref{bw:1:primal} has the form required in Theorem~\ref{cv:ts:th}.
+  By Assumption~\ref{asu:objective_f} and Lemma~\ref{9991} the objective function $\Phi$ of Problem~\ref{bw:1:primal}
+  satisfies Assumption~\ref{cv:ts:asu}.
+  Thus we can apply
+  Theorem~\ref{cv:ts:th} to Problem~\ref{bw:1:primal}.
+  Calculations yield the result.
+\end{proof}
+
+The next Theorem aims at simplifying this result. 
+
+\begin{ftheorem}
+  \label{dual_solution_th}
+  Consider the optimization problem
+\begin{align*}
+  \underset
+  {\begin{smallmatrix}
+      \lambda\in\R^{\#\mathfrak{B}}
+      \\
+\rho\ge 0 \\
+\lambda_0\in\R
+  \end{smallmatrix}}
+  {
+    \mathrm{minimize}
+  }
+  \quad
+  &
+  \frac{1}{N}
+\sum_{i=1} 
+  ^N
+    T_i
+    \cdot
+  \varphi^*
+  \!
+  \left( 
+    \rho_i
+    +
+\lambda_0
++
+\inner
+{B(X_i)}
+{
+\lambda
+}
+  \right)
+  \ 
+  -
+  \ 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{
+\lambda
+}
+  \right)
+  \
+  \ 
++
+\ 
+\inner
+{\delta}
+{
+  |\lambda|
+}
+  \,.
+\end{align*}
+If Assumption~\ref{asu:objective_f} holds true 
+and there exists an optimal solution 
+$
+(\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+$
+then the unique optimal solutions to Problem~\ref{bw:1:primal} are 
+\begin{gather*}
+  w^\dagger_i
+  \ 
+  :=
+  \ 
+  (
+  \varphi^{'}
+  )^{-1}
+  \left(
+    \rho^\dagger_i
+  \ 
+    +
+  \ 
+\lambda_0^\dagger
+  \ 
++
+  \ 
+\inner
+{B(X_i)}
+{
+\lambda^{\dagger}
+}
+  \right)
+  \qquad
+  \text{for all}\ 
+  i\in
+  \left\{ 1,\ldots,N \right\}
+  \,.
+\end{gather*}
+\end{ftheorem}
+
+\begin{proof}
+  Assume that
+$
+  (\rho^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger},\lambda_0^\dagger)
+$
+is an optimal solution to Problem~\ref{9993}.
+We write
+\begin{align*}
+  G
+  (\rho,\lambda^+,\lambda^-,\lambda_0)
+  &
+  \ 
+  :=
+  \ 
+ -
+\sum_{i=1} 
+  ^n
+    \,
+  \varphi^*
+  \!
+  \left( 
+    \rho_i
+    +
+\lambda_0
++
+\inner
+{B(X_i)}
+{
+\lambda^+
+-
+\lambda^-
+}
+  \right)
+  \\
+  &
+  \qquad
++
+\ 
+\sum_{i=1}^{N} 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{
+\lambda^+
+-
+\lambda^-
+}
+  \right)
+  \,
+  \ 
+-
+\ 
+\inner
+{\delta}
+{
+\lambda^+
++
+\lambda^-
+}
+  \,.
+\end{align*}
+ To eliminate the remaining constraints, 
+  we paraphrase \cite[pages~19-20]{Wang2019}.
+  We show 
+  for all $i \in \left\{ 1,\ldots,\#\mathfrak{B} \right\}$
+\begin{alignat}{2}
+  \notag
+  \text{either}
+  &
+  &&
+  \qquad
+  \lambda_i^{+,\dagger} > 0
+  \\
+  \label{9992}
+  \text{or}
+  &
+  &&
+  \qquad
+  \lambda_i^{-,\dagger} > 0
+  \,.
+\end{alignat}
+Assume towards a contradiction that 
+there exists
+$i \in \left\{ 1,\ldots,N \right\}$
+such that
+$
+  \lambda_i^{+,\dagger} > 0
+$
+and
+$
+  \lambda_i^{-,\dagger} > 0
+$ 
+Consider
+  \begin{align*}
+    \tilde{\lambda}^{+,\dagger}
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      \ 
+      \lambda_1^{+,\dagger}
+      \ldots,
+      \ 
+      \lambda_i^{+,\dagger}
+      \!
+      \ 
+      -
+      \ 
+      (
+      \lambda_i^{+,\dagger}
+      \!
+      \land
+      \lambda_i^{-,\dagger}
+      )\,,
+      \ 
+      \ldots,
+      \lambda_{\#\mathfrak{B}}^{+,\dagger}
+    \end{bmatrix}
+    ^\top
+    \intertext{and}
+    \tilde{\lambda}^{-,\dagger}
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      \ 
+      \lambda_1^{-,\dagger}
+      \ldots,
+      \ 
+      \lambda_i^{-,\dagger}
+      \!
+      \ 
+      -
+      \ 
+      (
+      \lambda_i^{+,\dagger}
+      \!
+      \land
+      \lambda_i^{-,\dagger}
+      )\,,
+      \ 
+      \ldots,
+      \lambda_{\#\mathfrak{B}}^{-,\dagger}
+    \end{bmatrix}
+    ^\top
+    \,.
+  \end{align*}
+  Since 
+  $
+      \lambda_i^{\pm,\dagger}
+      \!
+      \ 
+      -
+      \ 
+      (
+      \lambda_i^{+,\dagger}
+      \!
+      \land
+      \lambda_i^{-,\dagger}
+      )
+      \ge 
+      0
+  $,
+  the perturbed vectors $\tilde{\lambda}^{\pm,\dagger}$ are  in the domain of the 
+  optimization problem.
+  But 
+  \begin{align*}
+  G
+  (\rho^\dagger,\tilde{\lambda}^{+,\dagger},\tilde{\lambda}{-,\dagger},\lambda_0^\dagger)
+  \ 
+  -
+  \ 
+  G
+  (\rho^\dagger,\lambda^{+,\dagger},\lambda{-,\dagger},\lambda_0^\dagger)
+  \ 
+  =
+  \ 
+  2
+  \cdot
+  \delta_i
+  \cdot
+      (
+      \lambda_i^{+,\dagger}
+      \!
+      \land
+      \lambda_i^{-,\dagger}
+      )
+  \ 
+  >
+  \ 
+  0
+  \,,
+  \end{align*}
+  which contradicts the optimality of
+$
+  (\rho^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger},\lambda_0^\dagger)
+$.
+It follows \eqref{9992}.
+But then 
+$
+\lambda^{\pm,\dagger}_i
+\ge 0
+$
+collapses to
+$
+\lambda_i^\dagger\in \R
+$ 
+for all
+$i\in \left\{ 0,\ldots,\#\mathfrak{B} \right\}$, that is,
+$ \lambda_i^\dagger=\lambda_i^{+,\dagger}\!-\lambda_i^{-,\dagger} $.
+Note that
+$ |\lambda_i^\dagger|=\lambda_i^{+,\dagger}\!+\lambda_i^{-,\dagger} $.
+Thus, we can extend the domain of Problem~\ref{9993} to $\lambda\in\R^{\#\mathfrak{B}}$ and update the objective function in the following way
+(without changing the optimal solution).
+\begin{align*}
+  G
+  (\rho,\lambda,\lambda_0)
+  &
+  \ 
+  :=
+  \ 
+ -
+\sum_{i=1} 
+  ^n
+    \,
+  \varphi^*
+  \!
+  \left( 
+    \rho_i
+    +
+\lambda_0
++
+\inner
+{B(X_i)}
+{
+\lambda
+}
+  \right)
+  \\
+  &
+  \qquad
++
+\ 
+\sum_{i=1}^{N} 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{
+\lambda
+}
+  \right)
+  \,
+  \ 
+-
+\ 
+\inner
+{\delta}
+{
+  |\lambda|
+}
+  \,.
+\end{align*}
+Multiplying $G$ with $-1/N$ doesn't change the solution either
+(if we search instead for a minimum).
+Finally, note that we can use the notation with $T_i$ instead of $n$.
+\end{proof}

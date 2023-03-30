@@ -1205,6 +1205,10 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
+INPUT ./chapters/optimization_problem/dual_form.tex
+INPUT chapters/optimization_problem/dual_form.tex
+INPUT ./chapters/optimization_problem/dual_form.tex
+INPUT chapters/optimization_problem/dual_form.tex
 INPUT ./final_chapters/ebw:dual_formulation.tex
 INPUT final_chapters/ebw:dual_formulation.tex
 INPUT ./final_chapters/ebw:dual_formulation.tex
@@ -1265,6 +1269,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb
