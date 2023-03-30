@@ -41,8 +41,59 @@
   \end{itemize}
 \end{assumption}
 
-Next we give a standard example for a propensity score model
+Next we show two parametric propensity score models and that meet the assumptions.
+\begin{example}
+  \emph{(logit model)}
+  We assume that there exists $(\beta_0,\beta)\in\R^{d+1}$ such that
+  \begin{gather*}
+    \pi(x)
+    \ 
+    =
+    \ 
+    \frac{1}
+    {1
+      +
+      \exp(-\beta_0-\inner{x}{\beta})
+    }
+    \qquad
+    \text{for all}
+    \ 
+    x\in\R^d
+    \,.
+  \end{gather*}
+  Clearly, the logit model satisfies Assumption~\ref{asu:ps}.
+\end{example}
 
 \begin{example}
-  Logistic regression
+  \emph{(probit model)}
+  We assume that there exists $\gamma\in\R^d$ such that
+  \begin{gather*}
+    \pi(x)
+    \ 
+    =
+    \ 
+    \Phi(\inner{x}{\gamma})
+    \qquad
+    \text{for all}
+    \ 
+    x\in\R^d
+    \,,
+  \end{gather*}
+  where $\Phi$ is the distribution function of the standard normal 
+  distribution (please do not confuse with the objective function of Problem~\ref{bw:1:primal}), that is
+  \begin{gather*}
+    \Phi(x)
+    :=
+    \frac{1}{\sqrt{2\pi}}
+    \int_{-\infty}
+    ^x
+    \exp
+    \left( 
+      -\frac{s^2}{2}
+    \right)
+    \,
+    ds
+    \,.
+  \end{gather*}
+  It is readily clear that the probit model also satisfies Assumption~\ref{asu:ps}.
 \end{example}

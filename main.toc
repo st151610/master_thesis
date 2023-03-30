@@ -1,6 +1,8 @@
 \contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
 \contentsline {chapter}{\numberline {2}The Optimization Problem behind the Weights}{9}{chapter.2}%
-\contentsline {subsection}{\numberline {2.0.1}Basis Functions}{14}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.1}Objective Function}{11}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.2}Propensity Score Function}{14}{subsection.2.0.2}%
+\contentsline {subsection}{\numberline {2.0.3}Basis Functions}{15}{subsection.2.0.3}%
 \contentsline {chapter}{\numberline {3}Asymptotic Analysis}{27}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Consistency of Optimal Solutions}{27}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Estimate of an Oracle Parameter by the Dual}{27}{subsection.3.1.1}%
