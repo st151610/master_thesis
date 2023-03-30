@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1680174858 "main.aux" "main.bbl" "main" 1680175142
+["bibtex main"] 1680189345 "main.aux" "main.bbl" "main" 1680189351
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1680169879 71957 57509d335a9c82c5f741f125573ac3fe ""
-  "main.aux" 1680175141 23890 f4db4b70e1725df965d9b8e8cbb163ca "pdflatex"
+  "main.aux" 1680189350 23738 dcb5dd1706729881ae3f346e777de8c4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1680175135 "main.tex" "main.pdf" "main" 1680175142
+["pdflatex"] 1680189345 "main.tex" "main.pdf" "main" 1680189351
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -230,21 +230,21 @@
   "chapters/optimization_problem/ass_basis_f.tex" 1680166820 7957 4a357546cfeb6df7dce9aa07ae4d8932 ""
   "chapters/optimization_problem/ass_objective_f.tex" 1680171662 5469 a95e7143ddca62fd8e71032ca98ab6c9 ""
   "chapters/optimization_problem/ass_ps.tex" 1680168937 2022 40a1b06a4327fe36e7ac19e59cb4b012 ""
-  "chapters/optimization_problem/dual_form.tex" 1680175135 10242 efa11fb57f7a8153be6695050550762d ""
+  "chapters/optimization_problem/dual_form.tex" 1680184725 10283 5f4e6f6f23d208cd67de48c2446e8e46 ""
   "chapters/optimization_problem/ex_objective_f.tex" 1679676488 1916 51d2300d3acfbb81076095a99b089b75 ""
-  "chapters/optimization_problem/main.tex" 1680171151 1331 86af302502b21ed2896f0c8767197494 ""
+  "chapters/optimization_problem/main.tex" 1680184257 1464 86471b1e16accf0f0c7779ea13211ced ""
   "chapters/optimization_problem/primal_problem.tex" 1679581648 4107 ec10a148e6d49d4ec776246b0d17f0d1 ""
+  "chapters/optimization_problem/weights_function.tex" 1680189337 4666 9032f9b13fe6c422093193efd5b685ec ""
   "final_chapters/aa:dual.tex" 1679725469 22682 d9e3e1b8876184e0731c5be5256f3429 ""
   "final_chapters/aa:mean.tex" 1679489813 37402 5a176fb16ed955d13aefb61a474dc9c4 ""
   "final_chapters/aa:tools.tex" 1679497839 21654 0b834579fce5891843f1048eb4e5df79 ""
   "final_chapters/aa:weights.tex" 1679386332 6322 20febbf23936a9a4361144dda77c5bfe ""
-  "final_chapters/ebw:dual_formulation.tex" 1680170256 26360 c60004aeabea26e4acca52d0a9d2c861 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1680175141 23890 f4db4b70e1725df965d9b8e8cbb163ca "pdflatex"
-  "main.bbl" 1680174859 3463 80a21f422a7e59291a740270462a96f3 "bibtex main"
+  "main.aux" 1680189350 23738 dcb5dd1706729881ae3f346e777de8c4 "pdflatex"
+  "main.bbl" 1680189345 3463 80a21f422a7e59291a740270462a96f3 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
-  "main.tex" 1679576650 10647 ee8656f54d8f4b336516d92f03d31625 ""
-  "main.toc" 1680175141 1428 f06376a489ce7e6e238ef8fa17abba95 "pdflatex"
+  "main.tex" 1680184139 10648 cc03ef769d6eef8b0ea0ad4910d2bc3f ""
+  "main.toc" 1680189350 1515 2f02f9ada877d3b1a1bb3cbd50fd44a0 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

@@ -1,0 +1,337 @@
+\begin{assumption}
+  \label{asu:existence_sol}
+  There exists $\underline{N}\in\mathbb{N}$ such that 
+  for all $N\ge \underline{N}$ and for all data sets $D_N$
+  an optimal solution
+  $(\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)$
+  to Problem~\ref{dual} exists in a (compact) parameter space 
+  $\Theta_N
+  \subset
+  \R^n_{\ge 0}
+  \times
+  \R^{\#\mathfrak{B}}
+  \times
+  \R
+  $, containing the origin, with
+  $\mathrm{diam}\,\Theta_N<\infty$.
+\end{assumption}
+\begin{definition}
+  \label{def:weights_function}
+  We define the weights function to be
+\begin{align*}
+  w
+  \ 
+  \colon
+  \mathcal{X}
+  \,
+  \times
+  \,
+  \R^n_{\ge 0}
+  \,
+  \times
+  \,
+  \R^{\#\mathfrak{B}}
+  \,
+  \times
+  \,
+  \R
+  &
+  \ 
+  \to
+  \ 
+  \R^n
+  \\
+  \left( 
+  x
+  ,
+  \rho
+  ,
+  \lambda
+  ,
+  \lambda_0
+  \right)
+  &
+  \ 
+  \mapsto
+  \ 
+  \left[ 
+    (
+    \varphi^{'}
+    )^{-1}
+    \left( 
+     \rho_i 
+     +
+      \inner{B(x)}{\lambda}
+      +
+      \lambda_0
+    \right)
+  \right]_{i\in \left\{ 1, \ldots,n \right\}}
+    \,.
+\end{align*}
+\end{definition}
+\begin{lemma}
+  \label{weights_l_inf}
+  Let Assumption~\ref{asu:existence_sol}, 
+  Assumption~\ref{asu:basis},
+  and Assumption~\ref{asu:objective_f} hold true.
+  Then it holds 
+  \begin{gather*}
+  w_i(X,\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+  \ 
+  \in
+  \ 
+  L^\infty(\P)
+  \qquad
+  \text{for all}
+  \ 
+  i\in \left\{ 1,\ldots,n \right\}
+  \ 
+  \text{
+    and
+  for all 
+  }\ 
+  N\ge \underline{N}
+  \,.
+  \end{gather*}
+\end{lemma}
+\begin{proof}
+  Let $N\ge \underline{N}$.
+  By Assumption~\ref{asu:basis} it holds 
+  $
+    \text{for all}\ 
+  $ 
+  \begin{gather}
+    \label{3967}
+    \left| 
+     \rho_i 
+     +
+      \inner{B(x)}{\lambda}
+      +
+      \lambda_0
+    \right|
+    \ 
+    \lesssim
+    \ 
+    \norm{(\rho,\lambda,\lambda_0)}_2
+    \,.
+  \end{gather}
+  $
+    \text{for all}
+    \ 
+    x\in\mathcal{X}
+    \
+    \text{and for all}\ 
+    (\rho,\lambda,\lambda_0)
+    \in
+  \R^n_{\ge 0}
+  \times
+  \R^{\#\mathfrak{B}}
+  \times
+  \R
+  $.
+  By Assumption~\ref{asu:existence_sol}, 
+  there exists a (compact) parameter space
+  $\Theta_N$ around the origin, with $\mathrm{diam}\,  \Theta_N<\infty$, 
+  such that for all data sets $D_N$ it holds  $(\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)\in\Theta_N$.
+  By Assumption~\ref{asu:objective_f}, $(\varphi^{'})^{-1}$ is non-decreasing and continuous. Thus
+    by \eqref{3967} it holds
+  \begin{align*}
+    \left| 
+  w_i(x,\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+    \right|
+    \ 
+    \lesssim
+    \ 
+    \left| 
+    (\varphi^{'})^{-1}
+    \left( 
+      \,
+      -
+      \mathrm{diam}\,\Theta_N
+    \right)
+    \right|
+    \ 
+    +
+    \ 
+    \left| 
+    (\varphi^{'})^{-1}
+    \left( 
+      \,
+      \mathrm{diam}\,\Theta_N
+    \right)
+    \right|
+    \ 
+    \ 
+    <
+    \ 
+    \infty
+  \end{align*}
+  for all $x\in\mathcal{X}$
+  and all $i\in \left\{ 1,\ldots,n \right\}$
+  .
+\end{proof}
+\begin{lemma}
+  \label{w.Z=0}
+  Let Assumption~\ref{aa:assumption:2} and Assumption~\ref{aa:assumption:3} hold true.
+  Furthermore, 
+  let
+  $N\ge\underline{N}$, and
+  let
+  $Z\in L^1(\P)$
+  be a random variable that is independent of $D_N$ 
+  with
+  $
+\E
+\left[
+  Z
+  \,
+  |
+  \, 
+  X
+\right]
+= 0
+  $
+  almost surely.
+  It holds
+  \begin{gather*}
+  \E
+  \left[
+  w_i(X,\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+  \cdot Z
+  \right]
+  =0
+  \qquad
+  \text{for all}
+  \ 
+  i\in \left\{ 1,\ldots,n \right\}
+  \,.
+  \end{gather*}
+\end{lemma}
+\begin{proof}
+  Let
+  $N\ge\underline{N}$.
+  We write
+  \begin{gather*}
+  w_i(X,\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+  \ 
+  =
+  \ 
+  w^\dagger(X)
+  \end{gather*}
+  and ignore the index $i$.
+  By Lemma~\ref{weights_l_inf} and 
+  $Z\in L^1(\P)$
+  it holds
+  \begin{gather}
+    \label{9876}
+    \norm{
+  w^\dagger(X)\cdot Z
+    }_{L^1(\P)}
+    \ 
+  \le
+    \ 
+  \norm{w^\dagger(X)}_{L^\infty(\P)}
+  \norm{Z}_{L^1(\P)}
+  \ 
+  <
+  \ 
+  \infty
+  \,.
+  \end{gather}
+  By 
+  \eqref{9876},
+  $Z\perp D_N$
+  and
+  $
+\E
+\left[
+  Z
+  \,
+  |
+  \, 
+  X
+\right]
+= 0
+  $
+  almost surely
+  it holds 
+  \begin{align*}
+    \E
+  \left[
+  w^\dagger(X)
+  \cdot
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+  &
+  \ 
+  =
+  \ 
+  w^\dagger(X)
+  \cdot
+  \E
+  \left[
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+  \\
+  &
+  \ 
+  =
+  \ 
+  w^\dagger(X)
+  \cdot
+  \E
+  \left[
+  Z
+  \,
+  |
+  \,
+  X
+  \right]
+  \
+  =
+  \ 
+  0
+  \qquad
+  \text{almost surely.}
+  \end{align*}
+  Thus
+  \begin{gather*}
+    \E
+    \left[
+  w^\dagger(X)
+  \cdot
+  Z
+  \,
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+ \E
+  \left[
+  w^\dagger(X)
+  \cdot
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+    \right]
+    \ 
+    =
+    \ 
+    0
+    \,.
+     \end{gather*}
+\end{proof}
+

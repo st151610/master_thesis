@@ -1209,10 +1209,10 @@ INPUT ./chapters/optimization_problem/dual_form.tex
 INPUT chapters/optimization_problem/dual_form.tex
 INPUT ./chapters/optimization_problem/dual_form.tex
 INPUT chapters/optimization_problem/dual_form.tex
-INPUT ./final_chapters/ebw:dual_formulation.tex
-INPUT final_chapters/ebw:dual_formulation.tex
-INPUT ./final_chapters/ebw:dual_formulation.tex
-INPUT final_chapters/ebw:dual_formulation.tex
+INPUT ./chapters/optimization_problem/weights_function.tex
+INPUT chapters/optimization_problem/weights_function.tex
+INPUT ./chapters/optimization_problem/weights_function.tex
+INPUT chapters/optimization_problem/weights_function.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT ./final_chapters/aa:dual.tex
 INPUT final_chapters/aa:dual.tex
