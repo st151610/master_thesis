@@ -26,28 +26,74 @@ and write
   \mathfrak{B}
   $
   satisfies
-  \begin{itemize}
+  \begin{enumerate}[label=(\roman*)]
     \item
       $\norm{B(x)}_2\lesssim 1$ for all $x\in \mathcal{X}$.
     \item
-      For all continuous functions $f\colon \R^d\to \R$ there exists a random vector
-      $\lambda^*_{f}\in\R^{\#\mathfrak{B}}$ such that
-      for all $i\in \left\{ 1,\ldots, N \right\}$ it holds
-      \begin{gather*}
+      There exist random vectors
+      $
+      \lambda^*_{\varphi^{'}\circ\, 1/\pi}
+      $
+      and
+      $
+      \lambda^*_{F_{Y(1)(z|\cdot)}}
+      $,
+      for all $z\in\R$,
+      with values in $\R^{\#\mathfrak{B}}$
+      such that
+      \begin{align}
+        \label{asu:basis:ii:1}
+        \frac{1}{N}
+        \sum_{i=1}^{N} 
         \left| 
-        \inner{B(X_i)}{\lambda^*_f}
+        \inner{B(X_i)}
+        {
+      \lambda^*_{\varphi^{'}\circ\, 1/\pi}
+      }
         -
-        f(X_i)
+        \varphi^{'}\left( \frac{1}{\pi(X_i)} \right)
         \right|
+        &
+        \ 
+        \overset{\P}
+        {
         \to 
+        }
+        \ 
+        0
+        \qquad
+        \text{for}
+        \ 
+        N\to\infty
+        \,,
+        \intertext{and}
+        \label{asu:basis:ii:2}
+        \sqrt{N}
+        \max_{i\in \left\{ 1,\ldots,N \right\}}
+        \sup_{z\in\R}
+        \left| 
+        \inner{B(X_i)}
+        {
+      \lambda^*_{F_{Y(1)}(z|\cdot)}
+      }
+        -
+        F_{Y(1)}(z|X_i)
+        \right|
+        &
+        \ 
+        \overset{\P}
+        {
+        \to 
+        }
+        \ 
         0
         \qquad
         \text{for}
         \ 
         N\to\infty
         \,.
-      \end{gather*}
-  \end{itemize}
+      \end{align}
+    \end{enumerate}
 \end{assumption}
 
 Next, we give some examples. 
@@ -149,7 +195,7 @@ Since $B_i(X_i)>0$, it holds
   \left\{ 1,\ldots,N \right\}
   \,.
 \end{align}
-We check the first condition of Assumption~\ref{asu:basis}. 
+We check \textit{(i)} in Assumption~\ref{asu:basis}. 
 Since 
 \begin{gather*}
 B_k(x)
@@ -192,16 +238,27 @@ x\in\R^d
 \,
 \,.
 \end{gather*}
-To verify the second condition of Assumption~\ref{asu:basis} 
-let
-$f$ be a continuous function
-and consider
+Next we check \eqref{asu:basis:ii:1} in \textit{(ii)} in Assumption~\ref{asu:basis}.
+To this end we consider
 \begin{gather*}
-  \lambda^*_f
+  \lambda^*_{\varphi^{'}\circ\,1/\pi}
   \ 
   :=
   \ 
-  [f(X_1),\ldots,f(X_N)]^\top
+  \left[ 
+    \varphi^{'}
+    \left( 
+      \frac{1}{\pi(X_1)}
+    \right)
+    ,
+    \ldots
+    ,
+    \varphi^{'}
+    \left( 
+      \frac{1}{\pi(X_N)}
+    \right)
+  \right]
+  ^\top
   \,.
 \end{gather*}
 Since $f$ is continuous and the $X_k$ are random vectors,
@@ -209,35 +266,61 @@ $\lambda^*_f$ is also a random vector.
 It follows 
 \begin{align*}
   &
+  \frac{1}{N}
+  \sum_{i=1}^{N} 
         \left| 
-        \inner{B(X_i)}{\lambda^*_f}
+        \inner{B(X_i)}
+        {
+  \lambda^*_{\varphi^{'}\circ\,1/\pi}
+      }
         -
-        f(X_i)
+    \varphi^{'}
+    \left( 
+      \frac{1}{\pi(X_i)}
+    \right)
         \right|
         \\
   &
   \ 
         =
   \ 
+  \frac{1}{N}
+  \sum_{i=1}^{N} 
         \left| 
         \sum_{k=1}^{N} 
         B_k(X_i)
         \cdot
-        f(X_k)
+    \varphi^{'}
+    \left( 
+      \frac{1}{\pi(X_k)}
+    \right)
         -
-        f(X_i)
+    \varphi^{'}
+    \left( 
+      \frac{1}{\pi(X_i)}
+    \right)
         \right|
-        \ 
+        \\
+  &
+  \ 
         =
-        \ 
+  \ 
+  \frac{1}{N}
+  \sum_{i=1}^{N} 
         \left| 
         \sum_{k=1}^{N} 
         B_k(X_i)
         \cdot
         \left( 
-        f(X_k)
+    \varphi^{'}
+    \left( 
+      \frac{1}{\pi(X_k)}
+    \right)
         -
-        f(X_i)
+    \varphi^{'}
+    \left( 
+      \frac{1}{\pi(X_i)}
+    \right)
         \right)
         \right|
 \\
@@ -245,6 +328,8 @@ It follows
   \ 
         =
   \ 
+  \frac{1}{N}
+  \sum_{i=1}^{N} 
         \left| 
         \sum_{k=1}^{N} 
         B_k(X_i)
@@ -253,22 +338,35 @@ It follows
         \left\{ X_k\in A_N(X_i) \right\}
         \cdot
         \left( 
-        f(X_k)
+    \varphi^{'}
+    \left( 
+      \frac{1}{\pi(X_k)}
+    \right)
         -
-        f(X_i)
-        \right)
+    \varphi^{'}
+    \left( 
+      \frac{1}{\pi(X_i)}
+    \right)
+    \right)
         \right|
         \\
   &
   \ 
         \le
   \ 
+  \frac{1}{N}
+  \sum_{i=1}^{N} 
         \sum_{k=1}^{N} 
         B_k(X_i)
         \cdot
         \omega
         ( 
-        f,
+        \varphi^{'} 
+        \circ
+        (x\mapsto 1/x)
+        \circ
+        \pi
+        ,
         \lambda^d(A_N(X_i))
         )
         \\
@@ -278,10 +376,17 @@ It follows
   \ 
         \omega
         ( 
-        f,
+        \varphi^{'} 
+        \circ
+        (x\mapsto 1/x)
+        \circ
+        \pi
+        ,
         h_N^d
         )
+        \ 
         \to
+        \ 
         0
         \qquad
         \text{for}
@@ -293,225 +398,303 @@ where $\omega$ is the modulus of continuity.
 The second equality is due to \eqref{8881}, the third equality follows from the definition of the basis functions, and 
 the inequality follows from \eqref{8881}, the convexity of the absolute value and the continuity of $f$.
 The convergence in due to \eqref{8882}.
-\end{example}
 
-We continue with kernel bases \cite[§5]{Gyorfi2002}.
-\begin{example}
-Let
-$
-  K
-  \colon
-  \R^d
-  \to
-  [0,\infty)
-$
-be a measurable function with $K(0)>0$. 
-We call $K$ a kernel function.
-We assume that there exists
-$R>0$ such that 
-\begin{gather}
-  \label{8884}
-  K(x)
-  \ 
-  \le
-  \ 
-  \mathbf{1}\left\{ \norm{x}_2\le R\right\}
-  \,,
-\end{gather}
-that is, the kernel function has compact support.
-For a decreasing sequence (the bandwith of the kernel) $(h_N)\in (0,\infty)$ with $h_N\to 0$ for $N\to\infty$,
-we define $N$ basis functions $B_k$ of the covariates by
+Next, we check \eqref{asu:basis:ii:2} in \textit{(ii)} in Assumption~\ref{asu:basis}.
+To this end, we consider
 \begin{gather*}
-  B_k(x)
+  \lambda^*_{F_{Y(1)}(z|\cdot)}
   \ 
   :=
   \ 
-  \frac{
-    K \left( \frac{\norm{x-X_k}_2}{h_N} \right)
-  }{
-  \sum_{j=1}^{N} 
-    K \left( \frac{\norm{x-X_j}_2}{h_N} \right)
-  }
+  \left[ 
+    F_{Y(1)}(z|X_1)
+    ,
+    \ldots
+    ,
+    F_{Y(1)}(z|X_N)
+  \right]
+  ^\top
   \qquad
-  \text{for}
-  \,
-  k\in
-  \left\{ 
-  1,\ldots,N
-  \right\}
-  \,,
-\end{gather*}
-where (again) we keep to the convention $"0/0=0"$.
-Since $K(0)>0$, as in the previous example, it follows
-\begin{align}
-  \label{8883}
-  \sum_{k=1}^{N}
-  B_k(x)
-  &
-  \ 
-  \in
-  \ 
-  \left\{ 0,1 \right\}
-  \qquad
-  \text{for all}
-  \ 
-  x\in\R^d
-  \,,
-  \notag
-  \\
-  \sum_{k=1}^{N}
-  B_k(X_i)
-  &
-  \ 
-  =
- \  
-  1
-  \qquad
-  \text{for all}\ 
-  i\in
-  \left\{ 1,\ldots,N \right\}
-  \intertext{and}
-  \notag
-  \norm{B(x)}_2^2
-  &
-  \ 
-  \in
-  \ 
-  \left\{ 0,1 \right\}
-  \qquad
-  \text{for all}
-  \ 
-  x\in\R^d
-  \,.
-\end{align}
-This verifies the first condition of Assumption~\ref{asu:basis}.
-To verify the second condition, note, that
-\begin{align}
-  \label{8885}
-  \notag
-  K(x)
-  &
-  \ 
-  =
-  \ 
-  \mathbf{1}\left\{ \norm{x}_2\le R \right\} 
-  K(x)
-  \qquad
-  \text{for all}
-  \ 
-  x\in\R^d
-  \intertext{and thus}
-  B_k(x)
-  &
-  \ 
-  =
-  \ 
-  B_k(x)
-  \cdot
-  \mathbf{1}\left\{ \norm{x-X_k}_2\le R\cdot h_N \right\} 
-  \qquad
-  \text{for all}
-  \ 
-  x\in\R^d
-  \ 
-  \text{and for all}
-  \ 
-  k\in \left\{ 1,\ldots,N \right\}
-  \,.
-\end{align}
-Let 
-$f$ be a continuous function
-and consider (as in the previous example)
-\begin{gather*}
-  \lambda^*_f
-  \ 
-  :=
-  \ 
-  [f(X_1),\ldots,f(X_N)]^\top
+  \text{for}\ 
+  z\in\R
   \,.
 \end{gather*}
-It follows
-\begin{align*}
-  &
+To obtain the desired convergence, we need to assume some regularity for 
+$
+    F_{Y(1)}(z|\cdot)
+$.
+Let it be continuity for the moment.
+With similar arguments as before we get
+    \begin{align*}
+      &
+         \sqrt{N}
+        \max_{i\in \left\{ 1,\ldots,N \right\}}
+        \sup_{z\in\R}
         \left| 
-        \inner{B(X_i)}{\lambda^*_f}
+        \inner{B(X_i)}
+        {
+      \lambda^*_{F_{Y(1)}(z|\cdot)}
+      }
         -
-        f(X_i)
+        F_{Y(1)}(z|X_i)
         \right|
         \\
-  &
-  \ 
-        =
-  \ 
-        \left| 
-        \sum_{k=1}^{N} 
-        B_k(X_i)
-        \cdot
-        f(X_k)
-        -
-        f(X_i)
-        \right|
+        &
         \ 
         =
         \ 
-        \left| 
-        \sum_{k=1}^{N} 
-        B_k(X_i)
-        \cdot
-        \left( 
-        f(X_k)
-        -
-        f(X_i)
-        \right)
-        \right|
-\\
-  &
-  \ 
-        =
-  \ 
-        \left| 
-        \sum_{k=1}^{N} 
-        B_k(X_i)
-        \cdot
-  \mathbf{1}\left\{ \norm{x-X_k}_2\le R\cdot h_N \right\} 
-        \cdot
-        \left( 
-        f(X_k)
-        -
-        f(X_i)
-        \right)
-        \right|
-        \\
-  &
-  \ 
-        \le
-  \ 
-        \sum_{k=1}^{N} 
-        B_k(X_i)
-        \cdot
+         \sqrt{N}
+        \sup_{z\in\R}
         \omega
-        ( 
-        f,
-        R\cdot h_N
-        )
-        \\
-  &
-  \ 
-        =
-  \ 
+        \left( 
+        F_{Y(1)}(z|\cdot)
+        ,
+        h_N^d
+        \right)
+    \end{align*}
+    Thus, if the interplay of $F_{Y(1)}$ and $h_N$ is sufficiently good we get convergence.
+    The most abstract assumption would be
+    \begin{gather}
+      \label{6674}
+         \sqrt{N}
+        \sup_{z\in\R}
         \omega
-        ( 
-        f,
-        R\cdot h_N
-        )
+        \left( 
+        F_{Y(1)}(z|\cdot)
+        ,
+        h_N^d
+        \right)
         \to
         0
-        \qquad
-        \text{for}
-        \ 
-        N\to\infty
-        \,,
-\end{align*}
-The convergence in due to $h_N\to 0$ for $N\to \infty$. 
+        \,.
+    \end{gather}
+    To be more concrete, if, for example,
+$
+    F_{Y(1)}(z|\cdot)
+    $
+    is $\alpha$-Hölder continuous for all $z\in\R$ with 
+    $\alpha\in(0,1)$ and $\sqrt{N}h_N^{d\cdot \alpha}\to 0$ it holds
+    \eqref{6674}.
+
 \end{example}
+
+%We continue with kernel bases \cite[§5]{Gyorfi2002}.
+%\begin{example}
+%Let
+%$
+%  K
+%  \colon
+%  \R^d
+%  \to
+%  [0,\infty)
+%$
+%be a measurable function with $K(0)>0$. 
+%We call $K$ a kernel function.
+%We assume that there exists
+%$R>0$ such that 
+%\begin{gather}
+%  \label{8884}
+%  K(x)
+%  \ 
+%  \le
+%  \ 
+%  \mathbf{1}\left\{ \norm{x}_2\le R\right\}
+%  \,,
+%\end{gather}
+%that is, the kernel function has compact support.
+%For a decreasing sequence (the bandwith of the kernel) $(h_N)\in (0,\infty)$ with $h_N\to 0$ for $N\to\infty$,
+%we define $N$ basis functions $B_k$ of the covariates by
+%\begin{gather*}
+%  B_k(x)
+%  \ 
+%  :=
+%  \ 
+%  \frac{
+%    K \left( \frac{\norm{x-X_k}_2}{h_N} \right)
+%  }{
+%  \sum_{j=1}^{N} 
+%    K \left( \frac{\norm{x-X_j}_2}{h_N} \right)
+%  }
+%  \qquad
+%  \text{for}
+%  \,
+%  k\in
+%  \left\{ 
+%  1,\ldots,N
+%  \right\}
+%  \,,
+%\end{gather*}
+%where (again) we keep to the convention $"0/0=0"$.
+%Since $K(0)>0$, as in the previous example, it follows
+%\begin{align}
+%  \label{8883}
+%  \sum_{k=1}^{N}
+%  B_k(x)
+%  &
+%  \ 
+%  \in
+%  \ 
+%  \left\{ 0,1 \right\}
+%  \qquad
+%  \text{for all}
+%  \ 
+%  x\in\R^d
+%  \,,
+%  \notag
+%  \\
+%  \sum_{k=1}^{N}
+%  B_k(X_i)
+%  &
+%  \ 
+%  =
+% \  
+%  1
+%  \qquad
+%  \text{for all}\ 
+%  i\in
+%  \left\{ 1,\ldots,N \right\}
+%  \intertext{and}
+%  \notag
+%  \norm{B(x)}_2^2
+%  &
+%  \ 
+%  \in
+%  \ 
+%  \left\{ 0,1 \right\}
+%  \qquad
+%  \text{for all}
+%  \ 
+%  x\in\R^d
+%  \,.
+%\end{align}
+%This verifies the first condition of Assumption~\ref{asu:basis}.
+%To verify the second condition, note, that
+%\begin{align}
+%  \label{8885}
+%  \notag
+%  K(x)
+%  &
+%  \ 
+%  =
+%  \ 
+%  \mathbf{1}\left\{ \norm{x}_2\le R \right\} 
+%  K(x)
+%  \qquad
+%  \text{for all}
+%  \ 
+%  x\in\R^d
+%  \intertext{and thus}
+%  B_k(x)
+%  &
+%  \ 
+%  =
+%  \ 
+%  B_k(x)
+%  \cdot
+%  \mathbf{1}\left\{ \norm{x-X_k}_2\le R\cdot h_N \right\} 
+%  \qquad
+%  \text{for all}
+%  \ 
+%  x\in\R^d
+%  \ 
+%  \text{and for all}
+%  \ 
+%  k\in \left\{ 1,\ldots,N \right\}
+%  \,.
+%\end{align}
+%Let 
+%$f$ be a continuous function
+%and consider (as in the previous example)
+%\begin{gather*}
+%  \lambda^*_f
+%  \ 
+%  :=
+%  \ 
+%  [f(X_1),\ldots,f(X_N)]^\top
+%  \,.
+%\end{gather*}
+%It follows
+%\begin{align*}
+%  &
+%        \left| 
+%        \inner{B(X_i)}{\lambda^*_f}
+%        -
+%        f(X_i)
+%        \right|
+%        \\
+%  &
+%  \ 
+%        =
+%  \ 
+%        \left| 
+%        \sum_{k=1}^{N} 
+%        B_k(X_i)
+%        \cdot
+%        f(X_k)
+%        -
+%        f(X_i)
+%        \right|
+%        \ 
+%        =
+%        \ 
+%        \left| 
+%        \sum_{k=1}^{N} 
+%        B_k(X_i)
+%        \cdot
+%        \left( 
+%        f(X_k)
+%        -
+%        f(X_i)
+%        \right)
+%        \right|
+%\\
+%  &
+%  \ 
+%        =
+%  \ 
+%        \left| 
+%        \sum_{k=1}^{N} 
+%        B_k(X_i)
+%        \cdot
+%  \mathbf{1}\left\{ \norm{x-X_k}_2\le R\cdot h_N \right\} 
+%        \cdot
+%        \left( 
+%        f(X_k)
+%        -
+%        f(X_i)
+%        \right)
+%        \right|
+%        \\
+%  &
+%  \ 
+%        \le
+%  \ 
+%        \sum_{k=1}^{N} 
+%        B_k(X_i)
+%        \cdot
+%        \omega
+%        ( 
+%        f,
+%        R\cdot h_N
+%        )
+%        \\
+%  &
+%  \ 
+%        =
+%  \ 
+%        \omega
+%        ( 
+%        f,
+%        R\cdot h_N
+%        )
+%        \to
+%        0
+%        \qquad
+%        \text{for}
+%        \ 
+%        N\to\infty
+%        \,,
+%\end{align*}
+%The convergence in due to $h_N\to 0$ for $N\to \infty$. 
+%\end{example}
 We now have a large class of possible basis function. We may proceed.

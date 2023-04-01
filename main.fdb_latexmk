@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1680189345 "main.aux" "main.bbl" "main" 1680189351
+["bibtex main"] 1680349994 "main.aux" "main.bbl" "main" 1680350001
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1680169879 71957 57509d335a9c82c5f741f125573ac3fe ""
-  "main.aux" 1680189350 23738 dcb5dd1706729881ae3f346e777de8c4 "pdflatex"
+  "main.aux" 1680350000 23736 606ae389112f89dc8fb0717bb6873020 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1680189345 "main.tex" "main.pdf" "main" 1680189351
+["pdflatex"] 1680349994 "main.tex" "main.pdf" "main" 1680350001
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -227,7 +227,7 @@
   "chapters/convex_analysis/primer_new.tex" 1679574579 22968 610eaa192665f2fe6323ba52091b3eea ""
   "chapters/convex_analysis/ts_3.tex" 1679582877 13008 d2bbed0da675cf5c0839d37aab2a3454 ""
   "chapters/intro_for_all.tex" 1678871653 15174 e5e77944eadc906f84b43855b2de29f1 ""
-  "chapters/optimization_problem/ass_basis_f.tex" 1680166820 7957 4a357546cfeb6df7dce9aa07ae4d8932 ""
+  "chapters/optimization_problem/ass_basis_f.tex" 1680349988 11375 f2e25a9c726d771cb701e0418b37f9e5 ""
   "chapters/optimization_problem/ass_objective_f.tex" 1680171662 5469 a95e7143ddca62fd8e71032ca98ab6c9 ""
   "chapters/optimization_problem/ass_ps.tex" 1680168937 2022 40a1b06a4327fe36e7ac19e59cb4b012 ""
   "chapters/optimization_problem/dual_form.tex" 1680184725 10283 5f4e6f6f23d208cd67de48c2446e8e46 ""
@@ -240,11 +240,11 @@
   "final_chapters/aa:tools.tex" 1679497839 21654 0b834579fce5891843f1048eb4e5df79 ""
   "final_chapters/aa:weights.tex" 1679386332 6322 20febbf23936a9a4361144dda77c5bfe ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1680189350 23738 dcb5dd1706729881ae3f346e777de8c4 "pdflatex"
-  "main.bbl" 1680189345 3463 80a21f422a7e59291a740270462a96f3 "bibtex main"
+  "main.aux" 1680350000 23736 606ae389112f89dc8fb0717bb6873020 "pdflatex"
+  "main.bbl" 1680349994 3463 80a21f422a7e59291a740270462a96f3 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1680184139 10648 cc03ef769d6eef8b0ea0ad4910d2bc3f ""
-  "main.toc" 1680189350 1515 2f02f9ada877d3b1a1bb3cbd50fd44a0 "pdflatex"
+  "main.toc" 1680350000 1515 dff08b1a314e40b5063fbcb3afe14caf "pdflatex"
   (generated)
   "main.aux"
   "main.log"
