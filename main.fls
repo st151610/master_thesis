@@ -1225,6 +1225,10 @@ INPUT ./chapters/consistency_weights/lemma_1.tex
 INPUT chapters/consistency_weights/lemma_1.tex
 INPUT ./chapters/consistency_weights/lemma_1.tex
 INPUT chapters/consistency_weights/lemma_1.tex
+INPUT ./chapters/consistency_weights/lemma_2.tex
+INPUT chapters/consistency_weights/lemma_2.tex
+INPUT ./chapters/consistency_weights/lemma_2.tex
+INPUT chapters/consistency_weights/lemma_2.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT ./final_chapters/aa:dual.tex
 INPUT final_chapters/aa:dual.tex

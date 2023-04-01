@@ -1,0 +1,287 @@
+To proceed we recall the objective function of Problem~\ref{dual}, that is,
+\begin{align*}
+  G\colon
+  \R^{\#\mathfrak{B}}
+  \times
+  \R
+  \times
+  \R^n_{\ge 0}
+  &
+  \ 
+  \to
+  \ 
+  \overline{\R}
+  \\
+  \left( 
+    \lambda,
+    \lambda_0,
+    \rho
+  \right)
+  &
+  \ 
+  \mapsto
+  \ 
+    \frac{1}{N}
+\sum_{i=1} 
+  ^n
+  \varphi^*
+  \!
+  \left( 
+    \rho_i
+    +
+\lambda_0
++
+\inner
+{B(X_i)}
+{
+\lambda
+}
+  \right)
+  \ 
+  -
+  \ 
+  \left( 
+\lambda_0
++
+\inner
+{B(X_i)}
+{
+\lambda
+}
+  \right)
+  \\
+  &
+  \qquad 
++
+\ 
+\inner
+{\delta}
+{
+  |\lambda|
+}
+\end{align*}
+Note, that $G$ is continuous by the continuity of $\varphi^*$.
+Next we define for $\varepsilon>0$ an auxiliary function:
+   \begin{align*}
+     \underline{
+     \Delta G^*
+     _\varepsilon
+     }
+     \colon
+     &
+     \left( \Omega,\mathcal{A},\P \right)
+     \ 
+     \to
+     \ 
+     \left( 
+       \R,\mathcal{B}(\overline{\R})
+     \right)
+     \\
+     &
+     \omega
+     \ 
+     \mapsto
+     \ 
+   \inf
+   \left\{ 
+ G
+   \left( 
+\lambda^*_{\varphi^{'}\circ\,1/\pi}
+(\omega)
++\Delta
+,
+\Delta_0
+,
+\Delta_\rho
+   \right)
+   -
+   G
+   \left(
+\lambda^*_{\varphi^{'}\circ\,1/\pi}
+(\omega)
+,0,0
+   \right)
+   \Big\lvert
+   \norm{
+\Delta
+,
+\Delta_0
+,
+\Delta_\rho
+   }_2
+   =\varepsilon
+   \right\}
+   \end{align*}
+\begin{lemma}
+  \label{G_meas}
+  For all $\varepsilon>0$ the function
+  $
+     \underline{
+     \Delta G^*
+     _\varepsilon
+     }
+  $
+  is measurable.
+\end{lemma}
+\begin{proof}
+  Since the function
+  \begin{align*}
+    \R^{\#\mathfrak{B}}
+    \times
+    \left( 
+    \R^{\#\mathfrak{B}}
+    \times
+    \R
+    \times
+    \R^n_{\ge 0}
+    \right)
+    \ni
+    \left( 
+    \lambda,(\Delta,\Delta_0,\Delta_\rho)
+    \right)
+    \ 
+    \mapsto
+    \ 
+ G
+   \left( 
+     \lambda
++\Delta
+,
+\Delta_0
+,
+\Delta_\rho
+   \right)
+   -
+   G
+   \left(
+     \lambda
+,0,0
+   \right)
+  \end{align*}
+  is continuous and 
+  $
+  \left\{
+   \norm{
+\Delta
+,
+\Delta_0
+,
+\Delta_\rho
+   }_2
+   =\varepsilon
+  \right\}
+  $
+  is compact in 
+  $
+    \R^{\#\mathfrak{B}}
+    \times
+    \R
+    \times
+    \R^n_{\ge 0}
+    $
+    for all $\varepsilon>0$,
+  the function
+\begin{align*}
+    \R^{\#\mathfrak{B}}
+    \ni
+    \lambda
+    \ 
+    \mapsto
+    \ 
+    \inf
+    \left\{ 
+  G
+   \left( 
+     \lambda
++\Delta
+,
+\Delta_0
+,
+\Delta_\rho
+   \right)
+   -
+   G
+   \left(
+     \lambda
+,0,0
+   \right)
+   \lvert
+   \norm{
+\Delta
+,
+\Delta_0
+,
+\Delta_\rho
+   }_2
+   =\varepsilon
+    \right\}
+   \end{align*}
+is continuous for all $\varepsilon>0$.
+Since 
+$
+\lambda^*_{\varphi^{'}\circ\,1/\pi}
+$
+is measurable by assumption it follows the statement.
+\end{proof}
+ \begin{lemma}
+   \label{bw:cd:lem2}
+   Under conditions it holds
+   for all $\varepsilon>0$
+\begin{gather}
+   \P
+   \left[ 
+     \underline{
+     \Delta G^*
+     _\varepsilon
+     }
+     \ge 
+     0
+   \right]
+   \ 
+   \to
+   \ 
+   1
+   \qquad
+   \text{for}
+   \ 
+   N\to\infty
+   \,.
+\end{gather}
+ \end{lemma}
+ \begin{proof}
+   Let $\varepsilon>0$.
+   We will show
+\begin{gather}
+   \P
+   \left[ 
+     \underline{
+     \Delta G^*
+     _\varepsilon
+     }
+     \ge 
+     -\tilde{\varepsilon}
+   \right]
+   \ 
+   \to
+   \ 
+   1
+   \qquad
+   \ 
+   \text{for}
+   \ 
+   N\to\infty
+   \ 
+   \text{for all}\ 
+   \tilde{\varepsilon}>0
+   \,.
+\end{gather}
+Then the result follows from the measurability of 
+$
+     \underline{
+     \Delta G^*
+     _\varepsilon
+     }
+$
+(see Lemma~\ref{G_meas}).
+ \end{proof}
+

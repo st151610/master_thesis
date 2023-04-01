@@ -10,10 +10,10 @@
 \contentsline {chapter}{\numberline {4}Asymptotic Analysis}{27}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Consistency of Optimal Solutions}{27}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Estimate of an Oracle Parameter by the Dual}{27}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Estimate of the Inverse Propensitiy Score by the Weights}{34}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Tools and Assumptions}{36}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Application to Plug In Estimators}{58}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Convex Analysis}{59}{chapter.5}%
-\contentsline {section}{\numberline {5.1}A Convex Analysis Primer}{59}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Duality of Optimal Solutions}{66}{section.5.2}%
+\contentsline {subsection}{\numberline {4.1.2}Estimate of the Inverse Propensitiy Score by the Weights}{32}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Tools and Assumptions}{34}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Application to Plug In Estimators}{56}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Convex Analysis}{57}{chapter.5}%
+\contentsline {section}{\numberline {5.1}A Convex Analysis Primer}{57}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Duality of Optimal Solutions}{64}{section.5.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
