@@ -4,7 +4,6 @@
 \contentsline {subsection}{\numberline {2.0.2}Propensity Score Function}{14}{subsection.2.0.2}%
 \contentsline {subsection}{\numberline {2.0.3}Basis Functions}{15}{subsection.2.0.3}%
 \contentsline {subsection}{\numberline {2.0.4}Dual Problem}{18}{subsection.2.0.4}%
-\contentsline {subsection}{\numberline {2.0.5}Weights Function}{21}{subsection.2.0.5}%
 \contentsline {chapter}{\numberline {3}Consistency of the Weights}{23}{chapter.3}%
 \contentsline {subsection}{\numberline {3.0.1}Consistency of the Dual Solution}{23}{subsection.3.0.1}%
 \contentsline {subsection}{\numberline {3.0.2}Measurability Argmax}{26}{subsection.3.0.2}%

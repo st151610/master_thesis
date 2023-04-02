@@ -1,11 +1,11 @@
 To proceed we recall the objective function of Problem~\ref{dual}, that is,
 \begin{align*}
   G\colon
-  \R^{\#\mathfrak{B}}
+  \R^N_{\ge 0}
   \times
   \R
   \times
-  \R^n_{\ge 0}
+  \R^{N}
   &
   \ 
   \to
@@ -13,9 +13,10 @@ To proceed we recall the objective function of Problem~\ref{dual}, that is,
   \overline{\R}
   \\
   \left( 
-    \lambda,
-    \lambda_0,
     \rho
+    ,
+    \lambda_0,
+    \lambda
   \right)
   &
   \ 
@@ -24,6 +25,9 @@ To proceed we recall the objective function of Problem~\ref{dual}, that is,
     \frac{1}{N}
 \sum_{i=1} 
   ^n
+  \Big[
+  T_i
+  \cdot
   \varphi^*
   \!
   \left( 
@@ -40,15 +44,14 @@ To proceed we recall the objective function of Problem~\ref{dual}, that is,
   \ 
   -
   \ 
-  \left( 
 \lambda_0
-+
+-
 \inner
 {B(X_i)}
 {
 \lambda
 }
-  \right)
+\Big]
   \\
   &
   \qquad 
@@ -126,10 +129,10 @@ Next we define for $\varepsilon>0$ an auxiliary function:
 \begin{proof}
   Since the function
   \begin{align*}
-    \R^{\#\mathfrak{B}}
+    \R^{N}
     \times
     \left( 
-    \R^{\#\mathfrak{B}}
+    \R^{N}
     \times
     \R
     \times
@@ -173,7 +176,7 @@ Next we define for $\varepsilon>0$ an auxiliary function:
   $
   is compact in 
   $
-    \R^{\#\mathfrak{B}}
+    \R^{N}
     \times
     \R
     \times
@@ -182,7 +185,7 @@ Next we define for $\varepsilon>0$ an auxiliary function:
     for all $\varepsilon>0$,
   the function
 \begin{align*}
-    \R^{\#\mathfrak{B}}
+    \R^{N}
     \ni
     \lambda
     \ 
@@ -298,7 +301,7 @@ To this end, note, that
   \text{for all}\ 
   (\lambda,\lambda_0,\rho)
   \in
-  \R^{\#\mathfrak{B}}
+  \R^{N}
   \times
   \R
   \times
@@ -318,7 +321,7 @@ with
      \frac{1}{N}
      \left( 
 \sum_{i=1} 
-  ^n
+  ^N
   \varphi^*
   \!
   \left( 

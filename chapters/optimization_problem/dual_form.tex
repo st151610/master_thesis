@@ -315,11 +315,11 @@ The next Theorem aims at simplifying this result.
   \begin{split}
   \underset
   {\begin{smallmatrix}
-      \rho&\in&&\R^n_{\ge 0} 
+      \rho&\in&&\R^N_{\ge 0} 
       \\
       \lambda_0 & \in&&\R
       \\
-      \lambda&\in&&\R^{\#\mathfrak{B}}
+      \lambda&\in&&\R^{N}
   \end{smallmatrix}}
   {
     \mathrm{minimize}
@@ -327,9 +327,11 @@ The next Theorem aims at simplifying this result.
   \quad
   &
   \frac{1}{N}
-  \left( 
 \sum_{i=1} 
-  ^n
+  ^N
+  \Big[
+  T_i
+  \cdot
   \varphi^*
   \!
   \left( 
@@ -346,15 +348,14 @@ The next Theorem aims at simplifying this result.
   \ 
   -
   \ 
-  \sum_{i=1}^{N} 
 \lambda_0
-+
+-
 \inner
 {B(X_i)}
 {
 \lambda
 }
-  \right)
+\Big]
   \ 
 +
 \ 
@@ -469,7 +470,7 @@ We write
  To eliminate the remaining constraints, 
   we paraphrase \cite[pages~19-20]{Wang2019}.
   We show 
-  for all $i \in \left\{ 1,\ldots,\#\mathfrak{B} \right\}$
+  for all $i \in \left\{ 1,\ldots,N \right\}$
 \begin{alignat}{2}
   \notag
   \text{either}
@@ -493,7 +494,7 @@ Assume towards a contradiction that
 there exists
   } 
   \ 
-i \in \left\{ 1,\ldots,\#\mathfrak{B} \right\}
+i \in \left\{ 1,\ldots,N \right\}
 \ 
 \text{such that}
 \qquad
@@ -529,7 +530,7 @@ Consider
       )\,,
       \ 
       \ldots,
-      \lambda_{\#\mathfrak{B}}^{+,\dagger}
+      \lambda_{N}^{+,\dagger}
     \end{bmatrix}
     ^\top
     \intertext{and}
@@ -556,7 +557,7 @@ Consider
       )\,,
       \ 
       \ldots,
-      \lambda_{\#\mathfrak{B}}^{-,\dagger}
+      \lambda_{N}^{-,\dagger}
     \end{bmatrix}
     ^\top
     \,.
@@ -631,7 +632,7 @@ $
 \lambda_i^\dagger\in \R
 $ 
 for all
-$i\in \left\{ 0,\ldots,\#\mathfrak{B} \right\}$, that is, we set
+$i\in \left\{ 0,\ldots,N \right\}$, that is, we set
 \begin{gather*}
  \lambda_i^\dagger
  \ 
@@ -656,7 +657,7 @@ $i\in \left\{ 0,\ldots,\#\mathfrak{B} \right\}$, that is, we set
 \lambda_i^{-,\dagger}
 \,.
 \end{gather*}
-Thus, we can extend the domain of Problem~\ref{9993} to $\lambda\in\R^{\#\mathfrak{B}}$ and update the objective function in the following way
+Thus, we can extend the domain of Problem~\ref{9993} to $\lambda\in\R^{N}$ and update the objective function in the following way
 (without changing the optimal solution).
 \begin{align*}
   G
@@ -710,4 +711,6 @@ Thus, we can extend the domain of Problem~\ref{9993} to $\lambda\in\R^{\#\mathfr
 \end{align*}
 Multiplying $G$ with $-1/N$ doesn't change the solution either
 (if we search instead for a minimum).
+To finish the proof, we choose the notation with $T_i$ instead of $n$. This extends the domain of $\rho$ to $\R^N_{\ge 0}$, but the 
+new $\rho_i$ are not effective because of $T_i=0$ for all $i>n$. 
 \end{proof}
