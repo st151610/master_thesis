@@ -260,7 +260,7 @@ to Problem~\ref{bw:1:primal}.
 If Assumption~\ref{asu:objective_f} holds true 
 and there exists an optimal solution 
 $
-(\rho^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger},\lambda_0^\dagger)
+(\rho^\dagger,\lambda_0^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger})
 $
 then the unique optimal solutions to Problem~\ref{bw:1:primal} are 
 \begin{gather*}
@@ -291,7 +291,7 @@ then the unique optimal solutions to Problem~\ref{bw:1:primal} are
   \qquad
   \text{for all}\ 
   i\in
-  \left\{ 1,\ldots,N \right\}
+  \left\{ 1,\ldots,n \right\}
   \,.
 \end{gather*}
 \end{lemma}
@@ -315,10 +315,11 @@ The next Theorem aims at simplifying this result.
   \begin{split}
   \underset
   {\begin{smallmatrix}
-      \lambda\in\R^{\#\mathfrak{B}}
+      \rho&\in&&\R^n_{\ge 0} 
       \\
-\rho\ge 0 \\
-\lambda_0\in\R
+      \lambda_0 & \in&&\R
+      \\
+      \lambda&\in&&\R^{\#\mathfrak{B}}
   \end{smallmatrix}}
   {
     \mathrm{minimize}
@@ -326,10 +327,9 @@ The next Theorem aims at simplifying this result.
   \quad
   &
   \frac{1}{N}
+  \left( 
 \sum_{i=1} 
-  ^N
-    T_i
-    \cdot
+  ^n
   \varphi^*
   \!
   \left( 
@@ -346,7 +346,7 @@ The next Theorem aims at simplifying this result.
   \ 
   -
   \ 
-  \left( 
+  \sum_{i=1}^{N} 
 \lambda_0
 +
 \inner
@@ -355,7 +355,6 @@ The next Theorem aims at simplifying this result.
 \lambda
 }
   \right)
-  \
   \ 
 +
 \ 
@@ -370,7 +369,7 @@ The next Theorem aims at simplifying this result.
 If Assumption~\ref{asu:objective_f} holds true 
 and there exists an optimal solution 
 $
-(\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
 $
 then the unique optimal solutions to Problem~\ref{bw:1:primal} are 
 \begin{gather*}
@@ -399,7 +398,7 @@ then the unique optimal solutions to Problem~\ref{bw:1:primal} are
   \qquad
   \text{for all}\ 
   i\in
-  \left\{ 1,\ldots,N \right\}
+  \left\{ 1,\ldots,n \right\}
   \,.
 \end{gather*}
 \end{ftheorem}
@@ -407,13 +406,13 @@ then the unique optimal solutions to Problem~\ref{bw:1:primal} are
 \begin{proof}
   Assume that
 $
-  (\rho^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger},\lambda_0^\dagger)
+  (\rho^\dagger,\lambda_0^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger})
 $
 is an optimal solution to Problem~\ref{9993}.
 We write
 \begin{align*}
   G
-  (\rho,\lambda^+,\lambda^-,\lambda_0)
+  (\rho,\lambda_0,\lambda^+,\lambda^-)
   &
   \ 
   :=
@@ -488,19 +487,27 @@ We write
   \,.
 \end{alignat}
 Assume towards a contradiction that 
+\begin{gather}
+  \label{1232}
+  \text{
 there exists
-$i \in \left\{ 1,\ldots,N \right\}$
-such that
-$
+  } 
+  \ 
+i \in \left\{ 1,\ldots,\#\mathfrak{B} \right\}
+\ 
+\text{such that}
+\qquad
   \lambda_i^{+,\dagger} > 0
-$
-and
-$
+  \qquad 
+  \text{and}
+  \qquad
   \lambda_i^{-,\dagger} > 0
-$ 
+  \,.
+\end{gather}
 Consider
   \begin{align*}
     \tilde{\lambda}^{+,\dagger}
+    &
     \ 
     :=
     \ 
@@ -527,6 +534,7 @@ Consider
     ^\top
     \intertext{and}
     \tilde{\lambda}^{-,\dagger}
+    &
     \ 
     :=
     \ 
@@ -553,8 +561,8 @@ Consider
     ^\top
     \,.
   \end{align*}
-  Since 
-  $
+  Since
+  \begin{gather*}
       \lambda_i^{\pm,\dagger}
       \!
       \ 
@@ -566,20 +574,27 @@ Consider
       \land
       \lambda_i^{-,\dagger}
       )
+      \ 
       \ge 
+      \ 
       0
-  $,
+      \,,
+  \end{gather*}
   the perturbed vectors $\tilde{\lambda}^{\pm,\dagger}$ are  in the domain of the 
   optimization problem.
-  But 
+  By Assumption~\eqref{1232} and $\delta>0$ it follows
   \begin{align*}
   G
-  (\rho^\dagger,\tilde{\lambda}^{+,\dagger},\tilde{\lambda}{-,\dagger},\lambda_0^\dagger)
+  \left( 
+  \rho^\dagger,\lambda_0^\dagger,\tilde{\lambda}^{+,\dagger},\tilde{\lambda}^{-,\dagger}
+  \right)
   \ 
   -
   \ 
   G
-  (\rho^\dagger,\lambda^{+,\dagger},\lambda{-,\dagger},\lambda_0^\dagger)
+  \left( 
+  \rho^\dagger,\lambda_0^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger}
+  \right)
   \ 
   =
   \ 
@@ -602,7 +617,9 @@ Consider
   which contradicts the optimality of
 $
   (\rho^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger},\lambda_0^\dagger)
-$.
+$
+(it is supposed to be a maximum in the domain of the optimization problem)
+.
 It follows \eqref{9992}.
 But then 
 $
@@ -615,14 +632,35 @@ $
 $ 
 for all
 $i\in \left\{ 0,\ldots,\#\mathfrak{B} \right\}$, that is,
-$ \lambda_i^\dagger=\lambda_i^{+,\dagger}\!-\lambda_i^{-,\dagger} $.
-Note that
-$ |\lambda_i^\dagger|=\lambda_i^{+,\dagger}\!+\lambda_i^{-,\dagger} $.
+\begin{gather*}
+ \lambda_i^\dagger
+ \ 
+ =
+ \ 
+ \lambda_i^{+,\dagger}
+ \ 
+ -
+ \ 
+ \lambda_i^{-,\dagger}
+ \qquad
+ \text{and}
+ \qquad
+|\lambda_i^\dagger|
+\ 
+=
+\ 
+\lambda_i^{+,\dagger}
+\ 
++
+\ 
+\lambda_i^{-,\dagger}
+\,.
+\end{gather*}
 Thus, we can extend the domain of Problem~\ref{9993} to $\lambda\in\R^{\#\mathfrak{B}}$ and update the objective function in the following way
 (without changing the optimal solution).
 \begin{align*}
   G
-  (\rho,\lambda,\lambda_0)
+  (\rho,\lambda_0,\lambda)
   &
   \ 
   :=
@@ -672,5 +710,4 @@ Thus, we can extend the domain of Problem~\ref{9993} to $\lambda\in\R^{\#\mathfr
 \end{align*}
 Multiplying $G$ with $-1/N$ doesn't change the solution either
 (if we search instead for a minimum).
-Finally, note that we can use the notation with $T_i$ instead of $n$.
 \end{proof}

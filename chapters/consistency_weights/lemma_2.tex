@@ -316,6 +316,7 @@ with
   \mapsto
   \ 
      \frac{1}{N}
+     \left( 
 \sum_{i=1} 
   ^n
   \varphi^*
@@ -333,8 +334,8 @@ with
   \right)
   \ 
   -
-  \ 
-  \left( 
+\ 
+\sum_{i=1}^{N} 
 \lambda_0
 +
 \inner
@@ -342,17 +343,21 @@ with
 {
 \lambda
 }
-  \right)
+     \right)
   \,.
 \end{gather*}
 Since we assume $\varphi^*$ to be continuously differentiable (it is always convex),
 $g$ is a continuously differentiable convex function with gradient
-\begin{gather*}
+\begin{align*}
+  &
   (\lambda,\lambda_0,\rho)
+  \\
+  &
   \ 
   \mapsto
   \ 
      \frac{1}{N}
+     \left( 
 \sum_{i=1} 
   ^n
   (
@@ -377,11 +382,13 @@ $g$ is a continuously differentiable convex function with gradient
   \ 
   -
   \ 
+  \sum_{i=1}^{N} 
   \left[ 
     B(X_i)^\top,1,0_n^\top
   \right]^\top
+     \right)
   \,.
-\end{gather*}
+\end{align*}
 Thus, by \eqref{cv:primer:mvthe},
 it holds
 \begin{align*}
@@ -409,9 +416,9 @@ it holds
    \ge
    \ 
    \frac{1}{N}
+  \left( 
 \sum_{i=1} 
   ^n
-  \left( 
   (
   \varphi^{'}
   )
@@ -430,6 +437,7 @@ it holds
   \ 
   -
   \ 
+  \sum_{i=1}^{N} 
   \left[ 
     B(X_i)^\top,1,0_n^\top
   \right]
@@ -441,7 +449,7 @@ it holds
     \\
     \Delta_\rho
   \end{bmatrix}
-  \\
+    \\
   &
   \qquad
   +
