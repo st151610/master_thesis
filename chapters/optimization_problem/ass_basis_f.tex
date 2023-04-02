@@ -1,27 +1,70 @@
-We consider a set of (measurable) basis functions 
+In our setting basis functions of the covariates are stochastic processes indexed over the covariate space $\mathcal{X}$.
+We consider a set $\mathfrak{B}$ of stochastic processes 
 \begin{gather*}
-  \mathfrak{B}
-  :
-  =
   \left\{ 
-B_k\colon (\mathcal{X},\Sigma_\mathcal{X})\to(\R,\mathcal{B}(\R))
-\ 
-|
-\ 
-k\in \left\{ 1,\ldots,\# \mathfrak{B} \right\}
+      B_k(x)
+      \ 
+      \colon
+      (
+      \Omega,
+      \mathcal{A}
+      ,
+      \P
+      )
+      \ 
+      \to
+      \ 
+      (
+      \R
+      ,
+      \mathcal{B}(\R)
+      )
+      \ 
+      |
+      \ 
+      x\in\mathcal{X}
   \right\}
-  \,,
+  \qquad
+  \text{for}\ 
+k\in \left\{ 1,\ldots,\# \mathfrak{B} \right\}
 \end{gather*}
-and write
-\begin{gather*}
-  B(x)
+and
+denote the vector of the basis functions (also a stochastic processes indexed over $\mathcal{X}$)
+as
+\begin{align*}
+B(x)
+  \ 
   :=
+  \ 
   [B_1(x),\ldots,B_{\# \mathfrak{B}}(x)]^\top
+  \ 
+  \colon
+  \ 
+      (
+      \Omega,
+      \mathcal{A}
+      ,
+      \P
+      )
+      \to
+      (
+      \R^{\#\mathfrak{B}}
+      ,
+      \mathcal{B}
+      (
+      \R^{\#\mathfrak{B}}
+      )
+      )
+    \qquad
+  \text{for}\ 
+  x\in\mathcal{X}
   \,.
+\end{align*}
+\begin{gather*}
 \end{gather*}
 \begin{assumption}
   \label{asu:basis}
-  The set of (measurable) basis functions 
+  The set of basis functions 
   $
   \mathfrak{B}
   $

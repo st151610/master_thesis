@@ -1,18 +1,22 @@
+
+
+
+
 \begin{assumption}
   \label{asu:existence_sol}
   There exists $\underline{N}\in\mathbb{N}$ such that 
   for all $N\ge \underline{N}$ and for all data sets $D_N$
   an optimal solution
-  $(\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)$
+  $(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)$
   to Problem~\ref{dual} exists in a (compact) parameter space 
   $\Theta_N
   \subset
   \R^n_{\ge 0}
   \times
-  \R^{\#\mathfrak{B}}
-  \times
   \R
-  $, containing the origin, with
+  \times
+  \R^{\#\mathfrak{B}}
+  $ that contains the origin, with
   $\mathrm{diam}\,\Theta_N<\infty$.
 \end{assumption}
 \begin{definition}
@@ -22,6 +26,7 @@
   w
   \ 
   \colon
+  &
   \mathcal{X}
   \,
   \times
@@ -30,27 +35,25 @@
   \,
   \times
   \,
-  \R^{\#\mathfrak{B}}
-  \,
+  \R
   \times
   \,
-  \R
-  &
+  \R^{\#\mathfrak{B}}
   \ 
   \to
   \ 
   \R^n
   \\
+  &
   \left( 
   x
   ,
   \rho
   ,
-  \lambda
-  ,
   \lambda_0
+  ,
+  \lambda
   \right)
-  &
   \ 
   \mapsto
   \ 
@@ -69,6 +72,9 @@
     \,.
 \end{align*}
 \end{definition}
+\begin{lemma}
+  The (random) weights function $w(X,\cdot)$ is measurable
+\end{lemma}
 \begin{lemma}
   \label{weights_l_inf}
   Let Assumption~\ref{asu:existence_sol}, 

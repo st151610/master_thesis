@@ -3,9 +3,10 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: literature.bib
+Warning--I didn't find a database entry for "Aliprantis2007"
 You've used 15 entries,
             2543 wiz_defined-function locations,
-            668 strings with 7128 characters,
+            670 strings with 7156 characters,
 and the built_in function-call counts, 5527 in all, are:
 = -- 549
 > -- 248
@@ -44,3 +45,4 @@ warning$ -- 0
 while$ -- 54
 width$ -- 19
 write$ -- 196
+(There was 1 warning)

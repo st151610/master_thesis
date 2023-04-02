@@ -1,0 +1,209 @@
+We follow \cite{Aliprantis2007}
+A \textbf{correspondence}$ \psi$ from a set $X$ to a set $Y$ assigns to each $x\in X$ a subset $\psi(x)\subset Y$.
+To clarify that we map $x$ to a set, we use the double arrow, that is,
+$
+  \psi
+  \colon
+  X
+  \twoheadrightarrow
+  Y
+$.
+  Let 
+  $(S,\Sigma_S)$ be a measurable space and $X$ a topological space.
+  We say, that a correspondence 
+  $
+  \psi
+  \colon
+  S
+  \twoheadrightarrow
+  X
+  $
+  is 
+  \textbf{
+  weakly measurable
+  },
+  if
+  \begin{gather*}
+    \left\{ 
+      s\in S
+      \ 
+      |
+      \ 
+      \psi(s)
+      \cap
+      O
+      \neq
+      \emptyset
+    \right\}
+    \in
+    \Sigma_S
+    \qquad
+    \text{for all open subsets}
+    \ 
+    O\subset X
+    \,.
+  \end{gather*}
+
+A selector from a correspondence $\psi\colon X\twoheadrightarrow Y$ is a function $s\colon X\to Y$ that satisfies 
+$
+s(x)\in\psi(x)
+$
+for all $x\in X$.
+
+\begin{definition}
+  Let 
+  $(S,\Sigma_S)$ be a measurable space, and let $X$ and $Y$  be topological space.
+  A function 
+  $f\colon S\times X \to Y$
+  is a \textbf{Caratheodory function} if
+  \begin{align*}
+    f(\cdot,x)
+    &
+    \colon
+    S\to Y
+    \qquad
+    \text{is}\ 
+    (\Sigma_{S},\mathcal{B}(Y))-measurable
+    \ 
+    \text{for all}
+    \ 
+    x\in X
+    \,,
+    \intertext{and}
+    f(s,\cdot)
+    &
+    \colon
+    X\to Y
+    \qquad
+    \text{is continuous for all}\ 
+    s\in S
+    \,.
+  \end{align*}
+\end{definition}
+\begin{theorem}
+  Let $X$ be a separable metrizable space and
+  $
+  (S,\Sigma_S)
+  $
+  a measurable space.
+  Let $\psi\colon S \twoheadrightarrow X$ be a weakly measurable correspondence with non-empty compact values, and suppose
+  $f\colon S\times X \to \R$
+  is a Caratheodory function. Define the value function 
+  $m\colon S\to \R$ by
+  \begin{gather*}
+    m(s):=\max_{\psi(s)}f(s,x)
+    \,,
+  \end{gather*}
+  and the correspondence 
+  $mu\colon S\twoheadrightarrow X$ of maximizers by
+  \begin{gather*}
+    \mu(s):= \left\{ 
+      x\in \psi(s)
+      |
+      f(s,x)=m(s)
+    \right\}
+    \,.
+  \end{gather*}
+  Then the value function $m$ is measurable, 
+  the argmax correspondence $\mu$ has non-empty and compact values,
+  is measurable and admits a measurable selector.
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~18.19]{Aliprantis2007}
+\end{proof}
+
+Our goal is to find (plausible) assumptions under which we can measurably select optimal solutions of Problem~\ref{dual}.
+
+\begin{assumption}
+  There exists $\underline{N}\in\mathbb{N}$ such that 
+  for all $N\ge \underline{N}$ 
+  there exists a compact and deterministic parameter space
+  $
+  \Theta_N
+  \subset
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+  $
+  such that for all data sets $D_N$
+  a sequence of optimal solution
+  $(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)$
+  satisfying the Lemma
+exist and it holds
+\begin{gather*}
+  (0_{N-n},
+  \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
+  \in
+  \Theta_N
+  \,.
+\end{gather*}
+\end{assumption}
+
+With this assumption we can construct the (constant) correspondence
+\begin{align*}
+  \psi
+  \colon
+  (\Omega,\mathcal{A},\P)
+  \ 
+  \twoheadrightarrow
+  \ 
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+  \,,
+  \qquad
+  \omega
+  \ 
+  \to
+  \ 
+  \Theta_N
+  \,.
+\end{align*}
+This is weakly measurable, because $\Theta_N$ is deterministic and thus
+$\Theta_N\cap O$ is either true or false, that is,
+  \begin{gather*}
+    \left\{ 
+      \omega\in \Omega
+      \ 
+      |
+      \ 
+      \psi(\omega)
+      \cap
+      O
+      \neq
+      \emptyset
+    \right\}
+    \ 
+    \in
+    \ 
+    \left\{ \Omega,\emptyset \right\}
+    \subset
+    \Sigma_S
+    \qquad
+    \text{for all open subsets}
+    \ 
+    O
+    \subset
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+    \,.
+  \end{gather*}
+  Furthermore the objective function is a Caratheodory function.
+  Thus, by Theorem there exists the argmax correspondence  of Problem~\ref{dual} and a measurable selector that selects
+  $(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)$ of Assumption.
+  With this, we can define the optimal weights processes
+  \begin{gather*}
+    w^\dagger(X)
+    \colon
+    (\Omega,\mathcal{A},\P)
+    \to
+    \R
+    \\
+  \end{gather*}
