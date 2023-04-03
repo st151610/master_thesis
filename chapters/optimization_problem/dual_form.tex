@@ -65,7 +65,7 @@ inequality matrix and vector
       \pm\,\mathbf{B}(\mathbf{X})
     \end{bmatrix}
     \in
-    \R^{(n+2\cdot\#B)\times n}
+    \R^{(n+  2 N)\times n}
         \qquad
     &&
 d
@@ -81,7 +81,7 @@ d
       \sum_{i = 1}^{N} B(X_i)
     \end{bmatrix}
     \in
-    \R^{n+2\cdot\# B}
+    \R^{n+  2 N}
     \,,
     \intertext{and equality matrix and vector}
     \mathbf{A}
@@ -124,7 +124,7 @@ d
     \delta_k
     \qquad
     \text{for all}\ 
-    k\in \left\{ 1,\ldots,\# B \right\}
+    k\in \left\{ 1,\ldots, N \right\}
     \,.
   \end{gather*}
   Put differently, it holds both
@@ -156,14 +156,14 @@ d
   \end{align*}
   for all 
   $
-    k\in \left\{ 1,\ldots,\# B \right\}
+    k\in \left\{ 1,\ldots, N \right\}
   $. In matrix notation this is 
   \begin{gather*}
     \pm\mathbf{B}(\mathbf{X})w
     \ 
     \ge
     \ 
-    [d_{n+1},\ldots, d_{n+2\cdot\# B}]^\top
+    [d_{n+1},\ldots, d_{n+  2 N}]^\top
     \,.
   \end{gather*}
   Proving the rest of the statements is straightforward. We omit the details.
@@ -315,7 +315,7 @@ The next Theorem aims at simplifying this result.
   \begin{split}
   \underset
   {\begin{smallmatrix}
-      \rho&\in&&\R^N_{\ge 0} 
+      \rho&\in&&\R^N 
       \\
       \lambda_0 & \in&&\R
       \\
@@ -325,10 +325,10 @@ The next Theorem aims at simplifying this result.
     \mathrm{minimize}
   }
   \quad
-  &
   \frac{1}{N}
 \sum_{i=1} 
   ^N
+  &
   \Big[
   T_i
   \cdot
@@ -364,6 +364,21 @@ The next Theorem aims at simplifying this result.
 {
   |\lambda|
 }
+  \,,
+  \\
+  \mathrm{subject}\ \mathrm{to}
+  \quad
+  \qquad
+  &
+  \rho_i \ge 0 
+  \quad 
+  \mathrm{for}\ \mathrm{all}\ i\le n
+  \qquad 
+  \mathrm{and}
+  \qquad
+  \rho_i=0
+  \quad 
+  \mathrm{for}\ \mathrm{all}\ i>n
   \,.
 \end{split}
 \end{align}
@@ -713,4 +728,5 @@ Multiplying $G$ with $-1/N$ doesn't change the solution either
 (if we search instead for a minimum).
 To finish the proof, we choose the notation with $T_i$ instead of $n$. This extends the domain of $\rho$ to $\R^N_{\ge 0}$, but the 
 new $\rho_i$ are not effective because of $T_i=0$ for all $i>n$. 
+Thus we may set them to 0.
 \end{proof}
