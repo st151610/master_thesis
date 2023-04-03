@@ -133,8 +133,10 @@ Our goal is to find (plausible) assumptions under which we can measurably select
   satisfying the Lemma
 exist and it holds
 \begin{gather*}
-  (0_{N-n},
-  \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
+  (
+  \rho^\dagger,
+  0_{N-n},
+  \lambda_0^\dagger,\lambda^\dagger)
   \in
   \Theta_N
   \,.
@@ -197,13 +199,21 @@ $\Theta_N\cap O$ is either true or false, that is,
   \end{gather*}
   Furthermore the objective function is a Caratheodory function.
   Thus, by Theorem there exists the argmax correspondence  of Problem~\ref{dual} and a measurable selector that selects
-  $(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)$ of Assumption.
+  $(\rho^\dagger,0_{N-n},\lambda_0^\dagger,\lambda^\dagger)$ 
+  of Assumption.
   With this, we can define the optimal weights processes
   \begin{gather*}
-    w^\dagger(X)
-    \colon
-    (\Omega,\mathcal{A},\P)
-    \to
-    \R
-    \\
+    w^\dagger(x)
+    \ 
+    :=
+    \ 
+    w
+    \left( 
+    x,\rho^\dagger,0_{N-n},\lambda_0^\dagger,\lambda^\dagger
+    \right)
+    \qquad
+    \text{indexed over}\ 
+    x\in\mathcal{X}\,.
   \end{gather*}
+  Due to the definition of the (general) weights processes and the measurability of the argmax selector, the random variables $w^\dagger(x)$ are measurable for all $x\in\mathcal{X}$.
+  To end the measurability discussion, note that $w^\dagger(X)$ is a random variable.

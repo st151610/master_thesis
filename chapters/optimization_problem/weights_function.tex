@@ -1,50 +1,65 @@
+Theorem~\ref{dual_solution_th} tells us that if an optimal solution
+$
+(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
+$
+to Problem~\ref{dual} exists,
+then the unique optimal solutions to Problem~\ref{bw:1:primal} are 
+\begin{gather*}
+  w^\dagger_i
+  \ 
+  :=
+  \ 
+  (
+  \varphi^{'}
+  )^{-1}
+  \left(
+    \rho^\dagger_i
+  \ 
+    +
+  \ 
+\lambda_0^\dagger
+  \ 
++
+  \ 
+\inner
+{B(X_i)}
+{
+\lambda^{\dagger}
+}
+  \right)
+  \qquad
+  \text{for all}\ 
+  i\in
+  \left\{ 1,\ldots,n \right\}
+  \,.
+\end{gather*}
 
+This point of view is sufficient from a practical point of view
+(when we are interested in actually computing the optimal weights).
 
+For the subsequent analysis we need to view the weights as random quantities. To this end, we shall introduce the weights process. 
 
-
-\begin{assumption}
-  \label{asu:existence_sol}
-  There exists $\underline{N}\in\mathbb{N}$ such that 
-  for all $N\ge \underline{N}$ and for all data sets $D_N$
-  an optimal solution
-  $(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)$
-  to Problem~\ref{dual} exists in a (compact) parameter space 
-  $\Theta_N
-  \subset
-  \R^n_{\ge 0}
-  \times
-  \R
-  \times
-  \R^{\#\mathfrak{B}}
-  $ that contains the origin, with
-  $\mathrm{diam}\,\Theta_N<\infty$.
-\end{assumption}
 \begin{definition}
   \label{def:weights_function}
-  We define the weights function to be
-\begin{align*}
-  w
-  \ 
-  \colon
-  &
+  We define the weights process to be a stochastic process indexed 
+  over
+  $
   \mathcal{X}
   \,
   \times
   \,
-  \R^n_{\ge 0}
+  \R^N_{\ge 0}
   \,
   \times
   \,
   \R
   \times
   \,
-  \R^{\#\mathfrak{B}}
-  \ 
-  \to
-  \ 
-  \R^n
-  \\
-  &
+  \R^{N}
+  $
+  with values in $\R^N$ such that
+\begin{align*}
+  w
   \left( 
   x
   ,
@@ -55,7 +70,7 @@
   \lambda
   \right)
   \ 
-  \mapsto
+  :=
   \ 
   \left[ 
     (
@@ -64,17 +79,39 @@
     \left( 
      \rho_i 
      +
-      \inner{B(x)}{\lambda}
-      +
       \lambda_0
+      +
+      \inner{B(x)}{\lambda}
     \right)
-  \right]_{i\in \left\{ 1, \ldots,n \right\}}
+  \right]_{i\in \left\{ 1, \ldots,N \right\}}
     \,.
 \end{align*}
 \end{definition}
-\begin{lemma}
-  The (random) weights function $w(X,\cdot)$ is measurable
-\end{lemma}
+By the measurability of the basis functions (or the basis processes),
+the weights processes is also measurable 
+(the quantities 
+$
+  w
+  \left( 
+  x
+  ,
+  \rho
+  ,
+  \lambda_0
+  ,
+  \lambda
+  \right)
+$
+are random variables).
+The next question is if there are (plausible) assumptions such that the weights processes at a random parameter
+$
+(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
+$
+is measurable.
+To answer this in a good way we need the argmax measurability theorem \cite[Theorem~18.19]{Aliprantis2007}.
+\subsection{Argmax Measurability Theorem}
+\input{chapters/consistency_weights/meas_argmax.tex}
+
 \begin{lemma}
   \label{weights_l_inf}
   Let Assumption~\ref{asu:existence_sol}, 
@@ -82,7 +119,7 @@
   and Assumption~\ref{asu:objective_f} hold true.
   Then it holds 
   \begin{gather*}
-  w_i(X,\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+    w_i^\dagger(X)
   \ 
   \in
   \ 
@@ -90,7 +127,7 @@
   \qquad
   \text{for all}
   \ 
-  i\in \left\{ 1,\ldots,n \right\}
+  i\in \left\{ 1,\ldots,N \right\}
   \ 
   \text{
     and
@@ -111,14 +148,14 @@
     \left| 
      \rho_i 
      +
-      \inner{B(x)}{\lambda}
-      +
       \lambda_0
+      +
+      \inner{B(x)}{\lambda}
     \right|
     \ 
     \lesssim
     \ 
-    \norm{(\rho,\lambda,\lambda_0)}_2
+    \norm{(\rho,\lambda_0,\lambda)}_2
     \,.
   \end{gather}
   $
@@ -129,11 +166,11 @@
     \text{and for all}\ 
     (\rho,\lambda,\lambda_0)
     \in
-  \R^n_{\ge 0}
-  \times
-  \R^{\#\mathfrak{B}}
+  \R^N_{\ge 0}
   \times
   \R
+  \times
+  \R^{N}
   $.
   By Assumption~\ref{asu:existence_sol}, 
   there exists a (compact) parameter space
@@ -143,7 +180,7 @@
     by \eqref{3967} it holds
   \begin{align*}
     \left| 
-  w_i(x,\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+    w_i^\dagger(x)
     \right|
     \ 
     \lesssim
@@ -153,7 +190,7 @@
     \left( 
       \,
       -
-      \mathrm{diam}\,\Theta_N
+    \norm{(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)}_2
     \right)
     \right|
     \ 
@@ -163,7 +200,7 @@
     (\varphi^{'})^{-1}
     \left( 
       \,
-      \mathrm{diam}\,\Theta_N
+    \norm{(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)}_2
     \right)
     \right|
     \ 

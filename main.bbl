@@ -1,5 +1,11 @@
 \begin{thebibliography}{GKKW02}
 
+\bibitem[AB07]{Aliprantis2007}
+Charalambos~D. Aliprantis and Kim~C. Border.
+\newblock {\em Infinite {{Dimensional Analysis}}: {{A Hitchhiker}}'s
+  {{Guide}}}.
+\newblock {Springer Science \& Business Media}, May 2007.
+
 \bibitem[CYZ16]{Chan2016}
 Kwun Chuen~Gary Chan, Sheung Chi~Phillip Yam, and Zheng Zhang.
 \newblock Globally {{Efficient Non-Parametric Inference}} of {{Average

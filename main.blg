@@ -3,46 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: literature.bib
-Warning--I didn't find a database entry for "Aliprantis2007"
-You've used 15 entries,
+You've used 16 entries,
             2543 wiz_defined-function locations,
-            670 strings with 7156 characters,
-and the built_in function-call counts, 5527 in all, are:
-= -- 549
-> -- 248
+            673 strings with 7268 characters,
+and the built_in function-call counts, 5855 in all, are:
+= -- 578
+> -- 267
 < -- 6
-+ -- 81
-- -- 79
-* -- 388
-:= -- 932
-add.period$ -- 48
-call.type$ -- 15
-change.case$ -- 81
-chr.to.int$ -- 15
-cite$ -- 15
-duplicate$ -- 235
-empty$ -- 411
-format.name$ -- 98
-if$ -- 1121
++ -- 87
+- -- 85
+* -- 409
+:= -- 989
+add.period$ -- 51
+call.type$ -- 16
+change.case$ -- 86
+chr.to.int$ -- 16
+cite$ -- 16
+duplicate$ -- 250
+empty$ -- 436
+format.name$ -- 105
+if$ -- 1187
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 22
-newline$ -- 78
-num.names$ -- 45
-pop$ -- 83
+missing$ -- 24
+newline$ -- 83
+num.names$ -- 48
+pop$ -- 92
 preamble$ -- 1
-purify$ -- 103
+purify$ -- 110
 quote$ -- 0
-skip$ -- 192
+skip$ -- 204
 stack$ -- 0
-substring$ -- 281
-swap$ -- 28
+substring$ -- 288
+swap$ -- 29
 text.length$ -- 6
 text.prefix$ -- 4
 top$ -- 0
-type$ -- 92
+type$ -- 96
 warning$ -- 0
-while$ -- 54
-width$ -- 19
-write$ -- 196
-(There was 1 warning)
+while$ -- 57
+width$ -- 20
+write$ -- 208
