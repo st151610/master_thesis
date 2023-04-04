@@ -1,22 +1,22 @@
 We follow \cite{Aliprantis2007}
-A \textbf{correspondence}$ \psi$ from a set $X$ to a set $Y$ assigns to each $x\in X$ a subset $\psi(x)\subset Y$.
-To clarify that we map $x$ to a set, we use the double arrow, that is,
+A \textbf{correspondence} $\psi$ from a set $S_1$ to a set $S_2$ assigns to each $s_1\in S_1$ a subset $\psi(s_1)\subset S_2$.
+To clarify that we map $s_1$ to a set, we use the double arrow, that is,
 $
   \psi
   \colon
-  X
+  S_1
   \twoheadrightarrow
-  Y
+  S_2
 $.
   Let 
-  $(S,\Sigma_S)$ be a measurable space and $X$ a topological space.
+  $(\mathcal{Z},\Sigma_{\mathcal{Z}})$ be a measurable space and $\mathcal{S}$  a topological space.
   We say, that a correspondence 
   $
   \psi
   \colon
-  S
+  \mathcal{Z}
   \twoheadrightarrow
-  X
+  \mathcal{S}
   $
   is 
   \textbf{
@@ -25,82 +25,85 @@ $.
   if
   \begin{gather*}
     \left\{ 
-      s\in S
+      z\in \mathcal{Z}
       \ 
       |
       \ 
-      \psi(s)
+      \psi(z)
       \cap
       O
       \neq
       \emptyset
     \right\}
     \in
-    \Sigma_S
+    \Sigma_{\mathcal{Z}}
     \qquad
     \text{for all open subsets}
     \ 
-    O\subset X
+    O\subset \mathcal{S}
     \,.
   \end{gather*}
-
-A selector from a correspondence $\psi\colon X\twoheadrightarrow Y$ is a function $s\colon X\to Y$ that satisfies 
-$
-s(x)\in\psi(x)
-$
-for all $x\in X$.
+  A \textbf{selector} from a correspondence $\psi\colon \mathcal{Z}\twoheadrightarrow \mathcal{S}$ is a function $s\colon \mathcal{Z}\to \mathcal{S}$ that satisfies 
+  \begin{align*}
+s(z)\in\psi(z)
+\qquad
+\text{for all}\ 
+z\in\mathcal{Z}
+\,.
+  \end{align*}
+  
 
 \begin{definition}
   Let 
-  $(S,\Sigma_S)$ be a measurable space, and let $X$ and $Y$  be topological space.
+  $(\mathcal{Z},\Sigma_{\mathcal{Z}})$ be a measurable space, and let $\mathcal{S}_1$ and $\mathcal{S}_2$  be topological space.
   A function 
-  $f\colon S\times X \to Y$
+  $f\colon \mathcal{Z}\times \mathcal{S}_1 \to \mathcal{S}_2$
   is a \textbf{Caratheodory function} if
   \begin{align*}
-    f(\cdot,x)
+    f(\cdot,s_1)
     &
     \colon
-    S\to Y
+    \mathcal{Z}\to \mathcal{S}_2
     \qquad
     \text{is}\ 
-    (\Sigma_{S},\mathcal{B}(Y))-measurable
+    (\Sigma_{\mathcal{Z}},\mathcal{B}(\mathcal{S}_2))-measurable
     \ 
     \text{for all}
     \ 
-    x\in X
+    s_1\in \mathcal{S}_1
     \,,
     \intertext{and}
-    f(s,\cdot)
+    f(z,\cdot)
     &
     \colon
-    X\to Y
+    \mathcal{Z}\to \mathcal{S}_2
     \qquad
     \text{is continuous for all}\ 
-    s\in S
+    z\in \mathcal{Z}
     \,.
   \end{align*}
 \end{definition}
 \begin{theorem}
-  Let $X$ be a separable metrizable space and
+  Let $\mathcal{S}$ be a separable metrizable space and
   $
-  (S,\Sigma_S)
+  (\mathcal{Z},\Sigma_{\mathcal{Z}})
   $
   a measurable space.
-  Let $\psi\colon S \twoheadrightarrow X$ be a weakly measurable correspondence with non-empty compact values, and suppose
-  $f\colon S\times X \to \R$
+  Let $\psi\colon \mathcal{Z} \twoheadrightarrow \mathcal{S}$ be a weakly measurable correspondence with non-empty compact values, and suppose
+  $f\colon \mathcal{Z}\times \mathcal{S} \to \R$
   is a Caratheodory function. Define the value function 
-  $m\colon S\to \R$ by
+  $m\colon \mathcal{Z}\to \R$ by
   \begin{gather*}
-    m(s):=\max_{\psi(s)}f(s,x)
+    m(z):=\max_{s\in\psi(z)}f(z,s)
     \,,
   \end{gather*}
   and the correspondence 
-  $mu\colon S\twoheadrightarrow X$ of maximizers by
+  $\mu\colon \mathcal{Z}\twoheadrightarrow \mathcal{S}$ of maximizers by
   \begin{gather*}
-    \mu(s):= \left\{ 
-      x\in \psi(s)
+    \mu(z):= \left\{ 
+      s\in \psi(s)
       |
-      f(s,x)=m(s)
+      f(z,s)=m(z)
     \right\}
     \,.
   \end{gather*}
