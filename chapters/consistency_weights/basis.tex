@@ -1,0 +1,160 @@
+Let $
+\left(
+\mathcal{P}_N
+\right)
+$
+denote a sequence of countable, $\mathcal{B}$-measurable partitions 
+\begin{align*}
+\mathcal{P}_N= \left\{
+  A_{N,1},
+  A_{N,2},
+  \ldots
+\right\}
+\subset \mathcal{B}(\R^d)
+\end{align*}
+of $\R^d$, that is, 
+\begin{align*}
+  A_{N,i}\cap A_{N,j}=\emptyset
+  \qquad
+  \text{if}\ i\neq j
+  \qquad
+  \text{and}
+  \qquad 
+  \bigcap_{i\in\mathbb{N}}A_{N,i}
+  \ 
+  =
+  \ 
+  \R^d
+  \,.
+\end{align*}
+We define
+$ A_N(x) $ to be the cell of $ \mathcal{P}_N $ containing $x$, that is,
+\begin{align*}
+  A_N
+  \colon
+  \R^d 
+  \ 
+  \twoheadrightarrow 
+  \ 
+  \R^d  
+  \,,\qquad
+  x
+  \ 
+  \mapsto
+  \ 
+  A_N(x)
+  \,,
+\end{align*}
+where $A_N(x)$ is the only cell containing $x$. 
+
+Next, we define the (empirical) basis vector
+\begin{align*}
+  B\colon
+  \R^d\times \R^{d\cdot N}
+  \to
+  \R
+  \,,
+  \qquad
+  (x,(x_1,\ldots,x_N))\mapsto
+  \frac
+  {
+    \left[
+    \mathbf{1}
+    _{
+      A_N(x)
+    }
+    (x_k)
+    \right]
+    _{k\in \left\{
+        1,\ldots,N
+    \right\}}
+  }
+  {
+    \sum_{j=1}^N
+    \mathbf{1}
+    _{
+      A_N(x)
+    }
+    (x_j)
+    }
+  \,,
+\end{align*}
+where we keep to the convention $"0/0=0"$.
+\begin{lemma}
+  \quad
+  \begin{enumerate}[label=(\roman*)]
+\item
+  $B(\cdot,(X_1,\ldots,X_N))(\omega)$ is 
+  $\left(
+    \mathcal{B}(\R^d),\mathcal{B}(\R^N)
+  \right)$-measurable
+  and
+  constant on each cell $A_N\in\mathcal{P}_N$
+  for all $\omega\in\Omega$. 
+\item
+  $B(X,(X_1,\ldots,X_N))$ is $\left(
+    \mathcal{A},\mathcal{B}(\R^N)
+  \right)$-measurable. 
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Consider
+for $k\in \left\{
+  1,\ldots,N
+\right\}$
+and $\omega\in\Omega$
+the indicator function
+\begin{align*}
+  \mathbf{1}
+  _
+  {A_N(X_k(\omega))}
+  \colon \R^d\to \left\{
+    0,1
+  \right\}
+  \,.
+\end{align*}
+Since 
+$
+  {A_N(X_k(\omega))}
+  \in\mathcal{B}(\R^d)
+$
+this is a 
+  $\left(
+    \mathcal{B}(\R^d),\mathcal{B}(\R^N)
+  \right)$-measurable
+  function.
+  Since it is 1 if $
+  x\in
+  {A_N(X_k(\omega))}
+  $
+  and 0 else, it is also constant on each cell. It follows statement (i).
+Since
+\begin{align*}
+  \mathbf{1}
+  _
+  {A_N(X_k(\omega))}(X(\omega))
+  \ 
+  =
+  \ 
+  \mathbf{1}
+  \bigcup_{i\in\mathbb{N}}
+  \left\{
+    X,X_k \in A_{N,i}
+  \right\}
+  (\omega)
+  \qquad
+  \text{for all}\ 
+  \omega\in\Omega
+  \,,
+\end{align*}
+and
+$
+  \bigcup_{i\in\mathbb{N}}
+  \left\{
+    X,X_k \in A_{N,i}
+  \right\}
+  \in\mathcal{A}
+$
+it follows statement (ii).
+\end{proof}

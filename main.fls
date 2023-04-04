@@ -1217,6 +1217,10 @@ INPUT ./chapters/consistency_weights/meas_argmax.tex
 INPUT chapters/consistency_weights/meas_argmax.tex
 INPUT ./chapters/consistency_weights/meas_argmax.tex
 INPUT chapters/consistency_weights/meas_argmax.tex
+INPUT ./chapters/consistency_weights/basis.tex
+INPUT chapters/consistency_weights/basis.tex
+INPUT ./chapters/consistency_weights/basis.tex
+INPUT chapters/consistency_weights/basis.tex
 INPUT ./chapters/consistency_weights/main.tex
 INPUT chapters/consistency_weights/main.tex
 INPUT ./chapters/consistency_weights/main.tex
@@ -1233,10 +1237,6 @@ INPUT ./chapters/consistency_weights/lemma_2.tex
 INPUT chapters/consistency_weights/lemma_2.tex
 INPUT ./chapters/consistency_weights/lemma_2.tex
 INPUT chapters/consistency_weights/lemma_2.tex
-INPUT ./chapters/consistency_weights/meas_argmax.tex
-INPUT chapters/consistency_weights/meas_argmax.tex
-INPUT ./chapters/consistency_weights/meas_argmax.tex
-INPUT chapters/consistency_weights/meas_argmax.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT ./final_chapters/aa:dual.tex
 INPUT final_chapters/aa:dual.tex

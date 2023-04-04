@@ -6,9 +6,9 @@
 \contentsline {subsection}{\numberline {2.0.4}Dual Problem}{18}{subsection.2.0.4}%
 \contentsline {subsection}{\numberline {2.0.5}Weights Function}{21}{subsection.2.0.5}%
 \contentsline {subsection}{\numberline {2.0.6}Argmax Measurability Theorem}{21}{subsection.2.0.6}%
-\contentsline {chapter}{\numberline {3}Consistency of the Weights}{25}{chapter.3}%
-\contentsline {subsection}{\numberline {3.0.1}Consistency of the Dual Solution}{25}{subsection.3.0.1}%
-\contentsline {subsection}{\numberline {3.0.2}Measurability Argmax}{28}{subsection.3.0.2}%
+\contentsline {subsection}{\numberline {2.0.7}basis}{25}{subsection.2.0.7}%
+\contentsline {chapter}{\numberline {3}Consistency of the Weights}{27}{chapter.3}%
+\contentsline {subsection}{\numberline {3.0.1}Consistency of the Dual Solution}{27}{subsection.3.0.1}%
 \contentsline {chapter}{\numberline {4}Asymptotic Analysis}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Consistency of Optimal Solutions}{31}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Estimate of an Oracle Parameter by the Dual}{31}{subsection.4.1.1}%
