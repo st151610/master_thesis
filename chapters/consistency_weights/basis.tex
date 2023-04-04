@@ -47,15 +47,21 @@ $ A_N(x) $ to be the cell of $ \mathcal{P}_N $ containing $x$, that is,
 \end{align*}
 where $A_N(x)$ is the only cell containing $x$. 
 
-Next, we define the (empirical) basis vector
-\begin{align*}
+Next, we define the (empirical) basis functions vector
+\begin{align}
+  \label{def:basis}
   B\colon
   \R^d\times \R^{d\cdot N}
+  \ 
   \to
+  \ 
   \R
   \,,
   \qquad
-  (x,(x_1,\ldots,x_N))\mapsto
+  (x,(x_1,\ldots,x_N))
+  \ 
+  \mapsto
+  \ 
   \frac
   {
     \left[
@@ -78,8 +84,11 @@ Next, we define the (empirical) basis vector
     (x_j)
     }
   \,,
-\end{align*}
+\end{align}
 where we keep to the convention $"0/0=0"$.
+We shall extend $B$ to depend on the random vectors
+$X,X_1,\ldots,X_N$.
+The next lemma studies the measurability of the extensions.
 \begin{lemma}
   \quad
   \begin{enumerate}[label=(\roman*)]
@@ -89,7 +98,8 @@ where we keep to the convention $"0/0=0"$.
     \mathcal{B}(\R^d),\mathcal{B}(\R^N)
   \right)$-measurable
   and
-  constant on each cell $A_N\in\mathcal{P}_N$
+  constant on each cell 
+  $A_N\in\mathcal{P}_N$
   for all $\omega\in\Omega$. 
 \item
   $B(X,(X_1,\ldots,X_N))$ is $\left(
@@ -105,7 +115,8 @@ for $k\in \left\{
 \right\}$
 and $\omega\in\Omega$
 the indicator function
-\begin{align*}
+\begin{align}
+  \label{33342}
   \mathbf{1}
   _
   {A_N(X_k(\omega))}
@@ -113,7 +124,7 @@ the indicator function
     0,1
   \right\}
   \,.
-\end{align*}
+\end{align}
 Since 
 $
   {A_N(X_k(\omega))}
@@ -121,15 +132,18 @@ $
 $
 this is a 
   $\left(
-    \mathcal{B}(\R^d),\mathcal{B}(\R^N)
+    \mathcal{B}(\R^d),\mathcal{B}(\R)
   \right)$-measurable
   function.
-  Since it is 1 if $
+  From the definition of $B$ \eqref{def:basis} it follows the first part of (i).
+  Since the indicator function in \eqref{33342} is 1 if $
   x\in
   {A_N(X_k(\omega))}
   $
-  and 0 else, it is also constant on each cell. It follows statement (i).
-Since
+  and 0 else, it is also constant on each cell
+  $A_N\in\mathcal{P}_N$.
+  It follows (i).
+  To prove (ii), note that
 \begin{align*}
   \mathbf{1}
   _
@@ -155,6 +169,12 @@ $
     X,X_k \in A_{N,i}
   \right\}
   \in\mathcal{A}
+$ by the 
 $
-it follows statement (ii).
+\left( 
+  \mathcal{A},
+  \mathcal{B}(\R^d)
+\right)
+$-
+measurability of $X$ and $X_k$.
 \end{proof}
