@@ -84,6 +84,7 @@ z\in\mathcal{Z}
   \end{align*}
 \end{definition}
 \begin{theorem}
+  \label{th:argmax}
   Let $\mathcal{S}$ be a separable metrizable space and
   $
   (\mathcal{Z},\Sigma_{\mathcal{Z}})
@@ -115,9 +116,10 @@ z\in\mathcal{Z}
   \cite[Theorem~18.19]{Aliprantis2007}
 \end{proof}
 
-Our goal is to find (plausible) assumptions under which we can measurably select the optimal solutions of Problem~\ref{dual}.
+Our goal is to find (plausible) assumptions under which we can measurably select the optimal solution of Problem~\ref{dual}.
 
 \begin{assumption}
+  \label{asu:argmax}
   There exists $\underline{N}\in\mathbb{N}$ such that 
   for all $N\ge \underline{N}$ 
   there exists a compact and deterministic parameter space
@@ -135,8 +137,45 @@ Our goal is to find (plausible) assumptions under which we can measurably select
   $(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)$
   is contained in $\Theta_N$.
 \end{assumption}
+\begin{remark}
+ discussion 
+ with regards to lemma existsence and in a compact set.
+\end{remark}
 
-With this assumption we can construct the (constant) correspondence
+\begin{lemma}
+  Let Assumption~\ref{asu:argmax}
+  hold true.
+  Then the (random) optimal solution to Problem~\ref{dual} exists and is measurable for all $N\ge \underline{N}$, that is,
+  \begin{align*}
+  (\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
+  \colon
+  \Omega\to 
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+  \qquad
+  \text{is}
+  \qquad
+  \left(
+  \mathcal{A},\mathcal{B}
+  \left(
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+  \right)
+  \right)
+  \text{-measurable.}
+  \end{align*}
+\end{lemma}
+\begin{proof}
+  Let
+  $N\ge\underline{N}$, and let  
+  $\Theta_N$ be the compact parameter space in Assumption~\ref{asu:argmax}. 
+Consider the (constant) correspondence
 \begin{align*}
   \psi
   \colon
@@ -158,8 +197,9 @@ With this assumption we can construct the (constant) correspondence
   \Theta_N
   \,.
 \end{align*}
-This is weakly measurable, because $\Theta_N$ is deterministic and thus
-$\Theta_N\cap O$ is either true or false, that is,
+This is weakly measurable, because $\Theta_N$ is deterministic by assumption.
+Indeed,
+$\Theta_N\cap O\neq\emptyset$ is either true or false, that is,
   \begin{gather*}
     \left\{ 
       \omega\in \Omega
@@ -190,7 +230,7 @@ $\Theta_N\cap O$ is either true or false, that is,
   \R^{N}
     \,.
   \end{gather*}
-  Next consider the (random) objective function of Problem~\ref{dual}, that is,
+  Next, consider the (random) objective function of (the maximize version of) Problem~\ref{dual} , that is,
   \begin{align*}
     &
   G\colon
@@ -268,11 +308,11 @@ $\Theta_N\cap O$ is either true or false, that is,
 }
 \,.
   \end{align*}
-  Clearly, the (random) objective function $G$  is a Caratheodory function. This follows from the continuity of $\varphi^*$ and the measurability 
+  Clearly, the (random) objective function $G$  is a Caratheodory function. This follows from the (assumed) continuity of $\varphi^*$ and the measurability 
   of all random variables included.
   Then
   $(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)(\omega)$ 
-  is the only optimal solution in $\psi(\omega)=\Theta_N$, and thus, by Theorem
+  is (by assumption) the only optimal solution in $\psi(\omega)=\Theta_N$, and thus, by Theorem~\ref{th:argmax},
   the optimal dual solution 
   \begin{align*}
   (\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
@@ -298,4 +338,5 @@ $\Theta_N\cap O$ is either true or false, that is,
   \right)
   \text{-measurable.}
   \end{align*}
-  
+\end{proof}
+
