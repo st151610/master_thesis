@@ -33,12 +33,13 @@
 \begin{assumption}
   \label{asu:ps}
   The propensity score function $\pi$ satisfies
-  \begin{itemize}
+  \begin{enumerate}[label=(\roman*)]
     \item
-      $\pi(x)\in (0,1)$ for all $x\in\R^d$
+      There exists a constant $C_\pi>0$ such that 
+      $\pi(x)>C_\pi$ for all $x\in\mathcal{X}$
     \item
       $\pi$ is continuously differentiable on $\R^d$
-  \end{itemize}
+  \end{enumerate}
 \end{assumption}
 
 Next we show two parametric propensity score models and that meet the assumptions.

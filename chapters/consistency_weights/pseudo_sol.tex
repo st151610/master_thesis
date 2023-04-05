@@ -1,22 +1,29 @@
 The formulation of the Theorems is always "If the optimal solution" exists.
 Next, we want to become independent of this assumption.
-To this end, we will define a compact parameter space $\Theta_N$ and restrict Problem~\ref{dual} to this search space.  
-We shall see that a (pseudo) solution in $\Theta_N$ always exists and is measurable. 
-In the next sections we will prove convergence to the propensity score. Thus the following choice for $\Theta_N$ is natural. 
-
+With hindsight, we want optimal solutions to estimate an oracle parameter $\lambda^*$ well. 
+To this end, we will define this parameter and show that it takes values in a compact set.
+We shall extend this set with a 1-tube to obtain a deterministic compact set (or a constant correspondence).
+Then Theorem~\ref{th:argmax} gives us a measurable solution of the restricted Problem~\ref{dual}.
+If the solution is in the interior, it is a global solution, if it is on the boundary there may be no global solution.
+Thus we call it the restricted, or the pseudo solution.
 Consider 
 the random variable
 \begin{align*}
   \left(
   0_{N},0,
+  \left[
   \varphi^{'}
   \left(
   \frac
   {1}
-  {\pi(X)}
+  {\pi(X_i)}
   \right)
+\right]_{i\in \left\{
+  1,\ldots,N
+\right\}}
   \right)
 \end{align*}
+with values in $\R^N_{\ge 0}\times \R\times \R^N$.
 If there exists $C_{\pi}>0$, such that $\pi(x)\ge C_\pi$ for all $x\in\mathcal{X}$, 
 then 
 the random variable has values in a compact set. 
