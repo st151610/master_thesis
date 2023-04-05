@@ -99,5 +99,48 @@ Thus, we consider
   \end{cases}
 \end{gather*}
 We show, that this choices satisfies Assumption~\ref{asu:objective_f}.
-The first point is met by definition.
+By definition it holds \textit{(i)}.
+For \textit{(ii)} note, that the second derivative on $(0,\infty)$ is $x\mapsto 1/x$. Thus (by the second derivative test), $\varphi$ is strictly convex.
+Clearly it is also twice continuously differentiable.
+For the continuity in $0$ note, that $\lim_{x\to 0} x\log x=0$. 
+For \textit{(iii)} note, that $x\mapsto \log x$ is continuous and strictly non-decreasing on $\R$. 
+Since 
+\begin{align*}
+  \lim_{x\to 0}\log x\ =\ -\infty
+  \qquad
+  \text{and}
+  \qquad
+  \lim_{x\to \infty}\log x\ =\ \infty
+  \,,
+\end{align*}
+and $\varphi^{'}=(x\mapsto \log x +1)$ on $(0,\infty)$, it follows \textit{(iii)}. 
+Finally, it holds $(\varphi^{'})^{-1}=(x\mapsto \exp(x-1))$ on $\R$. 
+Thus, it follows \textit{(iv)}.
+\end{example}
+\begin{example}
+  In a similar setting, the authors of \cite{Zubizarreta2015} choose the sample variance of the weights as objective function, that is,
+\begin{gather*}
+  \varphi
+  \ 
+  \colon
+  \R
+  \ 
+  \to
+  \ 
+  \overline{\R}
+  \,,
+  \qquad
+  x
+  \ 
+  \mapsto
+  \ 
+  \begin{cases}
+    \left(
+      x-\frac
+      {1}
+      {n}
+    \right)^2\ &\text{if}\ x\ge0\,, \\
+    \infty\ &\text{if}\ x<0\,.
+  \end{cases}
+\end{gather*}
 \end{example}

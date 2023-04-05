@@ -2,16 +2,18 @@
   \label{asu:objective_f}
   The objective function $\varphi\colon \R\to\overline{\R}$ of Problem~\ref{bw:1:primal} 
   satisfies the following conditions
-  \begin{itemize}
+  \begin{enumerate}[label=(\roman*)]
     \item
-      $\varphi(0)=0$ and $\varphi(x)=\infty$ for all $x<0$
+      $\varphi(x)=\infty$ for all $x<0$
     \item
-      $\varphi$ is strictly convex and twice continuously differentiable on $(0,\infty)$ with derivatives $\varphi^{'}$ and $\varphi^{''}$
+      $\varphi$ is strictly convex,
+      continuous on $[0,\infty)$,
+      and twice continuously differentiable on $(0,\infty)$ with derivatives $\varphi^{'}$ and $\varphi^{''}$
     \item
       $\varphi^{'}(0,\infty)=\R$
     \item
       the inverse of the derivative $(\varphi^{'})^{-1}$ is continuously differentiable on $\R$.
-  \end{itemize}
+  \end{enumerate}
 \end{assumption}
 The next lemma provides a link to the assumptions on the objective function in Theorem~\ref{cv:ts:th}.
 \newpage
@@ -120,7 +122,7 @@ Since
   by the assumption $\varphi^{'}(0,\infty)=\R$.
   Since $\varphi$ is strictly convex, $\phi(\cdot,x^*)$ is strictly concave. 
   Thus,
-  $z>0$ is the unique maximum in $(0,1)$.
+  $z>0$ is the unique maximum in $(0,\infty)$.
   By the continuity of $\phi(\cdot,x^*)$ on $[0,\infty)$ it follows, that $z$ is the unique maximum on $[0,\infty)$.
   Thus
   \begin{align*}
