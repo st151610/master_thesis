@@ -1,14 +1,20 @@
-The formulation of the Theorems is always "If the optimal solution" exists.
-Next, we want to become independent of this assumption.
-With hindsight, we want optimal solutions to estimate an oracle parameter $\lambda^*$ well. 
-To this end, we will define this parameter and show that it takes values in a compact set.
-We shall extend this set with a 1-tube to obtain a deterministic compact set (or a constant correspondence).
+In the formulation of Theorem~\ref{dual} we encounter "If (...) there exists the optimal solution $(\rho^\dagger,\lambda_0^\dagger,\lambda)$ ... " .
+To be able to study asymptotic properties of the solutions we have to become independent of this assumption.
+There are two observations that help with that.
+First, if we solve Problem~\ref{dual} on a compact search space, there always exists a measurable solution (if the objective function is Caratheodory).
+Second (with hindsight), we want optimal solutions to estimate an oracle parameter $\lambda^*$ well. 
+To this end, we will define a compact parameter space that always contains the oracle parameter $\lambda^*$ and restrict Problem~\ref{dual} to it.
 Then Theorem~\ref{th:argmax} gives us a measurable solution of the restricted Problem~\ref{dual}.
-If the solution is in the interior, it is a global solution, if it is on the boundary there may be no global solution.
+In some cases, this is only a local solution. It becomes global if it is in the interior of the compact parameter space.
 Thus we call it the restricted, or the pseudo solution.
+
 Consider 
-the random variable
+the random vector (the oracle parameter)
 \begin{align*}
+  \lambda^*
+  \ 
+  :=
+  \ 
   \left(
   0_{N},0,
   \left[
@@ -23,28 +29,217 @@ the random variable
 \right\}}
   \right)
 \end{align*}
-with values in $\R^N_{\ge 0}\times \R\times \R^N$.
-If there exists $C_{\pi}>0$, such that $\pi(x)\ge C_\pi$ for all $x\in\mathcal{X}$, 
-then 
-the random variable has values in a compact set. 
-We define $\Theta_N$ to be the 1-tube around this set. 
-Clearly
+with values in 
+$\R^N_{\ge 0}\times \R\times \R^N$
+.
+By Assumption~\ref{asu:objective_f} (continuity of $\varphi^{'}$)
+and Assumption\ref{asu:ps} ($\pi$ is continuous and bounded away from 0)
+there exists (for all $N\in\mathbb{N}$) a compact set 
+$
+\Theta_N\subset
+\R^N_{\ge 0}\times \R\times \R^N
+$
+that contains $\lambda^*$. 
+We employ Theorem~\ref{th:argmax} to show, that there exists a measurable solution to Problem~\ref{dual} restricted to $\Theta_N^1$,
+where 
 \begin{align*}
-  \left(
-  0_{N},0,
-  \varphi^{'}
-  \left(
-  \frac
-  {1}
-  {\pi(X)}
-  \right)
-  \right)
-  \in 
-  \Theta_N
-  ,.
+  \Theta_N^1
+  :=
+  \left\{
+    x\in 
+\R^N_{\ge 0}\times \R\times \R^N
+|
+\norm{x-y}_2\le 1
+\ 
+\text{for some}\ 
+y\in\Theta_N
+  \right\}
+  \,.
 \end{align*}
-Since $\Theta_N$ is deterministic, there exists a measurable solution to Problem~\ref{dual} restricted to $\Theta_N$.
-There are two cases. If the solution is on the boundary of $\Theta_N$, we don't now if it is also a global solution.
-If it is in the interior, we know, that it is also a global solution.
+\begin{lemma}
+  \label{lem:pseud_sol}
+  For all $N\in\mathbb{N}$ there exists a (pseudo) solution
+  \begin{align*}
+    s_N\colon
+    \Omega
+    \to
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+  \end{align*}
+  to
+  Problem~\ref{dual} restricted to $\Theta_N^1$ 
+  that is
+$
+  \left(
+  \mathcal{A},\mathcal{B}
+  \left(
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+  \right)
+  \right)
+$-measurable.
+If $s_N\in \mathrm{int}\, \Theta_N^1$, then it is the global solution
+  $
+  (\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
+  $.
+\end{lemma}
+\begin{proof}
+Consider the (constant) correspondence
+\begin{align*}
+  \psi
+  \colon
+  (\Omega,\mathcal{A},\P)
+  \ 
+  \twoheadrightarrow
+  \ 
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+  \,,
+  \qquad
+  \omega
+  \ 
+  \to
+  \ 
+  \Theta_N^1
+  \,.
+\end{align*}
+This is weakly measurable, because $\Theta_N^1$ is deterministic.
+Indeed,
+$\Theta_N^1\cap O\neq\emptyset$ is either true or false, that is,
+  \begin{gather*}
+    \left\{ 
+      \omega\in \Omega
+      \ 
+      |
+      \ 
+      \psi(\omega)
+      \cap
+      O
+      \neq
+      \emptyset
+    \right\}
+    \ 
+    \in
+    \ 
+    \left\{ \Omega,\emptyset \right\}
+    \subset
+    \mathcal{A}
+    \qquad
+    \text{for all open subsets}
+    \ 
+    O
+    \subset
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+    \,.
+  \end{gather*}
+  Next, consider the (random) objective function of (the maximize version of) Problem~\ref{dual}, that is,
+  \begin{align*}
+    &
+  G\colon
+  \Omega
+  \times
+  \left(
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+  \right)
+  \to
+  \R\cup \left\{
+    -\infty
+  \right\}
+  \intertext{with}
+    &
+  G(\omega,(\rho,\lambda_0,\lambda))
+  \ 
+  =
+  \ 
+  -\infty
+  \qquad 
+  \text{if}\ 
+  \rho_i\neq 0\  \text{for some}\ i>n
+  \,,
+  \\
+  \intertext{and}\qquad
+  &
+  G(\omega,(\rho,\lambda_0,\lambda))
+  \\
+  &
+  \ 
+  =
+  \ 
+  \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \Big[
+    -
+  T_i(\omega)
+  \cdot
+  \varphi^*
+  \!
+  \left( 
+    \rho_i
+    +
+\lambda_0
++
+\inner
+{B(X_i)(\omega)}
+{
+\lambda
+}
+  \right)
+  \ 
+  +
+  \ 
+\lambda_0
++
+\inner
+{B(X_i)(\omega)}
+{
+\lambda
+}
+\Big]
+  \ 
+-
+\ 
+\inner
+{\delta(\omega)}
+{
+  |\lambda|
+}
+\,.
+  \end{align*}
+  Clearly, the (random) objective function $G$  is a Caratheodory function. This follows from the (assumed) continuity of $\varphi^*$ and the measurability 
+  of all random variables included.
+  Since $G$ is also strictly concave, it has a unique argmax $s_N$  in $\Theta_N^1$. 
+  By Theorem~\ref{th:argmax} this is $
+  \left(
+  \mathcal{A},\mathcal{B}
+  \left(
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+  \right)
+  \right)
+$-measurable.
+Furthermore, by the strict concavity of $G$, if $s_N\in \mathrm{int}\,\Theta_N^1$, then it's the global optimal also global. 
+\end{proof}
+
 We will prove later, that with probability going to 1 the latter will be the case.
 Furthermore, we will prove, that the (measurable) solution converges to the random variable in probability.

@@ -1,116 +1,91 @@
-Theorem~\ref{dual_solution_th} tells us that if an optimal solution
-$
-(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
-$
-to Problem~\ref{dual} exists,
-then the unique optimal solutions to Problem~\ref{bw:1:primal} are 
-\begin{gather*}
-  w^\dagger_i
+On the basis of the pseudo solution we can build pseudo weights.
+They are the optimal weights of Problem~\ref{bw:1:primal} if $s_N$ is the global solution. 
+
+We define the (empirical) weights function to be
+\begin{align*}
+  w\colon
+  &
+  \left(
+  \R^d\times \R^{d\cdot N}
+  \right)
+  \times
+  \left(
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+  \right)
   \ 
-  :=
+  \to
   \ 
+  \R^N
+  \\
+  &
+  \left(
+  (x,x_1,\ldots,x_N),(\rho,\lambda_0,\lambda)
+  \right)
+  \ 
+  \mapsto
+  \ 
+  \left[
+  (\varphi^{'})^{-1}
+  \left(
+    \rho_i
+    +
+    \lambda_0
+    +
+    \inner
+    {B(x,x_1,\ldots,x_N)}{\lambda}
+  \right)
+\right]_{i\in \left\{
+  1,\ldots,N
+\right\}}
+\,.
+\end{align*}
+Now we define the pseudo weights function
+\begin{definition}
+  We define the pseudo weights process to be
+  \begin{align*}
+    w^\dagger
+    :=
+    w(\cdot,X_1,\ldots,X_N,s_N)
+    \qquad
+    \text{indexed over}\ 
+    x\in\mathcal{X}
+    \,.
+  \end{align*}
+\end{definition}
+\begin{lemma}
+ It holds
+ \begin{enumerate}[label=(\roman*)]
+   \item
+$w^\dagger(\omega)$ is 
+$
+\left(
+\mathcal{B}(\R^d),\mathcal{B}(\R^N)
+\right)
+$-measurable 
+and contstant on each cell $A_N\in\mathcal{P}_N$ for all $\omega\in\Omega$. 
+\item
+$w^\dagger(X)$ is 
+$
+\left(
+  \mathcal{A},\mathcal{B}(\R^N)
+\right)
+$-measurable 
+ \end{enumerate}
+\end{lemma}
+\begin{proof}
+  This follows from the (assumed) continuity of 
+  $
   (
   \varphi^{'}
   )^{-1}
-  \left(
-    \rho^\dagger_i
-  \ 
-    +
-  \ 
-\lambda_0^\dagger
-  \ 
-+
-  \ 
-\inner
-{B(X_i)}
-{
-\lambda^{\dagger}
-}
-  \right)
-  \qquad
-  \text{for all}\ 
-  i\in
-  \left\{ 1,\ldots,n \right\}
-  \,.
-\end{gather*}
+  $,
+  Lemma~\ref{lem:basis_meas} and the measurability of $s_N$ (see Lemma~\ref{lem:pseud_sol}).
+\end{proof}
 
-This point of view is sufficient from a practical point of view
-(when we are interested in actually computing the optimal weights).
-
-For the subsequent analysis we need to view the weights as random quantities. To this end, we shall introduce the weights process. 
-
-\begin{definition}
-  \label{def:weights_function}
-  We define the weights process to be a stochastic process indexed 
-  over
-  $
-  \mathcal{X}
-  \,
-  \times
-  \,
-  \R^N_{\ge 0}
-  \,
-  \times
-  \,
-  \R
-  \times
-  \,
-  \R^{N}
-  $
-  with values in $\R^N$ such that
-\begin{align*}
-  w
-  \left( 
-  x
-  ,
-  \rho
-  ,
-  \lambda_0
-  ,
-  \lambda
-  \right)
-  \ 
-  :=
-  \ 
-  \left[ 
-    (
-    \varphi^{'}
-    )^{-1}
-    \left( 
-     \rho_i 
-     +
-      \lambda_0
-      +
-      \inner{B(x)}{\lambda}
-    \right)
-  \right]_{i\in \left\{ 1, \ldots,N \right\}}
-    \,.
-\end{align*}
-\end{definition}
-By the measurability of the basis functions (or the basis processes),
-the weights processes is also measurable 
-(the quantities 
-$
-  w
-  \left( 
-  x
-  ,
-  \rho
-  ,
-  \lambda_0
-  ,
-  \lambda
-  \right)
-$
-are random variables).
-The next question is if there are (plausible) assumptions such that the weights processes at a random parameter
-$
-(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
-$
-is measurable.
-To answer this in a good way we need the argmax measurability theorem \cite[Theorem~18.19]{Aliprantis2007}.
-\subsection{Argmax Measurability Theorem}
-\input{chapters/consistency_weights/meas_argmax.tex}
 
 \begin{lemma}
   \label{weights_l_inf}

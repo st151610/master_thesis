@@ -2,11 +2,11 @@
 \contentsline {chapter}{\numberline {2}The Optimization Problem behind the Weights}{9}{chapter.2}%
 \contentsline {subsection}{\numberline {2.0.1}Objective Function}{11}{subsection.2.0.1}%
 \contentsline {subsection}{\numberline {2.0.2}Dual Problem}{14}{subsection.2.0.2}%
-\contentsline {subsection}{\numberline {2.0.3}Propensity Score Function}{17}{subsection.2.0.3}%
-\contentsline {subsection}{\numberline {2.0.4}Pseudo Solutions}{18}{subsection.2.0.4}%
-\contentsline {subsection}{\numberline {2.0.5}Weights Function}{19}{subsection.2.0.5}%
-\contentsline {subsection}{\numberline {2.0.6}Argmax Measurability Theorem}{19}{subsection.2.0.6}%
-\contentsline {subsection}{\numberline {2.0.7}basis}{23}{subsection.2.0.7}%
+\contentsline {subsection}{\numberline {2.0.3}Argmax Measurability Theorem}{17}{subsection.2.0.3}%
+\contentsline {subsection}{\numberline {2.0.4}Propensity Score Function}{18}{subsection.2.0.4}%
+\contentsline {subsection}{\numberline {2.0.5}Pseudo Solutions}{19}{subsection.2.0.5}%
+\contentsline {subsection}{\numberline {2.0.6}basis}{21}{subsection.2.0.6}%
+\contentsline {subsection}{\numberline {2.0.7}Weights Function}{22}{subsection.2.0.7}%
 \contentsline {chapter}{\numberline {3}Consistency of the Weights}{25}{chapter.3}%
 \contentsline {subsection}{\numberline {3.0.1}Consistency of the Dual Solution}{25}{subsection.3.0.1}%
 \contentsline {chapter}{\numberline {4}Asymptotic Analysis}{29}{chapter.4}%
