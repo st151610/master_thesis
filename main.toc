@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {2.0.5}Pseudo Solutions}{21}{subsection.2.0.5}%
 \contentsline {subsection}{\numberline {2.0.6}Weights Function}{22}{subsection.2.0.6}%
 \contentsline {subsection}{\numberline {2.0.7}Argmax Measurability Theorem}{22}{subsection.2.0.7}%
-\contentsline {subsection}{\numberline {2.0.8}basis}{26}{subsection.2.0.8}%
+\contentsline {subsection}{\numberline {2.0.8}basis}{25}{subsection.2.0.8}%
 \contentsline {chapter}{\numberline {3}Consistency of the Weights}{27}{chapter.3}%
 \contentsline {subsection}{\numberline {3.0.1}Consistency of the Dual Solution}{27}{subsection.3.0.1}%
 \contentsline {chapter}{\numberline {4}Asymptotic Analysis}{31}{chapter.4}%

@@ -93,11 +93,4 @@ Qingyuan Zhao and Daniel Percival.
 \newblock Entropy balancing is doubly robust.
 \newblock {\em Journal of Causal Inference}, 5(1):20160010, September 2017.
 
-\bibitem[Zub15]{Zubizarreta2015}
-Jos{\'e}~R. Zubizarreta.
-\newblock Stable {{Weights}} that {{Balance Covariates}} for {{Estimation With
-  Incomplete Outcome Data}}.
-\newblock {\em Journal of the American Statistical Association},
-  110(511):910--922, July 2015.
-
 \end{thebibliography}

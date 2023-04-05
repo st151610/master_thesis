@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1680686707 "main.aux" "main.bbl" "main" 1680687176
+["bibtex main"] 1680688132 "main.aux" "main.bbl" "main" 1680688133
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1650183167 23907 a5f93555796fb564b924339521f10a7c ""
   "literature.bib" 1680619339 74008 ac796195b85a67d7d63569db8925fb23 ""
-  "main.aux" 1680687176 27222 9f525b66306bace85f247e0f9d81dd1b "pdflatex"
+  "main.aux" 1680688133 27294 e22b5ff8c6683c90cf324898e4e55636 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1680687175 "main.tex" "main.pdf" "main" 1680687176
+["pdflatex"] 1680688132 "main.tex" "main.pdf" "main" 1680688133
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1650183167 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1650183167 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -237,7 +237,7 @@
   "chapters/optimization_problem/ass_objective_f.tex" 1680687080 5517 e7a45cf49e9ccc80e40e614173179687 ""
   "chapters/optimization_problem/ass_ps.tex" 1680619339 2022 40a1b06a4327fe36e7ac19e59cb4b012 ""
   "chapters/optimization_problem/dual_form.tex" 1680619339 10989 4cd1866d06c3ee7d8efdabd57dcb9a1d ""
-  "chapters/optimization_problem/ex_objective_f.tex" 1680687174 3059 e2a1975818c5955675816eb379ac8be9 ""
+  "chapters/optimization_problem/ex_objective_f.tex" 1680688127 2618 e6c53e7c7cd50e7060a7aacf0c70e4d8 ""
   "chapters/optimization_problem/main.tex" 1680674597 1715 f8b0f85fbc3050aec0910cad745e9ed0 ""
   "chapters/optimization_problem/primal_problem.tex" 1680619339 4107 ec10a148e6d49d4ec776246b0d17f0d1 ""
   "chapters/optimization_problem/weights_function.tex" 1680619339 5555 5e4b9427ee8e0206283c1f1544ba4226 ""
@@ -246,11 +246,11 @@
   "final_chapters/aa:tools.tex" 1680619339 21654 0b834579fce5891843f1048eb4e5df79 ""
   "final_chapters/aa:weights.tex" 1680619339 6322 20febbf23936a9a4361144dda77c5bfe ""
   "images//unistuttgart_logo_deutsch.jpg" 1680619339 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1680687176 27222 9f525b66306bace85f247e0f9d81dd1b "pdflatex"
-  "main.bbl" 1680686707 3945 a9e152efe0a3c0e9b2901e820b4b0980 "bibtex main"
+  "main.aux" 1680688133 27294 e22b5ff8c6683c90cf324898e4e55636 "pdflatex"
+  "main.bbl" 1680688132 3681 7192ed8fdcee66d811d9bd01647ed314 "bibtex main"
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1680619339 10731 14119d27c2e4cb290c6074428886e234 ""
-  "main.toc" 1680687176 1963 812f2b052f019c3d39e1b37f0e1e1a6a "pdflatex"
+  "main.toc" 1680688133 1963 0f3581c7f002ea33fd34044263b1e13b "pdflatex"
   (generated)
   "main.aux"
   "main.log"
