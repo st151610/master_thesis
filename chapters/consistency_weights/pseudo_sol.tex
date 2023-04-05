@@ -1,0 +1,43 @@
+The formulation of the Theorems is always "If the optimal solution" exists.
+Next, we want to become independent of this assumption.
+To this end, we will define a compact parameter space $\Theta_N$ and restrict Problem~\ref{dual} to this search space.  
+We shall see that a (pseudo) solution in $\Theta_N$ always exists and is measurable. 
+In the next sections we will prove convergence to the propensity score. Thus the following choice for $\Theta_N$ is natural. 
+
+Consider 
+the random variable
+\begin{align*}
+  \left(
+  0_{N},0,
+  \varphi^{'}
+  \left(
+  \frac
+  {1}
+  {\pi(X)}
+  \right)
+  \right)
+\end{align*}
+If there exists $C_{\pi}>0$, such that $\pi(x)\ge C_\pi$ for all $x\in\mathcal{X}$, 
+then 
+the random variable has values in a compact set. 
+We define $\Theta_N$ to be the 1-tube around this set. 
+Clearly
+\begin{align*}
+  \left(
+  0_{N},0,
+  \varphi^{'}
+  \left(
+  \frac
+  {1}
+  {\pi(X)}
+  \right)
+  \right)
+  \in 
+  \Theta_N
+  ,.
+\end{align*}
+Since $\Theta_N$ is deterministic, there exists a measurable solution to Problem~\ref{dual} restricted to $\Theta_N$.
+There are two cases. If the solution is on the boundary of $\Theta_N$, we don't now if it is also a global solution.
+If it is in the interior, we know, that it is also a global solution.
+We will prove later, that with probability going to 1 the latter will be the case.
+Furthermore, we will prove, that the (measurable) solution converges to the random variable in probability.

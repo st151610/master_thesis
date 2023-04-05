@@ -1209,6 +1209,10 @@ INPUT ./chapters/optimization_problem/dual_form.tex
 INPUT chapters/optimization_problem/dual_form.tex
 INPUT ./chapters/optimization_problem/dual_form.tex
 INPUT chapters/optimization_problem/dual_form.tex
+INPUT ./chapters/consistency_weights/pseudo_sol.tex
+INPUT chapters/consistency_weights/pseudo_sol.tex
+INPUT ./chapters/consistency_weights/pseudo_sol.tex
+INPUT chapters/consistency_weights/pseudo_sol.tex
 INPUT ./chapters/optimization_problem/weights_function.tex
 INPUT chapters/optimization_problem/weights_function.tex
 INPUT ./chapters/optimization_problem/weights_function.tex
