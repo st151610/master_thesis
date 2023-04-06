@@ -71,7 +71,7 @@ and contstant on each cell $A_N\in\mathcal{P}_N$ for all $\omega\in\Omega$.
 $w^\dagger(X)$ is 
 $
 \left(
-  \mathcal{A},\mathcal{B}(\R^N)
+  \sigma(D_N,X),\mathcal{B}(\R^N)
 \right)
 $-measurable 
  \end{enumerate}
@@ -309,3 +309,77 @@ $-measurable
      \end{gather*}
 \end{proof}
 
+\begin{lemma}
+  \begin{enumerate}[label=(\roman*)]
+    \item
+      $\norm{B(X,X_1,\ldots,X_N)}_2\lesssim 1$ 
+      \item
+      $
+      \sum_{i=1}^{N}
+        B_k(X,X_1,\ldots,X_N)
+        =1
+      $
+      for all $i\in \left\{
+        1,\ldots,N
+      \right\}$
+      \item
+      \begin{align*}
+        \frac
+        {1}
+        {N}
+        \sum_{i,k=1}^{N}
+            \left|
+        B_k(X,X_1,\ldots,X_N)
+        \cdot
+            \varphi
+            \left(
+              \frac
+              {1}
+              {\pi(X_k)}
+            \right)
+            \ 
+            -
+            \ 
+            \varphi
+            \left(
+              \frac
+              {1}
+              {\pi(X_i)}
+            \right)
+            \right|
+            \ 
+            \to
+            \ 
+            0
+            \qquad
+            \text{for}
+            \ 
+            N\to\infty
+          \end{align*}
+\item
+      \begin{align*}
+        \frac
+        {1}
+        {\sqrt{N}}
+        \sum_{i,k=1}^{N}
+        \sup_{z\in\R}
+            \left|
+        B_k(X,X_1,\ldots,X_N)
+        \cdot
+        F_{Y(1)}(z|X_k)
+            \ 
+            -
+            \ 
+        F_{Y(1)}(z|X_i)
+            \right|
+            \ 
+            \to
+            \ 
+            0
+            \qquad
+            \text{for}
+            \ 
+            N\to\infty
+      \end{align*}
+\end{enumerate}
+\end{lemma}
