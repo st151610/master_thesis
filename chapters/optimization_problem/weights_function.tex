@@ -383,3 +383,114 @@ $-measurable
       \end{align*}
 \end{enumerate}
 \end{lemma}
+\begin{proof}
+If at least one 
+$
+B_k(X,X_1,\ldots,X_N)
+>
+0
+$, the basis functions sum to 1. If $B_k(X,X_1,\ldots,X_N)=0$ for all basis functions, the sum is 0.
+Thus
+\begin{align}
+  \label{8882}
+  &
+  \sum_{k=1}^{N}
+B_k(X,X_1,\ldots,X_N)
+  \ 
+  \in
+  \ 
+  \left\{ 0,1 \right\}
+  \notag
+  \intertext{
+Since $B_i(X_i,X_1,\ldots,X_N)>0$, it holds
+  }
+  &
+  \sum_{k=1}^{N}
+  B_k(X_i)
+  \ 
+  =
+ \  
+  1
+  \qquad
+  \text{for all}\ 
+  i\in
+  \left\{ 1,\ldots,N \right\}
+  \,.
+\end{align}
+We prove \textit{(i)}.
+Since 
+\begin{gather*}
+B_k(X,X_1,\ldots,X_N)
+\ 
+\in
+\ 
+[0,1]
+\qquad
+\text{for all}\ 
+k\in \left\{ 1,\ldots,N \right\}
+\,,
+\end{gather*}
+it holds
+\begin{gather*}
+  \label{basis_l2_bdd}
+  \norm{
+B(X,X_1,\ldots,X_N)
+}_2^2
+  \ 
+  =
+  \ 
+  \sum_{k=1}^{N} 
+B(X,X_1,\ldots,X_N)
+  ^2
+  \ 
+  \le
+  \ 
+  \sum_{k=1}^{N} 
+B(X,X_1,\ldots,X_N)
+  \ 
+  \in
+  \ 
+  \left\{ 0,1 \right\}
+\,.
+\end{gather*}
+
+ Note, that for all continuous functions $f\colon \R^d\to \R$ it holds
+ \begin{align}
+   \begin{split}
+   &
+   \left|
+  \sum_{k=1}^{N}
+    B_k(X_i,X_1,\ldots,X_N)\cdot 
+    f(X_k)
+    -
+    f(X_i)
+   \right|
+   \\
+   &
+   \ 
+   \le
+   \ 
+  \sum_{k=1}^{N}
+    B_k(X_i,X_1,\ldots,X_N)
+    \mathbf{1}\left\{
+      X_k\in A_N(X_i)
+    \right\}
+    \left|
+    f(X_k)
+    -
+    f(X_i)
+    \right|
+   \\
+   &
+   \ 
+   \le
+   \ 
+   \omega
+   \left(
+    f,h_N^d
+   \right)
+   \,,
+   \end{split}
+ \end{align}
+ where $\omega(f,\cdot)$ is the modulus of continuity of $f$. 
+\end{proof}
