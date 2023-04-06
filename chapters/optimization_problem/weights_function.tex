@@ -89,10 +89,7 @@ $-measurable
 
 \begin{lemma}
   \label{weights_l_inf}
-  Let Assumption~\ref{asu:existence_sol}, 
-  Assumption~\ref{asu:basis},
-  and Assumption~\ref{asu:objective_f} hold true.
-  Then it holds 
+  It holds 
   \begin{gather*}
     w_i^\dagger(X)
   \ 
@@ -113,11 +110,7 @@ $-measurable
   \end{gather*}
 \end{lemma}
 \begin{proof}
-  Let $N\ge \underline{N}$.
-  By Assumption~\ref{asu:basis} it holds 
-  $
-    \text{for all}\ 
-  $ 
+  It holds
   \begin{gather}
     \label{3967}
     \left| 
@@ -125,20 +118,14 @@ $-measurable
      +
       \lambda_0
       +
-      \inner{B(x)}{\lambda}
+      \inner{B(X,X_1,\ldots,X_N)}{\lambda}
     \right|
     \ 
     \lesssim
     \ 
     \norm{(\rho,\lambda_0,\lambda)}_2
-    \,.
-  \end{gather}
-  $
-    \text{for all}
-    \ 
-    x\in\mathcal{X}
-    \
-    \text{and for all}\ 
+    \qquad
+    \text{for all}\ 
     (\rho,\lambda,\lambda_0)
     \in
   \R^N_{\ge 0}
@@ -146,57 +133,22 @@ $-measurable
   \R
   \times
   \R^{N}
-  $.
-  By Assumption~\ref{asu:existence_sol}, 
-  there exists a (compact) parameter space
-  $\Theta_N$ around the origin, with $\mathrm{diam}\,  \Theta_N<\infty$, 
-  such that for all data sets $D_N$ it holds  $(\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)\in\Theta_N$.
-  By Assumption~\ref{asu:objective_f}, $(\varphi^{'})^{-1}$ is non-decreasing and continuous. Thus
-    by \eqref{3967} it holds
-  \begin{align*}
-    \left| 
-    w_i^\dagger(x)
-    \right|
-    \ 
-    \lesssim
-    \ 
-    \left| 
-    (\varphi^{'})^{-1}
-    \left( 
-      \,
-      -
-    \norm{(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)}_2
-    \right)
-    \right|
-    \ 
-    +
-    \ 
-    \left| 
-    (\varphi^{'})^{-1}
-    \left( 
-      \,
-    \norm{(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)}_2
-    \right)
-    \right|
-    \ 
-    \ 
-    <
-    \ 
-    \infty
-  \end{align*}
-  for all $x\in\mathcal{X}$
-  and all $i\in \left\{ 1,\ldots,n \right\}$
-  .
+    \,.
+  \end{gather}
+  By Assumption~\ref{asu:objective_f}, $(\varphi^{'})^{-1}$ is non-decreasing and continuous. 
+  Since $s_N\in\Theta_N$ and $\Theta_N$ is compact and deterministic, it follows 
+  $\norm{s_N}_2 \in L^\infty(\P)$, and
+    by \eqref{3967} $w_i^\dagger(X) \in L^\infty (\P)$ for all $i\in \left\{
+      1,\ldots,N
+    \right\}$ .
 \end{proof}
 \begin{lemma}
   \label{w.Z=0}
-  Let Assumption~\ref{aa:assumption:2} and Assumption~\ref{aa:assumption:3} hold true.
-  Furthermore, 
-  let
-  $N\ge\underline{N}$, and
-  let
+  Let
   $Z\in L^1(\P)$
-  be a random variable that is independent of $D_N$ 
+  be a random variable that is independent of $D_N=(T_i,X_i)_{i\in \left\{
+    1,\ldots,N
+  \right\}}$ 
   with
   $
 \E
@@ -214,7 +166,7 @@ $-measurable
   \begin{gather*}
   \E
   \left[
-  w_i(X,\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+    w_i^\dagger(X)
   \cdot Z
   \right]
   =0
@@ -226,11 +178,9 @@ $-measurable
   \end{gather*}
 \end{lemma}
 \begin{proof}
-  Let
-  $N\ge\underline{N}$.
   We write
   \begin{gather*}
-  w_i(X,\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+    w_i^\dagger(X)
   \ 
   =
   \ 
@@ -320,6 +270,12 @@ $-measurable
   \qquad
   \text{almost surely.}
   \end{align*}
+  Note, that $w^\dagger(X)$ is 
+  $
+  \left(
+  \sigma(D_N,X),\mathcal{B}(\R)
+  \right)
+  $-measurable.  
   Thus
   \begin{gather*}
     \E
