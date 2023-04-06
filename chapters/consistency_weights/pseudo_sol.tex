@@ -3,8 +3,8 @@ To be able to study asymptotic properties of the solutions we have to become ind
 There are two observations that help with that.
 First, if we solve Problem~\ref{dual} on a compact search space, there always exists a measurable solution (if the objective function is Caratheodory).
 Second (with hindsight), we want optimal solutions to estimate an oracle parameter $\lambda^*$ well. 
-To this end, we will define a compact parameter space that always contains the oracle parameter $\lambda^*$ and restrict Problem~\ref{dual} to it.
-Then Theorem~\ref{th:argmax} gives us a measurable solution of the restricted Problem~\ref{dual}.
+To this end, we will define a (random) compact parameter space that always contains the oracle parameter $\lambda^*$ and restrict Problem~\ref{dual} to it.
+Then Theorem~\ref{th:argmax} gives us (under weak measurability conditions) a measurable solution of the restricted Problem~\ref{dual}.
 In some cases, this is only a local solution. It becomes global if it is in the interior of the compact parameter space.
 Thus we call it the restricted, or the pseudo solution.
 
@@ -30,9 +30,225 @@ the random vector (the oracle parameter)
   \right)
 \end{align*}
 with values in 
-$\R^N_{\ge 0}\times \R\times \R^N$
-.
-By Assumption~\ref{asu:objective_f} (continuity of $\varphi^{'}$)
+$\R^N_{\ge 0}\times \R\times \R^N$.
+Clearly, $\lambda^*$ is 
+\begin{align*}
+ \lambda^*
+ \qquad
+ \text{is}
+ \qquad
+ \left(
+( 
+\sigma
+\left( 
+  (T_i,X_i)_{i\in 
+\left\{ 1,\ldots,N \right\}
+  } 
+\right)
+,
+\mathcal{B}
+\left( 
+\R^N_{\ge 0}\times \R\times \R^N
+\right)
+\right)
+-\text{measurable}
+\,.
+\end{align*}
+Next we define for $N\in\mathbb{N}$ the correspondence  
+\begin{align*}
+  \Theta_N\colon
+  &
+  \left( 
+  \Omega,
+\sigma
+\left( 
+  (T_i,X_i)_{i\in 
+\left\{ 1,\ldots,N \right\}
+  } 
+\right)
+  \right)
+  \ 
+\to
+  \ 
+\R^N_{\ge 0}\times \R\times \R^N
+\\
+&
+\omega
+  \ 
+\mapsto
+  \ 
+\left\{ 
+  \left( 
+  \rho,\lambda_0,\lambda
+  \right)
+  \ 
+  \in
+  \ 
+\R^N_{\ge 0}\times \R\times \R^N
+  \ 
+\colon
+  \ 
+\norm{
+  \left( 
+  \rho,\lambda_0,\lambda
+  \right)
+-\lambda^*}_2\le 1
+\right\}
+\,.
+\end{align*}
+
+\begin{lemma}
+  \label{Theta_maes}
+  For all $N\in\mathbb{N}$ it holds that 
+  $\Theta_N$ is a weakly-measurable correspondence  with non-empty compact values.
+\end{lemma}
+\begin{proof}
+  Let $N\in\mathbb{N}$. 
+  Since 
+  \begin{align*}
+  \Theta_N(\omega)
+  \ 
+  \text{
+  is the closed unit ball
+  in
+  }
+  \ 
+\R^N_{\ge 0}\times \R\times \R^N
+\quad 
+\text{around}
+\quad 
+  \lambda^*(\omega) 
+  \,,
+  \end{align*}
+  it is non-empty and compact for all $\omega\in\Omega$.
+  To prove that $\Theta_N$ is weakly-measurable,
+  let 
+  $
+  O\subset
+\R^N_{\ge 0}\times \R\times \R^N
+  $
+  be an open set and note, that
+  \begin{align*}
+    \left\{ 
+      \Theta_N\cap O \neq \emptyset
+    \right\}
+    &
+    \ 
+    =
+    \ 
+    \left\{ 
+      \exists
+  \left( 
+  \rho,\lambda_0,\lambda
+  \right)
+  \ 
+  \in
+  \ 
+  O
+\ 
+\colon
+\ 
+\norm{
+  \left( 
+  \rho,\lambda_0,\lambda
+  \right)
+-\lambda^*}_2\le 1
+    \right\}
+    \\
+    &
+    \ 
+    =
+    \ 
+    \left\{ 
+      \exists
+  \left( 
+  \rho,\lambda_0,\lambda
+  \right)
+  \ 
+  \in
+  \ 
+  O
+  \cap
+  \left( 
+  \mathbb{Q}^N_{\ge 0}\times \mathbb{Q}\times \mathbb{Q}^N
+  \right)
+\ 
+\colon
+\ 
+\norm{
+  \left( 
+  \rho,\lambda_0,\lambda
+  \right)
+-\lambda^*}_2\le 1
+    \right\}
+    \\
+&
+    \ 
+    =
+    \ 
+    \bigcup_{
+  \left( 
+  \rho,\lambda_0,\lambda
+  \right)
+  \ 
+  \in
+  \ 
+  O
+  \cap
+  \left( 
+  \mathbb{Q}^N_{\ge 0}\times \mathbb{Q}\times \mathbb{Q}^N
+  \right)
+    }
+    \left\{ 
+\norm{
+  \left( 
+  \rho,\lambda_0,\lambda
+  \right)
+-\lambda^*}_2\le 1
+    \right\}
+    \,.
+  \end{align*}
+  Since
+  \begin{align*}
+    \left\{ 
+\norm{
+  \left( 
+  \rho,\lambda_0,\lambda
+  \right)
+-\lambda^*}_2\le 1
+    \right\}
+    \in
+\sigma
+\left( 
+  (T_i,X_i)_{i\in 
+\left\{ 1,\ldots,N \right\}
+  } 
+\right)
+\quad
+\text{for all}\quad
+  \left( 
+  \rho,\lambda_0,\lambda
+  \right)
+  \in
+\R^N_{\ge 0}\times \R\times \R^N
+\,,
+  \end{align*}
+  and the union is countable, it follows
+  $
+    \left\{ 
+      \Theta_N\cap O \neq \emptyset
+    \right\}
+    \in
+\sigma
+\left( 
+  (T_i,X_i)_{i\in 
+\left\{ 1,\ldots,N \right\}
+  } 
+\right)
+  $.
+  Thus $\Theta_N$ is weakly-measurable.
+\end{proof}
+  By Assumption~\ref{asu:objective_f} (continuity of $\varphi^{'}$)
 and Assumption\ref{asu:ps} ($\pi$ is continuous and bounded away from 0)
 there exists (for all $N\in\mathbb{N}$) a compact set 
 $
@@ -73,11 +289,11 @@ We write $D_N:=(T_i,X_i)_{i\in \left\{
   \R^{N}
   \end{align*}
   to
-  Problem~\ref{dual} restricted to $\Theta_N^1$ 
+  Problem~\ref{dual} restricted to $\Theta_N$ 
   that is
-$
+  \begin{align*}
   \left(
-    \sigma(D_N),\mathcal{B}
+    \sigma \left( \left( T_i,X_i \right)_{i\in \left\{ 1,\ldots,N \right\}} \right),\mathcal{B}
   \left(
   \R^N_{\ge 0}
   \times
@@ -86,74 +302,30 @@ $
   \R^{N}
   \right)
   \right)
-$-measurable.
-If $s_N\in \mathrm{int}\, \Theta_N^1$, then it is the global solution
+  -\text{measurable}
+  \,.
+  \end{align*}
+If $s_N\in \mathrm{int}\, \Theta_N$, then it is the global solution
   $
   (\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
   $.
 \end{lemma}
 \begin{proof}
-Consider the (constant) correspondence
-\begin{align*}
-  \psi
-  \colon
-  (\Omega,\mathcal{A},\P)
-  \ 
-  \twoheadrightarrow
-  \ 
-  \R^N_{\ge 0}
-  \times
-  \R
-  \times
-  \R^{N}
-  \,,
-  \qquad
-  \omega
-  \ 
-  \to
-  \ 
-  \Theta_N^1
-  \,.
-\end{align*}
-This is weakly measurable, because $\Theta_N^1$ is deterministic.
-Indeed,
-$\Theta_N^1\cap O\neq\emptyset$ is either true or false, that is,
-  \begin{gather*}
-    \left\{ 
-      \omega\in \Omega
-      \ 
-      |
-      \ 
-      \psi(\omega)
-      \cap
-      O
-      \neq
-      \emptyset
-    \right\}
-    \ 
-    \in
-    \ 
-    \left\{ \Omega,\emptyset \right\}
-    \subset
-    \sigma(D_N)
-    \qquad
-    \text{for all open subsets}
-    \ 
-    O
-    \subset
-  \R^N_{\ge 0}
-  \times
-  \R
-  \times
-  \R^{N}
-    \,.
-  \end{gather*}
-  Next, consider the (random) objective function of (the maximize version of) Problem~\ref{dual}, that is,
+  By Lemma~\ref{Theta_maes}
+  the correspondence $\Theta_N$ satisfies the conditions of
+  Theorem~\ref{th:argmax}.
+Next, we consider the (random) objective function of (the maximize version of) Problem~\ref{dual}, that is,
   \begin{align*}
     &
   G\colon
   \left(
-  \Omega,\sigma(D_N)
+  \Omega,
+\sigma
+\left( 
+  (T_i,X_i)_{i\in 
+\left\{ 1,\ldots,N \right\}
+  } 
+  \right)
   \right)
   \times
   \left(
@@ -231,10 +403,12 @@ $\Theta_N^1\cap O\neq\emptyset$ is either true or false, that is,
   Clearly, the (random) objective function $G$  is a Caratheodory function
   . This follows from the (assumed) continuity of $\varphi^*$ and the measurability 
   of all random variables included.
-  Since $G$ is also strictly concave, it has a unique argmax $s_N$  in $\Theta_N^1$. 
+  Since $G$ is also strictly concave, it has a unique argmax $s_N$  in $\Theta_N$. 
   By Theorem~\ref{th:argmax} this is $
   \left(
-    \sigma(D_N),\mathcal{B}
+    \sigma
+    \left( \left( T_i,X_i \right)_{i\in \left\{ 1,\ldots,N \right\}}\right)
+    ,\mathcal{B}
   \left(
   \R^N_{\ge 0}
   \times
@@ -244,8 +418,8 @@ $\Theta_N^1\cap O\neq\emptyset$ is either true or false, that is,
   \right)
   \right)
 $-measurable.
-Furthermore, by the strict concavity of $G$, if $s_N\in \mathrm{int}\,\Theta_N^1$, then it's the global optimal also global. 
+Furthermore, by the strict concavity of $G$,
+if $s_N\in \mathrm{int}\,\Theta_N$, then it's the global optimal solution. 
 \end{proof}
-
 We will prove later, that with probability going to 1 the latter will be the case.
 Furthermore, we will prove, that the (measurable) solution converges to the random variable in probability.
