@@ -310,6 +310,73 @@ $-measurable
 \end{proof}
 
 \begin{lemma}
+  For all continuous functions $f\colon \R^d\to \R$ it holds
+ \begin{align}
+   \begin{split}
+   &
+   \left|
+  \sum_{k=1}^{N}
+    B_k(X,X_1,\ldots,X_N)\cdot 
+    f(X_k)
+    -
+    f(X)
+   \right|
+   \ 
+   \le
+   \ 
+   \omega
+   \left(
+    f,h_N^d
+   \right)
+   \,,
+   \end{split}
+ \end{align}
+ where $\omega(f,\cdot)$ is the modulus of continuity of $f$. 
+
+\end{lemma}
+
+\begin{proof}
+  \begin{align}
+   \begin{split}
+   &
+   \left|
+  \sum_{k=1}^{N}
+    B_k(X_i,X_1,\ldots,X_N)\cdot 
+    f(X_k)
+    -
+    f(X_i)
+   \right|
+   \\
+   &
+   \ 
+   \le
+   \ 
+  \sum_{k=1}^{N}
+    B_k(X_i,X_1,\ldots,X_N)
+    \mathbf{1}\left\{
+      X_k\in A_N(X_i)
+    \right\}
+    \left|
+    f(X_k)
+    -
+    f(X_i)
+    \right|
+   \\
+   &
+   \ 
+   \le
+   \ 
+   \omega
+   \left(
+    f,h_N^d
+   \right)
+   \,,
+   \end{split}
+ \end{align}
+
+\end{proof}
+
+\begin{lemma}
   \begin{enumerate}[label=(\roman*)]
     \item
       $\norm{B(X,X_1,\ldots,X_N)}_2\lesssim 1$ 
@@ -329,7 +396,7 @@ $-measurable
         {N}
         \sum_{i,k=1}^{N}
             \left|
-        B_k(X,X_1,\ldots,X_N)
+        B_k(X_i,X_1,\ldots,X_N)
         \cdot
             \varphi
             \left(

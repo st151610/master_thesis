@@ -322,6 +322,8 @@ with
      \left( 
 \sum_{i=1} 
   ^N
+  T_i
+  \cdot
   \varphi^*
   \!
   \left( 
@@ -338,9 +340,8 @@ with
   \ 
   -
 \ 
-\sum_{i=1}^{N} 
 \lambda_0
-+
+-
 \inner
 {B(X_i)}
 {
@@ -362,7 +363,9 @@ $g$ is a continuously differentiable convex function with gradient
      \frac{1}{N}
      \left( 
 \sum_{i=1} 
-  ^n
+  ^N
+  T_i
+  \cdot
   (
   \varphi^{'}
   )
@@ -385,7 +388,6 @@ $g$ is a continuously differentiable convex function with gradient
   \ 
   -
   \ 
-  \sum_{i=1}^{N} 
   \left[ 
     B(X_i)^\top,1,0_n^\top
   \right]^\top
@@ -421,7 +423,9 @@ it holds
    \frac{1}{N}
   \left( 
 \sum_{i=1} 
-  ^n
+  ^N
+  T_i
+  \cdot
   (
   \varphi^{'}
   )
@@ -440,7 +444,6 @@ it holds
   \ 
   -
   \ 
-  \sum_{i=1}^{N} 
   \left[ 
     B(X_i)^\top,1,0_n^\top
   \right]
@@ -475,8 +478,9 @@ it holds
    \ 
    \frac{1}{N}
 \sum_{i=1} 
-  ^n
+  ^N
   \left( 
+    T_i\cdot
   (
   \varphi^{'}
   )
@@ -523,6 +527,169 @@ it holds
 \lambda^*_{\varphi^{'}\circ\,1/\pi}
   |
 }
+\\
+   &
+   \ 
+   \ge
+   \ 
+   -
+   \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left|
+   \left( 
+     T_i\cdot
+  (
+  \varphi^{'}
+  )
+  ^{-1}
+  \!
+  \left( 
+\inner
+{B(X_i)}
+{
+\lambda^*_{\varphi^{'}\circ\,1/\pi}
+}
+  \right)
+  \ 
+  -
+  \ 
+  1
+  \right)
+  \left[ 
+    B(X_i)^\top,1,e_i^\top
+  \right]
+  \cdot
+  \begin{bmatrix}
+    \Delta
+    \\
+    \Delta_0
+    \\
+    \Delta_\rho
+  \end{bmatrix}
+  \right|
+    \ 
+  -
+  \ 
+  \inner{\delta}
+  {|
+\Delta
+  |
+}
 \end{align*}
+\subsection*{first term}
+By the Cauchy-Schwarz inequality, Lemma (basis) it holds
+It holds
+\begin{align*}
+  \left|
+   \left[ 
+    B(X_i)^\top,1,e_i^\top
+  \right]
+  \cdot
+  \begin{bmatrix}
+    \Delta
+    \\
+    \Delta_0
+    \\
+    \Delta_\rho
+    \end{bmatrix}
+  \right|
+  \lesssim
+  \varepsilon
+  \,.
+\end{align*}
+Furthermore,
+\begin{align*}
+  &
+    \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \left|
+   \left( 
+     T_i\cdot
+  (
+  \varphi^{'}
+  )
+  ^{-1}
+  \!
+  \left( 
+\inner
+{B(X_i)}
+{
+\lambda^*_{\varphi^{'}\circ\,1/\pi}
+}
+  \right)
+  \ 
+  -
+  \ 
+  1
+  \right)
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+    \frac{1}{N}
+\sum_{i=1} 
+^{N}
+\left|
+  1-
+  \frac
+  {T_i}
+  {\pi(X_i)}
+\right|
+\\
+&
+\qquad
++
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+\omega
+\left(
+  (
+  \varphi^{'}
+  )
+  ^{-1}
+  ,
+  \left|
+    \sum_{k=1}^{N}
+  B_k(X_i)
+  \cdot
+  \varphi^{'}
+  \left(
+    \frac
+    {1}
+    {\pi(X_k)}
+  \right)
+  -
+  \varphi^{'}
+  \left(
+    \frac
+    {1}
+    {\pi(X_i)}
+  \right)
+  \right|
+  \right)
+\end{align*}
+The firs term goes to 0 by the wlln.
+By Lemma basis it follows for the second term
+\begin{align*}
+\omega
+\left(
+  (
+  \varphi^{'}
+  )
+  ^{-1}
+  ,
+  \omega(
+  \varphi^{'}
+  ,
+  h_N^d
+  )
+  \right)
+  \to 0
+\end{align*}
+For the 
  \end{proof}
 

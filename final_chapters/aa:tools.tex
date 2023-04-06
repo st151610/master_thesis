@@ -669,7 +669,7 @@ for some $k<2$
   N\in\mathbb{N}
   \,,
 \end{gather*}
-such that for all $(\lambda,\lambda_0)\in\R^{N+1}$ and for all $N\in\mathbb{N}$ the function
+for all $N\in\mathbb{N}$ the function
 \begin{gather}
   \label{ghost_function}
   \mathcal{X}
@@ -687,7 +687,7 @@ such that for all $(\lambda,\lambda_0)\in\R^{N+1}$ and for all $N\in\mathbb{N}$ 
     \left\{ 
       \sup_{y\in A_N(x)}
       \left| 
-      w(y,\lambda,\lambda_0)
+      w^\dagger(y)
       -
       \frac{1}{\pi(y)}
       \right|
@@ -698,7 +698,7 @@ such that for all $(\lambda,\lambda_0)\in\R^{N+1}$ and for all $N\in\mathbb{N}$ 
     \right\}
   }
   \left( 
-      w(x,\lambda,\lambda_0)
+    w^\dagger(x)
       -
       \frac{1}{\pi(x)}
   \right)
@@ -837,10 +837,11 @@ It then holds the statement of Assumption~\ref{aa:assumption:1}.
   We want to employ Lemma~\ref{vdv_coro}. 
   To do this, the crucial observation is, that
   \begin{gather*}
-    w(\cdot,\lambda,\lambda_0)
+    w^\dagger(\omega)
     \quad
     \text{is constant on each cell}\ 
     A_N\in\mathcal{P}_N
+    \ \text{for all}\ \omega\in\Omega
     \,.
   \end{gather*}
   Thus, the regularity of the function \eqref{ghost_function}
@@ -905,6 +906,10 @@ and satisfies the requirements of Lemma~\ref{vdv_coro}.
 Since $V=d/\alpha \in (0,2)$ by $\alpha>d/2$, 
 applying Lemma~\ref{vdv_coro} finishes the proof.
 \end{proof}
+\begin{remark}
+  Note, that we only get $L^2(\P_X)$ bracketing numbers in this way. If we assume, that all functions in $\mathcal{F}$ are independent of $(T,Y)$
+  we readily obtain $L^2(\P)$ bracketing numbers. Note, that $w^\dagger(X)$ and $1/\pi(X)$ are independent of $(T,Y)$.  
+\end{remark}
 In the next examples we show the concrete applications of this Lemma.
 \begin{example}
 Let $d\in\R$ and assume $\pi(\cdot)$ follows a logistic regression model. Then there exist $(\beta_0,\beta)\in\R^{d+1}$ such that
