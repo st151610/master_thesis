@@ -56,6 +56,9 @@ y\in\Theta_N
   \right\}
   \,.
 \end{align*}
+We write $D_N:=(T_i,X_i)_{i\in \left\{
+  1,\ldots,N
+\right\}}$.
 \begin{lemma}
   \label{lem:pseud_sol}
   For all $N\in\mathbb{N}$ there exists a (pseudo) solution
@@ -74,7 +77,7 @@ y\in\Theta_N
   that is
 $
   \left(
-  \mathcal{A},\mathcal{B}
+    \sigma(D_N),\mathcal{B}
   \left(
   \R^N_{\ge 0}
   \times
@@ -132,7 +135,7 @@ $\Theta_N^1\cap O\neq\emptyset$ is either true or false, that is,
     \ 
     \left\{ \Omega,\emptyset \right\}
     \subset
-    \mathcal{A}
+    \sigma(D_N)
     \qquad
     \text{for all open subsets}
     \ 
@@ -149,7 +152,9 @@ $\Theta_N^1\cap O\neq\emptyset$ is either true or false, that is,
   \begin{align*}
     &
   G\colon
-  \Omega
+  \left(
+  \Omega,\sigma(D_N)
+  \right)
   \times
   \left(
   \R^N_{\ge 0}
@@ -223,12 +228,13 @@ $\Theta_N^1\cap O\neq\emptyset$ is either true or false, that is,
 }
 \,.
   \end{align*}
-  Clearly, the (random) objective function $G$  is a Caratheodory function. This follows from the (assumed) continuity of $\varphi^*$ and the measurability 
+  Clearly, the (random) objective function $G$  is a Caratheodory function
+  . This follows from the (assumed) continuity of $\varphi^*$ and the measurability 
   of all random variables included.
   Since $G$ is also strictly concave, it has a unique argmax $s_N$  in $\Theta_N^1$. 
   By Theorem~\ref{th:argmax} this is $
   \left(
-  \mathcal{A},\mathcal{B}
+    \sigma(D_N),\mathcal{B}
   \left(
   \R^N_{\ge 0}
   \times
