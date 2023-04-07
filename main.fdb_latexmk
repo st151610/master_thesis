@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1680876213 "main.aux" "main.bbl" "main" 1680876509 0
+["bibtex main"] 1680878025 "main.aux" "main.bbl" "main" 1680878178 0
   "./literature.bib" 1680496697 74008 ac796195b85a67d7d63569db8925fb23 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1679564905 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1680876509 26826 4854d12b9cf73a51f9a4ac6bbdfcf8e9 "pdflatex"
+  "main.aux" 1680878177 27087 155882c170c2fbf88bc45555245f43af "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1680876503 "main.tex" "main.pdf" "main" 1680876509 0
+["pdflatex"] 1680878171 "main.tex" "main.pdf" "main" 1680878178 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1679564905 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1679564905 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1679564905 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -237,17 +237,17 @@
   "chapters/pseudo_weights/main.tex" 1680869120 739 f5938f4b90a3ca60eea5f2a14396f03d ""
   "chapters/pseudo_weights/meas_argmax.tex" 1680804454 2783 a45372617aef7d129d9cd860b4ed6e50 ""
   "chapters/pseudo_weights/pseudo_sol.tex" 1680804365 6602 b51e6e383e6388d3f4d6303c4ade60e8 ""
-  "chapters/pseudo_weights/weights_process.tex" 1680876502 4604 b7c87c802637ea66cbce7f4a69c4eb39 ""
+  "chapters/pseudo_weights/weights_process.tex" 1680878170 5183 0c98018235ab2cff7af6add41ea4d028 ""
   "final_chapters/aa:dual.tex" 1680361737 17149 1b69c09e951af675d531b18d734dfc8b ""
   "final_chapters/aa:mean.tex" 1679489813 37402 5a176fb16ed955d13aefb61a474dc9c4 ""
   "final_chapters/aa:tools.tex" 1680799128 21901 343d4f18e0854c372fe4474f6c74d9d2 ""
   "final_chapters/aa:weights.tex" 1679386332 6322 20febbf23936a9a4361144dda77c5bfe ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1680876509 26826 4854d12b9cf73a51f9a4ac6bbdfcf8e9 "pdflatex"
-  "main.bbl" 1680876214 3655 43b61c63b7ca51c6bec0bee54f0e03df "bibtex main"
-  "main.out" 1680876505 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1680878177 27087 155882c170c2fbf88bc45555245f43af "pdflatex"
+  "main.bbl" 1680878025 3655 43b61c63b7ca51c6bec0bee54f0e03df "bibtex main"
+  "main.out" 1680878173 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1680860745 10797 d63f4d54fe32fd6e59b8debd761d578a ""
-  "main.toc" 1680876509 1884 b8f581b3cbf40ff950bb56ca271d146c "pdflatex"
+  "main.toc" 1680878177 1884 91e0aef4f97936d37dc4d9a9593c6c5f "pdflatex"
   (generated)
   "main.aux"
   "main.log"

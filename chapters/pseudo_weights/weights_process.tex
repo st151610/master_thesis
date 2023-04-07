@@ -221,7 +221,7 @@ To this end, we define the (empirical) weights function
   \qquad
   \text{for all}
   \ 
-  i\in \left\{ 1,\ldots,n \right\}
+  i\in \left\{ 1,\ldots,N \right\}
   \,.
   \end{gather*}
 \end{lemma}
@@ -237,7 +237,6 @@ To this end, we define the (empirical) weights function
   and ignore the index $i$.
   By Lemma~\ref{weights_l_inf} and 
   Hölder's inequality it holds
-  it holds
   \begin{gather}
     \label{9876}
     \norm{
@@ -357,4 +356,40 @@ To this end, we define the (empirical) weights function
      \end{gather*}
 \end{proof}
 
-
+\begin{lemma}
+  The arithmetic mean
+  \begin{align*}
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    T_i
+    \left| 
+    w^\dagger(X_i)
+    \right|
+  \end{align*}
+  is bounded above by a random variable that converges in probability to a constant.
+\end{lemma}
+\begin{proof}
+  It holds
+  \begin{align*}
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    T_i
+    \left| 
+    w^\dagger(X_i)
+    \right|
+    \ 
+    \lesssim
+    \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \frac{T_i}{\pi(X_i)}
+    \ 
+    \overset{\P}{\to}
+    \ 
+    1
+    \qquad
+    \text{for}\ 
+    N \to \infty
+    \,.
+  \end{align*}
+\end{proof}
