@@ -52,3 +52,309 @@ To this end, we define the (empirical) weights function
     \,.
   \end{align*}
 \end{definition}
+\begin{proof}
+  \begin{align*}
+    \left| w^\dagger(x) \right|
+    &
+    \ 
+    \le
+    \ 
+    \omega
+    \left( 
+      (
+      \varphi^{'}
+      )^{-1},
+      \norm{s_N-\lambda^*}_2
+    \right)
+    \ 
+    +
+    \ 
+    \left| 
+    w(x,X_1,\ldots,X_N,\lambda^*)
+    \right|
+    \\
+    &
+    \ 
+    \le
+    \ 
+    \omega
+    \left( 
+      (
+      \varphi^{'}
+      )^{-1}
+      ,
+      1
+    \right)
+    \ 
+    +
+    \ 
+      (
+      \varphi^{'}
+      )^{-1}
+      \left( 
+        \sum_{k=1}^{N}
+        B_k(x,X_1,\ldots,X_N)
+        \cdot
+            \varphi
+            \left(
+              \frac
+              {1}
+              {\pi(X_k)}
+            \right)
+      \right)
+      \\
+    &
+    \ 
+      \le
+    \ 
+    \omega
+    \left( 
+      (
+      \varphi^{'}
+      )^{-1}
+      ,
+      1
+    \right)
+    \\
+    &
+    \qquad 
+    +
+    \ 
+    \left( 
+ \omega
+    \left( 
+      (
+      \varphi^{'}
+      )^{-1}
+      ,
+      \omega
+      \left( 
+      \varphi^{'}
+      ,
+      h_N^d
+      \right)
+    \right)
+    +
+              \frac
+              {1}
+              {\pi(x)}
+    \right)
+    \cdot
+    \mathbf{1}\bigcup_{k=1}^N\left\{ X_k=x\right\}
+    \\
+    &\qquad
+    +
+    \ 
+      (
+      \varphi^{'}
+      )^{-1}
+      (0)
+      \cdot
+    \mathbf{1}\bigcap_{k=1}^N\left\{ X_k\neq x\right\}
+     \end{align*}
+\end{proof}
+\begin{proof}
+  Since
+  \begin{align*}
+  (a+b)^r\
+  \le \ 
+  2^r\cdot (1+a)^r\cdot b^r
+  \qquad
+  \text{for all}\ 
+  \left( a,b,r \right)
+  \in
+  \R_{\ge 0}\times\R_{\ge 1}\times [1,\infty)
+  \end{align*}
+ it holds
+ \begin{align*}
+   \left| w^\dagger(x) \right|
+   \ 
+   \lesssim
+   \ 
+   \left( 
+     \frac{1}{\pi(x)}
+   \right)^r
+   \qquad
+   \text{for all}\ 
+   (x,r)\in\R^d\times [1,\infty)
+   \,.
+ \end{align*}
+ Thus, if 
+ $1/\pi(X)\in L^r(\P)$
+ for some $r\in [1,\infty]$,
+ it holds
+ $w^\dagger(X)\in L^r(\P)$.
+\end{proof}
+\begin{lemma}
+  \label{w.Z=0}
+  Let 
+ $1/\pi(X)\in L^r(\P)$
+ for some $r\in [1,\infty]$.
+ Furthermore, let 
+ $Z\in L^{r^{'}}(\P)$,
+ where
+ $1/r + 1/r^{'}=1$,
+  be a random variable that is independent of $D_N=(T_i,X_i)_{i\in \left\{
+    1,\ldots,N
+  \right\}}$ 
+  with
+  $
+\E
+\left[
+  Z
+  \,
+  |
+  \, 
+  X
+\right]
+= 0
+  $
+  almost surely.
+  It holds
+  \begin{gather*}
+  \E
+  \left[
+    w_i^\dagger(X)
+  \cdot Z
+  \right]
+  =0
+  \qquad
+  \text{for all}
+  \ 
+  i\in \left\{ 1,\ldots,n \right\}
+  \,.
+  \end{gather*}
+\end{lemma}
+\begin{proof}
+  We write
+  \begin{gather*}
+    w_i^\dagger(X)
+  \ 
+  =
+  \ 
+  w^\dagger(X)
+  \end{gather*}
+  and ignore the index $i$.
+  By Lemma~\ref{weights_l_inf} and 
+  Hölder's inequality it holds
+  it holds
+  \begin{gather}
+    \label{9876}
+    \norm{
+  w^\dagger(X)\cdot Z
+    }_{L^1(\P)}
+    \ 
+  \le
+    \ 
+  \norm{w^\dagger(X)}_{L^r(\P)}
+  \norm{Z}_{L^{r^{'}}(\P)}
+  \ 
+  <
+  \ 
+  \infty
+  \,.
+  \end{gather}
+  By 
+  \eqref{9876},
+  $Z\perp D_N$
+  and
+  $
+\E
+\left[
+  Z
+  \,
+  |
+  \, 
+  X
+\right]
+= 0
+  $
+  almost surely
+  it holds 
+  \begin{align*}
+    \E
+  \left[
+  w^\dagger(X)
+  \cdot
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+  &
+  \ 
+  =
+  \ 
+  w^\dagger(X)
+  \cdot
+  \E
+  \left[
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+  \\
+  &
+  \ 
+  =
+  \ 
+  w^\dagger(X)
+  \cdot
+  \E
+  \left[
+  Z
+  \,
+  |
+  \,
+  X
+  \right]
+  \
+  =
+  \ 
+  0
+  \qquad
+  \text{almost surely.}
+  \end{align*}
+  Note, that $w^\dagger(X)$ is 
+  $
+  \left(
+  \sigma(D_N,X),\mathcal{B}(\R)
+  \right)
+  $-measurable.  
+  Thus
+  \begin{gather*}
+    \E
+    \left[
+  w^\dagger(X)
+  \cdot
+  Z
+  \,
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+ \E
+  \left[
+  w^\dagger(X)
+  \cdot
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+    \right]
+    \ 
+    =
+    \ 
+    0
+    \,.
+     \end{gather*}
+\end{proof}
+
+
