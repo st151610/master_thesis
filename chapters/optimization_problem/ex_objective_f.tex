@@ -5,7 +5,7 @@
     \qquad
     \text{and}
     \qquad
-    q:=[q_1,\ldots,p_N]
+    q:=[q_1,\ldots,q_N]
   \end{gather*}
   we consider the following distance measure
   \begin{gather*}
@@ -23,7 +23,7 @@
    \,.
   \end{gather*}
   This is known as the Kullback-Leibler-Entropy.
-  In \cite[§3.1]{Hainmueller2012} the author connects this concept to a convex optimization problem.
+  In \cite[§3.1]{Hainmueller2012} the author connects this concept to a convex optimization problem similar to Problem~\ref{bw:1:primal}.
   The idea is, to optimize the Kullback-Leibler-Entropy of the distribution induced by the weights and some base weights.
   For example, if we choose
   \begin{gather*}
@@ -100,9 +100,9 @@ Thus, we consider
 \end{gather*}
 We show, that this choices satisfies Assumption~\ref{asu:objective_f}.
 By definition it holds \textit{(i)}.
-For \textit{(ii)} note, that the second derivative on $(0,\infty)$ is $x\mapsto 1/x$. Thus (by the second derivative test), $\varphi$ is strictly convex.
-Clearly it is also twice continuously differentiable.
 For the continuity in $0$ note, that $\lim_{x\to 0} x\log x=0$. 
+Since the second derivative on $(0,\infty)$ is $x\mapsto 1/x$, by the second derivative test, $\varphi$ is strictly convex.
+Clearly it is also continuously differentiable on $(0,\infty)$.
 For \textit{(iii)} note, that $x\mapsto \log x$ is continuous and strictly non-decreasing on $\R$. 
 Since 
 \begin{align*}
@@ -110,10 +110,20 @@ Since
   \qquad
   \text{and}
   \qquad
-  \lim_{x\to \infty}\log x\ =\ \infty
+  \lim_{x\to \infty}\log x\ =\ +\infty
   \,,
 \end{align*}
 and $\varphi^{'}=(x\mapsto \log x +1)$ on $(0,\infty)$, it follows \textit{(iii)}. 
-Finally, it holds $(\varphi^{'})^{-1}=(x\mapsto \exp(x-1))$ on $\R$. 
+Finally, it holds 
+\begin{align*}
+(\varphi^{'})^{-1}
+\ 
+=
+\ 
+(x\ \mapsto \ \exp(x-1))
+\qquad
+\text{on}\ \R
+\,.
+\end{align*}
 Thus, it follows \textit{(iv)}.
 \end{example}

@@ -1,22 +1,36 @@
+The formulation of Problem~\ref{bw:1:primal} allows for
+great flexibility.
+To do the mathematical analysis, however, we have to restrict it.
+There are (at least) two good ways to do this.
+We may, right from the start,
+make concrete choices.
+For example, we may choose the Kullback-Leibler-Entropy (see the end of this section) as the objective function of Problem~\ref{bw:1:primal}.
+From this we can prove lemmas that we use later.
+But we shall do it the other way around.
+What should be a lemma in the first approach, shall for us be an assumption.
+A concrete choice in the first approach shall for us be an example.
+In this way, we hope to preserve more of the initial flexibility.
+\newpage
 \begin{assumption}
   \label{asu:objective_f}
-  The objective function $\varphi\colon \R\to\overline{\R}$ of Problem~\ref{bw:1:primal} 
-  satisfies the following conditions
+  The (proper) convex function $\varphi$ in Problem~\ref{bw:1:primal} 
+  satisfies the following:
   \begin{enumerate}[label=(\roman*)]
     \item
       $\varphi(x)=\infty$ for all $x<0$
     \item
       $\varphi$ is strictly convex,
       continuous on $[0,\infty)$,
-      and twice continuously differentiable on $(0,\infty)$ with derivatives $\varphi^{'}$ and $\varphi^{''}$
+      and continuously differentiable on $(0,\infty)$ with derivative $\varphi^{'}$
     \item
       $\varphi^{'}(0,\infty)=\R$
     \item
-      the inverse of the derivative $(\varphi^{'})^{-1}$ is continuously differentiable on $\R$.
+      the inverse of the derivative $(\varphi^{'})^{-1}$ is continuously differentiable on $\R$
   \end{enumerate}
 \end{assumption}
-The next lemma provides a link to the assumptions on the objective function in Theorem~\ref{cv:ts:th}.
-\newpage
+Now we begin to link
+Assumption~\ref{asu:objective_f}
+to the assumptions on the objective function in Theorem~\ref{cv:ts:th}.
 \begin{lemma}
   \label{1065}
   Let Assumption\ref{asu:objective_f} hold true. Then the convex conjugate of $\varphi$ (see \eqref{def:convex_conjugate}) is

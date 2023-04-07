@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1680846116 "main.aux" "main.bbl" "main" 1680846157 0
+["bibtex main"] 1680847944 "main.aux" "main.bbl" "main" 1680847978 0
   "./literature.bib" 1680496697 74008 ac796195b85a67d7d63569db8925fb23 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1679564905 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1680846156 26832 1f59422c6854f14dab801f5b8ce0cdd9 "pdflatex"
+  "main.aux" 1680847977 26568 f883376a6a7516e01938705575cebfda "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1680846150 "main.tex" "main.pdf" "main" 1680846157 0
+["pdflatex"] 1680847970 "main.tex" "main.pdf" "main" 1680847978 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1679564905 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1679564905 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1679564905 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -233,11 +233,11 @@
   "chapters/convex_analysis/primer_new.tex" 1680371448 22994 7fe92c31f7b2d388daff85d8ae491c71 ""
   "chapters/convex_analysis/ts_3.tex" 1679582877 13008 d2bbed0da675cf5c0839d37aab2a3454 ""
   "chapters/intro_for_all.tex" 1678871653 15174 e5e77944eadc906f84b43855b2de29f1 ""
-  "chapters/optimization_problem/ass_objective_f.tex" 1680799128 5517 e7a45cf49e9ccc80e40e614173179687 ""
+  "chapters/optimization_problem/ass_objective_f.tex" 1680847574 6168 f145f8d8ac4e46bb7ebb169e35d6e2de ""
   "chapters/optimization_problem/dual_form.tex" 1680525962 10989 4cd1866d06c3ee7d8efdabd57dcb9a1d ""
-  "chapters/optimization_problem/ex_objective_f.tex" 1680799128 2618 e6c53e7c7cd50e7060a7aacf0c70e4d8 ""
+  "chapters/optimization_problem/ex_objective_f.tex" 1680847966 2690 ddd8a97766ae8e8769c1bfa3e8a4d429 ""
   "chapters/optimization_problem/intro.tex" 1680845019 558 626d12c63acffa2f99f9dbc95656b8ef ""
-  "chapters/optimization_problem/main.tex" 1680844900 1599 518a3a704b2a2279e42977c452016a34 ""
+  "chapters/optimization_problem/main.tex" 1680847603 1602 e6d96f0ac204e669af4994d6ca4cd2a1 ""
   "chapters/optimization_problem/meas_argmax.tex" 1680804454 2783 a45372617aef7d129d9cd860b4ed6e50 ""
   "chapters/optimization_problem/primal_problem.tex" 1680846149 4717 10bb68ef25cbc9e2ca730c5a6255e332 ""
   "chapters/optimization_problem/pseudo_sol.tex" 1680804365 6602 b51e6e383e6388d3f4d6303c4ade60e8 ""
@@ -247,11 +247,11 @@
   "final_chapters/aa:tools.tex" 1680799128 21901 343d4f18e0854c372fe4474f6c74d9d2 ""
   "final_chapters/aa:weights.tex" 1679386332 6322 20febbf23936a9a4361144dda77c5bfe ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1680846156 26832 1f59422c6854f14dab801f5b8ce0cdd9 "pdflatex"
-  "main.bbl" 1680846116 3655 43b61c63b7ca51c6bec0bee54f0e03df "bibtex main"
-  "main.out" 1680846152 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1680847977 26568 f883376a6a7516e01938705575cebfda "pdflatex"
+  "main.bbl" 1680847944 3655 43b61c63b7ca51c6bec0bee54f0e03df "bibtex main"
+  "main.out" 1680847973 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1680356349 10731 14119d27c2e4cb290c6074428886e234 ""
-  "main.toc" 1680846156 1843 f28ce4523b48bd2b61ba4545c2f69902 "pdflatex"
+  "main.toc" 1680847977 1843 f309872660618929302258db0eae1b02 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

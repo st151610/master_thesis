@@ -4,9 +4,9 @@
 \contentsline {section}{\numberline {2.2}Objective Function}{11}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Dual Problem}{14}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Argmax Measurability Theorem}{18}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Pseudo Solutions}{18}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}basis}{20}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Weights Function}{21}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.3}Pseudo Solutions}{19}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}basis}{21}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Weights Function}{22}{subsection.2.2.5}%
 \contentsline {chapter}{\numberline {3}Consistency of the Weights}{27}{chapter.3}%
 \contentsline {subsection}{\numberline {3.0.1}Consistency of the Dual Solution}{27}{subsection.3.0.1}%
 \contentsline {chapter}{\numberline {4}Asymptotic Analysis}{33}{chapter.4}%
