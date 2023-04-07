@@ -1217,6 +1217,10 @@ INPUT ./chapters/pseudo_weights/basis.tex
 INPUT chapters/pseudo_weights/basis.tex
 INPUT ./chapters/pseudo_weights/basis.tex
 INPUT chapters/pseudo_weights/basis.tex
+INPUT ./chapters/pseudo_weights/weights_process.tex
+INPUT chapters/pseudo_weights/weights_process.tex
+INPUT ./chapters/pseudo_weights/weights_process.tex
+INPUT chapters/pseudo_weights/weights_process.tex
 INPUT ./chapters/consistency_weights/main.tex
 INPUT chapters/consistency_weights/main.tex
 INPUT ./chapters/consistency_weights/main.tex

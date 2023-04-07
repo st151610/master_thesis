@@ -1,0 +1,54 @@
+Based on Theorem~\ref{dual_solution_th}
+we want to use the dual (pseudo) solution $s_N$ to construct weights.
+To this end, we define the (empirical) weights function
+\begin{align*}
+ w\ \colon\
+ &
+ \left( 
+  \R^d\times \R^{d\cdot N}
+ \right)
+  \times
+  \left( 
+\R^N_{\ge 0}\times \R\times \R^N
+  \right)
+  \to
+  \R^N
+  \\
+ &
+  \left( 
+  (x,x_1,\ldots,x_N),(\rho,\lambda_0,\lambda)
+  \right)
+  \ 
+  \mapsto
+  \ 
+  \left[ 
+  (\varphi^{'})^{-1}
+  \left( 
+    \rho_i
+    +
+    \lambda_0
+    +
+    \inner
+    {B(x,x_1,\ldots,x_N)}
+    {\lambda}
+  \right)
+\right]_{i\in \left\{ 1,\ldots,N \right\}}
+\,.
+\end{align*}
+\begin{definition}
+  Let $s_N$ be the (pseudo) solution of Lemma~\ref{lem:pseud_sol}.
+  We define the (pseudo) weights process 
+  $\left\{ w^\dagger(x) | x\in\R^d\right\}$
+  by
+  \begin{align*}
+    w^\dagger(x) 
+    \ 
+    :=
+    \ 
+    w(x,X_1,\ldots,X_N,s_N)
+    \qquad
+    \text{for all}\ 
+    x\in\R^d
+    \,.
+  \end{align*}
+\end{definition}
