@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {3.1}Argmax Measurability Theorem}{19}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Measurable Dual Solution}{20}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Basis Functions}{21}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Weights Process}{24}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Weights Process}{25}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Convergence of the Weighted Mean}{27}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Main Result}{27}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Error Decomposition}{27}{section.4.2}%

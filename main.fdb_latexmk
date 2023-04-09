@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1681036677 "main.aux" "main.bbl" "main" 1681037144 0
+["bibtex main"] 1681037317 "main.aux" "main.bbl" "main" 1681037323 0
   "./literature.bib" 1680496697 74008 ac796195b85a67d7d63569db8925fb23 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1679564905 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1681037144 22774 08914c4b6cf407d341faf82b945ea500 "pdflatex"
+  "main.aux" 1681037323 22772 b3767fa64084ee8b0dceac78ab0c0b1d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1681037138 "main.tex" "main.pdf" "main" 1681037144 2
+["pdflatex"] 1681037317 "main.tex" "main.pdf" "main" 1681037323 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1679564905 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1679564905 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1679564905 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -235,7 +235,7 @@
   "chapters/optimization_problem/main.tex" 1680860891 893 3d091856562b071074dc8f4daac228bd ""
   "chapters/optimization_problem/primal_problem.tex" 1680846149 4717 10bb68ef25cbc9e2ca730c5a6255e332 ""
   "chapters/pseudo_weights/main.tex" 1681028963 751 5d85d4df42938c8b8ecbd71d3cb6633e ""
-  "chapters/weights_process/basis.tex" 1681035310 10445 a75abb1b2af5c0054527e6d011f861ce ""
+  "chapters/weights_process/basis.tex" 1681037315 10446 da1b77ebdd00f0b28ddda5a9582b6729 ""
   "chapters/weights_process/main.tex" 1681029024 955 10a8ca2b85fd03cf0a86f0ae89dd146e ""
   "chapters/weights_process/meas_argmax.tex" 1680804454 2783 a45372617aef7d129d9cd860b4ed6e50 ""
   "chapters/weights_process/meas_dual_sol.tex" 1681023939 2979 f43ff6f14cbda551ef6511464de82cfe ""
@@ -243,11 +243,11 @@
   "final_chapters/aa:mean.tex" 1679489813 37402 5a176fb16ed955d13aefb61a474dc9c4 ""
   "final_chapters/aa:tools.tex" 1680799128 21901 343d4f18e0854c372fe4474f6c74d9d2 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1681037144 22774 08914c4b6cf407d341faf82b945ea500 "pdflatex"
-  "main.bbl" 1681036677 3476 572ad7fbae1e01fd46fb2b7cff5db8dd "bibtex main"
-  "main.out" 1681037140 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1681037323 22772 b3767fa64084ee8b0dceac78ab0c0b1d "pdflatex"
+  "main.bbl" 1681037317 3476 572ad7fbae1e01fd46fb2b7cff5db8dd "bibtex main"
+  "main.out" 1681037319 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1681021926 8816 b73f80b201f86eec7de76936f9fe27ef ""
-  "main.toc" 1681037144 1702 48aa0aefd520a1b373549378accb65c1 "pdflatex"
+  "main.toc" 1681037323 1702 c48007205347dac0559b867549fe5622 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
