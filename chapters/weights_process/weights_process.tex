@@ -283,3 +283,57 @@ To this end, we define the (empirical) weights function
      \end{gather*}
 \end{proof}
 
+\begin{theorem}
+  The weights process satisfies the constraints
+  of Problem~\ref{bw:1:primal}, that is,
+  \begin{enumerate}[label=(\roman*)]
+    \item
+      $
+      T_i\cdot w_i^\dagger(X_i)
+      \ 
+      \ge
+      \ 
+      0
+      \qquad
+      \text{for all}\ 
+      i\in  \left\{ 1,\ldots,N \right\}
+      $
+    \item
+      $
+      \frac{1}{N}
+      \sum_{i=1}^{N} 
+      T_i\cdot w_i^\dagger(X_i)
+      \ 
+      =
+      \ 
+      1
+      $
+    \item
+      For all $k\in \left\{ 1,\ldots,N \right\}$
+      it holds
+      \begin{align*}
+      \left| 
+      \frac{1}{N}
+      \left( 
+        \sum_{i=1}^{N} 
+      T_i\cdot w_i^\dagger(X_i)
+      \cdot
+        B_k(X_i,X_1,\ldots,X_N)
+        \
+        -
+        \
+        \sum_{i=1}^{N} 
+        B_k(X_i,X_1,\ldots,X_N)
+      \right)
+      \right|
+      \ 
+      \le
+      \ 
+      \delta_k
+      \end{align*}
+  \end{enumerate}
+\end{theorem}
+\begin{proof}
+  This follows from Theorem~\ref{dual_solution_th}
+  and the construction of the weights process.
+\end{proof}
