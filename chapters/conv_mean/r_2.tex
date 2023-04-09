@@ -1,0 +1,96 @@
+\begin{lemma}
+  Assume
+  \begin{align*}
+    \sqrt{N}
+    \sup_{z\in\R}
+    \omega
+    \left( 
+      F_{Y(1)}(z|\cdot)
+      ,h_N^d
+    \right)
+    \ 
+    \to 
+    \ 
+    0
+    \qquad
+    \text{for}\ 
+    N\to\infty
+    \,.
+  \end{align*}
+  Then $\sup_{z\in\R}|R_2(z)|\overset{\P}{\to} 0$.
+\end{lemma}
+\begin{proof}
+  \begin{align*}
+    \sup_{z\in\R}
+    \left| R_2(z) \right|
+    &
+    \  
+    \le
+    \  
+        \sqrt{N}
+        \sup_{z\in\R}
+        \max_{i\in \left\{ 1,\ldots,N \right\}}
+        \sum_{k=1}^{N}
+            \left|
+        B_k(X_i,X_1,\ldots,X_N)
+        \cdot
+        F_{Y(1)}(z|X_k)
+            \ 
+            -
+            \ 
+        F_{Y(1)}(z|X_i)
+            \right|
+            \\
+            &
+            \qquad
+            \cdot
+            \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+      \left| 
+    T_i\cdot w^\dagger_i(X_i) 
+    \ 
+    -
+    \ 
+    1 
+      \right|
+  \end{align*}
+  Note, that by Theorem~\ref{th:weights_constr}.\textit{(i)-(ii)}
+  it holds
+  \begin{align*}
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+      \left| 
+    T_i\cdot w^\dagger_i(X_i) 
+    \ 
+    -
+    \ 
+    1 
+      \right|
+      \ 
+    \le
+      \ 
+    1
+    \ 
+    +
+    \ 
+    \frac{1}{N}
+    \sum_{i=1}^{N} 
+    T_i\cdot w^\dagger_i(X_i) 
+    \ 
+    =
+    \ 
+    2
+    \,.
+  \end{align*}
+  The statement follows from Lemma~\ref{lem:basis_2}.\textit{(ii)}
+\end{proof}
+\begin{remark}
+In the original paper \cite{Wang2019} the authors derive concrete learning rates for the weights and employ them in bounding this term. They obtain a multiplied learning rate, which is sufficiently fast. Their approach, however, calls for concrete learning rates of the weights. Arguably, the process of deriving such rates is the most complicated part of the paper. 
+I found out, that we don't need concrete rates for the weights. 
+Consistency of the weights is enough and gives us an (arbitrarily slow but sufficient) learning rate to establish the results.
+We don't even need rates for the weights to control $R_2$.
+They only play a role in bounding $R_3$ and $R_4$.
+\end{remark}
+
+

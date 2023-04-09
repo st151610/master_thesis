@@ -526,6 +526,7 @@ $
  \end{align*}
 \end{proof}
 \begin{lemma}
+  \label{lem:basis_2}
   Let $(x,x_1,\ldots,x_N)\in\R^{d(N+1)}$.
   It holds
   for $N\to\infty$
@@ -665,3 +666,33 @@ $
             \,.
 \end{align*}
         \end{proof}
+        \begin{remark}
+We want to comment on the assumption
+\begin{gather*}
+  \sqrt{N}
+  \sup_{z\in\R}
+  \omega
+  \left( 
+    F_{Y(1)}(z|\cdot)
+    ,h_N
+  \right)
+  \to
+  0
+  \qquad
+  \text{for}\ 
+  N\to \infty
+  \,,
+\end{gather*}
+I decided to keep this more general (and abstract) assumption, althogh
+there are many (more concrete, yet stronger) assumptions on the regularity of
+$
+    F_{Y(1)}(z|\cdot)
+$
+and the convergence speed of $h_N$.
+If for example 
+$
+    F_{Y(1)}(z|\cdot)
+$
+is $\alpha$-Hölder continuous with $\alpha\in(0,1]$ for all $z\in\R$, it suffices $\sqrt{N}h_N^\alpha\to0$ to control $R_2$.
+
+        \end{remark}

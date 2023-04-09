@@ -13,8 +13,9 @@
 \contentsline {section}{\numberline {4.2}Error Decomposition}{27}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Analysis of the Terms}{30}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}$R_1$}{30}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Tools and Assumptions}{31}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Application to Plug In Estimators}{53}{section.4.4}%
+\contentsline {subsection}{\numberline {4.3.2}$R_2$}{31}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Tools and Assumptions}{32}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Application to Plug In Estimators}{54}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Convex Analysis}{55}{chapter.5}%
 \contentsline {section}{\numberline {5.1}A Convex Analysis Primer}{55}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Duality of Optimal Solutions}{62}{section.5.2}%

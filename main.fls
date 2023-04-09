@@ -1248,6 +1248,10 @@ INPUT ./chapters/conv_mean/r_1.tex
 INPUT chapters/conv_mean/r_1.tex
 INPUT ./chapters/conv_mean/r_1.tex
 INPUT chapters/conv_mean/r_1.tex
+INPUT ./chapters/conv_mean/r_2.tex
+INPUT chapters/conv_mean/r_2.tex
+INPUT ./chapters/conv_mean/r_2.tex
+INPUT chapters/conv_mean/r_2.tex
 INPUT ./final_chapters/aa:tools.tex
 INPUT final_chapters/aa:tools.tex
 INPUT ./final_chapters/aa:tools.tex
