@@ -69,6 +69,31 @@ To this end, we define the (empirical) weights function
   \end{align*}
 \end{definition}
 \begin{lemma}
+  \quad
+  \begin{enumerate}[label=(\roman*)]
+\item
+  $w^\dagger(\cdot)(\omega)$ is 
+  $\left(
+    \mathcal{B}(\R^d),\mathcal{B}(\R^N)
+  \right)$-measurable
+  and
+  constant on each cell 
+  $A_N\in\mathcal{P}_N$
+  for all $\omega\in\Omega$. 
+\item
+  $w^\dagger(X)$ is $\left(
+    \sigma(X,D_N),\mathcal{B}(\R^N)
+  \right)$-measurable. 
+  \end{enumerate}
+\end{lemma}
+\begin{proof}
+  This is a direct consequence of Lemme~\ref{lem:basis_meas}, Lemma~\ref{lem:meas_dual_sol}
+  and 
+  the (assumed) continuity of $(\varphi^{'})^{-1}$.
+\end{proof}
+
+
+\begin{lemma}
   \label{weights_l_inf}
   It holds
   $w_i^\dagger(X)\in L^\infty(\P)$

@@ -35,6 +35,10 @@
     +
     \ 
     R_4
+    \ 
+    +
+    \ 
+    R_5
   \end{gather}
   with
 \begin{align*}
@@ -51,7 +55,7 @@
     \sum_{i=1}^{N} 
     T_i
     \cdot
-    w^\dagger(X_i)
+    w^\dagger_i(X_i)
     \cdot
     B_k(X_i)
     \ 
@@ -77,7 +81,7 @@
     \frac{1}{N}
     \left[ 
       \left( 
-    T_i\cdot w^\dagger(X_i) 
+    T_i\cdot w^\dagger_i(X_i) 
     \ 
     -
     \ 
@@ -96,8 +100,8 @@
     \right]
   _{z\in\R}
   \,,
-  %%%% 2 %%%%
-  \\
+  %%%%%%%%%%%%%%%%%%%%
+\\
   R_3
   &
   \
@@ -111,7 +115,41 @@
     T_i
     \cdot
     \left( 
-    w^\dagger(X_i) 
+    w^\dagger_i(X_i) 
+    \ 
+    -
+    \ 
+    w^\dagger_0(X_i) 
+    \right)
+    \cdot
+    \left( 
+    \mathbf{1}{\left\{ Y_i \le z \right\}}
+    \ 
+    -
+    \ 
+  F_{Y(1)}(z|X_i)
+    \right)
+    \,
+    \right]
+  \right)
+  _{z\in\R}
+  \,,
+  %%%%%%%%%%m
+  \\
+  R_4
+  &
+  \
+  :=
+  \ 
+  \sqrt{N}
+  \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    \left[ 
+    T_i
+    \cdot
+    \left( 
+    w^\dagger_0(X_i) 
     \ 
     -
     \ 
@@ -132,7 +170,7 @@
   \,,
   %%%% 3 %%%%
   \\
-  R_4
+  R_5
   &
   \
   :=
@@ -168,7 +206,7 @@
     &
     \frac{1}{N}
     \sum_{i=1}^{N} 
-    w^\dagger(X_i)
+    w^\dagger_i(X_i)
     \cdot
     T_i
     \cdot
@@ -181,7 +219,11 @@
     \frac{1}{N}
     \sum_{i=1}^{N} 
     \left( 
-    w^\dagger(X_i)
+    w^\dagger_i(X_i)
+    -
+    w^\dagger_0(X_i)
+    +
+    w^\dagger_0(X_i)
     -
     \frac{1}{\pi(X_i)}
     \right)
@@ -205,7 +247,11 @@
     \frac{1}{N}
     \sum_{i=1}^{N} 
     \left( 
-    w^\dagger(X_i)
+    w^\dagger_i(X_i)
+    -
+    w^\dagger_0(X_i)
+    +
+    w^\dagger_0(X_i)
     -
     \frac{1}{\pi(X_i)}
     \right)
@@ -235,14 +281,17 @@
     \ 
     \frac{1}{N}
     \sum_{i=1}^{N} 
-    w^\dagger(X_i)\cdot T_i\cdot
+    w^\dagger_i(X_i)\cdot T_i\cdot
     F_{Y(1)}(z|X_i)
     \\
     &
     \ 
     =
     \ 
-    R_3(z)/\sqrt{N}
+    (
+    R_3(z)+R_4(z)
+    )
+    /\sqrt{N}
     \\
     &
     \quad 
@@ -270,7 +319,7 @@
     \frac{1}{N}
     \sum_{i=1}^{N} 
     \left( 
-    w^\dagger(X_i)\cdot T_i
+    w^\dagger_i(X_i)\cdot T_i
     \ 
     -
     \ 
@@ -288,13 +337,16 @@
     \ 
     =
     \ 
-    R_3(z)/\sqrt{N}
+    (
+    R_3(z)+R_4(z)
+    )
+    /\sqrt{N}
     \\
     &
     \quad
     +
     \ 
-    R_4(z)/\sqrt{N}
+    R_5(z)/\sqrt{N}
     \\
     &
     \qquad
@@ -303,7 +355,7 @@
     \frac{1}{N}
     \sum_{i=1}^{N} 
     \left( 
-    w^\dagger(X_i)\cdot T_i
+    w^\dagger_i(X_i)\cdot T_i
     \ 
     -
     \ 
@@ -325,7 +377,7 @@
     \frac{1}{N}
     \sum_{i=1}^{N} 
     \left( 
-    w^\dagger(X_i)\cdot T_i
+    w^\dagger_i(X_i)\cdot T_i
     \ 
     -
     \ 
@@ -346,13 +398,16 @@
     \ 
     =
     \ 
-    R_3(z)/\sqrt{N}
+    (
+    R_3(z)+R_4(z)
+    )
+    /\sqrt{N}
     \\
     &
     \quad
     +
     \ 
-    R_4(z)/\sqrt{N}
+    R_5(z)/\sqrt{N}
     \\
     &
     \qquad
@@ -368,7 +423,7 @@
     \frac{1}{N}
     \sum_{i=1}^{N} 
     \left( 
-    w^\dagger(X_i)\cdot T_i
+    w^\dagger_i(X_i)\cdot T_i
     B_k(X_i)
     \ 
     -
@@ -394,6 +449,10 @@ R_3(z)
     +
     \ 
     R_4(z)
+    \ 
+    +
+    \ 
+    R_5(z)
     \ 
     +
     \ 
