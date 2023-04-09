@@ -1,7 +1,7 @@
 \begin{lemma}
-  Let $m$,$n\in\mathbb{N}$ and let 
+  Let $m$,$N\in\mathbb{N}$ and let 
   $
-  g \,:\, \R^m\times \R^n_{\ge 0} \to \overline{\R}
+  g \,:\, \R^N_{\ge 0}\times\R^m \to \overline{\R}
   $ 
   be a continuous and proper convex function.
   Consider 
@@ -9,20 +9,14 @@
     \tilde{S}(\varepsilon)
     :=
     \left\{ 
-      (
-      \Delta,
-      \Delta_\rho
-      )
+      (\Delta_\rho,\Delta)
       \in
-      \R^m \times \R^n_{\ge 0}
+      \R^N_{\ge 0}\times\R^m
       \ 
       \colon
       \ 
       \norm{
-      (
-      \Delta,
-      \Delta_\rho
-      )
+      (\Delta_\rho,\Delta)
       }_2
       =
       \varepsilon
@@ -39,17 +33,13 @@ Then
       \label{696}
       \inf 
       \left\{ 
-        g(y+
-        \Delta,\Delta_\rho)
+        g(\Delta_\rho,y+\Delta)
         -
-        g(y,0)
+        g(0,y)
       \ 
         \colon
       \ 
-      (
-      \Delta,
-      \Delta_\rho
-      )
+      (\Delta_\rho,\Delta)
       \in
     \tilde{S}(\varepsilon)
       \right\}
@@ -62,21 +52,13 @@ Then
     the existence of  
     a global minimum
     \begin{gather*}
-    (
-    y^*
-    ,
-    y^*_\rho
-    )
-    \in \,\R^m\times\R^n_{\ge 0}
+    (y^*_\rho,y^*)
+    \in \,\R^N_{\ge 0}\times\R^m
     \quad
     \text{of $g$ such that}\quad
       \norm{
-    (
-    y^*
-    ,
-    y^*_\rho
-    )
-      - (y,0)}_2 \le \varepsilon
+    (y^*_\rho,y^*)
+      - (0,y)}_2 \le \varepsilon
       \,.
     \end{gather*}
 \end{lemma}
@@ -88,20 +70,14 @@ Then
     :=
     \ 
     \left\{ 
-      (
-      \Delta,
-      \Delta_\rho
-      )
+      (\Delta_\rho,\Delta)
       \in
-      \R^m \times \R^n_{\ge 0}
+      \R^N_{\ge 0}\times\R^m
       \ 
       \colon
       \ 
       \norm{
-      (
-      \Delta,
-      \Delta_\rho
-      )
+      (\Delta_\rho,\Delta)
       }_2
       \le
       \varepsilon
@@ -114,7 +90,7 @@ Then
   \end{gather*}
   Then the translation 
   $
-  (y,0)
+  (0,y)
   +
     \tilde{B}(\varepsilon)
   $
@@ -123,52 +99,46 @@ Then
   and that there exists 
   \begin{gather}
     \label{698}
-  (
-x^*,x^*_\rho
-  )
+  (x^*_\rho,x^*)
   \ 
 \in
   \ 
-\R^m\times\R^m_{\ge 0}\setminus 
+\R^N_{\ge 0}\times\R^m\setminus 
 \left(
-  (y,0)
+  (0,y)
   +
     \tilde{B}(\varepsilon)
 \right)
 \quad
 \text{such that}\quad
 g
-  (
-x^*,x^*_\rho
-  )
+  (x^*_\rho,x^*)
   \ 
   <
   \ 
-  g(y,0)
+  g(0,y)
   \,.
   \end{gather}
   Since 
   $
-  (y,0)
+  (0,y)
   +
     \tilde{B}(\varepsilon)
   $
   is bounded, the line segment between 
   $
-  (
-x^*,x^*_\rho
-  )
+  (x^*_\rho,x^*)
   $
   and
   $
-  (y,0)
+  (0,y)
   $
   crosses its boundary. The boundary consists of two disjoint sets
   \begin{gather*}
     S_0(\varepsilon)
     :=
     \left\{ 
-      (y+\Delta,0)
+      (0,y+\Delta)
       \ 
       \colon
       \ 
@@ -182,16 +152,14 @@ x^*,x^*_\rho
     \tilde{S}(\varepsilon)
     \,.
   \end{gather*}
-  Clearly, if the line segment does not cross $\tilde{S}(\varepsilon)$ it leaves $\R^m\times\R^n_{\ge 0}$.
+  Clearly, if the line segment does not cross $\tilde{S}(\varepsilon)$ it leaves $\R^N_{\ge 0}\times\R^m$.
   But this is not possible.
-  Thus, there exists $(\Delta,\Delta_\rho)\in \tilde{S}(\varepsilon)$ and $\theta\in(0,1)$ such that 
+  Thus, there exists $(\Delta_\rho,\Delta)\in \tilde{S}(\varepsilon)$ and $\theta\in(0,1)$ such that 
   \begin{gather}
     \label{697}
     \theta 
     \cdot
-  (
-x^*,x^*_\rho
-  )
+  (x^*_\rho,x^*)
   \ 
   +
   \ 
@@ -201,22 +169,22 @@ x^*,x^*_\rho
 \theta
   )
   \cdot
-  (y,0)
+  (0,y)
   \ 
   =
   \ 
-  (y+\Delta,\Delta_\rho)
+  (\Delta_\rho,y+\Delta)
   \,.
   \end{gather}
   It follows
  \begin{align*}
       \begin{split}
-      g(y,0)
+      g(0,y)
       \ 
       \le
       \ 
       g
-  (y+\Delta,\Delta_\rho)
+  (\Delta_\rho,y+\Delta)
 &
       \ 
       =
@@ -225,9 +193,7 @@ x^*,x^*_\rho
       \left( 
     \theta 
     \cdot
-  (
-x^*,x^*_\rho
-  )
+  (x^*_\rho,x^*)
   \ 
   +
   \ 
@@ -237,7 +203,7 @@ x^*,x^*_\rho
 \theta
   )
   \cdot
-  (y,0)
+  (0,y)
       \right)
       \\
 &
@@ -247,9 +213,7 @@ x^*,x^*_\rho
     \theta 
     \cdot
       g
-  (
-x^*,x^*_\rho
-  )
+  (x^*_\rho,x^*)
   \ 
   +
   \ 
@@ -260,11 +224,11 @@ x^*,x^*_\rho
   )
   \cdot
   g
-  (y,0)
+  (0,y)
   \ 
       <
   \ 
-      g(y,0)
+      g(0,y)
   \,    ,
       \end{split}
     \end{align*}
@@ -272,37 +236,37 @@ x^*,x^*_\rho
     The first inequality is due to \eqref{696}, the equality is due to \eqref{697}, the second inequality is due to the convexity of $g$,
     and the strict inequality is due to assumption \eqref{698}.
     Thus, all values outside 
-    $(y,0)+\tilde{B}(\varepsilon)$
-    are greater or equal $(y,0)$.
+    $(0,y)+\tilde{B}(\varepsilon)$
+    are greater or equal $(0,y)$.
     Since 
-    $(y,0)+\tilde{B}(\varepsilon)$
+    $(0,y)+\tilde{B}(\varepsilon)$
     is also compact, the continuous function $g$ has a local minimum
     \begin{gather*}
-      (y^*,y^*_\rho)\in
-    (y,0)+\tilde{B}(\varepsilon)
+      (y^*_\rho,y^*)\in
+    (0,y)+\tilde{B}(\varepsilon)
     \,.
     \end{gather*}
     But then it holds
     \begin{gather*}
       g
-      (y^*,y^*_\rho)
+      (y^*_\rho,y^*)
       \ 
       \le
       \ 
-      g(y,0)
+      g(0,y)
       \ 
       \le
       \ 
       g
-      (x,x_\rho)
+      (x_\rho,x)
       \qquad
       \text{for all}
       \qquad 
-      (x,x_\rho)
+      (x_\rho,x)
       \in
-\R^m\times\R^m_{\ge 0}\setminus 
+\R^N_{\ge 0}\times\R^m\setminus 
 \left(
-  (y,0)
+  (0,y)
   +
     \tilde{B}(\varepsilon)
 \right)
@@ -310,51 +274,51 @@ x^*,x^*_\rho
     and
     \begin{gather*}
       g
-      (y^*,y^*_\rho)
+      (y^*_\rho,y^*)
       \ 
       \le
       \ 
       g
-      (z,z_\rho)
+      (z_\rho,z)
       \qquad
       \text{for all}
       \qquad 
-      (z,z_\rho)
+      (z_\rho,z)
       \in
-  (y,0)
+  (0,y)
   +
     \tilde{B}(\varepsilon)
     \,.
     \end{gather*}
     Thus,
     $
-      (y^*,y^*_\rho)
+      (y^*_\rho,y^*)
     $
     is also a global minimum in
     $
-\R^m\times\R^m_{\ge 0}
+\R^N_{\ge 0}\times\R^m
     $.
 Since
     $
-      (y^*,y^*_\rho)
+      (y^*_\rho,y^*)
       \in
-  (y,0)
+  (0,y)
   +
     \tilde{B}(\varepsilon)
     $
     there exists
     $
-    (\Delta,\Delta_\rho)\in
+    (\Delta_\rho,\Delta)\in
     \tilde{B}(\varepsilon)
     $
     such that 
     \begin{gather*}
-      (y^*,y^*_\rho)
+      (y^*_\rho,y^*)
       =
-      (y+\Delta,\Delta_\rho)
+      (\Delta_\rho,y+\Delta)
       \qquad
       \text{for some}\ 
-      (\Delta,\Delta_\rho)
+      (\Delta_\rho,\Delta)
       \in
       \tilde{B}(\varepsilon)
       \,.
@@ -362,13 +326,13 @@ Since
   Thus
   \begin{gather*}
     \norm{
-      (y^*,y^*_\rho)
+      (y^*_\rho,y^*)
       -
-      (y,0)
+      (0,y)
     }_2
     =
     \norm{
-      (\Delta,\Delta_\rho)
+      (\Delta_\rho,\Delta)
     }_2
     \le \varepsilon
     \,.
