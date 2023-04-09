@@ -6,11 +6,10 @@ Then it holds
 $\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
   \end{lemma}
 \begin{proof}
-If $s_N\in \mathrm{int}\,\Theta_N$, then 
-$
-w_1^\dagger(X_1),\cdots,w_N^\dagger(X_N)
-$
+  By Theorem~\ref{th:weights_constr} 
+  $(w_i^\dagger(X_i))$
 satisfy the box constraints of Problem~\ref{bw:1:primal} (in the form with the $T_i$ instead of $n$).
+Thus
   \begin{align}
     \label{R_1:1}
     \begin{split}
@@ -31,7 +30,7 @@ satisfy the box constraints of Problem~\ref{bw:1:primal} (in the form with the $
     \sum_{i=1}^{N} 
     T_i
     \cdot
-    w^\dagger(X_i)
+    w^\dagger_i(X_i)
     \cdot
     B_k(X_i)
     \ 
@@ -56,7 +55,7 @@ satisfy the box constraints of Problem~\ref{bw:1:primal} (in the form with the $
     \sum_{i=1}^{N} 
     T_i
     \cdot
-    w^\dagger(X_i)
+    w^\dagger_i(X_i)
     \cdot
     B_k(X_i)
     \ 
@@ -78,39 +77,7 @@ satisfy the box constraints of Problem~\ref{bw:1:primal} (in the form with the $
   \norm{\delta}_1
     \end{split}
   \end{align}
-  The last inequality is due to $F_{Y(1)}\in[0,1]$ and the assumption that $(w_i^\dagger(X_i))$ satisfies the box constraints of Problem~\ref{bw:1:primal}.
-  It remains to analyse the case $s_N\notin \mathrm{int}\,\Theta_N$.
-  Then $(w_i^\dagger(X_i))$ are not the optimal weights of Problem~\ref{bw:1:primal}
-  and we can't employ the box constraints to bound $R_1$.
-  But we can use 
-  $
-  \P \left[ s_N\notin \Theta_N \right]
-  \to 0
-  $.
-  To this end, note 
-  \begin{align*}
-    \P
-    \left[ 
-      \frac{
-  \P \left[ s_N\notin \Theta_N \right]
-      }{\sqrt{N}}
-      \sum_{i=1}^{N} 
-      \left( 
-      \frac{T_i}{\pi(X_i)}
-      -
-      1
-      \right)
-      \ge \varepsilon
-    \right]
-    \le
-  \P \left[ s_N\notin \Theta_N \right]
-  \frac{\mathbf{Var}[T/\pi(X)]}{\varepsilon^2}
-  \to 
-  0
-  \end{align*}
-  for all $\varepsilon>0$.
-
-
+  The last inequality is due to $F_{Y(1)}\in[0,1]$.
   Since we assume 
 $\sqrt{N}\norm{\delta}_1\overset{\P}{\to}0$
 it holds
@@ -123,7 +90,7 @@ $\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
       \frac{1}{N} 
       \left( 
       \sum_{i = 1}^{n} 
-      w^\dagger(X_i)
+      w^\dagger_i(X_i)
       B_k(X_i)
       -
       \sum_{i=1}^{N} 
@@ -147,7 +114,7 @@ $\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
       \left( 
       \sum_{i = 1}^{N} 
       T_i
-      w^\dagger(X_i)
+      w^\dagger_i(X_i)
       B_k(X_i)
       -
       \sum_{i=1}^{N} 
