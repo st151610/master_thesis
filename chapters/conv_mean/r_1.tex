@@ -1,0 +1,271 @@
+\begin{lemma}
+  \label{aa:mean:l:r1}
+  Let
+$\sqrt{N}\norm{\delta}_1\overset{\P}{\to}0$.
+Then it holds
+$\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
+  \end{lemma}
+\begin{proof}
+If $s_N\in \mathrm{int}\,\Theta_N$, then 
+$
+w_1^\dagger(X_1),\cdots,w_N^\dagger(X_N)
+$
+satisfy the box constraints of Problem~\ref{bw:1:primal} (in the form with the $T_i$ instead of $n$).
+  \begin{align}
+    \label{R_1:1}
+    \begin{split}
+    \sup_{z\in\R}
+    \left| 
+    R_1(z)
+    \right|
+    &
+    \ 
+    =
+    \ 
+  \sqrt{N}
+  \sup_{z\in\R}
+  \sum_{k=1}^{N} 
+  \left[ 
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{N} 
+    T_i
+    \cdot
+    w^\dagger(X_i)
+    \cdot
+    B_k(X_i)
+    \ 
+    -
+    \ 
+    \sum_{i=1}^{N} 
+    B_k(X_i)
+  \right)
+  \cdot
+  F_{Y(1)}(z|X_k)
+  \right]
+    \\
+    &
+    \ 
+    \le
+    \ 
+  \sqrt{N}
+  \sum_{k=1}^{N} 
+  \left| 
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{N} 
+    T_i
+    \cdot
+    w^\dagger(X_i)
+    \cdot
+    B_k(X_i)
+    \ 
+    -
+    \ 
+    \sum_{i=1}^{N} 
+    B_k(X_i)
+  \right)
+  \right|
+  \cdot
+    \sup_{z\in\R}
+  F_{Y(1)}(z|X_k)
+  \\
+    &
+    \ 
+    \le
+    \ 
+  \sqrt{N}
+  \norm{\delta}_1
+    \end{split}
+  \end{align}
+  The last inequality is due to $F_{Y(1)}\in[0,1]$ and the assumption that $(w_i^\dagger(X_i))$ satisfies the box constraints of Problem~\ref{bw:1:primal}.
+  It remains to analyse the case $s_N\notin \mathrm{int}\,\Theta_N$.
+  Then $(w_i^\dagger(X_i))$ are not the optimal weights of Problem~\ref{bw:1:primal}
+  and we can't employ the box constraints to bound $R_1$.
+  But we can use 
+  $
+  \P \left[ s_N\notin \Theta_N \right]
+  \to 0
+  $.
+  To this end, note 
+  \begin{align*}
+    \P
+    \left[ 
+      \frac{
+  \P \left[ s_N\notin \Theta_N \right]
+      }{\sqrt{N}}
+      \sum_{i=1}^{N} 
+      \left( 
+      \frac{T_i}{\pi(X_i)}
+      -
+      1
+      \right)
+      \ge \varepsilon
+    \right]
+    \le
+  \P \left[ s_N\notin \Theta_N \right]
+  \frac{\mathbf{Var}[T/\pi(X)]}{\varepsilon^2}
+  \to 
+  0
+  \end{align*}
+  for all $\varepsilon>0$.
+
+
+  Since we assume 
+$\sqrt{N}\norm{\delta}_1\overset{\P}{\to}0$
+it holds
+$\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
+\end{proof}
+\begin{remark}
+  We want to comment on the box constraints of Problem~\ref{bw:1:primal}, that is,
+ \begin{gather*}
+      \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{n} 
+      w^\dagger(X_i)
+      B_k(X_i)
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    \qquad
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, N \right\}
+    \,.
+  \end{gather*}
+  Note, that the first sum goes over $\left\{ 1,\ldots,n \right\}$ while the second sum goes over $\left\{ 1,\ldots,N \right\}$.
+  A second, equivalent version of the constraints is
+  \begin{gather*}
+      \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{N} 
+      T_i
+      w^\dagger(X_i)
+      B_k(X_i)
+      -
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    \qquad
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, N \right\}
+    \,.
+  \end{gather*}
+  Now both sums go over $\left\{ 1,\ldots,N \right\}$ and the
+  indicator of treatment $T_i$ takes care that in the first sum only the terms with $i\le n$ are effective. 
+  Having this flexibility with the versions helps. I regard the first version as suitable for non-probabilistic computations, although $n$ is of course a random variable. On the other hand, the second version is more honest, exactly telling the dependence on the indicator of treatment. This version is useful in probabilistic computations. 
+
+  Also we want to comment on the assumption on $\norm{\delta}$.
+  Playing around with norm equivalences we discover that 
+  $\sqrt{N}\norm{\delta}_1\overset{\P}{\to}0$ for $N\to \infty$ is the weakest
+  (natural) assumption to
+  control $R_1$.
+  Indeed, other ways to continue the second row in \eqref{R_1:1} are
+  \begin{gather*}
+    (\,\cdots)
+    \ 
+  \le
+    \ 
+  \sqrt{N}
+  \norm{\delta}_2
+  \left( 
+  \sum_{k=1}^{N} 
+  \left( 
+    \sup_{z\in\R}
+  F_{Y(1)}(z|X_k)
+  \right)^2
+\right)^{1/2}
+\ 
+\le
+\ 
+N
+  \norm{\delta}_2\,,
+  \end{gather*}
+  by the Cauchy-Schwarz inequality and
+  $
+  F_{Y(1)}\in [0,1]
+  $,
+or
+\begin{gather*}
+  (\,\cdots)
+  \ 
+  \le
+  \ 
+  \sqrt{N}
+  \norm{\delta}_\infty
+  \sum_{k=1}^{N} 
+    \sup_{z\in\R}
+  F_{Y(1)}(z|X_k)
+  \ 
+  \le
+  \ 
+  N^{3/2}
+  \norm{\delta}_\infty
+  \,.
+\end{gather*}
+Since $\delta\in \R^N$, however, it holds
+\begin{gather*}
+  \sqrt{N}\norm{\delta}_1
+  \ 
+  \le
+  \ 
+  N\norm{\delta}_2
+  \ 
+  \le
+  \ 
+  N^{3/2}\norm{\delta}_\infty
+  \,.
+\end{gather*}
+With hindsight, the assumption 
+$\sqrt{N}\norm{\delta}_1\overset{\P}{\to}0$ for $N\to \infty$ 
+  also 
+  suffices 
+  to control the second (or first) occurrence of a term, that we control by assumptions on $\norm{\delta}$.
+This is the \textbf{second term} of \eqref{c:1}, where we estimate
+\begin{gather*}
+  \inner{\delta}{\left| \Delta \right|}
+  \ 
+  =
+  \ 
+  \sum_{k=1}^{N} 
+  \delta_k
+  \left| \Delta_k \right|
+  \ 
+  \le
+  \ 
+  \norm{\delta}_1
+  \norm{\Delta}_\infty
+  \ 
+  \le
+  \ 
+  \norm{\delta}_1
+  \norm{\Delta}_2
+  \ 
+  \le
+  \ 
+  \norm{\delta}_1
+  \varepsilon
+  \ 
+  \overset{\P}{\to}
+  \ 
+  0
+  \quad
+  \text{for}\ 
+  N\to \infty
+  \,.
+\end{gather*}
+
+\end{remark}
+

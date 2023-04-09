@@ -47,6 +47,22 @@ $ A_N(x) $ to be the cell of $ \mathcal{P}_N $ containing $x$, that is,
 \end{align*}
 where $A_N(x)$ is the only cell containing $x$. 
 
+\begin{lemma}
+  \label{lem:basis_equiv_r}
+  The relation
+  \begin{align*}
+    x\sim y
+    \qquad
+    :\Leftrightarrow
+    \qquad
+    x\in A_N(y)
+  \end{align*}
+  is an equivalence relation.
+\end{lemma}
+\begin{proof}
+  The proof is simple. We omit it.
+\end{proof}
+proofproof
 Next, we define the (empirical) basis functions vector
 \begin{align}
   \label{def:basis}
@@ -223,6 +239,17 @@ measurability of $X$ and $X_k$.
         \le 1
         \ 
         $
+      \item
+        $
+        B_k(x_i,x_1,\ldots,x_N)
+        \ 
+        =
+        \ 
+        B_i(x_k,x_1,\ldots,x_N)
+        \qquad
+        \text{for all}\ 
+        i,k\in \left\{ 1,\ldots,N \right\}
+        $
   \end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -360,6 +387,65 @@ measurability of $X$ and $X_k$.
       \le
         \ 
       1
+      \,.
+  \end{align*}
+  To prove \textit{(iv)}, note that by Lemma~\ref{lem:basis_equiv_r}
+  and by symmetry and transitivity of the equivalence relation
+  $x\in A_N(y)$
+  it holds
+  \begin{align*}
+      B_k(x_i,x_1,\ldots,x_N)
+      &
+    \ 
+      =
+    \ 
+ \frac
+  {
+    \mathbf{1}
+    \left\{ 
+      x_k
+      \in
+      A_N(x_i)
+    \right\}
+  }
+  {
+    \sum_{j=1}^N
+    \mathbf{1}
+    \left\{ 
+      x_j
+      ,
+      x_k
+      \in
+      A_N(x_i)
+    \right\}
+    }
+    \ 
+    =
+    \ 
+ \frac
+  {
+    \mathbf{1}
+    \left\{ 
+      x_i
+      \in
+      A_N(x_k)
+    \right\}
+  }
+  {
+    \sum_{j=1}^N
+    \mathbf{1}
+    \left\{ 
+      x_j
+      \in
+      A_N(x_k)
+    \right\}
+    }
+    \\
+    &
+    \ 
+    =
+    \ 
+      B_i(x_k,x_1,\ldots,x_N)
       \,.
   \end{align*}
 \end{proof}

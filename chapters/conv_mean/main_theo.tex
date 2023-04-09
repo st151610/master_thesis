@@ -1,0 +1,62 @@
+\begin{ftheorem}
+  \label{aa:mean:th}
+The stochastic process
+\begin{gather}
+    \sqrt{N}
+    \left( 
+  \frac{1}{N}
+    \sum_{i=1}^{N} 
+    T_i
+    \cdot
+    w_i^\dagger(X_i)
+    \cdot
+    \mathbf{1}
+    \left\{ Y_i\,\le\, z \right\}
+    \ 
+    -
+    \ 
+    F_{Y(1)}(z)
+    \right)
+    _{z\in\R}
+    \,
+  \end{gather}
+  converges in
+  $l^\infty(\R)$
+  to a Gaussian process with mean 0 and covariance function
+  satisfying for all $z_1,z_2\in\R$
+\begin{align}
+  \label{cov:lp}
+ \begin{split}
+  &
+  \mathbf{Cov}
+  (z_1,z_2)
+  \\
+  &
+  =\ 
+  \E
+  \left[ 
+ \frac{
+ F_{Y(1)}(z_1 \land z_2\,|\,X)
+}{\pi(X)}
+\ 
+-
+\ 
+ \frac{1-\pi(X)}{\pi(X)}
+ F_{Y(1)}(z_1|X)
+ \cdot
+ F_{Y(1)}(z_2|X)
+  \right]
+  \\
+  &
+  \qquad 
+ -
+ \ 
+ F_{Y(1)}(z_1)
+ \cdot
+ F_{Y(1)}(z_2)
+ \,.
+ \end{split}
+\end{align}
+\end{ftheorem}
+
+

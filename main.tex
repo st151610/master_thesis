@@ -135,79 +135,32 @@
 
 \begin{document}
 
-%\listoftodos
-
 \maketitle
 
 \tableofcontents 
 
-%\chapter{Introduction}
-%\input{chapters/introduction.tex}
-%\chapter{Causal Inference}
-%\input{chapters/causal_inference.tex}
 \chapter{Introduction}
-\input{chapters/intro_for_all.tex}
-%\chapter{True Introduction}
-%\input{chapters/true_intro.tex}
-%\chapter{Introduction}
- % \input{chapters/balancing_weights/intro_new.tex}
+  \input{chapters/intro_for_all.tex}
 \chapter{The Optimization Problem behind the Weights}
-\input{chapters/optimization_problem/main.tex}
-\chapter{Pseudo Weights}
-\input{chapters/pseudo_weights/main.tex}
-\chapter{Consistency of the Weights}
-\input{chapters/consistency_weights/main.tex}
-%  \input{final_chapters/ebw:dual_formulation.tex}
-  \newpage
-%  \section{Dual Formulation}
-%  \input{chapters/balancing_weights/dual_formulation.tex}
-%  \newpage
-  %\section{Application of Convex Optimization}
-  %\input{chapters/balancing_weights/app_conv_opt.tex}
+  \input{chapters/optimization_problem/main.tex}
+\chapter{Constructing the Weights Process}
+  \input{chapters/weights_process/main.tex}
+  \input{chapters/pseudo_weights/main.tex}
+%\chapter{Consistency of the Weights}
+%  \input{chapters/consistency_weights/main.tex}
 
-  \chapter{Asymptotic Analysis}
-  \section{Consistency of Optimal Solutions}
-  \subsection{Estimate of an Oracle Parameter by the Dual}
-  \input{final_chapters/aa:dual.tex}
-  \subsection{Estimate of the Inverse Propensitiy Score by the Weights}
-  \input{final_chapters/aa:weights.tex}
-  %\input{chapters/consistency.tex}
-%  \subsection*{Consistency of the Dual}
-%  \input{chapters/balancing_weights/consis_dual.tex}
-%  \subsection*{Consistency of the Primal}
-%  \input{chapters/balancing_weights/consis_primal.tex}
-%  \subsection*{Consistency of the Weighted Mean}
-%  \input{chapters/balancing_weights/consis_est.tex}
-%
-%  \chapter{Asymptotic Normality and Convergence to Gaussian Bridge}
-%  \input{chapters/balancing_weights/an_intro.tex}
-%  \subsection*{Learning Rates for the Dual}
-%  \input{chapters/balancing_weights/an_dual.tex}
-%  \subsection*{Learning Rates for the Primal}
-%  \input{chapters/balancing_weights/an_primal.tex}
-%  \subsection*{Asymptotic Normality of the Weighted Mean}
+\chapter{Convergence of the Weighted Mean}
+  \input{chapters/conv_mean/main.tex}
+%  \section{Consistency of Optimal Solutions}
+%  \subsection{Estimate of an Oracle Parameter by the Dual}
+%  \input{final_chapters/aa:dual.tex}
+%  \subsection{Estimate of the Inverse Propensitiy Score by the Weights}
+%  \input{final_chapters/aa:weights.tex}
   \subsection*{Gaussian Bridge}
   \input{final_chapters/aa:tools.tex}
   \input{final_chapters/aa:mean.tex}
-  %\input{chapters/balancing_weights/an.tex}
-  %\input{chapters/balancing_weights/gaussian_bridge.tex}
   \section{Application to Plug In Estimators}
   \input{chapters/balancing_weights/plug_in_est.tex}
-  %\input{chapters/balancing_weights/universal_consistency.tex}
-  %\input{chapters/balancing_weights/universal_consistency.tex}
- % \section{Introduction}
-  %\input{chapters/balancing_weights/introdution_ch_1.tex}
-%\section{Double Robustness}
-%\input{chapters/balancing_weights/double_robustness.tex}
-%  \section{Error Decompositions}
-%  \input{chapters/balancing_weights/error_decomp.tex}
-%  %\section{Estimating the Population Mean of Potential Outcomes}
-%  %\input{chapters/balancing_weights/chapter_01.tex}
-%  \section{Application of Matrix Concentration Inequalities}
-%  \input{chapters/balancing_weights/application_matrix_concentration_ineq.tex}
-%
-%  \section{Continuous Treatment}
-%  \input{chapters/balancing_weights/continuous_treatment.tex}
 
 \chapter{Convex Analysis}
 In our application we want to analyse a convex optimization problem by its dual problem.
