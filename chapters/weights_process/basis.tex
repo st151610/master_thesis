@@ -1,0 +1,674 @@
+Let $
+\left(
+\mathcal{P}_N
+\right)
+$
+denote a sequence of countable, $\mathcal{B}$-measurable partitions 
+\begin{align*}
+\mathcal{P}_N= \left\{
+  A_{N,1},
+  A_{N,2},
+  \ldots
+\right\}
+\subset \mathcal{B}(\R^d)
+\end{align*}
+of $\R^d$, that is, 
+\begin{align*}
+  A_{N,i}\cap A_{N,j}=\emptyset
+  \qquad
+  \text{if}\ i\neq j
+  \qquad
+  \text{and}
+  \qquad 
+  \bigcap_{i\in\mathbb{N}}A_{N,i}
+  \ 
+  =
+  \ 
+  \R^d
+  \,.
+\end{align*}
+We define
+$ A_N(x) $ to be the cell of $ \mathcal{P}_N $ containing $x$, that is,
+\begin{align*}
+  A_N
+  \colon
+  \R^d 
+  \ 
+  \twoheadrightarrow 
+  \ 
+  \R^d  
+  \,,\qquad
+  x
+  \ 
+  \mapsto
+  \ 
+  A_N(x)
+  \,,
+\end{align*}
+where $A_N(x)$ is the only cell containing $x$. 
+
+\begin{lemma}
+  \label{lem:basis_equiv_r}
+  The relation
+  \begin{align*}
+    x\sim y
+    \qquad
+    :\Leftrightarrow
+    \qquad
+    x\in A_N(y)
+  \end{align*}
+  is an equivalence relation.
+\end{lemma}
+\begin{proof}
+  The proof is simple. We omit it.
+\end{proof}
+Next, we define the (empirical) basis functions vector
+\begin{align}
+  \label{def:basis}
+  B\colon
+  \R^d\times \R^{d\cdot N}
+  \ 
+  \to
+  \ 
+  \R
+  \,,
+  \qquad
+  (x,(x_1,\ldots,x_N))
+  \ 
+  \mapsto
+  \ 
+  \frac
+  {
+    \left[
+    \mathbf{1}
+    _{
+      A_N(x)
+    }
+    (x_k)
+    \right]
+    _{k\in \left\{
+        1,\ldots,N
+    \right\}}
+  }
+  {
+    \sum_{j=1}^N
+    \mathbf{1}
+    _{
+      A_N(x)
+    }
+    (x_j)
+    }
+  \,,
+\end{align}
+where we keep to the convention $"0/0=0"$.
+We shall extend $B$ to depend on the random vectors
+$X,X_1,\ldots,X_N$.
+The next lemma studies the measurability of the extensions.
+\begin{lemma}
+  \label{lem:basis_meas}
+  \quad
+  \begin{enumerate}[label=(\roman*)]
+\item
+  $B(\cdot,(X_1,\ldots,X_N))(\omega)$ is 
+  $\left(
+    \mathcal{B}(\R^d),\mathcal{B}(\R^N)
+  \right)$-measurable
+  and
+  constant on each cell 
+  $A_N\in\mathcal{P}_N$
+  for all $\omega\in\Omega$. 
+\item
+  $B(X,(X_1,\ldots,X_N))$ is $\left(
+    \mathcal{A},\mathcal{B}(\R^N)
+  \right)$-measurable. 
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Consider
+for $k\in \left\{
+  1,\ldots,N
+\right\}$
+and $\omega\in\Omega$
+the indicator function
+\begin{align}
+  \label{33342}
+  \mathbf{1}
+  _
+  {A_N(X_k(\omega))}
+  \colon \R^d\to \left\{
+    0,1
+  \right\}
+  \,.
+\end{align}
+Since 
+$
+  {A_N(X_k(\omega))}
+  \in\mathcal{B}(\R^d)
+$
+this is a 
+  $\left(
+    \mathcal{B}(\R^d),\mathcal{B}(\R)
+  \right)$-measurable
+  function.
+  From the definition of $B$ \eqref{def:basis} it follows the first part of (i).
+  Since the indicator function in \eqref{33342} is 1 if $
+  x\in
+  {A_N(X_k(\omega))}
+  $
+  and 0 else, it is also constant on each cell
+  $A_N\in\mathcal{P}_N$.
+  It follows (i).
+  To prove (ii), note that
+\begin{align*}
+  \mathbf{1}
+  _
+  {A_N(X_k(\omega))}(X(\omega))
+  \ 
+  =
+  \ 
+  \mathbf{1}
+  \bigcup_{i\in\mathbb{N}}
+  \left\{
+    X,X_k \in A_{N,i}
+  \right\}
+  (\omega)
+  \qquad
+  \text{for all}\ 
+  \omega\in\Omega
+  \,,
+\end{align*}
+and
+$
+  \bigcup_{i\in\mathbb{N}}
+  \left\{
+    X,X_k \in A_{N,i}
+  \right\}
+  \in\mathcal{A}
+$ by the 
+$
+\left( 
+  \mathcal{A},
+  \mathcal{B}(\R^d)
+\right)
+$-
+measurability of $X$ and $X_k$.
+\end{proof}
+
+\begin{lemma}
+  \label{lem:basis_sum}
+  Let $(x,x_1,\ldots,x_N)\in\R^{d(N+1)}$.
+  \begin{enumerate}[label=(\roman*)]
+    \item
+      $
+      \sum_{k=1}^{N} 
+      B_k(x,x_1,\ldots,x_N)
+      \in
+      \left\{ 0,1 \right\}
+      $. 
+      In particular,
+      $
+        x_1,\ldots,x_N\notin A_N(x)
+      $
+      is equivalent to
+      $
+      \sum_{k=1}^{N} 
+      B_k(x,x_1,\ldots,x_N)
+      =0
+      $
+    \item
+      $
+      \sum_{k=1}^{N} 
+      B_k(x_i,x_1,\ldots,x_N)
+      \ 
+      =
+      \ 
+      1
+      \qquad
+      \text{for all}\ 
+      i\in \left\{ 1,\ldots,N \right\}
+      $.
+      \item
+        $
+        \norm
+        {
+      B(x,x_1,\ldots,x_N)
+        }_2
+        \ 
+        \le 1
+        \ 
+        $
+      \item
+        $
+        B_k(x_i,x_1,\ldots,x_N)
+        \ 
+        =
+        \ 
+        B_i(x_k,x_1,\ldots,x_N)
+        \qquad
+        \text{for all}\ 
+        i,k\in \left\{ 1,\ldots,N \right\}
+        $
+  \end{enumerate}
+\end{lemma}
+\begin{proof}
+  Let $(x,x_1,\ldots,x_N)\in\R^{d(N+1)}$.
+  We prove \textit{(i)}.
+  Then \textit{(ii)} is a direct consequence of \textit{(i)}.
+  If 
+      $
+        x_1,\ldots,x_N\notin A_N(x)
+      $,
+  then
+  \begin{align*}
+    B_k(
+        x,x_1,\ldots,x_N
+    )
+    \ 
+    =
+    \ 
+\frac
+  {
+    \mathbf{1}
+    _{
+      A_N(x)
+    }
+    (x_k)
+  }
+  {
+    \sum_{j=1}^N
+    \mathbf{1}
+    _{
+      A_N(x)
+    }
+    (x_j)
+    }
+    \ 
+    =
+    \ 
+    0
+    \qquad
+    \text{for all}\ 
+    k\in \left\{ 1,\ldots,N \right\}
+    \,.
+  \end{align*}
+  On the other hand, if the sum is 0 it holds
+  \begin{align*}
+    \mathbf{1}
+    _{
+      A_N(x)
+    }
+    (x_k)
+    \ 
+  =
+  \ 
+  0
+    \qquad
+    \text{for all}\ 
+    k\in \left\{ 1,\ldots,N \right\}
+    \,.
+  \end{align*}
+  It follows the desired equivalence.
+  If 
+  \begin{align*}
+    \mathbf{1}
+    _{
+      A_N(x)
+    }
+    (x_k)
+    \ 
+  =
+  \ 
+  1
+    \qquad
+    \text{for some}\ 
+    k\in \left\{ 1,\ldots,N \right\}
+    \,,
+  \end{align*}
+  then
+  $
+    \sum_{j=1}^N
+    \mathbf{1}
+    _{
+      A_N(x)
+    }
+    (x_j)
+    \ge 1
+  $
+  and thus "$0/0$" doesn't occure. 
+  It follows
+  \begin{align*}
+      \sum_{k=1}^{N} 
+      B_k(x,x_1,\ldots,x_N)
+      \ 
+      =
+      \ 
+\frac
+  {
+      \sum_{k=1}^{N} 
+    \mathbf{1}
+    _{
+      A_N(x)
+    }
+    (x_k)
+  }
+  {
+    \sum_{j=1}^N
+    \mathbf{1}
+    _{
+      A_N(x)
+    }
+    (x_j)
+    }
+    \ 
+    =
+    \ 
+    1
+    \,.
+  \end{align*}
+  To prove \textit{(iii)}, note that by \textit{(i)}
+  \begin{align*}
+        \norm
+        {
+      B(x,x_1,\ldots,x_N)
+        }_2^2
+        \ 
+        =
+        \ 
+      \sum_{k=1}^{N} 
+      B_k(x,x_1,\ldots,x_N)^2
+        \ 
+      \le
+        \ 
+      \sum_{k=1}^{N} 
+      B_k(x,x_1,\ldots,x_N)
+        \ 
+      \le
+        \ 
+      1
+      \,.
+  \end{align*}
+  To prove \textit{(iv)}, note that by Lemma~\ref{lem:basis_equiv_r}
+  and by symmetry and transitivity of the equivalence relation
+  $x\in A_N(y)$
+  it holds
+  \begin{align*}
+      B_k(x_i,x_1,\ldots,x_N)
+      &
+    \ 
+      =
+    \ 
+ \frac
+  {
+    \mathbf{1}
+    \left\{ 
+      x_k
+      \in
+      A_N(x_i)
+    \right\}
+  }
+  {
+    \sum_{j=1}^N
+    \mathbf{1}
+    \left\{ 
+      x_j
+      ,
+      x_k
+      \in
+      A_N(x_i)
+    \right\}
+    }
+    \ 
+    =
+    \ 
+ \frac
+  {
+    \mathbf{1}
+    \left\{ 
+      x_i
+      \in
+      A_N(x_k)
+    \right\}
+  }
+  {
+    \sum_{j=1}^N
+    \mathbf{1}
+    \left\{ 
+      x_j
+      \in
+      A_N(x_k)
+    \right\}
+    }
+    \\
+    &
+    \ 
+    =
+    \ 
+      B_i(x_k,x_1,\ldots,x_N)
+      \,.
+  \end{align*}
+\end{proof}
+\begin{lemma}
+  \label{lem:basis_approx_f}
+  Let $(x,x_1,\ldots,x_N)\in\R^{d(N+1)}$.
+  For all uniformly continuous functions $f\colon \R^d\to \R$ it holds
+ \begin{align*}
+   \begin{split}
+   &
+   \left|
+  \sum_{k=1}^{N}
+    B_k(x_i,x_1,\ldots,x_N)\cdot 
+    f(x_k)
+    -
+    f(x_i)
+   \right|
+   \ 
+   \le
+   \ 
+   \omega
+   \left(
+    f,h_N^d
+   \right)
+   \qquad
+   \text{for all}\ 
+   i\in \left\{ 1,\ldots,N \right\}
+   \,,
+   \end{split}
+ \end{align*}
+ where $\omega(f,\cdot)$ is the uniform modulus of continuity of $f$. 
+\end{lemma}
+\begin{proof}
+  It follows from Lemma~\ref{lem:basis_sum}\textit{(ii)}
+  \begin{align*}
+   \begin{split}
+   &
+   \left|
+  \sum_{k=1}^{N}
+    B_k(x_i,x_1,\ldots,x_N)\cdot 
+    f(x_k)
+    -
+    f(x_i)
+   \right|
+   \\
+   &
+   \ 
+   \le
+   \ 
+   \left|
+  \sum_{k=1}^{N}
+    B_k(x_i,x_1,\ldots,x_N)
+    \left(
+    f(x_k)
+    -
+    f(x_i)
+    \right)
+   \right|
+   \\
+   &
+   \ 
+   \le
+   \ 
+  \sum_{k=1}^{N}
+    B_k(x_i,x_1,\ldots,x_N)
+    \cdot
+    \mathbf{1}\left\{
+      x_k\in A_N(x_i)
+    \right\}
+    \left|
+    f(x_k)
+    -
+    f(x_i)
+    \right|
+   \\
+   &
+   \ 
+   \le
+   \ 
+   \omega
+   \left(
+    f,h_N^d
+   \right)
+   \,.
+   \end{split}
+ \end{align*}
+\end{proof}
+\begin{lemma}
+  Let $(x,x_1,\ldots,x_N)\in\R^{d(N+1)}$.
+  It holds
+  for $N\to\infty$
+  \begin{enumerate}[label=(\roman*)]
+      \item
+      \begin{align*}
+        \frac
+        {1}
+        {N}
+        \sum_{i,k=1}^{N}
+            \left|
+        B_k(x_i,x_1,\ldots,x_N)
+        \cdot
+        \varphi^{'}
+            \left(
+              \frac
+              {1}
+              {\pi(x_k)}
+            \right)
+            \ 
+            -
+            \ 
+            \varphi^{'}
+            \left(
+              \frac
+              {1}
+              {\pi(x_i)}
+            \right)
+            \right|
+            \ 
+            \to
+            \ 
+            0
+            \,,
+          \end{align*}
+\item
+      \begin{align*}
+        \sqrt{N}
+        \sup_{z\in\R}
+        \max_{i\in \left\{ 1,\ldots,N \right\}}
+        \sum_{k=1}^{N}
+            \left|
+        B_k(x_i,x_1,\ldots,x_N)
+        \cdot
+        F_{Y(1)}(z|x_k)
+            \ 
+            -
+            \ 
+        F_{Y(1)}(z|x_i)
+            \right|
+            \ 
+            \to
+            \ 
+            0
+            \,.
+      \end{align*}
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+  By Lemma~\ref{lem:basis_approx_f} 
+  and the (assumed) uniform continuity of $\varphi^{'}$
+  it holds
+      \begin{align*}
+        \frac
+        {1}
+        {N}
+        \sum_{i,k=1}^{N}
+            \left|
+        B_k(x,x_1,\ldots,x_N)
+        \cdot
+            \varphi^{'}
+            \left(
+              \frac
+              {1}
+              {\pi(x_k)}
+            \right)
+            \ 
+            -
+            \ 
+            \varphi^{'}
+            \left(
+              \frac
+              {1}
+              {\pi(x_i)}
+            \right)
+            \right|
+            \ 
+            \le
+            \ 
+   \omega
+   \left(
+     \varphi^{'},h_N^d
+   \right)
+            \ 
+            \to
+            \ 
+            0
+          \end{align*}
+          for $N\to\infty$.
+          Likewise
+\begin{align*}
+  &
+        \sqrt{N}
+        \sup_{z\in\R}
+        \max_{i\in \left\{ 1,\ldots,N \right\}}
+        \sum_{k=1}^{N}
+            \left|
+        B_k(x_i,x_1,\ldots,x_N)
+        \cdot
+        F_{Y(1)}(z|x_k)
+            \ 
+            -
+            \ 
+        F_{Y(1)}(z|x_i)
+          \right|
+             \\
+            &
+            \ 
+            \le
+            \ 
+            \sqrt{N}
+            \sup_{z\in\R}
+            \omega
+            \left(
+        F_{Y(1)}(z|\cdot)
+        ,
+        h_N^d
+            \right)
+            \ 
+            \to
+            \ 
+            0
+            \qquad
+            \text{for}
+            \ 
+            N\to\infty
+            \,.
+\end{align*}
+        \end{proof}

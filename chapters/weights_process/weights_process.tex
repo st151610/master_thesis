@@ -1,0 +1,285 @@
+Based on Theorem~\ref{dual_solution_th}
+we want to use the dual 
+solution 
+$
+\left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
+$
+to construct weights.
+To this end, we define the (empirical) weights function
+\begin{align*}
+ w\ \colon\
+ &
+ \left( 
+  \R^d\times \R^{d\cdot N}
+ \right)
+  \times
+  \left( 
+\R^N_{\ge 0}\times \R\times \R^N
+  \right)
+  \to
+  \R^N
+  \\
+ &
+  \left( 
+  (x,x_1,\ldots,x_N),(\rho,\lambda_0,\lambda)
+  \right)
+  \ 
+  \mapsto
+  \ 
+  \left[ 
+  (\varphi^{'})^{-1}
+  \left( 
+    \rho_i
+    +
+    \lambda_0
+    +
+    \inner
+    {B(x,x_1,\ldots,x_N)}
+    {\lambda}
+  \right)
+\right]_{i\in \left\{ 1,\ldots,N \right\}}
+\,.
+\end{align*}
+\begin{definition}
+  Let 
+  $
+\left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
+  $
+  be the dual solution of Lemma~\ref{lem:meas_dual_sol}.
+  We define the weights process 
+  $\left\{ w^\dagger(x) | x\in\R^d\right\}$
+  by
+  \begin{align*}
+    w^\dagger(x) 
+    \ 
+    :=
+    \ 
+    w
+    \left( 
+    \left( 
+    x,X_1,\ldots,X_N,
+    \right)
+    ,
+\left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
+    \right)
+    \qquad
+    \text{for all}\ 
+    x\in\R^d
+    \,.
+  \end{align*}
+\end{definition}
+\begin{lemma}
+  \label{weights_l_inf}
+  It holds
+  $w_i^\dagger(X)\in L^\infty(\P)$
+  for all $i\in \left\{ 1,\ldots,N \right\}$.
+\end{lemma}
+\begin{proof}
+  By Lemma~\ref{lem:basis_sum}.\textit{(iii)} it holds
+  \begin{align*}
+  \left| 
+    \rho_i^\dagger
+    +
+    \lambda_0^\dagger
+    +
+    \inner
+    {B(x,x_1,\ldots,x_N)}
+    {\lambda^\dagger}
+  \right|
+  \ 
+  \lesssim
+  \ 
+  \norm{
+\left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
+  }_2
+  \qquad
+  \text{for all}\ 
+  i \in \left\{ 1,\ldots,N \right\}
+  \,.
+  \end{align*}
+  Since
+  $
+\left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
+  $ is contained in the deterministic and compact parameter space $\Theta_N$,
+  it holds
+  \begin{align*}
+  \norm{
+\left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
+  }_2
+  \in 
+  L^{\infty}(\P)
+  \,.
+  \end{align*}
+  By the (assumed) uniform continuity of 
+  $
+  (\varphi^{'})^{-1}
+  $
+  on $\R$, it follows 
+  $w_i^\dagger(X)\in L^\infty(\P)$
+  for all $i\in \left\{ 1,\ldots,N \right\}$.
+\end{proof}
+\begin{lemma}
+  \label{w.Z=0}
+ Let 
+ $Z\in L^1(\P)$
+  be a random variable that is independent of $D_N=(T_i,X_i)_{i\in \left\{
+    1,\ldots,N
+  \right\}}$ 
+  with
+  $
+\E
+\left[
+  Z
+  \,
+  |
+  \, 
+  X
+\right]
+= 0
+  $
+  almost surely.
+  It holds
+  \begin{gather*}
+  \E
+  \left[
+    w_i^\dagger(X)
+  \cdot Z
+  \right]
+  =0
+  \qquad
+  \text{for all}
+  \ 
+  i\in \left\{ 1,\ldots,N \right\}
+  \,.
+  \end{gather*}
+\end{lemma}
+\begin{proof}
+  We write
+  \begin{gather*}
+    w_i^\dagger(X)
+  \ 
+  =
+  \ 
+  w^\dagger(X)
+  \end{gather*}
+  and ignore the index $i$.
+  By Lemma~\ref{weights_l_inf} it holds
+  \begin{gather}
+    \label{9876}
+    \norm{
+  w^\dagger(X)\cdot Z
+    }_{L^1(\P)}
+    \ 
+  \le
+    \ 
+  \norm{w^\dagger(X)}_{L^\infty(\P)}
+  \norm{Z}_{L^1(\P)}
+  \ 
+  <
+  \ 
+  \infty
+  \,.
+  \end{gather}
+  By 
+  \eqref{9876},
+  $Z\perp D_N$
+  and
+  $
+\E
+\left[
+  Z
+  \,
+  |
+  \, 
+  X
+\right]
+= 0
+  $
+  almost surely
+  it holds 
+  \begin{align*}
+    \E
+  \left[
+  w^\dagger(X)
+  \cdot
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+  &
+  \ 
+  =
+  \ 
+  w^\dagger(X)
+  \cdot
+  \E
+  \left[
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+  \\
+  &
+  \ 
+  =
+  \ 
+  w^\dagger(X)
+  \cdot
+  \E
+  \left[
+  Z
+  \,
+  |
+  \,
+  X
+  \right]
+  \
+  =
+  \ 
+  0
+  \qquad
+  \text{almost surely.}
+  \end{align*}
+  Note, that $w^\dagger(X)$ is 
+  $
+  \left(
+  \sigma(D_N,X),\mathcal{B}(\R)
+  \right)
+  $-measurable.  
+  Thus
+  \begin{gather*}
+    \E
+    \left[
+  w^\dagger(X)
+  \cdot
+  Z
+  \,
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+ \E
+  \left[
+  w^\dagger(X)
+  \cdot
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+    \right]
+    \ 
+    =
+    \ 
+    0
+    \,.
+     \end{gather*}
+\end{proof}
+

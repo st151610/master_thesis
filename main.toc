@@ -6,18 +6,16 @@
 \contentsline {chapter}{\numberline {3}Constructing the Weights Process}{19}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Argmax Measurability Theorem}{19}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Measurable Dual Solution}{20}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Argmax Measurability Theorem}{21}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Pseudo Dual Solution}{22}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Basis Functions}{24}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Pseudo Weights Process}{28}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Convergence of the Weighted Mean}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Main Result}{31}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Error Decomposition}{31}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Analysis of the Terms}{34}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}$R_1$}{34}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Tools and Assumptions}{35}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Application to Plug In Estimators}{57}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Convex Analysis}{59}{chapter.5}%
-\contentsline {section}{\numberline {5.1}A Convex Analysis Primer}{59}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Duality of Optimal Solutions}{66}{section.5.2}%
+\contentsline {section}{\numberline {3.3}Basis Functions}{21}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Weights Process}{25}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Convergence of the Weighted Mean}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Main Result}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Error Decomposition}{27}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Analysis of the Terms}{30}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}$R_1$}{30}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Tools and Assumptions}{31}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Application to Plug In Estimators}{53}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Convex Analysis}{55}{chapter.5}%
+\contentsline {section}{\numberline {5.1}A Convex Analysis Primer}{55}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Duality of Optimal Solutions}{62}{section.5.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

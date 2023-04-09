@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1681023773 "main.aux" "main.bbl" "main" 1681023947 0
+["bibtex main"] 1681030576 "main.aux" "main.bbl" "main" 1681030684 0
   "./literature.bib" 1680496697 74008 ac796195b85a67d7d63569db8925fb23 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1679564905 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1681023946 24446 fa1667f78da2665259c487fc2edb6be1 "pdflatex"
+  "main.aux" 1681030683 22510 10f07e7f1a125e5baad3595dbcbc6170 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1681023940 "main.tex" "main.pdf" "main" 1681023947 0
+["pdflatex"] 1681030678 "main.tex" "main.pdf" "main" 1681030684 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1679564905 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1679564905 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1679564905 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -62,7 +62,6 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1679564905 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1679564905 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1679564905 37944 359e864bd06cde3b1cf57bb20757fb06 ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1679564905 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1679564905 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1679564905 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb" 1679564905 145929 f25e56369a345c4ff583b067cd87ce8e ""
@@ -235,22 +234,20 @@
   "chapters/optimization_problem/intro.tex" 1680845019 558 626d12c63acffa2f99f9dbc95656b8ef ""
   "chapters/optimization_problem/main.tex" 1680860891 893 3d091856562b071074dc8f4daac228bd ""
   "chapters/optimization_problem/primal_problem.tex" 1680846149 4717 10bb68ef25cbc9e2ca730c5a6255e332 ""
-  "chapters/pseudo_weights/basis.tex" 1680937233 10467 f3112a6073bd267134ab0f1d71b36e17 ""
-  "chapters/pseudo_weights/main.tex" 1680869120 739 f5938f4b90a3ca60eea5f2a14396f03d ""
-  "chapters/pseudo_weights/meas_argmax.tex" 1680804454 2783 a45372617aef7d129d9cd860b4ed6e50 ""
-  "chapters/pseudo_weights/pseudo_sol.tex" 1680804365 6602 b51e6e383e6388d3f4d6303c4ade60e8 ""
-  "chapters/pseudo_weights/weights_process.tex" 1680878170 5183 0c98018235ab2cff7af6add41ea4d028 ""
-  "chapters/weights_process/main.tex" 1681022947 700 2e398b7f1b0c571ef805a9446325a49d ""
+  "chapters/pseudo_weights/main.tex" 1681028963 751 5d85d4df42938c8b8ecbd71d3cb6633e ""
+  "chapters/weights_process/basis.tex" 1681030678 10535 b943fe4ad1bea829adc941330ed37551 ""
+  "chapters/weights_process/main.tex" 1681029024 955 10a8ca2b85fd03cf0a86f0ae89dd146e ""
   "chapters/weights_process/meas_argmax.tex" 1680804454 2783 a45372617aef7d129d9cd860b4ed6e50 ""
   "chapters/weights_process/meas_dual_sol.tex" 1681023939 2979 f43ff6f14cbda551ef6511464de82cfe ""
+  "chapters/weights_process/weights_process.tex" 1681030569 3858 4ed5e0e6db3bbdd9ba3a9d212ace19c9 ""
   "final_chapters/aa:mean.tex" 1679489813 37402 5a176fb16ed955d13aefb61a474dc9c4 ""
   "final_chapters/aa:tools.tex" 1680799128 21901 343d4f18e0854c372fe4474f6c74d9d2 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1681023946 24446 fa1667f78da2665259c487fc2edb6be1 "pdflatex"
-  "main.bbl" 1681023773 3476 572ad7fbae1e01fd46fb2b7cff5db8dd "bibtex main"
-  "main.out" 1681023943 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1681030683 22510 10f07e7f1a125e5baad3595dbcbc6170 "pdflatex"
+  "main.bbl" 1681030576 3476 572ad7fbae1e01fd46fb2b7cff5db8dd "bibtex main"
+  "main.out" 1681030680 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1681021926 8816 b73f80b201f86eec7de76936f9fe27ef ""
-  "main.toc" 1681023946 1879 56851821bf4bcfd9367f1e95fc7c0a7e "pdflatex"
+  "main.toc" 1681030683 1702 c48007205347dac0559b867549fe5622 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
