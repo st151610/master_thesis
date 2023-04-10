@@ -1,69 +1,4 @@
-To proceed we recall the (random) objective function of Problem~\ref{dual}, that is,
-\begin{align*}
-  G\colon
-  \R^N_{\ge 0}
-  \times
-  \R
-  \times
-  \R^{N}
-  &
-  \ 
-  \to
-  \ 
-  \overline{\R}
-  \\
-  \left( 
-    \rho
-    ,
-    \lambda_0,
-    \lambda
-  \right)
-  &
-  \ 
-  \mapsto
-  \ 
-    \frac{1}{N}
-\sum_{i=1} 
-^N
-  T_i
-  \cdot
-  \varphi^*
-  \!
-  \left( 
-    \rho_i
-    +
-\lambda_0
-+
-\inner
-{B(X_i)}
-{
-\lambda
-}
-  \right)
-  \ 
-  -
-  \ 
-\lambda_0
--
-\inner
-{B(X_i)}
-{
-\lambda
-}
-\Big]
-  \\
-  &
-  \qquad 
-+
-\ 
-\inner
-{\delta}
-{
-  |\lambda|
-}
-\end{align*}
-Note, that $G$ is continuous by the continuity of $\varphi^*$.
-Next we define for $\varepsilon>0$ an auxiliary function:
+On the basis of the (random) objective function $G$ of Problem~\ref{dual} (see Definition~\ref{def:rand_obj_f}) we define, for $\varepsilon>0$, an auxiliary function
    \begin{align*}
      \underline{
      \Delta G^*
@@ -71,13 +6,11 @@ Next we define for $\varepsilon>0$ an auxiliary function:
      }
      \colon
      &
-     \left( \Omega,\mathcal{A},\P \right)
+     \left( \Omega,\sigma(D_N),\P \right)
      \ 
      \to
      \ 
-     \left( 
-       \R,\mathcal{B}(\overline{\R})
-     \right)
+     \overline{\R}
      \\
      &
      \omega
@@ -88,14 +21,22 @@ Next we define for $\varepsilon>0$ an auxiliary function:
    \left\{ 
  G
    \left( 
+     \omega,
+     \left( 
 \Delta_\rho,\Delta_0,\lambda^*(\omega)+\Delta
+     \right)
    \right)
    -
    G
    \left(
+     \omega,
+     \left( 
 0_N,0,\lambda^*(\omega)
+     \right)
    \right)
-   \Big\lvert
+   \ 
+   \colon
+   \ 
    \norm{
 \Delta_\rho,\Delta_0,\Delta
    }_2
@@ -111,34 +52,67 @@ Next we define for $\varepsilon>0$ an auxiliary function:
      _\varepsilon
      }
   $
-  is measurable.
+  is
+  $
+  \left( 
+  \sigma(D_N),\mathcal{B}(\overline{\R})
+  \right)
+  $-measurable.
 \end{lemma}
 \begin{proof}
-  Since the function
-  \begin{align*}
-    \R^{N}
-    \times
+  Let $\varepsilon>0$.
+  By Lemma~\ref{lem:caratheo_G}, the function
+\begin{align*}
+     \Delta G
+     _\varepsilon
+     \colon
+     &
+     \Omega
+     \times
+     \left( 
+     \R^N
+     \times
     \left( 
     \R^N_{\ge 0}\times\R\times\R^N
     \right)
-    \ni
-    \left( 
-    \lambda,(\Delta_\rho,\Delta_0,\Delta)
-    \right)
-    \ 
-    \mapsto
-    \ 
+     \right)
+     \ 
+     \to
+     \ 
+     \overline{\R}
+     \\
+     &
+     \left( 
+     \omega
+     ,
+     \left( 
+     \lambda,
+     \left( 
+\Delta_\rho,\Delta_0,\Delta
+     \right)
+     \right)
+     \right)
+     \ 
+     \mapsto
+     \ 
  G
    \left( 
-     \Delta_\rho,\Delta_0,\lambda+\Delta
+     \omega,
+     \left( 
+\Delta_\rho,\Delta_0,\lambda+\Delta
+     \right)
    \right)
    -
    G
    \left(
-     0_N,0,\lambda
+     \omega,
+     \left( 
+0_N,0,\lambda
+     \right)
    \right)
-  \end{align*}
-  is continuous and 
+   \end{align*}
+is Caratheodory.
+Since
   $
   \left\{
    \norm{
@@ -150,26 +124,48 @@ Next we define for $\varepsilon>0$ an auxiliary function:
   is compact in 
   $
     \R^N_{\ge 0}\times\R\times\R^N
-    $
-    for all $\varepsilon>0$,
+    $,
   the function
 \begin{align*}
-    \R^{N}
-    \ni
-    \lambda
-    \ 
-    \mapsto
-    \ 
-    \inf
+  \underline{
+     \Delta G
+     _\varepsilon
+  }
+     \colon
+     &
+     \Omega
+     \times
+     \R^N
+     \ 
+     \to
+     \ 
+     \overline{\R}
+     \\
+     &
+     \left( 
+     \omega
+     ,
+     \lambda
+     \right)
+     \ 
+     \mapsto
+     \ 
+   \inf
     \left\{ 
-  G
+ G
    \left( 
-     \Delta_\rho,\Delta_0,\lambda+\Delta
+     \omega,
+     \left( 
+\Delta_\rho,\Delta_0,\lambda+\Delta
+     \right)
    \right)
    -
    G
    \left(
-     0_N,0,\lambda
+     \omega,
+     \left( 
+0_N,0,\lambda
+     \right)
    \right)
    \ 
    \colon
@@ -180,12 +176,21 @@ Next we define for $\varepsilon>0$ an auxiliary function:
    =\varepsilon
     \right\}
    \end{align*}
-is continuous for all $\varepsilon>0$.
+is Caratheodory.
 Since 
 $
 \lambda^*
 $
-is measurable it follows the statement.
+is 
+$
+\left( 
+\sigma
+(D_N)
+,
+\mathcal{B}(\R^N)
+\right)
+$-
+measurable it follows the statement.
 \end{proof}
  \begin{lemma}
    \label{bw:cd:lem2}
@@ -249,18 +254,18 @@ $
 (see Lemma~\ref{G_meas}).
 To this end, note, that
 \begin{gather*}
-  G(\lambda,\lambda_0,\rho)
+  G(\rho,\lambda_0,\lambda)
   \ 
   =
   \ 
-  g(\lambda,\lambda_0,\rho)
+  g(\rho,\lambda_0,\lambda)
   \ 
   +
   \ 
   \inner{\delta}{|\lambda|}
   \qquad
   \text{for all}\ 
-  (\lambda,\lambda_0,\rho)
+  (\rho,\lambda_0,\lambda)
   \in
   \R^{N}
   \times
@@ -275,7 +280,7 @@ with
   \ 
   :=
   \ 
-  (\lambda,\lambda_0,\rho)
+  (\rho,\lambda_0,\lambda)
   \ 
   \mapsto
   \ 
@@ -315,7 +320,7 @@ Since we assume $\varphi^*$ to be continuously differentiable (it is always conv
 $g$ is a continuously differentiable convex function with gradient
 \begin{align*}
   &
-  (\lambda,\lambda_0,\rho)
+  (\rho,\lambda_0,\lambda)
   \\
   &
   \ 
@@ -344,13 +349,13 @@ $g$ is a continuously differentiable convex function with gradient
 }
   \right)
   \left[ 
-    B(X_i)^\top,1,e_i^\top
+    e_i^\top,1,B(X_i)^\top
   \right]^\top
   \ 
   -
   \ 
   \left[ 
-    B(X_i)^\top,1,0_n^\top
+    0_N^\top,1,B(X_i)^\top
   \right]^\top
      \right)
   \,.
@@ -361,16 +366,14 @@ it holds
   &
   G
    \left( 
-\lambda^*
-+\Delta_\rho,\Delta_0,\Delta
+\Delta_\rho,\Delta_0,\lambda^*+\Delta
    \right)
    \ 
    -
    \ 
    G
    \left(
-\lambda^*
-,0,0
+0_N,0,\lambda^*
    \right)
    \\
    &
@@ -396,21 +399,17 @@ it holds
 }
   \right)
   \left[ 
-    B(X_i)^\top,1,e_i^\top
+    e_i^\top,1,B(X_i)^\top
   \right]
   \ 
   -
   \ 
   \left[ 
-    B(X_i)^\top,1,0_n^\top
+    0_N^\top,1,B(X_i)^\top
   \right]
   \right)
   \begin{bmatrix}
-    \Delta
-    \\
-    \Delta_0
-    \\
-    \Delta_\rho
+    \Delta_\rho,\Delta_0,\Delta
   \end{bmatrix}
     \\
   &
@@ -456,15 +455,11 @@ it holds
   1
   \right)
   \left[ 
-    B(X_i)^\top,1,e_i^\top
+    e_i^\top,1,B(X_i)^\top
   \right]
   \cdot
   \begin{bmatrix}
-    \Delta
-    \\
-    \Delta_0
-    \\
-    \Delta_\rho
+    \Delta_\rho,\Delta_0,\Delta
   \end{bmatrix}
   +
   \inner{e_i}{\Delta_\rho}
@@ -514,15 +509,11 @@ it holds
   1
   \right)
   \left[ 
-    B(X_i)^\top,1,e_i^\top
+    e_i^\top,1,B(X_i)^\top
   \right]
   \cdot
   \begin{bmatrix}
-    \Delta
-    \\
-    \Delta_0
-    \\
-    \Delta_\rho
+    \Delta_\rho,\Delta_0,\Delta
   \end{bmatrix}
   \right|
     \ 
@@ -540,15 +531,11 @@ It holds
 \begin{align*}
   \left|
    \left[ 
-    B(X_i)^\top,1,e_i^\top
+    e_i^\top,1,B(X_i)^\top
   \right]
   \cdot
   \begin{bmatrix}
-    \Delta
-    \\
-    \Delta_0
-    \\
-    \Delta_\rho
+    \Delta_\rho,\Delta_0,\Delta
     \end{bmatrix}
   \right|
   \lesssim
