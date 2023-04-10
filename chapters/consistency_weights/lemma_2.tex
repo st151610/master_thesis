@@ -44,7 +44,7 @@ On the basis of the (random) objective function $G$ of Problem~\ref{dual} (see D
    \right\}
    \end{align*}
 \begin{lemma}
-  \label{G_meas}
+\label{lem:meas_inf_G}
   For all $\varepsilon>0$ the function
   $
      \underline{
@@ -88,7 +88,7 @@ On the basis of the (random) objective function $G$ of Problem~\ref{dual} (see D
      \left( 
      \lambda,
      \left( 
-\Delta_\rho,\Delta_0,\Delta
+\Delta_\rho\Delta_0\Delta
      \right)
      \right)
      \right)
@@ -116,7 +116,7 @@ Since
   $
   \left\{
    \norm{
-\Delta_\rho,\Delta_0,\Delta
+\Delta_\rho\\\Delta_0\\\Delta
    }_2
    =\varepsilon
   \right\}
@@ -171,7 +171,7 @@ Since
    \colon
    \ 
    \norm{
-\Delta_\rho,\Delta_0,\Delta
+\Delta_\rho\Delta_0\Delta
    }_2
    =\varepsilon
     \right\}
@@ -194,7 +194,7 @@ measurable it follows the statement.
 \end{proof}
  \begin{lemma}
    \label{bw:cd:lem2}
-   Under conditions it holds
+   It holds
    for all $\varepsilon>0$
 \begin{gather}
    \P
@@ -218,8 +218,12 @@ measurable it follows the statement.
 \end{gather}
  \end{lemma}
  \begin{proof}
-   Let $\varepsilon>0$.
-   We will show
+   Let $\varepsilon>0$
+   and 
+   $\norm{
+   \Delta_\rho,\Delta_0,\Delta
+   }_2=\varepsilon$.
+   We show
 \begin{gather}
    \P
    \left[ 
@@ -251,7 +255,7 @@ $
      _\varepsilon
      }
 $
-(see Lemma~\ref{G_meas}).
+(see Lemma~\ref{lem:meas_inf_G}).
 To this end, note, that
 \begin{gather*}
   G(\rho,\lambda_0,\lambda)
@@ -267,11 +271,11 @@ To this end, note, that
   \text{for all}\ 
   (\rho,\lambda_0,\lambda)
   \in
-  \R^{N}
+  \R^N_{\ge 0}
   \times
   \R
   \times
-  \R^n_{\ge 0}
+  \R^{N}
   \,,
 \end{gather*}
 with
@@ -363,6 +367,8 @@ $g$ is a continuously differentiable convex function with gradient
 Thus, by \eqref{cv:primer:mvthe},
 it holds
 \begin{align*}
+\label{99909}
+\begin{split}
   &
   G
    \left( 
@@ -409,7 +415,7 @@ it holds
   \right]
   \right)
   \begin{bmatrix}
-    \Delta_\rho,\Delta_0,\Delta
+    \Delta_\rho\\\Delta_0\\\Delta
   \end{bmatrix}
     \\
   &
@@ -459,7 +465,7 @@ it holds
   \right]
   \cdot
   \begin{bmatrix}
-    \Delta_\rho,\Delta_0,\Delta
+    \Delta_\rho\\\Delta_0\\\Delta
   \end{bmatrix}
   +
   \inner{e_i}{\Delta_\rho}
@@ -513,10 +519,12 @@ it holds
   \right]
   \cdot
   \begin{bmatrix}
-    \Delta_\rho,\Delta_0,\Delta
+    \Delta_\rho\\\Delta_0\\\Delta
   \end{bmatrix}
   \right|
-    \ 
+  \\
+  &
+  \qquad
   -
   \ 
   \inner{\delta}
@@ -524,10 +532,23 @@ it holds
 \Delta
   |
 }
+\\
+&
+\
+=:
+\ 
+-
+I_1
+\\
+&
+\qquad
+-
+\
+ I_2
+\end{split}
 \end{align*}
-\subsection*{first term}
-By the Cauchy-Schwarz inequality, Lemma (basis) it holds
-It holds
+\subsection*{$I_1$}
+By the Cauchy-Schwarz inequality, Lemma~\ref{lem:basis_sum}.\textit{(iii)} it holds
 \begin{align*}
   \left|
    \left[ 
@@ -535,10 +556,18 @@ It holds
   \right]
   \cdot
   \begin{bmatrix}
-    \Delta_\rho,\Delta_0,\Delta
+    \Delta_\rho\\\Delta_0\\\Delta
     \end{bmatrix}
   \right|
-  \lesssim
+  \ 
+  \le
+  \ 
+  \norm{
+    \Delta_\rho,\Delta_0,\Delta
+  }_2
+  \ 
+  \le
+  \ 
   \varepsilon
   \,.
 \end{align*}
@@ -615,9 +644,68 @@ Furthermore,
   \right)
   \right|
   \right)
+  \\
+  &
+  \ 
+  =:
+  \ 
+  J_1
+  \\
+  &
+  \qquad
+  +
+  \ 
+  J_2
 \end{align*}
-The firs term goes to 0 by the wlln.
-By Lemma basis it follows for the second term
+\subsubsection*{$J_1$}
+By the properties of conditional expectation it holds
+\begin{gather*}
+  \E
+  \left[ 
+    \frac{T}{\pi(X)}
+  \right]
+  =
+  \E
+  \left[ 
+    \frac{\E[T|X]}{\pi(X)}
+  \right]
+  =1
+  \,.
+\end{gather*}
+Also
+\begin{gather}
+  \E
+  \left[ 
+    \left| 
+    1
+    -
+    \frac{T}{\pi(X)}
+    \right|
+  \right]
+  \le
+  1
+  +
+  \E
+  \left[ 
+    \frac{T}{\pi(X)}
+  \right]
+  =
+  2
+  \,.
+\end{gather}
+Thus Etemadi's ($\mathcal{L}_1$ version) strong law of large numbers (cf.\cite[Theorem~5.17]{Klenke2020}) applies
+to $J_1$, that is,
+$J_1\overset{\P}{\to}0$.
+\subsubsection*{$J_2$}
+By Lemma~\ref{lem:basis_2}.\textit{(i)}
+and the uniform continuity of 
+$
+  (
+  \varphi^{'}
+  )
+  ^{-1}
+$
+it holds
 \begin{align*}
 \omega
 \left(
@@ -626,14 +714,161 @@ By Lemma basis it follows for the second term
   )
   ^{-1}
   ,
-  \omega(
+  \left|
+    \sum_{k=1}^{N}
+  B_k(X_i)
+  \cdot
+  \varphi^{'}
+  \left(
+    \frac
+    {1}
+    {\pi(X_k)}
+  \right)
+  -
+  \varphi^{'}
+  \left(
+    \frac
+    {1}
+    {\pi(X_i)}
+  \right)
+  \right|
+  \right)
+  &
+  \ 
+  \le
+  \ 
+\omega
+\left(
+  (
+  \varphi^{'}
+  )
+  ^{-1}
+  ,
+\omega
+\left(
   \varphi^{'}
   ,
   h_N^d
-  )
   \right)
-  \to 0
+  \right)
+  \\
+  &
+  \ 
+  \to
+  \ 
+  0
+  \,.
 \end{align*}
-For the 
+Thus $J_2\to 0$.
+\subsubsection*{Conclusion $I_1$}
+It follows from the analysis of $J_1$ and $J_2$
+\begin{align*}
+  \P
+  \left[
+  I_1 \le \tilde{\varepsilon}
+  \right]
+  \to 1
+  \qquad
+  \text{for all}\ 
+  \tilde{\varepsilon}>0
+  \,.
+\end{align*}
+\subsection*{$I_2$}
+Since
+$\delta>0$
+we get
+\begin{align*}
+     \inner{\delta}
+     {|\Delta|}
+     \ 
+     \le
+     \ 
+     \norm{\delta}_1
+     \norm{\Delta}_\infty
+     \ 
+     \le
+     \ 
+     \norm{\delta}_1
+     \varepsilon
+     \,,
+\end{align*}
+Since $\norm{\delta}_1$ converges to $0$ in probability we get
+\begin{align*}
+  \P
+  \left[
+  I_2 \le \tilde{\varepsilon}
+  \right]
+  \ 
+  \to
+  \ 
+  1
+  \qquad
+  \text{for all}\ 
+  \tilde{\varepsilon}>0
+  \,.
+\end{align*}
+\subsection*{Conclusion}
+By \eqref{99909} we get
+\begin{align*}
+  \P
+  \left[ 
+   G
+   \left( 
+\Delta_\rho,\Delta_0,\lambda^*+\Delta
+   \right)
+   \ 
+   -
+   \ 
+   G
+   \left(
+0_N,0,\lambda^*
+   \right)
+   \ge - 
+  \tilde{\varepsilon}
+  \right]
+  \ 
+  \to
+  \ 
+  1
+  \qquad
+  \text{for all}\ 
+  \tilde{\varepsilon}>0
+  \,.
+\end{align*}
+Thus
+\begin{align*}
+  \P
+  \left[ 
+  \underline{\Delta G^*_\varepsilon}
+   \ge - 
+  \tilde{\varepsilon}
+  \right]
+  \ 
+  \to
+  \ 
+  1
+  \qquad
+  \text{for all}\ 
+  \tilde{\varepsilon}>0
+  \,.
+\end{align*}
+From the measurability of 
+$
+  \underline{\Delta G^*_\varepsilon}
+$ 
+(see Lemma~\ref{lem:meas_inf_G})
+it follows
+\begin{align*}
+  \P
+  \left[ 
+  \underline{\Delta G^*_\varepsilon}
+   \ge 0
+  \right]
+  \ 
+  \to
+  \ 
+  1
+  \,.
+\end{align*}
  \end{proof}
 
