@@ -1,0 +1,134 @@
+\begin{theorem}
+  \label{th:cons_dual}
+  With probability going to 1 Problem~\ref{dual} is feasible.
+  Furthermore, if the solution 
+$
+(\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+$
+exists,
+it
+converges in probability to 
+$
+(0_N,0,\lambda^*)
+$.
+\end{theorem}
+\begin{proof}
+  By Lemma~\ref{lem:link_conv_p} and Lemma~\ref{lem:conv_dG}
+  it holds for all $\varepsilon>0$
+  \begin{align*}
+    &
+    \P
+    \left[ 
+      \text{Problem~\ref{dual} is feasible and }
+      \norm{
+(\rho^\dagger,\lambda^\dagger,\lambda_0^\dagger)
+-
+(0_N,0,\lambda^*)
+      }_2
+      \le \varepsilon
+    \right]
+    \\
+    &
+    \ 
+    \ge
+    \ 
+    \P
+    \left[ \underline{\Delta G^*_\varepsilon}\ge 0 \right]
+    \ 
+    \to
+    \ 
+    1
+  \end{align*}
+\end{proof}
+\begin{corollary}
+  If Problem~\ref{dual} is feasible it holds
+  $\norm{(\rho^*,\lambda_0^*)}_2\overset{\P}{\to}0$
+  and
+  $\norm{\lambda^*-\lambda^\dagger}\overset{\P}{\to}0$.
+\end{corollary}
+\begin{proof}
+  This follows from Theorem~\ref{th:cons_dual}
+  and Slutzky's Theorem.
+\end{proof}
+\begin{theorem}
+  If Problem~\ref{dual} is feasible it holds
+  $w_0^\dagger(X)\overset{\P}{\to}1/\pi(X)$.
+\end{theorem}
+\begin{proof}
+  It holds
+  \begin{align*}
+    \left| 
+    w_0^\dagger(X)
+    \ 
+    -
+    \ 
+    \frac{1}{\pi(X)}
+    \right|
+    \
+    \le
+    \
+    \omega
+    \left( 
+      (\varphi^{'})^{-1}
+      ,
+      \left| 
+      \sum_{k=1}^{N} 
+      B_k(X)\cdot\lambda_k^\dagger-
+      \varphi^{'}
+      \left( \frac{1}{\pi(X)} \right)
+      \right|
+    \right)
+    \
+    +
+    \
+    \frac{1}{\pi(X)}
+    \mathbf{1}
+    \bigcap_{k=1}^N
+    \left\{ X\neq X_k \right\}
+    \,.
+  \end{align*}
+  Since
+  \begin{align*}
+      \left| 
+      \sum_{k=1}^{N} 
+      B_k(X)\cdot\lambda_k^\dagger-
+      \varphi^{'}
+      \left( \frac{1}{\pi(X)} \right)
+      \right|
+      \le
+      \norm{\lambda^*-\lambda^\dagger}_2
+      +
+      \left| 
+      \sum_{k=1}^{N} 
+      B_k(X)\cdot
+      \varphi^{'}
+      \left( \frac{1}{\pi(X_k)} \right)
+      -
+      \varphi^{'}
+      \left( \frac{1}{\pi(X)} \right)
+      \right|
+      \\
+      \to 0
+  \end{align*}
+  and
+  \begin{align*}
+    \P
+    \left[ 
+      X\neq X_k \ \text{for all }
+      k\in \left\{ 1,\ldots,N \right\}
+    \right]
+    =
+    \P \left[ X\neq X_1 \right]^N
+    \to
+    0
+  \end{align*}
+  by Slutzky's Theorem
+  \begin{align*}
+    \frac{1}{\pi(X)}
+    \cdot
+    \mathbf{1}
+    \bigcap_{k=1}^N
+    \left\{ X\neq X_k \right\}
+    \overset{\P}{\to}0
+  \end{align*}
+\end{proof}

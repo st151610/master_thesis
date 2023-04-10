@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  10 APR 2023 11:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  10 APR 2023 12:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1036,21 +1036,43 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 195.
 [31]
-Overfull \hbox (6.895pt too wide) detected at line 366
+Overfull \hbox (6.895pt too wide) detected at line 367
 []
  []
 
-[32] [33]))) [34]
+[32] [33]) (./chapters/consistency_weights/lem_3.tex
+Package mdframed Info: mdframed works in twoside mode on input line 1.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1.
+Package mdframed Info: mdframed works in twoside mode on input line 53.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 53.
+Package mdframed Info: Not enough space on this page on input line 56.
+ [34]
+Package mdframed Info: Not enough space on this page on input line 56.
+
+Overfull \hbox (31.4507pt too wide) detected at line 89
+[]
+ []
+
+
+Overfull \hbox (5.64229pt too wide) detected at line 112
+[]
+ []
+
+))) [35] [36
+
+
+]
 chapter 5.
 (./chapters/conv_mean/main.tex (./chapters/conv_mean/main_theo.tex
 Package mdframed Info: mdframed works in twoside mode on input line 1.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1.
-) (./chapters/conv_mean/error_decomp.tex [35
-
-
-]
+) (./chapters/conv_mean/error_decomp.tex [37]
 Package mdframed Info: mdframed works in twoside mode on input line 2.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1069,10 +1091,10 @@ Package mdframed Info: Not enough space on this page on input line 200.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36]
+ [38]
 Overfull \vbox (20.21463pt too high) has occurred while \output is active []
 
- [37])
+ [39])
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 6.
@@ -1100,9 +1122,9 @@ Overfull \hbox (1.04326pt too wide) in paragraph at lines 108--111
 \OT1/cmr/m/n/10.95 Note, that the first sum goes over $[]$ while the sec-ond sum goes over $[]$.
  []
 
-[38]
+[40]
 
-LaTeX Warning: Reference `c:1' on page 39 undefined on input line 203.
+LaTeX Warning: Reference `c:1' on page 41 undefined on input line 203.
 
 )
 
@@ -1127,7 +1149,7 @@ Overfull \hbox (0.91295pt too wide) detected at line 57
 []
  []
 
-[39])
+[41])
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 10.
@@ -1140,7 +1162,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 10.
 
-(./chapters/conv_mean/r_3.tex)) (./final_chapters/aa:tools.tex [40] [41]
+(./chapters/conv_mean/r_3.tex)) (./final_chapters/aa:tools.tex [42] [43]
 Package mdframed Info: mdframed works in twoside mode on input line 212.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1157,7 +1179,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 306.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 306.
- [42]
+ [44]
 Package mdframed Info: mdframed works in twoside mode on input line 405.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1181,12 +1203,12 @@ Package mdframed Warning: You got a bad break
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 514.
-[43]
+[45]
 Package mdframed Info: mdframed works in twoside mode on input line 639.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 639.
- [44]
+ [46]
 Package mdframed Info: mdframed works in twoside mode on input line 766.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1199,7 +1221,7 @@ Overfull \hbox (8.0863pt too wide) detected at line 793
 
 Underfull \vbox (badness 3199) has occurred while \output is active []
 
- [45]
+ [47]
 Package mdframed Info: mdframed works in twoside mode on input line 800.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1215,11 +1237,11 @@ Overfull \hbox (9.50706pt too wide) detected at line 957
 []
  []
 
-[46] [47]) (./final_chapters/aa:mean.tex [48]
+[48] [49]) (./final_chapters/aa:mean.tex [50]
 
-LaTeX Warning: Reference `def:weights_function' on page 49 undefined on input line 51.
+LaTeX Warning: Reference `def:weights_function' on page 51 undefined on input line 51.
 
-[49]
+[51]
 Package mdframed Info: mdframed works in twoside mode on input line 146.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1227,7 +1249,7 @@ Package mdframed Info: mdframed detected package amsthm
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50]
+ [52]
 Package mdframed Info: mdframed works in twoside mode on input line 204.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1241,10 +1263,10 @@ Package mdframed Info: Not enough space on this page on input line 341.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51]
+ [53]
 Overfull \vbox (20.21463pt too high) has occurred while \output is active []
 
- [52]
+ [54]
 Package mdframed Info: mdframed works in twoside mode on input line 613.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1254,18 +1276,18 @@ Overfull \hbox (1.04326pt too wide) in paragraph at lines 714--717
 \OT1/cmr/m/n/10.95 Note, that the first sum goes over $[]$ while the sec-ond sum goes over $[]$.
  []
 
-[53]
+[55]
 
-LaTeX Warning: Reference `c:1' on page 54 undefined on input line 809.
+LaTeX Warning: Reference `c:1' on page 56 undefined on input line 809.
 
 Package mdframed Info: mdframed works in twoside mode on input line 844.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 844.
 
-LaTeX Warning: Reference `aa:weights:th' on page 54 undefined on input line 846.
+LaTeX Warning: Reference `aa:weights:th' on page 56 undefined on input line 846.
 
-[54] [55]
+[56] [57]
 Package mdframed Info: mdframed works in twoside mode on input line 1113.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1274,19 +1296,19 @@ Package mdframed Info: mdframed works in twoside mode on input line 1136.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1136.
- [56]
+ [58]
 Package mdframed Info: mdframed works in twoside mode on input line 1273.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1273.
 Package mdframed Info: Not enough space on this page on input line 1348.
- [57]
+ [59]
 Package mdframed Info: mdframed works in twoside mode on input line 1852.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1852.
 Package mdframed Info: Not enough space on this page on input line 1856.
- [58]
+ [60]
 Package mdframed Info: Not enough space on this page on input line 1856.
 
 Overfull \hbox (3.29204pt too wide) detected at line 2040
@@ -1294,9 +1316,9 @@ Overfull \hbox (3.29204pt too wide) detected at line 2040
  []
 
 
-LaTeX Warning: Reference `aa:weights:th' on page 59 undefined on input line 2126.
+LaTeX Warning: Reference `aa:weights:th' on page 61 undefined on input line 2126.
 
-[59]
+[61]
 Package mdframed Info: mdframed works in twoside mode on input line 2136.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1311,14 +1333,14 @@ Overfull \hbox (1.51683pt too wide) detected at line 2201
 []
  []
 
-[60]
+[62]
 Overfull \hbox (1.96098pt too wide) detected at line 2494
 []
  []
 
-) (./chapters/balancing_weights/plug_in_est.tex) [61] [62]
+) (./chapters/balancing_weights/plug_in_est.tex) [63] [64]
 chapter 6.
-(./chapters/convex_analysis/primer_new.tex [63
+(./chapters/convex_analysis/primer_new.tex [65
 
 
 ]
@@ -1326,7 +1348,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 89.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 89.
- [64] [65]
+ [66] [67]
 Package mdframed Info: mdframed works in twoside mode on input line 540.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1335,7 +1357,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 585.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 585.
- [66]
+ [68]
 Package mdframed Info: mdframed works in twoside mode on input line 911.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1345,15 +1367,15 @@ Overfull \hbox (14.75925pt too wide) in paragraph at lines 912--931
 [][]\OT1/cmr/bx/n/10.95 Theorem 6.2. []\OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95 f; g \OT1/cmr/m/n/10.95 : \U/msb/m/n/10.95 R[] \OMS/cmsy/m/n/10.95 ! \OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 ^^@1\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 1\OT1/cmr/m/n/10.95 ]$ \OT1/cmr/m/it/10.95 be proper con-vex func-tions and $[] [] \OMS/cmsy/m/n/10.95 \
  []
 
-[67]
+[69]
 Package mdframed Info: Not enough space on this page on input line 956.
 Package mdframed Info: mdframed works in twoside mode on input line 965.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 965.
- [68] [69]) (./chapters/convex_analysis/ts_3.tex
+ [70] [71]) (./chapters/convex_analysis/ts_3.tex
 
-LaTeX Warning: Reference `cv:cc:d:cc' on page 70 undefined on input line 20.
+LaTeX Warning: Reference `cv:cc:d:cc' on page 72 undefined on input line 20.
 
 Package mdframed Info: mdframed works in twoside mode on input line 21.
 Package mdframed Info: mdframed detected package amsthm 
@@ -1363,19 +1385,19 @@ Package mdframed Info: mdframed works in twoside mode on input line 26.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 26.
-[70] [71]
+[72] [73]
 
-LaTeX Warning: Reference `cv:cc:pr:ccc' on page 72 undefined on input line 379.
+LaTeX Warning: Reference `cv:cc:pr:ccc' on page 74 undefined on input line 379.
 
-[72]
+[74]
 Overfull \hbox (33.23724pt too wide) in paragraph at lines 761--793
 \OT1/cmr/m/n/10.95 Thus $\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/bx/n/10.95 U[] \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 @ [] \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 )$. In the same way it fol-lows $\OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/bx/n/10.95 A[] \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 @ [] \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 w[]\OT1/cmr/m/n/10.95 )$.
  []
 
-[73]) (./main.bbl [74] [75
+[75]) (./main.bbl [76] [77
 
 
-]) [76] (./main.aux)
+]) [78] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1386,18 +1408,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27827 strings out of 476025
- 537683 string characters out of 5796533
+ 27846 strings out of 476025
+ 538077 string characters out of 5796533
  1876388 words of memory out of 5000000
- 47433 multiletter control sequences out of 15000+600000
+ 47444 multiletter control sequences out of 15000+600000
  526850 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,22n,106p,10616b,1111s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (76 pages, 584086 bytes).
+Output written on main.pdf (78 pages, 587785 bytes).
 PDF statistics:
- 1085 PDF objects out of 1200 (max. 8388607)
- 942 compressed objects within 10 object streams
- 296 named destinations out of 1000 (max. 500000)
+ 1111 PDF objects out of 1200 (max. 8388607)
+ 959 compressed objects within 10 object streams
+ 301 named destinations out of 1000 (max. 500000)
  210 words of extra memory for PDF output out of 10000 (max. 10000000)
 

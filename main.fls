@@ -1252,6 +1252,10 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT ./chapters/consistency_weights/lem_3.tex
+INPUT chapters/consistency_weights/lem_3.tex
+INPUT ./chapters/consistency_weights/lem_3.tex
+INPUT chapters/consistency_weights/lem_3.tex
 INPUT ./chapters/conv_mean/main.tex
 INPUT chapters/conv_mean/main.tex
 INPUT ./chapters/conv_mean/main.tex
