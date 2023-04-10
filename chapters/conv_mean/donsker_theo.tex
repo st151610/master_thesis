@@ -1,0 +1,54 @@
+There is a powerful theorem - a central limit theorem for $\G_N$ uniform in $\mathcal{F}$ - that we now introduce.
+\begin{definition}
+  We call a class 
+  $\mathcal{F}$ of measurable functions 
+$\P$-Donsker
+if the sequence of processes 
+$\left\{ \G_N f \colon f\in\mathcal{F}\right\}$
+converges in
+$l^\infty(\mathcal{F})$
+to a tight limit process.
+\end{definition}
+
+\begin{theorem}
+  Every class $\mathcal{F}$ of measurable functions 
+  with
+  \begin{gather*}
+    J
+    _{[\,]}
+    (
+    1
+    ,
+    \mathcal{F}
+    ,
+    L_2(\P)
+    )
+    <\infty
+  \end{gather*}
+  is
+  $\P$-Donsker.
+  Furthermore,
+  the sequence of processes 
+$\left\{ G_N f \colon f\in\mathcal{F}\right\}$
+  converges 
+  in
+$l^\infty(\mathcal{F})$
+to a Gaussian process with mean 0 and covariance function given by
+\begin{gather*}
+  \mathbf{Cov}(f,g)
+  \ 
+  :=
+  \ 
+  \E[fg]
+  \ 
+  -
+  \ 
+  \E[f]\E[g]
+  \,.
+\end{gather*}
+\end{theorem}
+\begin{proof}
+  \cite[Theorem~19.5]{Vaart2000}
+\end{proof}
+
+

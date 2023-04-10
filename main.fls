@@ -1280,6 +1280,10 @@ INPUT ./chapters/conv_mean/max_ineq.tex
 INPUT chapters/conv_mean/max_ineq.tex
 INPUT ./chapters/conv_mean/max_ineq.tex
 INPUT chapters/conv_mean/max_ineq.tex
+INPUT ./chapters/conv_mean/donsker_theo.tex
+INPUT chapters/conv_mean/donsker_theo.tex
+INPUT ./chapters/conv_mean/donsker_theo.tex
+INPUT chapters/conv_mean/donsker_theo.tex
 INPUT ./chapters/conv_mean/ps_weights.tex
 INPUT chapters/conv_mean/ps_weights.tex
 INPUT ./chapters/conv_mean/ps_weights.tex
