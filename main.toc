@@ -24,10 +24,11 @@
 \contentsline {subsection}{\numberline {5.4.1}$R_1$}{43}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}$R_2$}{44}{subsection.5.4.2}%
 \contentsline {subsection}{\numberline {5.4.3}$R_3$}{45}{subsection.5.4.3}%
-\contentsline {chapter}{\numberline {6}Discussion and Outlook}{49}{chapter.6}%
-\contentsline {subsection}{\numberline {6.0.1}Tools and Assumptions}{49}{subsection.6.0.1}%
-\contentsline {section}{\numberline {6.1}Application to Plug In Estimators}{71}{section.6.1}%
-\contentsline {chapter}{\numberline {7}Convex Analysis}{73}{chapter.7}%
-\contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{73}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{80}{section.7.2}%
+\contentsline {subsection}{\numberline {5.4.4}$R_5$}{48}{subsection.5.4.4}%
+\contentsline {chapter}{\numberline {6}Discussion and Outlook}{51}{chapter.6}%
+\contentsline {subsection}{\numberline {6.0.1}Tools and Assumptions}{51}{subsection.6.0.1}%
+\contentsline {section}{\numberline {6.1}Application to Plug In Estimators}{73}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Convex Analysis}{75}{chapter.7}%
+\contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{75}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{82}{section.7.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
