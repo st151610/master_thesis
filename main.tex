@@ -65,10 +65,15 @@
 
 \newtheorem*{assumptions*}{Assumptions}
 \newtheorem{corollary}{Corollary}[gtheorem]
-\newtheorem{definition}{Definition}[chapter]
 
 \theoremstyle{definition}
-
+\newtheorem{fdefinition}{Definition}[chapter]
+\newenvironment{definition}
+{\begin{mdframed}[
+   backgroundcolor=red!2,
+    ]
+    \begin{fdefinition}}
+  {\end{fdefinition}\end{mdframed}}
 \newtheorem*{remark/}{Remark}
 \newenvironment{remark}
   {\renewcommand{\qedsymbol}{$\diamondsuit$}%

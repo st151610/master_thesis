@@ -1,4 +1,4 @@
-To proceed we recall the objective function of Problem~\ref{dual}, that is,
+To proceed we recall the (random) objective function of Problem~\ref{dual}, that is,
 \begin{align*}
   G\colon
   \R^N_{\ge 0}
@@ -24,8 +24,7 @@ To proceed we recall the objective function of Problem~\ref{dual}, that is,
   \ 
     \frac{1}{N}
 \sum_{i=1} 
-  ^n
-  \Big[
+^N
   T_i
   \cdot
   \varphi^*
@@ -89,28 +88,16 @@ Next we define for $\varepsilon>0$ an auxiliary function:
    \left\{ 
  G
    \left( 
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
-(\omega)
-+\Delta
-,
-\Delta_0
-,
-\Delta_\rho
+\Delta_\rho,\Delta_0,\lambda^*(\omega)+\Delta
    \right)
    -
    G
    \left(
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
-(\omega)
-,0,0
+0_N,0,\lambda^*(\omega)
    \right)
    \Big\lvert
    \norm{
-\Delta
-,
-\Delta_0
-,
-\Delta_\rho
+\Delta_\rho,\Delta_0,\Delta
    }_2
    =\varepsilon
    \right\}
@@ -132,55 +119,37 @@ Next we define for $\varepsilon>0$ an auxiliary function:
     \R^{N}
     \times
     \left( 
-    \R^{N}
-    \times
-    \R
-    \times
-    \R^n_{\ge 0}
+    \R^N_{\ge 0}\times\R\times\R^N
     \right)
     \ni
     \left( 
-    \lambda,(\Delta,\Delta_0,\Delta_\rho)
+    \lambda,(\Delta_\rho,\Delta_0,\Delta)
     \right)
     \ 
     \mapsto
     \ 
  G
    \left( 
-     \lambda
-+\Delta
-,
-\Delta_0
-,
-\Delta_\rho
+     \Delta_\rho,\Delta_0,\lambda+\Delta
    \right)
    -
    G
    \left(
-     \lambda
-,0,0
+     0_N,0,\lambda
    \right)
   \end{align*}
   is continuous and 
   $
   \left\{
    \norm{
-\Delta
-,
-\Delta_0
-,
-\Delta_\rho
+\Delta_\rho,\Delta_0,\Delta
    }_2
    =\varepsilon
   \right\}
   $
   is compact in 
   $
-    \R^{N}
-    \times
-    \R
-    \times
-    \R^n_{\ge 0}
+    \R^N_{\ge 0}\times\R\times\R^N
     $
     for all $\varepsilon>0$,
   the function
@@ -195,26 +164,18 @@ Next we define for $\varepsilon>0$ an auxiliary function:
     \left\{ 
   G
    \left( 
-     \lambda
-+\Delta
-,
-\Delta_0
-,
-\Delta_\rho
+     \Delta_\rho,\Delta_0,\lambda+\Delta
    \right)
    -
    G
    \left(
-     \lambda
-,0,0
+     0_N,0,\lambda
    \right)
-   \lvert
+   \ 
+   \colon
+   \ 
    \norm{
-\Delta
-,
-\Delta_0
-,
-\Delta_\rho
+\Delta_\rho,\Delta_0,\Delta
    }_2
    =\varepsilon
     \right\}
@@ -222,9 +183,9 @@ Next we define for $\varepsilon>0$ an auxiliary function:
 is continuous for all $\varepsilon>0$.
 Since 
 $
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
+\lambda^*
 $
-is measurable by assumption it follows the statement.
+is measurable it follows the statement.
 \end{proof}
  \begin{lemma}
    \label{bw:cd:lem2}
@@ -400,19 +361,15 @@ it holds
   &
   G
    \left( 
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
-+\Delta
-,
-\Delta_0
-,
-\Delta_\rho
+\lambda^*
++\Delta_\rho,\Delta_0,\Delta
    \right)
    \ 
    -
    \ 
    G
    \left(
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
+\lambda^*
 ,0,0
    \right)
    \\
@@ -435,7 +392,7 @@ it holds
 \inner
 {B(X_i)}
 {
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
+\lambda^*
 }
   \right)
   \left[ 
@@ -462,13 +419,13 @@ it holds
   \ 
   \inner{\delta}
   {|
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
+\lambda^*
 +
 \Delta
   |
   -
   |
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
+\lambda^*
   |
 }
 \\
@@ -490,7 +447,7 @@ it holds
 \inner
 {B(X_i)}
 {
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
+\lambda^*
 }
   \right)
   \ 
@@ -518,13 +475,13 @@ it holds
   \ 
   \inner{\delta}
   {|
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
+\lambda^*
 +
 \Delta
   |
   -
   |
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
+\lambda^*
   |
 }
 \\
@@ -548,7 +505,7 @@ it holds
 \inner
 {B(X_i)}
 {
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
+\lambda^*
 }
   \right)
   \ 
@@ -616,7 +573,7 @@ Furthermore,
 \inner
 {B(X_i)}
 {
-\lambda^*_{\varphi^{'}\circ\,1/\pi}
+\lambda^*
 }
   \right)
   \ 

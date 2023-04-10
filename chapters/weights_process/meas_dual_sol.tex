@@ -23,6 +23,106 @@ Based on this assumption it is easy to derive measurability for the dual solutio
   $
   \left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
   $.
+  \begin{definition}
+    \label{def:rand_obj_f}
+We define the (random) objective function of (the maximize version of)
+Problem~\ref{dual} by
+  \begin{align*}
+    &
+  G
+  \ 
+  \colon
+  \ 
+  \left(
+  \Omega,
+\sigma
+(D_N)
+  \right)
+  \times
+  \left(
+  \R^N_{\ge 0}
+  \times
+  \R
+  \times
+  \R^{N}
+  \right)
+  \ 
+  \to
+  \ 
+  \overline{\R}
+  \right\}
+  \intertext{with}
+    &
+  G(\omega,(\rho,\lambda_0,\lambda))
+  \ 
+  =
+  \ 
+  \infty
+  \qquad 
+  \text{if}\ 
+  \rho_i\neq 0\  \text{for some}\ i>n
+  \,,
+  \\
+  \intertext{and else}\qquad
+  &
+  G(\omega,(\rho,\lambda_0,\lambda))
+  \\
+  &
+  \ 
+  =
+  \ 
+  \frac{1}{N}
+\sum_{i=1} 
+  ^N
+  \Big[
+  T_i(\omega)
+  \cdot
+  \varphi^*
+  \!
+  \left( 
+    \rho_i
+    +
+\lambda_0
++
+\inner
+{B(X_i)(\omega)}
+{
+\lambda
+}
+  \right)
+  \ 
+  -
+  \ 
+\lambda_0
+-
+\inner
+{B(X_i)(\omega)}
+{
+\lambda
+}
+\Big]
+\\
+&
+  \qquad 
++
+\ 
+\inner
+{\delta(\omega)}
+{
+  |\lambda|
+}
+\,.
+  \end{align*}
+  \end{definition}
+  \begin{lemma}
+    \label{lem:caratheo_G}
+    The function $G$ of Definition~\ref{def:rand_obj_f}
+    is Caratheodory.
+  \end{lemma}
+  \begin{proof}
+  This follows from the (assumed) continuity of $\varphi^*$ and the measurability 
+  of all random variables included.
+  \end{proof}
 \begin{lemma}
   \label{lem:meas_dual_sol}
   For all $N\in\mathbb{N}$ the dual solution
@@ -64,96 +164,9 @@ Based on this assumption it is easy to derive measurability for the dual solutio
   we can define the (constant) correspondence
   $\omega \mapsto \Theta_N$.
   Clearly, this is weakly-measurable.
-Next, we consider the (random) objective function of (the maximize version of) Problem~\ref{dual}, that is,
-  \begin{align*}
-    &
-  G\colon
-  \left(
-  \Omega,
-\sigma
-\left( 
-  (T_i,X_i)_{i\in 
-\left\{ 1,\ldots,N \right\}
-  } 
-  \right)
-  \right)
-  \times
-  \left(
-  \R^N_{\ge 0}
-  \times
-  \R
-  \times
-  \R^{N}
-  \right)
-  \to
-  \R\cup \left\{
-    -\infty
-  \right\}
-  \intertext{with}
-    &
-  G(\omega,(\rho,\lambda_0,\lambda))
-  \ 
-  =
-  \ 
-  -\infty
-  \qquad 
-  \text{if}\ 
-  \rho_i\neq 0\  \text{for some}\ i>n
-  \,,
-  \\
-  \intertext{and}\qquad
-  &
-  G(\omega,(\rho,\lambda_0,\lambda))
-  \\
-  &
-  \ 
-  =
-  \ 
-  \frac{1}{N}
-\sum_{i=1} 
-  ^N
-  \Big[
-    -
-  T_i(\omega)
-  \cdot
-  \varphi^*
-  \!
-  \left( 
-    \rho_i
-    +
-\lambda_0
-+
-\inner
-{B(X_i)(\omega)}
-{
-\lambda
-}
-  \right)
-  \ 
-  +
-  \ 
-\lambda_0
-+
-\inner
-{B(X_i)(\omega)}
-{
-\lambda
-}
-\Big]
-  \ 
--
-\ 
-\inner
-{\delta(\omega)}
-{
-  |\lambda|
-}
-\,.
-  \end{align*}
-  Clearly, the (random) objective function $G$  is a Caratheodory function
-  . This follows from the (assumed) continuity of $\varphi^*$ and the measurability 
-  of all random variables included.
-  Since $G$ is also strictly concave, it has a unique argmax in $\Theta_N$.
+  Next, we consider the (random) objective function of (the maximize version of) Problem~\ref{dual}, that is, $-G$ (see Definition~\ref{def:rand_obj_f}).
+  By Lemme~\ref{lem:caratheo_G}, $-G$  is a Caratheodory function.
+  Since $-G$ is also strictly concave, it has a unique argmax in $\Theta_N$.
   By Assumption~\ref{asu:feas_dual_sol} this is 
   $
   \left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
