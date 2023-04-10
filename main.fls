@@ -1256,6 +1256,10 @@ INPUT ./chapters/consistency_weights/lem_3.tex
 INPUT chapters/consistency_weights/lem_3.tex
 INPUT ./chapters/consistency_weights/lem_3.tex
 INPUT chapters/consistency_weights/lem_3.tex
+INPUT ./chapters/consistency_weights/main_result.tex
+INPUT chapters/consistency_weights/main_result.tex
+INPUT ./chapters/consistency_weights/main_result.tex
+INPUT chapters/consistency_weights/main_result.tex
 INPUT ./chapters/conv_mean/main.tex
 INPUT chapters/conv_mean/main.tex
 INPUT ./chapters/conv_mean/main.tex

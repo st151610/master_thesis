@@ -9,7 +9,8 @@
 \contentsline {section}{\numberline {3.3}Basis Functions}{21}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Weights Process}{25}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Consistency of the Weights Process}{29}{chapter.4}%
-\contentsline {subsection}{\numberline {4.0.1}Consistency of the Dual Solution}{29}{subsection.4.0.1}%
+\contentsline {section}{\numberline {4.1}Consistency of the Dual Solution}{29}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Main Result}{34}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Convergence of the Weighted Mean}{37}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Main Result}{37}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Error Decomposition}{37}{section.5.2}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  10 APR 2023 12:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  10 APR 2023 13:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1045,24 +1045,25 @@ Package mdframed Info: mdframed works in twoside mode on input line 1.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1.
-Package mdframed Info: mdframed works in twoside mode on input line 53.
+)) (./chapters/consistency_weights/main_result.tex
+Package mdframed Info: mdframed works in twoside mode on input line 1.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 53.
-Package mdframed Info: Not enough space on this page on input line 56.
+(mdframed)              on input line 1.
+Package mdframed Info: Not enough space on this page on input line 4.
  [34]
-Package mdframed Info: Not enough space on this page on input line 56.
+Package mdframed Info: Not enough space on this page on input line 4.
 
-Overfull \hbox (31.4507pt too wide) detected at line 89
+Overfull \hbox (31.4507pt too wide) detected at line 37
 []
  []
 
 
-Overfull \hbox (5.64229pt too wide) detected at line 112
+Overfull \hbox (5.64229pt too wide) detected at line 60
 []
  []
 
-))) [35] [36
+)) [35] [36
 
 
 ]
@@ -1408,18 +1409,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27846 strings out of 476025
- 538077 string characters out of 5796533
+ 27853 strings out of 476025
+ 538290 string characters out of 5796533
  1876388 words of memory out of 5000000
- 47444 multiletter control sequences out of 15000+600000
+ 47447 multiletter control sequences out of 15000+600000
  526850 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,22n,106p,10616b,1111s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (78 pages, 587785 bytes).
+Output written on main.pdf (78 pages, 588187 bytes).
 PDF statistics:
- 1111 PDF objects out of 1200 (max. 8388607)
- 959 compressed objects within 10 object streams
- 301 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1116 PDF objects out of 1200 (max. 8388607)
+ 964 compressed objects within 10 object streams
+ 302 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
