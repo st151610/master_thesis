@@ -1,0 +1,149 @@
+Let 
+$
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+$
+be a probability space,
+$
+  \left( 
+    \mathcal{Z},
+    \Sigma
+  \right)
+$
+a measurable space, and 
+\begin{gather*}
+  \xi_1,\ldots,\xi_N
+  :
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+  \to
+  \left( 
+    \mathcal{Z},
+    \Sigma
+  \right)
+  \quad
+  \text{independent and identically-distributed
+  }
+\end{gather*}
+random variables
+with probability distribution $\P_{\!\xi}$.
+Let $\mathcal{F}$ be a class of measurable functions 
+$
+  f:
+  \left( 
+    \mathcal{Z},
+    \Sigma
+  \right)
+    \to
+  \left( 
+    \R,
+    \mathcal{B}(\R)
+  \right)
+$, where
+$
+    \mathcal{B}(\R)
+$
+is the Borel-$\sigma$-algebra on $\R$.
+Then $\mathcal{F}$
+induces a stochastic process by
+\begin{gather}
+  f
+  \ 
+  \mapsto
+  \ 
+  \G_N f 
+  \ 
+  :=
+  \ 
+  \frac{1}{\sqrt{n}}
+  \sum_{i=1}^{N} 
+  \left(
+    f(\xi_i)
+    -
+    \E_\xi[f]
+  \right)
+  \,,
+\end{gather}
+where
+$
+    \E_\xi[f]
+    :=
+    \int_\mathcal{Z}
+    f
+    \,
+    d\P_\xi
+$.
+We call
+$\G_N$ the  \textbf{empirical process} indexed by $\mathcal{F}$.
+The purpose of this construction is, to study the behaviour of a centered, scaled arithmetic mean uniformly over $\mathcal{F}$.
+To this end, we define the (random) norm
+\begin{gather}
+  \norm{\G_n}_\mathcal{F}
+  :=
+  \sup_
+        { f \in \mathcal{F}}
+        \left|
+          \G_N f
+        \right|
+        .
+\end{gather}
+We stress that 
+$
+  \norm{\G_n}_\mathcal{F}
+$
+often ceases to be measurable, even in simple situations~\cite[page 3]{vaart2013}.
+To deal with this, we introduce the notion of \textbf{outer expectation} $\E^*$ (see \cite[page~6]{vaart2013})
+\begin{gather*}
+  \E^*[Z]
+  \ 
+  :=
+  \ 
+    \inf
+  \left\{ 
+    \E[U]
+  \ 
+  \lvert
+  \ 
+    U\ge Z,
+    \ 
+    U:
+  \left( 
+    \Omega,
+    \mathcal{A},
+    \P
+  \right)
+  \to 
+  \left( 
+    \overline{\R},
+    \mathcal{B}(\overline{\R})
+  \right)
+  \text{measurable and}
+  \ 
+  \E[U]<\infty
+  \right\}
+  \,.
+\end{gather*}
+In our application the technical difficulties halt at this point, because we only consider $Z$ with $\E^*[Z]<\infty$. Then there exists a smallest measurable function $Z^*$ dominating $Z$ with
+$\E^*[Z]=\E[Z^*]$ (see \cite[Lemma~1.2.1]{vaart2013}).
+
+An \textbf{envelope function} $F$ of a class $\mathcal{F}$ satisfies 
+\begin{align*}
+|f(z)|
+\ 
+\le
+\ 
+F(z)< \infty 
+\qquad
+\text{for all}\ 
+f\in\mathcal{F}
+\ \text{and all}\ 
+z\in\mathcal{Z}
+\,.
+\end{align*}
+

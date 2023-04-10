@@ -1,0 +1,79 @@
+\begin{lemma}
+  It holds
+  \begin{align*}
+    \E
+    \left[ 
+      T
+    \left( 
+    \mathbf{1}{\left\{ Y(T) \le z \right\}}
+    \ 
+    -
+    \ 
+  F_{Y(1)}(z|X)
+    \right)
+    \right]
+    \ 
+    =
+    \ 
+    0
+    \qquad
+    \text{for all}\ 
+    z\in\R
+    \,.
+  \end{align*}
+\end{lemma}
+\begin{proof}
+  Let $z\in\R$.
+  By Lemma~\ref{lem:ps_weights}.\textit{(i)} 
+  and the properties of conditional expectation
+  it holds
+  \begin{align*}
+    \E
+    \left[ 
+      T
+      \cdot
+    \mathbf{1}{\left\{ Y(T) \le z \right\}}
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[ 
+      \pi(X)
+      \cdot
+    \mathbf{1}{\left\{ Y(1) \le z \right\}}
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[ 
+      \pi(X)
+      \cdot
+      F_{Y(1)}(z|X)
+    \right]
+    \,.
+  \end{align*}
+  Furthermore,
+  by Lemma~\ref{lem:ps_weights}.\textit{(ii)} 
+  it holds
+  \begin{align*}
+    \E
+    \left[ 
+      T
+      \cdot
+  F_{Y(1)}(z|X)
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[ 
+      \pi(X)
+      \cdot
+  F_{Y(1)}(z|X)
+    \right]
+    \,.
+  \end{align*}
+  It follows the result.
+\end{proof}

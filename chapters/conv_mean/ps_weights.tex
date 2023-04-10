@@ -1,0 +1,56 @@
+The next lemma shows what effect the 
+\textbf{propensity score weights}
+$T/\pi(X)$ have on other functions.
+\begin{lemma}
+  \label{lem:ps_weights}
+  \label{ps_weights_lemma}
+  Let
+  $
+  g_1\colon
+  \mathcal{X}\to\R
+  $
+  and
+  $
+  g_2\colon
+  \mathcal{Y}\to\R
+  $
+  be a measurable functions.
+  \begin{enumerate}[label=(\roman*)]
+    \item
+  It holds
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_1(X)
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    g_1(X)
+    \right]
+    \,.
+  \end{gather*}
+  \item
+ If Assumption~\ref{aa:assumption:treatment_str_ign} holds true, then
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_2(Y(T))
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    f(Y(1))
+    \right]
+    \,.
+  \end{gather*}
+  \end{enumerate}
+ \end{lemma}
+
+

@@ -1,0 +1,124 @@
+In our application we need concentration inequalities for 
+$
+  \norm{\G_n}^*_\mathcal{F}
+$.
+One easy way to obtain this is, to use a maximal inequality (see Theorem~\ref{th:max_ineq}) to control the expectation,
+together with Markov's inequality. There are also Bernstein-like inequalities for empirical processes (see \cite[§2.14.2]{vaart2013}). 
+\begin{theorem}
+  \label{th:max_ineq}
+  \emph{(Maximal inequality)}
+  For any class $\mathcal{F}$ of measurable functions with envelope function $F,$
+  \begin{gather*}
+    \E^*
+    \norm{
+      \G
+      _n
+      }
+      _\mathcal{F}
+    \ 
+    \lesssim
+    \ 
+    J
+    _{[\,]}
+    (
+    \norm{
+      F
+    }
+    _{ L^2(\P)}
+    ,
+    \mathcal{F}
+    ,
+    L^2(\P)
+    )
+    \, 
+    .
+  \end{gather*}
+\end{theorem}
+\begin{proof}
+  \cite[Corollary~19.35]{Vaart2000}
+\end{proof}
+
+\begin{lemma}
+  \label{markov_max_lemma}
+  Let $(\mathcal{H}_N)$ be a sequence of measurable function classes with envelope functions $(H_N)$.
+  If
+  \begin{gather*}
+    J_{[\, ]}
+    \left( 
+    \norm{H_N}_{ L^2(\P)}
+    ,
+    \mathcal{H}_N
+    ,
+     L^2(\P)
+    \right)
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}
+    \ 
+    N
+    \to
+    \infty
+    \,,
+  \end{gather*}
+  it holds 
+  $
+  \norm{\G_N}^*_{\mathcal{H}_N}\overset{\P}{\to}0
+  $.
+\end{lemma}
+\begin{proof}
+  By Markov's inequality and Theorem~\ref{th:max_ineq} it holds for all $\varepsilon>0$
+  \begin{align*}
+    \P
+    [
+  \norm{\G_N}^*_{\mathcal{H}_N}
+  \ge
+  \varepsilon
+    ]
+    &
+    \ 
+    \le
+    \ 
+    \varepsilon^{-1}
+    \E
+    [
+  \norm{\G_N}^*_{\mathcal{H}_N}
+    ]
+    \ 
+    =
+    \ 
+    \varepsilon^{-1}
+    \E^*
+    [
+  \norm{\G_N}_{\mathcal{H}_N}
+    ]
+    \\
+    &
+    \ 
+    \lesssim
+    \ 
+    \varepsilon^{-1}
+    J_{[\, ]}
+    \left( 
+    \norm{H_N}_{ L^2(\P)}
+    ,
+    \mathcal{H}_N
+    ,
+     L^2(\P)
+    \right)
+    \\
+    &
+    \ 
+    \to
+    \ 
+    0
+    \qquad
+    \text{for}
+    \ 
+    N\to\infty
+    \,.
+  \end{align*}
+\end{proof}
+

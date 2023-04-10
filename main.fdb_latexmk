@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1681126920 "main.aux" "main.bbl" "main" 1681126928 0
+["bibtex main"] 1681129179 "main.aux" "main.bbl" "main" 1681129502 0
   "./literature.bib" 1680496697 74008 ac796195b85a67d7d63569db8925fb23 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1679564905 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1681126927 27261 e19004a184cf12fe28aa3e0745d8016e "pdflatex"
+  "main.aux" 1681129501 31316 1dd42a23b093234b6995f4816ec324da "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1681126921 "main.tex" "main.pdf" "main" 1681126928 0
+["pdflatex"] 1681129495 "main.tex" "main.pdf" "main" 1681129502 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1679564905 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1679564905 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1679564905 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -227,12 +227,17 @@
   "chapters/consistency_weights/lemma_2.tex" 1681122174 9951 cbbc0dbbb37a5a5291a4bf8af9623b1f ""
   "chapters/consistency_weights/main.tex" 1681126912 975 5eeaedaf4584bd3cf02ab992af980278 ""
   "chapters/consistency_weights/main_result.tex" 1681126778 1439 b924f709d8fa6dcccbe49bfe1c73f2d0 ""
+  "chapters/conv_mean/br_n_i.tex" 1681128621 2688 66ec70fb4488b668e106a297ed96ef96 ""
+  "chapters/conv_mean/emp_pro_def.tex" 1681128604 2410 4c70d5d6783422b2ea1841c8930cc29f ""
   "chapters/conv_mean/error_decomp.tex" 1681037137 5541 ebabda6642b889f265921f7990ec98e2 ""
-  "chapters/conv_mean/main.tex" 1681054508 353 3ed0b0fcd015c2cdbc19684361360f4f ""
+  "chapters/conv_mean/main.tex" 1681127162 408 ab68cfb265f6e30f77c4d543104fc022 ""
   "chapters/conv_mean/main_theo.tex" 1680884922 795 32ac6e54587531895c37f717f1c25981 ""
+  "chapters/conv_mean/max_ineq.tex" 1681128230 1968 4fbad0bccfcbd1ff585ca484aae59eb0 ""
+  "chapters/conv_mean/ps_weights.tex" 1681129171 796 d9628cac00c8187ea1a433f0de235dc1 ""
   "chapters/conv_mean/r_1.tex" 1681039492 4443 4458dc03d30c50dc5c9c6364e521f976 ""
   "chapters/conv_mean/r_2.tex" 1681041279 2074 5768294d53a6047ab1ad851bde910ea8 ""
-  "chapters/conv_mean/r_3.tex" 1681054494 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "chapters/conv_mean/r_3.tex" 1681129494 1084 c7ea7f98c00f9862740dbbb55efb4123 ""
+  "chapters/conv_mean/tools.tex" 1681128736 560 138caeea3e1a50f01ebd963bf91f869b ""
   "chapters/convex_analysis/primer_new.tex" 1680371448 22994 7fe92c31f7b2d388daff85d8ae491c71 ""
   "chapters/convex_analysis/ts_3.tex" 1679582877 13008 d2bbed0da675cf5c0839d37aab2a3454 ""
   "chapters/intro_for_all.tex" 1678871653 15174 e5e77944eadc906f84b43855b2de29f1 ""
@@ -249,13 +254,13 @@
   "chapters/weights_process/meas_dual_sol.tex" 1681116370 3217 e91e3295395fda791e4bd6c1568476ea ""
   "chapters/weights_process/weights_process.tex" 1681039385 5461 e9aad63353777ca9ba41474ec06d3e92 ""
   "final_chapters/aa:mean.tex" 1679489813 37402 5a176fb16ed955d13aefb61a474dc9c4 ""
-  "final_chapters/aa:tools.tex" 1680799128 21901 343d4f18e0854c372fe4474f6c74d9d2 ""
+  "final_chapters/aa:tools.tex" 1681128719 21670 6979630cec49104f6178637a3a624208 ""
   "images//unistuttgart_logo_deutsch.jpg" 1666170206 69497 75805d7ccc9649af2cd5e2eb7d415d01 ""
-  "main.aux" 1681126927 27261 e19004a184cf12fe28aa3e0745d8016e "pdflatex"
-  "main.bbl" 1681126921 3476 572ad7fbae1e01fd46fb2b7cff5db8dd "bibtex main"
-  "main.out" 1681126923 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1681109420 8962 7f5013b2f5f8ae0059bfc1962958e465 ""
-  "main.toc" 1681126927 2110 20282641c65b92a036e236ee842b29dc "pdflatex"
+  "main.aux" 1681129501 31316 1dd42a23b093234b6995f4816ec324da "pdflatex"
+  "main.bbl" 1681129179 3476 572ad7fbae1e01fd46fb2b7cff5db8dd "bibtex main"
+  "main.out" 1681129497 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1681127613 8995 f8a02c82b8dd01d92cc09e67081ce81e ""
+  "main.toc" 1681129501 2729 f7b029e12fec03ccf5fd2d175142b96d "pdflatex"
   (generated)
   "main.aux"
   "main.log"

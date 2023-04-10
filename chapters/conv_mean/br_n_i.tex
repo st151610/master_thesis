@@ -1,0 +1,122 @@
+To control empirical processes - apart from strong theorems - we need the notion of bracketing number and integral (see \cite[page 270]{Vaart2000}). 
+Given two functions $\underline{f}\le \overline{f}$,
+\begin{gather*}
+  \text{
+the bracket
+  }\quad
+[\underline{f},\overline{f}]
+\quad 
+\text{
+is the set of all functions $f$ with 
+}\quad 
+\underline{f}\ \le\ f \ \le\  \overline{f}
+\,.
+\end{gather*}
+For $\varepsilon>0$
+we define a
+\begin{gather*}
+  \text{
+$(\varepsilon, L^{r}(\P))$ -bracket
+to be a bracket
+  }
+  \quad
+[\underline{f},\overline{f}]
+\quad
+\text{with}
+\quad
+\norm{\overline{f}-\underline{f}}_{ L^r(\P)}
+\ <\  \varepsilon
+\,.
+\end{gather*}
+The \textbf{
+bracketing number
+} 
+$
+N_{[\,]}(\varepsilon, \mathcal{F}, L^r(\P))
+$
+is 
+the minimum number of 
+$(\varepsilon, L^{r}(\P))$-brackets needed to cover $\mathcal{F}$.
+
+For most classes $\mathcal{F}$ the bracketing number grows to infinity for $\varepsilon\to 0$.
+To measure the speed of growth we introduce 
+for $\delta>0$
+the
+\textbf{bracketing integral}
+\begin{gather*}
+     J
+    _{[\,]}
+    (
+    \delta
+    ,
+    \mathcal{F}
+    ,
+    L_r(\P)
+    )
+    \ 
+    =
+    \ 
+  \int_0^{\delta}
+      \sqrt{
+        \log 
+      N_{[\,]}
+\left( \varepsilon, \mathcal{F}_N, L^r(\P) \right)
+    }
+    \,
+    d\varepsilon
+    \,.
+\end{gather*}
+
+Next we give a technical lemma to 
+bound the bracketing numbers of products of two function classes, that is,
+\begin{gather*}
+  \mathcal{F}\cdot \mathcal{G}
+  \ 
+  :=
+  \ 
+  \left\{ 
+    f\cdot g
+    \ 
+    \colon
+  \ 
+    f\in\mathcal{F},
+    g\in\mathcal{G}
+  \right\}\,.
+\end{gather*}
+\begin{lemma}
+  \label{lem_prod_br}
+  Let
+  $\mathcal{F}$ and $\mathcal{G}$ be two function classes 
+  with envelope functions $F$ and $G$ satisfying
+  $\norm{F}_\infty,\norm{G}_\infty\le 1$.
+  For all $\varepsilon>0$ and all $r\in [1,\infty)$ it holds
+  \begin{gather*}
+    N_{[\,]}(2\varepsilon,\mathcal{F}\cdot\mathcal{G},\mathrm{L}_r(\P))
+    \
+    \le
+    \ 
+    N_{[\,]}(\varepsilon,\mathcal{F},\mathrm{L}_r(\P))
+    \cdot
+    N_{[\,]}(\varepsilon,\mathcal{G},\mathrm{L}_r(\P))
+    \,.
+  \end{gather*}
+\end{lemma}
+\begin{proof}
+  The proof is simple. We omit the details.
+%  Let $f\in\mathcal{F}$ and $g\in\mathcal{G}$.
+%  We can choose two 
+%  $(\varepsilon,L^r(\P))$
+%  brackets
+%  $[\underline{f},\overline{f}]$
+%  and
+%  $[\underline{g},\overline{g}]$
+%  containing $f$ and $g$ with 
+%  $\norm{\underline{f}}_\infty,\norm{\overline{f}}_\infty\le\norm{F}_\infty\le 1$
+%  and
+%  $\norm{\underline{g}}_\infty,\norm{\overline{g}}_\infty\le\norm{G}_\infty\le 1$.
+%  We the get an 
+%  $(2\varepsilon,L^r(\P))$
+%  $[\underline{h},\overline{h}]$
+%  bracket, containing $f\cdot g$, by
+\end{proof}
+
