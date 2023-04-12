@@ -56,12 +56,12 @@ Paul Tseng and Dimitri~P. Bertsekas.
 \newblock {\em Mathematics of Operations Research}, 16(3):462--481, 1991.
 
 \bibitem[vdV00]{Vaart2000}
-A.~W. van~der Vaart.
+Aad van~der Vaart.
 \newblock {\em Asymptotic {{Statistics}}}.
 \newblock {Cambridge University Press}, June 2000.
 
-\bibitem[vdvW13]{vaart2013}
-Aad van~der {vaart} and Jon Wellner.
+\bibitem[vdVW13]{vaart2013}
+Aad van~der Vaart and Jon Wellner.
 \newblock {\em Weak {{Convergence}} and {{Empirical Processes}}: {{With Applications}} to {{Statistics}}}.
 \newblock {Springer Science \& Business Media}, March 2013.
 
@@ -74,5 +74,10 @@ Yixin Wang and Jos{\'e}~R. Zubizarreta.
 Qingyuan Zhao and Daniel Percival.
 \newblock Entropy balancing is doubly robust.
 \newblock {\em Journal of Causal Inference}, 5(1):20160010, September 2017.
+
+\bibitem[Zub15]{Zubizarreta2015}
+Jos{\'e}~R. Zubizarreta.
+\newblock Stable {{Weights}} that {{Balance Covariates}} for {{Estimation With Incomplete Outcome Data}}.
+\newblock {\em Journal of the American Statistical Association}, 110(511):910--922, July 2015.
 
 \end{thebibliography}

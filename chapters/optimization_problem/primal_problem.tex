@@ -7,7 +7,7 @@ For a
   \varphi\ \colon\  \R\ \to\ \R\cup \left\{ +\infty \right\}
   \,,
 \end{align*}
-a vector of $N$ basis functions of the covariates 
+a vector of $N$ basis functions of the covariates\index{$B$, vector of basis functions of the covariates} 
 \begin{gather*}
   B
   \ 
@@ -24,6 +24,9 @@ a vector of $N$ basis functions of the covariates
   \,,
 \end{gather*}
 and a (random) constraints vector
+\index{$\delta$,
+(random) constraints vector
+}
 \begin{align*}
 \delta\ :=\ [\delta_1,\ldots,\delta_N]^\top
 \qquad
@@ -102,6 +105,7 @@ What is random in Problem~\ref{bw:1:primal}?
 First, the dimension of the search space $(w\in\R^n)$ depends on the random variable $n$. 
 Thus, we only compute weights for the treated units (the ones with $T_i=1$).
 Next, consider the \textbf{objective function}
+\index{$\varphi$, objective function of Problem~\ref{bw:1:primal}}
 \begin{gather*}
   w
   \ 

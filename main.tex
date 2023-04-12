@@ -9,6 +9,8 @@
 %\usepackage{mdframed}
 \usepackage{amsthm}
 \usepackage{amssymb}
+\usepackage{imakeidx}
+\makeindex[columns=3, title=Notatio Index, intoc]
 \usepackage{mathtools}
 %\usepackage{fdsymbol}
 \usepackage{cite}
@@ -16,6 +18,7 @@
 \usepackage{xcolor}         % Extended colors
 \usepackage{color}         % Color extended names
 \usepackage{nomencl}
+\usepackage[nottoc]{tocbibind}
 \usepackage{lipsum}
 \usepackage[tickmarkheight=0.1cm, colorinlistoftodos]{todonotes}
 \makenomenclature
@@ -40,7 +43,6 @@
    \colorbox[HTML]{F8E0E0}{\usebox{\selvestebox}}
    \end{center}}
 % Theorem handle
-
 
 \newtheorem{gtheorem}{Theorem}[chapter]
 \newenvironment{theorem}
@@ -124,17 +126,7 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand\norm[1]{\left\lVert#1\right\rVert}
 
-\title{
-  {
-  }
-  \\
-  {\large Universität Stuttgart}
-  \\
-  {\includegraphics{unistuttgart_logo_deutsch.jpg}}
-}
 
-\author{Ioan Scheffel}
-\date{\today}
 \setlength {\marginparwidth }{2cm}
 
 \begin{document}
@@ -142,7 +134,6 @@
 \begin{titlepage}
  \begin{center}
        \vspace*{1cm}
-
        \textbf{
     A Novel Weighted Mean Approach to Estimate the Distribution Function in Observational Studies 
        }
@@ -161,7 +152,7 @@
             
        \vspace{0.8cm}
      
-       \includegraphics[width=0.4\textwidth]{university}
+     %  \includegraphics[width=0.4\textwidth]{university}
       
        supervised by PD Dr. Jürgen Dippon
        \\
@@ -170,16 +161,45 @@
        Faculty 8: Mathematics and Physics
        \\
 University of Stuttgart
-            
 \\
 submitted at
    \end{center}
 \end{titlepage}
 %\maketitle
 
+\pagenumbering{roman}
+\newpage
+\begin{center}
+\textbf{
+Eigenständigkeitserklärung
+}
+\end{center}
+Ich erkläre mit meiner Unterschrift,
+dass ich diese Arbeit selbstständig verfasst habe und keine
+anderen als die angegebenen Quellen benutzt habe.
+Alle Stellen dieser Arbeit, die dem Wortlaut,
+dem Sinn oder der Argumentation nach anderen Werken entnommen sind 
+(einschließlich des World
+Wide Web und anderer elektronischer Text- und Datensammlungen), habe ich unter Angabe der
+Quellen vollständig kenntlich gemacht.
+\newpage
+  \begin{center}
+  \textbf{Abstract} \\
+  english
+  \end{center}
+  This thesis is a master thesis.
+\newpage
+  \begin{center}
+  \textbf{Abstract}
+  \\
+  german
+  \end{center}
+  Dies ist ein Master Arbeit.
+
 \tableofcontents 
 
 \chapter{Introduction}
+\pagenumbering{arabic}
   \input{chapters/intro_for_all.tex}
 \chapter{The Optimization Problem behind the Weights}
   \input{chapters/optimization_problem/main.tex}
@@ -279,7 +299,12 @@ We will deliver the details that are omited in the paper.
 
 %\input{chapters/notation_index.tex}
 %\printnomenclature
-
-\bibliography{literature}{}
+\renewcommand{\bibsection}
+{
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
+}
 \bibliographystyle{alpha}
+\bibliography{literature}
+\printindex
 \end{document}

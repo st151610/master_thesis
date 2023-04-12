@@ -1,3 +1,56 @@
+There are different ways
+to generate weights for covariate balance.
+%
+We discussed this in the introduction.
+%
+Now, we introduce the balancing weights framework of \cite{Wang2019}.
+%
+It is a (generic) convex optimization problem
+that enforces covariate balance by constraints on the search space.
+%
+Similar to classical propensity score estimates, it only
+extracts from the data information about treatment status and individual characteristics.
+%
+It ignores the outcome.
+%
+This gives the additional option to balance covariates before observing outcomes.
+
+%
+The primary optimization task is to minimize an objective function
+over a predefined search space.
+%
+From a practical point of view, the objective function
+instils additional goodness in the weights, 
+for example, 
+low sample variance \cite[Introduction]{Zubizarreta2015}. 
+%
+%
+More important, however, are the constraints that enforce covariate balance.
+%
+Both objective function and design of the constraints distinguish the method.
+%
+
+From a mathematical point of view,
+we have slightly different requirements.
+%
+The proofs should be as clear an short as possible.
+%
+The mathematical objects involved should help with that
+(or at least not prevent it).
+%
+Therefore, we focus on theoretical properties
+of the method.
+%
+As a by-product, we create new ideas that wait for testing in practice.
+
+%
+The notion of what to balance is defined by the basis functions of the covariates.
+%
+It is common that they form a regression basis.
+%
+We shall use this flexibility to introduce basis functions with random design to this framework.
+%
+This makes the proofs easier.
 \section{Introduction}
 \input{chapters/optimization_problem/intro.tex}
 \input{chapters/optimization_problem/primal_problem.tex}
