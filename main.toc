@@ -32,5 +32,5 @@
 \contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{71}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{78}{section.7.2}%
 \contentsline {chapter}{References}{83}{chapter*.26}%
-\contentsline {chapter}{Notatio Index}{85}{chapter*.26}%
+\contentsline {chapter}{Index}{85}{chapter*.26}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

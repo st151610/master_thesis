@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.12)  12 APR 2023 15:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.12)  12 APR 2023 15:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1601,35 +1601,35 @@ Overfull \hbox (1.96098pt too wide) detected at line 2494
 ]
 chapter 7.
 (./chapters/convex_analysis/primer_new.tex [71]
-Package mdframed Info: mdframed works in twoside mode on input line 89.
+Package mdframed Info: mdframed works in twoside mode on input line 93.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 89.
+(mdframed)              on input line 93.
  [72] [73]
-Package mdframed Info: mdframed works in twoside mode on input line 540.
+Package mdframed Info: mdframed works in twoside mode on input line 544.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 540.
-Package mdframed Info: mdframed works in twoside mode on input line 585.
+(mdframed)              on input line 544.
+Package mdframed Info: mdframed works in twoside mode on input line 589.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 585.
+(mdframed)              on input line 589.
  [74]
-Package mdframed Info: mdframed works in twoside mode on input line 911.
+Package mdframed Info: mdframed works in twoside mode on input line 915.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 911.
+(mdframed)              on input line 915.
 
-Overfull \hbox (14.75925pt too wide) in paragraph at lines 912--931
+Overfull \hbox (14.75925pt too wide) in paragraph at lines 916--935
 [][]\OT1/cmr/bx/n/10.95 Theorem 7.2. []\OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95 f; g \OT1/cmr/m/n/10.95 : \U/msb/m/n/10.95 R[] \OMS/cmsy/m/n/10.95 ! \OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95 ^^@1\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 1\OT1/cmr/m/n/10.95 ]$ \OT1/cmr/m/it/10.95 be proper con-vex func-tions and $[] [] \OMS/cmsy/m/n/10.95 \
  []
 
 [75]
-Package mdframed Info: Not enough space on this page on input line 956.
-Package mdframed Info: mdframed works in twoside mode on input line 965.
+Package mdframed Info: Not enough space on this page on input line 960.
+Package mdframed Info: mdframed works in twoside mode on input line 969.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 965.
+(mdframed)              on input line 969.
  [76] [77]) (./chapters/convex_analysis/ts_3.tex
 
 LaTeX Warning: Reference `cv:cc:d:cc' on page 78 undefined on input line 20.
@@ -1681,7 +1681,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  108i,22n,106p,10616b,1099s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (92 pages, 543255 bytes).
+Output written on main.pdf (92 pages, 543370 bytes).
 PDF statistics:
  1281 PDF objects out of 1440 (max. 8388607)
  1116 compressed objects within 12 object streams
