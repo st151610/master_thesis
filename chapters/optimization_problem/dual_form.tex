@@ -188,7 +188,9 @@ d
   \cite{Chan2016}
   ?
 \end{remark}
-
+%
+In the next lemma we apply Theorem~\ref{cv:ts:th} to Problem~\ref{bw:1:primal}.
+%
 \begin{lemma}
   Consider the optimization problem
 \begin{align}
@@ -253,8 +255,7 @@ d
   \,.
   \end{split}
 \end{align}
-If Assumption~\ref{asu:objective_f} holds true 
-and there exists an optimal solution 
+If there exists the optimal solution 
 $
 (\rho^\dagger,\lambda_0^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger})
 $
@@ -292,16 +293,18 @@ then the unique optimal solutions to Problem~\ref{bw:1:primal} are
 \end{gather*}
 \end{lemma}
 \begin{proof}
+  First, note that by the strict convexity of $\varphi^*$ (see Lemma~\ref{1165}), a solution to Problem~\eqref{9993}
+  is unique (if it exists).
   By Lemma~\ref{matrix_notation},
   Problem~\ref{bw:1:primal} has the form required in Theorem~\ref{cv:ts:th}.
-  By Assumption~\ref{asu:objective_f} and Lemma~\ref{9991} the objective function $\Phi$ of Problem~\ref{bw:1:primal}
+  By Lemma~\ref{9991}, the objective function $\Phi$ of Problem~\ref{bw:1:primal}
   satisfies Assumption~\ref{cv:ts:asu}.
   Thus we can apply
   Theorem~\ref{cv:ts:th} to Problem~\ref{bw:1:primal}.
   Calculations yield the result.
 \end{proof}
-The next Theorem aims at simplifying this result. 
-\newpage
+With the next theorem we merge $\lambda^{+}$,$\lambda^{-}\ge 0$ to 
+$\lambda=\lambda^{+}-\lambda^{-}\in\R$.
 \begin{ftheorem}
   \label{dual_solution_th}
   Consider the optimization problem
@@ -377,8 +380,7 @@ The next Theorem aims at simplifying this result.
   \,.
 \end{split}
 \end{align}
-If Assumption~\ref{asu:objective_f} holds true 
-and there exists an optimal solution 
+If there exists the optimal solution 
 $
 (\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
 $
@@ -725,3 +727,31 @@ To finish the proof, we choose the notation with $T_i$ instead of $n$. This exte
 new $\rho_i$ are not effective because of $T_i=0$ for all $i>n$. 
 Thus we may set them to 0.
 \end{proof}
+\begin{remark}
+  This is the final form of the dual of Problem~\ref{bw:1:primal}.
+  Since the constraints in the dual problem are elementary,
+  a result such as Lemma~\ref{lem:link_conv_p}
+  keeps the initiative going.
+  The dual variables $(\rho,\lambda_0,\lambda)$ are connected to the constraints of Problem~\ref{bw:1:primal}, that is,
+  $\rho\in\R^N_{\ge 0}$
+  to
+  $T_i\cdot w_i\ge 0$ for all $i\in \left\{ 1,\ldots,N \right\}$,
+  $\lambda_0\in\R$ 
+  to 
+  $
+  \frac{1}{N}
+  \sum_{i=1}^{N} 
+  T_i\cdot w_i
+  -
+  1
+  =
+  0
+  $,
+  and
+  $\lambda\in\R^N$ to the $N$ box constraints.
+\end{remark}
+\begin{takeaways}
+  We derive a dual formulation of Problem~\ref{bw:1:primal} that is easier to analyse.
+  Theorem~\ref{dual_solution_th} provides a functional relationship of optimal dual solutions and 
+  optimal weights.
+\end{takeaways}
