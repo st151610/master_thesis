@@ -1,15 +1,23 @@
-In the formulation of Theorem~\ref{dual} we encounter "If (...) there exists the optimal solution $(\rho^\dagger,\lambda_0^\dagger,\lambda)$ ... " .
+In the formulation of Theorem~\ref{dual} we encounter "If there exists the optimal solution $(\rho^\dagger,\lambda_0^\dagger,\lambda)$ ... " .
 To be able to study asymptotic properties of the weights, we 
 shall assume that Problem~\ref{dual} is feasible,
 construct a measurable dual solution, and plug it in $(\varphi^{'})^{-1}$.
 Before we formulate concrete assumptions, we provide tools from functional analysis
-to obtain measurability. Afterwards, we shall tailor the assumptions to the capability of this tools.
+to obtain measurability. Afterwards, we tailor the feasibility assumptions to the capability of this tools.
+Then, we interpose a section on basis functions before we construct the weights process - the theoretical analogy of optimal weights.
 \section{Argmax Measurability Theorem}
   \input{chapters/weights_process/meas_argmax.tex}
 \section{Measurable Dual Solution}
   \input{chapters/weights_process/meas_dual_sol.tex}
-Before we can define the weights process (based on the dual solution), we specify the basis functions.
 \section{Basis Functions}
+Going back to the functional relationship of optimal dual solution and optimal weights (see Theorem~\ref{dual_solution_th}), we see
+that the basis vector of the covariates\index{$B$, vector of basis functions of the covariates}
+plays an important role.
+%
+Now, we present our choice.
+%
+To the best of our knowledge, this is a novelty in the framework of balancing weights.
+
   \input{chapters/weights_process/basis.tex}
 \section{Weights Process}
   \input{chapters/weights_process/weights_process.tex}

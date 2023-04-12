@@ -123,7 +123,7 @@ The next lemma studies the measurability of the extensions.
   \right)$-measurable. 
   \end{enumerate}
 \end{lemma}
-
+%
 \begin{proof}
 Consider
 for $k\in \left\{
@@ -187,7 +187,8 @@ $
   \in\sigma(X,D_N)
   $.
 \end{proof}
-
+%
+Now we gather some useful properties of the (empirical) basis vector.
 \begin{lemma}
   \label{lem:basis_sum}
   Let $(x,x_1,\ldots,x_N)\in\R^{d(N+1)}$.
@@ -441,6 +442,8 @@ $
       \,.
   \end{align*}
 \end{proof}
+%
+Now we show that the basis vector plays well with uniformly continuous functions. The result seems simple, yet the consequence are great. It allows us later on to specify an oracle parameter instead of assuming its existence (see \cite[Assumption~1.6]{Wang2019}). This greatly clarifies the proofs.
 \begin{lemma}
   \label{lem:basis_approx_f}
   Let $(x,x_1,\ldots,x_N)\in\R^{d(N+1)}$.
@@ -525,9 +528,10 @@ $
    \end{split}
  \end{align*}
 \end{proof}
+Next, we bring forward the applications of Lemma~\ref{lem:basis_approx_f} that we need.
 \begin{lemma}
   \label{lem:basis_2}
-  Let $(x,x_1,\ldots,x_N)\in\R^{d(N+1)}$.
+  Let $(x,x_1,\ldots,x_N)\in\mathcal{X}^{N+1}$.
   It holds
   for $N\to\infty$
   \begin{enumerate}[label=(\roman*)]
@@ -586,8 +590,8 @@ $
 \end{enumerate}
 \end{lemma}
 \begin{proof}
-  By Lemma~\ref{lem:basis_approx_f} 
-  and the (assumed) uniform continuity of $\varphi^{'}$
+  By Lemma~\ref{lem:basis_approx_f},
+  the uniform continuity of $\varphi^{'}$
   it holds
       \begin{align*}
         \frac
