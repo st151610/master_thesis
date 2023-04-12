@@ -62,6 +62,22 @@ where $A_N(x)$ is the only cell containing $x$.
 \begin{proof}
   The proof is simple. We omit it.
 \end{proof}
+Before we define the basis vector, we assume 
+uniform partition width such that
+\begin{align*}
+  \lambda(A_N)
+  \ 
+  =:
+  \ 
+  h_N^d
+  \ 
+  \to
+  \ 
+  0 
+  \qquad
+  \text{for}\ N\to\infty
+  \,.
+\end{align*}
 Next, we define the (empirical) basis functions vector
 \begin{align}
   \label{def:basis}
@@ -678,7 +694,7 @@ We want to comment on the assumption
   \omega
   \left( 
     F_{Y(1)}(z|\cdot)
-    ,h_N
+    ,h_N^d
   \right)
   \to
   0
@@ -697,6 +713,12 @@ If for example
 $
     F_{Y(1)}(z|\cdot)
 $
-is $\alpha$-Hölder continuous with $\alpha\in(0,1]$ for all $z\in\R$, it suffices $\sqrt{N}h_N^\alpha\to0$ to control $R_2$.
+is $\alpha$-Hölder continuous with $\alpha\in(0,1]$ for all $z\in\R$, it suffices $\sqrt{N}h_N^{\alpha\cdot d}\to0$.
 
         \end{remark}
+\begin{takeaways}
+  Basis functions of non-parametric
+  partitioning estimates are new to the framework of balancing weights.
+  They play well with uniformly continuous functions and promise to simplify the analysis. 
+  This choice of basis functions waits to be tested in practice.
+\end{takeaways}

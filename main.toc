@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {3.1}Argmax Measurability Theorem}{15}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Measurable Dual Solution}{16}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Basis Functions}{17}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Weights Process}{21}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Weights Process}{22}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Consistency of the Weights Process}{25}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Consistency of the Dual Solution}{25}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Main Result}{30}{section.4.2}%
