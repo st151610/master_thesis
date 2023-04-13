@@ -15,15 +15,15 @@
 \contentsline {section}{\numberline {5.1}Tools}{33}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Empirical Processes - Definition}{33}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Bracketing Numbers and Integral}{34}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Maximal Inequality}{34}{subsection.5.1.3}%
-\contentsline {subsubsection}{\nonumberline Donseker Theorem}{35}{subsubsection*.9}%
-\contentsline {subsection}{\numberline {5.1.4}Propensity Score Weights}{36}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Main Result}{36}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Error Decomposition}{36}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Analysis of the Terms}{39}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}$R_1$}{39}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}$R_2$}{40}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}$R_3$}{41}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.1.3}Maximal Inequality}{37}{subsection.5.1.3}%
+\contentsline {subsubsection}{\nonumberline Donseker Theorem}{38}{subsubsection*.9}%
+\contentsline {subsection}{\numberline {5.1.4}Propensity Score Weights}{38}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Main Result}{39}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Error Decomposition}{39}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Analysis of the Terms}{42}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}$R_1$}{42}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}$R_2$}{43}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}$R_3$}{44}{subsection.5.4.3}%
 \contentsline {subsection}{\numberline {5.4.4}$R_5$}{44}{subsection.5.4.4}%
 \contentsline {chapter}{\numberline {6}Discussion and Outlook}{47}{chapter.6}%
 \contentsline {subsection}{\numberline {6.0.1}Tools and Assumptions}{47}{subsection.6.0.1}%
