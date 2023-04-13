@@ -905,3 +905,125 @@ Before we give another example, we fix some useful properties of $f_z$.
     The third equality is due to Assumption~\ref{aa:assumption:treatment_str_ign}.
   \end{proof}
 
+Next, consider the stochastic process (indexed over $x\in\R^d$)
+\begin{gather}
+  \label{ghost_function}
+  \mathbf{1}{
+    \left\{ 
+      \sup_{y\in A_N(x)}
+      \left| 
+      w_0^\dagger(y)
+      -
+      \frac{1}{\pi(y)}
+      \right|
+      \,
+      \le
+      \,
+      \varepsilon_N
+    \right\}
+  }
+  \left( 
+    w_0^\dagger(x)
+      -
+      \frac{1}{\pi(x)}
+  \right)
+  \cdot
+  \mathbf{1}
+  \bigcup_{k=1}^N
+  \left\{ x=X_k \right\}
+  \,.
+\end{gather}
+We show, 
+that under mild regularity conditions on the inverse propensity score function all paths of \eqref{ghost_function} are contained in shrinking function classes $(\mathcal{F}_N)$ - and provide bracketing numbers. 
+To be more precise, we need theory from \cite[§2.7.1]{vaart2013}.
+
+Let for any vector $k\in\mathbb{N}_0^d \ (d\in\R)$
+\begin{gather*}
+  D^k
+  \ :=\ 
+  \frac
+  {\partial^{\norm{k}_1}}
+  {
+    \partial^{k_1}x_1
+    \cdots
+    \partial^{k_d}x_d
+  }
+  \,,
+\end{gather*}
+and let $\lfloor a \rfloor$ be the greatest integer smaller than $a>0$.
+For $\alpha>0$, a bounded set 
+$\mathcal{Z}\subset\R^d\ (d\in\mathbb{N})$
+and
+$M>0$, we define $C^\alpha_M(\mathcal{Z})$ to be the space of all continuous functions $f\colon \mathcal{Z}\to\R$ with
+\begin{gather*}
+  \max_{\norm{k}_1\le \alpha}\sup_{x\in\mathcal{Z}}
+  \left| D^k f(x) \right|
+  \ 
+  +
+  \ 
+  \max_{\norm{k}_1=\lfloor \alpha \rfloor}\sup_{x,y}
+  \frac
+  {
+  \left|
+  D^k f(x) 
+  -
+  D^k f(y) 
+  \right|
+  }
+  {
+    \norm{x-y}_2^{\alpha-\lfloor \alpha \rfloor}
+  }
+  \
+  \le
+  \ 
+  M
+  \,.
+\end{gather*}
+where the suprema in the second term are taken over all $x,y$ in the interior of $\mathcal{Z}$ with $x\neq y$.
+Furthermore, let
+\begin{gather*}
+  \mathcal{Z}^1
+  :=
+  \left\{ 
+    y\in\R^d
+    \colon
+    \norm{x-y}_2 <1
+    \ 
+    \text{for some}\ x\in\mathcal{Z}
+  \right\}
+  \,.
+\end{gather*}
+\begin{lemma}
+  \label{vdv_coro}
+  Let $\mathcal{P}=\left\{ A_1,A_2,\ldots \right\}$ be a partition of $\R^d$ into bounded, convex sets with non-empty interior, and let $\mathcal{F}$ be a class of functions $f\colon\R^d\to\R$ such that the restrictions $\mathcal{F}_{|A_j}$ belong to $C^\alpha_{M_j}(A_j)$
+  for all $j\in\mathbb{N}$.
+  Then there exists a constant $K$, depending only on $\alpha$, $V$, $r$ and $d$
+  such that
+  \begin{gather}
+    \label{667}
+    \log
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}
+    ,
+    L^r(\mathbf{Q})
+    )
+    \le
+    K
+    \left( \frac{1}{\varepsilon} \right)^V
+    \left( 
+      \sum_{j=1}^{\infty}
+      \lambda(A_j^1)^{r/(V+r)}
+      M_j^{Vr/(V+r)}
+      \mathbf{Q}(A_j)^{V/(V+r)}
+    \right)
+    ^{(V+r)/r}
+  \end{gather}
+  for every $\varepsilon>0$, $V\ge d/\alpha$, and probability measure $\mathbf{Q}$.
+\end{lemma}
+\begin{proof}
+  \emph{\cite[Corollary~2.7.4]{vaart2013}}
+\end{proof}
+
