@@ -1368,6 +1368,10 @@ INPUT ./chapters/discussion/bootstrap.tex
 INPUT chapters/discussion/bootstrap.tex
 INPUT ./chapters/discussion/bootstrap.tex
 INPUT chapters/discussion/bootstrap.tex
+INPUT ./chapters/discussion/cont_treat.tex
+INPUT chapters/discussion/cont_treat.tex
+INPUT ./chapters/discussion/cont_treat.tex
+INPUT chapters/discussion/cont_treat.tex
 INPUT ./final_chapters/aa:tools.tex
 INPUT final_chapters/aa:tools.tex
 INPUT ./final_chapters/aa:tools.tex
