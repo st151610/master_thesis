@@ -187,12 +187,17 @@ Quellen vollständig kenntlich gemacht.
   \textbf{Abstract} \\
   english
   \end{center}
-  In this thesis I extend the balancing weights framework of \cite{Wang2019} to estimate the distribution function of potential outcomes
-  by weighted means.
-  I suggest a different perspective on covariate balance 
-  by considering basis functions of non-parametric partitioning estimates.
-  I carry out the asymptotic analysis that shows convergence of the error to a Gaussian process.
-  My findings allow to apply the functional delta method to plug-in estimators and thereby makes classical statistical methods such as quantile estimation, hypothesis testing or survival analysis accessible to causal inference in observational studies.
+  In this thesis I extend the balancing weights framework of \cite{Wang2019} to estimate the distribution function of potential outcomes.
+  %
+  I also suggest to balance basis functions of non-parametric partitioning estimates. 
+  %
+  This greatly simplifies the proofs and allows for rigorous mathematical treatment of the method.
+  %
+  The asymptotic analysis shows convergence of the error to a Gaussian process.
+  %
+  My findings allow to apply the functional delta method to plug-in estimators.
+  This makes classical statistical methods such as quantile estimation, hypothesis testing or survival analysis accessible to causal inference in observational studies.
+  %
   While the theoretical results are promising, this novel approach waits for testing in practice.
 \newpage
   \begin{center}
@@ -218,6 +223,7 @@ Quellen vollständig kenntlich gemacht.
 \chapter{Convergence of the Weighted Mean}
   \input{chapters/conv_mean/main.tex}
 \chapter{Discussion and Outlook}
+  \input{chapters/discussion/main.tex}
 %  \section{Consistency of Optimal Solutions}
 %  \subsection{Estimate of an Oracle Parameter by the Dual}
 %  \input{final_chapters/aa:dual.tex}
