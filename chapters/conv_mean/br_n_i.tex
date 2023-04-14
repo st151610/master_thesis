@@ -927,10 +927,6 @@ Next, consider the stochastic process (indexed over $x\in\R^d$)
       -
       \frac{1}{\pi(x)}
   \right)
-  \cdot
-  \mathbf{1}
-  \bigcup_{k=1}^N
-  \left\{ x=X_k \right\}
   \,.
 \end{gather}
 We show, 
@@ -1132,7 +1128,7 @@ are contained in $\mathcal{F}_N$.
     \text{the paths}\quad
     w^\dagger(\cdot)(\omega)
     \quad
-    \text{is constant on each cell}\ 
+    \text{are constant on each cell}\ 
     A_N\in\mathcal{P}_N
     \ \text{for all}\ \omega\in\Omega
     \,.
@@ -1203,10 +1199,10 @@ Since $V=d/\alpha \in (0,2)$ by $\alpha>d/2$,
 applying Lemma~\ref{vdv_coro} finishes the proof.
 \end{proof}
 \begin{remark}
-  Note, that we only get $L^2(\P_X)$ bracketing numbers in this way. If we assume, that all functions in $\mathcal{F}$ are independent of $(T,Y)$
+  Note, that we only get $L^2(\P_X)$ bracketing numbers in this way. If we assume, that all functions in $\mathcal{F}_N$ are independent of $(T,Y)$
   we readily obtain $L^2(\P)$ bracketing numbers. Note, that $w^\dagger(X)$ and $1/\pi(X)$ are independent of $(T,Y)$.  
 \end{remark}
-Next, we show, that a finite covariate space always meets the requirements of Lemma~\ref{lem:br_n_st}.
+Next, we show, that a finite covariate space always meets the requirements of Lemma~\ref{lem:br_n_st} - and that a continuous distribution of $X$ never does so.
 \begin{lemma}
   Consider the covariate space $\mathcal{X}$. 
   \begin{enumerate}[label=(\roman*)]
@@ -1238,6 +1234,9 @@ then
   \to
   \ 
   \infty
+  \qquad
+  \text{for}\ 
+  N\to\infty
   \,.
   \end{align*}
   \end{enumerate}
@@ -1362,6 +1361,5 @@ $,
   >0
   $,
   $V/(V+2)-1<0$ and $h_N\to 0$.
-
-
 \end{proof}
+

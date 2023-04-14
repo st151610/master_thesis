@@ -68,13 +68,19 @@ This works well when the effect of an action is short term.
 
 If the propensity score is known we actually observe one of the potential outcomes.
 This is because treatment assignment carries no more information.
-The coin ignores it.
 But we saw, that assignment often contains more information.
 Then it is not clear, if the effect on the outcome comes from observed or unobserved individual characteristics or the treatment.
 Then we observe neither of the two potential outcomes, but a biased version.
 Why then bother?
 
-A simple idea to obtain information about the true potential outcome from its biased version (we also say confounded version) is, to weight it with the inverse probability of treatment, that is, 1 divided by the propensity score. Let's introduce some notation to be more precise.
+Since the introduction of the propensity score in 1983 \cite{Rosenbaum1983}, statisticians developed different ideas how to incorporate it in their analysis. 
+%
+There are two important branches of application - matching and weighting.
+In matching the idea is to pair two or more units with different treatment status but similar propensity score.
+In weighting - the method we will focus on - the idea is to re-weight the population, ideally with the inverse propensity score, that is, 1 divided by the propensity score.
+Both methods share the goal to minimize imbalances in the population.
+Let's introduce some notation to be more precise.
+
 Let $T\in \left\{ 0,1 \right\}$ be the \textbf{indicator of treatment}. 
 Let $X\in\mathcal{X}$ be a vector with individual characteristics. We call this the \textbf{covariate vector}. 
 
@@ -126,81 +132,79 @@ That is, by weighting the observed outcome under treatment with the inverse prop
 This is relevant, because 
 $Y(t)|T=t$ does not have the same distribution as $Y(t)$ for $t\in \left\{ 0,1 \right\}$.
 
-In observational studie, the propensity score is unknown.
-A very popular method is to use estimates of it to create weights.
-We hope to recover \eqref{ipw} from the estimate.
-In practice, estimating the propensity score is a difficult task.
-Researchers often compare estimates from different models. 
-They employ metrics called covariate balance.
-The high level idea is, that the weighted treatment group should be similar to the unweighted control group. 
+In observational studies - independent of which method is applied, that is, matching, weighting ore other methods -
+the propensity score is unknown.
+It used to be very popular to use estimates of the propensity score - either for matching or to create weights or for some other purpose.
+In weighting, the hope is to recover \eqref{ipw} from the estimate.
+In practice, however, estimating the propensity score is a difficult task.
+Researchers often compare estimates from different models and check for covariate balance. 
+This is not surprising, because that's what the weights are designed for - minimizing imbalances in the population.
+The poor performance of classical propensity score estimates such as logistic regression - and the insight that the task is to eliminate imbalances -
+led to the development of methods such as the Covariate Balancing Propensity Score \cite{Imai2014a} that tries to solve both tasks simultaneously.
 
-Let's be more specific what we mean by covariate balance.
-We consider a class of functions $B$ of the covariates, which we call regression basis.
-A simple example are the (known) moments of the covariats.
-We will extend the view, but for now this is sufficient.
-Our measure of balance is
+Recently, new balancing frameworks were developed that do not rely on estimates of the propensity score\cite{Hainmueller2012,Zubizarreta2015}.
+They generate weights with a constrained convex optimization that explicitly bounds imbalances by the constraints. 
+The constraints responsible are of the form
 \begin{gather}
   \label{cov_bal}
-  \frac{1}{N}
-  \left( 
-    \sum_{i=1}^{n}
-    w_i
-    B(X_i)
-    -
-    \sum_{i=1}^{N} 
-    B(X_i)
-  \right)
-\end{gather}
-where $(w_i)$ are the (estimated) weights for a (sub-)population of size $n\le N$ and $B$ are (basis-)functions of the covariates.
-Rather than estimating the propensity score and then checking for covariate balance,
-the method of \cite{Imai2014a} tries to solve both tasks simultaneously.
-Therefore it is called the Covariate Balancing Propensity Score.
-
-We will consider a third method, which only balances covariates but does not (explicitly) model treatment or outcome.
-This method was introduced in \cite{Hainmueller2012}. 
-It is a convex optimization problem with constraints on the balance of moments of the covariates.
-The method gained popularity by the observation of \cite{Zhao2017a}
-that it is doubly robust.
-Graphic?
-
-We consider \eqref{cov_bal} for all basis functions is the regression basis.
-It is a non-trivial question, which basis to choose in practice.
-How strictly to enforce covariate balance is another question.
-It is relevant, because very strict assumptions can render the problem infeasible, whereas loosening can result in bias of the estimator.
-In \cite{Hainmueller2012} they choose the (known) moments of the covariate as basis and enforce strict balance, that is, the quantity in \eqref{cov_bal} has to vanish.
-In \cite{Wang2019} they consider the regression basis of sieve estimators\cite{Newey1997a}, where the number of basis functions grows with the sample size.
-Also they loosen the strict constraints on the covariate balance as to vanish only for $N\to\infty$. This takes the for
-\begin{gather}
   \left| 
-  \label{cov_bal}
   \frac{1}{N}
   \left( 
     \sum_{i=1}^{n}
     w_i
-    B(X_i)
+    B_k(X_i)
     -
     \sum_{i=1}^{N} 
-    B(X_i)
+    B_k(X_i)
   \right)
   \right|
-  \le \delta_B
+  =
+  0
+  \qquad
+  \text{for all}\ 
+  k\,,
 \end{gather}
-for some $\delta_B > 0 $ with $\delta_B\to 0$ for $N\to\infty$.
-The paper \cite{Wang2019} also contains theoretical analysis.
-It shows a surprising connection to propensity score estimation.
-They show that with the regression basis of sieve estimators their method (implicitly) models the inverse propensity score.
-Their analysis is in part motivated by the observation, that entropy balancing is doubly robust \cite{Zhao2017a}.
-That is, if the basis functions estimate one of outcome or treatment well, the weighted mean is consistent.
-One novelty, introduced in this thesis, is, to choose universally consistent regression basis, such as partitioning estimates \cite{Gyorfi2002} and recover the results of \cite{Wang2019}.
-By the universal consistency we would expect, that both outcome and treatment are estimated well with sufficiently large samples.
+where $B_k$ are basis functions of the covariates. This can be moments of the covariates - a natural aim. 
+But it is a non-trivial question, which basis to choose in practice to obtain best performance.
+How strictly to enforce covariate balance is another question.
+It is relevant, because very strict assumptions can render the problem infeasible, whereas loosening can result in bias of the estimator.
+In \cite{Hainmueller2012} the authors choose the (known) moments of the covariate as basis functions and enforce strict balance, that is, \eqref{cov_bal}.
+In \cite{Wang2019} they consider the regression basis of sieve estimators\cite{Newey1997a}, where the number of basis functions grows with the sample size.
+Also they loosen the strict constraints on the covariate balance as to vanish only for $N\to\infty$, that is,
+\begin{gather}
+  \label{cov_bal}
+  \left| 
+  \frac{1}{N}
+  \left( 
+    \sum_{i=1}^{n}
+    w_i
+    B_k(X_i)
+    -
+    \sum_{i=1}^{N} 
+    B_k(X_i)
+  \right)
+  \right|
+  \le
+  \delta_k
+  \qquad
+  \text{for all}\ 
+  k\,,
+\end{gather}
+with $\delta_k > 0 $ and $\delta_k\to 0$ for $N\to\infty$.
 
-A second novelty introduced in this thesis is,
-to use these weights and the weighted mean to estimate tho distribution function of potential outcomes.
+What attracted my attention was that
+the paper \cite{Wang2019} also contains theoretical analysis.
+The authors reveal a surprising connection to propensity score estimation.
+They show that with the regression basis of sieve estimators\cite{Newey1997a}, their method (implicitly) models the inverse propensity score.
+They use this to obtain asymptotic normality of a weighted mean estimate of the expectation of potential outcomes.
 
-We show, that (under mild assumptions) with the regression basis of partitioning estimates, the weighted mean is asymptotically well behaved in estimating distribution functions.
-This result is both new by regression basis and estimand.
+One novelty introduced in this thesis is to balance basis functions of partitioning estimates \cite{Gyorfi2002}.
+I show that this makes the proofs of \cite{Wang2019} easier.
+Furthermore, I extend the framework to estimate the distribution function of potential outcomes.
+
+I show, that (under mild assumptions) with the regression basis of partitioning estimates, the weighted mean is asymptotically well behaved in estimating distribution functions.
 By the functional delta method
-\cite{Vaart2000} we immediately get access to a large class of plug-in estimators.
+\cite{Vaart2000} the results immediately open access to a large class of plug-in estimators.
 
 With my thesis I contribute to one of the main purposes in causal inference, that is, reinforcing classical methods of statistical analysis for use in observational studies.
 

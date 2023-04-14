@@ -7,45 +7,45 @@ Warning--I'm ignoring Barbe95's extra "note" field
 --line 42 of file literature.bib
 Warning--I'm ignoring Barbe95's extra "note" field
 --line 43 of file literature.bib
-You've used 19 entries,
+You've used 18 entries,
             2543 wiz_defined-function locations,
-            704 strings with 7996 characters,
-and the built_in function-call counts, 7123 in all, are:
-= -- 713
-> -- 322
+            696 strings with 7869 characters,
+and the built_in function-call counts, 6711 in all, are:
+= -- 672
+> -- 303
 < -- 8
-+ -- 105
-- -- 101
-* -- 496
-:= -- 1194
-add.period$ -- 63
-call.type$ -- 19
-change.case$ -- 103
-chr.to.int$ -- 19
-cite$ -- 19
-duplicate$ -- 304
-empty$ -- 530
-format.name$ -- 125
-if$ -- 1455
++ -- 99
+- -- 95
+* -- 461
+:= -- 1126
+add.period$ -- 60
+call.type$ -- 18
+change.case$ -- 97
+chr.to.int$ -- 18
+cite$ -- 18
+duplicate$ -- 290
+empty$ -- 499
+format.name$ -- 118
+if$ -- 1372
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 26
-newline$ -- 99
-num.names$ -- 60
-pop$ -- 102
+missing$ -- 25
+newline$ -- 94
+num.names$ -- 57
+pop$ -- 99
 preamble$ -- 1
-purify$ -- 130
+purify$ -- 123
 quote$ -- 0
-skip$ -- 251
+skip$ -- 238
 stack$ -- 0
-substring$ -- 360
-swap$ -- 39
+substring$ -- 329
+swap$ -- 38
 text.length$ -- 8
 text.prefix$ -- 5
 top$ -- 0
-type$ -- 120
+type$ -- 112
 warning$ -- 0
-while$ -- 71
-width$ -- 22
-write$ -- 252
+while$ -- 67
+width$ -- 21
+write$ -- 239
 (There were 2 warnings)

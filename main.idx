@@ -4,6 +4,6 @@
 \indexentry{$\delta$, (random) constraints vector }{6}
 \indexentry{$\varphi$, objective function of Problem~\ref{bw:1:primal}}{7}
 \indexentry{$B$, vector of basis functions of the covariates}{17}
-\indexentry{affine set}{76}
-\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{76}
-\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{76}
+\indexentry{affine set}{78}
+\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{78}
+\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{78}
