@@ -5,6 +5,7 @@
 \indexentry{$\varphi$, objective function of Problem~\ref{bw:1:primal}}{7}
 \indexentry{$[x]^+$, positive part of $x\in\R$}{12}
 \indexentry{$B$, vector of basis functions of the covariates}{19}
-\indexentry{affine set}{82}
-\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{82}
-\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{82}
+\indexentry{$\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   }{24}
+\indexentry{affine set}{80}
+\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{80}
+\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{80}
