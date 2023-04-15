@@ -2,6 +2,7 @@
 
   \item $B$, vector of basis functions of the covariates, 6, 19
   \item $D_N$, (random) data set without observed outcome, 5
+  \item $[x]^+$, positive part of $x\in\R$, 12
   \item $\delta$, (random) constraints vector , 6
   \item $\mathrm{aff(\cdot)}$, affine hull, 80
   \item $\mathrm{ri}(\cdot)$, relative interior, 80

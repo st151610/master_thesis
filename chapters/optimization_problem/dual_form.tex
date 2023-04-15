@@ -305,6 +305,8 @@ then the unique optimal solutions to Problem~\ref{bw:1:primal} are
 \end{proof}
 With the next theorem we merge $\lambda^{+}$,$\lambda^{-}\ge 0$ to 
 $\lambda=\lambda^{+}-\lambda^{-}\in\R$.
+Let $[x]^+:=0\land x$ be the positive part of $x\in\R$.
+\index{$[x]^+$, positive part of $x\in\R$}
 \begin{ftheorem}
   \label{dual_solution_th}
   Consider the optimization problem
@@ -372,9 +374,23 @@ $\lambda=\lambda^{+}-\lambda^{-}\in\R$.
   \quad 
   \mathrm{for}\ \mathrm{all}\ i\le n
   \qquad 
+  \\
   \mathrm{and}
+  \quad
   \qquad
-  \rho_i=0
+  &
+  \rho_i
+  \ 
+  =
+  \ 
+  \left[ 
+  \varphi^{-1}
+  (0)
+  -
+  \left( 
+  \lambda_0 + \inner{B(X_i)}{\lambda}
+  \right)
+  \right]^+
   \quad 
   \mathrm{for}\ \mathrm{all}\ i>n
   \,.
@@ -725,7 +741,7 @@ Multiplying $G$ with $-1/N$ doesn't change the solution either
 (if we search instead for a minimum).
 To finish the proof, we choose the notation with $T_i$ instead of $n$. This extends the domain of $\rho$ to $\R^N_{\ge 0}$, but the 
 new $\rho_i$ are not effective because of $T_i=0$ for all $i>n$. 
-Thus we may set them to 0.
+Thus we may set them to an arbitrary value.
 \end{proof}
 \begin{remark}
   This is the final form of the dual of Problem~\ref{bw:1:primal}.
@@ -754,36 +770,25 @@ As an example for the interested reader and as transition to the next section, w
 \begin{lemma}
   Let 
 $
-(\rho^\dagger,\lambda_0^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger})
+(\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
 $
-be the optimale solution to Problem~\ref{dual}.
+be the optimal solution to Problem~\ref{dual}.
 It holds
 \begin{align*}
   \rho_i^\dagger
   =
-  \left( 
+  \left[ 
   \varphi^{'}
   (0)
   -
   \left( 
     \lambda_0^\dagger + \inner{B(X_i)}{\lambda^\dagger}
   \right)
-  \right)
-  \cdot
-  \mathbf{1}
-  \left\{ 
-  \varphi^{'}
-  (0)
-  -
-  \left( 
-    \lambda_0^\dagger + \inner{B(X_i)}{\lambda^\dagger}
-  \right)
-  >0
-  \right\}
-  \cdot T_i
+  \right]^+
+\qquad
+  \text{for all}\ i\in \left\{ 1,\ldots,N \right\}
 \end{align*}
 $
-  \text{for all}\ i\in \left\{ 1,\ldots,N \right\}
 $
 \end{lemma}
 \begin{proof}
