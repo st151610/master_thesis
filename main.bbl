@@ -5,6 +5,12 @@ Charalambos~D. Aliprantis and Kim~C. Border.
 \newblock {\em Infinite {{Dimensional Analysis}}: {{A Hitchhiker}}'s {{Guide}}}.
 \newblock {Springer Science \& Business Media}, May 2007.
 
+\bibitem[BB95]{Barbe95}
+Philippe~[Verfasser/in] Barbe and Patrice~[Verfasser/in] Bertail, editors.
+\newblock {\em The weighted bootstrap}.
+\newblock Lecture notes in statistics ; 98. Springer, New York ; Heidelberg [u.a.], 1995.
+\newblock Literaturverz. S. 199 - 214.
+
 \bibitem[CYZ16]{Chan2016}
 Kwun Chuen~Gary Chan, Sheung Chi~Phillip Yam, and Zheng Zhang.
 \newblock Globally {{Efficient Non-Parametric Inference}} of {{Average Treatment Effects}} by {{Empirical Balancing Calibration Weighting}}.
@@ -19,6 +25,11 @@ L{\'a}szl{\'o} Gy{\"o}rfi, Michael Kohler, Adam Krzy{\.z}ak, and Harro Walk.
 Jens Hainmueller.
 \newblock Entropy {{Balancing}} for {{Causal Effects}}: {{A Multivariate Reweighting Method}} to {{Produce Balanced Samples}} in {{Observational Studies}}.
 \newblock {\em Political Analysis}, 20(1):25--46, 2012.
+
+\bibitem[HI05]{Hirano2005}
+Keisuke Hirano and Guido~W. Imbens.
+\newblock The {{Propensity Score}} with {{Continuous Treatments}}.
+\newblock In Andrew Gelman and Xiao-Li Meng, editors, {\em Wiley {{Series}} in {{Probability}} and {{Statistics}}}, pages 73--84. {John Wiley \& Sons, Ltd}, {Chichester, UK}, July 2005.
 
 \bibitem[IR14]{Imai2014a}
 Kosuke Imai and Marc Ratkovic.
@@ -70,10 +81,10 @@ Yixin Wang and Jos{\'e}~R. Zubizarreta.
 \newblock Minimal {{Dispersion Approximately Balancing Weights}}: {{Asymptotic Properties}} and {{Practical Considerations}}.
 \newblock {\em Biometrika}, page asz050, October 2019.
 
-\bibitem[ZP17]{Zhao2017a}
-Qingyuan Zhao and Daniel Percival.
-\newblock Entropy balancing is doubly robust.
-\newblock {\em Journal of Causal Inference}, 5(1):20160010, September 2017.
+\bibitem[WZ23]{Wang2023}
+Yixin Wang and Jos{\'e}~R. Zubizarreta.
+\newblock Large {{Sample Properties}} of {{Matching}} for {{Balance}}.
+\newblock {\em Statistica Sinica}, 2023.
 
 \bibitem[Zub15]{Zubizarreta2015}
 Jos{\'e}~R. Zubizarreta.

@@ -15,22 +15,27 @@
 \contentsline {section}{\numberline {5.1}Tools}{33}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Empirical Processes - Definition}{33}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Bracketing Numbers and Integral}{34}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Maximal Inequality}{38}{subsection.5.1.3}%
-\contentsline {subsubsection}{\nonumberline Donseker Theorem}{39}{subsubsection*.9}%
-\contentsline {subsection}{\numberline {5.1.4}Propensity Score Weights}{39}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Main Result}{40}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Error Decomposition}{40}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Analysis of the Terms}{43}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}$R_1$}{43}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}$R_2$}{44}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}$R_3$}{45}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}$R_5$}{45}{subsection.5.4.4}%
-\contentsline {chapter}{\numberline {6}Discussion and Outlook}{49}{chapter.6}%
-\contentsline {subsection}{\numberline {6.0.1}Tools and Assumptions}{49}{subsection.6.0.1}%
-\contentsline {section}{\numberline {6.1}Application to Plug In Estimators}{71}{section.6.1}%
-\contentsline {chapter}{\numberline {7}Convex Analysis}{73}{chapter.7}%
-\contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{73}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{80}{section.7.2}%
-\contentsline {chapter}{References}{85}{chapter*.26}%
-\contentsline {chapter}{Index}{87}{chapter*.26}%
+\contentsline {subsection}{\numberline {5.1.3}Maximal Inequality}{40}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Donsker's Theorem}{42}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}Propensity Score Weights}{43}{subsection.5.1.5}%
+\contentsline {section}{\numberline {5.2}Main Result}{43}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Error Decomposition}{44}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Analysis of the Terms}{47}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Analysis of $R_1$}{47}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Analysis of $R_2$}{48}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Analysis of $R_3$}{49}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Analysis of $R_4$}{49}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Analysis of $R_5$}{49}{subsection.5.4.5}%
+\contentsline {chapter}{\numberline {6}Discussion and Outlook}{53}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Matching}{53}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Application of the Functional Delta Method}{53}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Bootstrapping}{53}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Non-binary Treatment}{53}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Tools and Assumptions}{54}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}Application to Plug In Estimators}{76}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Convex Analysis}{77}{chapter.7}%
+\contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{77}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{84}{section.7.2}%
+\contentsline {chapter}{References}{89}{chapter*.24}%
+\contentsline {chapter}{Index}{91}{chapter*.24}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

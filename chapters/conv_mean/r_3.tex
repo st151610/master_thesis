@@ -34,13 +34,13 @@ Note that
     \sum_{i=1}^{N} 
     T_i
     \cdot
-    \left( 
+    \left|
     \mathbf{1}{\left\{ Y_i(T_i) \le z \right\}}
     \ 
     -
     \ 
   F_{Y(1)}(z|X_i)
-  \right)
+    \right|
 \right)_{z\in\R}
     \,
 \end{align}
@@ -83,8 +83,11 @@ Thus
     =
     \ 
     \G_N f_z
+    \,.
 \end{align*}
-Since $\mathcal{F}$ is $\P$-Donsker, by the Donsker Theorem
+Since $\left\{
+  |f_z|\colon z\in\R
+\right\}$ is $\P$-Donsker by Lemma~\ref{lem:F_P_donsker}, by the Donsker's Theorem
 the process 
 $
 \left( 
@@ -95,4 +98,3 @@ converges in $l^\infty(\R)$.
 Thus by Slutzky's Theorem, the upper bound in \eqref{89763} converges to 0 in $l^\infty(\R)$.
 It follows the statement.
 \end{proof}
-

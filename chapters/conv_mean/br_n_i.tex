@@ -927,10 +927,6 @@ Next, consider the stochastic process (indexed over $x\in\R^d$)
       -
       \frac{1}{\pi(x)}
   \right)
-  \cdot
-  \mathbf{1}
-  \bigcup_{k=1}^N
-  \left\{ x=X_k \right\}
   \,.
 \end{gather}
 We show, 
@@ -1025,5 +1021,345 @@ Furthermore, let
 \end{lemma}
 \begin{proof}
   \emph{\cite[Corollary~2.7.4]{vaart2013}}
+\end{proof}
+
+The next lemma gives sufficient conditions on the regularity of the inverse propensity score function.
+\begin{lemma}
+  \label{lem:br_n_st}
+  Let $(\mathcal{P}_N)$ denote a sequence of qubic partitions
+  $\mathcal{P}_N=\left\{ A_{N,1},A_{N,2},\ldots \right\}$ 
+  of $\R^d$ 
+  with decreasing width $(h_N)\subset(0,1]$ such that $h_N\to 0$ for $N\to\infty$.
+  Furthermore, assume that there exists
+  $\alpha>d/2$, where $\mathcal{X}\subseteq \R^d$, such
+  that for 
+  $V:=d/\alpha$
+ and for all 
+$
+(j,N)\in\mathbb{N}^2
+$
+there exists 
+$M_{N,j}\ge 1$ such that 
+\begin{gather}
+  \label{0897}
+  \frac{1}{\pi(\cdot)}
+  \in C^\alpha_{M_{N,j}}(A_{N,j})
+  \quad
+  \text{and}
+  \quad
+  \sum_{j=1}^{\infty} 
+  M_{N,j}^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{gather}
+Then for any decreasing sequence
+  $(\varepsilon_N)$ with $\varepsilon_N\to 0$ for $N\to\infty$,
+there exists a sequence of (measurable) function classes
+$(\mathcal{F}_N)$
+with envelope functions
+$(F_N)$,
+satisfying 
+for some $k<2$
+\begin{gather*}
+\norm{F_N}_{L^2(\P)}
+\ 
+\le
+\ 
+\varepsilon_N
+\quad
+\text{and}
+\quad
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P_{X}))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}
+  \ 
+  N\in\mathbb{N}
+  \,,
+\end{gather*}
+such that
+for all $N\in\mathbb{N}$ the paths of the stochastic process
+\begin{gather}
+  \label{error_process}
+  \mathbf{1}{
+    \left\{ 
+      \sup_{y\in A_N(x)}
+      \left| 
+      w_0^\dagger(y)
+      -
+      \frac{1}{\pi(y)}
+      \right|
+      \,
+      \le
+      \,
+      \varepsilon_N
+    \right\}
+  }
+  \left( 
+    w_0^\dagger(x)
+      -
+      \frac{1}{\pi(x)}
+  \right)
+  \cdot
+  \mathbf{1}
+  \bigcup_{k=1}^N
+  \left\{ x=X_k \right\}
+  \,.
+\end{gather}
+are contained in $\mathcal{F}_N$.
+\end{lemma}
+\begin{proof}
+  We want to employ Lemma~\ref{vdv_coro}. 
+  To do this, the crucial observation is that by Lemma~\ref{lem:weights:meas}.\textit{(ii)}
+  \begin{gather*}
+    \text{the paths}\quad
+    w^\dagger(\cdot)(\omega)
+    \quad
+    \text{are constant on each cell}\ 
+    A_N\in\mathcal{P}_N
+    \ \text{for all}\ \omega\in\Omega
+    \,.
+  \end{gather*}
+  Thus, the regularity of a path of \eqref{error_process}
+  on each cell $A_N\in\mathcal{P}_N$ is decided by 
+  $1/\pi(\cdot)$.
+  Indeed, a path of \eqref{error_process} is either 0 if the threshold of $\varepsilon_N$ is exceeded somewhere in the cell, or has the form constant-minus-smooth-function.
+In any case, it is continuous and bounded by $\varepsilon_N$.
+All its derivatives are 0 (if the threshold is exceeded) or are governed by $1/\pi(\cdot)$.
+Thus, it follows from \eqref{0897}
+\begin{gather}
+  \eqref{error_process}(\cdot)(\omega)
+  \in C^\alpha_{M_{N,j}}(A_{N,j})
+  \quad
+  \text{and}
+  \quad
+  \sum_{j=1}^{\infty} 
+  M_{N,j}^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{gather}
+To bound the right-hand-side in \eqref{667} we note
+that 
+$
+\lambda(A_{N,j})=h^d_N
+$ 
+and thus
+$
+\lambda(A_{N,j}^1)\lesssim 1
+$
+for all $(j,N)\in\mathbb{N}^2$.
+Thus
+\begin{gather*}
+  \sum_{j=1}^{\infty} 
+  \lambda(A_{N,j}^1)^{2/(V+2)}
+  M_{N,j}^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{gather*}
+$
+\eqref{error_process}(\cdot)(\omega)\in\mathcal{F}_N
+$, 
+where
+$
+\mathcal{F}_N
+$
+restricted to $A_{N,j}$ is 
+$
+  C^\alpha_{M_{N,j}}(A_{N,j})
+$
+and satisfies the requirements of Lemma~\ref{vdv_coro}.
+Since $V=d/\alpha \in (0,2)$ by $\alpha>d/2$, 
+applying Lemma~\ref{vdv_coro} finishes the proof.
+\end{proof}
+\begin{remark}
+  Note, that we only get $L^2(\P_X)$ bracketing numbers in this way. If we assume, that all functions in $\mathcal{F}_N$ are independent of $(T,Y)$
+  we readily obtain $L^2(\P)$ bracketing numbers. Note, that $w^\dagger(X)$ and $1/\pi(X)$ are independent of $(T,Y)$.  
+\end{remark}
+Next, we show, that a finite covariate space always meets the requirements of Lemma~\ref{lem:br_n_st} - and that a continuous distribution of $X$ never does so.
+\begin{lemma}
+  Consider the covariate space $\mathcal{X}$. 
+  \begin{enumerate}[label=(\roman*)]
+    \item
+If $\#\mathcal{X}<\infty$, that is, $X$ can take only finitely many values with positive probability,
+then 
+\begin{align*}
+  \sum_{j=1}^{\infty} 
+  M_{N,j}^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{align*}
+\item
+  If $X$ is continuously distributed, then
+  \begin{align*}
+  \sum_{j=1}^{\infty} 
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \to
+  \ 
+  \infty
+  \qquad
+  \text{for}\ 
+  N\to\infty
+  \,.
+  \end{align*}
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+ Assume $\#\mathcal{X}<\infty$, that is, $X$ can take only finitely many values with positive probability.
+We write
+\begin{gather*}
+  J_N
+  :=
+  \left\{ 
+    j\in\mathbb{N}
+    \colon
+    \P[X\in A_{N,j}]>0
+  \right\}
+  \,.
+\end{gather*}
+It holds
+$\#J_N\le \# \mathcal{X}<\infty$.
+Thus, the following maximum is attained
+\begin{gather*}
+  \max_{j\in J_N} M_{N,j}
+  =:M^*_N
+  \,.
+\end{gather*}
+But the partitions increasingly better fit the support of $X$. Thus
+$M^*_N$ is decreasing in $N$, that is,  $\infty>M^*_1\ge M^*_N$.
+It follows
+\begin{align*}
+  \sum_{j=1}^{\infty} 
+  M_{N,j}
+  ^{2V/(V+2)}
+  \P
+  [
+  X\in A_{N,j}
+  ]^{V/(V+2)}
+  \ 
+  \le
+  \ 
+  \left( 
+  M^*_1
+  \right)
+  ^{2V/(V+2)}
+  \cdot
+  \# J_N
+  \ 
+  \lesssim
+  \ 
+  1
+  \,.
+\end{align*}
+Now let $f_X$ be the probability density of $X$. 
+  Then there exists a compact set $K\subset\mathcal{X}\subset \R^d$, such that
+  $
+  \inf_{x\in K}f_X(x)
+  >0
+  $. Since $\mathcal{P}_N$ are cubic partitions, it holds for 
+  \begin{gather*}
+    I_N
+    :=
+    \left\{ 
+      i\in\mathbb{N}\colon
+      A_{N,i}\subset K
+    \right\}
+    \qquad
+    \text{that}
+    \qquad
+    \bigcup_{i\in I_N}A_{N,i}\nearrow K
+    \,.
+  \end{gather*}
+Thus
+\begin{align*}
+  \sum_{i=1}^\infty
+  \P
+  [
+  X\in A_{N,i}
+  ]^{V/(V+2)}
+  &
+  \ 
+  \ge
+  \ 
+  \sum_{i\in I_N}
+  \P
+  [
+  X\in A_{N,i}
+  ]^{V/(V+2)}
+  \\
+  &
+  \ 
+  \ge
+  \ 
+  \inf_{x\in K}f_X(x)
+  ^{V/(V+2)}
+  \cdot 
+  h_N^{d\cdot(V/(V+2)-1)}
+  \sum_{i\in I_N}
+  \lambda
+  \left( 
+  A_{N,i}
+  \right)
+  \\
+  &
+  \ 
+  \to
+  \ 
+  \infty
+  \,.
+\end{align*}
+This follows from
+$
+  \sum_{i\in I_N}
+  \lambda
+  \left( 
+  A_{N,i}
+  \right)
+  \to 
+  \lambda(K)>0
+$,
+  $
+  \inf_{x\in K}f_X(x)
+  >0
+  $,
+  $V/(V+2)-1<0$ and $h_N\to 0$.
 \end{proof}
 

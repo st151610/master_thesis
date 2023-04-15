@@ -11,6 +11,7 @@ to a tight limit process.
 \end{definition}
 
 \begin{theorem}
+  \label{th:donsker}
   Every class $\mathcal{F}$ of measurable functions 
   with
   \begin{gather*}
@@ -29,7 +30,7 @@ to a tight limit process.
   $\P$-Donsker.
   Furthermore,
   the sequence of processes 
-$\left\{ G_N f \colon f\in\mathcal{F}\right\}$
+$\left\{ \G_N f \colon f\in\mathcal{F}\right\}$
   converges 
   in
 $l^\infty(\mathcal{F})$
@@ -50,5 +51,66 @@ to a Gaussian process with mean 0 and covariance function given by
 \begin{proof}
   \cite[Theorem~19.5]{Vaart2000}
 \end{proof}
-
-
+\begin{lemma}
+  \label{lem:F_P_donsker}
+The function class $\mathcal{F}$ defined in \eqref{F_g} is $\P$-Donsker. 
+\end{lemma}
+\begin{proof}
+  By Theorem~\ref{th:donsker} it suffices to show that the bracketing integral is finite.
+  By Lemma~\ref{aa:mean:l:br} it holds 
+  \begin{gather*}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}, L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+      \frac{1}{\varepsilon}
+    \right)^2
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \,.
+  \end{gather*}
+Thus
+\begin{align*}
+    J
+    _{[\,]}
+    (
+    1
+    ,
+    \mathcal{F}
+    ,
+    L_2(\P)
+    )
+    \ 
+    \lesssim
+    \ 
+    \int_0^1
+    \sqrt{
+    -\log(\varepsilon)
+  }
+    \,
+    d\varepsilon
+    \ 
+    \le
+    \ 
+    1
+    \ 
+    +
+    \ 
+    \int_0^1
+    -\log(\varepsilon)
+    \,
+    d\varepsilon
+    \ 
+    =
+    \ 
+    2
+    \,.
+\end{align*}
+\end{proof}

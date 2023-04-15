@@ -122,3 +122,183 @@ together with Markov's inequality. There are also Bernstein-like inequalities fo
   \end{align*}
 \end{proof}
 
+\begin{lemma}
+  \label{aa:r3:lemma:1}
+  Let
+$(\varepsilon_N)\subset(0,1]$
+be 
+a decreasing sequence
+with $\varepsilon_N\to 0$ for $N\to\infty$ and
+$(\mathcal{F}_N)$
+a sequence of (measurable) function classes
+with envelope functions
+$(F_N)$,
+satisfying 
+for some $k<2$
+\begin{gather*}
+\norm{F_N}_{L^2(\P)}
+\ 
+\le
+\ 
+\varepsilon_N
+\quad
+\text{and}
+\quad
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P_{X}))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}
+  \ 
+  N\in\mathbb{N}
+  \,.
+\end{gather*}
+Then
+\begin{gather*}
+  J_{[\,]}(
+\norm{F_N}_{L^2(\P)}
+,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+  \to 0
+  \quad
+  \text{and}
+  \quad
+  \norm{\G_N}^*_{\mathcal{F}_N\cdot\mathcal{F}}\overset{\P}{\to}0
+  \qquad
+  \text{for}\ 
+  N\to\infty
+  \,,
+\end{gather*}
+where $\mathcal{F}$ is defined in \eqref{F_g}.
+\end{lemma}
+\begin{proof}
+  By assumption
+  and Lemma~\ref{aa:mean:l:br} it holds
+for some $k<2$
+\begin{gather*}
+\norm{F_N}_{L^2(\P)}
+\ 
+\le
+\ 
+\varepsilon_N
+\quad
+\text{and}
+\quad
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N,\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}
+  \ 
+  N\in\mathbb{N}
+  \,,
+\end{gather*}
+and
+  \begin{gather*}
+    N_{[\,]}
+    (
+    \varepsilon
+    ,
+    \mathcal{F}, L^2(\P))
+    \ 
+    \lesssim
+    \ 
+    \left( 
+      \frac{1}{\varepsilon}
+    \right)^2
+    \qquad
+    \text{for all}
+    \ 
+    \varepsilon>0
+    \,.
+  \end{gather*}
+  Since $\mathcal{F}_N$ and $\mathcal{F}$ have envelope functions smaller 1, we can apply Lemma~\ref{lem_prod_br} to get
+  \begin{gather*}
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  +
+  \log
+  (1/\varepsilon)
+  \ 
+  \lesssim
+  \ 
+  \left( 
+  \frac{1}{\varepsilon}
+  \right)^k
+  \quad
+  \text{for all}\ 
+  \varepsilon>0
+  \,.
+  \end{gather*}
+  Since 
+  $k/2\in(0,1)$
+  it holds
+\begin{align*}
+  J_{[\,]}(
+\norm{F_N}_{L^2(\P)}
+,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+  &
+  \ 
+=
+  \ 
+\int_0^{
+\norm{F_N}_{L^2(\P)}
+}
+\sqrt{
+  \log
+  N_{[\,]}(\varepsilon,\mathcal{F}_N\cdot\mathcal{F},\mathrm{L}_2(\P))
+}
+\,d\varepsilon
+\\
+&
+\ 
+\lesssim
+\ 
+\int_0^{
+  \varepsilon_N
+}
+  \left( 
+  \frac{1}{\varepsilon}
+\right)^{k/2}
+\,d\varepsilon
+\\
+&
+\ 
+=
+\ 
+\frac{
+\varepsilon_N^{1-k/2}
+}{1-k/2}
+\ 
+\to 0
+\ 
+\qquad
+\text{for}
+\ 
+N\to\infty
+\,.
+\end{align*}
+The second statement follows from Lemma~\ref{markov_max_lemma}
+for 
+$\mathcal{H}_N:=\mathcal{F}_N\cdot\mathcal{F}$ and
+$H_N:=F_N$.
+\end{proof}
+
+
+
+
