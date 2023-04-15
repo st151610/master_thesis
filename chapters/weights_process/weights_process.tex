@@ -364,3 +364,67 @@ To this end, we define the (empirical) weights function
   This follows from Theorem~\ref{dual_solution_th}
   and the construction of the weights process.
 \end{proof}
+Next, we want to simplify the weights process in the spirit of Lemma~\ref{lem:simple_weights}.
+In other words, we want to become independent of the index $i$ in $w_i^\dagger$. This will be helpful in the subsequent analysis.
+To this end, we define the (empirical) simplified weights function
+\begin{align*}
+ w_0\ \colon\
+ &
+ \left( 
+  \R^d\times \R^{d\cdot N}
+ \right)
+  \times
+  \left( 
+    \R\times \R^N
+  \right)
+  \to
+  [0,\infty)
+  \\
+ &
+  \left( 
+  (x,x_1,\ldots,x_N),(\lambda_0,\lambda)
+  \right)
+  \ 
+  \mapsto
+  \ 
+  \left[ 
+  (\varphi^{'})^{-1}
+  \left( 
+    \lambda_0
+    +
+    \inner
+    {B(x,x_1,\ldots,x_N)}
+    {\lambda}
+  \right)
+\right]^+
+\,.
+\end{align*}
+\begin{definition}
+  Let 
+  $
+\left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
+  $
+  be the dual solution of Lemma~\ref{lem:meas_dual_sol}.
+  We define the simplified weights process 
+  $\left\{ w_0^\dagger(x) \,|\, x\in\R^d\right\}$
+  by
+  \begin{align*}
+    w_0^\dagger(x) 
+    \ 
+    :=
+    \ 
+    w_0
+    \left( 
+    \left( 
+    x,X_1,\ldots,X_N,
+    \right)
+    ,
+\left( \lambda_0^\dagger,\lambda^\dagger \right)
+    \right)
+    \qquad
+    \text{for all}\ 
+    x\in\R^d
+    \,.
+  \end{align*}
+\end{definition}
+

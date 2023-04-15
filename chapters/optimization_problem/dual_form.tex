@@ -768,6 +768,7 @@ Thus we may set them to an arbitrary value.
 \end{remark}
 As an example for the interested reader and as transition to the next section, we show how $\rho$ is linked to the first constraint of Problem~\ref{bw:1:primal}. 
 \begin{lemma}
+  \label{lem:simple_weights}
   Let 
 $
 (\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
@@ -787,9 +788,36 @@ It holds
   \right]^+
 \qquad
   \text{for all}\ i\in \left\{ 1,\ldots,N \right\}
+  \,.
 \end{align*}
-$
-$
+Furthermore, the unique optimal solutions to Problem~\ref{bw:1:primal} are
+\begin{align*}
+  w^\dagger_i
+  \ 
+  :=
+  \ 
+  \left[
+  (
+  \varphi^{'}
+  )^{-1}
+  \left(
+\lambda_0^\dagger
+  \ 
++
+  \ 
+\inner
+{B(X_i)}
+{
+\lambda^{\dagger}
+}
+  \right)
+  \right]^+
+  \qquad
+  \text{for all}\ 
+  i\in
+  \left\{ 1,\ldots,n \right\}
+  \,.
+\end{align*}
 \end{lemma}
 \begin{proof}
   For $i>n$ this is clear.
