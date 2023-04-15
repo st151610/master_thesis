@@ -428,3 +428,59 @@ To this end, we define the (empirical) simplified weights function
   \end{align*}
 \end{definition}
 
+\begin{lemma}
+  It holds $w_0^\dagger(X)\in L^\infty(\P)$.
+\end{lemma}
+\begin{proof}
+  By Lemma~\ref{weights_l_inf},
+  the monotonicity of 
+  $
+  (\varphi^{'})^{-1}
+  $
+  and $\rho^i\ge 0$ for $i\le n$,
+  it holds
+  \begin{align*}
+    w_0^\dagger(X) 
+    &
+    \ 
+    =
+    \ 
+  \left[ 
+  (\varphi^{'})^{-1}
+  \left( 
+    \lambda_0^\dagger
+    +
+    \inner
+    {B(X)}
+    {\lambda^\dagger}
+  \right)
+\right]^+
+\\
+&
+\ 
+\le
+\ 
+  \left[ 
+  (\varphi^{'})^{-1}
+  \left( 
+    \rho_i\dagger
+    +
+    \lambda_0^\dagger
+    +
+    \inner
+    {B(X)}
+    {\lambda^\dagger}
+  \right)
+\right]^+
+\ 
+\le
+\ 
+\left| 
+    w_i^\dagger(X) 
+\right|
+\ 
+\in
+\ 
+L^\infty(\P)
+  \end{align*}
+\end{proof}

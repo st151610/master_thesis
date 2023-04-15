@@ -45,11 +45,21 @@
 \contentsline {subsubsection}{\nonumberline Organisation}{57}{subsubsection*.35}%
 \contentsline {subsubsection}{\nonumberline Next Step}{57}{subsubsection*.37}%
 \contentsline {section}{\numberline {6.4}Non-binary Treatment}{57}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Tools and Assumptions}{57}{subsection.6.4.1}%
-\contentsline {section}{\numberline {6.5}Application to Plug In Estimators}{79}{section.6.5}%
+\contentsline {subsubsection}{\nonumberline Conjecture}{58}{subsubsection*.39}%
+\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{58}{subsubsection*.41}%
+\contentsline {subsubsection}{\nonumberline Organisation}{58}{subsubsection*.43}%
+\contentsline {subsubsection}{\nonumberline Next Step}{58}{subsubsection*.45}%
+\contentsline {section}{\numberline {6.5}Different Basis Functions}{58}{section.6.5}%
+\contentsline {subsubsection}{\nonumberline Motivation}{58}{subsubsection*.47}%
+\contentsline {subsubsection}{\nonumberline Conjecture}{58}{subsubsection*.49}%
+\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{58}{subsubsection*.51}%
+\contentsline {subsubsection}{\nonumberline Organisation}{58}{subsubsection*.53}%
+\contentsline {subsubsection}{\nonumberline Next Step}{58}{subsubsection*.55}%
+\contentsline {subsection}{\numberline {6.5.1}Tools and Assumptions}{58}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.6}Application to Plug In Estimators}{80}{section.6.6}%
 \contentsline {chapter}{\numberline {7}Convex Analysis}{81}{chapter.7}%
 \contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{81}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{88}{section.7.2}%
-\contentsline {chapter}{References}{93}{chapter*.53}%
-\contentsline {chapter}{Index}{95}{chapter*.53}%
+\contentsline {chapter}{References}{93}{chapter*.71}%
+\contentsline {chapter}{Index}{95}{chapter*.71}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

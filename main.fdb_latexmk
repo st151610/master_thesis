@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1681564237 "main.aux" "main.bbl" "main" 1681564248 0
-  "./literature.bib" 1681564227 74834 8f92ab96116d07200270f6697bb35556 ""
+["bibtex main"] 1681566567 "main.aux" "main.bbl" "main" 1681566907 0
+  "./literature.bib" 1681564573 75465 0935ae4c19a39caf28c3123da4f5f944 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1680514707 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1681564247 40667 b90420b619d32d5312c08426456fd151 "pdflatex"
+  "main.aux" 1681566905 42402 223d76609a096b0269543fc46560a4b7 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1681563116 "main.idx" "main.ind" "main" 1681564248 0
-  "main.idx" 1681564246 570 bde49ae0ec50c1917c57df759a11d90e "pdflatex"
+["makeindex main.idx"] 1681563116 "main.idx" "main.ind" "main" 1681566907 0
+  "main.idx" 1681566905 570 bde49ae0ec50c1917c57df759a11d90e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1681564237 "main.tex" "main.pdf" "main" 1681564248 0
+["pdflatex"] 1681566898 "main.tex" "main.pdf" "main" 1681566907 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1680514707 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1680514707 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1680514707 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -253,10 +253,11 @@
   "chapters/conv_mean/tools.tex" 1681545856 604 5525be2bb7fbfa103bda55b6a8b8b377 ""
   "chapters/convex_analysis/primer_new.tex" 1681306886 23116 4afbd3aca9253f6e1871ff131b65c38b ""
   "chapters/convex_analysis/ts_3.tex" 1681540361 12939 5d799273c1498c5f829d7d22cc5d86ca ""
-  "chapters/discussion/bootstrap.tex" 1681564191 1132 09d90efbc9bc998df760c8b4367bbc32 ""
-  "chapters/discussion/cont_treat.tex" 1681545856 214 4fe646f35c26b292ef7d822ca25bb211 ""
+  "chapters/discussion/bootstrap.tex" 1681564564 1134 494a79a4ecd09881f4788f8b484fbb29 ""
+  "chapters/discussion/cont_treat.tex" 1681564714 385 c965030ef4bd615fa5af2f14273164e0 ""
+  "chapters/discussion/different_basis.tex" 1681564829 145 4c0757ccfd53fb6c9369f8624166f799 ""
   "chapters/discussion/func_delt_m.tex" 1681563530 1441 81a4e17a881497b9a8b81628fdfeae47 ""
-  "chapters/discussion/main.tex" 1681545856 306 8d9538472c574474cd4e264ee9f121d5 ""
+  "chapters/discussion/main.tex" 1681564798 392 25ff6c4a80ddc1003af7b16a25345dce ""
   "chapters/discussion/matching.tex" 1681562550 1296 fed9ba9707a0b90c5c8143a129424a1c ""
   "chapters/intro_for_all.tex" 1681562609 15138 cede05e269710fcdbe88038b3bdf554b ""
   "chapters/optimization_problem/dual_form.tex" 1681553602 14129 422f06a3c26791c95671280a4b8fc0b9 ""
@@ -269,15 +270,15 @@
   "chapters/weights_process/main.tex" 1681302377 1359 3140bd856df1fe4a2252e3534ed0d10b ""
   "chapters/weights_process/meas_argmax.tex" 1680804454 2783 a45372617aef7d129d9cd860b4ed6e50 ""
   "chapters/weights_process/meas_dual_sol.tex" 1681302009 3433 030438ab4a64026aa5f008b2d342b621 ""
-  "chapters/weights_process/weights_process.tex" 1681554263 6690 6a5025e4b1377b7e8411ecf52bc0907e ""
+  "chapters/weights_process/weights_process.tex" 1681566890 7368 8e7617449b9bb3b4858eb628908d30ae ""
   "final_chapters/aa:mean.tex" 1679489813 37402 5a176fb16ed955d13aefb61a474dc9c4 ""
   "final_chapters/aa:tools.tex" 1681128719 21670 6979630cec49104f6178637a3a624208 ""
-  "main.aux" 1681564247 40667 b90420b619d32d5312c08426456fd151 "pdflatex"
-  "main.bbl" 1681564237 4197 fe72328816a763011685ea25a98ab283 "bibtex main"
-  "main.ind" 1681564247 513 ad83bdf490524cebaa3353ad31cfb52d "makeindex main.idx"
-  "main.out" 1681564239 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1681566905 42402 223d76609a096b0269543fc46560a4b7 "pdflatex"
+  "main.bbl" 1681566567 4404 9c277c0af1cba7fc26d03639b733588e "bibtex main"
+  "main.ind" 1681566905 513 ad83bdf490524cebaa3353ad31cfb52d "makeindex main.idx"
+  "main.out" 1681566900 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1681545856 11311 ab5a7629b58ba0caf4b520c2e1114c04 ""
-  "main.toc" 1681564247 4523 c357ecf5b19e1b69bd7c38cc6fb4dee5 "pdflatex"
+  "main.toc" 1681566905 5349 d9c67f1127514363d073ef0a0fc55a41 "pdflatex"
   (generated)
   "main.aux"
   "main.idx"

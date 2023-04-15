@@ -3,46 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: literature.bib
-Warning--I didn't find a database entry for "Barbe95"
-You've used 18 entries,
+Warning--can't use both author and editor fields in Barbe1995
+You've used 19 entries,
             2543 wiz_defined-function locations,
-            692 strings with 7721 characters,
-and the built_in function-call counts, 6681 in all, are:
-= -- 665
-> -- 302
-< -- 8
-+ -- 99
-- -- 95
-* -- 460
-:= -- 1119
-add.period$ -- 58
-call.type$ -- 18
-change.case$ -- 97
-chr.to.int$ -- 18
-cite$ -- 18
-duplicate$ -- 289
-empty$ -- 497
-format.name$ -- 118
-if$ -- 1363
+            698 strings with 7904 characters,
+and the built_in function-call counts, 7036 in all, are:
+= -- 696
+> -- 321
+< -- 9
++ -- 106
+- -- 101
+* -- 490
+:= -- 1178
+add.period$ -- 61
+call.type$ -- 19
+change.case$ -- 102
+chr.to.int$ -- 19
+cite$ -- 20
+duplicate$ -- 305
+empty$ -- 523
+format.name$ -- 125
+if$ -- 1433
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 26
-newline$ -- 93
-num.names$ -- 56
-pop$ -- 104
+missing$ -- 28
+newline$ -- 98
+num.names$ -- 59
+pop$ -- 110
 preamble$ -- 1
-purify$ -- 123
+purify$ -- 130
 quote$ -- 0
-skip$ -- 238
+skip$ -- 250
 stack$ -- 0
-substring$ -- 329
-swap$ -- 38
-text.length$ -- 8
+substring$ -- 337
+swap$ -- 42
+text.length$ -- 9
 text.prefix$ -- 5
 top$ -- 0
-type$ -- 112
-warning$ -- 0
-while$ -- 67
-width$ -- 21
-write$ -- 235
+type$ -- 116
+warning$ -- 1
+while$ -- 70
+width$ -- 22
+write$ -- 249
 (There was 1 warning)
