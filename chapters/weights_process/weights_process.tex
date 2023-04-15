@@ -201,12 +201,6 @@ To this end, we define the (empirical) simplified weights function
     ,
 \left( \lambda_0^\dagger,\lambda^\dagger \right)
     \right)
-    \cdot
-    \mathbf{1}
-    \bigcup_{i=1}^n
-    \left\{ 
-      x=X_k
-    \right\}
     \qquad
     \text{for all}\ 
     x\in\R^d
@@ -234,12 +228,6 @@ To this end, we define the (empirical) simplified weights function
 \end{lemma}
 \begin{proof}
 The proof is as that of Lemma~\ref{lem:weights:meas}.
-Note, that $n$ (defined in ) is 
-$
-\left( 
-\sigma(D_N),\mathcal{B}(\R)
-\right)
-$-measurable.
 \end{proof}
 
 
@@ -253,7 +241,7 @@ $-measurable.
   $
   (\varphi^{'})^{-1}
   $
-  and $\rho^i\ge 0$ for $i\le n$,
+  and $\rho_i\ge 0$ for $i\le n$,
   it holds
   \begin{align*}
     w_0^\dagger(X) 
@@ -511,4 +499,15 @@ L^\infty(\P)
   Lemma~\ref{lem:simple_weights}
   and the construction of the simplified weights process.
 \end{proof}
-
+To avoid notational overload, from now on we write
+\begin{align*}
+  B(x)
+  \ 
+  :=
+  \ 
+  B(x,X_1,\ldots,X_N)
+  \qquad
+  \text{for all}\ 
+  x\in\R^d
+  \,.
+\end{align*}
