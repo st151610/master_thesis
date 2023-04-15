@@ -39,12 +39,17 @@
 \contentsline {subsubsection}{\nonumberline Organisation}{56}{subsubsection*.25}%
 \contentsline {subsubsection}{\nonumberline Next Step}{56}{subsubsection*.27}%
 \contentsline {section}{\numberline {6.3}Bootstrapping}{56}{section.6.3}%
+\contentsline {subsubsection}{\nonumberline Motivation}{56}{subsubsection*.29}%
+\contentsline {subsubsection}{\nonumberline Conjecture}{57}{subsubsection*.31}%
+\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{57}{subsubsection*.33}%
+\contentsline {subsubsection}{\nonumberline Organisation}{57}{subsubsection*.35}%
+\contentsline {subsubsection}{\nonumberline Next Step}{57}{subsubsection*.37}%
 \contentsline {section}{\numberline {6.4}Non-binary Treatment}{57}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}Tools and Assumptions}{57}{subsection.6.4.1}%
 \contentsline {section}{\numberline {6.5}Application to Plug In Estimators}{79}{section.6.5}%
 \contentsline {chapter}{\numberline {7}Convex Analysis}{81}{chapter.7}%
 \contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{81}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{88}{section.7.2}%
-\contentsline {chapter}{References}{93}{chapter*.43}%
-\contentsline {chapter}{Index}{95}{chapter*.43}%
+\contentsline {chapter}{References}{93}{chapter*.53}%
+\contentsline {chapter}{Index}{95}{chapter*.53}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

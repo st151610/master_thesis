@@ -5,16 +5,15 @@ Charalambos~D. Aliprantis and Kim~C. Border.
 \newblock {\em Infinite {{Dimensional Analysis}}: {{A Hitchhiker}}'s {{Guide}}}.
 \newblock {Springer Science \& Business Media}, May 2007.
 
-\bibitem[BB95]{Barbe95}
-Philippe~[Verfasser/in] Barbe and Patrice~[Verfasser/in] Bertail, editors.
-\newblock {\em The weighted bootstrap}.
-\newblock Lecture notes in statistics ; 98. Springer, New York ; Heidelberg [u.a.], 1995.
-\newblock Literaturverz. S. 199 - 214.
-
 \bibitem[CYZ16]{Chan2016}
 Kwun Chuen~Gary Chan, Sheung Chi~Phillip Yam, and Zheng Zhang.
 \newblock Globally {{Efficient Non-Parametric Inference}} of {{Average Treatment Effects}} by {{Empirical Balancing Calibration Weighting}}.
 \newblock {\em Journal of the Royal Statistical Society Series B: Statistical Methodology}, 78(3):673--700, June 2016.
+
+\bibitem[ET94]{Efron1994}
+Bradley Efron and R.~J. Tibshirani.
+\newblock {\em An {{Introduction}} to the {{Bootstrap}}}.
+\newblock {CRC Press}, May 1994.
 
 \bibitem[GKKW02]{Gyorfi2002}
 L{\'a}szl{\'o} Gy{\"o}rfi, Michael Kohler, Adam Krzy{\.z}ak, and Harro Walk.

@@ -3,36 +3,33 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: literature.bib
-Warning--I'm ignoring Barbe95's extra "note" field
---line 42 of file literature.bib
-Warning--I'm ignoring Barbe95's extra "note" field
---line 43 of file literature.bib
+Warning--I didn't find a database entry for "Barbe95"
 You've used 18 entries,
             2543 wiz_defined-function locations,
-            696 strings with 7869 characters,
-and the built_in function-call counts, 6711 in all, are:
-= -- 672
-> -- 303
+            692 strings with 7721 characters,
+and the built_in function-call counts, 6681 in all, are:
+= -- 665
+> -- 302
 < -- 8
 + -- 99
 - -- 95
-* -- 461
-:= -- 1126
-add.period$ -- 60
+* -- 460
+:= -- 1119
+add.period$ -- 58
 call.type$ -- 18
 change.case$ -- 97
 chr.to.int$ -- 18
 cite$ -- 18
-duplicate$ -- 290
-empty$ -- 499
+duplicate$ -- 289
+empty$ -- 497
 format.name$ -- 118
-if$ -- 1372
+if$ -- 1363
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 25
-newline$ -- 94
-num.names$ -- 57
-pop$ -- 99
+missing$ -- 26
+newline$ -- 93
+num.names$ -- 56
+pop$ -- 104
 preamble$ -- 1
 purify$ -- 123
 quote$ -- 0
@@ -47,5 +44,5 @@ type$ -- 112
 warning$ -- 0
 while$ -- 67
 width$ -- 21
-write$ -- 239
-(There were 2 warnings)
+write$ -- 235
+(There was 1 warning)
