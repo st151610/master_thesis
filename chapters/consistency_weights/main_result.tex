@@ -1,16 +1,27 @@
 \begin{theorem}
   If Problem~\ref{dual} is feasible it holds
-  $w_0^\dagger(X)\overset{\P}{\to}1/\pi(X)$.
+  \begin{align*}
+  w_0^\dagger(X_i)
+  \ 
+  \overset{\P}{\to}
+  \ 
+  1/\pi(X_i)
+  \qquad
+  \text{for all}\ 
+  i\in \left\{ 1,\ldots,n \right\}
+  \,.
+  \end{align*}
 \end{theorem}
 \begin{proof}
   It holds
+  by Lemma~\ref{lem:simple_weights}
   \begin{align*}
     \left| 
-    w_0^\dagger(X)
+    w_0^\dagger(X_i)
     \ 
     -
     \ 
-    \frac{1}{\pi(X)}
+    \frac{1}{\pi(X_i)}
     \right|
     \
     \le
@@ -20,63 +31,100 @@
       (\varphi^{'})^{-1}
       ,
       \left| 
+      \rho_i^\dagger
+      +
+      \lambda_0^\dagger
+      +
       \sum_{k=1}^{N} 
-      B_k(X)\cdot\lambda_k^\dagger-
+      B_k(X_i)\cdot\lambda_k^\dagger
+      \ 
+      -
+      \ 
       \varphi^{'}
-      \left( \frac{1}{\pi(X)} \right)
+      \left( \frac{1}{\pi(X_i)} \right)
       \right|
     \right)
-    \
-    +
-    \
-    \frac{1}{\pi(X)}
-    \mathbf{1}
-    \bigcap_{k=1}^N
-    \left\{ X\neq X_k \right\}
     \,.
   \end{align*}
   Since
   \begin{align*}
+      &
       \left| 
-      \sum_{k=1}^{N} 
-      B_k(X)\cdot\lambda_k^\dagger-
-      \varphi^{'}
-      \left( \frac{1}{\pi(X)} \right)
-      \right|
-      \le
-      \norm{\lambda^*-\lambda^\dagger}_2
+      \rho_i^\dagger
       +
-      \left| 
+      \lambda_0^\dagger
+      +
       \sum_{k=1}^{N} 
-      B_k(X)\cdot
-      \varphi^{'}
-      \left( \frac{1}{\pi(X_k)} \right)
-      -
+      B_k(X_i)\cdot\lambda_k^\dagger-
       \varphi^{'}
       \left( \frac{1}{\pi(X)} \right)
       \right|
       \\
-      \to 0
+      &
+      \ 
+      \le
+      \ 
+      \norm{
+        (\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
+        -
+        (0_N,0,\lambda^*)
+      }_2
+      \ 
+      +
+      \ 
+      \left| 
+      \sum_{k=1}^{N} 
+      B_k(X_i)\cdot
+      \varphi^{'}
+      \left( \frac{1}{\pi(X_k)} \right)
+      -
+      \varphi^{'}
+      \left( \frac{1}{\pi(X_i)} \right)
+      \right|
+      \,,
+  \end{align*}
+  \begin{align*}
+      \norm{
+        (\rho^\dagger,\lambda_0^\dagger,\lambda^\dagger)
+        -
+        (0_N,0,\lambda^*)
+      }_2
+      \ 
+      \overset{\P}{\to}
+      \ 
+      0
+      \qquad
+      \text{by Theorem~\ref{th:cons_dual}
+      }
+      \,,
   \end{align*}
   and
   \begin{align*}
-    \P
-    \left[ 
-      X\neq X_k \ \text{for all }
-      k\in \left\{ 1,\ldots,N \right\}
-    \right]
-    =
-    \P \left[ X\neq X_1 \right]^N
-    \to
-    0
+      \left| 
+      \sum_{k=1}^{N} 
+      B_k(X_i)\cdot
+      \varphi^{'}
+      \left( \frac{1}{\pi(X_k)} \right)
+      \ 
+      -
+      \ 
+      \varphi^{'}
+      \left( \frac{1}{\pi(X_i)} \right)
+      \right|
+      \ 
+      \to
+      \ 
+      0
+      \qquad
+      \text{by Lemma~\ref{lem:basis_2}.\textit{(i)}
+      }
+      \,,
   \end{align*}
-  by Slutzky's Theorem
-  \begin{align*}
-    \frac{1}{\pi(X)}
-    \cdot
-    \mathbf{1}
-    \bigcap_{k=1}^N
-    \left\{ X\neq X_k \right\}
-    \overset{\P}{\to}0
-  \end{align*}
+  the statement follows from Slutzky's theorem
+  and the uniform continuity of 
+  $
+  \left( 
+      \varphi^{'}
+    \right)^{-1}
+  $.
 \end{proof}

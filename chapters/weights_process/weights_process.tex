@@ -144,226 +144,6 @@ To this end, we define the (empirical) weights function
   $w_i^\dagger(X)\in L^\infty(\P)$
   for all $i\in \left\{ 1,\ldots,N \right\}$.
 \end{proof}
-\begin{lemma}
-  \label{w.Z=0}
- Let 
- $Z\in L^1(\P)$
-  be a random variable that is independent of $D_N=(T_i,X_i)_{i\in \left\{
-    1,\ldots,N
-  \right\}}$ 
-  with
-  $
-\E
-\left[
-  Z
-  \,
-  |
-  \, 
-  X
-\right]
-= 0
-  $
-  almost surely.
-  It holds
-  \begin{gather*}
-  \E
-  \left[
-    w_i^\dagger(X)
-  \cdot Z
-  \right]
-  =0
-  \qquad
-  \text{for all}
-  \ 
-  i\in \left\{ 1,\ldots,N \right\}
-  \,.
-  \end{gather*}
-\end{lemma}
-\begin{proof}
-  We write
-  \begin{gather*}
-    w_i^\dagger(X)
-  \ 
-  =
-  \ 
-  w^\dagger(X)
-  \end{gather*}
-  and ignore the index $i$.
-  By Lemma~\ref{weights_l_inf} it holds
-  \begin{gather}
-    \label{9876}
-    \norm{
-  w^\dagger(X)\cdot Z
-    }_{L^1(\P)}
-    \ 
-  \le
-    \ 
-  \norm{w^\dagger(X)}_{L^\infty(\P)}
-  \norm{Z}_{L^1(\P)}
-  \ 
-  <
-  \ 
-  \infty
-  \,.
-  \end{gather}
-  By 
-  \eqref{9876},
-  $Z\perp D_N$
-  and
-  $
-\E
-\left[
-  Z
-  \,
-  |
-  \, 
-  X
-\right]
-= 0
-  $
-  almost surely
-  it holds 
-  \begin{align*}
-    \E
-  \left[
-  w^\dagger(X)
-  \cdot
-  Z
-  \,
-  |
-  \,
-  D_N,X
-  \right]
-  &
-  \ 
-  =
-  \ 
-  w^\dagger(X)
-  \cdot
-  \E
-  \left[
-  Z
-  \,
-  |
-  \,
-  D_N,X
-  \right]
-  \\
-  &
-  \ 
-  =
-  \ 
-  w^\dagger(X)
-  \cdot
-  \E
-  \left[
-  Z
-  \,
-  |
-  \,
-  X
-  \right]
-  \
-  =
-  \ 
-  0
-  \qquad
-  \text{almost surely.}
-  \end{align*}
-  Note, that $w^\dagger(X)$ is 
-  $
-  \left(
-  \sigma(D_N,X),\mathcal{B}(\R)
-  \right)
-  $-measurable.  
-  Thus
-  \begin{gather*}
-    \E
-    \left[
-  w^\dagger(X)
-  \cdot
-  Z
-  \,
-    \right]
-    \ 
-    =
-    \ 
-    \E
-    \left[
- \E
-  \left[
-  w^\dagger(X)
-  \cdot
-  Z
-  \,
-  |
-  \,
-  D_N,X
-  \right]
-    \right]
-    \ 
-    =
-    \ 
-    0
-    \,.
-     \end{gather*}
-\end{proof}
-
-\begin{theorem}
-  \label{th:weights_constr}
-  The weights process satisfies the constraints
-  of Problem~\ref{bw:1:primal}, that is,
-  \begin{enumerate}[label=(\roman*)]
-    \item
-      $
-      T_i\cdot w_i^\dagger(X_i)
-      \ 
-      \ge
-      \ 
-      0
-      \qquad
-      \text{for all}\ 
-      i\in  \left\{ 1,\ldots,N \right\}
-      $
-    \item
-      $
-      \frac{1}{N}
-      \sum_{i=1}^{N} 
-      T_i\cdot w_i^\dagger(X_i)
-      \ 
-      =
-      \ 
-      1
-      $
-    \item
-      For all $k\in \left\{ 1,\ldots,N \right\}$
-      it holds
-      \begin{align*}
-      \left| 
-      \frac{1}{N}
-      \left( 
-        \sum_{i=1}^{N} 
-      T_i\cdot w_i^\dagger(X_i)
-      \cdot
-        B_k(X_i,X_1,\ldots,X_N)
-        \
-        -
-        \
-        \sum_{i=1}^{N} 
-        B_k(X_i,X_1,\ldots,X_N)
-      \right)
-      \right|
-      \ 
-      \le
-      \ 
-      \delta_k
-      \end{align*}
-  \end{enumerate}
-\end{theorem}
-\begin{proof}
-  This follows from Theorem~\ref{dual_solution_th}
-  and the construction of the weights process.
-\end{proof}
 Next, we want to simplify the weights process in the spirit of Lemma~\ref{lem:simple_weights}.
 In other words, we want to become independent of the index $i$ in $w_i^\dagger$. This will be helpful in the subsequent analysis.
 To this end, we define the (empirical) simplified weights function
@@ -421,14 +201,50 @@ To this end, we define the (empirical) simplified weights function
     ,
 \left( \lambda_0^\dagger,\lambda^\dagger \right)
     \right)
+    \cdot
+    \mathbf{1}
+    \bigcup_{i=1}^n
+    \left\{ 
+      x=X_k
+    \right\}
     \qquad
     \text{for all}\ 
     x\in\R^d
     \,.
   \end{align*}
 \end{definition}
+\begin{lemma}
+  \label{lem:weights:meas:0}
+  \quad
+  \begin{enumerate}[label=(\roman*)]
+\item
+  $w_0^\dagger(\cdot)(\omega)$ is 
+  $\left(
+    \mathcal{B}(\R^d),\mathcal{B}(\R^N)
+  \right)$-measurable
+  and
+  constant on each cell 
+  $A_N\in\mathcal{P}_N$
+  for all $\omega\in\Omega$. 
+\item
+  $w_0^\dagger(X)$ is $\left(
+    \sigma(X,D_N),\mathcal{B}(\R^N)
+  \right)$-measurable. 
+  \end{enumerate}
+\end{lemma}
+\begin{proof}
+The proof is as that of Lemma~\ref{lem:weights:meas}.
+Note, that $n$ (defined in ) is 
+$
+\left( 
+\sigma(D_N),\mathcal{B}(\R)
+\right)
+$-measurable.
+\end{proof}
+
 
 \begin{lemma}
+  \label{weights_0_l_inf}
   It holds $w_0^\dagger(X)\in L^\infty(\P)$.
 \end{lemma}
 \begin{proof}
@@ -443,7 +259,7 @@ To this end, we define the (empirical) simplified weights function
     w_0^\dagger(X) 
     &
     \ 
-    =
+    \le
     \ 
   \left[ 
   (\varphi^{'})^{-1}
@@ -463,7 +279,7 @@ To this end, we define the (empirical) simplified weights function
   \left[ 
   (\varphi^{'})^{-1}
   \left( 
-    \rho_i\dagger
+    \rho_i^\dagger
     +
     \lambda_0^\dagger
     +
@@ -484,3 +300,215 @@ To this end, we define the (empirical) simplified weights function
 L^\infty(\P)
   \end{align*}
 \end{proof}
+\begin{lemma}
+  \label{w.Z=0}
+ Let 
+ $Z\in L^1(\P)$
+  be a random variable that is independent of $D_N=(T_i,X_i)_{i\in \left\{
+    1,\ldots,N
+  \right\}}$ 
+  with
+  $
+\E
+\left[
+  Z
+  \,
+  |
+  \, 
+  X
+\right]
+= 0
+  $
+  almost surely.
+  It holds
+  \begin{gather*}
+  \E
+  \left[
+    w_0^\dagger(X)
+  \cdot Z
+  \right]
+  \ 
+  =
+  \ 
+  0
+  \,.
+  \end{gather*}
+\end{lemma}
+\begin{proof}
+  By Lemma~\ref{weights_0_l_inf} it holds
+  \begin{gather}
+    \label{9876}
+    \norm{
+  w_0^\dagger(X)\cdot Z
+    }_{L^1(\P)}
+    \ 
+  \le
+    \ 
+  \norm{w_0^\dagger(X)}_{L^\infty(\P)}
+  \norm{Z}_{L^1(\P)}
+  \ 
+  <
+  \ 
+  \infty
+  \,.
+  \end{gather}
+  By 
+  \eqref{9876},
+  $Z\perp D_N$
+  and
+  $
+\E
+\left[
+  Z
+  \,
+  |
+  \, 
+  X
+\right]
+= 0
+  $
+  almost surely
+  it holds 
+  \begin{align*}
+    \E
+  \left[
+  w_0^\dagger(X)
+  \cdot
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+  &
+  \ 
+  =
+  \ 
+  w_0^\dagger(X)
+  \cdot
+  \E
+  \left[
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+  \\
+  &
+  \ 
+  =
+  \ 
+  w_0^\dagger(X)
+  \cdot
+  \E
+  \left[
+  Z
+  \,
+  |
+  \,
+  X
+  \right]
+  \
+  =
+  \ 
+  0
+  \qquad
+  \text{almost surely.}
+  \end{align*}
+  Note, that $w_0^\dagger(X)$ is 
+  $
+  \left(
+  \sigma(D_N,X),\mathcal{B}(\R)
+  \right)
+  $-measurable.  
+  Thus
+  \begin{gather*}
+    \E
+    \left[
+  w_0^\dagger(X)
+  \cdot
+  Z
+  \,
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+ \E
+  \left[
+  w_0^\dagger(X)
+  \cdot
+  Z
+  \,
+  |
+  \,
+  D_N,X
+  \right]
+    \right]
+    \ 
+    =
+    \ 
+    0
+    \,.
+     \end{gather*}
+\end{proof}
+
+\begin{theorem}
+  \label{th:weights_constr}
+  The simplified weights process satisfies the constraints
+  of Problem~\ref{bw:1:primal}, that is,
+  \begin{enumerate}[label=(\roman*)]
+    \item
+      $
+      T_i\cdot w_0^\dagger(X_i)
+      \ 
+      \ge
+      \ 
+      0
+      \qquad
+      \text{for all}\ 
+      i\in  \left\{ 1,\ldots,N \right\}
+      $
+    \item
+      $
+      \frac{1}{N}
+      \sum_{i=1}^{N} 
+      T_i\cdot w_0^\dagger(X_i)
+      \ 
+      =
+      \ 
+      1
+      $
+    \item
+      For all $k\in \left\{ 1,\ldots,N \right\}$
+      it holds
+      \begin{align*}
+      \left| 
+      \frac{1}{N}
+      \left( 
+        \sum_{i=1}^{N} 
+      T_i\cdot w_0^\dagger(X_i)
+      \cdot
+        B_k(X_i,X_1,\ldots,X_N)
+        \
+        -
+        \
+        \sum_{i=1}^{N} 
+        B_k(X_i,X_1,\ldots,X_N)
+      \right)
+      \right|
+      \ 
+      \le
+      \ 
+      \delta_k
+      \end{align*}
+  \end{enumerate}
+\end{theorem}
+\begin{proof}
+  This follows from Theorem~\ref{dual_solution_th},
+  Lemma~\ref{lem:simple_weights}
+  and the construction of the simplified weights process.
+\end{proof}
+
