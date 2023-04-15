@@ -750,8 +750,113 @@ Thus we may set them to 0.
   and
   $\lambda\in\R^N$ to the $N$ box constraints.
 \end{remark}
+As an example for the interested reader and as transition to the next section, we show how $\rho$ is linked to the first constraint of Problem~\ref{bw:1:primal}. 
+\begin{lemma}
+  Let 
+$
+(\rho^\dagger,\lambda_0^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger})
+$
+be the optimale solution to Problem~\ref{dual}.
+It holds
+\begin{align*}
+  \rho_i^\dagger
+  =
+  \left( 
+  \varphi^{'}
+  (0)
+  -
+  \left( 
+    \lambda_0^\dagger + \inner{B(X_i)}{\lambda^\dagger}
+  \right)
+  \right)
+  \cdot
+  \mathbf{1}
+  \left\{ 
+  \varphi^{'}
+  (0)
+  -
+  \left( 
+    \lambda_0^\dagger + \inner{B(X_i)}{\lambda^\dagger}
+  \right)
+  >0
+  \right\}
+  \cdot T_i
+\end{align*}
+$
+  \text{for all}\ i\in \left\{ 1,\ldots,N \right\}
+$
+\end{lemma}
+\begin{proof}
+  By the complementary slackness (see the proof of Theorem~\ref{cv:ts:th}), if $\rho_i^\dagger>0$ it holds
+  \begin{align*}
+    w_i^\dagger
+    \ 
+    =
+    \ 
+    (
+    \varphi^{'}
+    )^{-1}
+\left( 
+  \rho_i^\dagger
+  +
+    \lambda_0^\dagger + \inner{B(X_i)}{\lambda^\dagger}
+\right)
+    \ 
+=
+    \ 
+0
+\,.
+  \end{align*}
+  By Lemma~\ref{lem:obj_f} it follows
+  \begin{align*}
+    \rho_i
+    \ 
+    =
+    \ 
+    \varphi^{'}
+    (0)
+    -
+    \left( 
+    \lambda_0^\dagger + \inner{B(X_i)}{\lambda^\dagger}
+    \right)
+    \,.
+  \end{align*}
+  If on the other hand $\rho_1=0$, then by the complementary slackness it follows
+  \begin{align*}
+    w_i^\dagger
+    \ 
+    =
+    \ 
+    (
+    \varphi^{'}
+    )^{-1}
+\left( 
+    \lambda_0^\dagger + \inner{B(X_i)}{\lambda^\dagger}
+\right)
+    \ 
+\ge 
+    \ 
+0
+\,,
+  \end{align*}
+  and
+  \begin{align*}
+    0
+    \ 
+    \ge
+    \ 
+    \varphi^{'}
+    (0)
+    -
+    \left( 
+    \lambda_0^\dagger + \inner{B(X_i)}{\lambda^\dagger}
+    \right)
+    \,.
+  \end{align*}
+\end{proof}
 \begin{takeaways}
   We derive a dual formulation of Problem~\ref{bw:1:primal} that is easier to analyse.
   Theorem~\ref{dual_solution_th} provides a functional relationship of optimal dual solutions and 
   optimal weights.
+  The dual variables are connected to the constraints of the primal problem.
 \end{takeaways}
