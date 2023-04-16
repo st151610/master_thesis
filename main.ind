@@ -1,18 +1,18 @@
 \begin{theindex}
 
-  \item $B$, vector of basis functions of the covariates, 6, 19
-  \item $D_N$, (random) data set without observed outcome, 5
-  \item $[x]^+$, positive part of $x\in\R$, 12
-  \item $\delta$, (random) constraints vector , 6
+  \item $B$, vector of basis functions of the covariates, 8, 21
+  \item $D_N$, (random) data set without observed outcome, 7
+  \item $[x]^+$, positive part of $x\in\R$, 14
+  \item $\delta$, (random) constraints vector , 8
   \item $\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   , 
-		24
-  \item $\mathrm{aff(\cdot)}$, affine hull, 80
-  \item $\mathrm{ri}(\cdot)$, relative interior, 80
-  \item $\varphi$, objective function of Problem~\ref{bw:1:primal}, 7
-  \item $n$, (random) number of treated units, 6
+		26
+  \item $\mathrm{aff(\cdot)}$, affine hull, 82
+  \item $\mathrm{ri}(\cdot)$, relative interior, 82
+  \item $\varphi$, objective function of Problem~\ref{bw:1:primal}, 9
+  \item $n$, (random) number of treated units, 8
 
   \indexspace
 
-  \item affine set, 80
+  \item affine set, 82
 
 \end{theindex}
