@@ -25,45 +25,46 @@
 \contentsline {subsection}{\numberline {5.4.1}Analysis of $R_1$}{50}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Analysis of $R_2$}{51}{subsection.5.4.2}%
 \contentsline {subsection}{\numberline {5.4.3}Analysis of $R_3$}{52}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}Analysis of $R_4$}{52}{subsection.5.4.4}%
-\contentsline {chapter}{\numberline {6}Discussion and Outlook}{55}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Discussion}{55}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Summary of Assumptions}{55}{subsection.6.1.1}%
-\contentsline {section}{\numberline {6.2}Outlook}{55}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Matching}{55}{subsection.6.2.1}%
-\contentsline {subsubsection}{\nonumberline Conjecture}{55}{subsubsection*.11}%
-\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{55}{subsubsection*.13}%
-\contentsline {subsubsection}{\nonumberline Organisation}{55}{subsubsection*.15}%
-\contentsline {subsubsection}{\nonumberline Next Step}{56}{subsubsection*.17}%
-\contentsline {subsection}{\numberline {6.2.2}Application of the Functional Delta Method}{56}{subsection.6.2.2}%
-\contentsline {subsubsection}{\nonumberline Motivation}{56}{subsubsection*.19}%
-\contentsline {subsubsection}{\nonumberline Conjecture}{56}{subsubsection*.21}%
-\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{56}{subsubsection*.23}%
-\contentsline {subsubsection}{\nonumberline Organisation}{56}{subsubsection*.25}%
-\contentsline {subsubsection}{\nonumberline Next Step}{56}{subsubsection*.27}%
-\contentsline {subsection}{\numberline {6.2.3}Bootstrapping}{56}{subsection.6.2.3}%
-\contentsline {subsubsection}{\nonumberline Motivation}{56}{subsubsection*.29}%
-\contentsline {subsubsection}{\nonumberline Conjecture}{57}{subsubsection*.31}%
-\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{57}{subsubsection*.33}%
-\contentsline {subsubsection}{\nonumberline Organisation}{57}{subsubsection*.35}%
-\contentsline {subsubsection}{\nonumberline Next Step}{57}{subsubsection*.37}%
-\contentsline {subsection}{\numberline {6.2.4}Non-binary Treatment}{57}{subsection.6.2.4}%
-\contentsline {subsubsection}{\nonumberline Motivation}{57}{subsubsection*.39}%
-\contentsline {subsubsection}{\nonumberline Conjecture}{58}{subsubsection*.41}%
-\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{58}{subsubsection*.43}%
-\contentsline {subsubsection}{\nonumberline Organisation}{58}{subsubsection*.45}%
-\contentsline {subsubsection}{\nonumberline Next Step}{58}{subsubsection*.47}%
-\contentsline {subsection}{\numberline {6.2.5}Different Basis Functions}{58}{subsection.6.2.5}%
-\contentsline {subsubsection}{\nonumberline Motivation}{58}{subsubsection*.49}%
-\contentsline {subsubsection}{\nonumberline Conjecture}{58}{subsubsection*.51}%
-\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{58}{subsubsection*.53}%
-\contentsline {subsubsection}{\nonumberline Organisation}{58}{subsubsection*.55}%
-\contentsline {subsubsection}{\nonumberline Next Step}{58}{subsubsection*.57}%
-\contentsline {subsection}{\numberline {6.2.6}Tools and Assumptions}{58}{subsection.6.2.6}%
-\contentsline {section}{\numberline {6.3}Application to Plug In Estimators}{80}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Convex Analysis}{81}{chapter.7}%
-\contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{81}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{88}{section.7.2}%
-\contentsline {chapter}{References}{93}{chapter*.73}%
-\contentsline {chapter}{Index}{95}{chapter*.73}%
+\contentsline {subsection}{\numberline {5.4.4}Analysis of $R_4$}{53}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Proof of Theorem\nobreakspace {}\ref {th:main}}{55}{subsection.5.4.5}%
+\contentsline {chapter}{\numberline {6}Discussion and Outlook}{57}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Discussion}{57}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Summary of Assumptions}{57}{subsection.6.1.1}%
+\contentsline {section}{\numberline {6.2}Outlook}{57}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Matching}{57}{subsection.6.2.1}%
+\contentsline {subsubsection}{\nonumberline Conjecture}{57}{subsubsection*.11}%
+\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{57}{subsubsection*.13}%
+\contentsline {subsubsection}{\nonumberline Organisation}{57}{subsubsection*.15}%
+\contentsline {subsubsection}{\nonumberline Next Step}{58}{subsubsection*.17}%
+\contentsline {subsection}{\numberline {6.2.2}Application of the Functional Delta Method}{58}{subsection.6.2.2}%
+\contentsline {subsubsection}{\nonumberline Motivation}{58}{subsubsection*.19}%
+\contentsline {subsubsection}{\nonumberline Conjecture}{58}{subsubsection*.21}%
+\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{58}{subsubsection*.23}%
+\contentsline {subsubsection}{\nonumberline Organisation}{58}{subsubsection*.25}%
+\contentsline {subsubsection}{\nonumberline Next Step}{58}{subsubsection*.27}%
+\contentsline {subsection}{\numberline {6.2.3}Bootstrapping}{58}{subsection.6.2.3}%
+\contentsline {subsubsection}{\nonumberline Motivation}{58}{subsubsection*.29}%
+\contentsline {subsubsection}{\nonumberline Conjecture}{59}{subsubsection*.31}%
+\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{59}{subsubsection*.33}%
+\contentsline {subsubsection}{\nonumberline Organisation}{59}{subsubsection*.35}%
+\contentsline {subsubsection}{\nonumberline Next Step}{59}{subsubsection*.37}%
+\contentsline {subsection}{\numberline {6.2.4}Non-binary Treatment}{59}{subsection.6.2.4}%
+\contentsline {subsubsection}{\nonumberline Motivation}{59}{subsubsection*.39}%
+\contentsline {subsubsection}{\nonumberline Conjecture}{60}{subsubsection*.41}%
+\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{60}{subsubsection*.43}%
+\contentsline {subsubsection}{\nonumberline Organisation}{60}{subsubsection*.45}%
+\contentsline {subsubsection}{\nonumberline Next Step}{60}{subsubsection*.47}%
+\contentsline {subsection}{\numberline {6.2.5}Different Basis Functions}{60}{subsection.6.2.5}%
+\contentsline {subsubsection}{\nonumberline Motivation}{60}{subsubsection*.49}%
+\contentsline {subsubsection}{\nonumberline Conjecture}{60}{subsubsection*.51}%
+\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{60}{subsubsection*.53}%
+\contentsline {subsubsection}{\nonumberline Organisation}{60}{subsubsection*.55}%
+\contentsline {subsubsection}{\nonumberline Next Step}{60}{subsubsection*.57}%
+\contentsline {subsection}{\numberline {6.2.6}Tools and Assumptions}{60}{subsection.6.2.6}%
+\contentsline {section}{\numberline {6.3}Application to Plug In Estimators}{82}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Convex Analysis}{83}{chapter.7}%
+\contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{83}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{90}{section.7.2}%
+\contentsline {chapter}{References}{95}{chapter*.73}%
+\contentsline {chapter}{Index}{97}{chapter*.73}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

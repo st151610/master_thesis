@@ -1,0 +1,310 @@
+\begin{lemma}
+  \label{aa:mean:r3:lem:conv}
+  It holds
+  $\sup_{z\in\R}\left| R_3(z) \right|\overset{\P}{\to}0$.
+\end{lemma}
+\begin{proof}
+  Let
+  $z\in\R$.
+    By Lemma~\ref{aa:mean:r3:lem:fz_E}
+  it holds 
+  \begin{align*}
+    &
+  f_z(T,X,Y(T))
+  \ 
+  \in
+  \ 
+  L^1(\P)\,, 
+  \\
+  &
+  f_z(T,X,Y(T))
+  \ 
+  \perp
+  \ 
+  D_N
+  \,,
+  \\
+  \E
+  [
+  &
+  f_z(T,X,Y(T))
+    |X
+  ]
+  \ 
+  =
+  \ 
+  0
+  \,.
+  \end{align*}
+  Thus, 
+  it follows from Lemma~\ref{w.Z=0}
+  \begin{gather*}
+    \E
+    \left[
+      w_0^\dagger(X)
+      \cdot
+      f_z(T,X,Y(T))
+    \right]
+    \ 
+    =
+    \ 
+    0
+    \,.
+  \end{gather*}
+  Since
+  \begin{gather*}
+    \E
+    \left[
+      \frac{T}{\pi(X)}
+      f_z(T,X,Y(T))
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+      \frac{T}{\pi(X)}
+      \left( 
+        \mathbf{1}
+        _{\left\{  Y(T)\,\le\,z \right\}}
+        -
+        F_{Y(1)}(z|X)
+      \right)
+    \right]
+    \  
+    =
+    \ 
+    0
+  \end{gather*}
+  by Lemma~\ref{ps_weights_lemma},
+  it follows
+  \begin{align*}
+    \E
+    \left[ 
+      \left( 
+      w_0^\dagger(X)
+      -
+      \frac{1}{\pi(X)}
+      \right)
+     \cdot
+     f_z(T,X,Y(T))
+    \right]
+    \ 
+    =
+    \ 
+  0
+  \,.
+  \end{align*}
+  But then 
+  \begin{align*}
+    R_3(z)
+    &
+    \ 
+    =
+    \ 
+  \frac{1}
+  {
+\sqrt{N}
+  }
+    \sum_{i=1}^{N} 
+    \left[ 
+    \left( 
+    w_0^\dagger(X_i) 
+    -
+    \frac{1}{\pi(X_i)}
+    \right)
+    T_i
+    \left( 
+    \mathbf{1}{\left\{ Y_i \le z \right\}}
+    -
+  F_{Y(1)}(z|X_i)
+    \right)
+    \right]
+    \ 
+    =
+    \ 
+    \G_N
+    \left( 
+      \left( 
+      w_0^\dagger
+      -
+      \frac{1}{\pi}
+      \right)
+     \cdot
+     f_z
+    \right)
+    \,.
+  \end{align*}
+Let
+  $g^\dagger$ 
+  denote the stochastic process \eqref{ghost_function}, that is,
+\begin{align*}
+  g^\dagger
+  (x)
+  \ 
+  :=
+  \ 
+  \mathbf{1}{
+    \left\{ 
+      \sup_{y\in A_N(x)}
+      \left| 
+      w_0^\dagger(y)
+      -
+      \frac{1}{\pi(y)}
+      \right|
+      \,
+      \le
+      \,
+      \varepsilon_N
+    \right\}
+  }
+  \left( 
+    w_0^\dagger(x)
+      -
+      \frac{1}{\pi(x)}
+  \right)
+  \cdot
+  \mathbf{1}
+  \bigcup_{k=1}^n
+  \left\{ 
+    x=X_k
+  \right\}
+\end{align*}
+for all $x\in\R^d$.
+  If
+  \begin{gather}
+    \label{event}
+    \left| 
+    w_0^\dagger(X_i)- \frac{1}{\pi(X_i)} 
+    \right|
+    \ 
+    \le
+    \ 
+    \varepsilon_N
+    \qquad
+    \text{for all}\ 
+    i\in \left\{ 1,\ldots,n \right\}
+  \end{gather}
+  it holds
+  for all $i\in \left\{ 1,\ldots,N \right\}$
+  \begin{gather*}
+    g^\dagger
+    (X_i)
+    \cdot
+    f_z
+    (T_i,X_i,Y_i(T_i))
+    \ 
+    =
+    \ 
+  \left( 
+      w_0^\dagger(X_i)
+      -
+      \frac{1}{\pi(X_i)}
+  \right)
+    f_z
+    (T_i,X_i,Y_i(T_i))
+      \,.
+  \end{gather*}
+  Thus, if \eqref{event} holds, it follows
+\begin{align*}
+ R_3(z)
+ \ 
+ =
+ \ 
+ \G_N(g^\dagger \cdot f_z)
+ \,.
+\end{align*}
+  It follows
+\begin{align*}
+    \P
+    \left[ 
+      \sup_{z\in\R}
+     | 
+    R_3(z)
+    |
+      \ge
+      \varepsilon
+    \right]
+    &
+    \ 
+    \le
+    \ 
+    \P
+    \left[ 
+      \sup_{z\in\R}
+     | 
+    R_3(z)
+    |
+      \ge
+      \varepsilon
+      \ 
+      \text{and}
+      \ 
+    | 
+    w_0^\dagger(X_i)- 1/\pi(X_i)
+    |
+    \ 
+    \le
+    \ 
+    \varepsilon_N
+    \ \text{for all}\ i\in\{1,\ldots,n\}
+    \right]
+    \\
+    &
+    \quad
+    +
+    \ 
+    \P
+    \left[ 
+    | 
+    w_0^\dagger(X_i)- 1/\pi(X_i)
+    |
+    \ 
+    >
+    \ 
+    \varepsilon_N
+    \ 
+    \ \text{for some}\ i\in\{1,\ldots,n\}
+    \right]
+    \\
+    &
+    \ 
+    \le
+    \ 
+    \P
+    \left[ 
+      \norm{\G_N}^*_{\mathcal{F}_N\cdot\mathcal{F}}
+      \ge
+      \varepsilon
+    \right]
+    \ 
+    +
+    \ 
+    \ 
+    \P
+    \left[ 
+      \max_{i\in \left\{ 1,\ldots,n \right\}}
+    | 
+    w_0^\dagger(X_i)- 1/\pi(X_i)
+    |
+    \ 
+    >
+    \ 
+    \varepsilon_N
+    \right]
+    \\
+    &
+    \ 
+    \to
+    \ 
+    0
+    \,.
+\end{align*}
+The convergence of the first term follows from
+Lemma~\ref{aa:r3:lemma:1}.
+The convergence of the second term follows from
+Theorem~\ref{th:max_weight_cons}.
+
+\end{proof}
+
+

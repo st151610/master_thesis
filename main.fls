@@ -1356,6 +1356,10 @@ INPUT ./chapters/conv_mean/r_4.tex
 INPUT chapters/conv_mean/r_4.tex
 INPUT ./chapters/conv_mean/r_4.tex
 INPUT chapters/conv_mean/r_4.tex
+INPUT ./chapters/conv_mean/proof_final_theo.tex
+INPUT chapters/conv_mean/proof_final_theo.tex
+INPUT ./chapters/conv_mean/proof_final_theo.tex
+INPUT chapters/conv_mean/proof_final_theo.tex
 INPUT ./chapters/discussion/main.tex
 INPUT chapters/discussion/main.tex
 INPUT ./chapters/discussion/main.tex
