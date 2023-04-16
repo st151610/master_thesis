@@ -5,13 +5,13 @@ The first question is about causality, the second about ethics.
 How do causality and ethics reflect on statistics?
 If you have not spent much time thinking about study design, this is a good way to start: 
 As an analyst, ask yourself “Who acted? Who assigned treatment?"
-As researcher -- plan your study accurately. You can ask yourself “How do we act? How do we assign treatment? Can we act?"
+As a researcher -- plan your study accurately. You can ask yourself “How do we act? How do we assign treatment? Can we act?"
 
 Let's say, you gather a sample from a study population, assign treatment (but forget how you did it). Some units get the drug, others don't. Then the statistical analysis shows a strong correlation of treatment and outcome. You hurry to your supervisor. “How was treatment assigned", asks she. “I forgot", says you.
 “How do you know your analysis is correct then?"
-You show her the data and together find out, that all units that received treatment were significantly taller than the rest of the sample.
+You show her the data and together you find out, that all units that received treatment were significantly taller than the rest of the sample.
 After all, is the drug or the height responsible for the change  in outcome?
-You realise, that the data is worthless for answering this question.
+You realise that the data is worthless for answering this question.
 But you are lucky: It is just grass and fertiliser you were studying.
 
 You get a second chance. A new medication needs testing before it enters the market. 
@@ -62,7 +62,7 @@ Instead people keep asking:
 “Had it been better if (20 years ago) I made a different decision?"
 You know what happened but don't know what would have happened.
 On a high-level: If you act, you can't observe at the same time the effect of no action.
-Thus one of the potential outcomes always remains potential.
+Thus, one of the potential outcomes always remains potential.
 Of course there are tricks. You can  wait for the effect of an action to vanish and then observe the outcome (under similar conditions) again.
 This works well when the effect of an action is short term.
 
@@ -146,8 +146,8 @@ In weighting, the hope is to recover \eqref{ipw} from the estimate.
 In practice, however, estimating the propensity score is a difficult task.
 Researchers often compare estimates from different models and check for covariate balance. 
 This is not surprising, because that's what the weights are designed for - minimizing imbalances in the population.
-The poor performance of classical propensity score estimates such as logistic regression - and the insight that the task is to eliminate imbalances -
-led to the development of methods such as the Covariate Balancing Propensity Score \cite{Imai2014a} that tries to 
+The poor performance of classical propensity score estimates, such as logistic regression - and the insight that the task is to eliminate imbalances -
+led to the development of methods, such as the Covariate Balancing Propensity Score \cite{Imai2014a} that tries to 
 estimate the propensity score and balance covariates simultaneously (the name is indicative).
 
 Recently, new balancing frameworks were developed that do not rely on estimates of the propensity score\cite{Hainmueller2012,Zubizarreta2015}.
@@ -206,7 +206,7 @@ They show that with the regression basis of sieve estimators\cite{Newey1997a}, t
 They use this to obtain asymptotic normality of a weighted mean estimate of the expectation of potential outcomes.
 
 One novelty introduced in this thesis is to balance basis functions of partitioning estimates \cite[§4]{Gyorfi2002}.
-I show that this makes the proofs of \cite{Wang2019} easier.
+I show that this simplifies the proofs of \cite{Wang2019}.
 Furthermore, I extend the framework to estimate the distribution function of potential outcomes.
 
 I show, that (under mild assumptions) with the regression basis of partitioning estimates, the weighted mean is asymptotically well behaved in estimating distribution functions.
