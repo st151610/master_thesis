@@ -6,18 +6,18 @@
 \indexentry{$[x]^+$, positive part of $x\in\R$}{14}
 \indexentry{$B$, vector of basis functions of the covariates}{21}
 \indexentry{$\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   }{26}
-\indexentry{convex set}{83}
-\indexentry{affine set}{84}
-\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{84}
-\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{84}
-\indexentry{convex function}{85}
-\indexentry{strictly convex}{85}
-\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{85}
-\indexentry{proper (convex) function}{85}
-\indexentry{subgradient}{85}
-\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{86}
-\indexentry{$\sigma_\omega$, support function}{86}
-\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{86}
-\indexentry{$f^*$, convex conjugate of f}{88}
-\indexentry{conjugate sum rule}{88}
-\indexentry{conjugate chain rule}{88}
+\indexentry{convex set}{61}
+\indexentry{affine set}{62}
+\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{62}
+\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{62}
+\indexentry{convex function}{63}
+\indexentry{strictly convex}{63}
+\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{63}
+\indexentry{proper (convex) function}{63}
+\indexentry{subgradient}{63}
+\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{64}
+\indexentry{$\sigma_\omega$, support function}{64}
+\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{64}
+\indexentry{$f^*$, convex conjugate of f}{66}
+\indexentry{conjugate sum rule}{66}
+\indexentry{conjugate chain rule}{66}
