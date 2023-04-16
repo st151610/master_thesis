@@ -6,6 +6,18 @@
 \indexentry{$[x]^+$, positive part of $x\in\R$}{14}
 \indexentry{$B$, vector of basis functions of the covariates}{21}
 \indexentry{$\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   }{26}
+\indexentry{convex set}{81}
 \indexentry{affine set}{82}
 \indexentry{$\mathrm{aff(\cdot)}$, affine hull}{82}
 \indexentry{$\mathrm{ri}(\cdot)$, relative interior}{82}
+\indexentry{convex function}{83}
+\indexentry{strictly convex}{83}
+\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{83}
+\indexentry{proper (convex) function}{83}
+\indexentry{subgradient}{83}
+\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{84}
+\indexentry{$\sigma_\omega$, support function}{84}
+\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{84}
+\indexentry{$f^*$, convex conjugate of f}{86}
+\indexentry{conjugate sum rule}{86}
+\indexentry{conjugate chain rule}{86}

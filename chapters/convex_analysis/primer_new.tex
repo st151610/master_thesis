@@ -5,6 +5,7 @@ I prove some results that I did not find in the literature, but likely are folkl
 Throughout this section let $n\in\mathbb{N}$.
 \subsection*{Sets}
 A subset $C\subseteq \R^n$ is called \textbf{convex set}, 
+\index{convex set}
 if for all $x,y\in C$ and all $\theta\in [0,1]$,
 we have 
 $
@@ -366,7 +367,9 @@ f
 \to
 \overline{\R}
 $
-is called \textbf{convex function}, if the area above its graph, that is, its epigraph(cf.\cite[§2.4.1]{Mordukhovich2022}), is convex. We shall often use an equivalent definition.
+is called \textbf{convex function},
+\index{convex function}
+if the area above its graph, that is, its epigraph(cf.\cite[§2.4.1]{Mordukhovich2022}), is convex. We shall often use an equivalent definition.
 To this end, 
 a function $f$ is convex if and only if 
 \begin{gather}
@@ -416,9 +419,11 @@ a function $f$ is convex if and only if
   \,.
 \end{gather}
 We call a function \textbf{strictly convex} if the inequality in
+\index{strictly convex}
 \eqref{cv:cf} is strict.
 
 We define the \textbf{domain} $\mathrm{dom}\,f$
+\index{$\mathrm{dom}\,f$, domain of a convex function}
 of a convex function $f$ to be the set where $f$ is finite, that is,
 \begin{gather}
   \mathrm{dom}\,f
@@ -434,9 +439,11 @@ f(x)<\infty
 \end{gather}
 The domain of a convex function is convex. 
 We say that $f$ is a \textbf{proper function} if  $\mathrm{dom}\,f\neq\emptyset$. 
+\index{proper (convex) function}
 
 For any $\overline{x}\in\mathrm{dom}\,f$ we call $x^*\in\R^n$ a 
 \textbf{subgradient} of $f$ at $\overline{x}$ if for all 
+\index{subgradient}
 $x\in\R^n$ it holds
 \begin{gather}
   \inner{x^*}{x-\overline{x}}
@@ -447,6 +454,12 @@ $x\in\R^n$ it holds
   \,.
 \end{gather}
 We denote the collection of all subgradients at $\overline{x}$, that is, the \textbf{subdifferential} of $f$ at $\overline{x}$, as
+\index{
+  $
+\partial f(x)
+  $,
+  subdifferential of $f$ at $x$
+}
 $
 \partial f(\overline{x})
 $.
@@ -472,47 +485,8 @@ and thus
   f(\overline{x})
   \,.
 \end{gather}
-%We call a differentiable function $f$ \textbf{strongly convex} with parameter
-%$m>0$ if for all
-%$x,y\in\mathrm{dom}\,f$ it holds
-%\begin{gather}
-%  f(y)-f(x)
-%  \ 
-%  \ge
-%  \ 
-%  \inner
-%  {
-%  \nabla
-%  f(x)
-%  }
-%  {y-x}
-%  \ 
-%  +
-%  \ 
-%  \frac{m}{2}
-%  \norm{y-x}^2
-%  \,.
-%\end{gather}
-%If $f$ is twice continuously differentiable, then it is strongly 
-%convex with parameter $m>0$ if and only if the matrix
-%\begin{gather}
-%\nabla^2f(x)
-%-m\cdot\mathbf{I}
-%\qquad
-%\text{
-%is positive semi-definite for all
-%}\ 
-%x\in\mathrm{dom}\,f
-%\,,
-%\end{gather}
-% where 
-%$
-%\nabla^2f
-%$
-%is the Hessian Matrix.
-%
-
-\begin{definition*}
+\begin{definition}
+  \index{$\sigma_\omega$, support function}
   Given a nonempty subset 
   $\Omega \subseteq \R^n$,
   we define
@@ -538,10 +512,11 @@ and thus
     \inner{x^*\!}{x}
     \,.
   \end{gather*}
-\end{definition*}
+\end{definition}
 
 
 \begin{definition}
+  \index{$f\square g$, infimal convolution of $f$ and $g$}
   Given functions
   $
     f_i\,:\,
@@ -893,6 +868,7 @@ The proof translates the geometric concept of convex separation to the world of 
 \end{takeaways}
 One important application of convex functions is in optimization.
 There we often analyse a dual problem instead, which relies on the notion of \textbf{convex conjugate} 
+\index{$f^*$, convex conjugate of f}
 $
     f^*:
     \R^n \to \overline{\R}
@@ -913,6 +889,7 @@ $
   ).
   Like in differential calculus, there exist sum and chain rule for computing the convex conjugate.
 \begin{theorem}
+  \index{conjugate sum rule}
   Let
   $
     f,g:
@@ -920,14 +897,14 @@ $
   $
   be proper convex functions 
   and
-  $
+  \begin{align*}
   \text{ri}\left( \text{dom}(f) \right)
   \cap
   \text{ri}\left( \text{dom}(g) \right)
   \neq 
   \emptyset
-  .
-  $
+  \,.
+  \end{align*}
   Then we have the 
   \textbf{
   conjugate sum rule
@@ -967,6 +944,7 @@ $
 % conjugate chain rule %
  %%%%%%%%%%%%%%%%%%%%%%
 \begin{theorem}
+  \index{conjugate chain rule}
   \label{cvxa_conjugate_chain_rule}
   Let 
   $
