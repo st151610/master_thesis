@@ -10,38 +10,38 @@
   \item $\delta$, (random) constraints vector , 8
   \item $\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   , 
 		26
-  \item $\mathrm{aff(\cdot)}$, affine hull, 66
-  \item $\mathrm{dom}\,f$, domain of a convex function, 67
-  \item $\mathrm{ri}(\cdot)$, relative interior, 66
-  \item $\sigma_\omega$, support function, 68
+  \item $\mathrm{aff(\cdot)}$, affine hull, 88
+  \item $\mathrm{dom}\,f$, domain of a convex function, 89
+  \item $\mathrm{ri}(\cdot)$, relative interior, 88
+  \item $\sigma_\omega$, support function, 90
   \item $\varphi$, objective function of Problem~\ref{bw:1:primal}, 9
   \item $e_i$, $i$-the unit vector, 33
-  \item $f\square g$, infimal convolution of $f$ and $g$, 68
-  \item $f^*$, convex conjugate of f, 70
+  \item $f\square g$, infimal convolution of $f$ and $g$, 90
+  \item $f^*$, convex conjugate of f, 92
   \item $n$, (random) number of treated units, 8
 
   \indexspace
 
-  \item    $ \partial f(x)   $,   subdifferential of $f$ at $x$ , 68
+  \item    $ \partial f(x)   $,   subdifferential of $f$ at $x$ , 90
 
   \indexspace
 
-  \item affine set, 66
+  \item affine set, 88
 
   \indexspace
 
-  \item conjugate chain rule, 70
-  \item conjugate sum rule, 70
-  \item convex function, 67
-  \item convex set, 65
+  \item conjugate chain rule, 92
+  \item conjugate sum rule, 92
+  \item convex function, 89
+  \item convex set, 87
 
   \indexspace
 
-  \item proper (convex) function, 67
+  \item proper (convex) function, 89
 
   \indexspace
 
-  \item strictly convex, 67
-  \item subgradient, 67
+  \item strictly convex, 89
+  \item subgradient, 89
 
 \end{theindex}

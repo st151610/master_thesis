@@ -776,7 +776,7 @@ Before we give another example, we fix some useful properties of $f_z$.
     and 
     $f_z(T,X,Y(T))\perp D_N$
     for all $z\in\R$.
-    If also Assumption~\ref{aa:assumption:treatment_str_ign} holds,
+    If \eqref{asu:treatment_asign_str_ing} also holds,
     then 
     for all $z\in\R$
     \begin{gather*}
@@ -902,7 +902,7 @@ Before we give another example, we fix some useful properties of $f_z$.
       \qquad
       \text{almost surely.}
     \end{align*}
-    The third equality is due to Assumption~\ref{aa:assumption:treatment_str_ign}.
+    The third equality is due to \eqref{asu:treatment_asign_str_ing}.
   \end{proof}
 
 Next, consider the stochastic process (indexed over $x\in\R^d$)
@@ -1033,7 +1033,7 @@ Furthermore, let
 The next lemma gives sufficient conditions on the regularity of the inverse propensity score function.
 \begin{lemma}
   \label{lem:br_n_st}
-  Let $(\mathcal{P}_N)$ denote a sequence of qubic partitions
+  Let $(\mathcal{P}_N)$ denote a sequence of partitions
   $\mathcal{P}_N=\left\{ A_{N,1},A_{N,2},\ldots \right\}$ 
   of $\R^d$ 
   with decreasing width $(h_N)\subset(0,1]$ such that $h_N\to 0$ for $N\to\infty$.
@@ -1211,6 +1211,7 @@ applying Lemma~\ref{vdv_coro} finishes the proof.
 \end{remark}
 Next, we show, that a finite covariate space always meets the requirements of Lemma~\ref{lem:br_n_st} - and that a continuous distribution of $X$ never does so.
 \begin{lemma}
+  \label{lem:x_finite}
   Consider the covariate space $\mathcal{X}$. 
   \begin{enumerate}[label=(\roman*)]
     \item

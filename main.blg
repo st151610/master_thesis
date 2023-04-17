@@ -3,10 +3,12 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: literature.bib
+Warning--I didn't find a database entry for "Fan2021"
+Warning--I didn't find a database entry for "Fan"
 Warning--can't use both author and editor fields in Barbe1995
 You've used 23 entries,
             2543 wiz_defined-function locations,
-            722 strings with 8538 characters,
+            726 strings with 8558 characters,
 and the built_in function-call counts, 8451 in all, are:
 = -- 824
 > -- 402
@@ -45,4 +47,4 @@ warning$ -- 1
 while$ -- 82
 width$ -- 26
 write$ -- 295
-(There was 1 warning)
+(There were 3 warnings)

@@ -9,18 +9,18 @@
 \indexentry{$e_i$, $i$-the unit vector}{33}
 \indexentry{$F_{Y(1)}$, distribution function of the potential outcome under treatment}{39}
 \indexentry{$F_{Y(1)}(\cdot | x)$, conditional distribution function of the potential outcome under treatment}{39}
-\indexentry{convex set}{65}
-\indexentry{affine set}{66}
-\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{66}
-\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{66}
-\indexentry{convex function}{67}
-\indexentry{strictly convex}{67}
-\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{67}
-\indexentry{proper (convex) function}{67}
-\indexentry{subgradient}{67}
-\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{68}
-\indexentry{$\sigma_\omega$, support function}{68}
-\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{68}
-\indexentry{$f^*$, convex conjugate of f}{70}
-\indexentry{conjugate sum rule}{70}
-\indexentry{conjugate chain rule}{70}
+\indexentry{convex set}{87}
+\indexentry{affine set}{88}
+\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{88}
+\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{88}
+\indexentry{convex function}{89}
+\indexentry{strictly convex}{89}
+\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{89}
+\indexentry{proper (convex) function}{89}
+\indexentry{subgradient}{89}
+\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{90}
+\indexentry{$\sigma_\omega$, support function}{90}
+\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{90}
+\indexentry{$f^*$, convex conjugate of f}{92}
+\indexentry{conjugate sum rule}{92}
+\indexentry{conjugate chain rule}{92}
