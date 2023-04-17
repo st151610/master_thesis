@@ -6,6 +6,291 @@ For example, $T\in \left\{
 There exists a general notion of propensity score \cite{Hirano2005}.
 There is a need for methods covering this scenarios.
 \subsubsection{Conjecture}
+The framework of \cite{Wang2019} can be extended to for non-binary treatment.
 \subsubsection{Ideas/Brainstorming}
+There are already ideas~\cite{Tubbicke2020,Vegetabile2020}. They try to estimate one set of weights to cover all possible treatments.
+Jose Zubizarreta, one of the authors of \cite{Wang2019}, told me, that he works on a similar (practical) project.
+I think it's better to compute weights for one treatment at a time.
+My idea is:
+For fixed 
+  $ t\in \mathcal{T} $
+  this could be
+  \begin{gather*}
+    \underset{w_1, \ldots, w_n \in \R}{\mathrm{minimize}}
+    \qquad
+    \sum_{i = 1}^{n}
+    d_n(t,T_i)
+    \varphi(w_i)
+  \end{gather*}
+subject to the constraints
+\begin{gather*}
+%    w_i T_i \ge 0,
+%   \qquad 
+%    i = 1, \ldots, n,
+%   \\
+%  \sum_{ i = 1 }^{n}
+%    w_i T_i
+%  =
+%  1
+%  \\
+    \left| 
+      \frac{1}{N} 
+      \left(
+      \sum_{i = 1}^{n} 
+      w_i  
+      \cdot
+    d_n(t,T_i)
+      B_k(X_i)
+      - 
+      \sum_{i=1}^{N}
+      B_k(X_i)
+    \right|
+      \right)
+    \ 
+    \le 
+    \ 
+    \delta_k,
+    \qquad
+    k = 1, \ldots, N
+    \,,
+\end{gather*}
+where
+\begin{gather}
+  d_n(t,s)
+  :=
+  \frac{
+  \mathbf{1} _ 
+  { s \in N_n(t) }
+}{
+  \mathbf{\lambda}[N_n(t)]
+}
+\end{gather}
+where $ N_n(t) $ is a neighborhood of $t$ with 
+$  
+  \mathbf{\lambda}[N_n(t)]
+  \to
+  0
+  $
+  for $ n \to \infty $.
+  In a consistency proof, such as that of Lemma~\ref{lem:conv_dG},
+  we have to control a term like
+\begin{align*}
+     \frac{1}{N}
+     \sum_{i=1}^{N} 
+     \left| 
+     \,
+      1
+     \ 
+      -
+     \ 
+     \frac
+     {
+     d_n(t,T_i)
+     }
+     {
+        h_{T|X}(t,X_i)
+     }
+     \right|
+     \,,
+ \end{align*}
+where 
+$
+        h_{T|X}
+        $ is the generalized propensity score of \cite{Hirano2005}. 
+        We need a result such as
+  \begin{align*}
+    \E
+    \left[ 
+      \frac{
+        d_n(t,T_i)
+      }{
+        h_{T|X}(t,X_i)
+      }
+    \right]
+    =
+    \E
+    \left[ 
+      \frac{
+        \P
+        [ T_i \in N_n(t) | X_i]
+      }
+      {
+        \mathbf{\lambda}[N_n(t)]
+      }
+      \cdot
+      \frac{1}
+      {
+        h_{T|X}(t,X_i)
+      }
+    \right]
+    \to
+    \E
+    \left[ 
+      \frac
+      {
+        h_{T|X}(t,X_i)
+      }
+      {
+        h_{T|X}(t,X_i)
+      }
+    \right]
+    =1
+    \,.
+  \end{align*}
+  A possible error decomposition could be derived from
+\begin{align*}
+  &\left| 
+  \frac{1}{n}
+  \sum_{i=1}^{n} 
+  d_n(t,T_i)
+  w_i
+  Y_i
+  -
+  \E[Y(t)]
+  \right|
+  \\
+  &
+  \ 
+  \le
+  \ 
+  \left|  
+  \frac{1}{n}
+    \sum_{i=1}^{n} 
+    (
+    w_i 
+  d_n(t,T_i)
+    -
+    1
+    )
+    \inner
+    {B(X_i))}
+    { \mathbf{Y}(t) }
+  \right|
+  %%%% 1 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{n}
+    \sum_{i=1}^{n} 
+    (
+    w_i 
+  d_n(t,T_i)
+    -
+    1
+    )
+    \left( 
+    \E[Y(t)| X_i]
+    -
+    \inner
+    {B(X_i))}
+    { \mathbf{Y}(t) }
+    \right)
+  \right|
+  %%%% 2 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{n}
+    \sum_{i=1}^{n} 
+  d_n(t,T_i)
+    \cdot
+    (
+    w_i 
+    -
+    1/
+h_{T|X}(t,X_i)
+    )
+    \left( 
+      Z_i
+    -
+    \E[Y(t)| X_i]
+    \right)
+  \right|
+  %%%% 3 %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{n}
+    \sum_{i=1}^{n} 
+h_{T}(t)
+    /
+h_{T|X}(t,X_i)
+    \left( 
+      Z_i
+    -
+    \E[Y(t)| X_i]
+    \right)
+  \right|
+  %%%% 3a %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{n}
+    \sum_{i=1}^{n} 
+    \left( 
+h_{T}(t)
+-
+  d_n(t,T_i)
+    \right)
+    /
+h_{T|X}(t,X_i)
+    \left( 
+      Z_i
+    -
+    \E[Y(t)| X_i]
+    \right)
+  \right|
+  %%%% 3 b %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{n}
+    \sum_{i=1}^{n} 
+    \left( 
+    \E[Y(t)| X_i]
+    -
+    \E[Y(t)]
+    \right)
+  \right|
+  %%%% 3 c %%%%
+  \\
+  &
+  \qquad
+  +
+  \ 
+  \left|  
+  \frac{1}{n}
+    \sum_{i=1}^{n} 
+    w_i 
+d_n(t,T_i)
+    \left( 
+      Y_i
+    -
+    Z_i
+    \right)
+  \right|
+  \,,
+\end{align*}
+where $ Z_i \sim Y(t)|T_i $.
+
 \subsubsection{Organisation}
+Get familiar with generalized propensity score~\cite{Hirano2005}.
+Try to adapt ideas to make the proofs work.
+Talk to Jose Zubizarreta, one of the authors of \cite{Wang2019}. 
 \subsubsection{Next Step}
+Read~\cite{Hirano2005}.

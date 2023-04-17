@@ -4,45 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: literature.bib
 Warning--can't use both author and editor fields in Barbe1995
-You've used 20 entries,
+You've used 23 entries,
             2543 wiz_defined-function locations,
-            703 strings with 8000 characters,
-and the built_in function-call counts, 7364 in all, are:
-= -- 725
-> -- 340
-< -- 9
-+ -- 112
-- -- 107
-* -- 511
-:= -- 1235
-add.period$ -- 64
-call.type$ -- 20
-change.case$ -- 107
-chr.to.int$ -- 20
-cite$ -- 21
-duplicate$ -- 320
-empty$ -- 548
-format.name$ -- 132
-if$ -- 1499
+            722 strings with 8538 characters,
+and the built_in function-call counts, 8451 in all, are:
+= -- 824
+> -- 402
+< -- 10
++ -- 133
+- -- 128
+* -- 593
+:= -- 1414
+add.period$ -- 71
+call.type$ -- 23
+change.case$ -- 127
+chr.to.int$ -- 23
+cite$ -- 24
+duplicate$ -- 355
+empty$ -- 629
+format.name$ -- 156
+if$ -- 1716
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 30
-newline$ -- 103
-num.names$ -- 62
-pop$ -- 119
+missing$ -- 31
+newline$ -- 117
+num.names$ -- 71
+pop$ -- 145
 preamble$ -- 1
-purify$ -- 137
+purify$ -- 160
 quote$ -- 0
-skip$ -- 262
+skip$ -- 298
 stack$ -- 0
-substring$ -- 344
-swap$ -- 43
-text.length$ -- 9
-text.prefix$ -- 5
+substring$ -- 389
+swap$ -- 46
+text.length$ -- 10
+text.prefix$ -- 6
 top$ -- 0
-type$ -- 120
+type$ -- 144
 warning$ -- 1
-while$ -- 73
-width$ -- 23
-write$ -- 261
+while$ -- 82
+width$ -- 26
+write$ -- 295
 (There was 1 warning)

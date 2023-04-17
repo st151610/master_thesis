@@ -1,3 +1,4 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{GKKW02}
 
 \bibitem[AB07]{Aliprantis2007}
@@ -75,6 +76,10 @@ Paul Tseng and Dimitri~P. Bertsekas.
 \newblock Relaxation {{Methods}} for {{Problems}} with {{Strictly Convex Costs}} and {{Linear Constraints}}.
 \newblock {\em Mathematics of Operations Research}, 16(3):462--481, 1991.
 
+\bibitem[T{\"u}b20]{Tubbicke2020}
+Stefan T{\"u}bbicke.
+\newblock Entropy {{Balancing}} for {{Continuous Treatments}}, May 2020.
+
 \bibitem[vdV00]{Vaart2000}
 Aad van~der Vaart.
 \newblock {\em Asymptotic {{Statistics}}}.
@@ -85,6 +90,10 @@ Aad van~der Vaart and Jon Wellner.
 \newblock {\em Weak {{Convergence}} and {{Empirical Processes}}: {{With Applications}} to {{Statistics}}}.
 \newblock {Springer Science \& Business Media}, March 2013.
 
+\bibitem[VGC{\etalchar{+}}20]{Vegetabile2020}
+Brian~G. Vegetabile, Beth~Ann Griffin, Donna~L. Coffman, Matthew Cefalu, and Daniel~F. McCaffrey.
+\newblock Nonparametric {{Estimation}} of {{Population Average Dose-Response Curves}} using {{Entropy Balancing Weights}} for {{Continuous Exposures}}, March 2020.
+
 \bibitem[WZ19]{Wang2019}
 Yixin Wang and Jos{\'e}~R. Zubizarreta.
 \newblock Minimal {{Dispersion Approximately Balancing Weights}}: {{Asymptotic Properties}} and {{Practical Considerations}}.
@@ -94,6 +103,11 @@ Yixin Wang and Jos{\'e}~R. Zubizarreta.
 Yixin Wang and Jos{\'e}~R. Zubizarreta.
 \newblock Large {{Sample Properties}} of {{Matching}} for {{Balance}}.
 \newblock {\em Statistica Sinica}, 2023.
+
+\bibitem[ZP17]{Zhao2017a}
+Qingyuan Zhao and Daniel Percival.
+\newblock Entropy balancing is doubly robust.
+\newblock {\em Journal of Causal Inference}, 5(1):20160010, September 2017.
 
 \bibitem[Zub15]{Zubizarreta2015}
 Jos{\'e}~R. Zubizarreta.

@@ -7,18 +7,20 @@
 \indexentry{$B$, vector of basis functions of the covariates}{21}
 \indexentry{$\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   }{26}
 \indexentry{$e_i$, $i$-the unit vector}{33}
-\indexentry{convex set}{63}
-\indexentry{affine set}{64}
-\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{64}
-\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{64}
-\indexentry{convex function}{65}
-\indexentry{strictly convex}{65}
-\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{65}
-\indexentry{proper (convex) function}{65}
-\indexentry{subgradient}{65}
-\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{66}
-\indexentry{$\sigma_\omega$, support function}{66}
-\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{66}
-\indexentry{$f^*$, convex conjugate of f}{68}
-\indexentry{conjugate sum rule}{68}
-\indexentry{conjugate chain rule}{68}
+\indexentry{$F_{Y(1)}$, distribution function of the potential outcome under treatment}{39}
+\indexentry{$F_{Y(1)}(\cdot | x)$, conditional distribution function of the potential outcome under treatment}{39}
+\indexentry{convex set}{65}
+\indexentry{affine set}{66}
+\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{66}
+\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{66}
+\indexentry{convex function}{67}
+\indexentry{strictly convex}{67}
+\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{67}
+\indexentry{proper (convex) function}{67}
+\indexentry{subgradient}{67}
+\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{68}
+\indexentry{$\sigma_\omega$, support function}{68}
+\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{68}
+\indexentry{$f^*$, convex conjugate of f}{70}
+\indexentry{conjugate sum rule}{70}
+\indexentry{conjugate chain rule}{70}

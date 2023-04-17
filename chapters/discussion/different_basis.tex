@@ -1,5 +1,20 @@
 \subsubsection{Motivation}
+The introduction of partitioning estimates~\cite[§4]{Gyorfi2002} - as done in this thesis - was successful.
+Thus the implementation of other local averaging regression techniques, such as kernel estimates~\cite[§5]{Gyorfi2002}
+is promising. 
 \subsubsection{Conjecture}
+Similar results as of this thesis hold for basis functions of (boxed) kernel estimates~\cite[§5]{Gyorfi2002}.
+They have good practical performance.
 \subsubsection{Ideas/Brainstorming}
+For boxed kernels it is likely easy to prove a lemma similar to Lemma~\ref{lem:basis_2}.
+For kernels with unbounded support, such as gaussian kernels, this might be more difficult. 
+Generally, the basis functions should approximate treatment and outcome model well (see \cite[Assumptions~1.6 \& 2.3]{Wang2019}).
+Partitioning estimates work well in this thesis, because we can define concrete oracle parameters.
+If concrete oracle parameters are not readily available, there might be theoretic results to rely on.
 \subsubsection{Organisation}
+Get familiar with the notion of (boxed) kernel \cite{Gyorfi2002}.
+Find a result similar to Lemma~\ref{lem:basis_2}.
+Try other basis functions, maybe with unbounded support.
+Rely on theoretic results to derive results such as Lemma~\ref{lem:basis_2} for a more abstract oracle parameter.
 \subsubsection{Next Step}
+Look up the definition of boxed kernel \cite[Theorem~5.1, Figure~5.7]{Gyorfi2002}.

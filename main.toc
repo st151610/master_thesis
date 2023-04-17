@@ -50,19 +50,19 @@
 \contentsline {subsubsection}{\nonumberline Next Step}{61}{subsubsection*.37}%
 \contentsline {subsection}{\numberline {6.2.4}Non-binary Treatment}{61}{subsection.6.2.4}%
 \contentsline {subsubsection}{\nonumberline Motivation}{61}{subsubsection*.39}%
-\contentsline {subsubsection}{\nonumberline Conjecture}{62}{subsubsection*.41}%
-\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{62}{subsubsection*.43}%
-\contentsline {subsubsection}{\nonumberline Organisation}{62}{subsubsection*.45}%
-\contentsline {subsubsection}{\nonumberline Next Step}{62}{subsubsection*.47}%
-\contentsline {subsection}{\numberline {6.2.5}Different Basis Functions}{62}{subsection.6.2.5}%
-\contentsline {subsubsection}{\nonumberline Motivation}{62}{subsubsection*.49}%
-\contentsline {subsubsection}{\nonumberline Conjecture}{62}{subsubsection*.51}%
-\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{62}{subsubsection*.53}%
-\contentsline {subsubsection}{\nonumberline Organisation}{62}{subsubsection*.55}%
-\contentsline {subsubsection}{\nonumberline Next Step}{62}{subsubsection*.57}%
-\contentsline {chapter}{\numberline {7}Convex Analysis}{63}{chapter.7}%
-\contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{63}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{70}{section.7.2}%
-\contentsline {chapter}{References}{77}{chapter*.70}%
-\contentsline {chapter}{Index}{79}{chapter*.70}%
+\contentsline {subsubsection}{\nonumberline Conjecture}{61}{subsubsection*.41}%
+\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{61}{subsubsection*.43}%
+\contentsline {subsubsection}{\nonumberline Organisation}{63}{subsubsection*.45}%
+\contentsline {subsubsection}{\nonumberline Next Step}{63}{subsubsection*.47}%
+\contentsline {subsection}{\numberline {6.2.5}Different Basis Functions}{63}{subsection.6.2.5}%
+\contentsline {subsubsection}{\nonumberline Motivation}{63}{subsubsection*.49}%
+\contentsline {subsubsection}{\nonumberline Conjecture}{63}{subsubsection*.51}%
+\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{63}{subsubsection*.53}%
+\contentsline {subsubsection}{\nonumberline Organisation}{63}{subsubsection*.55}%
+\contentsline {subsubsection}{\nonumberline Next Step}{63}{subsubsection*.57}%
+\contentsline {chapter}{\numberline {7}Convex Analysis}{65}{chapter.7}%
+\contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{65}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{72}{section.7.2}%
+\contentsline {chapter}{References}{79}{chapter*.70}%
+\contentsline {chapter}{Index}{83}{chapter*.70}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -2,42 +2,46 @@
 
   \item $B$, vector of basis functions of the covariates, 8, 21
   \item $D_N$, (random) data set without observed outcome, 7
+  \item $F_{Y(1)}$, distribution function of the potential outcome under treatment, 
+		39
+  \item $F_{Y(1)}(\cdot , 
+		\ x)$, conditional distribution function of the potential outcome under treatment{39}
   \item $[x]^+$, positive part of $x\in\R$, 14
   \item $\delta$, (random) constraints vector , 8
   \item $\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   , 
 		26
-  \item $\mathrm{aff(\cdot)}$, affine hull, 64
-  \item $\mathrm{dom}\,f$, domain of a convex function, 65
-  \item $\mathrm{ri}(\cdot)$, relative interior, 64
-  \item $\sigma_\omega$, support function, 66
+  \item $\mathrm{aff(\cdot)}$, affine hull, 66
+  \item $\mathrm{dom}\,f$, domain of a convex function, 67
+  \item $\mathrm{ri}(\cdot)$, relative interior, 66
+  \item $\sigma_\omega$, support function, 68
   \item $\varphi$, objective function of Problem~\ref{bw:1:primal}, 9
   \item $e_i$, $i$-the unit vector, 33
-  \item $f\square g$, infimal convolution of $f$ and $g$, 66
-  \item $f^*$, convex conjugate of f, 68
+  \item $f\square g$, infimal convolution of $f$ and $g$, 68
+  \item $f^*$, convex conjugate of f, 70
   \item $n$, (random) number of treated units, 8
 
   \indexspace
 
-  \item    $ \partial f(x)   $,   subdifferential of $f$ at $x$ , 66
+  \item    $ \partial f(x)   $,   subdifferential of $f$ at $x$ , 68
 
   \indexspace
 
-  \item affine set, 64
+  \item affine set, 66
 
   \indexspace
 
-  \item conjugate chain rule, 68
-  \item conjugate sum rule, 68
-  \item convex function, 65
-  \item convex set, 63
+  \item conjugate chain rule, 70
+  \item conjugate sum rule, 70
+  \item convex function, 67
+  \item convex set, 65
 
   \indexspace
 
-  \item proper (convex) function, 65
+  \item proper (convex) function, 67
 
   \indexspace
 
-  \item strictly convex, 65
-  \item subgradient, 65
+  \item strictly convex, 67
+  \item subgradient, 67
 
 \end{theindex}
