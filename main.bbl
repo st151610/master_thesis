@@ -21,6 +21,10 @@ Bradley Efron and R.~J. Tibshirani.
 \newblock {\em An {{Introduction}} to the {{Bootstrap}}}.
 \newblock {CRC Press}, May 1994.
 
+\bibitem[FIL{\etalchar{+}}]{Fan}
+Jianqing Fan, Kosuke Imai, Han Liu, Yang Ning, and Xiaolin Yang.
+\newblock Improving {{Covariate Balancing Propensity Score}}: {{A Doubly Robust}} and {{Efficient Approach}}.
+
 \bibitem[GKKW02]{Gyorfi2002}
 L{\'a}szl{\'o} Gy{\"o}rfi, Michael Kohler, Adam Krzy{\.z}ak, and Harro Walk.
 \newblock {\em A {{Distribution-Free Theory}} of {{Nonparametric Regression}}}.

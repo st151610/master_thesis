@@ -3,48 +3,48 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: literature.bib
-Warning--I didn't find a database entry for "Fan2021"
-Warning--I didn't find a database entry for "Fan"
 Warning--can't use both author and editor fields in Barbe1995
-You've used 23 entries,
+Warning--empty journal in Fan
+Warning--empty year in Fan
+You've used 24 entries,
             2543 wiz_defined-function locations,
-            726 strings with 8558 characters,
-and the built_in function-call counts, 8451 in all, are:
-= -- 824
-> -- 402
+            726 strings with 8718 characters,
+and the built_in function-call counts, 8867 in all, are:
+= -- 859
+> -- 437
 < -- 10
-+ -- 133
-- -- 128
-* -- 593
-:= -- 1414
-add.period$ -- 71
-call.type$ -- 23
-change.case$ -- 127
-chr.to.int$ -- 23
-cite$ -- 24
-duplicate$ -- 355
-empty$ -- 629
-format.name$ -- 156
-if$ -- 1716
++ -- 146
+- -- 141
+* -- 630
+:= -- 1490
+add.period$ -- 73
+call.type$ -- 24
+change.case$ -- 136
+chr.to.int$ -- 24
+cite$ -- 27
+duplicate$ -- 368
+empty$ -- 649
+format.name$ -- 169
+if$ -- 1791
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 31
-newline$ -- 117
-num.names$ -- 71
-pop$ -- 145
+missing$ -- 32
+newline$ -- 121
+num.names$ -- 74
+pop$ -- 159
 preamble$ -- 1
-purify$ -- 160
+purify$ -- 170
 quote$ -- 0
-skip$ -- 298
+skip$ -- 306
 stack$ -- 0
-substring$ -- 389
+substring$ -- 396
 swap$ -- 46
 text.length$ -- 10
 text.prefix$ -- 6
 top$ -- 0
-type$ -- 144
-warning$ -- 1
-while$ -- 82
-width$ -- 26
-write$ -- 295
+type$ -- 152
+warning$ -- 3
+while$ -- 85
+width$ -- 27
+write$ -- 304
 (There were 3 warnings)
