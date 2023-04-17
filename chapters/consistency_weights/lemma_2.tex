@@ -197,7 +197,7 @@ measurable it follows the statement.
    \label{bw:cd:lem2}
    It holds
    for all $\varepsilon>0$
-\begin{gather}
+\begin{gather*}
    \P
    \left[ 
      \underline{
@@ -216,7 +216,7 @@ measurable it follows the statement.
    \ 
    N\to\infty
    \,.
-\end{gather}
+\end{gather*}
  \end{lemma}
  \begin{proof}
    Let $\varepsilon>0$
@@ -225,7 +225,7 @@ measurable it follows the statement.
    \Delta_\rho,\Delta_0,\Delta
    }_2=\varepsilon$.
    We show
-\begin{gather}
+\begin{gather*}
    \P
    \left[ 
      \underline{
@@ -248,7 +248,7 @@ measurable it follows the statement.
    \text{for all}\ 
    \tilde{\varepsilon}>0
    \,.
-\end{gather}
+\end{gather*}
 Then the result follows from the measurability of 
 $
      \underline{
@@ -321,7 +321,8 @@ with
      \right)
   \,.
 \end{gather*}
-Since we assume $\varphi^*$ to be continuously differentiable (it is always convex),
+Since $\varphi^*$ is continuously differentiable by Lemma~\ref{1165}
+(it is always convex),
 $g$ is a continuously differentiable convex function with gradient
 \begin{align*}
   &
@@ -367,7 +368,7 @@ $g$ is a continuously differentiable convex function with gradient
 \end{align*}
 Thus, by \eqref{cv:primer:mvthe},
 it holds
-\begin{align*}
+\begin{align}
 \label{99909}
 \begin{split}
   &
@@ -546,10 +547,12 @@ I_1
 -
 \
  I_2
+ \,.
 \end{split}
-\end{align*}
+\end{align}
+Note, that $\Delta_\rho\in \R^N_{\ge 0}$, and thus $\inner{e_i}{\Delta_\rho}\ge 0$ for all $i\in \left\{ 1,\ldots,N \right\}$, where $e_i$ is the $i$-the unit vector.\index{$e_i$, $i$-the unit vector}
 \subsection*{Analysis of $I_1$}
-By the Cauchy-Schwarz inequality, Lemma~\ref{lem:basis_sum}.\textit{(iii)} it holds
+By the Cauchy-Schwarz inequality and Lemma~\ref{lem:basis_sum}.\textit{(iii)} it holds
 \begin{align*}
   \left|
    \left[ 
@@ -768,15 +771,19 @@ It follows from the analysis of $J_1$ and $J_2$
   \left[
   I_1 \le \tilde{\varepsilon}
   \right]
-  \to 1
+  \ 
+  \to
+  \ 
+  1
   \qquad
   \text{for all}\ 
   \tilde{\varepsilon}>0
   \,.
 \end{align*}
+Note, that this holds independently of the specific choice of $\varepsilon>0$ in the beginning of the proof.
 \subsection*{Analysis of $I_2$}
 Since
-$\delta>0$
+$\delta>0$,
 we get
 \begin{align*}
      \inner{\delta}
@@ -793,7 +800,7 @@ we get
      \varepsilon
      \,,
 \end{align*}
-Since $\norm{\delta}_1$ converges to $0$ in probability we get
+Since $\norm{\delta}_1$ converges to $0$ in probability, we get
 \begin{align*}
   \P
   \left[
@@ -809,7 +816,7 @@ Since $\norm{\delta}_1$ converges to $0$ in probability we get
   \,.
 \end{align*}
 \subsection*{Conclusion}
-By \eqref{99909} we get
+By \eqref{99909}, and the analysis of $I_1$ and $I_2$, we get
 \begin{align*}
   \P
   \left[ 
@@ -836,6 +843,12 @@ By \eqref{99909} we get
   \tilde{\varepsilon}>0
   \,.
 \end{align*}
+This holds uniformly for all 
+$
+\norm{
+\Delta_\rho,\Delta_0,\Delta
+}_2=\varepsilon
+$.
 Thus
 \begin{align*}
   \P
@@ -871,5 +884,12 @@ it follows
   1
   \,.
 \end{align*}
+But this holds independently of the choice $\varepsilon>0$.
  \end{proof}
-
+\begin{remark}
+  The last proof is a simplification of the similar \cite[Proof of Lemma~2]{Wang2019}. There, the authors claim to derive concrete learning rates. Their proof is very obscure. The shortcomings range from missing assumptions on the eigenvalues of a Hessian matrix (needed to bound the quadratic term (first display of page 23) away from 0), to mixing up the terms in the conclusion (see \cite[page 25]{Wang2019}).
+  The application of matrix concentration inequalities additionally clouds the proof. 
+  I decided, to aim for less, that is, only consistency instead of concrete learning rates.
+  With this choice, a linear bound like \eqref{cv:primer:mvthe} suffices. Then I get rid of the quadratic Taylor expansion, assumptions on eigenvalues of a Hessian matrix and the application of matrix concentration inequalities.
+  Later, I show that the lack of concrete learning rates is compensated by good approximation properties of the basis functions (see the remark of the section \textit{Analysis of $R_2$}).
+\end{remark}
