@@ -1,4 +1,5 @@
 Based on Theorem~\ref{dual_solution_th}
+and Assumption~\ref{asu:feas_dual_sol},
 we want to use the dual 
 solution 
 $
@@ -88,12 +89,15 @@ To this end, we define the (empirical) weights function
   \end{enumerate}
 \end{lemma}
 \begin{proof}
-  This is a direct consequence of Lemme~\ref{lem:basis_meas}, Lemma~\ref{lem:meas_dual_sol}
+  This is a direct consequence of 
+  Lemme~\ref{lem:basis_meas} (measurability of the basis functions), Lemma~\ref{lem:meas_dual_sol} (measurability of the dual solution),
   and 
-  the (assumed) continuity of $(\varphi^{'})^{-1}$.
+  Lemma~\ref{lem:obj_f}.\textit{(iii)} (continuity of $(\varphi^{'})^{-1}$).
 \end{proof}
-
-
+  Let $\lesssim$ denote the lesser-or-equal-up-to-a-uniform-constant order, that is, we choose a uniform constant $C>1$ that is independent of $N$ and always large enough, such that $a\lesssim b$ is equivalent to $a\le C\cdot b$.
+  \index{$\lesssim$, 
+lesser-or-equal-up-to-a-uniform-constant order
+  }
 \begin{lemma}
   \label{weights_l_inf}
   It holds
@@ -101,7 +105,8 @@ To this end, we define the (empirical) weights function
   for all $i\in \left\{ 1,\ldots,N \right\}$.
 \end{lemma}
 \begin{proof}
-  By Lemma~\ref{lem:basis_sum}.\textit{(iii)} it holds
+  By Lemma~\ref{lem:basis_sum}.\textit{(iii)} ($B$ has uniformly bounded norm),
+  it holds
   \begin{align*}
   \left| 
     \rho_i^\dagger
@@ -121,12 +126,8 @@ To this end, we define the (empirical) weights function
   \qquad
   \text{for all}\ 
   i \in \left\{ 1,\ldots,N \right\}
-  \,,
+  \,.
   \end{align*}
-  where $\lesssim$ denotes the lesser-or-equal-up-to-a-uniform-constant order, that is, we choose $C>1$ independent of $N$ large enough, such that $a\lesssim b$ means $a\le C\cdot b$.
-  \index{$\lesssim$, 
-lesser-or-equal-up-to-a-uniform-constant order
-  }
   Since
   $
 \left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
@@ -140,11 +141,11 @@ lesser-or-equal-up-to-a-uniform-constant order
   L^{\infty}(\P)
   \,.
   \end{align*}
-  By the (assumed) uniform continuity of 
+  By Lemma~\ref{lem:obj_f}.\textit{(iii)} 
+  (uniform continuity of 
   $
   (\varphi^{'})^{-1}
-  $
-  on $\R$, it follows 
+  $), it follows 
   $w_i^\dagger(X)\in L^\infty(\P)$
   for all $i\in \left\{ 1,\ldots,N \right\}$.
 \end{proof}
@@ -211,8 +212,9 @@ To this end, we define the (empirical) simplified weights function
     \,.
   \end{align*}
 \end{definition}
+The next two lemmas extend results from $w^\dagger_i$ to $w^\dagger_0$.
 \begin{lemma}
-  \label{lem:weights:meas:0}
+  \label{lem:meas_w_0}
   \quad
   \begin{enumerate}[label=(\roman*)]
 \item
@@ -233,8 +235,6 @@ To this end, we define the (empirical) simplified weights function
 \begin{proof}
 The proof is as that of Lemma~\ref{lem:weights:meas}.
 \end{proof}
-
-
 \begin{lemma}
   \label{weights_0_l_inf}
   It holds $w_0^\dagger(X)\in L^\infty(\P)$.
@@ -292,6 +292,7 @@ The proof is as that of Lemma~\ref{lem:weights:meas}.
 L^\infty(\P)
   \end{align*}
 \end{proof}
+Then next lemma shows that $w^\dagger_0$ plays well with random variables that vanish in expectation conditional on $X$.
 \begin{lemma}
   \label{w.Z=0}
  Let 
@@ -413,7 +414,7 @@ L^\infty(\P)
   \left(
   \sigma(D_N,X),\mathcal{B}(\R)
   \right)
-  $-measurable.  
+  $-measurable by Lemma~\ref{lem:meas_w_0}.\textit{(ii)}.  
   Thus
   \begin{gather*}
     \E
@@ -447,6 +448,7 @@ L^\infty(\P)
      \end{gather*}
 \end{proof}
 
+We finish the section with the emphasis that $w^\dagger_0$ is (still) connected to Problem~\ref{bw:1:primal}.
 \begin{theorem}
   \label{th:weights_constr}
   The simplified weights process satisfies the constraints
@@ -499,8 +501,9 @@ L^\infty(\P)
   \end{enumerate}
 \end{theorem}
 \begin{proof}
-  This follows from Theorem~\ref{dual_solution_th},
-  Lemma~\ref{lem:simple_weights}
+  This follows from Theorem~\ref{dual_solution_th}
+  (dual relationship of optimal solutions),
+  Lemma~\ref{lem:simple_weights} (simplification of the solutions),
   and the construction of the simplified weights process.
 \end{proof}
 To avoid notational overload, from now on we write
@@ -515,3 +518,9 @@ To avoid notational overload, from now on we write
   x\in\R^d
   \,.
 \end{align*}
+\begin{takeaways}
+  The functional relationship of dual solutions and optimal weights (Theorem~\ref{dual_solution_th}) gives us an idea how to construct weights.
+  The ingredients come from the objective function of Problem~\ref{bw:1:primal},
+  the basis functions that we balance, and the measurable dual solutions.
+  We study and simplify the constructed weights to facilitate the subsequent analysis.
+\end{takeaways}

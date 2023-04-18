@@ -1,6 +1,6 @@
 \begin{theindex}
 
-  \item $B$, vector of basis functions of the covariates, 8, 21
+  \item $B$, vector of basis functions of the covariates, 8, 20
   \item $D_N$, (random) data set without observed outcome, 7
   \item $F_{Y(1)}$, distribution function of the potential outcome under treatment, 
 		39
@@ -9,12 +9,12 @@
   \item $[x]^+$, positive part of $x\in\R$, 14
   \item $\delta$, (random) constraints vector , 8
   \item $\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   , 
-		26
+		25
   \item $\mathrm{aff(\cdot)}$, affine hull, 66
   \item $\mathrm{dom}\,f$, domain of a convex function, 67
   \item $\mathrm{ri}(\cdot)$, relative interior, 66
   \item $\sigma_\omega$, support function, 68
-  \item $\varphi$, objective function of Problem~\ref{bw:1:primal}, 9
+  \item $\varphi$, objective function of Problem~\ref{bw:1:primal}, 8
   \item $e_i$, $i$-the unit vector, 33
   \item $f\square g$, infimal convolution of $f$ and $g$, 68
   \item $f^*$, convex conjugate of $f$, 69

@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1681796783 "main.aux" "main.bbl" "main" 1681796821 0
+["bibtex main"] 1681804791 "main.aux" "main.bbl" "main" 1681805122 0
   "./literature.bib" 1681756479 79858 f1c0919deca5bd0002f86aae84e0d5f5 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1680514707 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1681796820 40461 cbec6fcc0b30ddf6d532975a195b9b55 "pdflatex"
+  "main.aux" 1681805121 40324 90bf11034958aff6ac2aa4df856f9381 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1681795797 "main.idx" "main.ind" "main" 1681796821 0
-  "main.idx" 1681796820 1447 c8b5b95c67297513d8258f4904841a3a "pdflatex"
+["makeindex main.idx"] 1681804726 "main.idx" "main.ind" "main" 1681805122 0
+  "main.idx" 1681805121 1447 7e5bdd4cdafba49cd80eda177aaf6054 "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1681796813 "main.tex" "main.pdf" "main" 1681796821 0
+["pdflatex"] 1681805114 "main.tex" "main.pdf" "main" 1681805122 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1680514707 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1680514707 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1680514707 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -263,21 +263,21 @@
   "chapters/intro_for_all.tex" 1681756054 16027 53bc4874729419f726f23e5b90f753b2 ""
   "chapters/optimization_problem/dual_form.tex" 1681571787 14129 422f06a3c26791c95671280a4b8fc0b9 ""
   "chapters/optimization_problem/intro.tex" 1681571005 660 87f385f3b8aa48ac962a87b3f9206f0f ""
-  "chapters/optimization_problem/main.tex" 1681298516 2561 805443bb5794444f015876b1c5ec4b0c ""
+  "chapters/optimization_problem/main.tex" 1681797159 2574 bd1268c8cbcbae9601dda51a9638fed7 ""
   "chapters/optimization_problem/object_f.tex" 1681294023 6553 88cf83463e88abf4e3a194bfac81fd35 ""
-  "chapters/optimization_problem/primal_problem.tex" 1681288852 4887 138bdca08515120735916f447d8799c0 ""
+  "chapters/optimization_problem/primal_problem.tex" 1681797230 4878 e35c248d02b3415cb497e6c9a24b7f67 ""
   "chapters/pseudo_weights/main.tex" 1681028963 751 5d85d4df42938c8b8ecbd71d3cb6633e ""
-  "chapters/weights_process/basis.tex" 1681756054 12561 619643c785cd3053a00a678e4cda7f3b ""
-  "chapters/weights_process/main.tex" 1681302377 1359 3140bd856df1fe4a2252e3534ed0d10b ""
+  "chapters/weights_process/basis.tex" 1681804570 12649 e01f7b065317ffad4d6b38850804f824 ""
+  "chapters/weights_process/main.tex" 1681803777 1361 4ed5eec3710389e6158c40329821667e ""
   "chapters/weights_process/meas_argmax.tex" 1680804454 2783 a45372617aef7d129d9cd860b4ed6e50 ""
-  "chapters/weights_process/meas_dual_sol.tex" 1681302009 3433 030438ab4a64026aa5f008b2d342b621 ""
-  "chapters/weights_process/weights_process.tex" 1681579452 8215 112116ad1924e6f7b6f6e5961cf9b12c ""
-  "main.aux" 1681796820 40461 cbec6fcc0b30ddf6d532975a195b9b55 "pdflatex"
-  "main.bbl" 1681796783 5449 fdfc1e54484ea6eac35164800a849606 "bibtex main"
-  "main.ind" 1681796820 1383 b7c8422535dcb5088a72fa1623246849 "makeindex main.idx"
-  "main.out" 1681796815 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1681796813 9149 a9e165e5e86182ce88aefd137726e05f ""
-  "main.toc" 1681796820 5648 0b000125f212a82aa9b5813870127a53 "pdflatex"
+  "chapters/weights_process/meas_dual_sol.tex" 1681804783 3748 e3383804d43359a13c5327d1cdae5caa ""
+  "chapters/weights_process/weights_process.tex" 1681805114 9293 31dfad2c1607af5948556661decc8877 ""
+  "main.aux" 1681805121 40324 90bf11034958aff6ac2aa4df856f9381 "pdflatex"
+  "main.bbl" 1681804791 5449 fdfc1e54484ea6eac35164800a849606 "bibtex main"
+  "main.ind" 1681805121 1383 340cc592e1dc5c03f6dd62992aceb28b "makeindex main.idx"
+  "main.out" 1681805117 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1681803834 9170 ab65cd2efa93ab3edaf2de4a097de30e ""
+  "main.toc" 1681805121 5647 d9b3043588d0ad25be0708e7e9dbc311 "pdflatex"
   (generated)
   "main.aux"
   "main.idx"

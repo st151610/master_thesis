@@ -24,7 +24,7 @@ Based on this assumption it is easy to derive measurability for the dual solutio
   $
   \left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
   $.
-  To this end, we take a closer look on the objective function.
+  To this end, we take a closer look at the objective function.
   \begin{definition}
     \label{def:rand_obj_f}
 We define the (random) objective function of (the maximize version of)
@@ -127,7 +127,9 @@ Problem~\ref{dual} by
   In the proof of the lemma gathers the arguments and applies Theorem~\ref{th:argmax}.
 \begin{lemma}
   \label{lem:meas_dual_sol}
-  For all $N\in\mathbb{N}$ the dual solution
+  Let Assumption~\ref{asu:feas_dual_sol} hold true.
+  Then,
+  for all $N\in\mathbb{N}$ the dual solution
   \begin{align*}
   \left( \rho^\dagger,\lambda_0^\dagger,\lambda^\dagger \right)
     \ 
@@ -192,3 +194,7 @@ Problem~\ref{dual} by
   \end{align*}
 \end{proof}
 
+\begin{takeaways}
+  With suitable assumptions on the feasibility of Problem~\ref{dual}, we can construct measurable dual solutions.
+  An important tool to obtain measurability is the argmax measurability theorem (Theorem~\ref{th:argmax}).
+\end{takeaways}

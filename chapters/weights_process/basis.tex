@@ -122,7 +122,6 @@ $X,X_1,\ldots,X_N$.
 The next lemma studies the measurability of the extensions.
 \begin{lemma}
   \label{lem:basis_meas}
-  \quad
   \begin{enumerate}[label=(\roman*)]
 \item
   $B(\cdot,(X_1,\ldots,X_N))(\omega)$ is 
@@ -161,21 +160,21 @@ Since
 $
   {A_N(X_k(\omega))}
   \in\mathcal{B}(\R^d)
-$
+$,
 this is a 
   $\left(
     \mathcal{B}(\R^d),\mathcal{B}(\R)
   \right)$-measurable
   function.
-  From the definition of $B$ \eqref{def:basis} it follows the first part of (i).
+  From the definition of $B$ \eqref{def:basis} it follows the first part of \textit{(i)}.
   Since the indicator function in \eqref{33342} is 1 if $
   x\in
   {A_N(X_k(\omega))}
   $
   and 0 else, it is also constant on each cell
   $A_N\in\mathcal{P}_N$.
-  It follows (i).
-  To prove (ii), note that
+  It follows \textit{(i)}.
+  To prove \textit{(ii)}, note that
 \begin{align*}
   \mathbf{1}
   _
@@ -490,7 +489,7 @@ Now we show that the basis vector plays well with uniformly continuous functions
  where $\omega(f,\cdot)$ is the uniform modulus of continuity of $f$. 
 \end{lemma}
 \begin{proof}
-  It follows from Lemma~\ref{lem:basis_sum}\textit{(ii)}
+  It follows from Lemma~\ref{lem:basis_sum}.\textit{(ii)}
   \begin{align*}
    \begin{split}
    &
@@ -544,9 +543,9 @@ Now we show that the basis vector plays well with uniformly continuous functions
    \end{split}
  \end{align*}
 \end{proof}
-Next, we bring forward the applications of Lemma~\ref{lem:basis_approx_f} that we need.
-On a high-level it says that the basis functions estimate both treatment \textit{(i)} and outcome model \textit{(ii)} well.
-This feature is connected to double robustness discussed in \cite{Zhao2017a}.
+Next, we apply  Lemma~\ref{lem:basis_approx_f}.
+On a high-level, the next lemma says that the basis functions estimate both treatment \textit{(i)} and outcome model \textit{(ii)} well.
+This feature is connected to double robustness, discussed in \cite{Zhao2017a}.
 
 In the following,
 let $F_{Y(1)}(\cdot|x)$ denote the distribution function of $Y(1)$ conditional on $X=x\in\mathcal{X}$ (see \eqref{3228}).
@@ -626,8 +625,9 @@ let $F_{Y(1)}(\cdot|x)$ denote the distribution function of $Y(1)$ conditional o
 \end{enumerate}
 \end{lemma}
 \begin{proof}
-  By Lemma~\ref{lem:basis_approx_f},
-  the uniform continuity of $\varphi^{'}$
+  By Lemma~\ref{lem:basis_approx_f} (good approximation of uniformly continuous functions) and
+  Lemma~\ref{lem:obj_f} 
+  (uniform continuity of $\varphi^{'}$),
   it holds
       \begin{align*}
         \frac
@@ -707,7 +707,7 @@ let $F_{Y(1)}(\cdot|x)$ denote the distribution function of $Y(1)$ conditional o
 \end{align*}
         \end{proof}
         \begin{remark}
-We want to comment on the assumption
+I want to comment on the assumption
 \begin{gather*}
   \sqrt{N}
   \sup_{z\in\R}
@@ -721,10 +721,10 @@ We want to comment on the assumption
   \qquad
   \text{for}\ 
   N\to \infty
-  \,,
+  \,.
 \end{gather*}
-I decided to keep this more general (and abstract) assumption, althogh
-there are many (more concrete, yet stronger) assumptions on the regularity of
+I decided to keep this more general (and abstract) assumption, although
+there are many (more concrete, yet stronger) sufficient assumptions on the regularity of
 $
     F_{Y(1)}(z|\cdot)
 $

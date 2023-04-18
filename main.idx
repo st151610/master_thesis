@@ -1,0 +1,26 @@
+\indexentry{$D_N$, (random) data set without observed outcome}{7}
+\indexentry{$n$, (random) number of treated units}{7}
+\indexentry{$B$, vector of basis functions of the covariates}{8}
+\indexentry{$\delta$, (random) constraints vector }{8}
+\indexentry{$\varphi$, objective function of Problem~\ref{bw:1:primal}}{8}
+\indexentry{$[x]^+$, positive part of $x\in\R$}{14}
+\indexentry{$B$, vector of basis functions of the covariates}{20}
+\indexentry{$\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   }{25}
+\indexentry{$e_i$, $i$-the unit vector}{33}
+\indexentry{$F_{Y(1)}$, distribution function of the potential outcome under treatment}{39}
+\indexentry{$F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment}{39}
+\indexentry{convex set}{65}
+\indexentry{affine set}{66}
+\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{66}
+\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{66}
+\indexentry{convex function}{67}
+\indexentry{strictly convex}{67}
+\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{67}
+\indexentry{proper (convex) function}{67}
+\indexentry{subgradient}{67}
+\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{67}
+\indexentry{$\sigma_\omega$, support function}{68}
+\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{68}
+\indexentry{$f^*$, convex conjugate of $f$}{69}
+\indexentry{conjugate sum rule}{70}
+\indexentry{conjugate chain rule}{70}
