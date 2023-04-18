@@ -1,0 +1,60 @@
+We follow \cite[Example~3.9.19]{vaart2013}
+Let 
+$Z_1,\ldots,Z_N$
+and
+$C_1,\ldots,C_N$ 
+be independent and identically distributed failure and censoring  times.
+Failure and censoring times are assumed independent, that is, 
+\begin{align*}
+  Z_i \perp C_i
+  \qquad
+  \text{for all}\ 
+  i\in \left\{ 1,\ldots,N \right\}
+  \,.
+\end{align*}
+We only observe the outcome
+\begin{align*}
+  Y_i
+  \ 
+  :=
+  \ 
+  \left( 
+  Z_i
+  \land
+  C_i
+  ,
+  \Delta_i
+  \right)
+  \ 
+  \qquad
+  \text{for all}\ 
+  i\in \left\{ 1,\ldots,N \right\}
+  \,,
+\end{align*}
+where 
+$
+\Delta_i:=
+\mathbf{1}
+\left\{ 
+  Z_i\le C_i
+\right\}
+$
+indicates whether a failure time is censored. 
+We consider the weighted Nelson-Aalen estimator for the treated.
+\begin{align*}
+  \Lambda^1_N(t)
+  \ 
+  :=
+  \ 
+  \sum_{i=1}^{N} \frac{
+    T_i\cdot w^\dagger_0(X_i)\cdot\mathbf{1}\left\{ Y_i\le t \right\}
+    \cdot \Delta_i
+  }{
+    \sum_{j=1}^{N} 
+    T_j\cdot w^\dagger_0(X_j)\cdot\mathbf{1}\left\{ Y_j\ge Y_i \right\}
+  } 
+  \,.
+\end{align*}
+Likewise, we can compute weights for the untreated (just switch the treatment status) and get the weighted Nelson-Aalen estimator of the untreated.
+This procedure allows to compare treatment and control group while adjusting for imbalances.
+The theoretical properties of the Nelson-Aalen estimator as a plug-in estimator are studied in \cite[Example~3.9.19]{vaart2013}.

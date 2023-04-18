@@ -1364,6 +1364,10 @@ INPUT ./chapters/discussion/main.tex
 INPUT chapters/discussion/main.tex
 INPUT ./chapters/discussion/main.tex
 INPUT chapters/discussion/main.tex
+INPUT ./chapters/discussion/application_nelson_aalen.tex
+INPUT chapters/discussion/application_nelson_aalen.tex
+INPUT ./chapters/discussion/application_nelson_aalen.tex
+INPUT chapters/discussion/application_nelson_aalen.tex
 INPUT ./chapters/discussion/summary_asu.tex
 INPUT chapters/discussion/summary_asu.tex
 INPUT ./chapters/discussion/summary_asu.tex

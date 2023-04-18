@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.12)  18 APR 2023 11:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.12)  18 APR 2023 14:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1431,20 +1431,23 @@ Overfull \hbox (1.21686pt too wide) in paragraph at lines 3--11
 
 )) [58]
 chapter 6.
-(./chapters/discussion/main.tex (./chapters/discussion/summary_asu.tex) (./chapters/discussion/matching.tex) [59
+(./chapters/discussion/main.tex (./chapters/discussion/application_nelson_aalen.tex) (./chapters/discussion/summary_asu.tex) (./chapters/discussion/matching.tex
+Underfull \vbox (badness 1383) has occurred while \output is active []
+
+ [59
 
 
-] (./chapters/discussion/func_delt_m.tex) (./chapters/discussion/bootstrap.tex [60]) (./chapters/discussion/cont_treat.tex [61] [62]) (./chapters/discussion/different_basis.tex
+]) (./chapters/discussion/func_delt_m.tex [60]) (./chapters/discussion/bootstrap.tex [61]) (./chapters/discussion/cont_treat.tex [62]) (./chapters/discussion/different_basis.tex [63]
 Overfull \hbox (15.75961pt too wide) in paragraph at lines 6--8
 \OT1/cmr/m/n/10.95 Similar re-sults as of this the-sis hold for ba-sis func-tions of (boxed) ker-nel es-ti-mates [[]GKKW02[],
  []
 
-)) [63] [64
+)) [64]
+chapter 7.
+(./chapters/convex_analysis/primer_new.tex [65
 
 
 ]
-chapter 7.
-(./chapters/convex_analysis/primer_new.tex [65]
 Package mdframed Info: mdframed works in twoside mode on input line 94.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1535,10 +1538,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28458 strings out of 476025
- 549443 string characters out of 5796532
+ 28465 strings out of 476025
+ 549695 string characters out of 5796532
  1876388 words of memory out of 5000000
- 47925 multiletter control sequences out of 15000+600000
+ 47928 multiletter control sequences out of 15000+600000
  524251 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,22n,106p,10616b,1105s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1546,10 +1549,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{flemma.3.4} has been referenced but does not exist, replaced by a fixed one
 
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (89 pages, 534046 bytes).
+Output written on main.pdf (89 pages, 536456 bytes).
 PDF statistics:
- 1426 PDF objects out of 1440 (max. 8388607)
- 1256 compressed objects within 13 object streams
- 379 named destinations out of 1000 (max. 500000)
- 357 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1433 PDF objects out of 1440 (max. 8388607)
+ 1263 compressed objects within 13 object streams
+ 380 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
