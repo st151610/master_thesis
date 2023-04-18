@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1681835525 "main.aux" "main.bbl" "main" 1681835533 0
+["bibtex main"] 1681835525 "main.aux" "main.bbl" "main" 1681836701 0
   "./literature.bib" 1681756479 79858 f1c0919deca5bd0002f86aae84e0d5f5 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1680514707 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1681835532 41304 a21abac924859174d63d46e97d376f87 "pdflatex"
+  "main.aux" 1681836700 41304 a21abac924859174d63d46e97d376f87 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1681833315 "main.idx" "main.ind" "main" 1681835533 0
-  "main.idx" 1681835532 2203 61742d7d4d7bfcd594f631ab1343e656 "pdflatex"
+["makeindex main.idx"] 1681833315 "main.idx" "main.ind" "main" 1681836701 0
+  "main.idx" 1681836700 2203 61742d7d4d7bfcd594f631ab1343e656 "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1681835525 "main.tex" "main.pdf" "main" 1681835533 0
+["pdflatex"] 1681836693 "main.tex" "main.pdf" "main" 1681836701 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1680514707 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1680514707 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1680514707 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -272,12 +272,12 @@
   "chapters/weights_process/meas_argmax.tex" 1681808936 2996 27049f14bdba157c6ae0dd87840c9e4d ""
   "chapters/weights_process/meas_dual_sol.tex" 1681809640 3848 27a8f32defe9d9a8fbd69067c35f5c39 ""
   "chapters/weights_process/weights_process.tex" 1681811603 9292 173bb1ee73f01517447204054bde8d17 ""
-  "main.aux" 1681835532 41304 a21abac924859174d63d46e97d376f87 "pdflatex"
+  "main.aux" 1681836700 41304 a21abac924859174d63d46e97d376f87 "pdflatex"
   "main.bbl" 1681835525 5449 fdfc1e54484ea6eac35164800a849606 "bibtex main"
-  "main.ind" 1681835532 2088 b223fca8ee76f5e8a220c726f781a9f0 "makeindex main.idx"
-  "main.out" 1681835527 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1681803834 9170 ab65cd2efa93ab3edaf2de4a097de30e ""
-  "main.toc" 1681835532 5659 563ec58f67b42c65a5cc62865f32c563 "pdflatex"
+  "main.ind" 1681836700 2088 b223fca8ee76f5e8a220c726f781a9f0 "makeindex main.idx"
+  "main.out" 1681836695 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1681836692 9184 677c331248288071147cd58d27b5d3db ""
+  "main.toc" 1681836700 5659 563ec58f67b42c65a5cc62865f32c563 "pdflatex"
   (generated)
   "main.aux"
   "main.idx"
