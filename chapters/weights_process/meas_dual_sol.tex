@@ -2,7 +2,7 @@ Next, we formulate the feasibility assumption.
 Note that we assume compactness to be able to apply Theorem~\ref{th:argmax}.
 \begin{assumption}
   \label{asu:feas_dual_sol}
-  For all $N\in\mathbb{N}$ there exists a compact and deterministic 
+  For all $N\in\mathbb{N}$ there exists a non-empty, compact, and deterministic 
   parameter space 
   $
   \Theta_N
@@ -27,7 +27,7 @@ Based on this assumption it is easy to derive measurability for the dual solutio
   To this end, we take a closer look at the objective function.
   \begin{definition}
     \label{def:rand_obj_f}
-We define the (random) objective function of (the maximize version of)
+We define the (random) objective function of
 Problem~\ref{dual} by
   \begin{align*}
     &
@@ -60,8 +60,19 @@ Problem~\ref{dual} by
   \ 
   \infty
   \qquad 
-  \text{if}\ 
-  \rho_i\neq 0\  \text{for some}\ i>n
+  \text{if}\quad 
+  \rho_i
+  \neq
+  \left[ 
+  \varphi^{-1}
+  (0)
+  -
+  \left( 
+  \lambda_0 + \inner{B(X_i)}{\lambda}
+  \right)
+  \right]^+
+  \
+  \text{for some}\ i>n
   \,,
   \\
   \intertext{and else}\qquad
@@ -121,10 +132,11 @@ Problem~\ref{dual} by
     is Caratheodory.
   \end{lemma}
   \begin{proof}
-  This follows from continuity of $\varphi^*$ and the measurability 
+    This follows from Lemma~\ref{1165}
+    (continuity of $\varphi^*$) and the measurability 
   of all random variables included.
   \end{proof}
-  In the proof of the lemma gathers the arguments and applies Theorem~\ref{th:argmax}.
+  In the proof of the next lemma we gather the arguments and applie Theorem~\ref{th:argmax}.
 \begin{lemma}
   \label{lem:meas_dual_sol}
   Let Assumption~\ref{asu:feas_dual_sol} hold true.
@@ -150,7 +162,7 @@ Problem~\ref{dual} by
   is
   \begin{align*}
   \left(
-    \sigma \left( \left( T_i,X_i \right)_{i\in \left\{ 1,\ldots,N \right\}} \right),\mathcal{B}
+    \sigma \left( D_N \right),\mathcal{B}
   \left(
   \R^N_{\ge 0}
   \times
@@ -167,7 +179,7 @@ Problem~\ref{dual} by
   Since $\Theta_N$ is deterministic (by Assumption~\ref{asu:feas_dual_sol})
   we can define the (constant) correspondence
   $\omega \mapsto \Theta_N$.
-  Clearly, this is weakly-measurable.
+  Clearly, this is weakly-measurable, non-empty and compact.
   Next, we consider the (random) objective function of (the maximize version of) Problem~\ref{dual}, that is, $-G$ (see Definition~\ref{def:rand_obj_f}).
   By Lemme~\ref{lem:caratheo_G}, $-G$  is a Caratheodory function.
   Since $-G$ is also strictly concave, it has a unique argmax in $\Theta_N$.

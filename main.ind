@@ -6,13 +6,21 @@
 		39
   \item $F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment, 
 		39
+  \item $T$, indicator of treatment, 3
+  \item $X$, covariates vector, 3
+  \item $Y(0),Y(1)$, potential outcomes, 3
   \item $[x]^+$, positive part of $x\in\R$, 14
   \item $\delta$, (random) constraints vector , 8
   \item $\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   , 
 		25
+  \item $\mathbf{1_A}$, indicator function of the set $A$, 21
+  \item $\mathbf{B}(\mathbf{X})$, matrix of basis functions of the treated, 
+		12
+  \item $\mathbf{I}_N$, the $N$-dimensional unit matrix, 12
   \item $\mathrm{aff(\cdot)}$, affine hull, 66
   \item $\mathrm{dom}\,f$, domain of a convex function, 67
   \item $\mathrm{ri}(\cdot)$, relative interior, 66
+  \item $\pi$, propensity score, 3
   \item $\sigma_\omega$, support function, 68
   \item $\varphi$, objective function of Problem~\ref{bw:1:primal}, 8
   \item $e_i$, $i$-the unit vector, 33
@@ -23,6 +31,8 @@
   \indexspace
 
   \item    $ \partial f(x)   $,   subdifferential of $f$ at $x$ , 67
+  \item  $\mathrm{0}_N$ and $\mathrm{1}_N$, the $N$-dimensional vectors containing only zeros or ones. , 
+		12
 
   \indexspace
 

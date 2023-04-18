@@ -1,5 +1,5 @@
 The goal of this section is to establish consistency of the
-weights process for the inverse propensity score.
+(simplified) weights process $w_0^\dagger$ for the inverse propensity score (see Theorem~\ref{th:max_weight_cons}).
 To this end,
 we first show that asymptotically there exists an optimal solution 
 $
@@ -19,10 +19,10 @@ to Problem~\ref{dual} that converges to the oracle parameter
 \varphi^{'} \left( \frac{1}{\pi(X_k)} \right)
 \right]_{k\in \left\{ 1,\ldots,N \right\}}
 \end{align*}
-in probability (see Theorem).
-This result justifies Assumption~\ref{asu:feas_dual_sol}.
-Furthermore, we will identify the dual solution from Lemma~\ref{lem:meas_dual_sol} 
-with the consistent dual solution to derive consistency of the weights process for the inverse propensity score.
+in probability (see Theorem~\ref{th:cons_dual}).
+This result justifies Assumption~\ref{asu:feas_dual_sol} to some extent.
+Then, we will identify the dual solution from Lemma~\ref{lem:meas_dual_sol} 
+with the consistent dual solution to derive consistency of the (simplified) weights process for the inverse propensity score.
 Before we start the analysis we interpose a section on the propensity score function.
 \section{Propensitiy Score Function}
   \input{chapters/consistency_weights/ps_funct.tex}

@@ -1,3 +1,22 @@
+For this, we need some more notation. Let $\mathbf{I}_n$ be the $n$-dimensional unit matrix\index{$\mathbf{I}_N$, the $N$-dimensional unit matrix}, 
+$\mathrm{0}_n$ and $\mathrm{1}_n$ the $n$-dimensional vectors containing only zeros or ones.
+\index{
+$\mathrm{0}_N$ and $\mathrm{1}_N$, the $N$-dimensional vectors containing only zeros or ones.
+}
+Furthermore, we define the matrix of basis functions \textbf{of the treated} to be
+\index{$\mathbf{B}(\mathbf{X})$, matrix of basis functions of the treated}
+\begin{gather*}
+    \mathbf{B}(\mathbf{X})
+    \ 
+    :=
+    \ 
+    \begin{bmatrix}
+      B(X_1), \ldots, B(X_n)
+    \end{bmatrix}
+    \in\R^{N\times n}
+    \,.
+\end{gather*}
+Note, that these are random quantities and that the size of $\mathbf{B}(\mathbf{X})$ depends on the random size $n\in\mathbb{N}$ of the treatment group in the sample.
 \begin{lemma}
   \label{matrix_notation}
   A matrix formulation of Problem~\ref{bw:1:primal} is 

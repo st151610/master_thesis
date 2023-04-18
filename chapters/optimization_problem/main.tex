@@ -30,30 +30,11 @@ More important, however, are the constraints that enforce covariate balance.
 Both objective function and design of the constraints distinguish the method.
 %
 
-From a mathematical point of view,
-we have slightly different requirements.
-%
-The proofs should be as clear an short as possible.
-%
-The mathematical objects involved should help with that
-(or at least not prevent it).
-%
-Therefore, we focus on theoretical properties
-of the method.
-%
-As a by-product, we create new ideas that wait for testing in practice.
-
-%
-The notion of what to balance is defined by the basis functions of the covariates.
-%
-It is common that they form a regression basis.
-%
-We shall use this flexibility to introduce basis functions with random design to this framework.
-%
-This makes the proofs easier.
+After introducing the problem, we shall derive it's dual formulation in the spirit of Theorem~\ref{cv:ts:th}.
+This transformation gives us the chance to analyse the initial problem by it's dual problem.
+We adopt ideas from \cite{Wang2019} that show how to analyse the dual problem and connect the results to the initial problem.
 \section{Introduction}
 \input{chapters/optimization_problem/intro.tex}
-\nopagebreak
 \input{chapters/optimization_problem/primal_problem.tex}
 \section{Objective Function}
 \input{chapters/optimization_problem/object_f.tex}
