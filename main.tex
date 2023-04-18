@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper, BCOR=10mm, DIV=11]{scrbook}
+\documentclass[11pt, a4paper, BCOR=7mm, DIV=11]{scrbook}
 \linespread{1.25}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -136,7 +136,7 @@
        \vspace*{1cm}
        \textbf{
     A Novel Weighted Mean Approach to Estimate the Distribution Function of Potential Outcomes in Observational Studies 
-       }
+  }
 
        \vspace{0.5cm}
        Asymptotic Analysis
@@ -165,6 +165,7 @@ University of Stuttgart
 submitted at 
    \end{center}
 \end{titlepage}
+\cleardoublepage
 %\maketitle
 \frontmatter
 
@@ -188,7 +189,7 @@ Quellen vollständig kenntlich gemacht.
   \textbf{Abstract} \\
   english
   \end{center}
-  In this thesis I extend the balancing weights framework of \cite{Wang2019} to estimate the distribution function of potential outcomes.
+  In this thesis I extend the balancing weights framework of \cite{Wang2019} to estimate the distribution function of potential outcomes in observational studies.
   %
   I also suggest to balance basis functions of non-parametric partitioning estimates. 
   %
@@ -206,10 +207,20 @@ Quellen vollständig kenntlich gemacht.
   \\
   german
   \end{center}
-  Dies ist ein Master Arbeit.
-
+  In dieser Arbeit erweitere ich das Balancing Weights Framework von \cite{Wang2019}, um die Verteilungsfunktion von Potential Outcomes in Beobachtungsstudien zu schätzen.
+  %
+  Ich schlage auch vor, Basisfunktionen nicht-parametrischen Partitioning Estimates auszugleichen.
+  %
+  Diese Wahl vereinfacht die Beweise wesentlich und erlaubt gründliches mathematisches Vorgehen.
+  %
+  Die asymptotische Analyse zeigt Konvergenz des Fehlers gegen einen Gaußschen Prozess.
+  %
+  Die Ergebnisse dieser Arbeit erlauben es die Funktionale Delta Methode auf eine große Klasse von Substitutionsschätzern anzuwenden.
+  %
+  So erschließt dieser neuartige Zugang der Kausalen Inferenz in Beobachtungsstudien klassische Bereiche der Statistik, wie zum Beispiel Quantil-Schätzung, Hypothesentests, oder Überlebenszeitanalysen.
+  %
+  Die theoretischen Ergebnisse sind vielversprechend - der Praxis-Test steht allerdings noch aus.
 \tableofcontents 
-
 \mainmatter
 \pagenumbering{arabic}
 \chapter{Introduction}
@@ -221,27 +232,15 @@ Quellen vollständig kenntlich gemacht.
   \input{chapters/pseudo_weights/main.tex}
 \chapter{Consistency of the Weights Process}
   \input{chapters/consistency_weights/main.tex}
-
 \chapter{Convergence of the Weighted Mean}
   \input{chapters/conv_mean/main.tex}
 \chapter{Discussion and Outlook}
   \input{chapters/discussion/main.tex}
-%  \section{Consistency of Optimal Solutions}
-%  \subsection{Estimate of an Oracle Parameter by the Dual}
-%  \input{final_chapters/aa:dual.tex}
-%  \subsection{Estimate of the Inverse Propensitiy Score by the Weights}
-%  \input{final_chapters/aa:weights.tex}
-  \subsection*{Gaussian Bridge}
-  \input{final_chapters/aa:tools.tex}
-  \input{final_chapters/aa:mean.tex}
-  \section{Application to Plug In Estimators}
-  \input{chapters/balancing_weights/plug_in_est.tex}
-
 \chapter{Convex Analysis}
 In our application we want to analyse a convex optimization problem by its dual problem.
 In particular we want to obtain primal optimal solutions from dual solutions.
 To accomplish the task we need technical tools from convex analysis, 
-mainly conjugate calculus and some KKT related results.
+mainly conjugate calculus and some Karush-Kuhn-Tucker related results.
 
 Our starting point is 
 the support function intersection rule~\cite[Theorem 4.23]{Mordukhovich2022}.
@@ -250,69 +249,16 @@ The support function intersection rule is applied to give first conjugate sum an
 which are vital to calculating convex conjugates. The proofs are omited, since the book is thorough enough. 
 %The well known Fenche-Rockafellar Duality theorem is a corollary of conjugate sum and chain rule. It gives general conditions under which dual and primal values coincide.
 The material we present is very well known.
-As an introduction, we recommend the recent book \cite{Mordukhovich2022} and classical reference \cite{Rockafellar1970}.
+As an introduction, we recommend the recent book \cite{Mordukhovich2022} and the classical reference \cite{Rockafellar1970}.
 We finish the chapter with ideas from \cite{Tseng1991}. 
 They provide the high-level ideas to obtain for strictly convex
 functions a dual relationship between optimal solutions.
 We will deliver the details that are omited in the paper.
-  \section{A Convex Analysis Primer}
+\section{A Convex Analysis Primer}
   \input{chapters/convex_analysis/primer_new.tex}
-  %\section{Conjugate Calculus}
-  %\input{chapters/convex_analysis/conjugate_calculus.tex}
-%\input{chapters/convex_analysis.tex}
-  \section{Duality of Optimal Solutions}
+\section{Duality of Optimal Solutions}
   \input{chapters/convex_analysis/ts_3.tex}
 
-
-%\chapter{Random Matrix Inequalities}
-%  In our application we want to bound moments of vector-valued random variables.
-%  For this we choose the theory of random matrix inequalities
-%  which lately received a lot of attention.
-%  In particular an approach via the method of exchangable pairs \cite{Mackey2014}
-%  has been fruitful in simplifying the proofs of long standing results such as the matrix Khintchin inequality.
-%  The paper offers a comprehensive introduction to this method.
-%
-%  We will cite the matrix Khintchin inequality and 
-%  inequalities for moments of matrices that follow from it\cite{Chen2012}. 
-%  As a novelty, we will apply intrinsic dimension results and Hermition Dilitation from \cite{Tropp2015}  
-%  to matrix moments inequalities. Even though it is straightforward, to the best of our knowledge the calculations have not been carried out in any publication so far.
-%  \section{A Matrix Analysis Primer}
-%  \input{chapters/random_matrix_ineq/matrix_analysis.tex}
-%  %\section{The Method of Exchangeable Pairs}
-%  %\input{chapters/random_matrix_ineq/exchangable_pairs.tex}
-% \section{Matrix Khintchin Inequality and Applications}
-% In this section we state the matrix Khintchin inequality and matrix moment inequalities as an applications.
-% We provide the proof of auxiliary theorems which are cited without proof in \cite{Mackey2014}. They are needed to prove the matrix Khintchin inequality. 
-%  \input{chapters/random_matrix_ineq/matrix_khintchine.tex}
-%  \section{Generalzed Inequalities by Hermitian Dilation}
-%  \input{chapters/random_matrix_ineq/generalization.tex}
-%  \input{chapters/random_matrix_ineq/application_rosenthal_pinelis.tex}
-%  
-%  \newpage
-%  \section{Intrinsic Dimension}
-%  \input{chapters/random_matrix_ineq/intrinsic_dimension.tex}
-%
-%
-%\chapter{Empirical Processes}
-%Classical references are \cite{Vaart2000} and \cite{vaart2013}.
-%For maximal inequalities see \cite[§19]{Vaart2000}
-%For Functional Delta-Method see \cite[§20]{Vaart2000}
-%For an introduction to empirical processes and outer expectation 
-%see the beginning of \cite{vaart2013}.
-%\section{A Primer on Empirical Processes}
-%\input{chapters/empirical_processes/ep_primer.tex}
-%
-%\section{Maximal Inequalities}
-%\input{chapters/empirical_processes/maximal_ineq.tex}
-
-%\section{Functional Delta Method}
-%\input{chapters/empirical_processes/functional_delta_method.tex}
-
-%\chapter{Simple yet useful Calculations} 
-%\input{chapters/simple_yet_useful.tex}
-
-%\input{chapters/notation_index.tex}
-%\printnomenclature
 \renewcommand{\bibsection}
 {
 \chapter*{References}

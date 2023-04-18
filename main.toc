@@ -60,11 +60,9 @@
 \contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{63}{subsubsection*.53}%
 \contentsline {subsubsection}{\nonumberline Organisation}{63}{subsubsection*.55}%
 \contentsline {subsubsection}{\nonumberline Next Step}{63}{subsubsection*.57}%
-\contentsline {subsection}{\numberline {6.2.6}Tools and Assumptions}{64}{subsection.6.2.6}%
-\contentsline {section}{\numberline {6.3}Application to Plug In Estimators}{86}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Convex Analysis}{87}{chapter.7}%
-\contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{87}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{94}{section.7.2}%
-\contentsline {chapter}{References}{99}{chapter*.73}%
-\contentsline {chapter}{Index}{103}{chapter*.73}%
+\contentsline {chapter}{\numberline {7}Convex Analysis}{65}{chapter.7}%
+\contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{65}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{72}{section.7.2}%
+\contentsline {chapter}{References}{77}{chapter*.69}%
+\contentsline {chapter}{Index}{81}{chapter*.69}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
