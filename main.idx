@@ -12,11 +12,15 @@
 \indexentry{$\mathbf{B}(\mathbf{X})$, matrix of basis functions of the treated}{12}
 \indexentry{$[x]^+$, positive part of $x\in\R$}{14}
 \indexentry{$B$, vector of basis functions of the covariates}{20}
+\indexentry{$\mathcal{P}_N$, partition of $\R^d$}{20}
+\indexentry{$A_N$, cell of the partition $\mathcal{P}_N$}{20}
 \indexentry{$\mathbf{1_A}$, indicator function of the set $A$}{21}
 \indexentry{$\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   }{25}
-\indexentry{$e_i$, $i$-the unit vector}{33}
+\indexentry{$\mathrm{cl}(\cdot)$, closure of a set}{30}
+\indexentry{$e_i$, $i$-the unit vector}{34}
 \indexentry{$F_{Y(1)}$, distribution function of the potential outcome under treatment}{39}
-\indexentry{$F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment}{39}
+\indexentry{$F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment}{40}
+\indexentry{ $C^\alpha_M(\mathcal{Z})$, certain space of continuous functions }{45}
 \indexentry{convex set}{65}
 \indexentry{affine set}{66}
 \indexentry{$\mathrm{aff(\cdot)}$, affine hull}{66}

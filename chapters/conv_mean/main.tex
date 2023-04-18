@@ -1,3 +1,82 @@
+Is there a better estimator of the distribution function than the empirical distribution function?
+Yes, a weighted empirical distribution function.
+Is there a worse estimator of the distribution function than the empirical distribution function?
+Yes, a weighted empirical distribution function.
+It depends on the weights.
+
+We made an effort to show that the weights of this method are consistent estimators of the best possible weights - the ones created from the inverse propensity score.
+Now it's time to analyse the weighted distribution function - and hope for the best.
+Loosely speaking, if 
+\begin{align*}
+  &
+  \frac{1}{N}
+  \sum_{i=1}^{n} 
+  \frac{T_i}{\pi(X_i)}f(Y_i(T_i))
+  \ 
+  \overset{\P}
+  {\to}
+  \ 
+  \E
+  \left[ 
+    f(Y(1))
+  \right]
+  \intertext{or}
+  &
+  \frac{1}{\sqrt{N}}
+  \sum_{i=1}^{n} 
+  \frac{T_i}{\pi(X_i)}f(Y_i(T_i))
+  \qquad
+  \text{converges in distribution}
+\end{align*}
+we expect, by the consistency of the weights for the inverse propensity score, the same behaviour of the weighted mean.
+To be more precise, we could try the following error decomposition
+\begin{align*}
+  &
+  \frac{1}{N}
+  \sum_{i=1}^{n} 
+  T_i\cdot w^\dagger_0(X_i)\cdot f(Y_i(T_i))
+  \ 
+  - 
+  \ 
+  \E
+  \left[ 
+    f(Y(1))
+  \right]
+  \\
+  &
+  \ 
+  =
+  \ 
+  \frac{1}{N}
+  \sum_{i=1}^{n} 
+  T_i
+  \left( 
+  w^\dagger_0(X_i)
+  -
+  \frac{T_i}{\pi(X_i)}
+  \right)f(Y_i(T_i))
+  \ 
+  + 
+  \ 
+  \left( 
+  \frac{1}{N}
+  \sum_{i=1}^{n} 
+  \frac{T_i}{\pi(X_i)}f(Y_i(T_i))
+  \ 
+  -
+  \ 
+  \E
+  \left[ 
+    f(Y(1))
+  \right]
+  \right)
+  \,.
+\end{align*}
+Clearly, the second term goes to 0 in probability.
+Since the difference in the first term goes to 0, by the consistency of the weights, we would expect the first term also to be well behaved.
+It turns out that something similar is the case (only the argument is much more involved).
+But the high-level idea remains that the best possible weights, the propensity score weights, are well behaved and the weights  of Problem~\ref{bw:1:primal} approximate them (reasonably) well.
+
 Throughout this section we use the following notation.
 Let $F_{Y(1)}$ denote the distribution function of $Y(1)$, that is,
 \index{$F_{Y(1)}$, distribution function of the potential outcome under treatment}
@@ -80,9 +159,6 @@ the convergence of
   in
   $l^\infty(\R)$
   to a Gaussian process with mean 0 and covariance specified in Theorem~\ref{th:main}.
-  We show, that this is possible under mild assumptions.
-  We discuss this in the next section.
-
 \section{Tools}
   \input{chapters/conv_mean/tools.tex}
 \section{Main Result}

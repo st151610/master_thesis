@@ -4,6 +4,7 @@ Let $
 \right)
 $
 denote a sequence of countable, $\mathcal{B}$-measurable partitions 
+\index{$\mathcal{P}_N$, partition of $\R^d$}
 \begin{align*}
 \mathcal{P}_N= \left\{
   A_{N,1},
@@ -27,6 +28,7 @@ of $\R^d$, that is,
   \R^d
   \,.
 \end{align*}
+\index{$A_N$, cell of the partition $\mathcal{P}_N$}
 We define
 $ A_N(x) $ to be the cell of $ \mathcal{P}_N $ containing $x$, that is,
 \begin{align*}
@@ -564,6 +566,7 @@ let $F_{Y(1)}(\cdot|x)$ denote the distribution function of $Y(1)$ conditional o
   for $N\to\infty$
   \begin{enumerate}[label=(\roman*)]
       \item
+        If Assumption~\ref{asu:treatment_asign_str_ing} and Assumption~\ref{asu:x_finite} hold true
       \begin{align*}
         \frac
         {1}
@@ -634,8 +637,8 @@ let $F_{Y(1)}(\cdot|x)$ denote the distribution function of $Y(1)$ conditional o
 \end{lemma}
 \begin{proof}
   By Lemma~\ref{lem:basis_approx_f} (good approximation of uniformly continuous functions) and
-  Lemma~\ref{lem:obj_f} 
-  (uniform continuity of $\varphi^{'}$),
+  Lemma~\ref{lem:ips_unif_cont} 
+  (uniform continuity of $\varphi^{'}\circ (x\mapsto 1/x)\circ \pi$),
   it holds
       \begin{align*}
         \frac

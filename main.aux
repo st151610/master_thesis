@@ -28,8 +28,9 @@
 \citation{Rosenbaum1983}
 \citation{Rosenbaum1983}
 \citation{Imai2014a}
-\newlabel{asu:treatment_asign_str_ing}{{1.1}{3}{Introduction}{equation.1.0.1}{}}
-\newlabel{ipw}{{1.2}{3}{Introduction}{equation.1.0.2}{}}
+\newlabel{def:ps}{{1.1}{3}{Introduction}{equation.1.0.1}{}}
+\newlabel{asu:treatment_asign_str_ing}{{1.2}{3}{Introduction}{equation.1.0.2}{}}
+\newlabel{ipw}{{1.3}{3}{Introduction}{equation.1.0.3}{}}
 \citation{Hainmueller2012,Zubizarreta2015}
 \citation{Hainmueller2012}
 \citation{Wang2019}
@@ -38,7 +39,7 @@
 \citation{Newey1997a}
 \citation{Gyorfi2002}
 \citation{Wang2019}
-\newlabel{cov_bal}{{1.3}{4}{Introduction}{equation.1.0.3}{}}
+\newlabel{cov_bal}{{1.4}{4}{Introduction}{equation.1.0.4}{}}
 \citation{Vaart2000}
 \BKM@entry{id=2,dest={636861707465722E32},srcline={229}}{5C3337365C3337375C303030545C303030685C303030655C3030305C3034305C3030304F5C303030705C303030745C303030695C3030306D5C303030695C3030307A5C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030505C303030725C3030306F5C303030625C3030306C5C303030655C3030306D5C3030305C3034305C303030625C303030655C303030685C303030695C3030306E5C303030645C3030305C3034305C303030745C303030685C303030655C3030305C3034305C303030575C303030655C303030695C303030675C303030685C303030745C30303073}
 \citation{Wang2019}
@@ -179,154 +180,165 @@
 \newlabel{th:weights_constr}{{3.2}{27}{}{gtheorem.3.2}{}}
 \pgfsyspdfmark {pgfid32}{4746457}{39028165}
 \BKM@entry{id=11,dest={636861707465722E34},srcline={234}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030735C303030695C303030735C303030745C303030655C3030306E5C303030635C303030795C3030305C3034305C3030306F5C303030665C3030305C3034305C303030745C303030685C303030655C3030305C3034305C303030575C303030655C303030695C303030675C303030685C303030745C303030735C3030305C3034305C303030505C303030725C3030306F5C303030635C303030655C303030735C30303073}
-\BKM@entry{id=12,dest={73656374696F6E2E342E31},srcline={27}}{5C3337365C3337375C303030505C303030725C3030306F5C303030705C303030655C3030306E5C303030735C303030695C303030745C303030695C303030795C3030305C3034305C303030535C303030635C3030306F5C303030725C303030655C3030305C3034305C303030465C303030755C3030306E5C303030635C303030745C303030695C3030306F5C3030306E}
-\BKM@entry{id=13,dest={73656374696F6E2E342E32},srcline={29}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030735C303030695C303030735C303030745C303030655C3030306E5C303030635C303030795C3030305C3034305C3030306F5C303030665C3030305C3034305C303030745C303030685C303030655C3030305C3034305C303030445C303030755C303030615C3030306C5C3030305C3034305C303030535C3030306F5C3030306C5C303030755C303030745C303030695C3030306F5C3030306E}
+\BKM@entry{id=12,dest={73656374696F6E2E342E31},srcline={27}}{5C3337365C3337375C303030495C3030306E5C303030765C303030655C303030725C303030735C303030655C3030305C3034305C303030505C303030725C3030306F5C303030705C303030655C3030306E5C303030735C303030695C303030745C303030795C3030305C3034305C303030535C303030635C3030306F5C303030725C30303065}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Consistency of the Weights Process}{29}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Propensitiy Score Function}{29}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Consistency of the Dual Solution}{29}{section.4.2}\protected@file@percent }
-\zref@newlabel{mdf@pagelabel-33}{\default{4.2}\page{29}\abspage{37}\mdf@pagevalue{29}}
-\newlabel{lem:link_conv_p}{{4.1}{29}{}{flemma.4.1}{}}
-\newlabel{696}{{4.1}{29}{}{equation.4.2.1}{}}
-\pgfsyspdfmark {pgfid33}{4746457}{10080645}
-\zref@newlabel{mdf@pagelabel-34}{\default{4.2}\page{30}\abspage{38}\mdf@pagevalue{30}}
-\pgfsyspdfmark {pgfid34}{6882364}{47132477}
-\newlabel{698}{{4.2}{30}{Consistency of the Dual Solution}{equation.4.2.2}{}}
-\newlabel{697}{{4.3}{30}{Consistency of the Dual Solution}{equation.4.2.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Inverse Propensity Score}{29}{section.4.1}\protected@file@percent }
+\zref@newlabel{mdf@pagelabel-33}{\default{4.1}\page{29}\abspage{37}\mdf@pagevalue{29}}
+\newlabel{lem:ps_weights}{{4.1}{29}{}{flemma.4.1}{}}
+\newlabel{ps_weights_lemma}{{4.1}{29}{}{flemma.4.1}{}}
+\pgfsyspdfmark {pgfid33}{4746457}{9517414}
+\zref@newlabel{mdf@pagelabel-34}{\default{4.1}\page{30}\abspage{38}\mdf@pagevalue{30}}
+\newlabel{asu:x_finite}{{2}{30}{}{fassumption.2}{}}
+\pgfsyspdfmark {pgfid34}{6882364}{16088678}
+\BKM@entry{id=13,dest={73656374696F6E2E342E32},srcline={29}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030735C303030695C303030735C303030745C303030655C3030306E5C303030635C303030795C3030305C3034305C3030306F5C303030665C3030305C3034305C303030745C303030685C303030655C3030305C3034305C303030445C303030755C303030615C3030306C5C3030305C3034305C303030535C3030306F5C3030306C5C303030755C303030745C303030695C3030306F5C3030306E}
+\zref@newlabel{mdf@pagelabel-35}{\default{4.1}\page{31}\abspage{39}\mdf@pagevalue{31}}
+\newlabel{lem:ips_unif_cont}{{4.2}{31}{}{flemma.4.2}{}}
+\pgfsyspdfmark {pgfid35}{4746457}{44253820}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Consistency of the Dual Solution}{31}{section.4.2}\protected@file@percent }
+\zref@newlabel{mdf@pagelabel-36}{\default{4.2}\page{31}\abspage{39}\mdf@pagevalue{31}}
+\newlabel{lem:link_conv_p}{{4.3}{31}{}{flemma.4.3}{}}
+\newlabel{696}{{4.2}{31}{}{equation.4.2.2}{}}
+\pgfsyspdfmark {pgfid36}{4746457}{20992920}
+\newlabel{698}{{4.3}{31}{Consistency of the Dual Solution}{equation.4.2.3}{}}
 \citation{Wang2019}
 \citation{Wang2019}
-\zref@newlabel{mdf@pagelabel-35}{\default{4.2}\page{31}\abspage{39}\mdf@pagevalue{31}}
-\newlabel{lem:meas_inf_G}{{4.2}{31}{}{flemma.4.2}{}}
-\pgfsyspdfmark {pgfid35}{4746457}{24295142}
-\zref@newlabel{mdf@pagelabel-36}{\default{4.2}\page{32}\abspage{40}\mdf@pagevalue{32}}
-\newlabel{lem:conv_dG}{{4.3}{32}{}{flemma.4.3}{}}
-\newlabel{bw:cd:lem2}{{4.3}{32}{}{flemma.4.3}{}}
-\pgfsyspdfmark {pgfid36}{6882364}{46178166}
-\newlabel{99909}{{4.4}{33}{Consistency of the Dual Solution}{equation.4.2.4}{}}
+\newlabel{697}{{4.4}{32}{Consistency of the Dual Solution}{equation.4.2.4}{}}
+\zref@newlabel{mdf@pagelabel-37}{\default{4.2}\page{33}\abspage{41}\mdf@pagevalue{33}}
+\newlabel{lem:meas_inf_G}{{4.4}{33}{}{flemma.4.4}{}}
+\pgfsyspdfmark {pgfid37}{4746457}{40661250}
+\zref@newlabel{mdf@pagelabel-38}{\default{4.2}\page{33}\abspage{41}\mdf@pagevalue{33}}
+\newlabel{lem:conv_dG}{{4.5}{33}{}{flemma.4.5}{}}
+\newlabel{bw:cd:lem2}{{4.5}{33}{}{flemma.4.5}{}}
+\pgfsyspdfmark {pgfid38}{4746457}{23006718}
+\newlabel{99909}{{4.5}{34}{Consistency of the Dual Solution}{equation.4.2.5}{}}
 \citation{Klenke2020}
 \citation{Wang2019}
 \citation{Wang2019}
-\zref@newlabel{mdf@pagelabel-37}{\default{4.2}\page{35}\abspage{43}\mdf@pagevalue{35}}
-\newlabel{th:cons_dual}{{4.1}{35}{}{gtheorem.4.1}{}}
-\pgfsyspdfmark {pgfid37}{4746457}{9517414}
+\zref@newlabel{mdf@pagelabel-39}{\default{4.2}\page{36}\abspage{44}\mdf@pagevalue{36}}
+\newlabel{th:cons_dual}{{4.1}{36}{}{gtheorem.4.1}{}}
+\pgfsyspdfmark {pgfid39}{6882364}{9517414}
 \BKM@entry{id=14,dest={73656374696F6E2E342E33},srcline={31}}{5C3337365C3337375C3030304D5C303030615C303030695C3030306E5C3030305C3034305C303030525C303030655C303030735C303030755C3030306C5C30303074}
 \citation{Steinwart2008}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Main Result}{36}{section.4.3}\protected@file@percent }
-\zref@newlabel{mdf@pagelabel-38}{\default{4.3}\page{36}\abspage{44}\mdf@pagevalue{36}}
-\newlabel{th:max_weight_cons}{{4.2}{36}{}{gtheorem.4.2}{}}
-\pgfsyspdfmark {pgfid38}{6882364}{32254058}
-\newlabel{4445}{{4.6}{36}{Main Result}{equation.4.3.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Main Result}{37}{section.4.3}\protected@file@percent }
+\zref@newlabel{mdf@pagelabel-40}{\default{4.3}\page{37}\abspage{45}\mdf@pagevalue{37}}
+\newlabel{th:max_weight_cons}{{4.2}{37}{}{gtheorem.4.2}{}}
+\pgfsyspdfmark {pgfid40}{4746457}{32254058}
+\newlabel{4445}{{4.7}{37}{Main Result}{equation.4.3.7}{}}
 \BKM@entry{id=15,dest={636861707465722E35},srcline={236}}{5C3337365C3337375C303030435C3030306F5C3030306E5C303030765C303030655C303030725C303030675C303030655C3030306E5C303030635C303030655C3030305C3034305C3030306F5C303030665C3030305C3034305C303030745C303030685C303030655C3030305C3034305C303030575C303030655C303030695C303030675C303030685C303030745C303030655C303030645C3030305C3034305C3030304D5C303030655C303030615C3030306E}
-\citation{Wang2019}
-\citation{Wang2019}
-\citation{Wang2019}
-\BKM@entry{id=16,dest={73656374696F6E2E352E31},srcline={86}}{5C3337365C3337375C303030545C3030306F5C3030306F5C3030306C5C30303073}
-\citation{Vaart2000}
-\citation{vaart2013}
-\BKM@entry{id=17,dest={73756273656374696F6E2E352E312E31},srcline={3}}{5C3337365C3337375C303030455C3030306D5C303030705C303030695C303030725C303030695C303030635C303030615C3030306C5C3030305C3034305C303030505C303030725C3030306F5C303030635C303030655C303030735C303030735C303030655C303030735C3030305C3034305C3030302D5C3030305C3034305C303030445C303030655C303030665C303030695C3030306E5C303030695C303030745C303030695C3030306F5C3030306E}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Convergence of the Weighted Mean}{39}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{3228}{{5.1}{39}{Convergence of the Weighted Mean}{equation.5.0.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Tools}{39}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Empirical Processes - Definition}{39}{subsection.5.1.1}\protected@file@percent }
+\citation{Wang2019}
+\citation{Wang2019}
+\citation{Wang2019}
+\BKM@entry{id=16,dest={73656374696F6E2E352E31},srcline={162}}{5C3337365C3337375C303030545C3030306F5C3030306F5C3030306C5C30303073}
+\citation{Vaart2000}
+\citation{vaart2013}
+\BKM@entry{id=17,dest={73756273656374696F6E2E352E312E31},srcline={3}}{5C3337365C3337375C303030455C3030306D5C303030705C303030695C303030725C303030695C303030635C303030615C3030306C5C3030305C3034305C303030505C303030725C3030306F5C303030635C303030655C303030735C303030735C303030655C303030735C3030305C3034305C3030302D5C3030305C3034305C303030445C303030655C303030665C303030695C3030306E5C303030695C303030745C303030695C3030306F5C3030306E}
 \citation{vaart2013}
 \citation{vaart2013}
+\newlabel{3228}{{5.1}{40}{Convergence of the Weighted Mean}{equation.5.0.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Tools}{40}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Empirical Processes - Definition}{40}{subsection.5.1.1}\protected@file@percent }
 \citation{vaart2013}
 \BKM@entry{id=18,dest={73756273656374696F6E2E352E312E32},srcline={5}}{5C3337365C3337375C303030425C303030725C303030615C303030635C3030306B5C303030655C303030745C303030695C3030306E5C303030675C3030305C3034305C3030304E5C303030755C3030306D5C303030625C303030655C303030725C303030735C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C303030495C3030306E5C303030745C303030655C303030675C303030725C303030615C3030306C}
 \citation{Vaart2000}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Bracketing Numbers and Integral}{40}{subsection.5.1.2}\protected@file@percent }
-\citation{Vaart2000}
-\zref@newlabel{mdf@pagelabel-39}{\default{5.1.2}\page{41}\abspage{49}\mdf@pagevalue{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Bracketing Numbers and Integral}{41}{subsection.5.1.2}\protected@file@percent }
+\zref@newlabel{mdf@pagelabel-41}{\default{5.1.2}\page{41}\abspage{49}\mdf@pagevalue{41}}
 \newlabel{lem_prod_br}{{5.1}{41}{}{flemma.5.1}{}}
-\pgfsyspdfmark {pgfid39}{4746457}{39435555}
-\newlabel{F_g}{{5.5}{41}{Bracketing Numbers and Integral}{equation.5.1.5}{}}
-\zref@newlabel{mdf@pagelabel-40}{\default{5.1.2}\page{41}\abspage{49}\mdf@pagevalue{41}}
-\newlabel{aa:mean:l:br}{{5.2}{41}{}{flemma.5.2}{}}
-\pgfsyspdfmark {pgfid40}{4746457}{13174396}
+\pgfsyspdfmark {pgfid41}{4746457}{9517414}
+\citation{Vaart2000}
+\zref@newlabel{mdf@pagelabel-42}{\default{5.1.2}\page{42}\abspage{50}\mdf@pagevalue{42}}
+\pgfsyspdfmark {pgfid42}{6882364}{49891546}
+\newlabel{F_g}{{5.5}{42}{Bracketing Numbers and Integral}{equation.5.1.5}{}}
+\zref@newlabel{mdf@pagelabel-43}{\default{5.1.2}\page{42}\abspage{50}\mdf@pagevalue{42}}
+\newlabel{aa:mean:l:br}{{5.2}{42}{}{flemma.5.2}{}}
+\pgfsyspdfmark {pgfid43}{6882364}{24477259}
 \newlabel{size_z}{{5.6}{42}{Bracketing Numbers and Integral}{equation.5.1.6}{}}
-\zref@newlabel{mdf@pagelabel-41}{\default{5.1.2}\page{43}\abspage{51}\mdf@pagevalue{43}}
-\newlabel{lem:f_z}{{5.3}{43}{}{flemma.5.3}{}}
-\pgfsyspdfmark {pgfid41}{4746457}{20687715}
 \citation{vaart2013}
-\citation{vaart2013}
+\zref@newlabel{mdf@pagelabel-44}{\default{5.1.2}\page{44}\abspage{52}\mdf@pagevalue{44}}
+\newlabel{lem:f_z}{{5.3}{44}{}{flemma.5.3}{}}
+\pgfsyspdfmark {pgfid44}{6882364}{29188140}
 \newlabel{ghost_function}{{5.7}{44}{Bracketing Numbers and Integral}{equation.5.1.7}{}}
-\zref@newlabel{mdf@pagelabel-42}{\default{5.1.2}\page{44}\abspage{52}\mdf@pagevalue{44}}
-\newlabel{vdv_coro}{{5.4}{44}{}{flemma.5.4}{}}
-\newlabel{667}{{5.8}{44}{}{equation.5.1.8}{}}
-\pgfsyspdfmark {pgfid42}{6882364}{14356104}
-\zref@newlabel{mdf@pagelabel-43}{\default{5.1.2}\page{45}\abspage{53}\mdf@pagevalue{45}}
+\citation{vaart2013}
+\newlabel{def:c_alpha}{{5.1.2}{45}{Bracketing Numbers and Integral}{equation.5.1.7}{}}
+\zref@newlabel{mdf@pagelabel-45}{\default{5.1.2}\page{45}\abspage{53}\mdf@pagevalue{45}}
+\newlabel{vdv_coro}{{5.4}{45}{}{flemma.5.4}{}}
+\newlabel{667}{{5.8}{45}{}{equation.5.1.8}{}}
+\pgfsyspdfmark {pgfid45}{4746457}{19764873}
+\zref@newlabel{mdf@pagelabel-46}{\default{5.1.2}\page{45}\abspage{53}\mdf@pagevalue{45}}
 \newlabel{lem:br_n_st}{{5.5}{45}{}{flemma.5.5}{}}
-\newlabel{0897}{{5.9}{45}{}{equation.5.1.9}{}}
-\newlabel{error_process}{{5.10}{45}{}{equation.5.1.10}{}}
-\pgfsyspdfmark {pgfid43}{4746457}{29627330}
-\zref@newlabel{mdf@pagelabel-44}{\default{5.1.2}\page{46}\abspage{54}\mdf@pagevalue{46}}
-\newlabel{lem:x_finite}{{5.6}{46}{}{flemma.5.6}{}}
-\pgfsyspdfmark {pgfid44}{6882364}{27779981}
+\pgfsyspdfmark {pgfid46}{4746457}{10072761}
+\zref@newlabel{mdf@pagelabel-47}{\default{5.1.2}\page{46}\abspage{54}\mdf@pagevalue{46}}
+\newlabel{0897}{{5.9}{46}{}{equation.5.1.9}{}}
+\newlabel{error_process}{{5.10}{46}{}{equation.5.1.10}{}}
+\pgfsyspdfmark {pgfid47}{6882364}{33831622}
 \BKM@entry{id=19,dest={73756273656374696F6E2E352E312E33},srcline={7}}{5C3337365C3337375C3030304D5C303030615C303030785C303030695C3030306D5C303030615C3030306C5C3030305C3034305C303030495C3030306E5C303030655C303030715C303030755C303030615C3030306C5C303030695C303030745C30303079}
 \citation{vaart2013}
+\zref@newlabel{mdf@pagelabel-48}{\default{5.1.2}\page{47}\abspage{55}\mdf@pagevalue{47}}
+\newlabel{lem:x_finite}{{5.6}{47}{}{flemma.5.6}{}}
+\pgfsyspdfmark {pgfid48}{4746457}{35587715}
 \citation{Vaart2000}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Maximal Inequality}{47}{subsection.5.1.3}\protected@file@percent }
-\zref@newlabel{mdf@pagelabel-45}{\default{5.1.3}\page{47}\abspage{55}\mdf@pagevalue{47}}
-\newlabel{th:max_ineq}{{5.1}{47}{}{gtheorem.5.1}{}}
-\pgfsyspdfmark {pgfid45}{4746457}{27971418}
-\zref@newlabel{mdf@pagelabel-46}{\default{5.1.3}\page{47}\abspage{55}\mdf@pagevalue{47}}
-\newlabel{markov_max_lemma}{{5.7}{47}{}{flemma.5.7}{}}
-\pgfsyspdfmark {pgfid46}{4746457}{17945764}
-\BKM@entry{id=20,dest={73756273656374696F6E2E352E312E34},srcline={9}}{5C3337365C3337375C303030445C3030306F5C3030306E5C303030735C3030306B5C303030655C303030725C303030275C303030735C3030305C3034305C303030545C303030685C303030655C3030306F5C303030725C303030655C3030306D}
-\zref@newlabel{mdf@pagelabel-47}{\default{5.1.3}\page{48}\abspage{56}\mdf@pagevalue{48}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Maximal Inequality}{48}{subsection.5.1.3}\protected@file@percent }
+\zref@newlabel{mdf@pagelabel-49}{\default{5.1.3}\page{48}\abspage{56}\mdf@pagevalue{48}}
+\newlabel{th:max_ineq}{{5.1}{48}{}{gtheorem.5.1}{}}
+\pgfsyspdfmark {pgfid49}{6882364}{38896687}
+\zref@newlabel{mdf@pagelabel-50}{\default{5.1.3}\page{48}\abspage{56}\mdf@pagevalue{48}}
+\newlabel{markov_max_lemma}{{5.7}{48}{}{flemma.5.7}{}}
+\pgfsyspdfmark {pgfid50}{6882364}{28937032}
+\zref@newlabel{mdf@pagelabel-51}{\default{5.1.3}\page{48}\abspage{56}\mdf@pagevalue{48}}
 \newlabel{aa:r3:lemma:1}{{5.8}{48}{}{flemma.5.8}{}}
-\pgfsyspdfmark {pgfid47}{6882364}{38272514}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Donsker's Theorem}{48}{subsection.5.1.4}\protected@file@percent }
+\pgfsyspdfmark {pgfid51}{6882364}{9517414}
+\BKM@entry{id=20,dest={73756273656374696F6E2E352E312E34},srcline={9}}{5C3337365C3337375C303030445C3030306F5C3030306E5C303030735C3030306B5C303030655C303030725C303030275C303030735C3030305C3034305C303030545C303030685C303030655C3030306F5C303030725C303030655C3030306D}
+\zref@newlabel{mdf@pagelabel-52}{\default{5.1.3}\page{49}\abspage{57}\mdf@pagevalue{49}}
+\pgfsyspdfmark {pgfid52}{4746457}{49122318}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Donsker's Theorem}{49}{subsection.5.1.4}\protected@file@percent }
+\zref@newlabel{mdf@pagelabel-53}{\default{5.1.4}\page{49}\abspage{57}\mdf@pagevalue{49}}
+\pgfsyspdfmark {pgfid53}{4746457}{19648379}
+\zref@newlabel{mdf@pagelabel-54}{\default{5.1.4}\page{49}\abspage{57}\mdf@pagevalue{49}}
+\newlabel{th:donsker}{{5.2}{49}{}{gtheorem.5.2}{}}
+\pgfsyspdfmark {pgfid54}{4746457}{9517414}
 \citation{Vaart2000}
 \BKM@entry{id=21,dest={73756273656374696F6E2E352E312E35},srcline={11}}{5C3337365C3337375C303030505C303030725C3030306F5C303030705C303030655C3030306E5C303030735C303030695C303030745C303030795C3030305C3034305C303030535C303030635C3030306F5C303030725C303030655C3030305C3034305C303030575C303030655C303030695C303030675C303030685C303030745C30303073}
-\zref@newlabel{mdf@pagelabel-48}{\default{5.1.4}\page{49}\abspage{57}\mdf@pagevalue{49}}
-\pgfsyspdfmark {pgfid48}{4746457}{47186117}
-\zref@newlabel{mdf@pagelabel-49}{\default{5.1.4}\page{49}\abspage{57}\mdf@pagevalue{49}}
-\newlabel{th:donsker}{{5.2}{49}{}{gtheorem.5.2}{}}
-\pgfsyspdfmark {pgfid49}{4746457}{37186370}
-\zref@newlabel{mdf@pagelabel-50}{\default{5.1.4}\page{49}\abspage{57}\mdf@pagevalue{49}}
-\newlabel{lem:F_P_donsker}{{5.9}{49}{}{flemma.5.9}{}}
-\pgfsyspdfmark {pgfid50}{4746457}{32037384}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.5}Propensity Score Weights}{49}{subsection.5.1.5}\protected@file@percent }
-\zref@newlabel{mdf@pagelabel-51}{\default{5.1.5}\page{49}\abspage{57}\mdf@pagevalue{49}}
-\newlabel{lem:ps_weights}{{5.10}{49}{}{flemma.5.10}{}}
-\newlabel{ps_weights_lemma}{{5.10}{49}{}{flemma.5.10}{}}
-\pgfsyspdfmark {pgfid51}{4746457}{9581479}
-\BKM@entry{id=22,dest={73656374696F6E2E352E32},srcline={88}}{5C3337365C3337375C3030304D5C303030615C303030695C3030306E5C3030305C3034305C303030525C303030655C303030735C303030755C3030306C5C30303074}
-\BKM@entry{id=23,dest={73656374696F6E2E352E33},srcline={90}}{5C3337365C3337375C303030455C303030725C303030725C3030306F5C303030725C3030305C3034305C303030445C303030655C303030635C3030306F5C3030306D5C303030705C3030306F5C303030735C303030695C303030745C303030695C3030306F5C3030306E}
-\zref@newlabel{mdf@pagelabel-52}{\default{5.1.5}\page{50}\abspage{58}\mdf@pagevalue{50}}
-\pgfsyspdfmark {pgfid52}{6882364}{46613583}
+\BKM@entry{id=22,dest={73656374696F6E2E352E32},srcline={164}}{5C3337365C3337375C3030304D5C303030615C303030695C3030306E5C3030305C3034305C303030525C303030655C303030735C303030755C3030306C5C30303074}
+\BKM@entry{id=23,dest={73656374696F6E2E352E33},srcline={166}}{5C3337365C3337375C303030455C303030725C303030725C3030306F5C303030725C3030305C3034305C303030445C303030655C303030635C3030306F5C3030306D5C303030705C3030306F5C303030735C303030695C303030745C303030695C3030306F5C3030306E}
+\zref@newlabel{mdf@pagelabel-55}{\default{5.1.4}\page{50}\abspage{58}\mdf@pagevalue{50}}
+\pgfsyspdfmark {pgfid55}{6882364}{49891546}
+\zref@newlabel{mdf@pagelabel-56}{\default{5.1.4}\page{50}\abspage{58}\mdf@pagevalue{50}}
+\newlabel{lem:F_P_donsker}{{5.9}{50}{}{flemma.5.9}{}}
+\pgfsyspdfmark {pgfid56}{6882364}{45318458}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.5}Propensity Score Weights}{50}{subsection.5.1.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}Main Result}{50}{section.5.2}\protected@file@percent }
-\zref@newlabel{mdf@pagelabel-53}{\default{5.2}\page{50}\abspage{58}\mdf@pagevalue{50}}
+\zref@newlabel{mdf@pagelabel-57}{\default{5.2}\page{50}\abspage{58}\mdf@pagevalue{50}}
 \newlabel{th:main}{{5.3}{50}{}{gtheorem.5.3}{}}
 \newlabel{cov:lp}{{5.13}{50}{}{equation.5.2.13}{}}
-\pgfsyspdfmark {pgfid53}{6882364}{31153725}
+\pgfsyspdfmark {pgfid57}{6882364}{17007834}
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}Error Decomposition}{50}{section.5.3}\protected@file@percent }
-\zref@newlabel{mdf@pagelabel-54}{\default{5.3}\page{50}\abspage{58}\mdf@pagevalue{50}}
-\newlabel{aa:mean:lemma_decomp}{{5.11}{50}{}{flemma.5.11}{}}
-\pgfsyspdfmark {pgfid54}{6882364}{21279151}
-\zref@newlabel{mdf@pagelabel-55}{\default{5.3}\page{51}\abspage{59}\mdf@pagevalue{51}}
-\pgfsyspdfmark {pgfid55}{4746457}{38409065}
-\BKM@entry{id=24,dest={73656374696F6E2E352E34},srcline={92}}{5C3337365C3337375C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C303030745C303030685C303030655C3030305C3034305C303030455C303030725C303030725C3030306F5C303030725C3030305C3034305C303030545C303030655C303030725C3030306D5C30303073}
-\BKM@entry{id=25,dest={73756273656374696F6E2E352E342E31},srcline={93}}{5C3337365C3337375C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C30303031}
+\zref@newlabel{mdf@pagelabel-58}{\default{5.3}\page{50}\abspage{58}\mdf@pagevalue{50}}
+\newlabel{aa:mean:lemma_decomp}{{5.10}{50}{}{flemma.5.10}{}}
+\pgfsyspdfmark {pgfid58}{6882364}{11923262}
+\zref@newlabel{mdf@pagelabel-59}{\default{5.3}\page{51}\abspage{59}\mdf@pagevalue{51}}
+\pgfsyspdfmark {pgfid59}{4746457}{32832631}
+\BKM@entry{id=24,dest={73656374696F6E2E352E34},srcline={168}}{5C3337365C3337375C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C303030745C303030685C303030655C3030305C3034305C303030455C303030725C303030725C3030306F5C303030725C3030305C3034305C303030545C303030655C303030725C3030306D5C30303073}
+\BKM@entry{id=25,dest={73756273656374696F6E2E352E342E31},srcline={169}}{5C3337365C3337375C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C30303031}
 \@writefile{toc}{\contentsline {section}{\numberline {5.4}Analysis of the Error Terms}{53}{section.5.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Analysis of $R_1$}{53}{subsection.5.4.1}\protected@file@percent }
-\zref@newlabel{mdf@pagelabel-56}{\default{5.4.1}\page{53}\abspage{61}\mdf@pagevalue{53}}
-\newlabel{aa:mean:l:r1}{{5.12}{53}{}{flemma.5.12}{}}
-\pgfsyspdfmark {pgfid56}{4746457}{41889764}
+\zref@newlabel{mdf@pagelabel-60}{\default{5.4.1}\page{53}\abspage{61}\mdf@pagevalue{53}}
+\newlabel{aa:mean:l:r1}{{5.11}{53}{}{flemma.5.11}{}}
+\pgfsyspdfmark {pgfid60}{4746457}{41889764}
 \newlabel{R_1:1}{{5.15}{53}{Analysis of $R_1$}{equation.5.4.15}{}}
-\BKM@entry{id=26,dest={73756273656374696F6E2E352E342E32},srcline={95}}{5C3337365C3337375C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C30303032}
+\BKM@entry{id=26,dest={73756273656374696F6E2E352E342E32},srcline={171}}{5C3337365C3337375C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C30303032}
 \citation{Wang2019}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Analysis of $R_2$}{54}{subsection.5.4.2}\protected@file@percent }
-\zref@newlabel{mdf@pagelabel-57}{\default{5.4.2}\page{54}\abspage{62}\mdf@pagevalue{54}}
-\pgfsyspdfmark {pgfid57}{6882364}{17196839}
-\BKM@entry{id=27,dest={73756273656374696F6E2E352E342E33},srcline={97}}{5C3337365C3337375C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C30303033}
+\zref@newlabel{mdf@pagelabel-61}{\default{5.4.2}\page{54}\abspage{62}\mdf@pagevalue{54}}
+\pgfsyspdfmark {pgfid61}{6882364}{17196839}
+\BKM@entry{id=27,dest={73756273656374696F6E2E352E342E33},srcline={173}}{5C3337365C3337375C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C30303033}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Analysis of $R_3$}{55}{subsection.5.4.3}\protected@file@percent }
-\zref@newlabel{mdf@pagelabel-58}{\default{5.4.3}\page{55}\abspage{63}\mdf@pagevalue{55}}
-\newlabel{aa:mean:r3:lem:conv}{{5.14}{55}{}{flemma.5.14}{}}
-\pgfsyspdfmark {pgfid58}{4746457}{30629371}
+\zref@newlabel{mdf@pagelabel-62}{\default{5.4.3}\page{55}\abspage{63}\mdf@pagevalue{55}}
+\newlabel{aa:mean:r3:lem:conv}{{5.13}{55}{}{flemma.5.13}{}}
+\pgfsyspdfmark {pgfid62}{4746457}{30629371}
 \citation{Wang2019}
 \citation{Wang2019}
 \citation{Wang2019}
@@ -334,23 +346,23 @@
 \citation{Fan}
 \citation{Fan}
 \newlabel{event}{{5.16}{56}{Analysis of $R_3$}{equation.5.4.16}{}}
-\BKM@entry{id=28,dest={73756273656374696F6E2E352E342E34},srcline={99}}{5C3337365C3337375C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C30303034}
+\BKM@entry{id=28,dest={73756273656374696F6E2E352E342E34},srcline={175}}{5C3337365C3337375C303030415C3030306E5C303030615C3030306C5C303030795C303030735C303030695C303030735C3030305C3034305C3030306F5C303030665C3030305C3034305C303030525C30303034}
 \citation{Vaart2000}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Analysis of $R_4$}{57}{subsection.5.4.4}\protected@file@percent }
-\zref@newlabel{mdf@pagelabel-59}{\default{5.4.4}\page{57}\abspage{65}\mdf@pagevalue{57}}
-\newlabel{aa:mean:l:r4}{{5.15}{57}{}{flemma.5.15}{}}
-\pgfsyspdfmark {pgfid59}{4746457}{34040025}
-\BKM@entry{id=29,dest={73756273656374696F6E2E352E342E35},srcline={101}}{5C3337365C3337375C303030505C303030725C3030306F5C3030306F5C303030665C3030305C3034305C3030306F5C303030665C3030305C3034305C303030545C303030685C303030655C3030306F5C303030725C303030655C3030306D5C3030305C3034305C303030355C3030302E5C30303033}
+\zref@newlabel{mdf@pagelabel-63}{\default{5.4.4}\page{57}\abspage{65}\mdf@pagevalue{57}}
+\newlabel{aa:mean:l:r4}{{5.14}{57}{}{flemma.5.14}{}}
+\pgfsyspdfmark {pgfid63}{4746457}{34040025}
+\BKM@entry{id=29,dest={73756273656374696F6E2E352E342E35},srcline={177}}{5C3337365C3337375C303030505C303030725C3030306F5C3030306F5C303030665C3030305C3034305C3030306F5C303030665C3030305C3034305C303030545C303030685C303030655C3030306F5C303030725C303030655C3030306D5C3030305C3034305C303030355C3030302E5C30303033}
 \citation{Klenke2020}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.5}Proof of Theorem\nobreakspace  {}\ref {th:main}}{58}{subsection.5.4.5}\protected@file@percent }
 \BKM@entry{id=30,dest={636861707465722E36},srcline={238}}{5C3337365C3337375C303030445C303030695C303030735C303030635C303030755C303030735C303030735C303030695C3030306F5C3030306E5C3030305C3034305C303030615C3030306E5C303030645C3030305C3034305C3030304F5C303030755C303030745C3030306C5C3030306F5C3030306F5C3030306B}
 \BKM@entry{id=31,dest={73656374696F6E2E362E31},srcline={1}}{5C3337365C3337375C303030445C303030695C303030735C303030635C303030755C303030735C303030735C303030695C3030306F5C3030306E}
-\BKM@entry{id=32,dest={73756273656374696F6E2E362E312E31},srcline={2}}{5C3337365C3337375C303030415C303030705C303030705C3030306C5C303030695C303030635C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030745C3030306F5C3030305C3034305C3030304E5C303030655C3030306C5C303030735C3030306F5C3030306E5C3030305C3034305C303030415C303030615C3030306C5C303030655C3030306E5C3030305C3034305C303030455C303030735C303030745C303030695C3030306D5C303030615C303030745C3030306F5C30303072}
+\BKM@entry{id=32,dest={73756273656374696F6E2E362E312E31},srcline={3}}{5C3337365C3337375C303030415C303030705C303030705C3030306C5C303030695C303030635C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C303030745C3030306F5C3030305C3034305C3030304E5C303030655C3030306C5C303030735C3030306F5C3030306E5C3030305C3034305C303030415C303030615C3030306C5C303030655C3030306E5C3030305C3034305C303030455C303030735C303030745C303030695C3030306D5C303030615C303030745C3030306F5C30303072}
 \citation{vaart2013}
 \citation{vaart2013}
-\BKM@entry{id=33,dest={73756273656374696F6E2E362E312E32},srcline={4}}{5C3337365C3337375C303030535C303030755C3030306D5C3030306D5C303030615C303030725C303030795C3030305C3034305C3030306F5C303030665C3030305C3034305C303030415C303030735C303030735C303030755C3030306D5C303030705C303030745C303030695C3030306F5C3030306E5C30303073}
-\BKM@entry{id=34,dest={73656374696F6E2E362E32},srcline={6}}{5C3337365C3337375C3030304F5C303030755C303030745C3030306C5C3030306F5C3030306F5C3030306B}
-\BKM@entry{id=35,dest={73756273656374696F6E2E362E322E31},srcline={7}}{5C3337365C3337375C3030304D5C303030615C303030745C303030635C303030685C303030695C3030306E5C30303067}
+\BKM@entry{id=33,dest={73756273656374696F6E2E362E312E32},srcline={5}}{5C3337365C3337375C303030535C303030755C3030306D5C3030306D5C303030615C303030725C303030795C3030305C3034305C3030306F5C303030665C3030305C3034305C303030415C303030735C303030735C303030755C3030306D5C303030705C303030745C303030695C3030306F5C3030306E5C30303073}
+\BKM@entry{id=34,dest={73656374696F6E2E362E32},srcline={7}}{5C3337365C3337375C3030304F5C303030755C303030745C3030306C5C3030306F5C3030306F5C3030306B}
+\BKM@entry{id=35,dest={73756273656374696F6E2E362E322E31},srcline={8}}{5C3337365C3337375C3030304D5C303030615C303030745C303030635C303030685C303030695C3030306E5C30303067}
 \citation{Wang2019,Wang2023}
 \citation{Wang2019}
 \citation{Wang2023}
@@ -367,7 +379,7 @@
 \citation{Wang2019,Wang2023}
 \citation{Wang2023}
 \citation{Wang2019,Wang2023}
-\BKM@entry{id=36,dest={73756273656374696F6E2E362E322E32},srcline={9}}{5C3337365C3337375C303030415C303030705C303030705C3030306C5C303030695C303030635C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C3030306F5C303030665C3030305C3034305C303030745C303030685C303030655C3030305C3034305C303030465C303030755C3030306E5C303030635C303030745C303030695C3030306F5C3030306E5C303030615C3030306C5C3030305C3034305C303030445C303030655C3030306C5C303030745C303030615C3030305C3034305C3030304D5C303030655C303030745C303030685C3030306F5C30303064}
+\BKM@entry{id=36,dest={73756273656374696F6E2E362E322E32},srcline={10}}{5C3337365C3337375C303030415C303030705C303030705C3030306C5C303030695C303030635C303030615C303030745C303030695C3030306F5C3030306E5C3030305C3034305C3030306F5C303030665C3030305C3034305C303030745C303030685C303030655C3030305C3034305C303030465C303030755C3030306E5C303030635C303030745C303030695C3030306F5C3030306E5C303030615C3030306C5C3030305C3034305C303030445C303030655C3030306C5C303030745C303030615C3030305C3034305C3030304D5C303030655C303030745C303030685C3030306F5C30303064}
 \citation{vaart2013}
 \citation{Vaart2000}
 \@writefile{toc}{\contentsline {section}{\numberline {6.2}Outlook}{60}{section.6.2}\protected@file@percent }
@@ -385,7 +397,7 @@
 \citation{vaart2013}
 \citation{vaart2013}
 \citation{Vaart2000}
-\BKM@entry{id=37,dest={73756273656374696F6E2E362E322E33},srcline={11}}{5C3337365C3337375C303030425C3030306F5C3030306F5C303030745C303030735C303030745C303030725C303030615C303030705C303030705C303030695C3030306E5C30303067}
+\BKM@entry{id=37,dest={73756273656374696F6E2E362E322E33},srcline={12}}{5C3337365C3337375C303030425C3030306F5C3030306F5C303030745C303030735C303030745C303030725C303030615C303030705C303030705C303030695C3030306E5C30303067}
 \citation{Wang2019,Wang2023}
 \citation{Vaart2000}
 \citation{vaart2013}
@@ -400,7 +412,7 @@
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Conjecture}{61}{subsubsection*.31}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{61}{subsubsection*.33}\protected@file@percent }
 \citation{Efron1994}
-\BKM@entry{id=38,dest={73756273656374696F6E2E362E322E34},srcline={13}}{5C3337365C3337375C3030304E5C3030306F5C3030306E5C3030302D5C303030625C303030695C3030306E5C303030615C303030725C303030795C3030305C3034305C303030545C303030725C303030655C303030615C303030745C3030306D5C303030655C3030306E5C30303074}
+\BKM@entry{id=38,dest={73756273656374696F6E2E362E322E34},srcline={14}}{5C3337365C3337375C3030304E5C3030306F5C3030306E5C3030302D5C303030625C303030695C3030306E5C303030615C303030725C303030795C3030305C3034305C303030545C303030725C303030655C303030615C303030745C3030306D5C303030655C3030306E5C30303074}
 \citation{Hirano2005}
 \citation{Wang2019}
 \citation{Tubbicke2020,Vegetabile2020}
@@ -415,7 +427,7 @@
 \citation{Hirano2005}
 \citation{Wang2019}
 \citation{Hirano2005}
-\BKM@entry{id=39,dest={73756273656374696F6E2E362E322E35},srcline={15}}{5C3337365C3337375C303030445C303030695C303030665C303030665C303030655C303030725C303030655C3030306E5C303030745C3030305C3034305C303030425C303030615C303030735C303030695C303030735C3030305C3034305C303030465C303030755C3030306E5C303030635C303030745C303030695C3030306F5C3030306E5C30303073}
+\BKM@entry{id=39,dest={73756273656374696F6E2E362E322E35},srcline={16}}{5C3337365C3337375C303030445C303030695C303030665C303030665C303030655C303030725C303030655C3030306E5C303030745C3030305C3034305C303030425C303030615C303030735C303030695C303030735C3030305C3034305C303030465C303030755C3030306E5C303030635C303030745C303030695C3030306F5C3030306E5C30303073}
 \citation{Gyorfi2002}
 \citation{Gyorfi2002}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Organisation}{63}{subsubsection*.45}\protected@file@percent }
@@ -442,9 +454,9 @@
 \@writefile{toc}{\contentsline {section}{\numberline {7.1}A Convex Analysis Primer}{65}{section.7.1}\protected@file@percent }
 \citation{Rockafellar1970}
 \citation{Rockafellar1970}
-\zref@newlabel{mdf@pagelabel-60}{\default{7.1}\page{66}\abspage{74}\mdf@pagevalue{66}}
+\zref@newlabel{mdf@pagelabel-64}{\default{7.1}\page{66}\abspage{74}\mdf@pagevalue{66}}
 \newlabel{cv:primer:sep}{{7.1}{66}{}{gtheorem.7.1}{}}
-\pgfsyspdfmark {pgfid60}{6882364}{35268125}
+\pgfsyspdfmark {pgfid64}{6882364}{35268125}
 \newlabel{cv:primer:prop}{{7.1}{66}{}{proposition.7.1}{}}
 \newlabel{cv:primer:prop:1}{{7.2}{66}{Sets}{equation.7.1.2}{}}
 \newlabel{cv:primer:prop:2}{{7.3}{66}{Sets}{equation.7.1.3}{}}
@@ -452,41 +464,41 @@
 \newlabel{cv:primer:prop:3}{{7.4}{67}{Sets}{equation.7.1.4}{}}
 \newlabel{cv:cf}{{7.5}{67}{Functions}{equation.7.1.5}{}}
 \newlabel{cv:primer:mvthe}{{7.9}{67}{Functions}{equation.7.1.9}{}}
-\zref@newlabel{mdf@pagelabel-61}{\default{7.1}\page{68}\abspage{76}\mdf@pagevalue{68}}
-\pgfsyspdfmark {pgfid61}{6882364}{44808253}
-\zref@newlabel{mdf@pagelabel-62}{\default{7.1}\page{68}\abspage{76}\mdf@pagevalue{68}}
-\pgfsyspdfmark {pgfid62}{6882364}{38118687}
-\zref@newlabel{mdf@pagelabel-63}{\default{7.1}\page{68}\abspage{76}\mdf@pagevalue{68}}
+\zref@newlabel{mdf@pagelabel-65}{\default{7.1}\page{68}\abspage{76}\mdf@pagevalue{68}}
+\pgfsyspdfmark {pgfid65}{6882364}{44808253}
+\zref@newlabel{mdf@pagelabel-66}{\default{7.1}\page{68}\abspage{76}\mdf@pagevalue{68}}
+\pgfsyspdfmark {pgfid66}{6882364}{38118687}
+\zref@newlabel{mdf@pagelabel-67}{\default{7.1}\page{68}\abspage{76}\mdf@pagevalue{68}}
 \newlabel{cv:primer:lem}{{7.1}{68}{}{flemma.7.1}{}}
-\pgfsyspdfmark {pgfid63}{6882364}{24960857}
+\pgfsyspdfmark {pgfid67}{6882364}{24960857}
 \citation{Mordukhovich2022}
 \citation{Mordukhovich2022}
 \newlabel{def:convex_conjugate}{{7.12}{69}{Functions}{equation.7.1.12}{}}
 \citation{Mordukhovich2022}
 \citation{Mordukhovich2022}
-\zref@newlabel{mdf@pagelabel-64}{\default{7.1}\page{70}\abspage{78}\mdf@pagevalue{70}}
-\pgfsyspdfmark {pgfid64}{6882364}{37816377}
-\zref@newlabel{mdf@pagelabel-65}{\default{7.1}\page{70}\abspage{78}\mdf@pagevalue{70}}
+\zref@newlabel{mdf@pagelabel-68}{\default{7.1}\page{70}\abspage{78}\mdf@pagevalue{70}}
+\pgfsyspdfmark {pgfid68}{6882364}{37816377}
+\zref@newlabel{mdf@pagelabel-69}{\default{7.1}\page{70}\abspage{78}\mdf@pagevalue{70}}
 \newlabel{cvxa_conjugate_chain_rule}{{7.3}{70}{}{gtheorem.7.3}{}}
-\pgfsyspdfmark {pgfid65}{6882364}{26012593}
+\pgfsyspdfmark {pgfid69}{6882364}{26012593}
 \newlabel{cv:cc:ex}{{7.1}{70}{}{example/.7.1}{}}
 \BKM@entry{id=42,dest={73656374696F6E2E372E32},srcline={260}}{5C3337365C3337375C303030445C303030755C303030615C3030306C5C303030695C303030745C303030795C3030305C3034305C3030306F5C303030665C3030305C3034305C3030304F5C303030705C303030745C303030695C3030306D5C303030615C3030306C5C3030305C3034305C303030535C3030306F5C3030306C5C303030755C303030745C303030695C3030306F5C3030306E5C30303073}
 \citation{Tseng1991}
 \citation{Rockafellar1970}
 \citation{Tseng1991}
 \@writefile{toc}{\contentsline {section}{\numberline {7.2}Duality of Optimal Solutions}{72}{section.7.2}\protected@file@percent }
-\zref@newlabel{mdf@pagelabel-66}{\default{7.2}\page{72}\abspage{80}\mdf@pagevalue{72}}
-\newlabel{cv:ts:asu}{{2}{72}{}{fassumption.2}{}}
-\pgfsyspdfmark {pgfid66}{6882364}{17844932}
-\zref@newlabel{mdf@pagelabel-67}{\default{7.2}\page{72}\abspage{80}\mdf@pagevalue{72}}
+\zref@newlabel{mdf@pagelabel-70}{\default{7.2}\page{72}\abspage{80}\mdf@pagevalue{72}}
+\newlabel{cv:ts:asu}{{3}{72}{}{fassumption.3}{}}
+\pgfsyspdfmark {pgfid70}{6882364}{17844932}
+\zref@newlabel{mdf@pagelabel-71}{\default{7.2}\page{72}\abspage{80}\mdf@pagevalue{72}}
 \newlabel{cv:ts:th}{{7.4}{72}{}{gtheorem.7.4}{}}
 \newlabel{cv:ts:primal}{{7.20}{72}{}{equation.7.2.20}{}}
-\pgfsyspdfmark {pgfid67}{6882364}{9517414}
+\pgfsyspdfmark {pgfid71}{6882364}{9517414}
 \citation{Rockafellar1970}
 \citation{Rockafellar1970}
-\zref@newlabel{mdf@pagelabel-68}{\default{7.2}\page{73}\abspage{81}\mdf@pagevalue{73}}
+\zref@newlabel{mdf@pagelabel-72}{\default{7.2}\page{73}\abspage{81}\mdf@pagevalue{73}}
 \newlabel{cv:ts:dual}{{7.21}{73}{}{equation.7.2.21}{}}
-\pgfsyspdfmark {pgfid68}{4746457}{39402596}
+\pgfsyspdfmark {pgfid72}{4746457}{39402596}
 \newlabel{cv:ts:comps}{{7.23}{73}{Plan of Proof}{equation.7.2.23}{}}
 \newlabel{cv:ts:pfea}{{7.24}{73}{Plan of Proof}{equation.7.2.24}{}}
 \newlabel{cv:ts:dfea}{{7.25}{73}{Plan of Proof}{equation.7.2.25}{}}

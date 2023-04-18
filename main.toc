@@ -9,16 +9,16 @@
 \contentsline {section}{\numberline {3.3}Basis Functions}{20}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Weights Process}{24}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Consistency of the Weights Process}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Propensitiy Score Function}{29}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Consistency of the Dual Solution}{29}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Main Result}{36}{section.4.3}%
+\contentsline {section}{\numberline {4.1}Inverse Propensity Score}{29}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Consistency of the Dual Solution}{31}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Main Result}{37}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Convergence of the Weighted Mean}{39}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Tools}{39}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Empirical Processes - Definition}{39}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Bracketing Numbers and Integral}{40}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Maximal Inequality}{47}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Donsker's Theorem}{48}{subsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.1.5}Propensity Score Weights}{49}{subsection.5.1.5}%
+\contentsline {section}{\numberline {5.1}Tools}{40}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Empirical Processes - Definition}{40}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Bracketing Numbers and Integral}{41}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Maximal Inequality}{48}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Donsker's Theorem}{49}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}Propensity Score Weights}{50}{subsection.5.1.5}%
 \contentsline {section}{\numberline {5.2}Main Result}{50}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Error Decomposition}{50}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Analysis of the Error Terms}{53}{section.5.4}%

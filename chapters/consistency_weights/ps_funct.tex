@@ -1,1 +1,235 @@
-Here is the Propensitiy Score.
+We defined the propensity score in \eqref{def:ps}.
+By assumption~\eqref{asu:treatment_asign_str_ing} 
+the inverse propensity score $1/\pi(X)$ is a well defined random variable that has good balancing properties. 
+The next lemma shows what effect the 
+\textbf{propensity score weights}
+$T/\pi(X)$ have on other functions.
+\begin{lemma}
+  \label{lem:ps_weights}
+  \label{ps_weights_lemma}
+  Let
+  $
+  g_1\colon
+  \mathcal{X}\to\R
+  $
+  and
+  $
+  g_2\colon
+  \mathcal{Y}\to\R
+  $
+  be a measurable functions such that $g_1(X)\in L^\infty(\P)$ and let \eqref{asu:treatment_asign_str_ing} hold true.
+  It holds
+  \begin{enumerate}[label=(\roman*)]
+    \item
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_1(X)
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    g_1(X)
+    \right]
+    \,.
+  \end{gather*}
+  \item
+  \begin{gather*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_2(Y(T))
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+    f(Y(1))
+    \right]
+    \,.
+  \end{gather*}
+  \end{enumerate}
+ \end{lemma}
+ \begin{proof}
+   Note, that $\pi(X)>0$ by assumption. Thus, $1/\pi(X)$ is a well defined random variable.
+Since $g_1(X)\in L^\infty(\P)$
+it holds
+\begin{align*}
+    \E
+    \left|
+    \frac{T}{\pi(X)}
+    g_1(X)
+    \right|
+    \ 
+    \le
+    \ 
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    \right]
+    \norm{
+    g_1(X)
+  }_{L^\infty(\P)}
+    \ 
+  =
+    \ 
+    \norm{
+    g_1(X)
+  }_{L^\infty(\P)}
+    \ 
+  <
+    \ 
+  \infty
+  \,.
+\end{align*}
+Thus, by the properties of conditional expectation it holds
+\begin{align*}
+    \E
+    \left[
+    \frac{T}{\pi(X)}
+    g_1(X)
+    \right]
+    \ 
+    =
+    \ 
+    \E
+    \left[
+      \E[T\,|\,X]
+    \frac{g_1(X)}{\pi(X)}
+    \right]
+    \ 
+    =
+    \ 
+    \E[g_1(X)]
+    \,.
+\end{align*}
+This proves \textit{(i)}.
+For \textit{(ii)}, note that
+\begin{align}
+  \begin{split}
+    \E
+    \left[ 
+g_2(Y(T))
+      \frac{T}{\pi(X)}
+    \right]
+  &\ =\ 
+  \E
+  \left[ 
+g_2(Y(1))
+    \,
+    /
+    \,
+    \pi(X)
+    \,
+    \vert
+    \,
+    T=1
+  \right]
+  \cdot
+  \P[T=1]
+  \\
+  &\ =\ 
+  \int_\mathcal{X}
+  \E
+  \left[ 
+g_2(Y(1))
+    \,
+    \vert
+    \,
+    X=x
+    ,
+    T=1
+  \right]
+  \cdot
+  (
+  \P[T=1]
+  \,
+  /
+  \,
+  \pi(x)
+  )
+  \,
+  \P_{X|T}(dx\,|\,1)
+  \\
+  &\ =\ 
+  \int_\mathcal{X}
+  \left[ 
+g_2(Y(1))
+    \vert
+    X=x
+  \right]
+  \P_X(dx)
+  =
+  \E[
+g_2(Y(1))
+  ]
+\,.
+\end{split}
+\end{align}
+The first, second and last equality stem from 
+$
+  T\in \left\{ 0,1 \right\}
+$,
+and the law of total expectation, applied with $T$ and $X$.
+The fourth equality is justified by 
+\eqref{asu:treatment_asign_str_ing}.
+The density transformation is due to Bayes's Theorem.
+ \end{proof}
+ Before we go on, we make some assumptions on the inverse propensity score that we will need in Chapter~5.
+ To this end, let 
+ \begin{align*}
+   J_N
+   :=
+   \left\{ j\in\mathbb{N}\colon
+     \P[X\in A_{n,j}]>0
+   \right\}
+   \qquad
+   \text{for all}\ 
+   N\in \mathbb{N}
+   \,.
+ \end{align*}
+ Note, that we define the function space $C^\alpha_M(\mathcal{Z})$ in
+\eqref{def:c_alpha}.
+Let $\mathrm{cl}\, A$ denote the closure of a set $A\subset \R^d$.
+\index{$\mathrm{cl}(\cdot)$, closure of a set}
+ \begin{assumption}
+   \label{asu:x_finite}
+   It holds
+   \begin{enumerate}[label=(\roman*)]
+     \item 
+       $\# J_N<\infty$ for all $N\in\mathbb{N}$
+\item
+  For all $N\in\mathbb{N}$ there exist $(M_{N,j})_{j\in J_N}$ such that $\infty>M_{N,j}\ge 0$ for all $j\in J_n$, and 
+  $\frac{1}{\pi(\cdot)}\in C^\alpha_{M_{N,j}}(\mathrm{cl}\,A_{N,j})$ for all $(j,N)\in J_N\times \mathbb{N}$, with $\alpha>d/2$.
+   \end{enumerate}
+ \end{assumption}
+ \begin{remark}
+   Assumption~\ref{asu:x_finite}.\textit{(i)} says that the covariate space $\mathcal{X}\subset \R^d$ is finite.
+   We need this to derive bracketing numbers in Lemma~\ref{lem:x_finite}.
+   Assumption~\ref{asu:x_finite}.\textit{(ii)} is a regularity condition on the inverse propensity score function restricted to the (finite) partition cells covering $\mathcal{X}$.
+   We need this to derive bracketing numbers in Lemma~\ref{lem:br_n_st}.
+ \end{remark}
+ We finish with a lemma about uniform continuity.
+ \begin{lemma}
+   \label{lem:ips_unif_cont}
+   Let Assumption~\eqref{asu:treatment_asign_str_ing} and Assumption~\ref{asu:x_finite} hold true.
+   Then the function 
+   \begin{align*}
+     x\mapsto 
+     \varphi^{'}
+     \left( \frac{1}{\pi(x)} \right)
+   \end{align*}
+   is uniformly continuous on all $A_{N,j}$ with $j\in J_N$.
+ \end{lemma}
+ \begin{proof}
+   That the function is well defined follows from \eqref{asu:treatment_asign_str_ing}.
+   The uniform continuity follows from the continuity of $1/\pi$ on the bounded 
+   and closed sets $\mathrm{cl} A_{N,j}$ and the uniform continuity of 
+   $
+   \varphi^{'}
+   $ (see Lemma~\ref{lem:obj_f}).
+ \end{proof}
