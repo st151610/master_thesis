@@ -1328,10 +1328,6 @@ INPUT ./chapters/conv_mean/donsker_theo.tex
 INPUT chapters/conv_mean/donsker_theo.tex
 INPUT ./chapters/conv_mean/donsker_theo.tex
 INPUT chapters/conv_mean/donsker_theo.tex
-INPUT ./chapters/conv_mean/ps_weights.tex
-INPUT chapters/conv_mean/ps_weights.tex
-INPUT ./chapters/conv_mean/ps_weights.tex
-INPUT chapters/conv_mean/ps_weights.tex
 INPUT ./chapters/conv_mean/main_theo.tex
 INPUT chapters/conv_mean/main_theo.tex
 INPUT ./chapters/conv_mean/main_theo.tex
