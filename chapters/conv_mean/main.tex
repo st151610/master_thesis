@@ -4,9 +4,8 @@ Is there a worse estimator of the distribution function than the empirical distr
 Yes, a weighted empirical distribution function.
 It depends on the weights.
 
-We made an effort to show that the weights of this method are consistent estimators of the best possible weights - the ones created from the inverse propensity score.
-Now it's time to analyse the weighted distribution function - and hope for the best.
-Loosely speaking, if 
+In Chapter~4 we show that the optimal weights of Problem~\ref{bw:1:primal} are consistent estimators of the best possible weights - the inverse propensity score weights.
+If Assumption~\ref{asu:treatment_asign_str_ing} holds, by the law of large numbers or by the central limit theorem it holds
 \begin{align*}
   &
   \frac{1}{N}
@@ -27,9 +26,11 @@ Loosely speaking, if
   \frac{T_i}{\pi(X_i)}f(Y_i(T_i))
   \qquad
   \text{converges in distribution}
+  \,.
 \end{align*}
-we expect, by the consistency of the weights for the inverse propensity score, the same behaviour of the weighted mean.
-To be more precise, we could try the following error decomposition
+By the consistency of the weights, we hope to recover the good asymptotic behaviour of the propensity score weights.
+To prove this,
+we could try the following error decomposition.
 \begin{align*}
   &
   \frac{1}{N}
@@ -74,8 +75,8 @@ To be more precise, we could try the following error decomposition
 \end{align*}
 Clearly, the second term goes to 0 in probability.
 Since the difference in the first term goes to 0, by the consistency of the weights, we would expect the first term also to be well behaved.
-It turns out that something similar is the case (only the argument is much more involved).
-But the high-level idea remains that the best possible weights, the propensity score weights, are well behaved and the weights  of Problem~\ref{bw:1:primal} approximate them (reasonably) well.
+It turns out that something similar is the case for an estimate of the distribution function of $Y(1)$ (only the argument is much more involved).
+The high-level idea remains that the best possible weights, the propensity score weights, are well behaved and the weights of Problem~\ref{bw:1:primal} approximate them (reasonably) well.
 
 Throughout this section we use the following notation.
 Let $F_{Y(1)}$ denote the distribution function of $Y(1)$, that is,
@@ -141,7 +142,7 @@ to estimates of the distribution function $F_{Y(1)}$ of $Y(1)$.
 We do this in Lemma~\ref{aa:mean:lemma_decomp}.
 With this modification, we aim at proving
 the convergence of
-\begin{gather}
+\begin{gather*}
     \sqrt{N}
     \left( 
   \frac{1}{N}
@@ -155,7 +156,7 @@ the convergence of
     \right)
     _{z\in\R}
     \,
-  \end{gather}
+  \end{gather*}
   in
   $l^\infty(\R)$
   to a Gaussian process with mean 0 and covariance specified in Theorem~\ref{th:main}.
