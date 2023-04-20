@@ -1,62 +1,62 @@
 \begin{theindex}
 
-  \item $A_N$, cell of the partition $\mathcal{P}_N$, 20
-  \item $B$, vector of basis functions of the covariates, 8, 20
+  \item $A_N$, cell of the partition $\mathcal{P}_N$, 22
+  \item $B$, vector of basis functions of the covariates, 8, 22
   \item $D_N$, (random) data set without observed outcome, 7
   \item $F_{Y(1)}$, distribution function of the potential outcome under treatment, 
-		39
+		44
   \item $F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment, 
-		40
+		44
   \item $T$, indicator of treatment, 3
   \item $X$, covariates vector, 3
   \item $Y(0),Y(1)$, potential outcomes, 3
   \item $[x]^+$, positive part of $x\in\R$, 14
   \item $\delta$, (random) constraints vector , 8
   \item $\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   , 
-		25
-  \item $\mathbf{1_A}$, indicator function of the set $A$, 21
+		27
+  \item $\mathbf{1_A}$, indicator function of the set $A$, 23
   \item $\mathbf{B}(\mathbf{X})$, matrix of basis functions of the treated, 
 		12
   \item $\mathbf{I}_N$, the $N$-dimensional unit matrix, 12
-  \item $\mathcal{P}_N$, partition of $\R^d$, 20
-  \item $\mathrm{aff(\cdot)}$, affine hull, 66
-  \item $\mathrm{cl}(\cdot)$, closure of a set, 30
-  \item $\mathrm{dom}\,f$, domain of a convex function, 67
-  \item $\mathrm{ri}(\cdot)$, relative interior, 66
+  \item $\mathcal{P}_N$, partition of $\R^d$, 22
+  \item $\mathrm{aff(\cdot)}$, affine hull, 74
+  \item $\mathrm{cl}(\cdot)$, closure of a set, 32
+  \item $\mathrm{dom}\,f$, domain of a convex function, 75
+  \item $\mathrm{ri}(\cdot)$, relative interior, 74
   \item $\pi$, propensity score, 3
-  \item $\sigma_\omega$, support function, 68
+  \item $\sigma_\omega$, support function, 76
   \item $\varphi$, objective function of Problem~\ref{bw:1:primal}, 8
-  \item $e_i$, $i$-the unit vector, 34
-  \item $f\square g$, infimal convolution of $f$ and $g$, 68
-  \item $f^*$, convex conjugate of $f$, 69
+  \item $e_i$, $i$-the unit vector, 37
+  \item $f\square g$, infimal convolution of $f$ and $g$, 76
+  \item $f^*$, convex conjugate of $f$, 78
   \item $n$, (random) number of treated units, 7
 
   \indexspace
 
-  \item    $ \partial f(x)   $,   subdifferential of $f$ at $x$ , 67
+  \item    $ \partial f(x)   $,   subdifferential of $f$ at $x$ , 76
   \item  $\mathrm{0}_N$ and $\mathrm{1}_N$, the $N$-dimensional vectors containing only zeros or ones. , 
 		12
   \item  $C^\alpha_M(\mathcal{Z})$, certain space of continuous functions , 
-		45
+		49
 
   \indexspace
 
-  \item affine set, 66
+  \item affine set, 74
 
   \indexspace
 
-  \item conjugate chain rule, 70
-  \item conjugate sum rule, 70
-  \item convex function, 67
-  \item convex set, 65
+  \item conjugate chain rule, 79
+  \item conjugate sum rule, 78
+  \item convex function, 75
+  \item convex set, 73
 
   \indexspace
 
-  \item proper (convex) function, 67
+  \item proper (convex) function, 76
 
   \indexspace
 
-  \item strictly convex, 67
-  \item subgradient, 67
+  \item strictly convex, 75
+  \item subgradient, 76
 
 \end{theindex}

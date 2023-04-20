@@ -1056,7 +1056,6 @@ INPUT /usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlib
 INPUT /usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 INPUT /usr/share/texmf-dist/tex/latex/tools/calc.sty
-OUTPUT main.nlo
 INPUT /usr/share/texmf-dist/tex/latex/mdframed/mdframed.sty
 INPUT /usr/share/texmf-dist/tex/latex/mdframed/mdframed.sty
 INPUT /usr/share/texmf-dist/tex/latex/mdframed/mdframed.sty

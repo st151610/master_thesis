@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1681968620 "main.aux" "main.bbl" "main" 1681968667 0
+["bibtex main"] 1681970790 "main.aux" "main.bbl" "main" 1681970798 0
   "./literature.bib" 1681887742 79858 f1c0919deca5bd0002f86aae84e0d5f5 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1680514707 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1681968666 41355 baaffa58eae0b4d56b3c98d6528af782 "pdflatex"
+  "main.aux" 1681970798 42138 8c8c46116c5e6cf2b5bb31a8af53416a "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1681906303 "main.idx" "main.ind" "main" 1681968667 0
-  "main.idx" 1681968666 2203 61742d7d4d7bfcd594f631ab1343e656 "pdflatex"
+["makeindex main.idx"] 1681969664 "main.idx" "main.ind" "main" 1681970798 0
+  "main.idx" 1681970797 2203 fbc3b23311f5e6072ec393fe3adfad1c "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1681968659 "main.tex" "main.pdf" "main" 1681968667 0
+["pdflatex"] 1681970790 "main.tex" "main.pdf" "main" 1681970798 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1680514707 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1680514707 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1680514707 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -278,17 +278,16 @@
   "chapters/weights_process/meas_argmax.tex" 1681808936 2996 27049f14bdba157c6ae0dd87840c9e4d ""
   "chapters/weights_process/meas_dual_sol.tex" 1681809640 3848 27a8f32defe9d9a8fbd69067c35f5c39 ""
   "chapters/weights_process/weights_process.tex" 1681811603 9292 173bb1ee73f01517447204054bde8d17 ""
-  "main.aux" 1681968666 41355 baaffa58eae0b4d56b3c98d6528af782 "pdflatex"
-  "main.bbl" 1681968620 5449 fdfc1e54484ea6eac35164800a849606 "bibtex main"
-  "main.ind" 1681968666 2088 b223fca8ee76f5e8a220c726f781a9f0 "makeindex main.idx"
-  "main.out" 1681968661 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1681968658 9398 269fb98fc8dab1a1bc283bf224ae5979 ""
-  "main.toc" 1681968666 5659 563ec58f67b42c65a5cc62865f32c563 "pdflatex"
+  "main.aux" 1681970798 42138 8c8c46116c5e6cf2b5bb31a8af53416a "pdflatex"
+  "main.bbl" 1681970790 5449 fdfc1e54484ea6eac35164800a849606 "bibtex main"
+  "main.ind" 1681970798 2088 50cb49195dc3c5326703c0477bc9d0a0 "makeindex main.idx"
+  "main.out" 1681970792 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1681970781 9399 c97bcb0c4bee88fc30d9e31e1ce75523 ""
+  "main.toc" 1681970798 5659 ade83f16daaff028622b49f5bb76668c "pdflatex"
   (generated)
   "main.aux"
   "main.idx"
   "main.log"
-  "main.nlo"
   "main.out"
   "main.pdf"
   "main.toc"
