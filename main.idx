@@ -1,9 +1,10 @@
+\indexentry{$(\Omega,\mathcal{A},\P)$, generic probability space}{3}
 \indexentry{$T$, indicator of treatment}{3}
 \indexentry{$X$, covariates vector}{3}
 \indexentry{$Y(0),Y(1)$, potential outcomes}{3}
 \indexentry{$\pi$, propensity score}{3}
 \indexentry{$D_N$, (random) data set without observed outcome}{7}
-\indexentry{$n$, (random) number of treated units}{7}
+\indexentry{$n$, (random) number of treated units}{8}
 \indexentry{$B$, vector of basis functions of the covariates}{8}
 \indexentry{$\delta$, (random) constraints vector }{8}
 \indexentry{$\varphi$, objective function of Problem~\ref{bw:1:primal}}{8}

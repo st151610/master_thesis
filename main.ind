@@ -1,5 +1,6 @@
 \begin{theindex}
 
+  \item $(\Omega,\mathcal{A},\P)$, generic probability space, 3
   \item $A_N$, cell of the partition $\mathcal{P}_N$, 22
   \item $B$, vector of basis functions of the covariates, 8, 22
   \item $D_N$, (random) data set without observed outcome, 7
@@ -29,7 +30,7 @@
   \item $e_i$, $i$-the unit vector, 37
   \item $f\square g$, infimal convolution of $f$ and $g$, 76
   \item $f^*$, convex conjugate of $f$, 78
-  \item $n$, (random) number of treated units, 7
+  \item $n$, (random) number of treated units, 8
 
   \indexspace
 

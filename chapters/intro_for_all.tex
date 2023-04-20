@@ -86,16 +86,17 @@ Both methods share the goal to minimize imbalances in the population
 and make the two groups, that is, treatment and control (no treatment) group more comparable.
 Let's introduce some notation to be more precise.
 
+Let $(\Omega,\mathcal{A},\P)$ be a (generic) probability space.
+The following quantities are random variables or random vectors defined on this probability space.
+\index{$(\Omega,\mathcal{A},\P)$, generic probability space}
 Let $T\in \left\{ 0,1 \right\}$ be the \textbf{indicator of treatment}. 
 \index{$T$, indicator of treatment}
 Let $X\in\mathcal{X}$ be a vector with individual characteristics. We call this the \textbf{covariate vector}. 
 \index{$X$, covariates vector}
-
 Furthermore, let $(Y(0),Y(1))$ be the \textbf{potential outcomes}, that is, $Y(0)$ is the potential outcome under no treatment and $Y(1)$ the potential outcome under treatment.
-All the quantities we introduce are random variables.
 \index{$Y(0),Y(1)$, potential outcomes}
 
-We define the propensity score $\pi$ with individual characteristics $x\in\mathcal{X}$ to be
+Next, we define the propensity score $\pi$ with individual characteristics $x\in\mathcal{X}$ to be
 \index{$\pi$, propensity score}
 \begin{gather}
   \label{def:ps} 
@@ -143,16 +144,16 @@ That is, by weighting the observed outcome under treatment with the inverse prop
 This is relevant, because 
 $Y(t)|T=t$ does not have the same distribution as $Y(t)$ for $t\in \left\{ 0,1 \right\}$.
 
-In observational studies - independent of which method is applied, that is, matching, weighting ore other methods -
+In observational studies --- independent of which method is applied, that is, matching, weighting ore other methods ---
 the propensity score is unknown.
-This is because we can't assign treatment. We only observe the treated or untreated. Who assigned treatment is a philosophical question - at least to some extent.
+This is because we can't assign treatment. We only observe the treated or untreated. Who assigned treatment is a philosophical question --- at least to some extent.
 
-It used to be very popular to use estimates of the propensity score - either for matching or to create weights or for some other purpose.
+It used to be very popular to use estimates of the propensity score --- either for matching or to create weights or for some other purpose.
 In weighting, the hope is to recover \eqref{ipw} from the estimate.
 In practice, however, estimating the propensity score is a difficult task.
 Researchers often compare estimates from different models and check for covariate balance. 
-This is not surprising, because that's what the weights are designed for - minimizing imbalances in the population.
-The poor performance of classical propensity score estimates, such as logistic regression - and the insight that the task is to eliminate imbalances -
+This is not surprising, because that's what the weights are designed for --- minimizing imbalances in the population.
+The poor performance of classical propensity score estimates, such as logistic regression --- and the insight that the task is to eliminate imbalances -
 led to the development of methods, such as the Covariate Balancing Propensity Score \cite{Imai2014a} that tries to 
 estimate the propensity score and balance covariates simultaneously (the name is indicative).
 
@@ -178,7 +179,7 @@ The constraints responsible are of the form
 \end{gather}
 where $B_k$ are basis functions of the covariates.
 The aim is to balance the weighted group (here the treatment group) against the whole sample.
-The basis functions can be moments of the covariates - a natural aim. 
+The basis functions can be moments of the covariates --- a natural aim. 
 But it is a non-trivial question, which basis to choose in practice to obtain best performance.
 How strictly to enforce covariate balance is another question.
 It is relevant, because very strict assumptions can render the problem infeasible, whereas loosening can result in bias of the estimator.
@@ -219,7 +220,7 @@ I show, that (under mild assumptions) with the regression basis of partitioning 
 By the functional delta method
 \cite[§20]{Vaart2000} results of this thesis immediately open access to a large class of plug-in estimators.
 Therefore,
-with this thesis I contribute to one of the main purposes in causal inference -- reinforcing classical methods of statistical analysis for use in observational studies.
+with this thesis I contribute to one of the main purposes in causal inference --- reinforcing classical methods of statistical analysis for use in observational studies.
 
 
 

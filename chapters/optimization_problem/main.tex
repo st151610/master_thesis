@@ -3,17 +3,17 @@ to generate weights for covariate balance.
 %
 We discussed this in the introduction.
 %
-Now, we introduce the balancing weights framework of \cite{Wang2019}.
+Now, we introduce the balancing weights framework of Wang and Zubizarreta~\cite{Wang2019}.
 %
-It is a (generic) convex optimization problem
+It consists of a (generic) convex optimization problem
 that enforces covariate balance by constraints on the search space.
 %
-Similar to classical propensity score estimates, it only
-extracts from the data information about treatment status and individual characteristics.
+Similar to classical propensity score estimates, it
+extracts from the data only information about treatment status and individual characteristics.
 %
-It ignores the outcome.
+The outcome is ignored.
 %
-This gives the additional option to balance covariates before observing outcomes.
+This gives the additional option to balance covariates before observing outcomes or use the same set of weights for inference on different outcomes.
 
 %
 The primary optimization task is to minimize an objective function
@@ -31,8 +31,9 @@ Both objective function and design of the constraints distinguish the method.
 %
 
 After introducing the problem, we shall derive it's dual formulation in the spirit of Theorem~\ref{cv:ts:th}.
-This transformation gives us the chance to analyse the initial problem by it's dual problem.
-We adopt ideas from \cite{Wang2019} that show how to analyse the dual problem and connect the results to the initial problem.
+This transformation gives us the chance to analyse the initial problem by a problem with simpler constraints but more complicated objective function.
+It turns out that this is the right way to go.
+We adopt ideas from \cite{Wang2019, Tseng1991} that show how to analyse the dual problem and link the results back to the original problem. 
 \section{Introduction}
 \input{chapters/optimization_problem/intro.tex}
 \input{chapters/optimization_problem/primal_problem.tex}
