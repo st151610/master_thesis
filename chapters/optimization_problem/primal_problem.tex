@@ -1,10 +1,15 @@
+Let 
+$
+\overline{\R}:=\R\cup \left\{ +\infty \right\}
+$
+be the extended real numbers.\index{$\overline{\R}$, extended real numbers}
 For a 
 \begin{align*}
   \text{
 (proper) convex function
   }
   \qquad
-  \varphi\ \colon\  \R\ \to\ \R\cup \left\{ +\infty \right\}
+  \varphi\ \colon\  \R\ \to\overline{\R} 
   \,,
 \end{align*}
 a vector of $N$ basis functions of the covariates\index{$B$, vector of basis functions of the covariates} 
@@ -72,6 +77,7 @@ we consider the following (random) convex optimization problem.
     =
     \ 
     1
+    \,,
     \\
     %%%% box constraints %%%%
     & 
@@ -128,7 +134,7 @@ Note that sometimes we use the equivalent notation
     \,,
 \end{gather*}
 where we set the weights of the untreated (the ones with $T_i=0$) to some arbitrary value in the domain of $\varphi$.
-Let's consider the \textbf{constraints}. There is no randomness in the first two constraints.
+Let's consider the \textbf{constraints}. There is no randomness in the first two constraints
 \begin{gather*}
     w_i 
     \ 
@@ -182,7 +188,7 @@ or that a weighted empirical distribution function satisfies
 \end{gather*}
 We talked about the covariate balancing constraint
 in the introduction
-(we shall call them the \textbf{box constraints}, because of the absolute value).
+(we shall call them the \textbf{box constraints}, because of the absolute value):
 \begin{gather*}
     \left| 
       \frac{1}{N} 

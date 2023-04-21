@@ -1,4 +1,12 @@
-For this, we need some more notation. Let $\mathbf{I}_n$ be the $n$-dimensional unit matrix\index{$\mathbf{I}_N$, the $N$-dimensional unit matrix}, 
+In the previous section we have expounded our choice of $\varphi$ --- and with it the objective function of Problem~\ref{bw:1:primal}.
+%
+Now, we want to apply Theorem~\ref{cv:ts:th} to Problem~\ref{bw:1:primal}.
+%
+To this end, we provide its proper formulation.
+%
+For this we need some more notation. 
+
+Let $\mathbf{I}_n$ be the $n$-dimensional unit matrix\index{$\mathbf{I}_N$, the $N$-dimensional unit matrix}, 
 $\mathrm{0}_n$ and $\mathrm{1}_n$ the $n$-dimensional vectors containing only zeros or ones.
 \index{
 $\mathrm{0}_N$ and $\mathrm{1}_N$, the $N$-dimensional vectors containing only zeros or ones.
@@ -16,12 +24,11 @@ Furthermore, we define the matrix of basis functions \textbf{of the treated} to 
     \in\R^{N\times n}
     \,.
 \end{gather*}
-Note, that these are random quantities and that the size of $\mathbf{B}(\mathbf{X})$ depends on the random size $n\in\mathbb{N}$ of the treatment group in the sample.
+Note that the size of $\mathbf{B}(\mathbf{X})$ depends on the random size $n\in\mathbb{N}$ of the treatment group in the sample.
 \begin{lemma}
   \label{matrix_notation}
   A matrix formulation of Problem~\ref{bw:1:primal} is 
-\begin{align}
-  \label{cv:ts:primal}
+\begin{align*}
   %%%% objective %%%%
     &\underset{w \in \R^n}
     {\mathrm{minimize}}
@@ -49,7 +56,7 @@ Note, that these are random quantities and that the size of $\mathbf{B}(\mathbf{
     \ 
     a
     \,,
-\end{align}
+\end{align*}
 with objective function
 \begin{gather*}
   \Phi
@@ -151,20 +158,24 @@ d
       \sum_{i = 1}^{n} 
       w_i
       B_k(X_i)
+      \ 
     \ge 
+      \ 
     -
     N
     \delta_k
       -
       \sum_{i=1}^{N} 
       B_k(X_i)
-      \quad 
+      \qquad 
     \text{and}
-      \quad
+      \qquad
       \sum_{i = 1}^{n} 
       w_i
       B_k(X_i)
+      \ 
     \ge 
+      \ 
     -
     N
     \delta_k
@@ -195,17 +206,8 @@ d
   \cite[Proof of Lemma~1]{Wang2019} leads to a mistake on page 21.
   The mistake is most obvious in the second display, where the first implication follows from dividing by 0.
   I discussed this with the authors and proposed a version of Lemma\ref{matrix_notation} to solve the problem. I think it's best not to transform variables, because the mistake comes from (wrongly) calculating the convex conjugate of the (more complicated) transformed version of the objective function. The subsequent analysis even simplifies with my version.
-
   I was surprised to find the (exact) same mistake in the earlier paper 
   \cite[page 35 second display]{Chan2016}. 
-  There is no reference in
-  \cite[Proof of Lemma~1]{Wang2019} 
-  to
-  \cite{Chan2016}. Yet the formulation and the mistake are the same.
-  Did the authors of \cite{Wang2019} (inadvertently?) plagiarize
-  the mathematical analysis of 
-  \cite{Chan2016}
-  ?
 \end{remark}
 %
 In the next lemma we apply Theorem~\ref{cv:ts:th} to Problem~\ref{bw:1:primal}.
@@ -664,7 +666,7 @@ Consider
   \end{align*}
   which contradicts the optimality of
 $
-  (\rho^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger},\lambda_0^\dagger)
+  (\rho^\dagger,\lambda_0^\dagger,\lambda^{+,\dagger},\lambda^{-,\dagger})
 $
 (it is supposed to be a maximum in the domain of the optimization problem)
 .
@@ -763,27 +765,63 @@ new $\rho_i$ are not effective because of $T_i=0$ for all $i>n$.
 Thus we may set them to an arbitrary value.
 \end{proof}
 \begin{remark}
-  This is the final form of the dual of Problem~\ref{bw:1:primal}.
-  Since the constraints in the dual problem are elementary,
-  a result such as Lemma~\ref{lem:link_conv_p}
-  keeps the initiative going.
   The dual variables $(\rho,\lambda_0,\lambda)$ are connected to the constraints of Problem~\ref{bw:1:primal}, that is,
-  $\rho\in\R^N_{\ge 0}$
-  to
-  $T_i\cdot w_i\ge 0$ for all $i\in \left\{ 1,\ldots,N \right\}$,
-  $\lambda_0\in\R$ 
-  to 
-  $
+  \begin{align*}
+    \rho&\in\R^N_{\ge 0}
+  &&
+  \qquad
+  \text{to}
+  \qquad
+  \ 
+  T_i\cdot w_i\ge 0
+  \qquad
+  \text{for all}\ i\in \left\{ 1,\ldots,N \right\}
+  \,,
+  \\
+    \lambda_0&\in\R
+  &&
+  \qquad
+  \text{to}\qquad
+  \ 
   \frac{1}{N}
   \sum_{i=1}^{N} 
   T_i\cdot w_i
   -
   1
+  \ 
   =
+  \ 
   0
-  $,
-  and
-  $\lambda\in\R^N$ to the $N$ box constraints.
+  \,,
+  \\
+    \lambda&\in\R^N 
+  &&
+  \qquad
+  \text{to}\qquad
+    \left| 
+      \frac{1}{N} 
+      \left( 
+      \sum_{i = 1}^{n} 
+      w_i
+      \cdot
+      B_k(X_i)
+      \ 
+      -
+      \ 
+      \sum_{i=1}^{N} 
+      B_k(X_i)
+      \right)
+    \right|
+    \ 
+    \le 
+    \ 
+    \delta_k
+    \qquad
+    \text{for all}\ 
+    k \in \left\{ 1, \ldots, N \right\}
+    \,.
+  \end{align*}
+  Note that we shifted the complexity of the constraints of Problem~\ref{bw:1:primal} to the objective function of Problem~\ref{dual}. In Lemma~\ref{lem:link_conv_p} we derive sufficient conditions for the existence of an optimal solution. The second point of this lemma is that the solution (if it exists) is close to some oracle parameter $\lambda^*$. It turns out that by this we can derive consistency of optimal (dual) solutions for the oracle parameter (see Theorem~\ref{th:cons_dual}). In the end, by the functional relationship of dual and primal solutions (see Theorem~\ref{dual_solution_th}), we can derive consistency of the optimal weights for the inverse propensity score. This is done in Chapter~\ref{ch:consis}.
 \end{remark}
 As an example for the interested reader and as transition to the next section, we show how $\rho$ is linked to the first constraint of Problem~\ref{bw:1:primal}. 
 \begin{lemma}
@@ -863,7 +901,7 @@ Furthermore, the unique optimal solutions to Problem~\ref{bw:1:primal} are
   \end{align*}
   By Lemma~\ref{lem:obj_f} it follows
   \begin{align*}
-    \rho_i
+    \rho_i^\dagger
     \ 
     =
     \ 
@@ -875,7 +913,7 @@ Furthermore, the unique optimal solutions to Problem~\ref{bw:1:primal} are
     \right)
     \,.
   \end{align*}
-  If on the other hand $\rho_1=0$, then by the complementary slackness it follows
+  If on the other hand $\rho_i^\dagger=0$, then by the complementary slackness it follows
   \begin{align*}
     w_i^\dagger
     \ 

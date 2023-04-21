@@ -1,39 +1,41 @@
-\indexentry{$(\Omega,\mathcal{A},\P)$, generic probability space}{3}
+\indexentry{$(\Omega,\mathcal{A},\P)$, generic probability space}{2}
 \indexentry{$T$, indicator of treatment}{3}
 \indexentry{$X$, covariates vector}{3}
 \indexentry{$Y(0),Y(1)$, potential outcomes}{3}
 \indexentry{$\pi$, propensity score}{3}
-\indexentry{$D_N$, (random) data set without observed outcome}{7}
-\indexentry{$n$, (random) number of treated units}{8}
-\indexentry{$B$, vector of basis functions of the covariates}{8}
-\indexentry{$\delta$, (random) constraints vector }{8}
-\indexentry{$\varphi$, objective function of Problem~\ref{bw:1:primal}}{8}
-\indexentry{$\mathbf{I}_N$, the $N$-dimensional unit matrix}{12}
-\indexentry{ $\mathrm{0}_N$ and $\mathrm{1}_N$, the $N$-dimensional vectors containing only zeros or ones. }{12}
-\indexentry{$\mathbf{B}(\mathbf{X})$, matrix of basis functions of the treated}{12}
-\indexentry{$[x]^+$, positive part of $x\in\R$}{14}
-\indexentry{$B$, vector of basis functions of the covariates}{22}
-\indexentry{$\mathcal{P}_N$, partition of $\R^d$}{22}
-\indexentry{$A_N$, cell of the partition $\mathcal{P}_N$}{22}
-\indexentry{$\mathbf{1_A}$, indicator function of the set $A$}{23}
-\indexentry{$\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   }{27}
-\indexentry{$\mathrm{cl}(\cdot)$, closure of a set}{32}
-\indexentry{$e_i$, $i$-the unit vector}{37}
-\indexentry{$F_{Y(1)}$, distribution function of the potential outcome under treatment}{44}
-\indexentry{$F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment}{44}
-\indexentry{ $C^\alpha_M(\mathcal{Z})$, certain space of continuous functions }{49}
-\indexentry{convex set}{73}
-\indexentry{affine set}{74}
-\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{74}
-\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{74}
-\indexentry{convex function}{75}
-\indexentry{strictly convex}{75}
-\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{75}
-\indexentry{proper (convex) function}{76}
-\indexentry{subgradient}{76}
-\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{76}
-\indexentry{$\sigma_\omega$, support function}{76}
-\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{76}
-\indexentry{$f^*$, convex conjugate of $f$}{78}
-\indexentry{conjugate sum rule}{78}
-\indexentry{conjugate chain rule}{79}
+\indexentry{$N$, sample size}{5}
+\indexentry{$D_N$, (random) data set without observed outcome}{5}
+\indexentry{$n$, (random) number of treated units}{5}
+\indexentry{$\overline{\R}$, extended real numbers}{5}
+\indexentry{$B$, vector of basis functions of the covariates}{6}
+\indexentry{$\delta$, (random) constraints vector }{6}
+\indexentry{$\varphi$, objective function of Problem~\ref{bw:1:primal}}{6}
+\indexentry{$\mathbf{I}_N$, the $N$-dimensional unit matrix}{10}
+\indexentry{ $\mathrm{0}_N$ and $\mathrm{1}_N$, the $N$-dimensional vectors containing only zeros or ones. }{10}
+\indexentry{$\mathbf{B}(\mathbf{X})$, matrix of basis functions of the treated}{10}
+\indexentry{$[x]^+$, positive part of $x\in\R$}{11}
+\indexentry{$B$, vector of basis functions of the covariates}{17}
+\indexentry{$\mathcal{P}_N$, partition of $\R^d$}{18}
+\indexentry{$A_N$, cell of the partition $\mathcal{P}_N$}{18}
+\indexentry{$\mathbf{1_A}$, indicator function of the set $A$}{18}
+\indexentry{$\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   }{22}
+\indexentry{$\mathrm{cl}(\cdot)$, closure of a set}{26}
+\indexentry{$e_i$, $i$-the unit vector}{30}
+\indexentry{$F_{Y(1)}$, distribution function of the potential outcome under treatment}{35}
+\indexentry{$F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment}{35}
+\indexentry{ $C^\alpha_M(\mathcal{Z})$, certain space of continuous functions }{40}
+\indexentry{convex set}{61}
+\indexentry{affine set}{62}
+\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{62}
+\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{62}
+\indexentry{convex function}{63}
+\indexentry{strictly convex}{63}
+\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{63}
+\indexentry{proper (convex) function}{63}
+\indexentry{subgradient}{63}
+\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{63}
+\indexentry{$\sigma_\omega$, support function}{63}
+\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{63}
+\indexentry{$f^*$, convex conjugate of $f$}{65}
+\indexentry{conjugate sum rule}{65}
+\indexentry{conjugate chain rule}{65}
