@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1682165586 "main.aux" "main.bbl" "main" 1682165768 0
+["bibtex main"] 1682166285 "main.aux" "main.bbl" "main" 1682166653 0
   "./literature.bib" 1681905929 79858 f1c0919deca5bd0002f86aae84e0d5f5 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1680514707 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1682165768 41560 0f3ecf35c75c22173eb4e6453947ed78 "pdflatex"
+  "main.aux" 1682166653 41430 4de128f26e7499df3b2911191f35176a "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1682088681 "main.idx" "main.ind" "main" 1682165768 0
-  "main.idx" 1682165768 2360 22f44f88818deab3d4237a766df1750f "pdflatex"
+["makeindex main.idx"] 1682088681 "main.idx" "main.ind" "main" 1682166653 0
+  "main.idx" 1682166653 2360 22f44f88818deab3d4237a766df1750f "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1682165766 "main.tex" "main.pdf" "main" 1682165768 0
+["pdflatex"] 1682166651 "main.tex" "main.pdf" "main" 1682166653 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1680514707 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1680514707 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1680514707 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -239,7 +239,7 @@
   "chapters/consistency_weights/dual_consistency.tex" 1681204497 341 b46cc129491b12f4707388a5645513d8 ""
   "chapters/consistency_weights/lem_3.tex" 1681728989 797 26dab3af0cadcca1d0d6ebfed42375e6 ""
   "chapters/consistency_weights/lemma_1.tex" 1681204497 5684 075ea53bd76c5022a0c1a12065eb1938 ""
-  "chapters/consistency_weights/lemma_2.tex" 1681728989 11560 13ae17f0b6185e4e3b5dcc3002ef7747 ""
+  "chapters/consistency_weights/lemma_2.tex" 1682166281 11597 2d9f743437c16c356468dcf652c889b1 ""
   "chapters/consistency_weights/main.tex" 1681905929 1253 f8d123c465c701827dbc6192035f7a1e ""
   "chapters/consistency_weights/main_result.tex" 1682162640 3522 752e702e8a64fbc6070a627007038a59 ""
   "chapters/consistency_weights/ps_funct.tex" 1681905929 4772 c09008305a5ccccc274da8f7167524df ""
@@ -250,7 +250,7 @@
   "chapters/conv_mean/main.tex" 1682161969 5131 a91816459dc448b89e28ade6693f12e3 ""
   "chapters/conv_mean/main_theo.tex" 1681728989 792 559b3cd8dae4705ab04897920b0ffad2 ""
   "chapters/conv_mean/max_ineq.tex" 1681736675 4550 31584f5f91b2b67471689a69c45e560c ""
-  "chapters/conv_mean/proof_final_theo.tex" 1681906718 548 d42c5bdfd74c87fa4b95cc19efe91b08 ""
+  "chapters/conv_mean/proof_final_theo.tex" 1682166649 568 1a271ca28d25e349d3a7773eca3b8ecf ""
   "chapters/conv_mean/r_1.tex" 1682087114 4531 fed49a72ed90714f85d9dfc3b32c05a9 ""
   "chapters/conv_mean/r_2.tex" 1682087460 2562 bf24695aefa3e7ec3668fef68541e151 ""
   "chapters/conv_mean/r_3.tex" 1682164094 5442 9988a8c1dac0043352d5d6ddd8302991 ""
@@ -278,12 +278,12 @@
   "chapters/weights_process/meas_argmax.tex" 1681905929 2996 27049f14bdba157c6ae0dd87840c9e4d ""
   "chapters/weights_process/meas_dual_sol.tex" 1681905929 3848 27a8f32defe9d9a8fbd69067c35f5c39 ""
   "chapters/weights_process/weights_process.tex" 1681905929 9292 173bb1ee73f01517447204054bde8d17 ""
-  "main.aux" 1682165768 41560 0f3ecf35c75c22173eb4e6453947ed78 "pdflatex"
-  "main.bbl" 1682165586 5240 4117e0bcfefca2bff0f7aba4737b076d "bibtex main"
-  "main.ind" 1682165768 2230 c65e1b2daf255542289640ca2d2dd632 "makeindex main.idx"
-  "main.out" 1682165767 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1682166653 41430 4de128f26e7499df3b2911191f35176a "pdflatex"
+  "main.bbl" 1682166285 5240 4117e0bcfefca2bff0f7aba4737b076d "bibtex main"
+  "main.ind" 1682166653 2230 c65e1b2daf255542289640ca2d2dd632 "makeindex main.idx"
+  "main.out" 1682166651 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1682071956 9415 4e0942b7ed21a4ec8c821a54847eff19 ""
-  "main.toc" 1682165768 5657 0a850ac3cfc508cc64943f1afe7574a6 "pdflatex"
+  "main.toc" 1682166653 5657 0a850ac3cfc508cc64943f1afe7574a6 "pdflatex"
   (generated)
   "main.aux"
   "main.idx"

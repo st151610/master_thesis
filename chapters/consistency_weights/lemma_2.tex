@@ -887,9 +887,10 @@ it follows
 But this holds independently of the choice $\varepsilon>0$.
  \end{proof}
 \begin{remark}
-  The last proof is a simplification of the similar \cite[Proof of Lemma~2]{Wang2019}. There, the authors claim to derive concrete learning rates. Their proof is very obscure. The shortcomings range from missing assumptions on the eigenvalues of a Hessian matrix (needed to bound the quadratic term (first display of page 23) away from 0), to mixing up the terms in the conclusion (see \cite[page 25]{Wang2019}).
-  The application of matrix concentration inequalities additionally clouds the proof. 
-  I decided, to aim for less, that is, only consistency instead of concrete learning rates.
-  With this choice, a linear bound like \eqref{cv:primer:mvthe} suffices. Then I get rid of the quadratic Taylor expansion, assumptions on eigenvalues of a Hessian matrix and the application of matrix concentration inequalities.
+  The last proof is a simplification of the similar \cite[Proof of Lemma~2]{Wang2019}. There, the authors claim to derive concrete learning rates. 
+  But their proof seems to be missing some assumptions. To bound the quadratic term (first display of page 23) away from 0 they need an assumption on a Hessian matrix that seems to be missing.
+  Note that the order of the terms in the conclusion (see \cite[page 25]{Wang2019}) is not quite right.
+  After carefully reading the proof of Wang and Zubizarreta, I decided to aim for less, that is, only consistency instead of concrete learning rates.
+  With this choice, a linear bound like \eqref{cv:primer:mvthe} suffices. Then I get rid of the quadratic Taylor expansion, assumptions on eigenvalues of a Hessian matrix and an application of matrix concentration inequalities. This greatly simplifies the proof.
   Later, I show that the lack of concrete learning rates is compensated by good approximation properties of the basis functions (see the remark of the section \textit{Analysis of $R_2$}).
 \end{remark}
