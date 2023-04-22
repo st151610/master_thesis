@@ -52,65 +52,82 @@ to a Gaussian process with mean 0 and covariance function given by
   \cite[Theorem~19.5]{Vaart2000}
 \end{proof}
 \begin{lemma}
-  \label{lem:F_P_donsker}
-The function class $\mathcal{F}$ defined in \eqref{F_g} is $\P$-Donsker. 
+  \label{lem:G_P_donsker}
+  Let Assumption~\eqref{asu:treatment_asign_str_ing} and Assumption~\ref{asu:x_finite} hold true.
+Then the function class $\mathcal{G}$ defined in \eqref{F_g} is $\P$-Donsker. 
 \end{lemma}
 \begin{proof}
   By Theorem~\ref{th:donsker} it suffices to show that the bracketing integral is finite.
-  By Lemma~\ref{aa:mean:l:br} it holds 
-  \begin{gather*}
-    N_{[\,]}
+Note that by Assumption~\ref{asu:x_finite} ($\mathcal{X}$ is finite) and Assumption~\eqref{asu:treatment_asign_str_ing} ($\pi(X)>0$) it holds $1/\pi(X)\in L^2(\P)$.
+  Thus,
+  by Lemma~\ref{aa:mean:l:br}
+  it holds
+  \begin{align*}
+    &
+  \log
+  N_{[\,]}
     (
     \varepsilon
     ,
-    \mathcal{F}, L^2(\P))
+    \mathcal{G}, L^2(\P))
+    \\
+    &
     \ 
     \lesssim
     \ 
-    \left( 
-      \frac{1}{\varepsilon}
-    \right)^2
+    \log
+    \left(
+      \frac
+      {
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
+      }
+      {\varepsilon}
+    \right)
+    \ 
+    \lesssim
+    \ 
+      \frac
+      {
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
+      }
+      {\varepsilon}
     \qquad
     \text{for all}
     \ 
-    \varepsilon>0
+    \varepsilon\in (0,1)
     \,.
-  \end{gather*}
-Thus
-\begin{align*}
-    J
-    _{[\,]}
-    (
-    1
-    ,
-    \mathcal{F}
-    ,
-    L_2(\P)
-    )
+  \end{align*}
+  Thus
+  \begin{gather*}
+    J_{[\,]}(1,\mathcal{G},L^2(\P))
     \ 
     \lesssim
     \ 
     \int_0^1
-    \sqrt{
-    -\log(\varepsilon)
-  }
+    \sqrt
+    {
+      \frac
+      {
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
+      }
+      {\varepsilon}
+    }
     \,
     d\varepsilon
     \ 
-    \le
+    \lesssim
     \ 
-    1
+      1+
+    \norm{1/\pi(X)}_{ L^2(\P)}
     \ 
-    +
+    <
     \ 
-    \int_0^1
-    -\log(\varepsilon)
-    \,
-    d\varepsilon
-    \ 
-    =
-    \ 
-    2
+    \infty
     \,.
-\end{align*}
+  \end{gather*}
+But then $\mathcal{G}$ is $\P$-Donsker.
+
 \end{proof}

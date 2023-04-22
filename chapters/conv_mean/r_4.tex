@@ -1,7 +1,8 @@
 \begin{lemma}
   \label{aa:mean:l:r4}
   Let
-  $1/\pi(X)\in L^2(\P)$.
+  Assumption~\eqref{asu:treatment_asign_str_ing} and Assumption~\ref{asu:x_finite} hold true.
+  Then
   $R_4$ converges
   converges in
   $l^\infty(\R)$
@@ -120,79 +121,33 @@
       \right)
       \,.
   \end{align*}
-  By Lemma~\ref{aa:mean:l:br}
-  it holds
-  \begin{align*}
-    &
-  \log
-  N_{[\,]}
-    (
-    \varepsilon
-    ,
-    \mathcal{G}, L^2(\P))
-    \\
+  By Assumption~\eqref{asu:treatment_asign_str_ing}, Assumption~\ref{asu:x_finite},
+and
+Lemma~\ref{lem:G_P_donsker}
+the function class 
+\begin{align*}
+  \mathcal{G}
     &
     \ 
-    \lesssim
+    :=
     \ 
-    \log
-    \left(
-      \frac
-      {
-      1+
-    \norm{1/\pi(X)}_{ L^2(\P)}
-      }
-      {\varepsilon}
-    \right)
-    \ 
-    \lesssim
-    \ 
-      \frac
-      {
-      1+
-    \norm{1/\pi(X)}_{ L^2(\P)}
-      }
-      {\varepsilon}
-    \qquad
-    \text{for all}
-    \ 
-    \varepsilon\in (0,1)
-    \,.
-  \end{align*}
-  Thus
-  \begin{gather*}
-    J_{[\,]}(1,\mathcal{G},L^2(\P))
-    \ 
-    \lesssim
-    \ 
-    \int_0^1
-    \sqrt
-    {
-      \frac
-      {
-      1+
-    \norm{1/\pi(X)}_{ L^2(\P)}
-      }
-      {\varepsilon}
-    }
-    \,
-    d\varepsilon
-    \ 
-    \lesssim
-    \ 
-      1+
-    \norm{1/\pi(X)}_{ L^2(\P)}
-    \ 
-    <
-    \ 
-    \infty
-    \,.
-  \end{gather*}
-But then $\mathcal{G}$ is $\P$-Donsker.
-By the Donsker Theorem \cite[Theorem~19.5]{Vaart2000}
-the process $R_4$ converges in $l^\infty(\R)$ to a Gaussian process, called $\P$-Brownian bridge, with mean 0.
-We now calculate the covariance of the limiting process.
-\subsubsection*{Covariance}
+    \left\{ 
+      \frac{f_z}{\pi(\cdot)}
+      +
+      F_{Y(1)}(z|\cdot)
+      -
+      F_{Y(1)}(z)
+      \ 
+      \colon
+      \ 
+      z\in\R\ 
+    \right\}
+\end{align*}
+is $\P$-Donsker
+Thus, by Theorem~\ref{th:donsker},
+the process $R_4$ converges in $l^\infty(\R)$ to a Gaussian process with mean 0.
+It remains to calculate the covariance of the limiting process.
+We write
 \begin{align*}
   &
   \E
@@ -286,6 +241,7 @@ F_{Y(1)}(z_2)
   \,.
 \end{align*}
 It holds
+by Assumption~\eqref{asu:treatment_asign_str_ing} and Lemma~\ref{lem:ps_weights}
 \begin{align*}
   C_0 
   &
@@ -355,8 +311,9 @@ F_{Y(1)}(z_1|X)
 F_{Y(1)}(z_2|X)
 \right)
 \right]
-\,.
+\,,
 \end{align*}
+and
 \begin{align*}
   C_1
   &
@@ -417,7 +374,7 @@ F_{Y(1)}(z_2)
   0
   \,.
 \end{align*}
-In the same way we see $C_2=0$.
+In the same way we see $C_2=0$. Finally,
 \begin{align*}
   C_3
   &
