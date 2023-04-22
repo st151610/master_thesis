@@ -21,9 +21,9 @@
 \indexentry{$\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   }{22}
 \indexentry{$\mathrm{cl}(\cdot)$, closure of a set}{26}
 \indexentry{$e_i$, $i$-the unit vector}{30}
-\indexentry{$F_{Y(1)}$, distribution function of the potential outcome under treatment}{35}
-\indexentry{$F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment}{35}
-\indexentry{ $C^\alpha_M(\mathcal{Z})$, certain space of continuous functions }{40}
+\indexentry{$F_{Y(1)}$, distribution function of the potential outcome under treatment}{36}
+\indexentry{$F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment}{36}
+\indexentry{ $C^\alpha_M(\mathcal{Z})$, certain space of continuous functions }{41}
 \indexentry{convex set}{61}
 \indexentry{affine set}{62}
 \indexentry{$\mathrm{aff(\cdot)}$, affine hull}{62}

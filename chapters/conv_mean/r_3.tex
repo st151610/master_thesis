@@ -1,11 +1,19 @@
 \begin{lemma}
   \label{aa:mean:r3:lem:conv}
-  It holds
-  $\sup_{z\in\R}\left| R_3(z) \right|\overset{\P}{\to}0$.
+  Let Assumption~\eqref{asu:treatment_asign_str_ing}, Assumption~\ref{asu:feas_dual_sol} and Assumption~\ref{asu:x_finite} hold true.
+  Then
+  \begin{align*}
+  \sup_{z\in\R}\left| R_3(z) \right|
+  \ 
+  \overset{\P}{\to}
+  \ 
+  0
+  \end{align*}
 \end{lemma}
 \begin{proof}
   Let
-  $z\in\R$.
+  $z\in\R$
+  and let Assumption~\eqref{asu:treatment_asign_str_ing} hold true.
     By Lemma~\ref{lem:f_z}
   it holds 
   \begin{align*}
@@ -52,12 +60,13 @@
     \,.
   \end{gather*}
   Since
-  \begin{gather*}
+  \begin{align*}
     \E
     \left[
-      \frac{T}{\pi(X)}
+      \frac{1}{\pi(X)}
       f_z(T,X,Y(T))
     \right]
+    &
     \ 
     =
     \ 
@@ -71,11 +80,22 @@
         F_{Y(1)}(z|X)
       \right)
     \right]
+    \\
+    &
+    \ 
+    =
+    \ 
+    \E \left[
+        \mathbf{1}
+        _{\left\{  Y(1)\,\le\,z \right\}}
+    \right]
+    -
+        F_{Y(1)}(z)
     \  
     =
     \ 
     0
-  \end{gather*}
+  \end{align*}
   by Lemma~\ref{ps_weights_lemma},
   it follows
   \begin{align*}
@@ -165,7 +185,7 @@ Let
   \right)
   \cdot
   \mathbf{1}
-  \bigcup_{k=1}^n
+  \bigcup_{k=1}^N
   \left\{ 
     x=X_k
   \right\}
@@ -174,8 +194,14 @@ for all $x\in\R^d$.
   If
   \begin{gather}
     \label{event}
+    T_i
+    \cdot
     \left| 
-    w_0^\dagger(X_i)- \frac{1}{\pi(X_i)} 
+    w_0^\dagger(X_i)
+    \ 
+    -
+    \ 
+    \frac{1}{\pi(X_i)} 
     \right|
     \ 
     \le
@@ -183,11 +209,13 @@ for all $x\in\R^d$.
     \varepsilon_N
     \qquad
     \text{for all}\ 
-    i\in \left\{ 1,\ldots,n \right\}
+    i\in \left\{ 1,\ldots,N \right\}
+    \,,
   \end{gather}
   it holds
   for all $i\in \left\{ 1,\ldots,N \right\}$
-  \begin{gather*}
+  \begin{gather}
+    \label{7926}
     g^\dagger
     (X_i)
     \cdot
@@ -204,8 +232,9 @@ for all $x\in\R^d$.
     f_z
     (T_i,X_i,Y_i(T_i))
       \,.
-  \end{gather*}
-  Thus, if \eqref{event} holds, it follows
+  \end{gather}
+  Note that \eqref{7926} is $0$ if $T_i=0$. 
+  Thus, if \eqref{event} holds it follows
 \begin{align*}
  R_3(z)
  \ 
@@ -240,6 +269,7 @@ for all $x\in\R^d$.
       \ 
       \text{and}
       \ 
+      T_i\cdot
     | 
     w_0^\dagger(X_i)- 1/\pi(X_i)
     |
@@ -247,7 +277,7 @@ for all $x\in\R^d$.
     \le
     \ 
     \varepsilon_N
-    \ \text{for all}\ i\in\{1,\ldots,n\}
+    \ \text{for all}\ i\in\{1,\ldots,N\}
     \right]
     \\
     &
@@ -256,6 +286,7 @@ for all $x\in\R^d$.
     \ 
     \P
     \left[ 
+      T_i\cdot
     | 
     w_0^\dagger(X_i)- 1/\pi(X_i)
     |
@@ -264,7 +295,7 @@ for all $x\in\R^d$.
     \ 
     \varepsilon_N
     \ 
-    \ \text{for some}\ i\in\{1,\ldots,n\}
+    \ \text{for some}\ i\in\{1,\ldots,N\}
     \right]
     \\
     &
@@ -283,7 +314,8 @@ for all $x\in\R^d$.
     \ 
     \P
     \left[ 
-      \max_{i\in \left\{ 1,\ldots,n \right\}}
+      \max_{i\in \left\{ 1,\ldots,N \right\}}
+      T_i\cdot
     | 
     w_0^\dagger(X_i)- 1/\pi(X_i)
     |
@@ -301,31 +333,36 @@ for all $x\in\R^d$.
     \,.
 \end{align*}
 The convergence of the first term follows from
+Assumption~\ref{asu:x_finite},
 Lemma~\ref{lem:br_n_st},
 Lemma~\ref{lem:x_finite}, and
 Lemma~\ref{aa:r3:lemma:1}.
 The convergence of the second term follows from
+Assumption~\ref{asu:feas_dual_sol} and
 Theorem~\ref{th:max_weight_cons}.
 \end{proof}
 \begin{remark}
   There is a similar section \cite[page 27-28]{Wang2019}.
-  Their analysis, however, is very obscure. Statements like
+  It contains interesting ideas. But one has to be careful to understand the notation.
+  Statements like
   \begin{align*}
     A\ \lesssim\  \E[A] \qquad
     \text{by Markov's inequality}
   \end{align*}
-  are bewildering. Clearly, it should be
+  would be better expressed as
   \begin{align*}
-    \P[A\ge \varepsilon]\le \frac
+    \P[A\ge \varepsilon]
+    \ 
+    \le 
+    \ 
+    \frac
     {\E[A]}
     {\varepsilon}
     \,.
   \end{align*}
-  Also, their argument why bracketing numbers of the difference $w-1/\pi$ exist is mere hand waving. 
-  I made the effort to derive bracketing numbers in a rigorous way. This way, I found out, that \cite{Wang2019} simply does not provide any proper argument. \cite[Assumption~2.4]{Wang2019} is insufficient, because it doesn't consider covering numbers for the weights function.
-  This in not surprising, because the authors made no attempt to formalize the weights (as I did in Chapter 3), and therefore have no idea about their structure. 
-  This knowledge, however, is needed to make a rigorous argument about covering numbers of the difference $w-1/\pi$ (see Lemma~\ref{lem:br_n_st}).
-  Later, I found out, that \cite[Proof of Theorem~3]{Wang2019} is (in large parts) an identical (and unreflective) paraphrase of \cite{Fan}. The weird application of Markov's inequality that I stated in the beginning of this remark can be found one-to-one in \cite[page~46]{Fan}.
+  Wang and Zubizarretas argument, why a bound on the bracketing numbers of the difference $w-1/\pi$, exist is incomplete. 
+  The point is that we should also consider the weights in the difference $w-1/\pi$. 
+  We do this in Section~5.1.2., where we profit from the rigorous construction of the weights in Chapter~3.
 \end{remark}
 
 

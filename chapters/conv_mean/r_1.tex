@@ -1,3 +1,4 @@
+The convergence of this term is closely related to the box constraints of Problem~\ref{bw:1:primal}.
 \begin{lemma}
   \label{aa:mean:l:r1}
   Let
@@ -6,9 +7,9 @@ Then it holds
 $\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
   \end{lemma}
 \begin{proof}
-  By Theorem~\ref{th:weights_constr} 
-  $(w_i^\dagger(X_i))$
-satisfy the box constraints of Problem~\ref{bw:1:primal} (in the form with the $T_i$ instead of $n$).
+  By Theorem~\ref{th:weights_constr}, 
+  $(w^\dagger_0(X_i))$
+satisfy the box constraints of Problem~\ref{bw:1:primal}.
 Thus
   \begin{align}
     \label{R_1:1}
@@ -30,7 +31,7 @@ Thus
     \sum_{i=1}^{N} 
     T_i
     \cdot
-    w^\dagger_i(X_i)
+    w^\dagger_0(X_i)
     \cdot
     B_k(X_i)
     \ 
@@ -55,7 +56,7 @@ Thus
     \sum_{i=1}^{N} 
     T_i
     \cdot
-    w^\dagger_i(X_i)
+    w^\dagger_0(X_i)
     \cdot
     B_k(X_i)
     \ 
@@ -79,9 +80,10 @@ Thus
   \end{align}
   The last inequality is due to $F_{Y(1)}\in[0,1]$.
   Since we assume 
-$\sqrt{N}\norm{\delta}_1\overset{\P}{\to}0$
-it holds
-$\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
+$\sqrt{N}\norm{\delta}_1\overset{\P}{\to}0$,
+it follows
+$\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$
+from \eqref{R_1:1}.
 \end{proof}
 \begin{remark}
   We want to comment on the box constraints of Problem~\ref{bw:1:primal}, that is,
@@ -90,7 +92,7 @@ $\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
       \frac{1}{N} 
       \left( 
       \sum_{i = 1}^{n} 
-      w^\dagger_i(X_i)
+      w^\dagger_0(X_i)
       B_k(X_i)
       -
       \sum_{i=1}^{N} 
@@ -114,7 +116,7 @@ $\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
       \left( 
       \sum_{i = 1}^{N} 
       T_i
-      w^\dagger_i(X_i)
+      w^\dagger_0(X_i)
       B_k(X_i)
       -
       \sum_{i=1}^{N} 
@@ -132,7 +134,7 @@ $\sup_{z\in\R}|R_1(z)|\overset{\P}{\to}0$.
   \end{gather*}
   Now both sums go over $\left\{ 1,\ldots,N \right\}$ and the
   indicator of treatment $T_i$ takes care that in the first sum only the terms with $i\le n$ are effective. 
-  Having this flexibility with the versions helps. I regard the first version as suitable for non-probabilistic computations, although $n$ is of course a random variable. On the other hand, the second version is more honest, exactly telling the dependence on the indicator of treatment. This version is useful in probabilistic computations. 
+  Having this flexibility with the versions helps. I regard the first version as suitable for non-probabilistic computations as in Chapter~2, although $n$ is of course a random variable. On the other hand, the second version is more honest, exactly telling the dependence on the indicator of treatment. This version is useful in probabilistic computations. 
 
   Also we want to comment on the assumption on $\norm{\delta}$.
   Playing around with norm equivalences we discover that 

@@ -5,9 +5,9 @@
   \item $B$, vector of basis functions of the covariates, 6, 17
   \item $D_N$, (random) data set without observed outcome, 5
   \item $F_{Y(1)}$, distribution function of the potential outcome under treatment, 
-		35
+		36
   \item $F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment, 
-		35
+		36
   \item $N$, sample size, 5
   \item $T$, indicator of treatment, 3
   \item $X$, covariates vector, 3
@@ -40,7 +40,7 @@
   \item  $\mathrm{0}_N$ and $\mathrm{1}_N$, the $N$-dimensional vectors containing only zeros or ones. , 
 		10
   \item  $C^\alpha_M(\mathcal{Z})$, certain space of continuous functions , 
-		40
+		41
 
   \indexspace
 

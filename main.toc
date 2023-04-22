@@ -17,15 +17,15 @@
 \contentsline {subsection}{\numberline {5.1.1}Empirical Processes - Definition}{36}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Bracketing Numbers and Integral}{37}{subsection.5.1.2}%
 \contentsline {subsection}{\numberline {5.1.3}Maximal Inequality}{43}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Donsker's Theorem}{44}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Main Result}{46}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Error Decomposition}{46}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Analysis of the Error Terms}{48}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Analysis of $R_1$}{48}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Analysis of $R_2$}{49}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Analysis of $R_3$}{50}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}Analysis of $R_4$}{51}{subsection.5.4.4}%
-\contentsline {subsection}{\numberline {5.4.5}Proof of Theorem\nobreakspace {}\ref {th:main}}{53}{subsection.5.4.5}%
+\contentsline {subsection}{\numberline {5.1.4}Donsker's Theorem}{45}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Main Result}{47}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Error Decomposition}{47}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Analysis of the Error Terms}{49}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Analysis of $R_1$}{49}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Analysis of $R_2$}{50}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Analysis of $R_3$}{51}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Analysis of $R_4$}{52}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Proof of Theorem\nobreakspace {}\ref {th:main}}{54}{subsection.5.4.5}%
 \contentsline {chapter}{\numberline {6}Discussion and Outlook}{55}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Discussion}{55}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Application to Nelson Aalen Estimator}{55}{subsection.6.1.1}%

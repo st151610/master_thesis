@@ -2,7 +2,8 @@
   \label{th:max_weight_cons}
   If Problem~\ref{dual} is feasible it holds
   \begin{align*}
-    \max_{i\in \left\{ 1,\ldots,n \right\}}
+    \max_{i\in \left\{ 1,\ldots,N \right\}}
+    T_i\cdot
     \left| 
   w_0^\dagger(X_i)
   \ 
@@ -20,7 +21,8 @@
   \begin{gather*}
     \P
     \left[ 
-    \max_{i\in \left\{ 1,\ldots,n \right\}}
+    \max_{i\in \left\{ 1,\ldots,N \right\}}
+    T_i\cdot
     \left| 
   w_0^\dagger(X_i)
   \ 
@@ -202,6 +204,7 @@
   \end{align*}
   and $\omega(\varphi^{'},h_N^d)\to 0$ by the uniform continuity of $\varphi^{'}$ and $h_N\to 0$, 
   it follows the first statement.
+  Note that for $i>n$ we have the upper bound $0$.
 The second statement follows from the selection lemma
 \cite[A.1.4.]{Steinwart2008}.
   \end{proof}
