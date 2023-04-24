@@ -393,7 +393,7 @@ Let $[x]^+:=0\land x$ be the positive part of $x\in\R$.
   &
   \rho_i \ge 0 
   \quad 
-  \mathrm{for}\ \mathrm{all}\ i\le n
+  \mathrm{for}\ \mathrm{all}\ i \ \text{with}\ T_i=1
   \qquad 
   \\
   \mathrm{and}
@@ -413,7 +413,7 @@ Let $[x]^+:=0\land x$ be the positive part of $x\in\R$.
   \right)
   \right]^+
   \quad 
-  \mathrm{for}\ \mathrm{all}\ i>n
+  \mathrm{for}\ \mathrm{all}\ i \ \text{with}\ T_i=0
   \,.
 \end{split}
 \end{align}
@@ -447,8 +447,8 @@ then the unique optimal solutions to Problem~\ref{bw:1:primal} are
   \right)
   \qquad
   \text{for all}\ 
-  i\in
-  \left\{ 1,\ldots,n \right\}
+  i
+  \ \textit{with}\ T_i=1
   \,.
 \end{gather*}
 \end{ftheorem}
@@ -761,7 +761,7 @@ Thus, we can extend the domain of Problem~\ref{9993} to $\lambda\in\R^{N}$ and u
 Multiplying $G$ with $-1/N$ doesn't change the solution either
 (if we search instead for a minimum).
 To finish the proof, we choose the notation with $T_i$ instead of $n$. This extends the domain of $\rho$ to $\R^N_{\ge 0}$, but the 
-new $\rho_i$ are not effective because of $T_i=0$ for all $i>n$. 
+new $\rho_i$ are not effective because of $T_i=0$. 
 Thus we may set them to an arbitrary value.
 \end{proof}
 \begin{remark}
@@ -801,7 +801,8 @@ Thus we may set them to an arbitrary value.
     \left| 
       \frac{1}{N} 
       \left( 
-      \sum_{i = 1}^{n} 
+      \sum_{i = 1}^{N} 
+      T_i\cdot
       w_i
       \cdot
       B_k(X_i)
@@ -871,14 +872,13 @@ Furthermore, the unique optimal solutions to Problem~\ref{bw:1:primal} are
   \right]^+
   \qquad
   \text{for all}\ 
-  i\in
-  \left\{ 1,\ldots,n \right\}
+  i\ \text{with}\ T_i=1
   \,.
 \end{align*}
 \end{lemma}
 \begin{proof}
-  For $i>n$ this is clear.
-  Let $i\le n$, that is, $T_i=1$.
+  For $i$ with $T_i=0$ this is clear.
+  Thus, we consider $i$ with $T_i=1$.
   By the complementary slackness (see the proof of Theorem~\ref{cv:ts:th}), if $\rho_i^\dagger>0$ it holds
   \begin{align*}
     w_i^\dagger
