@@ -9,8 +9,8 @@
   \item $F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment, 
 		36
   \item $N$, sample size, 5
-  \item $T$, indicator of treatment, 3
-  \item $X$, covariates vector, 3
+  \item $T$, indicator of treatment, 2
+  \item $X$, covariates vector, 2
   \item $Y(0),Y(1)$, potential outcomes, 3
   \item $[x]^+$, positive part of $x\in\R$, 11
   \item $\delta$, (random) constraints vector , 6

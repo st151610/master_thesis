@@ -5,7 +5,7 @@ The first question is about causality, the second about ethics.
 How do causality and ethics reflect on statistics?
 If you have not spent much time thinking about study design, this is a good way to start: 
 As an analyst, ask yourself “Who acted? Who assigned treatment?"
-As a researcher -- plan your study accurately. You can ask yourself “How do we act? How do we assign treatment? Can we act?"
+As a researcher --- plan your study accurately. You can ask yourself “How do we act? How do we assign treatment? Can we act?"
 
 Let's say, you gather a sample from a study population, assign treatment (but forget how you did it). Some units get the drug, others don't. Then the statistical analysis shows a strong correlation of treatment and outcome. You hurry to your supervisor. “How was treatment assigned", asks she. “I forgot", says you.
 “How do you know your analysis is correct then?"
@@ -24,7 +24,7 @@ You decide to determine treatment status by the flip of a fair coin.
 You call the procedure 'randomization'.
 
 %Randomization does not work in important situations. 
-Would you smoke if a coin tells you to? If you say yes - you likely smoke anyway. The point is that forcing someone to smoke is unethical. But so is not studying the risks of smoking.
+Would you smoke if a coin tells you to? If you say yes --- you likely smoke anyway. The point is that forcing someone to smoke is unethical. But so is not studying the risks of smoking.
 
 A professor is curious if the smoking habits of his students affect their grades. 
 He observes the smoking area through his field glasses.
@@ -34,17 +34,14 @@ He talks to a few of his students. Some smoke, some don't. The chats are enjoyab
 
 I hope, by now it's clear that 
 we should focus on treatment assignment.
-The propensity score\cite{Rosenbaum1983}, that is,
-the probability of treatment given (observed) individual characteristics,
-helps with that.
+The propensity score\cite{Rosenbaum1983} ---
+the probability of treatment given (observed) individual characteristics ---
+helps.
 \begin{theorem*}
   \emph{\cite[Theorem~1]{Rosenbaum1983}}
 Observed individual characteristics are independent 
 of treatment assignment given the propensity score.
 \end{theorem*}
-
-
-
 In the second example, where you flip a fair coin to assign treatment, the propensity score is $1/2$, despite variation across individual characteristics.
 The coin ignores everything.
 What is the propensity score in the other examples?
@@ -78,10 +75,10 @@ Why then bother?
 
 Since the introduction of the propensity score in 1983 \cite{Rosenbaum1983}, statisticians developed different ideas how to incorporate it in their analysis. 
 %
-There are two important branches of application - matching and weighting.
+There are two important branches of application --- matching and weighting.
 In matching the idea is to pair two or more units with different treatment status but similar propensity score and compare their outcome. 
 The assumption is that the propensity score eliminates imbalances and makes the paired units comparable.
-In weighting - the method we will focus on - the idea is to re-weight the population, ideally with the inverse propensity score, that is, 1 divided by the propensity score.
+In weighting --- the method we will focus on --- the idea is to re-weight the population, ideally with the inverse propensity score, that is, 1 divided by the propensity score.
 Both methods share the goal to minimize imbalances in the population
 and make the two groups, that is, treatment and control (no treatment) group more comparable.
 Let's introduce some notation to be more precise.
@@ -153,7 +150,7 @@ In weighting, the hope is to recover \eqref{ipw} from the estimate.
 In practice, however, estimating the propensity score is a difficult task.
 Researchers often compare estimates from different models and check for covariate balance. 
 This is not surprising, because that's what the weights are designed for --- minimizing imbalances in the population.
-The poor performance of classical propensity score estimates, such as logistic regression --- and the insight that the task is to eliminate imbalances -
+The poor performance of classical propensity score estimates, such as logistic regression --- and the insight that the task is to eliminate imbalances ---
 led to the development of methods, such as the Covariate Balancing Propensity Score \cite{Imai2014a} that tries to 
 estimate the propensity score and balance covariates simultaneously (the name is indicative).
 
