@@ -891,6 +891,7 @@ But this holds independently of the choice $\varepsilon>0$.
   But their proof seems to be missing some assumptions. To bound the quadratic term (first display of page 23) away from 0 they need an assumption on a Hessian matrix that seems to be missing.
   Note that the order of the terms in the conclusion (see \cite[page 25]{Wang2019}) is not quite right.
   After carefully reading the proof of Wang and Zubizarreta, I decided to aim for less, that is, only consistency instead of concrete learning rates.
+  This is possible, because of the choice of partitioning estimates as basis functions that allows for a concrete oracle parameter.
   With this choice, a linear bound like \eqref{cv:primer:mvthe} suffices. Then I get rid of the quadratic Taylor expansion, assumptions on eigenvalues of a Hessian matrix and an application of matrix concentration inequalities. This greatly simplifies the proof.
   Later, I show that the lack of concrete learning rates is compensated by good approximation properties of the basis functions (see the remark of the section \textit{Analysis of $R_2$}).
 \end{remark}
