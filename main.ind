@@ -31,22 +31,22 @@
   \item $\mathcal{P}_N$, partition of $\R^d$, 18
   \item $\mathcal{X}$, covariate space, 2, 26
   \item $\mathcal{Y}$, outcome space, 35
-  \item $\mathrm{aff(\cdot)}$, affine hull, 62
+  \item $\mathrm{aff(\cdot)}$, affine hull, 60
   \item $\mathrm{cl}(\cdot)$, closure of a set, 26
-  \item $\mathrm{dom}\,f$, domain of a convex function, 63
-  \item $\mathrm{ri}(\cdot)$, relative interior, 62
+  \item $\mathrm{dom}\,f$, domain of a convex function, 61
+  \item $\mathrm{ri}(\cdot)$, relative interior, 60
   \item $\overline{\R}$, extended real numbers, 5
   \item $\pi$, propensity score, 3
-  \item $\sigma_\omega$, support function, 63
+  \item $\sigma_\omega$, support function, 61
   \item $\varphi$, objective function of Problem~\ref{bw:1:primal}, 6
   \item $e_i$, $i$-the unit vector, 30
-  \item $f\square g$, infimal convolution of $f$ and $g$, 63
-  \item $f^*$, convex conjugate of $f$, 65
+  \item $f\square g$, infimal convolution of $f$ and $g$, 61
+  \item $f^*$, convex conjugate of $f$, 63
   \item $n$, (random) number of treated units, 5
 
   \indexspace
 
-  \item    $ \partial f(x)   $,   subdifferential of $f$ at $x$ , 63
+  \item    $ \partial f(x)   $,   subdifferential of $f$ at $x$ , 61
   \item  $   \norm{\G_n}^*_\mathcal{F} $, (measurable version of the) uniform norm of an empirical process, 
 		37
   \item  $\mathrm{0}_N$ and $\mathrm{1}_N$, the $N$-dimensional vectors containing only zeros or ones. , 
@@ -56,14 +56,14 @@
 
   \indexspace
 
-  \item affine set, 62
+  \item affine set, 60
 
   \indexspace
 
-  \item conjugate chain rule, 65
-  \item conjugate sum rule, 65
-  \item convex function, 63
-  \item convex set, 61
+  \item conjugate chain rule, 63
+  \item conjugate sum rule, 63
+  \item convex function, 61
+  \item convex set, 59
 
   \indexspace
 
@@ -71,11 +71,11 @@
 
   \indexspace
 
-  \item proper (convex) function, 63
+  \item proper (convex) function, 61
 
   \indexspace
 
-  \item strictly convex, 63
-  \item subgradient, 63
+  \item strictly convex, 61
+  \item subgradient, 61
 
 \end{theindex}

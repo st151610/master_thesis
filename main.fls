@@ -1365,14 +1365,6 @@ INPUT ./chapters/discussion/main.tex
 INPUT chapters/discussion/main.tex
 INPUT ./chapters/discussion/main.tex
 INPUT chapters/discussion/main.tex
-INPUT ./chapters/discussion/application_nelson_aalen.tex
-INPUT chapters/discussion/application_nelson_aalen.tex
-INPUT ./chapters/discussion/application_nelson_aalen.tex
-INPUT chapters/discussion/application_nelson_aalen.tex
-INPUT ./chapters/discussion/summary_asu.tex
-INPUT chapters/discussion/summary_asu.tex
-INPUT ./chapters/discussion/summary_asu.tex
-INPUT chapters/discussion/summary_asu.tex
 INPUT ./chapters/discussion/matching.tex
 INPUT chapters/discussion/matching.tex
 INPUT ./chapters/discussion/matching.tex
@@ -1381,6 +1373,10 @@ INPUT ./chapters/discussion/func_delt_m.tex
 INPUT chapters/discussion/func_delt_m.tex
 INPUT ./chapters/discussion/func_delt_m.tex
 INPUT chapters/discussion/func_delt_m.tex
+INPUT ./chapters/discussion/application_nelson_aalen.tex
+INPUT chapters/discussion/application_nelson_aalen.tex
+INPUT ./chapters/discussion/application_nelson_aalen.tex
+INPUT chapters/discussion/application_nelson_aalen.tex
 INPUT ./chapters/discussion/bootstrap.tex
 INPUT chapters/discussion/bootstrap.tex
 INPUT ./chapters/discussion/bootstrap.tex

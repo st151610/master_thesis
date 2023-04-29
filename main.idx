@@ -36,18 +36,18 @@
 \indexentry{$N_{[\,]}$, bracketing number}{37}
 \indexentry{$J_{[\,]}$, bracketing integral}{37}
 \indexentry{ $C^\alpha_M(\mathcal{Z})$, certain space of continuous functions }{41}
-\indexentry{convex set}{61}
-\indexentry{affine set}{62}
-\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{62}
-\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{62}
-\indexentry{convex function}{63}
-\indexentry{strictly convex}{63}
-\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{63}
-\indexentry{proper (convex) function}{63}
-\indexentry{subgradient}{63}
-\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{63}
-\indexentry{$\sigma_\omega$, support function}{63}
-\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{63}
-\indexentry{$f^*$, convex conjugate of $f$}{65}
-\indexentry{conjugate sum rule}{65}
-\indexentry{conjugate chain rule}{65}
+\indexentry{convex set}{59}
+\indexentry{affine set}{60}
+\indexentry{$\mathrm{aff(\cdot)}$, affine hull}{60}
+\indexentry{$\mathrm{ri}(\cdot)$, relative interior}{60}
+\indexentry{convex function}{61}
+\indexentry{strictly convex}{61}
+\indexentry{$\mathrm{dom}\,f$, domain of a convex function}{61}
+\indexentry{proper (convex) function}{61}
+\indexentry{subgradient}{61}
+\indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{61}
+\indexentry{$\sigma_\omega$, support function}{61}
+\indexentry{$f\square g$, infimal convolution of $f$ and $g$}{61}
+\indexentry{$f^*$, convex conjugate of $f$}{63}
+\indexentry{conjugate sum rule}{63}
+\indexentry{conjugate chain rule}{63}
