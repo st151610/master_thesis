@@ -33,7 +33,9 @@ a measurable space, and
 \end{gather*}
 random variables
 with probability distribution $\P_{\!\xi}$.
+\index{$\P_{\xi}$, probability distribution of the random variable $\xi$}
 Let $\mathcal{F}$ be a class of measurable functions 
+\index{$\mathcal{F}$, class of measurable functions}
 $
   f:
   \left( 
@@ -50,6 +52,7 @@ $
     \mathcal{B}(\R)
 $
 is the Borel-$\sigma$-algebra on $\R$.
+\index{$\mathcal{B}(\cdot)$, Borel-$\sigma$-algebra}
 Then $\mathcal{F}$
 induces a stochastic process by
 \begin{gather}
@@ -81,7 +84,8 @@ $
 $.
 We call
 $\G_N$ the  \textbf{empirical process} indexed by $\mathcal{F}$.
-The purpose of this construction is, to study the behaviour of a centered, scaled arithmetic mean uniformly over $\mathcal{F}$.
+\index{$\G_N$, empirical process}
+The purpose of this construction is to study the behaviour of a centered, scaled arithmetic mean uniformly over $\mathcal{F}$.
 To this end, we define the (random) norm
 \begin{gather}
   \norm{\G_n}_\mathcal{F}
@@ -93,12 +97,19 @@ To this end, we define the (random) norm
         \right|
         .
 \end{gather}
+\index{
+$
+  \norm{\G_n}^*_\mathcal{F}
+$, (measurable version of the) uniform norm of an empirical process}
 We stress that 
 $
   \norm{\G_n}_\mathcal{F}
 $
 often ceases to be measurable, even in simple situations~\cite[page 3]{vaart2013}.
-To deal with this, we introduce the notion of \textbf{outer expectation} $\E^*$ (see \cite[page~6]{vaart2013})
+To deal with this, we introduce the notion of \textbf{outer expectation} $\E^*$ (see \cite[page~6]{vaart2013}):
+\index{$
+  \E^*[Z]
+$, outer expectation}
 \begin{gather*}
   \E^*[Z]
   \ 
@@ -127,12 +138,12 @@ To deal with this, we introduce the notion of \textbf{outer expectation} $\E^*$ 
   \ 
   \E[U]<\infty
   \right\}
-  \,.
 \end{gather*}
 In our application the technical difficulties halt at this point, because we only consider $Z$ with $\E^*[Z]<\infty$. Then there exists a smallest measurable function $Z^*$ dominating $Z$ with
 $\E^*[Z]=\E[Z^*]$ (see \cite[Lemma~1.2.1]{vaart2013}).
 
 An \textbf{envelope function} $F$ of a class $\mathcal{F}$ satisfies 
+\index{envelope function}
 \begin{align*}
 |f(z)|
 \ 

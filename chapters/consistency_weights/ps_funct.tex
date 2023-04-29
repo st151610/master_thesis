@@ -201,17 +201,19 @@ Let $\mathrm{cl}\, A$ denote the closure of a set $A\subset \R^d$.
    It holds
    \begin{enumerate}[label=(\roman*)]
      \item 
-       $\# J_N<\infty$ for all $N\in\mathbb{N}$
+       $\# J_N\le \# \mathcal{X}<\infty$ for all $N\in\mathbb{N}$
 \item
   For all $N\in\mathbb{N}$ there exist $(M_{N,j})_{j\in J_N}$ such that $\infty>M_{N,j}\ge 0$ for all $j\in J_n$, and 
   $\frac{1}{\pi(\cdot)}\in C^\alpha_{M_{N,j}}(\mathrm{cl}\,A_{N,j})$ for all $(j,N)\in J_N\times \mathbb{N}$, with $\alpha>d/2$.
    \end{enumerate}
  \end{assumption}
  \begin{remark}
+\index{$\mathcal{X}$, covariate space}
    Assumption~\ref{asu:x_finite}.\textit{(i)} says that the covariate space $\mathcal{X}\subset \R^d$ is finite.
    We need this to derive bracketing numbers in Lemma~\ref{lem:x_finite}.
    Assumption~\ref{asu:x_finite}.\textit{(ii)} is a regularity condition on the inverse propensity score function restricted to the (finite) partition cells covering $\mathcal{X}$.
    We need this to derive bracketing numbers in Lemma~\ref{lem:br_n_st}.
+   Note that by the finiteness of $\mathcal{X}$ condition \textit{(ii)} is met, for example, by a logistic regression model.  
  \end{remark}
  We finish with a lemma about uniform continuity.
  \begin{lemma}

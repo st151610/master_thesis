@@ -1,4 +1,4 @@
-To control empirical processes - apart from strong theorems - we need the notion of bracketing number and integral (see \cite[page 270]{Vaart2000}). 
+To control empirical processes --- apart from strong theorems --- we need the notion of bracketing number and integral (see \cite[page 270]{Vaart2000}). 
 Given two functions $\underline{f}\le \overline{f}$,
 \begin{gather*}
   \text{
@@ -37,12 +37,14 @@ $
 is 
 the minimum number of 
 $(\varepsilon, L^{r}(\P))$-brackets needed to cover $\mathcal{F}$.
+\index{$N_{[\,]}$, bracketing number}
 
 For most classes $\mathcal{F}$ the bracketing number grows to infinity for $\varepsilon\to 0$.
 To measure the speed of growth we introduce 
 for $\delta>0$
 the
 \textbf{bracketing integral}
+\index{$J_{[\,]}$, bracketing integral}
 \begin{gather*}
      J
     _{[\,]}
@@ -67,7 +69,7 @@ the
     \,.
 \end{gather*}
 
-Next we give a technical lemma to 
+Next, we give a technical lemma to 
 bound the bracketing numbers of products of two function classes, that is,
 \begin{gather*}
   \mathcal{F}\cdot \mathcal{G}
@@ -150,9 +152,9 @@ For $z\in\R$ we define the function
         -
         F_{Y(1)}(z|x)
       \right)
-      \,,
+      \,.
   \end{align*}
-    Next we define the function classes
+    We define the function classes
   \begin{gather}
     \label{F_g}
     \begin{split}
@@ -168,6 +170,7 @@ For $z\in\R$ we define the function
       \ 
       z\in\R\ 
     \right\}
+    \,,
     \\
     \mathcal{G}
     &
@@ -185,10 +188,10 @@ For $z\in\R$ we define the function
       \ 
       z\in\R\ 
     \right\}
-    \,.
+    \,,
     \end{split}
   \end{gather}
-Next, we provide bracketing numbers for these classes.
+and provide bracketing numbers for these classes.
 \begin{lemma}
   \label{aa:mean:l:br}
   The function class $\mathcal{F}$ and $\mathcal{G}$ defined in \eqref{F_g} are measurable.
@@ -905,9 +908,9 @@ Before we give another example, we fix some useful properties of $f_z$.
     The third equality is due to \eqref{asu:treatment_asign_str_ing}.
   \end{proof}
 
-Next, consider the stochastic process (indexed over $x\in\R^d$)
+We now consider the stochastic process (indexed over $x\in\R^d$)
 \begin{gather}
-  \label{ghost_function}
+  \label{error_process}
   \mathbf{1}{
     \left\{ 
       \sup_{y\in A_N(x)}
@@ -937,7 +940,7 @@ Next, consider the stochastic process (indexed over $x\in\R^d$)
 \end{gather}
 where $(\varepsilon_N)$ is the learning rate of Theorem~\ref{th:max_weight_cons}.
 We show, 
-that under mild regularity conditions on the inverse propensity score function all paths of \eqref{ghost_function} are contained in shrinking function classes $(\mathcal{F}_N)$ - and provide bracketing numbers. 
+that under mild regularity conditions on the inverse propensity score function all paths of \eqref{error_process} are contained in shrinking function classes $(\mathcal{F}_N)$ --- and provide bracketing numbers. 
 To be more precise, we need theory from \cite[§2.7.1]{vaart2013}.
 
 Let for any vector $k\in\mathbb{N}_0^d \ (d\in\R)$
@@ -986,7 +989,7 @@ $C^\alpha_M(\mathcal{Z})$, certain space of continuous functions
   \le
   \ 
   M
-  \,.
+  \,,
 \end{gather*}
 where the suprema in the second term are taken over all $x,y$ in the interior of $\mathcal{Z}$ with $x\neq y$.
 Furthermore, let
@@ -1036,7 +1039,7 @@ Furthermore, let
   \emph{\cite[Corollary~2.7.4]{vaart2013}}
 \end{proof}
 
-The next lemma gives sufficient conditions on the regularity of the inverse propensity score function.
+We derive sufficient conditions on the regularity of the inverse propensity score function.
 \begin{lemma}
   \label{lem:br_n_st}
   Let $(\mathcal{P}_N)$ denote a sequence of partitions
@@ -1104,42 +1107,15 @@ for some $k<2$
   \,,
 \end{gather*}
 such that
-for all $N\in\mathbb{N}$ the paths of the stochastic process
-\begin{gather}
-  \label{error_process}
-  \mathbf{1}{
-    \left\{ 
-      \sup_{y\in A_N(x)}
-      \left| 
-      w_0^\dagger(y)
-      -
-      \frac{1}{\pi(y)}
-      \right|
-      \,
-      \le
-      \,
-      \varepsilon_N
-    \right\}
-  }
-  \left( 
-    w_0^\dagger(x)
-      -
-      \frac{1}{\pi(x)}
-  \right)
-  \cdot
-  \mathbf{1}
-  \bigcup_{k=1}^N
-  \left\{ x=X_k \right\}
-  \,.
-\end{gather}
+for all $N\in\mathbb{N}$ the paths of the stochastic process~\eqref{error_process}
 are contained in $\mathcal{F}_N$.
 \end{lemma}
 \begin{proof}
   We want to employ Lemma~\ref{vdv_coro}. 
-  To do this, the crucial observation is that by Lemma~\ref{lem:weights:meas}.\textit{(ii)}
+  To do this, the crucial observation is that by Lemma~\ref{lem:meas_w_0}.\textit{(i)}
   \begin{gather*}
     \text{the paths}\quad
-    w^\dagger(\cdot)(\omega)
+    w_0^\dagger(\cdot)(\omega)
     \quad
     \text{are constant on each cell}\ 
     A_N\in\mathcal{P}_N
@@ -1196,6 +1172,7 @@ Thus
   1
   \,.
 \end{gather*}
+Then it holds
 $
 \eqref{error_process}(\cdot)(\omega)\in\mathcal{F}_N
 $, 
@@ -1208,14 +1185,14 @@ $
   C^\alpha_{M_{N,j}}(A_{N,j})
 $
 and satisfies the requirements of Lemma~\ref{vdv_coro}.
-Since $V=d/\alpha \in (0,2)$ by $\alpha>d/2$, 
+Since $V=d/\alpha \in (0,2)$, by $\alpha>d/2$, 
 applying Lemma~\ref{vdv_coro} finishes the proof.
 \end{proof}
 \begin{remark}
-  Note, that we only get $L^2(\P_X)$ bracketing numbers in this way. If we assume, that all functions in $\mathcal{F}_N$ are independent of $(T,Y)$
-  we readily obtain $L^2(\P)$ bracketing numbers. Note, that $w^\dagger(X)$ and $1/\pi(X)$ are independent of $(T,Y)$.  
+  Note that we only get $L^2(\P_X)$ bracketing numbers in this way. If we assume that all functions in $\mathcal{F}_N$ are independent of $(T,Y)$,
+  we readily obtain $L^2(\P)$ bracketing numbers. Note that $w_0^\dagger(X)$ and $1/\pi(X)$ are independent of $(T,Y)$.  
 \end{remark}
-Next, we show, that a finite covariate space always meets the requirements of Lemma~\ref{lem:br_n_st} - and that a continuous distribution of $X$ never does so.
+A finite covariate space always meets the requirements of Lemma~\ref{lem:br_n_st} --- and that a continuous distribution of $X$ never does so.
 \begin{lemma}
   \label{lem:x_finite}
   Consider the covariate space $\mathcal{X}$. 
@@ -1257,7 +1234,7 @@ then
 \end{lemma}
 
 \begin{proof}
- Assume $\#\mathcal{X}<\infty$, that is, $X$ can take only finitely many values with positive probability.
+ Assume $\#\mathcal{X}<\infty$.
 We write
 \begin{gather*}
   J_N
@@ -1308,7 +1285,7 @@ Now let $f_X$ be the probability density of $X$.
   $
   \inf_{x\in K}f_X(x)
   >0
-  $. Since $\mathcal{P}_N$ are cubic partitions, it holds for 
+  $. It holds for 
   \begin{gather*}
     I_N
     :=
@@ -1377,3 +1354,6 @@ $,
   $V/(V+2)-1<0$ and $h_N\to 0$.
 \end{proof}
 
+\begin{takeaways}
+ Bracketing numbers measure the complexity of a class of functions. We can construct function classes that contain all paths of a stochastic process. By Donsker's Theorem or maximal inequalities we can employ bracketing numbers (via bracketing integral) to derive probabilistic properties of empirical processes indexed over function classes. 
+\end{takeaways}

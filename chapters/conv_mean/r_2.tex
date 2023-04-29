@@ -87,7 +87,7 @@ The convergence of this term is closely related to good approximation properties
     1 
       \right|
   \end{align*}
-  Note, that by Theorem~\ref{th:weights_constr}.\textit{(i)-(ii)}
+  Note that by Theorem~\ref{th:weights_constr}.\textit{(i)-(ii)}
   it holds
   \begin{align*}
     \frac{1}{N}
@@ -118,8 +118,8 @@ The convergence of this term is closely related to good approximation properties
   The statement follows from Lemma~\ref{lem:basis_2}.\textit{(ii)}
 \end{proof}
 \begin{remark}
-In the original paper \cite{Wang2019} the authors derive concrete learning rates for the weights and employ them in bounding this term. They obtain a multiplied learning rate, which is sufficiently fast. Their approach, however, calls for concrete learning rates of the weights. Arguably, the process of deriving such rates is the most complicated part of the paper. 
-I found out, that we don't need concrete rates for the weights. 
+In the original paper \cite{Wang2019} the authors derive concrete learning rates for the weights and employ them in bounding this term. They obtain a multiplied learning rate that is sufficiently fast. Their approach, however, calls for concrete learning rates of the weights. Arguably, the process of deriving such rates is the most complicated part of the paper. 
+I found out that with the basis functions of partitioning estimates (or similar basis functions) we don't need concrete rates for the weights. 
 Consistency of the weights is enough and gives us an (arbitrarily slow but sufficient) learning rate to establish the results.
 We don't even need rates for the weights to control $R_2$.
 They only play a role in bounding $R_3$. 

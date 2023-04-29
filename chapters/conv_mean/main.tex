@@ -4,13 +4,16 @@ Is there a worse estimator of the distribution function than the empirical distr
 Yes, a weighted empirical distribution function.
 It depends on the weights.
 
-In Chapter~4 we show that the optimal weights of Problem~\ref{bw:1:primal} are consistent estimators of the best possible weights - the inverse propensity score weights.
+In Chapter~4 we show that the optimal weights of Problem~\ref{bw:1:primal} are consistent estimators of the best possible weights --- the inverse propensity score weights.
 Now we want to use this to obtain good asymptotic properties of a weighted mean estimator.
-To this end, let $Y_1,\ldots,Y_N$ be independent and identically distributed observed outcomes. To do this, we have to drop the order $T_i=1$ for $i\le n$ introduced in Chapter~2. 
+To this end, let $Y_1,\ldots,Y_N$ be independent and identically distributed observed outcomes.
+We define them on the outcome space $\mathcal{Y}\subset\R$.
+\index{$\mathcal{Y}$, outcome space}
+To do this, we have to drop the order $T_i=1$ for $i\le n$ introduced in Chapter~2. 
 Note that $Y_i=Y_i(T_i)$, where $(Y_i(0),Y_i(1))$ are the potential outcomes of unit $i$. 
 
 We mentioned in the introduction to Chapter~2 that the weights work for different outcomes.
-If Assumption~\ref{asu:treatment_asign_str_ing} holds, by the law of large numbers and by the central limit theorem it holds
+If Assumption~\ref{asu:treatment_asign_str_ing} holds, by the law of large numbers and by the central limit theorem, it holds
 \begin{align*}
   &
   \frac{1}{N}
@@ -142,7 +145,7 @@ extending the method of \cite{Wang2019} to
 estimates of 
 the distribution function of $Y(1)$, that is, $F_{Y(1)}$.
 For the asymptotic analysis of estimating the mean $\E[Y(1)]$ see \cite[Proof of Theorem~3]{Wang2019}.
-To make this extension, the central observation is, that we can adapt the error decomposition in \cite[page 27]{Wang2019} 
+To make this extension, the central observation is that we can adapt the error decomposition in \cite[page 27]{Wang2019} 
 to estimates of the distribution function $F_{Y(1)}$ of $Y(1)$.
 We do this in Lemma~\ref{aa:mean:lemma_decomp}.
 With this modification, we aim at proving
@@ -167,11 +170,9 @@ the convergence of
   to a Gaussian process with mean 0 and covariance specified in Theorem~\ref{th:main}.
 \section{Tools}
   \input{chapters/conv_mean/tools.tex}
-Now we are ready to state the main result.
-\newpage
 \section{Main Result}
   \input{chapters/conv_mean/main_theo.tex}
-In the introduction to this section we talked about proof strategies. The next section gives an error decomposition that is central to proof.
+  In the introduction to Chapter~5 we talked about proof strategies. The next section gives an error decomposition that is central to the proof of Theorem~\ref{th:main}.
 It consists of four terms that we shall bound consecutively. 
 \section{Error Decomposition}
   \input{chapters/conv_mean/error_decomp.tex}
@@ -182,6 +183,7 @@ It consists of four terms that we shall bound consecutively.
     \input{chapters/conv_mean/r_2.tex}
   \subsection{Analysis of $R_3$}
     \input{chapters/conv_mean/r_3.tex}
+    \newpage
   \subsection{Analysis of $R_4$}
     \input{chapters/conv_mean/r_4.tex}
   \subsection{Proof of Theorem~\ref{th:main}}

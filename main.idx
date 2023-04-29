@@ -1,5 +1,6 @@
 \indexentry{$(\Omega,\mathcal{A},\P)$, generic probability space}{2}
 \indexentry{$T$, indicator of treatment}{2}
+\indexentry{$\mathcal{X}$, covariate space}{2}
 \indexentry{$X$, covariates vector}{2}
 \indexentry{$Y(0),Y(1)$, potential outcomes}{3}
 \indexentry{$\pi$, propensity score}{3}
@@ -20,9 +21,20 @@
 \indexentry{$\mathbf{1_A}$, indicator function of the set $A$}{18}
 \indexentry{$\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   }{22}
 \indexentry{$\mathrm{cl}(\cdot)$, closure of a set}{26}
+\indexentry{$\mathcal{X}$, covariate space}{26}
 \indexentry{$e_i$, $i$-the unit vector}{30}
+\indexentry{$\mathcal{Y}$, outcome space}{35}
 \indexentry{$F_{Y(1)}$, distribution function of the potential outcome under treatment}{36}
 \indexentry{$F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment}{36}
+\indexentry{$\P_{\xi}$, probability distribution of the random variable $\xi$}{36}
+\indexentry{$\mathcal{F}$, class of measurable functions}{36}
+\indexentry{$\mathcal{B}(\cdot)$, Borel-$\sigma$-algebra}{36}
+\indexentry{$\G_N$, empirical process}{36}
+\indexentry{ $   \norm{\G_n}^*_\mathcal{F} $, (measurable version of the) uniform norm of an empirical process}{37}
+\indexentry{$   \E^*[Z] $, outer expectation}{37}
+\indexentry{envelope function}{37}
+\indexentry{$N_{[\,]}$, bracketing number}{37}
+\indexentry{$J_{[\,]}$, bracketing integral}{37}
 \indexentry{ $C^\alpha_M(\mathcal{Z})$, certain space of continuous functions }{41}
 \indexentry{convex set}{61}
 \indexentry{affine set}{62}

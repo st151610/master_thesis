@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1682438665 "main.aux" "main.bbl" "main" 1682438716 0
+["bibtex main"] 1682767555 "main.aux" "main.bbl" "main" 1682767640 0
   "./literature.bib" 1681905929 79858 f1c0919deca5bd0002f86aae84e0d5f5 ""
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1680514707 23907 a5f93555796fb564b924339521f10a7c ""
-  "main.aux" 1682438715 41430 74b8c126c9742ef2d7fe035a9cacca85 "pdflatex"
+  "main.aux" 1682767640 41153 a1a157c117f5354cc5df8aa6a42c1f16 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1682438665 "main.idx" "main.ind" "main" 1682438716 0
-  "main.idx" 1682438715 2360 39329c866e04a1ca5e0b714695187653 "pdflatex"
+["makeindex main.idx"] 1682766325 "main.idx" "main.ind" "main" 1682767640 0
+  "main.idx" 1682767640 3048 e99981438630202f9bc691cd3c8a4d2c "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1682438713 "main.tex" "main.pdf" "main" 1682438716 0
+["pdflatex"] 1682767638 "main.tex" "main.pdf" "main" 1682767640 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1680514707 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1680514707 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1680514707 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -242,19 +242,19 @@
   "chapters/consistency_weights/lemma_2.tex" 1682166281 11597 2d9f743437c16c356468dcf652c889b1 ""
   "chapters/consistency_weights/main.tex" 1681905929 1253 f8d123c465c701827dbc6192035f7a1e ""
   "chapters/consistency_weights/main_result.tex" 1682408284 3522 752e702e8a64fbc6070a627007038a59 ""
-  "chapters/consistency_weights/ps_funct.tex" 1681905929 4772 c09008305a5ccccc274da8f7167524df ""
-  "chapters/conv_mean/br_n_i.tex" 1682162707 22951 164be57d1d3b4afe7e55d2add8df8723 ""
-  "chapters/conv_mean/donsker_theo.tex" 1682165213 2399 a30e080314c2d7153ed56ee13a660a86 ""
-  "chapters/conv_mean/emp_pro_def.tex" 1681204497 2410 4c70d5d6783422b2ea1841c8930cc29f ""
-  "chapters/conv_mean/error_decomp.tex" 1681905929 4929 10a18c24238d3667ed301c5e946acf06 ""
-  "chapters/conv_mean/main.tex" 1682161969 5131 a91816459dc448b89e28ade6693f12e3 ""
-  "chapters/conv_mean/main_theo.tex" 1681728989 792 559b3cd8dae4705ab04897920b0ffad2 ""
-  "chapters/conv_mean/max_ineq.tex" 1681736675 4550 31584f5f91b2b67471689a69c45e560c ""
+  "chapters/consistency_weights/ps_funct.tex" 1682760513 4956 12463b404ca63d3856c737ba3abdb090 ""
+  "chapters/conv_mean/br_n_i.tex" 1682767467 22908 cd903a22fe8660265255e1d6f9891393 ""
+  "chapters/conv_mean/donsker_theo.tex" 1682766348 2403 f92d25caa5e94cf44b203fde9879078e ""
+  "chapters/conv_mean/emp_pro_def.tex" 1682766928 2792 5317e37642c107223dd06b8f04ba7b04 ""
+  "chapters/conv_mean/error_decomp.tex" 1682762281 4829 77b3342525311b84d358fb6b6758ae4f ""
+  "chapters/conv_mean/main.tex" 1682765882 5219 d7113782c8210fc5168e95adb8635aa7 ""
+  "chapters/conv_mean/main_theo.tex" 1682766373 2373 0ebd0966a32602fcc7276082c81445be ""
+  "chapters/conv_mean/max_ineq.tex" 1682767552 4559 a73db71af0b249133b5ace1b04d5f4d8 ""
   "chapters/conv_mean/proof_final_theo.tex" 1682166649 568 1a271ca28d25e349d3a7773eca3b8ecf ""
-  "chapters/conv_mean/r_1.tex" 1682087114 4531 fed49a72ed90714f85d9dfc3b32c05a9 ""
-  "chapters/conv_mean/r_2.tex" 1682087460 2562 bf24695aefa3e7ec3668fef68541e151 ""
-  "chapters/conv_mean/r_3.tex" 1682164094 5442 9988a8c1dac0043352d5d6ddd8302991 ""
-  "chapters/conv_mean/r_4.tex" 1682165765 4766 21cd4af1b168fd38a2fc69787c35a733 ""
+  "chapters/conv_mean/r_1.tex" 1682766400 4530 16a42badad0722f99cd836b995e8e164 ""
+  "chapters/conv_mean/r_2.tex" 1682766517 2638 898c3c13bdce1d9fe80a5c51b4bdd0f1 ""
+  "chapters/conv_mean/r_3.tex" 1682767636 5394 ef8ea4d4cec003a6adafaca62d304573 ""
+  "chapters/conv_mean/r_4.tex" 1682766568 4757 259c89e7fefdd25f4978fa70cc843623 ""
   "chapters/conv_mean/tools.tex" 1681905929 522 3ccfa28115f4b2d9335dd2d09d838c36 ""
   "chapters/convex_analysis/primer_new.tex" 1681905929 22967 3eb4594eadc2f22a46ab05bb479e63be ""
   "chapters/convex_analysis/ts_3.tex" 1681728989 12939 5d799273c1498c5f829d7d22cc5d86ca ""
@@ -266,7 +266,7 @@
   "chapters/discussion/main.tex" 1681905929 740 3c562a8b392dd877ce575a0a45188d46 ""
   "chapters/discussion/matching.tex" 1681728989 1296 fed9ba9707a0b90c5c8143a129424a1c ""
   "chapters/discussion/summary_asu.tex" 1681905929 33 a955c06ec7e7da571e660db57deb8539 ""
-  "chapters/intro_for_all.tex" 1682438713 16367 d3d0dcab1f854f659648596e24d857c9 ""
+  "chapters/intro_for_all.tex" 1682760486 16406 a1dbb516e33f1f8db83fe295fd34b6c8 ""
   "chapters/optimization_problem/dual_form.tex" 1682326343 15977 dffdcf9758be7a97f7799e163d73ace1 ""
   "chapters/optimization_problem/intro.tex" 1682326553 842 05eb4e3c6da46763bc63eb655ec40070 ""
   "chapters/optimization_problem/main.tex" 1682080954 2223 7021d91d58b2d98d22559925760e67b2 ""
@@ -278,12 +278,12 @@
   "chapters/weights_process/meas_argmax.tex" 1681905929 2996 27049f14bdba157c6ae0dd87840c9e4d ""
   "chapters/weights_process/meas_dual_sol.tex" 1681905929 3848 27a8f32defe9d9a8fbd69067c35f5c39 ""
   "chapters/weights_process/weights_process.tex" 1681905929 9292 173bb1ee73f01517447204054bde8d17 ""
-  "main.aux" 1682438715 41430 74b8c126c9742ef2d7fe035a9cacca85 "pdflatex"
-  "main.bbl" 1682438665 5240 4117e0bcfefca2bff0f7aba4737b076d "bibtex main"
-  "main.ind" 1682438715 2230 cc6e344edf9ec7cf72eb85fc6a77f92a "makeindex main.idx"
-  "main.out" 1682438714 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1682767640 41153 a1a157c117f5354cc5df8aa6a42c1f16 "pdflatex"
+  "main.bbl" 1682767555 5240 4117e0bcfefca2bff0f7aba4737b076d "bibtex main"
+  "main.ind" 1682767640 2841 7513f051340b293a01f359d7d1ffa2fc "makeindex main.idx"
+  "main.out" 1682767638 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1682071956 9415 4e0942b7ed21a4ec8c821a54847eff19 ""
-  "main.toc" 1682438715 5657 0a850ac3cfc508cc64943f1afe7574a6 "pdflatex"
+  "main.toc" 1682767640 5657 8560a7eea6c7711c71a036fbcbd06bf1 "pdflatex"
   (generated)
   "main.aux"
   "main.idx"

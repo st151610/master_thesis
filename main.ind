@@ -1,5 +1,6 @@
 \begin{theindex}
 
+  \item $   \E^*[Z] $, outer expectation, 37
   \item $(\Omega,\mathcal{A},\P)$, generic probability space, 2
   \item $A_N$, cell of the partition $\mathcal{P}_N$, 18
   \item $B$, vector of basis functions of the covariates, 6, 17
@@ -8,11 +9,16 @@
 		36
   \item $F_{Y(1)}(\cdot \lvert x)$, conditional distribution function of the potential outcome under treatment, 
 		36
+  \item $J_{[\,]}$, bracketing integral, 37
   \item $N$, sample size, 5
+  \item $N_{[\,]}$, bracketing number, 37
   \item $T$, indicator of treatment, 2
   \item $X$, covariates vector, 2
   \item $Y(0),Y(1)$, potential outcomes, 3
   \item $[x]^+$, positive part of $x\in\R$, 11
+  \item $\G_N$, empirical process, 36
+  \item $\P_{\xi}$, probability distribution of the random variable $\xi$, 
+		36
   \item $\delta$, (random) constraints vector , 6
   \item $\lesssim$, lesser-or-equal-up-to-a-uniform-constant order   , 
 		22
@@ -20,7 +26,11 @@
   \item $\mathbf{B}(\mathbf{X})$, matrix of basis functions of the treated, 
 		10
   \item $\mathbf{I}_N$, the $N$-dimensional unit matrix, 10
+  \item $\mathcal{B}(\cdot)$, Borel-$\sigma$-algebra, 36
+  \item $\mathcal{F}$, class of measurable functions, 36
   \item $\mathcal{P}_N$, partition of $\R^d$, 18
+  \item $\mathcal{X}$, covariate space, 2, 26
+  \item $\mathcal{Y}$, outcome space, 35
   \item $\mathrm{aff(\cdot)}$, affine hull, 62
   \item $\mathrm{cl}(\cdot)$, closure of a set, 26
   \item $\mathrm{dom}\,f$, domain of a convex function, 63
@@ -37,6 +47,8 @@
   \indexspace
 
   \item    $ \partial f(x)   $,   subdifferential of $f$ at $x$ , 63
+  \item  $   \norm{\G_n}^*_\mathcal{F} $, (measurable version of the) uniform norm of an empirical process, 
+		37
   \item  $\mathrm{0}_N$ and $\mathrm{1}_N$, the $N$-dimensional vectors containing only zeros or ones. , 
 		10
   \item  $C^\alpha_M(\mathcal{Z})$, certain space of continuous functions , 
@@ -52,6 +64,10 @@
   \item conjugate sum rule, 65
   \item convex function, 63
   \item convex set, 61
+
+  \indexspace
+
+  \item envelope function, 37
 
   \indexspace
 
