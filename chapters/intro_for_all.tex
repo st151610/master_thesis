@@ -63,17 +63,17 @@ Thus, one of the potential outcomes always remains potential.
 Of course there are tricks. You can  wait for the effect of an action to vanish and then observe the outcome (under similar conditions) again.
 This works well when the effect of an action is short term.
 
-If the propensity score is known we actually observe one of the potential outcomes.
+If the propensity score is known, we actually observe one of the potential outcomes.
 This is because treatment assignment carries no more information \emph{\cite[Theorem~1]{Rosenbaum1983}}.
 But we saw that assignment often carries more information, especially if the assignment mechanism is unknown.
 This is typical for observational studies.
 Somehow grass blades that received fertiliser were also taller.
 Or students attending parties before the exams had better results.
-It is not clear, if the effect on the outcome stems from observed or unobserved individual characteristics or the received treatment.
-Then we observe neither of the two potential outcomes, but a biased version.
-Why then bother?
+It is not clear why.
+Does the effect on the outcome stem from observed or unobserved individual characteristics or the received treatment?
+Do we even observe one of the two potential outcomes?
 
-Since the introduction of the propensity score in 1983 \cite{Rosenbaum1983}, statisticians developed different ideas how to incorporate it in their analysis. 
+Since the introduction of the propensity score by Rosenbaum and Rubin in 1983 \cite{Rosenbaum1983}, statisticians developed different ideas how to incorporate it in their analysis. 
 %
 There are two important branches of application --- matching and weighting.
 In matching the idea is to pair two or more units with different treatment status but similar propensity score and compare their outcome. 
@@ -91,10 +91,9 @@ Let $T\in \left\{ 0,1 \right\}$ be the \textbf{indicator of treatment}.
 Let $X\in\mathcal{X}$ be a vector with individual characteristics. We call this the \textbf{covariate vector}. 
 \index{$\mathcal{X}$, covariate space}
 \index{$X$, covariates vector}
-Furthermore, let $(Y(0),Y(1))$ be the \textbf{potential outcomes}, that is, $Y(0)$ is the potential outcome under no treatment and $Y(1)$ the potential outcome under treatment.
+Furthermore, let $(Y(0),Y(1))\in\mathcal{Y}\times\mathcal{Y}$ be the \textbf{potential outcomes}, that is, $Y(0)$ is the potential outcome under no treatment and $Y(1)$ the potential outcome under treatment.
 \index{$Y(0),Y(1)$, potential outcomes}
-
-Next, we define the propensity score $\pi$ with individual characteristics $x\in\mathcal{X}$ to be
+We define the propensity score $\pi$ with individual characteristics $x\in\mathcal{X}$ to be
 \index{$\pi$, propensity score}
 \begin{gather}
   \label{def:ps} 
@@ -114,7 +113,7 @@ We observe
   Y(1)\,|\,T=1
   \,.
 \end{gather*}
-We show in Lemma~\ref{ps_weights_lemma}, that if treatment assignment is \textbf{strongly ignorable}\cite[(1.3)]{Rosenbaum1983}
+In Lemma~\ref{ps_weights_lemma} we show that if treatment assignment is \textbf{strongly ignorable}\cite[(1.3)]{Rosenbaum1983}
 \begin{gather}
   \label{asu:treatment_asign_str_ing}
   (Y(0),Y(1))\ \perp \ T \,|\,X
@@ -138,16 +137,17 @@ we get
   \left[ Y(1) \right]
   \,.
 \end{gather}
-That is, by weighting the observed outcome under treatment with the inverse propensity score we recover (in expectation) the potential outcome under treatment. 
+By weighting the observed outcome under treatment with the inverse propensity score we recover (in expectation) the potential outcome under treatment. 
 This is relevant, because 
 $Y(t)|T=t$ does not have the same distribution as $Y(t)$ for $t\in \left\{ 0,1 \right\}$.
 
-In observational studies --- independent of which method is applied, that is, matching, weighting ore other methods ---
+In observational studies --- independent of which method is applied ---
 the propensity score is unknown.
-This is because we can't assign treatment. We only observe the treated or untreated. Who assigned treatment is a philosophical question --- at least to some extent.
+We can't assign treatment and only observe the treated or untreated.
+It's often the units themselves that decide about treatment.
 
 It used to be very popular to use estimates of the propensity score --- either for matching or to create weights or for some other purpose.
-In weighting, the hope is to recover \eqref{ipw} from the estimate.
+In weighting, we hope to recover \eqref{ipw} from the estimate.
 In practice, however, estimating the propensity score is a difficult task.
 Researchers often compare estimates from different models and check for covariate balance. 
 This is not surprising, because that's what the weights are designed for --- minimizing imbalances in the population.
@@ -178,11 +178,11 @@ The constraints responsible are of the form
 where $B_k$ are basis functions of the covariates.
 The aim is to balance the weighted group (here the treatment group) against the whole sample.
 The basis functions can be moments of the covariates --- a natural aim. 
-But it is a non-trivial question, which basis to choose in practice to obtain best performance.
+But it's not clear which basis to choose in practice to obtain best performance.
 How strictly to enforce covariate balance is another question.
-It is relevant, because very strict assumptions can render the problem infeasible, whereas loosening can result in bias of the estimator.
+Very strict assumptions may render the problem infeasible, whereas loosening may result in bias of the estimator.
 In \cite{Hainmueller2012} the authors choose the (known) moments of the covariate as basis functions and enforce strict balance, that is, \eqref{cov_bal}.
-In \cite{Wang2019} they consider the regression basis of sieve estimators\cite{Newey1997a}, where the number of basis functions grows with the sample size.
+In \cite{Wang2019} the authors consider the regression basis of sieve estimators\cite{Newey1997a}, where the number of basis functions grows with the sample size.
 Also they loosen the strict constraints on the covariate balance as to vanish only for $N\to\infty$, that is,
 \begin{gather*}
   \left| 
@@ -204,21 +204,20 @@ Also they loosen the strict constraints on the covariate balance as to vanish on
 \end{gather*}
 with $\delta_k > 0 $ and $\delta_k\to 0$ for $N\to\infty$.
 
-What attracted my attention was that
-the paper \cite{Wang2019} also contains theoretical analysis.
+The publication \cite{Wang2019} also contains theoretical analysis.
 The authors reveal a surprising connection to propensity score estimation.
 They show that with the regression basis of sieve estimators\cite{Newey1997a}, their method (implicitly) models the inverse propensity score.
 They use this to obtain asymptotic normality of a weighted mean estimate of the expectation of potential outcomes.
 
 One novelty introduced in this thesis is to balance basis functions of partitioning estimates \cite[§4]{Gyorfi2002}.
-I show that this simplifies the proofs of \cite{Wang2019}.
-Furthermore, I extend the framework to estimate the distribution function of potential outcomes.
+We show that this simplifies the proofs of \cite{Wang2019}.
+Furthermore, we extend the framework to estimate the distribution function of potential outcomes.
 
-I show, that (under mild assumptions) with the regression basis of partitioning estimates, the weighted mean is asymptotically well behaved in estimating distribution functions.
+With the regression basis of partitioning estimates, the weighted mean is asymptotically well behaved for estimates of the distribution function of potential outcomes.
 By the functional delta method
 \cite[§20]{Vaart2000} results of this thesis immediately open access to a large class of plug-in estimators.
 Therefore,
-with this thesis I contribute to one of the main purposes in causal inference --- reinforcing classical methods of statistical analysis for use in observational studies.
+with this thesis we contribute to one of the main purposes in causal inference --- reinforcing classical methods of statistical analysis for use in observational studies.
 
 
 

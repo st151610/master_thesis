@@ -34,7 +34,7 @@
 \contentsline {subsubsection}{\nonumberline Motivation}{55}{subsubsection*.14}%
 \contentsline {subsubsection}{\nonumberline Conjecture}{55}{subsubsection*.16}%
 \contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{56}{subsubsection*.18}%
-\contentsline {section}{\numberline {6.3}Bootstrapping}{56}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Bootstrap}{56}{section.6.3}%
 \contentsline {subsubsection}{\nonumberline Motivation}{56}{subsubsection*.20}%
 \contentsline {subsubsection}{\nonumberline Conjecture}{56}{subsubsection*.22}%
 \contentsline {subsubsection}{\nonumberline Ideas/Brainstorming}{57}{subsubsection*.24}%
