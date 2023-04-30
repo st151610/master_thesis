@@ -35,7 +35,7 @@
   \item $\mathrm{cl}(\cdot)$, closure of a set, 26
   \item $\mathrm{dom}\,f$, domain of a convex function, 61
   \item $\mathrm{ri}(\cdot)$, relative interior, 60
-  \item $\overline{\R}$, extended real numbers, 5
+  \item $\overline{\R}$, extended real numbers, 6
   \item $\pi$, propensity score, 3
   \item $\sigma_\omega$, support function, 61
   \item $\varphi$, objective function of Problem~\ref{bw:1:primal}, 6
