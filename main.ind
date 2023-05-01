@@ -15,7 +15,7 @@
   \item $T$, indicator of treatment, 2
   \item $X$, covariates vector, 2
   \item $Y(0),Y(1)$, potential outcomes, 3
-  \item $[x]^+$, positive part of $x\in\R$, 11
+  \item $[x]^+$, positive part of $x\in\R$, 12
   \item $\G_N$, empirical process, 36
   \item $\P_{\xi}$, probability distribution of the random variable $\xi$, 
 		36
@@ -37,7 +37,7 @@
   \item $\mathrm{ri}(\cdot)$, relative interior, 60
   \item $\overline{\R}$, extended real numbers, 6
   \item $\pi$, propensity score, 3
-  \item $\sigma_\omega$, support function, 61
+  \item $\sigma_\Omega$, support function, 61
   \item $\varphi$, objective function of Problem~\ref{bw:1:primal}, 6
   \item $e_i$, $i$-the unit vector, 30
   \item $f\square g$, infimal convolution of $f$ and $g$, 61

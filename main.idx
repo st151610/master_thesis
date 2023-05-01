@@ -14,7 +14,7 @@
 \indexentry{$\mathbf{I}_N$, the $N$-dimensional unit matrix}{10}
 \indexentry{ $\mathrm{0}_N$ and $\mathrm{1}_N$, the $N$-dimensional vectors containing only zeros or ones. }{10}
 \indexentry{$\mathbf{B}(\mathbf{X})$, matrix of basis functions of the treated}{10}
-\indexentry{$[x]^+$, positive part of $x\in\R$}{11}
+\indexentry{$[x]^+$, positive part of $x\in\R$}{12}
 \indexentry{$B$, vector of basis functions of the covariates}{17}
 \indexentry{$\mathcal{P}_N$, partition of $\R^d$}{18}
 \indexentry{$A_N$, cell of the partition $\mathcal{P}_N$}{18}
@@ -46,7 +46,7 @@
 \indexentry{proper (convex) function}{61}
 \indexentry{subgradient}{61}
 \indexentry{   $ \partial f(x)   $,   subdifferential of $f$ at $x$ }{61}
-\indexentry{$\sigma_\omega$, support function}{61}
+\indexentry{$\sigma_\Omega$, support function}{61}
 \indexentry{$f\square g$, infimal convolution of $f$ and $g$}{61}
 \indexentry{$f^*$, convex conjugate of $f$}{63}
 \indexentry{conjugate sum rule}{63}
