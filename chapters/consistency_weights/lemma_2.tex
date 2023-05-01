@@ -195,7 +195,9 @@ measurable it follows the statement.
  \begin{lemma}
    \label{lem:conv_dG}
    \label{bw:cd:lem2}
-   It holds
+Let
+Assumption~\eqref{asu:treatment_asign_str_ing} and Assumption~\ref{asu:x_finite} hold true.
+Then
    for all $\varepsilon>0$
 \begin{gather*}
    \P
@@ -702,13 +704,16 @@ to $J_1$, that is,
 $J_1\overset{\P}{\to}0$.
 \subsubsection*{Analysis of $J_2$}
 By Lemma~\ref{lem:basis_2}.\textit{(i)}
-and the uniform continuity of 
+(good approximation property of $B$),
+Lemma~\ref{lem:obj_f}(uniform continuity of $(\varphi^{'})^{-1}$),
+and
+Lemma~\ref{lem:ips_unif_cont}(uniform continuity of 
 $
-  (
-  \varphi^{'}
-  )
-  ^{-1}
+\varphi^{'}\circ(x\mapsto1/x)\circ \pi
 $
+) 
+together with 
+Assumption~\eqref{asu:treatment_asign_str_ing} and Assumption~\ref{asu:x_finite},
 it holds
 \begin{align*}
 \omega
@@ -750,7 +755,7 @@ it holds
   ,
 \omega
 \left(
-  \varphi^{'}
+\varphi^{'}\circ(x\mapsto1/x)\circ \pi
   ,
   h_N^d
   \right)

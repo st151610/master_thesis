@@ -1,6 +1,8 @@
 \begin{theorem}
   \label{th:max_weight_cons}
-  If Problem~\ref{dual} is feasible it holds
+Let
+Assumption~\eqref{asu:treatment_asign_str_ing}, Assumption~\ref{asu:feas_dual_sol}, and Assumption~\ref{asu:x_finite} hold true.
+Then
   \begin{align*}
     \max_{i\in \left\{ 1,\ldots,N \right\}}
     T_i\cdot
@@ -45,7 +47,8 @@
   \end{gather*}
 \end{theorem}
 \begin{proof}
-  Let $i\in \left\{ 1,\ldots,n \right\}$.
+  For $i$ with $T_i=0$ this is clear. 
+  Thus, we only consider the case $T_i=1$.
   By Lemma~\ref{lem:simple_weights}
   it holds
   \begin{align*}
@@ -150,7 +153,8 @@
       \ 
       \omega
       \left( 
-        \varphi^{'},
+\varphi^{'}\circ(x\mapsto1/x)\circ \pi
+,
         h_N^d
       \right)
   \end{align*}
@@ -178,7 +182,8 @@
       \ 
       \omega
       \left( 
-        \varphi^{'},
+\varphi^{'}\circ(x\mapsto1/x)\circ \pi
+,
         h_N^d
       \right)
   \end{align*}
@@ -202,9 +207,17 @@
       }
       \,,
   \end{align*}
-  and $\omega(\varphi^{'},h_N^d)\to 0$ by the uniform continuity of $\varphi^{'}$ and $h_N\to 0$, 
+  and $
+  \omega(
+\varphi^{'}\circ(x\mapsto1/x)\circ \pi
+  ,h_N^d
+  )\to 0$ by the uniform continuity of 
+  $
+\varphi^{'}\circ(x\mapsto1/x)\circ \pi
+  $
+  (see Lemma~\ref{lem:ips_unif_cont})
+  and $h_N\to 0$, 
   it follows the first statement.
-  Note that for $i>n$ we have the upper bound $0$.
 The second statement follows from the selection lemma
 \cite[A.1.4.]{Steinwart2008}.
   \end{proof}
